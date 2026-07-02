@@ -1,0 +1,39 @@
+[start-match] utc=2026-06-08T11:03:47Z
+[start-match] prewarmOnly=0
+[start-match] game=/AMP/BapCustomServer/game/bapbap.exe
+[start-match] args=-batchmode -logFile /AMP/BapCustomServer/logs/game-servers/custom-20260608110347-7041.attempt1.log -httpport=7850 -wsport=7778 -kcpport=7779 -tcpport=7780 --melonloader.agfoffline --bapcustom-use-proxy=false --bapcustom-show-ui=false --bapcustom-host=127.0.0.1 --bapcustom-server-port=5055
+[start-match] wrapperLog=/AMP/BapCustomServer/logs/game-servers/custom-20260608110347-7041.attempt1.wrapper.log
+[start-match] deploymentInfo=/AMP/BapCustomServer/deployment-info.json
+[start-match] deployment.releaseLabel=medusa-v1705-network-retry-hotfix
+[start-match] deployment.packageBuildUtc=2026-06-08T10:53:42.6486447Z
+[start-match] deployment.gitCommit=97d16d4d9fce
+[start-match] deployment.gitBranch=main
+[start-match] deployment.modDllSha256=6BE42859592828552716B6C9D1D1A045B82AB3DCD0333898F29A49D864B8C6D0
+[start-match] deployment.gameExeSha256=7CF5E8746DEDD1B2183A8C5B733B06B394B667EF8F041831C293C27097B57EF0
+[start-match] deployment.startMatchSha256=02E09C0B12716B296E275DCE50F4595ECC5FE24AD29A6406E2F318CEFF4049F3
+[start-match] wrapperVersion=20260530-graphics-modes-v3
+[start-match] wine=wine-10.0 (Debian 10.0~repack-6)
+[start-match] winePath=/usr/bin/wine winebootPath=/usr/bin/wineboot
+[start-match] xvfbRunPath=/usr/bin/xvfb-run xauthPath=/usr/bin/xauth glxinfoPath=<missing> vulkanInfoPath=<missing>
+[start-match] wineprefix=/AMP/BapCustomServer/wineprefix32
+[start-match] xvfbServerArgs=-screen 0 1280x720x24 -ac +extension GLX +render -noreset -nolisten tcp
+[start-match] graphicsMode=nographics
+[start-match] mesa=software LIBGL_ALWAYS_SOFTWARE=1 GALLIUM_DRIVER=llvmpipe MESA_LOADER_DRIVER_OVERRIDE=swrast MESA_GL_VERSION_OVERRIDE=<unset> MESA_GLSL_VERSION_OVERRIDE=<unset>
+[start-match] unityGraphicsArgs=-nographics
+[start-match] glxinfo probe skipped: glxinfo missing
+ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5728:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2722:(snd_pcm_open_noupdate) Unknown PCM default
+ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5728:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2722:(snd_pcm_open_noupdate) Unknown PCM default

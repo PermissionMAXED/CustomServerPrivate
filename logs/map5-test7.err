@@ -1,0 +1,7 @@
+powershell.exe : Get-Process : Es kann kein Prozess mit der Prozess-ID 44492 gefunden werden.
+In C:\Users\Administrator\Downloads\CustomServer\tools\Test-LiveCustomMedusaVfx.ps1:116 Zeichen:5
++     & powershell -ExecutionPolicy Bypass -File (Join-Path $Root "tool ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Get-Process : E...efunden werden.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 

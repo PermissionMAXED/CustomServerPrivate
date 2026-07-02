@@ -1,0 +1,27 @@
+﻿{
+    "schemaVersion":  1,
+    "releaseLabel":  "medusa-5fix-20260630",
+    "packageBuildUtc":  "2026-06-29T22:17:10.1469029Z",
+    "gitCommit":  "97d16d4d9fce",
+    "gitBranch":  "main",
+    "gitDirty":  true,
+    "configuration":  "Release",
+    "selfContained":  true,
+    "publicHost":  "ark.atomi23.de",
+    "serverDllSha256":  "24E41175738AB835BCDBCF22F597F5E863663723A1ACC6058981507DD784D2D0",
+    "modDllSha256":  "A32BF4340BA5E285699BE0B4A0DF9436D5C7B7171FC050E4D24A7F735FC83B86",
+    "modApiDllSha256":  "0E14F39A9C47B6EBA106A0F23E76A0989B3270D7BCDD3E4BB0DD51E63BDB3CB5",
+    "medusaDllSha256":  "6923D2F932E717D73C90CF95391178AF1C91D06106EEC7BBB6BAC47D312055A1",
+    "medusaBundleSha256":  "C4872D6E124E76F9F4B4EC75482FFC2795D051D3CA65EB7C25E9FE68023B1D70",
+    "medusaCharId":  15,
+    "gameExeSha256":  "7CF5E8746DEDD1B2183A8C5B733B06B394B667EF8F041831C293C27097B57EF0",
+    "startMatchSha256":  "02E09C0B12716B296E275DCE50F4595ECC5FE24AD29A6406E2F318CEFF4049F3",
+    "packageSha256":  "",
+    "ports":  {
+                  "lobby":  5055,
+                  "ws":  7777,
+                  "kcp":  7778,
+                  "tcp":  7779,
+                  "http":  7850
+              }
+}

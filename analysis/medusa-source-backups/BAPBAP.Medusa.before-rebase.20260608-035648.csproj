@@ -1,0 +1,52 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="$(MSBuildThisFileDirectory)..\BAPBAPModAPI\tools\BAPBAP.ModAPI.props" />
+
+  <PropertyGroup>
+    <AssemblyName>BAPBAP.Medusa</AssemblyName>
+    <RootNamespace>BAPBAP.Medusa</RootNamespace>
+    <Version>1.6.60</Version>
+    <Authors>BAPBAP Modding Community</Authors>
+    <Description>Adds "Medusa" as a custom playable character with native model+rig+animations and a native petrify ult (SE_Petrified-on-hit Harmony postfix).</Description>
+    <BAPBAPModAPIDir>$(MSBuildThisFileDirectory)..\BAPBAPModAPI\modapi\bin\$(Configuration)</BAPBAPModAPIDir>
+  </PropertyGroup>
+
+  <!-- The backport/ folder contains the Unity Editor project used to BUILD medusa.bundle.
+       Its scripts use UnityEditor APIs which aren't available to a runtime mod, and shouldn't
+       be compiled into the mod DLL. -->
+  <ItemGroup>
+    <Compile Remove="backport\**\*.cs" />
+    <None Remove="backport\**\*.cs" />
+  </ItemGroup>
+
+  <!-- AssetBundle support (needed at runtime to load medusa.bundle).
+       Use MelonLoader's UnityEngine.Il2CppAssetBundleManager - the in-game IL2CPP-stripped
+       UnityEngine.AssetBundle icalls bind unreliably and NRE on this build. -->
+  <ItemGroup>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>$(BAPBAPIl2CppAsm)\UnityEngine.AssetBundleModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>$(BAPBAPIl2CppAsm)\UnityEngine.AnimationModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>$(BAPBAPIl2CppAsm)\UnityEngine.ImageConversionModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>$(BAPBAPIl2CppAsm)\UnityEngine.ParticleSystemModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.Il2CppAssetBundleManager">
+      <HintPath>$(BAPBAPMelon)\UnityEngine.Il2CppAssetBundleManager.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Il2CppSystem.Core">
+      <HintPath>$(BAPBAPIl2CppAsm)\Il2CppSystem.Core.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>

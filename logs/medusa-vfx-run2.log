@@ -1,0 +1,6 @@
+reusing server :5161
+GAME_STARTED both. gameDns=127.0.0.1 ws=7777
+launched clients pids=52364,42644
+med-leader pid=52364 wid=28577410
+med-guest pid=42644 wid=1246356
+CAPTURE DONE. Guest shots should show leader's charId-15 Medusa with nameplate 'med-leader'.

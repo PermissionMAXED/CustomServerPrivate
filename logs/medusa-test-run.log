@@ -1,0 +1,5 @@
+reusing server :5161
+GAME_STARTED both. gameDns=127.0.0.1 ws=7777
+launched clients pids=57864,44788
+med-leader pid=57864 wid=30608060
+med-guest pid=44788 wid=0

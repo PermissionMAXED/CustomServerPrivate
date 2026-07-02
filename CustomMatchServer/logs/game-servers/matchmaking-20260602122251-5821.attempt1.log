@@ -1,0 +1,264 @@
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+Initialize engine version: 2022.3.38f1 (c5d5a7410213)
+[Subsystems] Discovering subsystems at path C:/Users/Administrator/Downloads/CustomServer/Spiel/Battleroyalebuild/bapbap_Data/UnitySubsystems
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3060 Ti (ID=0x2486)
+    Vendor:   NVIDIA
+    VRAM:     3072 MB
+    Driver:   32.0.15.9621
+<b>[App UI]</b> Unable to find an AppUISettings instance, creating a default one...
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Unity.AppUI.Core.AppUI:InitializeInPlayer()
+
+-------------------------------------------------------------------------------------------------------
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+
+~   This Game has been MODIFIED using MelonLoader. DO NOT report any issues to the Game Developers!   ~
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+
+-------------------------------------------------------------------------------------------------------
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+
+The referenced script on this Behaviour (Game Object 'Blitz') is missing!
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+UnloadTime: 7.752400 ms
+ThreadLog initialized.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[PREAWAKE] ENV_PRODUCTION
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[PREAWAKE] BACKEND_STRIP
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[PREAWAKE] hostname= VINCENT
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[PREAWAKE] environment= Production
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[PREAWAKE] version = v0.1.1758-38212
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[PREAWAKE] networkConfigEnv = Staging
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[PREAWAKE] networkConfigsServer = ServerConfig { 
+MatchmakingHost: , 
+ListenPort: 0, 
+HeaderSecretKey: , 
+HeaderSecret: , 
+DebugPassword: , 
+DebugSquadPassword: , 
+DevGameAuthId: , 
+}
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[PREAWAKE] networkConfigsClient = ClientConfig { 
+ApiHost: http://127.0.0.1:5055, 
+CookieDomain: .bapbap.gg, 
+CookieSessionKey: sid, 
+}
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[PREAWAKE] logConfigEnv = Staging
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[PREAWAKE] Args start
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\bapbap.exe
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+-batchmode
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+-logFile
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+C:\Users\Administrator\Downloads\CustomServer\CustomMatchServer\logs\game-servers\matchmaking-20260602122251-5821.attempt1.log
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+-httpport=7850
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+-wsport=7777
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+-kcpport=7778
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+-tcpport=7779
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+--melonloader.agfoffline
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+--melonloader.captureplayerlogs
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+--bapcustom-host=127.0.0.1
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+--bapcustom-server-port=5198
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+--bapcustom-use-proxy=false
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[PREAWAKE] Args end | http=7850 ws=7777 kcp=7778 tcp=7779
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[LocalSavedData] InitializeSystemResolutions - nativeSystemResolution: 3440 x 1440 @ 99.998Hz
+[LocalSavedData] InitializeSystemResolutions - res: UnityEngine.Resolution[], length: 68
+Found supported resolution: (3440, 1440)
+Failed to create agent because there is no valid NavMesh
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+
+[ line 11723276]
+
+NullReferenceException: Object reference not set to an instance of an object.
+  at BAPBAP.Entities.CharHurtbox.PreAwake (BAPBAP.Entities.EntityManager e) [0x00000] in <00000000000000000000000000000000>:0 
+  at BAPBAP.Entities.EntityManager.Awake () [0x00000] in <00000000000000000000000000000000>:0 
+  at UnityEngine.Object.Internal_CloneSingle (UnityEngine.Object data) [0x00000] in <00000000000000000000000000000000>:0 
+  at UnityEngine.Object.Instantiate[T] (T original) [0x00000] in <00000000000000000000000000000000>:0 
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+
+NullReferenceException: Object reference not set to an instance of an object.
+  at BAPBAP.Entities.CharInteract.Awake () [0x00000] in <00000000000000000000000000000000>:0 
+  at UnityEngine.Object.Internal_CloneSingle (UnityEngine.Object data) [0x00000] in <00000000000000000000000000000000>:0 
+  at UnityEngine.Object.Instantiate[T] (T original) [0x00000] in <00000000000000000000000000000000>:0 
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+
+NullReferenceException: Object reference not set to an instance of an object.
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+
+NullReferenceException: Object reference not set to an instance of an object.
+UnityEngine.GameObject:SetActive(Boolean)
+
+STEAM: Steam unavailable
+[Spatial Hash] Partial Rebuild Interval = 0,25
+1800
+[UIDropdownController] No values added to the dropdown
+[UIDropdownController] No values added to the dropdown
+UILobby platform variant not found: WindowsPlayer using default
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+Color primaries 0 is unknown or unsupported by WindowsMediaFoundation. Falling back to default may result in color shift. C:/Users/Administrator/Downloads/CustomServer/Spiel/Battleroyalebuild/bapbap_Data/sharedassets0.resource
+Opening Lobby UI :) at the time of 02.06.2026 14:23:11
+TelepathyTransport initialized!
+[LocalSavedData] Set Quick cast = False
+[NETMANAGER] Running Server Build
+[NETMANAGER] Vsync = 0 | FPS = 62
+[NETMANAGER] WS Port = 7777
+[NETMANAGER] KCP Port = 7778
+[NETMANAGER] TCP Port = 7779
+START MATCH - isDevLobbyMode=False | 2
+[GameMode] Loading GameManager (BAPBAP.Game.GameModeBattleRoyale)
+DIMENSION DATA COUNT 1
+[GameManager] Dimension data received: System.Collections.Generic.List`1[BAPBAP.Network.MatchmakingDimensionData]
+<color=cyan>[LIFECYCLE] Waiting for 'isWaitingForPlayers' to be false...</color>
+Curl error 7: Failed to connect to 127.0.0.1 port 5055 after 2056 ms: Couldn't connect to server
+HttpClient HTTP Error: Cannot connect to destination host | 
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+Prebaked navmesh data for level 'Map2_BazaarCity 3' succesfully found. Applying now.
+Loaded Map Map2_BazaarCity 3
+BoxCollider does not support negative scale or size.
+The effective box size has been forced positive and is likely to give unexpected collision geometry.
+If you absolutely need to use negative scaling you can use the convex MeshCollider. Scene hierarchy path "Env_Base(Clone)/Chunk_L0_(6_18)/Colliders_6,18(Clone)/Colliders_Obstacles/PD_House_06 (1)"
+BoxCollider does not support negative scale or size.
+The effective box size has been forced positive and is likely to give unexpected collision geometry.
+If you absolutely need to use negative scaling you can use the convex MeshCollider. Scene hierarchy path "Env_Base(Clone)/Chunk_L0_(6_18)/Colliders_6,18(Clone)/Colliders_Obstacles/PD_House_06 (1)"
+BoxCollider does not support negative scale or size.
+The effective box size has been forced positive and is likely to give unexpected collision geometry.
+If you absolutely need to use negative scaling you can use the convex MeshCollider. Scene hierarchy path "Env_Base(Clone)/Chunk_L0_(10_16)/Colliders_10,16(Clone)/Colliders_Obstacles/PD_House_02"
+BoxCollider does not support negative scale or size.
+The effective box size has been forced positive and is likely to give unexpected collision geometry.
+If you absolutely need to use negative scaling you can use the convex MeshCollider. Scene hierarchy path "Env_Base(Clone)/Chunk_L0_(10_16)/Colliders_10,16(Clone)/Colliders_Obstacles/PD_House_02"
+BoxCollider does not support negative scale or size.
+The effective box size has been forced positive and is likely to give unexpected collision geometry.
+If you absolutely need to use negative scaling you can use the convex MeshCollider. Scene hierarchy path "Env_Base(Clone)/Chunk_L0_(10_16)/Colliders_10,16(Clone)/Colliders_Obstacles/PD_House_02"
+BoxCollider does not support negative scale or size.
+The effective box size has been forced positive and is likely to give unexpected collision geometry.
+If you absolutely need to use negative scaling you can use the convex MeshCollider. Scene hierarchy path "Env_Base(Clone)/Chunk_L0_(10_16)/Colliders_10,16(Clone)/Colliders_Obstacles/PD_House_02"
+BoxCollider does not support negative scale or size.
+The effective box size has been forced positive and is likely to give unexpected collision geometry.
+If you absolutely need to use negative scaling you can use the convex MeshCollider. Scene hierarchy path "Env_Base(Clone)/Chunk_L0_(10_16)/Colliders_10,16(Clone)/Colliders_Obstacles/PD_House_02"
+BoxCollider does not support negative scale or size.
+The effective box size has been forced positive and is likely to give unexpected collision geometry.
+If you absolutely need to use negative scaling you can use the convex MeshCollider. Scene hierarchy path "Env_Base(Clone)/Chunk_L0_(10_16)/Colliders_10,16(Clone)/Colliders_Obstacles/PD_House_02"
+BoxCollider does not support negative scale or size.
+The effective box size has been forced positive and is likely to give unexpected collision geometry.
+If you absolutely need to use negative scaling you can use the convex MeshCollider. Scene hierarchy path "Env_Base(Clone)/Chunk_L0_(11_14)/Colliders_11,14(Clone)/Colliders_Obstacles/Colliders"
+BoxCollider does not support negative scale or size.
+The effective box size has been forced positive and is likely to give unexpected collision geometry.
+If you absolutely need to use negative scaling you can use the convex MeshCollider. Scene hierarchy path "Env_Base(Clone)/Chunk_L0_(11_14)/Colliders_11,14(Clone)/Colliders_Obstacles/Colliders"
+BoxCollider does not support negative scale or size.
+The effective box size has been forced positive and is likely to give unexpected collision geometry.
+If you absolutely need to use negative scaling you can use the convex MeshCollider. Scene hierarchy path "Env_Base(Clone)/Chunk_L0_(17_7)/Colliders_17,7(Clone)/Colliders_LowObstacles/Collider"
+BoxCollider does not support negative scale or size.
+The effective box size has been forced positive and is likely to give unexpected collision geometry.
+If you absolutely need to use negative scaling you can use the convex MeshCollider. Scene hierarchy path "Env_Base(Clone)/Chunk_L0_(17_7)/Colliders_17,7(Clone)/Colliders_LowObstacles/Collider"
+BoxCollider does not support negative scale or size.
+The effective box size has been forced positive and is likely to give unexpected collision geometry.
+If you absolutely need to use negative scaling you can use the convex MeshCollider. Scene hierarchy path "Env_Base(Clone)/Chunk_L0_(17_7)/Colliders_17,7(Clone)/Colliders_LowObstacles/Collider"
+BoxCollider does not support negative scale or size.
+The effective box size has been forced positive and is likely to give unexpected collision geometry.
+If you absolutely need to use negative scaling you can use the convex MeshCollider. Scene hierarchy path "Env_Base(Clone)/Chunk_L0_(17_7)/Colliders_17,7(Clone)/Colliders_LowObstacles/Collider"
+BoxCollider does not support negative scale or size.
+The effective box size has been forced positive and is likely to give unexpected collision geometry.
+If you absolutely need to use negative scaling you can use the convex MeshCollider. Scene hierarchy path "Env_Base(Clone)/Chunk_L0_(17_8)/Colliders_17,8(Clone)/Colliders_LowObstacles/Collider"
+BoxCollider does not support negative scale or size.
+The effective box size has been forced positive and is likely to give unexpected collision geometry.
+If you absolutely need to use negative scaling you can use the convex MeshCollider. Scene hierarchy path "Env_Base(Clone)/Chunk_L0_(17_8)/Colliders_17,8(Clone)/Colliders_LowObstacles/Collider"
+BoxCollider does not support negative scale or size.
+The effective box size has been forced positive and is likely to give unexpected collision geometry.
+If you absolutely need to use negative scaling you can use the convex MeshCollider. Scene hierarchy path "Env_Base(Clone)/Chunk_L0_(17_8)/Colliders_17,8(Clone)/Colliders_LowObstacles/Collider"
+BoxCollider does not support negative scale or size.
+The effective box size has been forced positive and is likely to give unexpected collision geometry.
+If you absolutely need to use negative scaling you can use the convex MeshCollider. Scene hierarchy path "Env_Base(Clone)/Chunk_L0_(17_8)/Colliders_17,8(Clone)/Colliders_LowObstacles/Collider"
+[GameMode] OnEnable | frameCount 64
+DIMENSION ID is 0. Ignored.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+spawnLocationPerTeam MTD { reqId: 1, gameId: matchmaking-20260602122251-5821, botTeams: 4, botDifficulty: 1, players: [{ username: CodexLiveV177, discriminator: 1761, accountId: codex-live-v177-20260602-142219, gameAuthId: db7413aa65397e962b524489ef7b5f20, lobbyCode: MM85V2DE, points: 0, charId: 15, skinAssetId: -1, teamId: 1, }, ], spawnLocationPerTeam: [ 0, 1, 2, 3, 4, 5, 6, 7, 8, ], }
+<color=cyan>[PRE-MATCH] Started</color>
+<color=cyan>[PRE-MATCH] Waiting for all players to connect, max 10 seconds...</color>
+<color=cyan>[LIFECYCLE] Waiting for 'isWaitingForStart' to be false...</color>
+<color=yellow>[CHAR SELECT] Starting...</color>
+<color=yellow>[CHAR SELECT] Waiting for 20 seconds...</color>
+<color=yellow>[CHAR SELECT] Complete!</color>
+<color=yellow>[SPAWN SELECT] Starting...</color>
+<color=yellow>[SPAWN SELECT] Waiting for 10 seconds...</color>
+[NETMANAGER] Client connected - 1883323512 | 2224
+[NETMANAGER] Client ready pre - 1883323512 | 2247
+[NETMANAGER] Client ready post - 1883323512 | 2247
+[NETMANAGER] OnServerClInit - 1883323512 - isDevLobbyMode=False | 2247
+[NETMANAGER] ServerMatchmakingInit - connId=1883323512 name= gameAuth=db7413aa65397e962b524489ef7b5f20 | 2247
+[NETMANAGER] Matchmaking player connected db7413aa65397e962b524489ef7b5f20 | 2247 | { username: CodexLiveV177, discriminator: 1761, accountId: codex-live-v177-20260602-142219, gameAuthId: db7413aa65397e962b524489ef7b5f20, lobbyCode: MM85V2DE, points: 0, charId: 15, skinAssetId: -1, teamId: 1, playerId: 1, }
+Adding player matchmaking... connection(1883323512) 1883323512 | 2247
+[NETMANAGER] Matchmaking player connected successfully db7413aa65397e962b524489ef7b5f20 | 2247 | { username: CodexLiveV177, discriminator: 1761, accountId: codex-live-v177-20260602-142219, gameAuthId: db7413aa65397e962b524489ef7b5f20, lobbyCode: MM85V2DE, points: 0, charId: 15, skinAssetId: -1, teamId: 1, playerId: 1, }
+[PLAYERMANAGER] [CodexLiveV177] Player On Start | 2247
+<color=yellow>[SPAWN SELECT] Spawns Assigned!</color>
+<color=cyan>[PRE-MATCH] Ended</color>
+<color=green>Setting isWaitingForStart to false</color>
+<color=cyan>[LIFECYCLE] Waiting for currentGameMode to load...</color>
+<color=cyan>[LIFECYCLE] Starting countdown...</color>
+<color=cyan>[LIFECYCLE] Match has officially started!</color>
+[WEBSERVER] [Send] [Request 0] [http://127.0.0.1:5055/api/internal/team-ended] UTD { gameId: matchmaking-20260602122251-5821, players: [ { accountId: codex-live-v177-20260602-142219, discriminator: 1761, username: CodexLiveV177, lobbyCode: MM85V2DE, points: 0, charId: 15, skinId: -1, teamId: 1, kills: 0, deaths: 0, assists: 0, damageDealt: 0, damageReceived: 0, healingReceived: 0, placement: 4, lootableAbilityId: 0, lostAt: 1780403101831, didConnect: False, leavePenalty: False, fpses: [ ], pings: [ ], items: [ ], augments: [ ], }, { accountId: codex-live-v177-20260602-142219, discriminator: 1761, username: CodexLiveV177, lobbyCode: MM85V2DE, points: 0, charId: 7, skinId: -1, teamId: 1, kills: 0, deaths: 1, assists: 0, damageDealt: 0, damageReceived: 1327, healingReceived: 0, placement: 4, lootableAbilityId: -1, lostAt: 1780403101831, didConnect: False, leavePenalty: False, fpses: [ 150, 128, 138, 134, 132, 128, 133, 136, 118, ], pings: [ 30, 25, 28, 18, 23, 29, 21, 24, 23, ], items: [ -1, -1, -1, -1, ], augments: [ 263, -1, -1, ], }, ], }
+[WEBSERVER] [Send] [Request 0] [Response 200]

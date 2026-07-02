@@ -1,0 +1,18 @@
+[Unit]
+Description=BAPBAP Custom Match Server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/bapbap/custom-match-server
+EnvironmentFile=/etc/bapbap/custom-match-server.env
+ExecStart=/usr/bin/dotnet /opt/bapbap/custom-match-server/BapCustomServer.dll
+Restart=on-failure
+RestartSec=5
+User=bapbap
+Group=bapbap
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target

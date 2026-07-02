@@ -1,0 +1,789 @@
+Wird geladen...
+Bitte wählen sie einen Authentifizierungsanbieter aus.
+Weiterleitung zu {0}. Bitte schließen Sie die Authentifizierung ab und kehren Sie zum Spiel zurück.
+Authentifizierung mit {0}. Bitte warten Sie.
+Bestätigen der {0}-Authentifizierung. Bitte warten Sie.
+Die Authentifizierung mit {0} wurde nicht abgeschlossen. Bitte versuche es erneut
+Die Athentifizierung mit {0} ist fehlgeschlagen. Bitte versuchen Sie es erneut
+Erfolgreiche Authentifizierung mit {0}!
+Fehler bei der Anmeldung. Dieses Konto ist bereits auf einem anderen Gerät angemeldet. Bitte melden Sie sich an und versuchen Sie es erneut.
+SPIELEN
+BAP-PASS
+PROFIL
+RANGLISTE
+SPIND
+CHARAKTERE
+BEREIT
+NICHT BEREIT
+IN DER WARTESCHLANGE
+Spieler finden...
+EINLADEN
+LOBBY CODE
+BEREIT
+NICHT BEREIT
+ABBRUCH
+Tippen...
+Online
+Link kopiert!
+Spieler in der Warteschlange
+Spiel-Modus
+Spiel-Modus
+Spielmodus auswählen
+Einen Freund einladen!
+Verwendungen übrig
+Frühere Gewinner
+Die geschlossene Beta ist jetzt vorbei! Schaut in unserem Discord nach Neuigkeiten über die Entwicklung des Spiels und zukünftige Tests.
+Gewonnen mit {0} Eliminierungen
+Spiel startet in
+Spiel Startet...
+Lobby ist bereits voll!
+Die Lobby war ungültig!
+Du bist der Lobby beigetreten
+ist der Lobby beigetreten
+hat die Lobby verlassen
+
+Warteschlange...
+IN WARTESCHLANGE
+IM SPIEL
+SUCHE NACH TEAM...
+Jemand hat das Team verlassen. Suche nach einem neuen Team...
+AUSWÄHLEN
+AUSGEWÄHLT
+FREISCHALTEN
+Freischalten für
+Freischalten für {0}
+Fähigkeiten
+Meisterung
+BAP-PASS
+Endet in {0} Tagen
+ABMELDEN
+Siege
+Eliminierungen
+Tode
+Assists
+KDA
+Verursachter Schaden
+Erlittener Schaden
+Spielverlauf
+von
+Kein Spielverlauf gefunden
+Die Rangliste ist leer
+Name
+Rang
+Eliminierungen
+Siege
+Rang {0}
+RP
+Neu
+STICKER
+Spind ist leer
+Sticker ausgewählt
+Linksklick zum zuweisen, rechtsklick zum entfernen
+Zum Abbrechen klicken
+Finisher
+Finisher ausgewählt
+Neuen Gegenstand erhalten
+Neuen Charakter erhalten
+Zum Fortfahren klicken
+beanspruchen
+Beansprucht
+Auswählen
+Ausgewählt
+Ab Stufe {0} freigeschaltet
+Schließen
+Abbrechen
+Nächste
+Beenden
+XP
+BAP-PASS
+Zum Level
+Befördert
+Zurückgestuft
+Level {0}
+Max Level
+Sieg
+Niederlage
+Anmelden
+Vervollständige Anmeldung
+Benutzernamen eingeben:
+Geschäftsbedingungen
+Datenschutzrichtlinien
+Ich stimme den Allgemeinen Geschäftsbedingungen und den Datenschutzbestimmungen zu
+Der Benutzername muss zwischen 3 und 20 Zeichen lang sein und darf nur gültige Zeichen enthalten
+Der Benutzername ist bereits vergeben!
+Du musst den Geschäftsbedingungen und den Datenschutzbestimmungen zustimmen, um fortzufahren
+Aufhören
+Bist du sicher, dass du das Spiel schließen willst?
+Deine Verbindung wurde unterbrochen. Bitte aktualisiere die Seite, um die Verbindung wiederherzustellen.
+Du bist bereits eingeloggt. Bitte schließe dieses Fenster.
+ist dem Spiel beigetreten.
+Hör auf zu spammen! Auszeit für {0}
+Markieren
+{0} {1}
+Gefahr
+Unterwegs
+Gegner gesichtet
+Brauche Hilfe
+Position alarmiert
+Bewege mich zu dieser Position
+Gegner gesichtet
+Braucht Hilfe
+Verbündeter
+Gegner
+Verbündeter Npc
+Gegnerischer Npc
+Neutral
+Fähigkeit {0} ist in {1} Sekunde/n verfügbar!
+Fähigkeit {0} ist bereit!
+Hops genommen von
+wurde gehopst
+Drücke {0} zum fallenlassen
+oder
+zum erweitern
+Tränke sind voll!
+Maximales Gold!
+Tauschen
+HP
+Opfer
+opfern
+Kaufen
+kaufen
+Benötigt
+Auf Lager
+Aktuell
+Maximal
+
+
+
+
+
+
+
+Verbessern
+Gold
+Schaden
+Bewegungsgeschwindigkeit
+Abklingzeitverringerung
+Kritische Chance
+Kritischer Schaden
+Lebensraub
+Angriffsgeschwindigkeit
+Dornen
+Schild
+Leben
+Lebens-Regeneration
+Leben in Prozent
+Unverwundbar
+Heilung
+In die Luft geschleudert
+In die Luft geschleudert
+Betäubung
+Betäubt
+Zum Schweigen bringen
+Zum Schweigen gebracht
+Verwurzelt
+Verwurzelt
+Langsam
+Verlangsamt
+Schieben
+Geschoben
+Sprinten
+Gift
+Vergiftet
+Verbrennen
+Klonen
+Erneut wirken
+Schwächen
+Geschwächt
+Aufgedeckt
+Schild
+Schadensverstärkung
+Verstricken
+Verstrickt
+Verwirrt
+Konter
+Angst
+Verängstigt
+Blind
+Geblendet
+Gigantisch
+Rutschig
+Gefroren
+Kurzsichtigkeit
+Kurzsichtigkeit
+Charakter
+Gegenstand
+Interagierbar
+Verbessern
+Verbessern
+Keine Gegenstände zum Verbessern in diesem Slot!
+Der Gegenstand hat bereits das höchste Level!
+Verbessern für
+Laden
+Verkaufsautomat
+Kaufen für
+Der Verkaufsautomat ist leer.
+Kaufe Lebenstrank für
+Verkaufen
+Verkaufen für
+Treibsand
+Angelrute
+Fischen Sie an
+FISCH!!!
+Fisch!?
+Angelrute gebrochen :(
+Geheimer Stein
+Giftpfeil-Falle
+Wiederbelebungs-Altar
+Benutzter Wiederbelebungs-Altar
+Verbesserungsstation
+Beutekiste
+Seltene Beutekiste
+Legendäre Beutekiste
+Böser Roboter
+Großer böser Roboter
+Verschlossene Beutekiste
+Verschlossene Beutekiste
+Geschützturm
+Verschlossene Beutekiste
+Kraftkugel
+Nachschubabwurf
+Nachschubabwurf in der Luft
+Nachschubabwurf gelandet
+Explosiv-Fass
+
+Frost-Fass
+Verschiebbarer Gefrierer
+Verschiebbarer Sprengstoff
+
+Sprungbrett
+Verstecktes Sprungbrett
+Bienenstock
+Bärenfalle
+Blut Rune
+Zuschüsse +40% Schaden
+Zuschüsse +75% Lifesteal
+Sie haben genug geopfert.
+Die Runenhunger nach Blut.
+Opfern
+Opfern
+Maximal
+Maximal
+Stacheliger Kaktus
+Geschwindigkeitsboost
+Lebensboost
+Energieboost
+Verkaufsstation
+Eisiger Boden
+Kraftkristall
+Steppenroller
+Gelee-Boss
+Maximal
+Maximal
+Maximal
+Maximal
+Maximal
+Maximal
+Verschlossene Beutekiste
+Maximal
+Maximal
+Maximal
+Maximal
+Maximal
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Zone wird geschlossen!
+Zone schließt in {0} Sekunden
+Nachschubabwurf gestartet!
+LOS!
+SIEG
+NIEDERLAGE
+{0} Platz
+Zuschauen
+Zuschauen
+Zurück zur Lobby
+Nachricht an Team senden...
+TEAM
+Keine
+Standard
+Unbegrenzt
+Niedrig
+Mittel
+Hoch
+Ultra
+Benutzerdefiniert
+Aktiviert
+Deaktiviert
+Einige Texte werden möglicherweise nicht aktualisiert. Starte das Spiel neu, um die Änderungen vollständig zu übernehmen.
+Taste drücken
+Abmelden
+Bist du sicher, dass du dich abmelden willst?
+Alle aktuellen Fortschritte gehen verloren.
+Allgemein
+Grafik
+Audio
+Steuerung
+Einstellungen
+Allgemein
+Interface
+Spiel
+Datenschutz
+Anzeige
+Qualität
+Lautstärke
+Gameplay Tastenbelegung
+Menü Tastenbelegung
+Sprache
+Region
+Anzeigemodus
+Fenstermodus
+Randlos-Fenstermodus
+Vollbild
+Auflösung
+UI-Skalierung
+Ping anzeigen
+FPS anzeigen
+Spielversion anzeigen
+Chat Nachrichten verstecken
+Intensität des Bildschirmwackelns
+Als Anonym erscheinen
+Spielernamen ausblenden
+Schimpfwort-Filter
+Render-Skalierung
+FPS Limit
+Qualitätsvoreinstellung
+Antialiasing-Modus
+Echtzeit-Schatten
+Umgebungsokklusion im Bildschirmbereich
+Bloom
+Tiefenschärfe
+Allgemeine Lautstärke
+Musik-Lautstärke
+Umgebungslautstärke
+Sfx-Lautstärke
+Ping-Lautstärke
+Aufwärts bewegen
+Abwärts bewegen
+Nach links bewegen
+Nach rechts bewegen
+Fähigkeit 2
+Fähigkeit 3
+Fähigkeit 4
+Ultimative-Fähigkeit
+Trank verwenden
+
+Fähigkeit abbrechen
+Gegenstand 1 fallen lassen
+Gegenstand 2 fallen lassen
+Gegenstand 3 fallen lassen
+Trank fallen lassen
+Gold fallen lassen
+
+Kamera-Sperrung
+Chat öffnen/senden
+Markieren
+Geste
+Minimap-Anzeige (halten)
+Minimap-Anzeige (umschalten)
+Interagieren
+Tooltip aufklappen
+Normal
+Ranked
+Training
+Aufwärmmodus
+MINI SOLO
+MINI DUOS
+MINI TRIOS
+SOLO
+DUOS
+TRIOS
+RANKED DUOS
+RANKED TRIOS
+Unranked
+Bronze
+Silber
+Gold
+Platin
+Diamant
+Königlich
+Göttlich
+Gewöhnlich
+Ungewöhnlich
+Selten
+Episch
+Legendär
+Gegenstand
+Verbrauchsgegenstand
+Währung
+Helm
+Torso
+Stiefel
+Dicke Cap
+Dicke Stiefel
+Chrono Cap
+Chrono Rucksack
+Spitzer Rucksack
+Spitze Stiefel
+Spitze Cap
+Snap Stiefel
+Stachel Rucksack
+Schnelle Stiefel
+Vampir Rucksack
+Vampir Cap
+Saft
+Trinken, um etwas Leben wiederherzustellen
+Gold
+Währung, die zum Tausch gegen Waren und Dienstleistungen verwendet wird
+Stachel Stiefel
+Stachel Cap
+Snap Cap
+Snap Rucksack
+Dicker Rucksack
+Chrono Stiefel
+Schnelle Cap
+Schneller Rucksack
+Vampir Stiefel
+Gelee Cap
+Gelee Cap
+Gelee Cap
+Gelee Cap
+Gelee Cap
+Gelee Cap
+Gelee Cap
+Gelee Cap
+Gelee Cap
+Gelee Cap
+Gelee Cap
+Schildpulver
+Werden gepoliert
+Sprengfass
+Tragbares Fass
+Sprungkissen
+Stellen Sie ein Sprungkissen ein
+Unsichtbarer Sprungkissen
+Stellen Sie ein unsichtbares Sprungblock ein
+Bärenfalle
+Tragbare Bärenfalle
+Gehirnfrieren
+Trinken Sie es, um Insta Frozen zu bekommen
+Turm
+Tragbarer Turm
+Kaktus
+Tragbarer Kaktus
+Bienenstock
+Tragbares Bienenstock
+Drückbares Sprengfass
+Tragbares sprengbares Sprenglauf
+Stoßstange
+Tragbarer Stoßfänger
+Fernrohr
+Tragbares Teleskop
+Sanduhr
+Tragbare Sanduhr
+Fass einfrieren
+Tragbares Freeze Fass
+Schneemann
+Tragbarer Schneemann
+Tragbarer Schneemann
+Tragbarer Schneemann
+Tragbarer Schneemann
+Tragbarer Schneemann
+Tragbarer Schneemann
+Tragbarer Schneemann
+Tragbarer Schneemann
+Tragbarer Schneemann
+Tragbarer Schneemann
+Tragbarer Schneemann
+Tragbarer Schneemann
+Tragbarer Schneemann
+Tragbarer Schneemann
+Tragbarer Schneemann
+Tragbarer Schneemann
+Tragbarer Schneemann
+Gewöhnlich
+Ungewöhnlich
+Selten
+Episch
+Legendär
+Geste
+Sticker
+Vollstrecker
+Währung
+Gold
+Währung, die zum Tausch gegen Waren und Dienstleistungen verwendet wird
+Kristalle
+Premiumwährung zum Tausch gegen noch bessere Waren und Dienstleistungen
+
+BAPBAP
+Das BAPBAP-Logo, in seiner horizontalen Version
+BAPBAP umrandet
+Das BAPBAP-Logo in seiner horizontalen Version mit roter Umrandung
+Brot
+Ein Brot-Emoji-Sticker
+Krone
+Du hast dies fallen gelassen, König
+Geister-Daumen hoch
+Ein Geist, der die Daumen nach oben streckt
+Überraschter Geist
+Ein Geist, der von etwas schockiert ist
+Lachender Geist
+Ein Geist, der sich den Arsch ablacht
+Weinender Geist
+Ein Geist, der sehr traurig ist
+Wütender Geist
+Ein Geist, der angepisst erscheint
+GGEZ
+Damit kannst du höflich mit deinen BAPBAP-Siegen angeben.
+Wann Code?
+Wann kommt der Code denn jetzt?
+Grabstein
+Ein normaler Grabstein
+Flügel-Grabstein
+Ein normaler Grabstein mit Flügeln
+Beta-Grabstein
+Exklusiver Grabstein für Beta-Spieler
+Großer Grabstein
+Big boi-Grabstein
+Basic
+Speziell
+Bewegung
+Ultimativ
+Run N' Gun
+Feuere 4 kleine Kugeln ab.
+Feuere 4 kleine Kugeln ab, die jeweils {1}.
+Friss Blei
+Feuere 3 große Kugeln auf einmal ab. BYE BYE! bei Treffer zurücksetzen.
+Feuere 3 große Kugeln auf einmal ab, welche jeweils {1} verursachen. Setze CYA! bei einem Treffer zurück.
+BYE BYE!
+Führe einen schnellen Dash aus.
+Führe einen schnellen Dash aus.
+Geschosshölle
+Drehe dich und schieße auf alles um dich herum. Verlangsamt Gegner bei einem Treffer.
+Drehe dich und schieße auf alles um dich herum und verursache {1}.Verursache {2} bei einem Treffer. 
+Links, Rechts, Links
+Führe eine 3-Schlag-Kombo mit deinen Fäusten aus. Wenn du einen Gegner triffst, erhältst du einen Faust-Stapel.
+Führe eine 3-Schlag Kombo welches jeweils {1} verursacht aus. Wenn du einen Gegner triffst, erhältst du einen Faust-Stapel und vermindert deinen Chuck Faust-Stapel Abklingzeit.
+Leberhaken
+Entfessle einen kräftigen Schlag. Betäubt Gegner, wenn du 3 Faust-Stapel hast.
+Entfessle einen kräftigen Schlag welches {1} verursacht und {2} hinzufügt. Füge {3} hinzu falls du alle Stapel hast.
+Ente im Anflug
+Springe zu einer Position. Schleudert Gegner bei der Landung in die Luft.
+Springe zu einer Position. Füge {1} bei der Landung welches {2} verursacht.
+CHUCK!!!!
+Werde gigantisch und erhalte einen HP-, Schadens- und Geschwindigkeits-Buff.
+Werde gigantisch für {1} welches {2} und {3} verleiht. Während der Chuck Ulti bekommt Chuck {4} weniger Schaden und {5} Heilung von seinem Max HP per Sekunde. 
+Quak
+Führe eine 3-Hieb-Kombo mit deinen Klingen aus.
+Führe einen 3-Hieb-Kombo mit deinen Klingen aus, welchhes {1} verursacht. Verursache {2} bei dem dritten Hieb.
+MLEM
+Ziehe dich mit deiner Zunge an ein Ziel ran. Verlangsamt Gegner bei einem Treffer.
+Ziehe dich mit deiner Zunge an ein Ziel ran. Verursache {1} bei einem Treffer auf dem Gegner.
+Frosch von oben
+Springe zu einer Position und verlangsame Gegner bei der Landung.
+Springe zu einer Position und verursache {1} und {2} bei der Landung. Wenn du einen Gegner triffst vermindert es die Abklingzeit um {3} Sekunden.
+Froschiges Ende
+Sprinte vorwärts und füge Gegnern auf dem Weg hohen Schaden zu.
+Sprinte vorwärts, welches {1} verursacht und füge {2} zu den Gegnern auf dem Weg hinzu.
+Lass es brennen
+Setze einen Bereich in Flammen.
+Setze einen Bereich in Flammen ein welches {1} verursacht.
+Molotow
+Verwandle einen Bereich in ein sich ausbreitendes Feuer. Verbrennt und verlangsamt Gegner bei einem Treffer.
+Verwandle einen Bereich in ein sich ausbreitendes Feuer. Verursache {1}, füge {2} und {3} den Gegnern hinzu.
+Schutz des Feuers
+Schütze dich mit einem Schild aus Feuer.
+Schütze dich mit einem Schild aus Feuer, welches dir selbst {1} gibt und deinen {2} um {3} erhöht. Dies bleibt für {4} Sekunden erhalten.
+Achtung, oben!
+Lässt einen riesigen Meteoriten auf den Boden krachen.
+Lässt einen riesigen Meteoriten auf den Boden krachen welches {1} verursacht.
+Lila Pfeil
+Schieße einen Energiepfeil ab.
+Schieße einen Energiepfeil ab welches {1} verursacht.
+Pfeilhagel
+Lässt Pfeile in einem Gebiet niederregnen. Verlangsamt Gegner bei einem Treffer.
+Lässt Pfeile in einem Gebiet niederregnen welches {1} verursacht und {2} bei einem Treffer zufügt.
+Muss los!
+Schießt auf den Boden, um wegzuspringen. Schleudert Gegner bei einem Treffer in die Luft.
+Schießt auf den Boden um wegzuspringen welches {1} verursacht und {2} bei einem Treffer hinzufügt.
+Großer lila Pfeil
+Schieße einen Pfeil der durch Hindernisse und Gegner fliegt. Verlangsamt Gegner bei einem Treffer.
+Schieße einen Pfeil der durch Hindernisse und Gegner durchfliegt. Verursache {1} und füge {2} Verlangsamung bei einem Treffer.
+Links & Rechts
+Führe eine 3-Schlag-Kombo mit deinen Fäusten aus.
+Führe einen 3-Schlag-Kombo mit deinen Fäusten aus welches {1} verursacht. Bei dem dritten Schlag treffe den Boden und verursache {2}. 
+High Five
+Gib Gegnern vor dir eine Schelle. Betäubt und schwächt Gegner bei einem Treffer.
+Gib Gegnern vor dir eine Schelle welches {1} verursacht, füge {2} und {3} hinzu.
+Sushi-Rolle
+Lade einen Dash auf, füge Schaden zu und verlangsame Ziele auf dem Weg.
+Lade einen Dash auf, welches {1} verursacht und füge {2} dem Zielen auf dem Weg hinzu. 
+Fliegender Fisch
+Spring in die Luft und schlage in einem Gebiet ein. Bei einem Treffer schleuderst du Gegner in die Luft und schirmst dich und Verbündete ab.
+Springe in die Luft und schlage in einem Gebit ein welches {1} den Gegnern auf dem Weg verursacht und füge Verbündeten {2} um {3} von deinem Max HP hinzu. Gib dir selbst einen Shield für {4} per getroffene Ziele mit deiner Fähigkeit.
+Ernten
+Führe eine 2-Hieb-Kombo mit deiner Sense aus.
+Zerschneide  mehrere Ziele welches {1} verursacht. Wenn dies benutzt wird während Shadow Walk aktiv ist veursache {2} extra.
+Kein entkommen
+Spalte den Boden. Gegner werden bei einem Treffer aufgedeckt.
+Spalte den Boden welches {1} verursacht und {2} hinzufügt. Wenn es während Untertauchen aktiv ist benutzt wird heile dich um {3} vom hinzugefügtem Schaden.
+Untertauchen
+Werde unsichtbar und gewinne an Geschwindigkeit. Verursache zusätzlichen Schaden für deinen nächsten LMB oder erhalte Leben mit Q.
+Werde für {1} unsichtbar und erhöhe {2} und {3}.
+Der Tod
+Rase vorwärts und schlage mit einem großen Hieb vor dir.
+Rase vorwärts und schlage mit einem großen Hieb vor dir welches {1} verursacht.
+"Hallo Welt"
+Schieße eine digitale Welle.
+Schieße eine digitale Welle welches {1} verursacht.
+Laserstrahl
+Schieße einen Strahl ab. Verlangsamt Gegner bei einem Treffer.
+Schieße einen Strahl welches {1} verursacht und füge {2} bei einem Treffer hinzu.
+Kopieren & Einfügen
+Teleportiere dich an einen Ort und erstelle einen Klon an deiner ursprünglichen Position. Fähigkeit erneut wirken um die Position mit deinem Klon zu tauschen.
+Teleportiere dich an einen Ort und erstelle einen Klon an deiner ursprünglichen Position welches {1} lang bestehen bleibt. Aktiviere die Fähigkeit erneut um die Position mit deinem Klon zu tauschen.
+Noch mehr!
+Erzeugt einen Klon an einer Position. Fähigkeit erneut wirken um die Position mit deinem Klon zu tauschen.
+Erzeuge einen Klon an einer Poistion welches {1} lang bestehen bleibt. Aktiviere die Fähigkeit erneut um die Position mit deinem Klon zu tauschen.
+Panzerfaust
+Feuert eine explosive Rakete ab.
+Feuert eine explosive Rakete ab welches bei einem Treffer {1} verursacht und {2} von der Explosion.
+Im Visier
+Feuert eine zielsuchende Rakete ab.
+Feuert eine zielsuchende Rakete ab welches bei einem Treffer {1} verursacht und {2} von der Explosion.
+Raketensprung
+Feuere auf den Boden, um an eine bestimmte Position zu springen. Schleudert Gegner bei einem Treffer in die Luft.
+Feuere auf den Boden um an eine bestimmte Position zu springen welches {1} verursacht und {2} bei einem Treffer hinzufügt.
+Mienenwerfer
+Wirf Annäherungsminen auf den Boden. Verlangsamt Gegner bei einem Treffer.
+Wirf Annäherungsminen auf den Boden wovon jede {1} verursacht und {2} bei einem Treffer hinzufügt. Die Minen halten um {3} Sekunden. 
+Feuerschnitt
+Führe eine 3-Schnitt-Kombo mit deinem Katana aus.
+Führt zwei schnelle Hiebe aus die {1} verursachen und einen dritten kraftvollen Schlag, welches {2} verursacht.
+Halt stop!
+Kontert Angriffe und reflektiert Geschosse.
+Wird unverwundbar und führt {1} für {2} aus. Reflektiert beim Kontern Projektile und Gegenangriffe im Nahkampf welches dem Ziel {3} hinzufügt.
+Tanz des Feuers
+Dash vorwärts und setze dein Katana in Brand. Kann bis zu 3 mal wiederholt werden, wenn du einen Gegner triffst.
+Dash vorwärts welches {1] verursacht und füge den Zielen {2} hinzu. Wenn du ein Ziel triffst, wird der Sprint wieder aufgeladen und dein nächster Feuerhieb-Angriff wird mit {3} verstärkt. Kannst die Fähigkeit bis zu {4}-mal erneut aktivieren.
+Feuerball
+Schleudert ein feuriges Projektil mit deinem Katana. Wird aufgeladen, wenn du Gegner mit Nahkampfangriffen triffst.
+Schleudert ein feuriges Projektil mit deinem Katana welches {1} verursacht und dem Gegnern {2} hinzufügt. Wird aufgeladen, wenn du Gegner mit Nahkampfangriffen triffst
+Chop-Tritte
+Führe eine Zwei-Treffer-Kombination von welchem das letzte eine schnelle Tritt Kombination ist.
+Treten sie den Zielen welches {1} verursacht mit einem kraftvollen Tritt. Füge danach {2} und {3} mit den zwei schnellen Tritten hinzu.
+Broth Blast
+Springe mit einem kurzen Tritt in eine beliebige Richtung.
+Führe einen Sprungtritt aus welches {1} verursacht und füge {2}  für {3} hinzu.
+Miso Dash
+Springe mit einem fliegenden Knieschlag nach vorne.
+Springe in eine Richtung welches {1} getroffen Zielen hinzufügt.
+Express Delivery
+Führe einen Wirbelstoß in einem Kegel aus und stoße die Ziele weg.
+Führe einen Wirbelstoß in einem Kegel aus welches {1} verursacht und füge den Zielen {2} hinzu.
+Melden Sie sich an
+Einzelheiten
+{0} von {1} Anmeldeziel
+Beta -Herausforderung
+Leben
+Haftungsausschluss
+{0} Das Leben wird verzehrt, wenn ein Spiel verliert.
+Es gibt keine Rückerstattungen für Spielunfälle oder Trennung.
+Aus Leben
+Du bist kein Leben mehr!
+Versuchen Sie, mehr Leben zu verdienen, indem Sie Aufgaben erledigen:
+Holen Sie sich mehr Leben
+Verbleibende Zeit, um sich anzumelden
+{0} Anmeldung
+von {0} musste starten
+Verdienen Leben
+Sie sind angemeldet
+Teilen Sie Ihren Einladungscode weiter
+Jede {0} Anmeldung, $ 1 wird dem Pool hinzugefügt
+Anmelden Zeit ist vorbei! Bleiben Sie dran für weitere Neuigkeiten
+Verdienen Leben
+Verdiene Leben durch Erledigung von Aufgaben. Je mehr Leben Sie verdienen, desto mehr Chancen haben Sie.
+Ihr Einladungscode:
+Zucken nicht verknüpft
+Verbinde jetzt
+Twitch verlinkt mit {0}
+Freund lädt ein
+{0} Freund Einladungen
+Beanspruchen!
+Behauptet
+Als nächstes
+Nicht verfügbar
+{0} von {1}
+Die Aufgabe ist nicht abgeschlossen. Laden Sie mehr Freunde ein, die Belohnung freizuschalten
+Twitch Drops (12. - 15. Oktober)
+Tag {0}
+Die Aufgabe ist nicht abgeschlossen. Holen Sie sich Twitch -Tropfen, um die Belohnung freizuschalten
+Spiele spielen
+{0} Spiele gespielt
+Die Aufgabe ist nicht abgeschlossen. Spielen Sie mehr Spiele, um die Belohnung freizuschalten
+Preis Pool
+Der Preispool wird durch die Top 50 Spieler geteilt
+{0} Platz
+{0} Punkte
+Beteiligung
+jede
+Wie gewinnt man
+Spielen Sie weiter, bis Ihr Leben ausgeht. Diejenigen mit den meisten Siegen werden zum Turniermeister gekrönt!
+Verdiene zusätzliches Leben
+Erledigen Sie die Aufgaben, um mehr Leben zu verdienen. Mehr Leben = mehr Chancen!
+Spiele gewinnen
+Sammeln Sie Siege, indem Sie das letzte Team sind. Sie verlieren ein Leben, wenn Ihr Trupp beseitigt wird.
+Klettern Sie die Rangliste
+Nur eine Top -Handvoll gewinnt den Preispool. Der Schleifen stoppen nicht.
+Format
+4-tägige Veranstaltung vom 12. bis 15. Oktober.
+Die Server sind von 9 bis 2 Uhr morgens geöffnet.
+Jedes Spiel hat einen niedrigen HP als Basisspielmodifikator
+Tag {0}
+Goldmodifikator
+Sie verlieren, wenn Sie pleite sind
+Maximal 3 Siege erreichbar
+Nachtzeit
+Schau hinter dich. Boo!
+Maximal 10 Siege erreichbar
+Meteorregen
+Es ist Jover, sobald du still bleibst
+Maximal 25 Siege erreichbar
+Niedrige HP
+Viel Glück
+Regeln
+Durch das Brechen aller Regeln führt eine automatische Disqualifikation + Verbot
+Kein Fehlermissbrauch.
+Kein Bottieren für zusätzliches Leben.
+Keine ALT -Konten, Sie können sich nur einmal anmelden.
+Kein Zusammenbruch mit anderen Teams.
+Melden Sie sich jetzt für eine Chance an, {0} zu gewinnen
+{0} Anmeldung
+von {0} zu starten
+Nach oben scrollen
+{0} angemeldet!
+{0} erlöst {1} live (s)!
+Melden Sie sich an
+Geben Sie einen Einladungscode ein
+Eingeben
+Angemeldet
+CODE einladen kopiert!
+Leben
+Verdiene Leben durch Erledigung von Aufgaben. Mehr Leben = mehr Chancen
+Zuckung fällt
+Verdiene Leben, indem er Twitch -Streams beobachtet
+
+
+#VALUE!

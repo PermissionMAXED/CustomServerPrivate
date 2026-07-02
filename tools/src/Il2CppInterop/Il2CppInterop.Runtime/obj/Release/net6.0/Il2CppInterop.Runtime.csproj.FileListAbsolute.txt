@@ -1,0 +1,14 @@
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.Runtime\net6.0\Il2CppInterop.Runtime.deps.json
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.Runtime\net6.0\Il2CppInterop.Runtime.dll
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.Runtime\net6.0\Il2CppInterop.Runtime.xml
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.Runtime\obj\Release\net6.0\Il2CppInterop.Runtime.csproj.AssemblyReference.cache
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.Runtime\obj\Release\net6.0\Il2CppInterop.Runtime.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.Runtime\obj\Release\net6.0\Il2CppInterop.Runtime.AssemblyInfoInputs.cache
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.Runtime\obj\Release\net6.0\Il2CppInterop.Runtime.AssemblyInfo.cs
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.Runtime\obj\Release\net6.0\Il2CppInterop.Runtime.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.Runtime\obj\Release\net6.0\Il2CppInterop.Runtime.sourcelink.json
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.Runtime\obj\Release\net6.0\Il2CppIn.049991B8.Up2Date
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.Runtime\obj\Release\net6.0\Il2CppInterop.Runtime.dll
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.Runtime\obj\Release\net6.0\refint\Il2CppInterop.Runtime.dll
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.Runtime\obj\Release\net6.0\Il2CppInterop.Runtime.xml
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.Runtime\obj\Release\net6.0\ref\Il2CppInterop.Runtime.dll

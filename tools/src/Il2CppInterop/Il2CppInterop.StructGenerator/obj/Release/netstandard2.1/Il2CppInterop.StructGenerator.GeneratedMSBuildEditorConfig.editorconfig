@@ -1,0 +1,14 @@
+is_global = true
+build_property.RootNamespace = Il2CppInterop.StructGenerator
+build_property.ProjectDir = C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.StructGenerator\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.PolySharpUsePublicAccessibilityForGeneratedTypes = 
+build_property.PolySharpIncludeRuntimeSupportedAttributes = 
+build_property.PolySharpUseInteropServices2NamespaceForUnmanagedCallersOnlyAttribute = 
+build_property.PolySharpExcludeGeneratedTypes = 
+build_property.PolySharpIncludeGeneratedTypes = 
+build_property.PolySharpExcludeTypeForwardedToDeclarations = 
+build_property.EffectiveAnalysisLevelStyle = 
+build_property.EnableCodeStyleSeverity = 

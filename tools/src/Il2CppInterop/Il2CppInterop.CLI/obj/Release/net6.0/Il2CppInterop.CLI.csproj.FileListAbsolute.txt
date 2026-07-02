@@ -1,0 +1,17 @@
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\Il2CppInterop.CLI.exe
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\Il2CppInterop.CLI.deps.json
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\Il2CppInterop.CLI.runtimeconfig.json
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\Il2CppInterop.CLI.dll
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\Il2CppInterop.CLI.xml
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.CLI\obj\Release\net6.0\Il2CppInterop.CLI.csproj.AssemblyReference.cache
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.CLI\obj\Release\net6.0\Il2CppInterop.CLI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.CLI\obj\Release\net6.0\Il2CppInterop.CLI.AssemblyInfoInputs.cache
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.CLI\obj\Release\net6.0\Il2CppInterop.CLI.AssemblyInfo.cs
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.CLI\obj\Release\net6.0\Il2CppInterop.CLI.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.CLI\obj\Release\net6.0\Il2CppInterop.CLI.sourcelink.json
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.CLI\obj\Release\net6.0\Il2CppIn.B52FB767.Up2Date
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.CLI\obj\Release\net6.0\Il2CppInterop.CLI.dll
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.CLI\obj\Release\net6.0\refint\Il2CppInterop.CLI.dll
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.CLI\obj\Release\net6.0\Il2CppInterop.CLI.xml
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.CLI\obj\Release\net6.0\Il2CppInterop.CLI.genruntimeconfig.cache
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.CLI\obj\Release\net6.0\ref\Il2CppInterop.CLI.dll

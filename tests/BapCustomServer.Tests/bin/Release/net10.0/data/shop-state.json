@@ -1,0 +1,48 @@
+﻿{
+  "rotationListings": [
+    {
+      "listingId": "seed-rotation-500121",
+      "assetId": 500121,
+      "price": 50,
+      "category": "banner",
+      "addedUtc": "2026-06-23T08:36:38.6806016+00:00",
+      "addedBy": "system-seed"
+    },
+    {
+      "listingId": "seed-rotation-500001",
+      "assetId": 500001,
+      "price": 100,
+      "category": "banner",
+      "addedUtc": "2026-06-23T08:36:38.680604+00:00",
+      "addedBy": "system-seed"
+    },
+    {
+      "listingId": "seed-rotation-500005",
+      "assetId": 500005,
+      "price": 150,
+      "category": "banner",
+      "addedUtc": "2026-06-23T08:36:38.6806042+00:00",
+      "addedBy": "system-seed"
+    },
+    {
+      "listingId": "seed-rotation-500010",
+      "assetId": 500010,
+      "price": 200,
+      "category": "banner",
+      "addedUtc": "2026-06-23T08:36:38.6806043+00:00",
+      "addedBy": "system-seed"
+    }
+  ],
+  "freebieListings": [
+    {
+      "listingId": "seed-freebie-500002",
+      "assetId": 500002,
+      "price": 0,
+      "category": "banner",
+      "addedUtc": "2026-06-23T08:36:38.6806053+00:00",
+      "addedBy": "system-seed"
+    }
+  ],
+  "dropEndDate": "2026-06-30T08:36:38.680Z",
+  "dropId": 1
+}

@@ -1,0 +1,22 @@
+=== Setting up INI ===
+INI written for local server on port 5190
+=== Starting Server ===
+Server running on port 5190
+=== Setting up lobby and match ===
+  Joined lobby PLAYTEST as charId=15
+  Settings: mapId=34 botCount=4
+  Match start requested (waiting for game server boot)...
+  GAME_STARTED mapId=34
+=== Launching Game Client ===
+  Medusa client started. PID: 23028
+
+==========================================================
+ MATCH ACTIVE - play Medusa on the map!
+ - The game window has opened with 4 bots.
+ - Close the game window when you're done.
+==========================================================
+
+Client has closed. Cleaning up...
+=== Cleaning Up ===
+  Production INI restored.
+TEST COMPLETE.

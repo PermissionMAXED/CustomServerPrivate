@@ -1,0 +1,4 @@
+C:\Users\Administrator\Downloads\CustomServer\publish-singlefile\appsettings.Development.json
+C:\Users\Administrator\Downloads\CustomServer\publish-singlefile\appsettings.json
+C:\Users\Administrator\Downloads\CustomServer\publish-singlefile\BapCustomServer.pdb
+C:\Users\Administrator\Downloads\CustomServer\publish-singlefile\BapCustomServer

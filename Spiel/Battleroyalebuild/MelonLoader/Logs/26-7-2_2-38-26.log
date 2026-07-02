@@ -1,0 +1,860 @@
+[02:38:26.402] [UNITY] [UnityMemory] Configuration Parameters - Can be set up in boot.config
+[02:38:26.402] [UNITY]     "memorysetup-bucket-allocator-granularity=16"
+[02:38:26.402] [UNITY]     "memorysetup-bucket-allocator-bucket-count=8"
+[02:38:26.402] [UNITY]     "memorysetup-bucket-allocator-block-size=4194304"
+[02:38:26.402] [UNITY]     "memorysetup-bucket-allocator-block-count=1"
+[02:38:26.402] [UNITY]     "memorysetup-main-allocator-block-size=16777216"
+[02:38:26.403] [UNITY]     "memorysetup-thread-allocator-block-size=16777216"
+[02:38:26.403] [UNITY]     "memorysetup-gfx-main-allocator-block-size=16777216"
+[02:38:26.403] [UNITY]     "memorysetup-gfx-thread-allocator-block-size=16777216"
+[02:38:26.403] [UNITY]     "memorysetup-cache-allocator-block-size=4194304"
+[02:38:26.403] [UNITY]     "memorysetup-typetree-allocator-block-size=2097152"
+[02:38:26.403] [UNITY]     "memorysetup-profiler-bucket-allocator-granularity=16"
+[02:38:26.403] [UNITY]     "memorysetup-profiler-bucket-allocator-bucket-count=8"
+[02:38:26.406] [UNITY]     "memorysetup-profiler-bucket-allocator-block-size=4194304"
+[02:38:26.406] [UNITY]     "memorysetup-profiler-bucket-allocator-block-count=1"
+[02:38:26.406] [UNITY]     "memorysetup-profiler-allocator-block-size=16777216"
+[02:38:26.406] [UNITY]     "memorysetup-profiler-editor-allocator-block-size=1048576"
+[02:38:26.406] [UNITY]     "memorysetup-temp-allocator-size-main=4194304"
+[02:38:26.406] [UNITY]     "memorysetup-job-temp-allocator-block-size=2097152"
+[02:38:26.406] [UNITY]     "memorysetup-job-temp-allocator-block-size-background=1048576"
+[02:38:26.406] [UNITY]     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+[02:38:26.407] [UNITY]     "memorysetup-allocator-temp-initial-block-size-main=262144"
+[02:38:26.407] [UNITY]     "memorysetup-allocator-temp-initial-block-size-worker=262144"
+[02:38:26.407] [UNITY]     "memorysetup-temp-allocator-size-background-worker=32768"
+[02:38:26.407] [UNITY]     "memorysetup-temp-allocator-size-job-worker=262144"
+[02:38:26.407] [UNITY]     "memorysetup-temp-allocator-size-preload-manager=262144"
+[02:38:26.407] [UNITY]     "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+[02:38:26.408] [UNITY]     "memorysetup-temp-allocator-size-audio-worker=65536"
+[02:38:26.408] [UNITY]     "memorysetup-temp-allocator-size-cloud-worker=32768"
+[02:38:26.408] [UNITY]     "memorysetup-temp-allocator-size-gfx=262144"
+[02:38:26.413] [BS DEBUG] Prevented the CloseHandle of stdout
+[02:38:26.413] [BS DEBUG] Prevented the CloseHandle of stderr
+[02:38:26.415] [BS DEBUG] Init
+[02:38:26.418] [BS DEBUG] Redirecting il2cpp_init
+[02:38:26.418] [BS DEBUG] Redirecting il2cpp_runtime_invoke
+[02:38:26.426] [BS DEBUG] In init detour
+[02:38:26.550] [BS DEBUG] Attempting to load hostfxr
+[02:38:26.551] [BS DEBUG] HostFXR Path: C:\Program Files (x86)\dotnet\host\fxr\10.0.5\hostfxr.dll
+[02:38:26.552] [BS DEBUG] Initializing domain
+[02:38:26.557] [BS DEBUG] Loading NativeHost assembly
+[02:38:26.588] [BS DEBUG] Invoking NativeHost entry
+
+[02:38:26.964] ------------------------------
+[02:38:26.966] MelonLoader v0.7.2 Open-Beta
+[02:38:26.968] OS: Windows 11
+[02:38:26.971] Hash Code: 58AB98835E598BD67B7DB233734DE8603F92C9C6A6081B13CB9A5CC37C02DD13
+[02:38:26.971] ------------------------------
+[02:38:26.971] Game Type: Il2cpp
+[02:38:26.972] Game Arch: x86
+[02:38:26.972] ------------------------------
+[02:38:26.972] Command-Line: 
+[02:38:26.972] ------------------------------
+[02:38:26.973] Core::BasePath = C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild
+[02:38:26.974] Game::BasePath = C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild
+[02:38:26.974] Game::DataPath = C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\bapbap_Data
+[02:38:26.975] Game::ApplicationPath = C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\bapbap.exe
+[02:38:26.975] Runtime Type: net6
+[02:38:27.457] ------------------------------
+[02:38:27.457] Game Name: BAPBAP
+[02:38:27.458] Game Developer: gg.bapbap
+[02:38:27.460] Unity Version: 2022.3.38f1
+[02:38:27.460] Game Version: 0.1.1758-38212
+[02:38:27.461] ------------------------------
+
+[02:38:27.466] [DEBUG] [MelonAssemblyResolver] Setup Successful!
+[02:38:27.468] [DEBUG] Patching MonoMod DetourContext.Dispose...
+[02:38:27.593] [DEBUG] Patched MonoMod DetourContext.Dispose -> IsDisposed
+[02:38:27.929] [DEBUG] Patching AsmResolver Utf8String.Concat(byte[])...
+[02:38:27.964] [DEBUG] Patching Il2CppInterop MethodRewriteContext.UnmangleMethodNameWithSignature...
+[02:38:27.980] [DEBUG] Patching Il2CppInterop Il2CppDetourMethodPatcher.ReportException...
+[02:38:27.999] [DEBUG] Patching Il2CppInterop ClassInjector.RegisterTypeInIl2Cpp...
+[02:38:28.047] [DEBUG] Patched Il2CppInterop ClassInjector.RegisterTypeInIl2Cpp -> FindAbstractMethods
+[02:38:28.047] [DEBUG] Patched Il2CppInterop ClassInjector.RegisterTypeInIl2Cpp -> InjectorHelpers.AddTypeToLookup
+[02:38:28.077] [DEBUG] Patching Il2CppInterop ClassInjector.IsTypeSupported...
+[02:38:28.079] [DEBUG] Patched Il2CppInterop ClassInjector.IsTypeSupported -> Type.IsByRef
+[02:38:28.081] [DEBUG] Patching Il2CppInterop ClassInjector.RewriteType...
+[02:38:28.087] [DEBUG] Patching Il2CppInterop ClassInjector.ConvertMethodInfo...
+[02:38:28.092] [DEBUG] Patched Il2CppInterop ClassInjector.ConvertMethodInfo -> Type.IsByRef
+[02:38:28.096] [DEBUG] Patching Il2CppInterop ILGeneratorEx.EmitObjectToPointer...
+[02:38:28.111] [DEBUG] Patching Il2CppInterop RewriteGlobalContext.AddAssemblyContext...
+[02:38:28.113] [DEBUG] Patching Il2CppInterop RewriteGlobalContext.Dispose...
+[02:38:28.114] [DEBUG] Patching Il2CppInterop RewriteGlobalContext.GetNewAssemblyForOriginal...
+[02:38:28.115] [DEBUG] Patching Il2CppInterop RewriteGlobalContext.TryGetNewTypeForOriginal...
+[02:38:28.117] [DEBUG] Patching Il2CppInterop GarbageCollector_RunFinalizer_Patch.FindTargetMethod...
+[02:38:28.121] [DEBUG] Patching il2cpp_resolve_icall...
+[02:38:28.331] Preferences Loaded!
+[02:38:28.334] [DEBUG] Ignoring MelonModule 'C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Dependencies\CompatibilityLayers\IPA.dll'...
+[02:38:28.334] [DEBUG] Compatibility Layer Loaded: C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Dependencies\CompatibilityLayers\IPA.dll
+
+[02:38:28.351] Loading UserLibs...
+[02:38:28.380] ------------------------------
+[02:38:28.394] Melon Assembly loaded: '.\UserLibs\BAPBAP.ModAPI.dll'
+[02:38:28.394] SHA256 Hash: '969EEA89D3A9CCDDBCA398C11FAAF27878CBB550777B1DA23C7B0267AE97E95A'
+[02:38:28.394] ------------------------------
+[02:38:28.394] 0 UserLibs loaded.
+
+[02:38:28.394] Loading Plugins...
+[02:38:28.401] 0 Plugins loaded.
+
+[02:38:32.215] [BS DEBUG] Invoke hijacked
+[02:38:32.216] Loading Il2CppAssemblyGenerator...
+[02:38:32.268] [Il2CppAssemblyGenerator] Using Cpp2IL Version: 2022.1.0-pre-release.21
+[02:38:32.268] [Il2CppAssemblyGenerator] Using Il2CppInterop Version = 1.5.1+dbaf825aab891ff1e1627bea691bde0a81d1ad98
+[02:38:32.269] [Il2CppAssemblyGenerator] Using Unity Dependencies Version = 2022.3.38
+[02:38:32.269] [Il2CppAssemblyGenerator] Using Deobfuscation Regex = null
+[02:38:32.269] [Il2CppAssemblyGenerator] Cpp2IL is up to date.
+[02:38:32.270] [Il2CppAssemblyGenerator] Cpp2IL.Plugin.StrippedCodeRegSupport is up to date.
+[02:38:32.271] [Il2CppAssemblyGenerator] UnityDependencies is up to date.
+[02:38:32.271] [Il2CppAssemblyGenerator] Checking GameAssembly...
+[02:38:32.271] [DEBUG] Last GameAssembly Hash: 01ACA5A5E6FE5D43FC989C8B3F133424C5A650D77D26D7D7AE8E2C88A557DD2EA417BED3312E41E68708851BE01F7200BF2387BB1613E01976146CBAA9F1B9BD
+[02:38:32.629] [DEBUG] Current GameAssembly Hash: 01ACA5A5E6FE5D43FC989C8B3F133424C5A650D77D26D7D7AE8E2C88A557DD2EA417BED3312E41E68708851BE01F7200BF2387BB1613E01976146CBAA9F1B9BD
+[02:38:32.629] [Il2CppAssemblyGenerator] Assembly is up to date. No Generation Needed.
+
+[02:38:32.631] Loading Mods...
+[02:38:32.674] ------------------------------
+[02:38:32.690] Melon Assembly loaded: '.\Mods\BapCustomServerMelon.dll'
+[02:38:32.690] SHA256 Hash: '478E3BABBADC58ED866691D9F6348C5BE6C958052D53FB83823835669CA0CA99'
+[02:38:32.693] Melon Assembly loaded: '.\Mods\NetworkedCustomChar.dll'
+[02:38:32.693] SHA256 Hash: '57BB091E5E7C7D30EC75D23D8609C6E30AF9A07B30705F3A46ADD71CA2A3512E'
+[02:38:32.713] [DEBUG] [MelonAssemblyResolver] Attempting to find UnityEngine.CoreModule
+[02:38:32.713] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:38:32.714] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:38:32.716] [DEBUG] [MelonAssemblyResolver] Loading UnityEngine.CoreModule from C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies\UnityEngine.CoreModule.dll...
+
+[02:38:32.809] [DEBUG] [MelonAssemblyResolver] Attempting to find UnityEngine.UIModule
+[02:38:32.809] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:38:32.810] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:38:32.810] [DEBUG] [MelonAssemblyResolver] Loading UnityEngine.UIModule from C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies\UnityEngine.UIModule.dll...
+[02:38:32.812] [DEBUG] [MelonAssemblyResolver] Attempting to find UnityEngine.UI
+[02:38:32.813] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:38:32.813] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:38:32.814] [DEBUG] [MelonAssemblyResolver] Loading UnityEngine.UI from C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies\UnityEngine.UI.dll...
+[02:38:32.825] [DEBUG] [MelonAssemblyResolver] Attempting to find UnityEngine.TextRenderingModule
+[02:38:32.826] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:38:32.827] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:38:32.827] [DEBUG] [MelonAssemblyResolver] Loading UnityEngine.TextRenderingModule from C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies\UnityEngine.TextRenderingModule.dll...
+[02:38:32.830] [DEBUG] [MelonAssemblyResolver] Attempting to find Assembly-CSharp
+[02:38:32.830] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:38:32.830] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:38:32.831] [DEBUG] [MelonAssemblyResolver] Loading Assembly-CSharp from C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies\Assembly-CSharp.dll...
+[02:38:33.006] [DEBUG] [MelonAssemblyResolver] Attempting to find Il2CppMirror.Components
+[02:38:33.007] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:38:33.009] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:38:33.010] [DEBUG] [MelonAssemblyResolver] Loading Il2CppMirror.Components from C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies\Il2CppMirror.Components.dll...
+[02:38:33.014] [DEBUG] [MelonAssemblyResolver] Attempting to find Il2Cppmscorlib
+[02:38:33.015] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:38:33.015] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:38:33.016] [DEBUG] [MelonAssemblyResolver] Loading Il2Cppmscorlib from C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies\Il2Cppmscorlib.dll...
+[02:38:33.090] [DEBUG] [MelonAssemblyResolver] Attempting to find Il2CppMirror
+[02:38:33.090] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:38:33.091] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:38:33.091] [DEBUG] [MelonAssemblyResolver] Loading Il2CppMirror from C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies\Il2CppMirror.dll...
+[02:38:33.097] [DEBUG] [MelonAssemblyResolver] Attempting to find UnityEngine.PhysicsModule
+[02:38:33.097] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:38:33.097] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:38:33.098] [DEBUG] [MelonAssemblyResolver] Loading UnityEngine.PhysicsModule from C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies\UnityEngine.PhysicsModule.dll...
+[02:38:33.102] [DEBUG] [MelonAssemblyResolver] Attempting to find UnityEngine.AudioModule
+[02:38:33.102] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:38:33.103] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:38:33.103] [DEBUG] [MelonAssemblyResolver] Loading UnityEngine.AudioModule from C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies\UnityEngine.AudioModule.dll...
+[02:38:33.106] [DEBUG] [MelonAssemblyResolver] Attempting to find UnityEngine.AssetBundleModule
+[02:38:33.106] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:38:33.106] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:38:33.120] [DEBUG] [MelonAssemblyResolver] Loading UnityEngine.AssetBundleModule from C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies\UnityEngine.AssetBundleModule.dll...
+[02:38:33.122] [DEBUG] [MelonAssemblyResolver] Attempting to find UnityEngine.InputLegacyModule
+[02:38:33.122] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:38:33.123] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:38:33.136] [DEBUG] [MelonAssemblyResolver] Loading UnityEngine.InputLegacyModule from C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies\UnityEngine.InputLegacyModule.dll...
+[02:38:33.138] [DEBUG] [MelonAssemblyResolver] Attempting to find UnityEngine.ImageConversionModule
+[02:38:33.138] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:38:33.139] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:38:33.139] [DEBUG] [MelonAssemblyResolver] Loading UnityEngine.ImageConversionModule from C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies\UnityEngine.ImageConversionModule.dll...
+[02:38:33.143] [DEBUG] [MelonAssemblyResolver] Attempting to find UnityEngine.IMGUIModule
+[02:38:33.143] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:38:33.146] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:38:33.148] [DEBUG] [MelonAssemblyResolver] Loading UnityEngine.IMGUIModule from C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies\UnityEngine.IMGUIModule.dll...
+[02:38:33.152] [DEBUG] [MelonAssemblyResolver] Attempting to find UnityEngine.AnimationModule
+[02:38:33.152] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:38:33.153] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:38:33.153] [DEBUG] [MelonAssemblyResolver] Loading UnityEngine.AnimationModule from C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies\UnityEngine.AnimationModule.dll...
+[02:38:33.158] [DEBUG] [MelonAssemblyResolver] Attempting to find UnityEngine.ParticleSystemModule
+[02:38:33.158] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:38:33.159] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:38:33.159] [DEBUG] [MelonAssemblyResolver] Loading UnityEngine.ParticleSystemModule from C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies\UnityEngine.ParticleSystemModule.dll...
+[02:38:33.184] [DEBUG] MelonAssembly 'BapCustomServerMelon' subscribed with OnApplicationQuit
+[02:38:33.184] [DEBUG] MelonAssembly 'BapCustomServerMelon' subscribed with OnUpdate
+[02:38:33.185] [DEBUG] MelonAssembly 'BapCustomServerMelon' subscribed with OnLateUpdate
+[02:38:33.185] [DEBUG] MelonAssembly 'BapCustomServerMelon' subscribed with OnGUI
+[02:38:33.185] [DEBUG] MelonAssembly 'BapCustomServerMelon' subscribed with OnFixedUpdate
+[02:38:33.186] [DEBUG] MelonAssembly 'BapCustomServerMelon' subscribed with OnApplicationLateStart
+[02:38:33.186] [DEBUG] MelonAssembly 'BapCustomServerMelon' subscribed with PrefsLoaded
+[02:38:33.186] [DEBUG] MelonAssembly 'BapCustomServerMelon' subscribed with PrefsSaved
+[02:38:33.186] [DEBUG] MelonAssembly 'BapCustomServerMelon' subscribed with OnSceneWasLoaded
+[02:38:33.186] [DEBUG] MelonAssembly 'BapCustomServerMelon' subscribed with OnSceneWasInitialized
+[02:38:33.186] [DEBUG] MelonAssembly 'BapCustomServerMelon' subscribed with OnSceneWasUnloaded
+[02:38:33.186] [DEBUG] MelonAssembly 'BapCustomServerMelon' subscribed with <RegisterObsoleteCallbacks>b__3_0
+[02:38:33.187] [DEBUG] MelonAssembly 'BapCustomServerMelon' subscribed with <RegisterObsoleteCallbacks>b__3_1
+[02:38:33.187] [DEBUG] MelonAssembly 'BapCustomServerMelon' subscribed with OnApplicationStart
+[02:38:33.203] [BAP_Custom_Server] Loaded custom server ini.
+[02:38:33.225] [BAP_Custom_Server] [Perf] Client: targetFrameRate=144, vSync=0 (reduce DWM stall stutter)
+[02:38:33.226] [BAP_Custom_Server] [BAPCustomConfig] mode=client upstream=http://127.0.0.1:5174 proxy=False localPort=5055 dedicatedPorts=http:- ws:- kcp:- tcp:- batchMode=False containsNoGraphicsArg=False autoJoin=127.0.0.1:7778
+[02:38:33.228] [BAP_Custom_Server] Primed auto-login prefs for custom server session.
+[02:38:33.329] [BAP_Custom_Server] Local proxy ready (port 5055)
+[02:38:33.329] [BAP_Custom_Server] Direct mode compatibility proxy enabled for legacy loopback API calls: 127.0.0.1:5055 -> http://127.0.0.1:5174/
+[02:38:33.331] [BAP_Custom_Server] Initialized BAP Custom Server v1.0.5 during early registration. dedicated=False http=n/a ws=n/a kcp=n/a tcp=n/a
+[02:38:33.331] [DEBUG] MelonAssembly 'BapCustomServerMelon' subscribed with HarmonyInit
+[02:38:33.332] ------------------------------
+[02:38:33.332] BAP Custom Server v1.0.5
+[02:38:33.333] by Sonic0810
+[02:38:33.333] Assembly: BapCustomServerMelon.dll
+[02:38:33.333] ------------------------------
+[02:38:33.333] [DEBUG] MelonAssembly 'BapCustomServerMelon' subscribed with LoaderInitialized
+[02:38:33.333] [DEBUG] MelonAssembly 'BapCustomServerMelon' subscribed with OnLateInitializeMelon
+[02:38:33.344] [DEBUG] MelonAssembly 'BAPBAP.ModAPI' subscribed with OnApplicationQuit
+[02:38:33.345] [DEBUG] MelonAssembly 'BAPBAP.ModAPI' subscribed with OnUpdate
+[02:38:33.345] [DEBUG] MelonAssembly 'BAPBAP.ModAPI' subscribed with OnLateUpdate
+[02:38:33.346] [DEBUG] MelonAssembly 'BAPBAP.ModAPI' subscribed with OnGUI
+[02:38:33.346] [DEBUG] MelonAssembly 'BAPBAP.ModAPI' subscribed with OnFixedUpdate
+[02:38:33.346] [DEBUG] MelonAssembly 'BAPBAP.ModAPI' subscribed with OnApplicationLateStart
+[02:38:33.346] [DEBUG] MelonAssembly 'BAPBAP.ModAPI' subscribed with PrefsLoaded
+[02:38:33.346] [DEBUG] MelonAssembly 'BAPBAP.ModAPI' subscribed with PrefsSaved
+[02:38:33.349] [DEBUG] MelonAssembly 'BAPBAP.ModAPI' subscribed with OnSceneWasLoaded
+[02:38:33.349] [DEBUG] MelonAssembly 'BAPBAP.ModAPI' subscribed with OnSceneWasInitialized
+[02:38:33.349] [DEBUG] MelonAssembly 'BAPBAP.ModAPI' subscribed with OnSceneWasUnloaded
+[02:38:33.349] [DEBUG] MelonAssembly 'BAPBAP.ModAPI' subscribed with <RegisterObsoleteCallbacks>b__3_0
+[02:38:33.350] [DEBUG] MelonAssembly 'BAPBAP.ModAPI' subscribed with <RegisterObsoleteCallbacks>b__3_1
+[02:38:33.351] [DEBUG] MelonAssembly 'BAPBAP.ModAPI' subscribed with OnApplicationStart
+[02:38:33.351] [DEBUG] MelonAssembly 'BAPBAP.ModAPI' subscribed with HarmonyInit
+[02:38:33.351] ------------------------------
+[02:38:33.351] BAPBAP ModAPI v2.2.1
+[02:38:33.352] by Sonic0810               
+[02:38:33.352] Assembly: BAPBAP.ModAPI.dll
+[02:38:33.352] ------------------------------
+[02:38:33.352] [DEBUG] MelonAssembly 'BAPBAP.ModAPI' subscribed with LoaderInitialized
+[02:38:33.352] [DEBUG] MelonAssembly 'BAPBAP.ModAPI' subscribed with OnLateInitializeMelon
+[02:38:33.362] [DEBUG] MelonAssembly 'NetworkedCustomChar' subscribed with OnApplicationQuit
+[02:38:33.362] [DEBUG] MelonAssembly 'NetworkedCustomChar' subscribed with OnUpdate
+[02:38:33.362] [DEBUG] MelonAssembly 'NetworkedCustomChar' subscribed with OnLateUpdate
+[02:38:33.362] [DEBUG] MelonAssembly 'NetworkedCustomChar' subscribed with OnGUI
+[02:38:33.362] [DEBUG] MelonAssembly 'NetworkedCustomChar' subscribed with OnFixedUpdate
+[02:38:33.362] [DEBUG] MelonAssembly 'NetworkedCustomChar' subscribed with OnApplicationLateStart
+[02:38:33.363] [DEBUG] MelonAssembly 'NetworkedCustomChar' subscribed with PrefsLoaded
+[02:38:33.363] [DEBUG] MelonAssembly 'NetworkedCustomChar' subscribed with PrefsSaved
+[02:38:33.363] [DEBUG] MelonAssembly 'NetworkedCustomChar' subscribed with OnSceneWasLoaded
+[02:38:33.363] [DEBUG] MelonAssembly 'NetworkedCustomChar' subscribed with OnSceneWasInitialized
+[02:38:33.363] [DEBUG] MelonAssembly 'NetworkedCustomChar' subscribed with OnSceneWasUnloaded
+[02:38:33.363] [DEBUG] MelonAssembly 'NetworkedCustomChar' subscribed with <RegisterObsoleteCallbacks>b__3_0
+[02:38:33.363] [DEBUG] MelonAssembly 'NetworkedCustomChar' subscribed with <RegisterObsoleteCallbacks>b__3_1
+[02:38:33.363] [DEBUG] MelonAssembly 'NetworkedCustomChar' subscribed with OnApplicationStart
+[02:38:33.364] [DEBUG] MelonAssembly 'NetworkedCustomChar' subscribed with HarmonyInit
+[02:38:33.364] ------------------------------
+[02:38:33.364] NetworkedCustomChar v0.1.0
+[02:38:33.364] by bapcustom
+[02:38:33.364] Assembly: NetworkedCustomChar.dll
+[02:38:33.364] ------------------------------
+[02:38:33.364] [DEBUG] MelonAssembly 'NetworkedCustomChar' subscribed with LoaderInitialized
+[02:38:33.364] [DEBUG] MelonAssembly 'NetworkedCustomChar' subscribed with OnLateInitializeMelon
+[02:38:33.365] ------------------------------
+[02:38:33.365] 3 Mods loaded.
+
+[02:38:34.820] [DEBUG] il2cpp_object_get_virtual_method: 0x50A1B930
+[02:38:34.901] [DEBUG] Object::GetVirtualMethod: 0x50A1F190
+[02:38:34.916] [DEBUG] GenericMethod::GetMethod found: 0x509F0F20
+[02:38:34.929] [DEBUG] il2cpp_image_get_class: 0x50A1B640
+[02:38:34.930] [DEBUG] Image::GetType: 0x50A4E9C0
+[02:38:34.931] [DEBUG] imageGetTypeXrefs.Length: 2
+[02:38:34.931] [DEBUG] getTypeInfoFromHandle: 50A01C30
+[02:38:34.932] [DEBUG] MetadataCache::GetTypeInfoFromTypeDefinitionIndex found: 0x50A44600
+[02:38:35.999] [DEBUG] Couldn't fetch Class::GetDefaultFieldValue with signatures, using method traversal
+[02:38:36.000] [DEBUG] il2cpp_field_static_get_value: 0x50A1B370
+[02:38:36.001] [DEBUG] Field::StaticGetValue: 0x509F8C40
+[02:38:36.003] [DEBUG] Field::StaticGetValueInternal: 0x509F8C60
+[02:38:36.004] [DEBUG] Class::GetDefaultFieldValue found: 0x509FFD20
+[02:38:36.403] [Il2CppInterop] Class::Init signatures have been exhausted, using a substitute!
+[02:38:36.404] [DEBUG] Picked mono_class_instance_size as a Class::Init substitute
+[02:38:36.409] [DEBUG] Class::Init: 0x50A1C330
+[02:38:36.410] [DEBUG] il2cpp_class_from_il2cpp_type: 0x50A1AE90
+[02:38:36.410] [DEBUG] Class::FromIl2CppType found: 0x509FF100
+[02:38:36.410] [DEBUG] il2cpp_class_from_name: 0x50A1AEB0
+[02:38:36.411] [DEBUG] Class::FromName found: 0x509FF5E0
+[02:38:36.415] [DEBUG] Runtime::UnhandledException: 0x509F8DA0
+[02:38:39.144] [DEBUG] Found 4 callers of UnhandledException
+[02:38:39.147] [DEBUG] Candidate: 0x509EADC0, calls: 6, size: 429 bytes
+[02:38:39.147] [DEBUG]   -> Rejected (call count: 6)
+[02:38:39.147] [DEBUG] Candidate: 0x509EBDB0, calls: 3, size: 59 bytes
+[02:38:39.149] [DEBUG]   -> Matched!
+[02:38:39.149] [DEBUG] GarbageCollector::RunFinalizer found: 0x509EBDB0
+[02:38:39.187] [DEBUG] [MelonAssemblyResolver] Attempting to find Il2CppSystem.Private.CoreLib
+[02:38:39.189] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:38:39.192] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:38:39.192] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\UserLibs
+[02:38:39.193] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\Plugins
+[02:38:39.193] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\Mods
+[02:38:39.194] [DEBUG] [MelonAssemblyResolver] Failed to find Il2CppSystem.Private.CoreLib in any of the known search directories
+[02:38:39.205] [Il2CppInterop] Registered mono type MelonLoader.Support.MonoEnumeratorWrapper in il2cpp domain
+[02:38:39.280] [DEBUG] Hooked into static void UnityEngine.SceneManagement.SceneManager::Internal_SceneLoaded(UnityEngine.SceneManagement.Scene scene, UnityEngine.SceneManagement.LoadSceneMode mode)
+[02:38:39.303] [DEBUG] Hooked into static void UnityEngine.SceneManagement.SceneManager::Internal_SceneUnloaded(UnityEngine.SceneManagement.Scene scene)
+[02:38:39.304] Support Module Loaded: C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Dependencies\SupportModules\Il2Cpp.dll
+[02:38:39.319] [DEBUG] MelonAssembly 'BapCustomServerMelon' unsubscribed with HarmonyInit
+[02:38:39.319] [DEBUG] MelonAssembly 'BAPBAP.ModAPI' unsubscribed with HarmonyInit
+[02:38:39.320] [DEBUG] MelonAssembly 'NetworkedCustomChar' unsubscribed with HarmonyInit
+[02:38:39.320] [DEBUG] MelonAssembly 'BapCustomServerMelon' unsubscribed with LoaderInitialized
+[02:38:39.321] [BAPBAP_ModAPI] BAPBAP ModAPI v2.2.1 initializing ...
+[02:38:39.321] [BAPBAP_ModAPI]   by BAPBAP Modding Community
+[02:38:39.321] [BAPBAP_ModAPI]   loaded as C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\UserLibs\BAPBAP.ModAPI.dll
+[02:38:39.321] [BAPBAP_ModAPI] [Hooks] Installing global hooks ...
+[02:38:39.328] [BAPBAP_ModAPI] [Hooks]   ✓ PlayerHooks
+[02:38:39.328] [BAPBAP_ModAPI] [Hooks]   ✓ MatchHooks
+[02:38:39.329] [BAPBAP_ModAPI] [Hooks]   ✓ CombatHooks
+[02:38:39.329] [BAPBAP_ModAPI] [Hooks]   ✓ ChatHooks
+[02:38:39.329] [BAPBAP_ModAPI] [Hooks]   ✓ NetworkHooks
+[02:38:39.329] [BAPBAP_ModAPI] [Hooks]   ✓ UIHooks
+[02:38:39.329] [BAPBAP_ModAPI] [Hooks]   ✓ AbilityHooks
+[02:38:39.330] [BAPBAP_ModAPI] [Hooks]   ✓ StatusEffectHooks
+[02:38:39.330] [BAPBAP_ModAPI] [Hooks]   ✓ ItemHooks
+[02:38:39.330] [BAPBAP_ModAPI] [Hooks]   ✓ VehicleHooks
+[02:38:39.330] [BAPBAP_ModAPI] [Hooks]   ✓ EntityHooks
+[02:38:39.330] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraAbilityHooks
+[02:38:39.331] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraItemHooks
+[02:38:39.331] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraVehicleHooks
+[02:38:39.331] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraEntityHooks
+[02:38:39.331] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraMovementHooks
+[02:38:39.331] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraPassiveHooks
+[02:38:39.331] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraInteractionHooks
+[02:38:39.335] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraKillHooks
+[02:38:39.336] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraEmoteHooks
+[02:38:39.337] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraMetaHooks
+[02:38:39.337] [BAPBAP_ModAPI] [Hooks] Done. 21 hook groups installed.
+[02:38:39.339] [DEBUG] [MelonAssemblyResolver] Attempting to find Il2CppSystem.Private.CoreLib
+[02:38:39.347] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:38:39.347] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:38:39.348] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\UserLibs
+[02:38:39.348] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\Plugins
+[02:38:39.348] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\Mods
+[02:38:39.349] [DEBUG] [MelonAssemblyResolver] Failed to find Il2CppSystem.Private.CoreLib in any of the known search directories
+[02:38:39.349] [Il2CppInterop] Registered mono type BAPBAP.ModAPI.Lifecycle.ModUpdateRunner in il2cpp domain
+[02:38:39.349] [BAPBAP_ModAPI] [Lifecycle] ModUpdateRunner registered with Il2Cpp.
+[02:38:39.350] [DEBUG] [MelonAssemblyResolver] Attempting to find Il2CppSystem.Private.CoreLib
+[02:38:39.350] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:38:39.350] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:38:39.351] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\UserLibs
+[02:38:39.351] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\Plugins
+[02:38:39.351] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\Mods
+[02:38:39.351] [DEBUG] [MelonAssemblyResolver] Failed to find Il2CppSystem.Private.CoreLib in any of the known search directories
+[02:38:39.352] [Il2CppInterop] Registered mono type BAPBAP.ModAPI.API.NotificationAPI+ScheduledFader in il2cpp domain
+[02:38:39.352] [DEBUG] [MelonAssemblyResolver] Attempting to find Il2CppSystem.Private.CoreLib
+[02:38:39.352] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:38:39.353] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:38:39.353] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\UserLibs
+[02:38:39.355] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\Plugins
+[02:38:39.357] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\Mods
+[02:38:39.360] [DEBUG] [MelonAssemblyResolver] Failed to find Il2CppSystem.Private.CoreLib in any of the known search directories
+[02:38:39.361] [Il2CppInterop] Registered mono type BAPBAP.ModAPI.UI.ModLoaderUIRunner in il2cpp domain
+[02:38:39.361] [BAPBAP_ModAPI] [ModLoaderUI] Runner registered with Il2Cpp.
+[02:38:39.362] [BAPBAP_ModAPI] BAPBAP ModAPI ready. Mods should subclass ModBase to register.
+[02:38:39.362] [DEBUG] MelonAssembly 'BAPBAP.ModAPI' unsubscribed with LoaderInitialized
+[02:38:39.408] [NetworkedCustomChar] [M5] loaded definition 'Blitz' (charId=15, enabled=False) from UserData\CustomChars\blitz.json.
+[02:38:39.408] [NetworkedCustomChar] [M5] loaded definition 'Eve' (charId=15, enabled=False) from UserData\CustomChars\eve.json.
+[02:38:39.411] [NetworkedCustomChar] [M5] loaded definition 'Medusa' (charId=15, enabled=True) from UserData\CustomChars\medusa.json.
+[02:38:39.411] [NetworkedCustomChar] [M5] active definition: name='Medusa' display='MEDUSA' charId=15 base=0 bundle='Medusa\medusa.bundle' visual='Medusa_Visual' assetId=0xB0B00F0F graft=True (loaded 3).
+[02:38:39.425] [DEBUG] [MelonAssemblyResolver] Attempting to find Il2CppSystem.Private.CoreLib
+[02:38:39.425] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:38:39.427] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:38:39.428] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\UserLibs
+[02:38:39.428] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\Plugins
+[02:38:39.428] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\Mods
+[02:38:39.429] [DEBUG] [MelonAssemblyResolver] Failed to find Il2CppSystem.Private.CoreLib in any of the known search directories
+[02:38:39.429] [Il2CppInterop] Registered mono type Il2CppInterop.Runtime.DelegateSupport+Il2CppToMonoDelegateReference in il2cpp domain
+[02:38:39.450] [NetworkedCustomChar] [M3] CustomNetChannel registered on EntityManager (hash=58016).
+[02:38:39.451] [NetworkedCustomChar] [M3] CustomAbilityEngine ready (charId=15, enabled=True, networkPrefabSpawn=False, medusaBundleHitboxes=False).
+[02:38:39.452] [NetworkedCustomChar] [M6] ability kit: hitboxes=[Hitbox_MedusaPoisonProjectile,Hitbox_MedusaPoisonPuddle,Hitbox_MedusaWallPoison,Hitbox_MedusaWallBoxDpsPoison] dmg=[80,85,70,160] status=[poison,slow,knockup,petrify] anim=[Ability1,Ability2,,Ability4].
+[02:38:39.579] [NetworkedCustomChar] [MAP] custom map registered: name='CustomArena' mapId=31 bundle='CustomArena\customflat.bundle' sv='CustomFlat_SvData' cl='CustomFlat_ClData' enabled=True zoneRounds=1 enableTileEdits=True useLevelDataTileMutations=True tileEdits=3.
+[02:38:39.579] [NetworkedCustomChar] [MAP] custom map registered: name='CustomCitadel' mapId=34 bundle='CustomCitadel\customflat.bundle' sv='CustomFlat_SvData' cl='CustomFlat_ClData' enabled=True zoneRounds=0 enableTileEdits=False useLevelDataTileMutations=False tileEdits=13.
+[02:38:39.580] [NetworkedCustomChar] [MAP] custom map registered: name='CustomColosseum' mapId=32 bundle='CustomColosseum\customflat.bundle' sv='CustomFlat_SvData' cl='CustomFlat_ClData' enabled=True zoneRounds=1 enableTileEdits=True useLevelDataTileMutations=True tileEdits=9.
+[02:38:39.580] [NetworkedCustomChar] [MAP] custom map registered: name='CustomFlat' mapId=30 bundle='CustomFlat\customflat.bundle' sv='CustomFlat_SvData' cl='CustomFlat_ClData' enabled=True zoneRounds=1 enableTileEdits=False useLevelDataTileMutations=False tileEdits=0.
+[02:38:39.580] [NetworkedCustomChar] [MAP] custom map registered: name='CustomGauntlet' mapId=33 bundle='CustomGauntlet\customflat.bundle' sv='CustomFlat_SvData' cl='CustomFlat_ClData' enabled=True zoneRounds=1 enableTileEdits=True useLevelDataTileMutations=True tileEdits=13.
+[02:38:39.580] [NetworkedCustomChar] [MAP] hooks installed (LoadLevel=True LoadLevelCoroutine=True SpawnLevel=True OnServerMatchSetup=True) for 5 custom level name(s).
+[02:38:39.581] [NetworkedCustomChar] [M1] loaded. charId=15 baseCharId=0 assetId=0xB0B00F0F graftVisual=True (Harmony patches deferred to 35s)
+[02:38:39.581] [DEBUG] MelonAssembly 'NetworkedCustomChar' unsubscribed with LoaderInitialized
+[02:38:48.482] [DEBUG] [MelonAssemblyResolver] Attempting to find Il2CppSystem.Private.CoreLib
+[02:38:48.482] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:38:48.484] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:38:48.484] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\UserLibs
+[02:38:48.487] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\Plugins
+[02:38:48.487] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\Mods
+[02:38:48.488] [DEBUG] [MelonAssemblyResolver] Failed to find Il2CppSystem.Private.CoreLib in any of the known search directories
+[02:38:48.488] [Il2CppInterop] Registered mono type MelonLoader.Support.SM_Component in il2cpp domain
+[02:38:48.501] [BAP_Custom_Server] [SceneLoaded] Scene 'MainScene' (index 0) loaded.
+[02:38:48.501] [BAP_Custom_Server] [StateReset] Resetting match flags on lobby/menu scene 'MainScene'
+[02:38:49.081] [BAP_Custom_Server] Melon runtime initialized. Support Module init pending (waiting 35s for Il2CppInterop startup).
+[02:38:49.082] [DEBUG] MelonAssembly 'BapCustomServerMelon' unsubscribed with OnLateInitializeMelon
+[02:38:49.085] [DEBUG] MelonAssembly 'BAPBAP.ModAPI' unsubscribed with OnLateInitializeMelon
+[02:38:49.085] [DEBUG] MelonAssembly 'NetworkedCustomChar' unsubscribed with OnLateInitializeMelon
+[02:38:49.142] [BAP_Custom_Server] Custom guest-login scan saw 1 LobbyNetworkClient object(s).
+[02:38:49.149] [BAP_Custom_Server] Custom guest-login scan resolved LobbyNetworkClient.Controller.Login.
+[02:38:49.154] [BAP_Custom_Server] Requested custom-server guest login via loaded LobbyNetworkClient: PostMatchClient (postmatch-client).
+[02:38:49.182] [BAP_Custom_Server] Custom splash guest-login scan saw 1 UILobbySplashScreen object(s).
+[02:38:49.188] [BAP_Custom_Server] Invoked custom-server guest login through UILobbySplashScreen action. Result=void
+[02:38:49.325] [BAP_Custom_Server] [NET] HTTP GET /api/load -> 200
+[02:38:49.325] [BAP_Custom_Server] [NET] HTTP GET /api/load -> 200
+[02:38:49.325] [BAP_Custom_Server] [NET] HTTP GET /api/load -> 200
+[02:38:49.326] [BAP_Custom_Server] [NET] HTTP GET /api/load -> 200
+[02:38:49.367] [NetworkedCustomChar] [M7] portrait sprite loaded: 'C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\UserData\Medusa\medusa-portrait.png' (768x1024).
+[02:38:49.416] [NetworkedCustomChar] [M7] portrait sprite loaded: 'C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\UserData\Medusa\medusa-wide.png' (1600x900).
+[02:38:49.423] [NetworkedCustomChar] [M1] UI row added (charId=15) via Poll; roster 15->16.
+[02:38:49.721] [BAP_Custom_Server] [NET] HTTP GET /api/iap/listing -> 200
+[02:38:49.721] [BAP_Custom_Server] [NET] HTTP GET /api/challenge/preview -> 200
+[02:38:49.724] [BAP_Custom_Server] [NET] HTTP GET /api/friends/requests -> 200
+[02:38:49.826] [BAP_Custom_Server] [NET] HTTP GET /api/challenge/preview -> 200
+[02:38:49.830] [BAP_Custom_Server] [NET] HTTP GET /api/iap/listing -> 200
+[02:38:49.832] [BAP_Custom_Server] [NET] HTTP GET /api/friends/requests -> 200
+[02:38:49.835] [BAP_Custom_Server] [NET] HTTP GET /api/challenge/preview -> 200
+[02:38:49.839] [BAP_Custom_Server] [NET] HTTP GET /api/iap/listing -> 200
+[02:38:49.840] [BAP_Custom_Server] [NET] HTTP GET /api/friends/requests -> 200
+[02:38:49.843] [BAP_Custom_Server] [NET] HTTP GET /api/challenge/preview -> 200
+[02:38:49.846] [BAP_Custom_Server] [NET] HTTP GET /api/iap/listing -> 200
+[02:38:49.847] [BAP_Custom_Server] [NET] HTTP GET /api/friends/requests -> 200
+[02:38:49.924] [BAPBAP_ModAPI] [Lifecycle] ModUpdateRunner GameObject created.
+[02:38:50.637] [BAP_Custom_Server] Requested custom-server guest login via loaded LobbyNetworkClient: PostMatchClient (postmatch-client).
+[02:38:50.742] [BAP_Custom_Server] [NET] HTTP GET /api/load -> 200
+[02:38:50.745] [BAP_Custom_Server] [NET] HTTP GET /api/load -> 200
+[02:38:50.862] [BAP_Custom_Server] [NET] HTTP GET /api/iap/listing -> 200
+[02:38:50.866] [BAP_Custom_Server] [NET] HTTP GET /api/challenge/preview -> 200
+[02:38:50.866] [BAP_Custom_Server] [NET] HTTP GET /api/friends/requests -> 200
+[02:38:50.866] [BAP_Custom_Server] [NET] HTTP GET /api/iap/listing -> 200
+[02:38:50.866] [BAP_Custom_Server] [NET] HTTP GET /api/friends/requests -> 200
+[02:38:50.867] [BAP_Custom_Server] [NET] HTTP GET /api/challenge/preview -> 200
+[02:38:52.142] [BAP_Custom_Server] Requested custom-server guest login via loaded LobbyNetworkClient: PostMatchClient (postmatch-client).
+[02:38:52.161] [BAP_Custom_Server] [NET] HTTP GET /api/load -> 200
+[02:38:52.178] [BAP_Custom_Server] [NET] HTTP GET /api/load -> 200
+[02:38:52.181] [BAP_Custom_Server] [NET] HTTP GET /api/challenge/preview -> 200
+[02:38:52.184] [BAP_Custom_Server] [NET] HTTP GET /api/iap/listing -> 200
+[02:38:52.185] [BAP_Custom_Server] [NET] HTTP GET /api/friends/requests -> 200
+[02:38:52.239] [BAP_Custom_Server] [NET] HTTP GET /api/iap/listing -> 200
+[02:38:52.240] [BAP_Custom_Server] [NET] HTTP GET /api/challenge/preview -> 200
+[02:38:52.240] [BAP_Custom_Server] [NET] HTTP GET /api/friends/requests -> 200
+[02:38:53.649] [BAP_Custom_Server] Requested custom-server guest login via loaded LobbyNetworkClient: PostMatchClient (postmatch-client).
+[02:38:53.671] [BAP_Custom_Server] [NET] HTTP GET /api/load -> 200
+[02:38:53.682] [BAP_Custom_Server] [NET] HTTP GET /api/load -> 200
+[02:38:53.697] [BAP_Custom_Server] [NET] HTTP GET /api/challenge/preview -> 200
+[02:38:53.698] [BAP_Custom_Server] [NET] HTTP GET /api/iap/listing -> 200
+[02:38:53.700] [BAP_Custom_Server] [NET] HTTP GET /api/friends/requests -> 200
+[02:38:53.702] [BAP_Custom_Server] [NET] HTTP GET /api/friends/requests -> 200
+[02:38:53.705] [BAP_Custom_Server] [NET] HTTP GET /api/iap/listing -> 200
+[02:38:53.711] [BAP_Custom_Server] [NET] HTTP GET /api/challenge/preview -> 200
+[02:38:55.148] [BAP_Custom_Server] Requested custom-server guest login via loaded LobbyNetworkClient: PostMatchClient (postmatch-client).
+[02:38:55.184] [BAP_Custom_Server] [NET] HTTP GET /api/load -> 200
+[02:38:55.193] [BAP_Custom_Server] [NET] HTTP GET /api/load -> 200
+[02:38:55.216] [BAP_Custom_Server] [NET] HTTP GET /api/friends/requests -> 200
+[02:38:55.240] [BAP_Custom_Server] [NET] HTTP GET /api/challenge/preview -> 200
+[02:38:55.265] [BAP_Custom_Server] [NET] HTTP GET /api/friends/requests -> 200
+[02:38:55.267] [BAP_Custom_Server] [NET] HTTP GET /api/iap/listing -> 200
+[02:38:55.267] [BAP_Custom_Server] [NET] HTTP GET /api/challenge/preview -> 200
+[02:38:55.274] [BAP_Custom_Server] [NET] HTTP GET /api/iap/listing -> 200
+[02:38:56.665] [BAP_Custom_Server] Requested custom-server guest login via loaded LobbyNetworkClient: PostMatchClient (postmatch-client).
+[02:38:56.683] [BAP_Custom_Server] [NET] HTTP GET /api/load -> 200
+[02:38:56.707] [BAP_Custom_Server] [NET] HTTP GET /api/load -> 200
+[02:38:56.718] [BAP_Custom_Server] [NET] HTTP GET /api/friends/requests -> 200
+[02:38:56.719] [BAP_Custom_Server] [NET] HTTP GET /api/challenge/preview -> 200
+[02:38:56.719] [BAP_Custom_Server] [NET] HTTP GET /api/iap/listing -> 200
+[02:38:56.728] [BAP_Custom_Server] [NET] HTTP GET /api/friends/requests -> 200
+[02:38:56.729] [BAP_Custom_Server] [NET] HTTP GET /api/iap/listing -> 200
+[02:38:56.730] [BAP_Custom_Server] [NET] HTTP GET /api/challenge/preview -> 200
+[02:38:58.166] [BAP_Custom_Server] Requested custom-server guest login via loaded LobbyNetworkClient: PostMatchClient (postmatch-client).
+[02:38:58.185] [BAP_Custom_Server] [NET] HTTP GET /api/load -> 200
+[02:38:58.197] [BAP_Custom_Server] [NET] HTTP GET /api/load -> 200
+[02:38:58.199] [BAP_Custom_Server] [NET] HTTP GET /api/friends/requests -> 200
+[02:38:58.201] [BAP_Custom_Server] [NET] HTTP GET /api/iap/listing -> 200
+[02:38:58.201] [BAP_Custom_Server] [NET] HTTP GET /api/challenge/preview -> 200
+[02:38:58.261] [BAP_Custom_Server] [NET] HTTP GET /api/friends/requests -> 200
+[02:38:58.262] [BAP_Custom_Server] [NET] HTTP GET /api/challenge/preview -> 200
+[02:38:58.262] [BAP_Custom_Server] [NET] HTTP GET /api/iap/listing -> 200
+[02:38:59.672] [BAP_Custom_Server] Requested custom-server guest login via loaded LobbyNetworkClient: PostMatchClient (postmatch-client).
+[02:38:59.694] [BAP_Custom_Server] [NET] HTTP GET /api/load -> 200
+[02:38:59.705] [BAP_Custom_Server] [NET] HTTP GET /api/load -> 200
+[02:38:59.718] [BAP_Custom_Server] [NET] HTTP GET /api/iap/listing -> 200
+[02:38:59.719] [BAP_Custom_Server] [NET] HTTP GET /api/challenge/preview -> 200
+[02:38:59.721] [BAP_Custom_Server] [NET] HTTP GET /api/friends/requests -> 200
+[02:38:59.726] [BAP_Custom_Server] [NET] HTTP GET /api/challenge/preview -> 200
+[02:38:59.728] [BAP_Custom_Server] [NET] HTTP GET /api/friends/requests -> 200
+[02:38:59.729] [BAP_Custom_Server] [NET] HTTP GET /api/iap/listing -> 200
+[02:39:01.193] [BAP_Custom_Server] Resetting splash guest-login invoked flag for retry (no LoadResponse received within timeout).
+[02:39:01.220] [BAP_Custom_Server] Requested custom-server guest login via loaded LobbyNetworkClient: PostMatchClient (postmatch-client).
+[02:39:01.245] [BAP_Custom_Server] [NET] HTTP GET /api/load -> 200
+[02:39:01.251] [BAP_Custom_Server] Custom splash guest-login scan saw 1 UILobbySplashScreen object(s).
+[02:39:01.252] [BAP_Custom_Server] Invoked custom-server guest login through UILobbySplashScreen action. Result=void
+[02:39:01.261] [BAP_Custom_Server] [NET] HTTP GET /api/load -> 200
+[02:39:01.270] [BAP_Custom_Server] [NET] HTTP GET /api/load -> 200
+[02:39:01.274] [BAP_Custom_Server] [NET] HTTP GET /api/challenge/preview -> 200
+[02:39:01.274] [BAP_Custom_Server] [NET] HTTP GET /api/friends/requests -> 200
+[02:39:01.274] [BAP_Custom_Server] [NET] HTTP GET /api/iap/listing -> 200
+[02:39:01.283] [BAP_Custom_Server] [NET] HTTP GET /api/friends/requests -> 200
+[02:39:01.284] [BAP_Custom_Server] [NET] HTTP GET /api/challenge/preview -> 200
+[02:39:01.284] [BAP_Custom_Server] [NET] HTTP GET /api/iap/listing -> 200
+[02:39:01.292] [BAP_Custom_Server] [NET] HTTP GET /api/friends/requests -> 200
+[02:39:01.294] [BAP_Custom_Server] [NET] HTTP GET /api/challenge/preview -> 200
+[02:39:01.294] [BAP_Custom_Server] [NET] HTTP GET /api/iap/listing -> 200
+[02:39:02.723] [BAP_Custom_Server] Requested custom-server guest login via loaded LobbyNetworkClient: PostMatchClient (postmatch-client).
+[02:39:02.742] [BAP_Custom_Server] [NET] HTTP GET /api/load -> 200
+[02:39:02.754] [BAP_Custom_Server] [NET] HTTP GET /api/challenge/preview -> 200
+[02:39:02.754] [BAP_Custom_Server] [NET] HTTP GET /api/friends/requests -> 200
+[02:39:02.754] [BAP_Custom_Server] [NET] HTTP GET /api/iap/listing -> 200
+[02:39:02.759] [BAP_Custom_Server] [NET] HTTP GET /api/load -> 200
+[02:39:02.773] [BAP_Custom_Server] [NET] HTTP GET /api/friends/requests -> 200
+[02:39:02.773] [BAP_Custom_Server] [NET] HTTP GET /api/challenge/preview -> 200
+[02:39:02.773] [BAP_Custom_Server] [NET] HTTP GET /api/iap/listing -> 200
+[02:39:04.229] [BAP_Custom_Server] Requested custom-server guest login via loaded LobbyNetworkClient: PostMatchClient (postmatch-client).
+[02:39:04.248] [BAP_Custom_Server] [NET] HTTP GET /api/load -> 200
+[02:39:04.255] [BAP_Custom_Server] [NET] HTTP GET /api/load -> 200
+[02:39:04.265] [BAP_Custom_Server] [NET] HTTP GET /api/challenge/preview -> 200
+[02:39:04.267] [BAP_Custom_Server] [NET] HTTP GET /api/friends/requests -> 200
+[02:39:04.268] [BAP_Custom_Server] [NET] HTTP GET /api/iap/listing -> 200
+[02:39:04.272] [BAP_Custom_Server] [NET] HTTP GET /api/friends/requests -> 200
+[02:39:04.272] [BAP_Custom_Server] [NET] HTTP GET /api/challenge/preview -> 200
+[02:39:04.272] [BAP_Custom_Server] [NET] HTTP GET /api/iap/listing -> 200
+[02:39:05.728] [BAP_Custom_Server] Requested custom-server guest login via loaded LobbyNetworkClient: PostMatchClient (postmatch-client).
+[02:39:05.744] [BAP_Custom_Server] [NET] HTTP GET /api/load -> 200
+[02:39:05.760] [BAP_Custom_Server] [NET] HTTP GET /api/friends/requests -> 200
+[02:39:05.760] [BAP_Custom_Server] [NET] HTTP GET /api/iap/listing -> 200
+[02:39:05.761] [BAP_Custom_Server] [NET] HTTP GET /api/load -> 200
+[02:39:05.761] [BAP_Custom_Server] [NET] HTTP GET /api/challenge/preview -> 200
+[02:39:05.783] [BAP_Custom_Server] [NET] HTTP GET /api/friends/requests -> 200
+[02:39:05.784] [BAP_Custom_Server] [NET] HTTP GET /api/iap/listing -> 200
+[02:39:05.785] [BAP_Custom_Server] [NET] HTTP GET /api/challenge/preview -> 200
+[02:39:07.242] [BAP_Custom_Server] Requested custom-server guest login via loaded LobbyNetworkClient: PostMatchClient (postmatch-client).
+[02:39:07.263] [BAP_Custom_Server] [NET] HTTP GET /api/load -> 200
+[02:39:07.280] [BAP_Custom_Server] [NET] HTTP GET /api/load -> 200
+[02:39:07.298] [BAP_Custom_Server] [NET] HTTP GET /api/challenge/preview -> 200
+[02:39:07.300] [BAP_Custom_Server] [NET] HTTP GET /api/friends/requests -> 200
+[02:39:07.300] [BAP_Custom_Server] [NET] HTTP GET /api/iap/listing -> 200
+[02:39:07.303] [BAP_Custom_Server] [NET] HTTP GET /api/friends/requests -> 200
+[02:39:07.310] [BAP_Custom_Server] [NET] HTTP GET /api/iap/listing -> 200
+[02:39:07.311] [BAP_Custom_Server] [NET] HTTP GET /api/challenge/preview -> 200
+[02:39:08.744] [BAP_Custom_Server] Requested custom-server guest login via loaded LobbyNetworkClient: PostMatchClient (postmatch-client).
+[02:39:08.771] [BAP_Custom_Server] [NET] HTTP GET /api/load -> 200
+[02:39:08.791] [BAP_Custom_Server] [NET] HTTP GET /api/load -> 200
+[02:39:08.792] [BAP_Custom_Server] [NET] HTTP GET /api/challenge/preview -> 200
+[02:39:08.796] [BAP_Custom_Server] [NET] HTTP GET /api/friends/requests -> 200
+[02:39:08.797] [BAP_Custom_Server] [NET] HTTP GET /api/iap/listing -> 200
+[02:39:08.852] [BAP_Custom_Server] [NET] HTTP GET /api/friends/requests -> 200
+[02:39:08.854] [BAP_Custom_Server] [NET] HTTP GET /api/challenge/preview -> 200
+[02:39:08.858] [BAP_Custom_Server] [NET] HTTP GET /api/iap/listing -> 200
+[02:39:10.243] [BAP_Custom_Server] Requested custom-server guest login via loaded LobbyNetworkClient: PostMatchClient (postmatch-client).
+[02:39:10.260] [BAP_Custom_Server] [NET] HTTP GET /api/load -> 200
+[02:39:10.274] [BAP_Custom_Server] [NET] HTTP GET /api/load -> 200
+[02:39:10.281] [BAP_Custom_Server] [NET] HTTP GET /api/challenge/preview -> 200
+[02:39:10.281] [BAP_Custom_Server] [NET] HTTP GET /api/iap/listing -> 200
+[02:39:10.282] [BAP_Custom_Server] [NET] HTTP GET /api/friends/requests -> 200
+[02:39:10.291] [BAP_Custom_Server] [NET] HTTP GET /api/challenge/preview -> 200
+[02:39:10.292] [BAP_Custom_Server] [NET] HTTP GET /api/iap/listing -> 200
+[02:39:10.292] [BAP_Custom_Server] [NET] HTTP GET /api/friends/requests -> 200
+[02:39:11.750] [BAP_Custom_Server] Requested custom-server guest login via loaded LobbyNetworkClient: PostMatchClient (postmatch-client).
+[02:39:11.766] [BAP_Custom_Server] [NET] HTTP GET /api/load -> 200
+[02:39:11.780] [BAP_Custom_Server] [NET] HTTP GET /api/load -> 200
+[02:39:11.793] [BAP_Custom_Server] [NET] HTTP GET /api/friends/requests -> 200
+[02:39:11.793] [BAP_Custom_Server] [NET] HTTP GET /api/iap/listing -> 200
+[02:39:11.793] [BAP_Custom_Server] [NET] HTTP GET /api/challenge/preview -> 200
+[02:39:11.799] [BAP_Custom_Server] [NET] HTTP GET /api/iap/listing -> 200
+[02:39:11.800] [BAP_Custom_Server] [NET] HTTP GET /api/friends/requests -> 200
+[02:39:11.800] [BAP_Custom_Server] [NET] HTTP GET /api/challenge/preview -> 200
+[02:39:13.254] [BAP_Custom_Server] Requested custom-server guest login via loaded LobbyNetworkClient: PostMatchClient (postmatch-client).
+[02:39:13.275] [BAP_Custom_Server] [NET] HTTP GET /api/load -> 200
+[02:39:13.280] [BAP_Custom_Server] [NET] HTTP GET /api/load -> 200
+[02:39:13.287] [BAP_Custom_Server] [NET] HTTP GET /api/iap/listing -> 200
+[02:39:13.288] [BAP_Custom_Server] [NET] HTTP GET /api/friends/requests -> 200
+[02:39:13.288] [BAP_Custom_Server] [NET] HTTP GET /api/challenge/preview -> 200
+[02:39:13.297] [BAP_Custom_Server] [NET] HTTP GET /api/friends/requests -> 200
+[02:39:13.298] [BAP_Custom_Server] [NET] HTTP GET /api/challenge/preview -> 200
+[02:39:13.298] [BAP_Custom_Server] [NET] HTTP GET /api/iap/listing -> 200
+[02:39:14.851] [BAP_Custom_Server] Installed 4 NetworkConfig runtime patch(es).
+[02:39:14.908] [BAP_Custom_Server] Installed 2 PreAwakeManager network config patch(es).
+[02:39:14.914] [Il2CppInterop] Failed to init IL2CPP patch backend for void Il2CppBAPBAP.Network.HttpClient::.ctor(UnityEngine.MonoBehaviour coroutineContext, string host, bool logs), using normal patch handlers: Derived classes must provide an implementation.
+[02:39:14.923] [BAP_Custom_Server] Installed 2 HttpClient host rewrite patch(es).
+[02:39:14.924] [Il2CppInterop] Failed to init IL2CPP patch backend for void Il2CppBAPBAP.UI.ControllerManager::.ctor(Il2CppBAPBAP.UI.ControllerManager+Config config, Il2CppBAPBAP.UI.ModelManager modelManager, Il2CppBAPBAP.UI.UILobby view, Il2CppBAPBAP.Network.HttpClient httpClient, Il2CppBAPBAP.Network.WebSocketClient webSocketClient, Il2CppBAPBAP.Network.NetworkConfig networkConfig), using normal patch handlers: Derived classes must provide an implementation.
+[02:39:14.928] [BAP_Custom_Server] Installed ControllerManager network runtime patch.
+[02:39:14.959] [BAP_Custom_Server] Installed 1 WebSocketClient selection propagation patch(es).
+[02:39:14.959] [BAP_Custom_Server] Resetting splash guest-login invoked flag for retry (no LoadResponse received within timeout).
+[02:39:14.990] [BAP_Custom_Server] Patched NetworkConfig.ClientConfig ApiHost: 'http://127.0.0.1:5055' -> 'http://127.0.0.1:5174'
+[02:39:14.990] [BAP_Custom_Server] Requested custom-server guest login via loaded LobbyNetworkClient: PostMatchClient (postmatch-client).
+[02:39:15.010] [BAP_Custom_Server] [NET] HTTP GET /api/load -> 200
+[02:39:15.019] [BAP_Custom_Server] Custom splash guest-login scan saw 1 UILobbySplashScreen object(s).
+[02:39:15.020] [BAP_Custom_Server] [NET] HTTP GET /api/load -> 200
+[02:39:15.022] [BAP_Custom_Server] Invoked custom-server guest login through UILobbySplashScreen action. Result=void
+[02:39:15.055] [NetworkedCustomChar] [M1] patched GameNetworkManager.Awake (pre=False post=True).
+[02:39:15.070] [BAP_Custom_Server] [NET] HTTP GET /api/load -> 200
+[02:39:15.092] [NetworkedCustomChar] [M1] patched GameNetworkManager.OnStartServer (pre=False post=True).
+[02:39:15.116] [NetworkedCustomChar] [M1] patched GameNetworkManager.OnStartClient (pre=False post=True).
+[02:39:15.140] [NetworkedCustomChar] [M1] patched GameNetworkManager.GetCharacterBotPrefab (pre=True post=False).
+[02:39:15.172] [NetworkedCustomChar] [M1] patched GameMode.SpawnPlayerChar (pre=True post=False).
+[02:39:15.204] [NetworkedCustomChar] [M1] patched GameMode.SpawnAllBotsFill (pre=True post=False).
+[02:39:15.205] [NetworkedCustomChar] AccessTools.Method: Could not find method for type Il2CppBAPBAP.UI.UICharactersConfiguration and name OnEnable and parameters 
+[02:39:15.210] [NetworkedCustomChar] [M1] patch target not found: UICharactersConfiguration.OnEnable
+[02:39:15.240] [NetworkedCustomChar] [M1] patched UILobbyCharacterSelectPage.GetCharacterListingIndexFromCharId (pre=True post=False).
+[02:39:15.272] [NetworkedCustomChar] [M1] patched Ability.SetState (pre=True post=True).
+[02:39:15.300] [NetworkedCustomChar] [M1] patched CatShotAbility.Shoot (pre=True post=False).
+[02:39:15.325] [NetworkedCustomChar] [M1] patched CatMissileAbility.Shoot (pre=True post=False).
+[02:39:15.352] [NetworkedCustomChar] [M1] patched CatPolymorphAbility.Shoot (pre=True post=False).
+[02:39:15.377] [NetworkedCustomChar] [M1] patched CatJumpAbility.Shoot (pre=True post=False).
+[02:39:15.408] [NetworkedCustomChar] [M3b] patched CatShotAbility.CustomShootSubroutine.OnEnter (native visual suppress). 
+[02:39:15.436] [NetworkedCustomChar] [M3b] patched CatMissileAbility.CustomShootSubroutine.OnEnter (native visual suppress). 
+[02:39:15.462] [NetworkedCustomChar] [M3b] patched CatPolymorphAbility.CustomTargetSubroutine.OnEnter (native visual suppress). 
+[02:39:15.488] [NetworkedCustomChar] [M3b] patched CatJumpAbility.CustomShootSubroutine.OnEnter (native visual suppress). 
+[02:39:15.513] [NetworkedCustomChar] [M3b] patched CatJumpAbility.CustomJumpSubroutine.OnEnter (native visual suppress). 
+[02:39:15.540] [NetworkedCustomChar] [M3b] patched CatJumpAbility.CustomFloatSubroutine.OnEnter (native visual suppress). 
+[02:39:15.570] [NetworkedCustomChar] [M1] patched CharAnimator.Awake (pre=False post=True).
+[02:39:15.598] [NetworkedCustomChar] [M1] patched CharFootsteps.Awake (pre=False post=True).
+[02:39:15.640] [NetworkedCustomChar] [M2] patched Animator.SetLayerWeight (overload; pre=True post=False).
+[02:39:15.667] [NetworkedCustomChar] [M2] patched Animator.CrossFadeInFixedTime (overload; pre=True post=False).
+[02:39:15.668] [NetworkedCustomChar] [M1] deferred Harmony patches installed at 35.9s.
+[02:39:15.732] [BAP_Custom_Server] [CharConfig] Found 1 UIManager instance(s). Searching for characterConfig field...
+[02:39:15.763] [BAP Custom Server] [GetIl2CppType Diag] Found assembly: Il2CppInterop.Runtime
+[02:39:15.766] [BAP Custom Server] [GetIl2CppType Diag] Found type: Il2CppInterop.Runtime.Il2CppType
+[02:39:15.767] [BAP Custom Server] [GetIl2CppType Diag] Found method From(Type)
+[02:39:15.767] [BAP Custom Server] [GetIl2CppType Diag] From(Type) returned type for UICharactersConfiguration
+[02:39:15.838] [BAP_Custom_Server] [NET] HTTP GET /api/challenge/preview -> 200
+[02:39:15.852] [BAP_Custom_Server] [NET] HTTP GET /api/friends/requests -> 200
+[02:39:15.852] [BAP_Custom_Server] [NET] HTTP GET /api/challenge/preview -> 200
+[02:39:15.852] [BAP_Custom_Server] [NET] HTTP GET /api/friends/requests -> 200
+[02:39:15.874] [BAP_Custom_Server] [NET] HTTP GET /api/challenge/preview -> 200
+[02:39:15.882] [BAP_Custom_Server] [NET] HTTP GET /api/iap/listing -> 200
+[02:39:15.888] [BAP_Custom_Server] [NET] HTTP GET /api/iap/listing -> 200
+[02:39:15.891] [BAP_Custom_Server] [MapFix] 3 GameMode(s), spawnCounts=[-1,-1,-1]. Waiting for populated map...
+[02:39:15.900] [BAP_Custom_Server] [NET] HTTP GET /api/iap/listing -> 200
+[02:39:15.909] [BAP_Custom_Server] [NET] HTTP GET /api/friends/requests -> 200
+[02:39:15.924] [BAP_Custom_Server] [ShopThrottle] Patched 1 method(s)
+[02:39:16.161] [BAP_Custom_Server] [LockerGuard] Installed exception-swallow finalizer on 9 locker method(s)
+[02:39:16.210] [BAP_Custom_Server] [KcpRuntime] timeout-guard-manager: manager=Il2CppBAPBAP.Network.GameNetworkManager ws=Il2CppMirror.SimpleWeb.SimpleWebTransport port=7777 timeout=null client=False server=False kcp=Il2Cppkcp2k.KcpTransport port=7778 timeout=60000 client=True server=True tcp=Il2CppMirror.TelepathyTransport port=7779 timeout=null client=False server=False multiplex=Il2CppMirror.MultiplexTransport port=7779 timeout=null client=False server=False patched=5.
+[02:39:16.210] [BAP_Custom_Server] [KcpRuntime] timeout-guard-manager: manager=Il2CppBAPBAP.Network.GameNetworkManager ws=Il2CppMirror.SimpleWeb.SimpleWebTransport port=7777 timeout=null client=False server=False kcp=Il2Cppkcp2k.KcpTransport port=7778 timeout=60000 client=True server=True tcp=Il2CppMirror.TelepathyTransport port=7779 timeout=null client=False server=False multiplex=Il2CppMirror.MultiplexTransport port=7779 timeout=null client=False server=False patched=3.
+[02:39:16.210] [BAP_Custom_Server] [KcpTimeoutGuard] Applied KCP timeout/port guard through GameNetworkManager transport(s); patched=8.
+[02:39:16.252] [BAP_Custom_Server] [InterpFix] no NetworkTransform instances yet (attempt=1)
+[02:39:16.348] [BAP_Custom_Server] [MatchFoundDedup] Installed dedup prefix on 3 PlayMatchFoundSequence target(s).
+[02:39:16.384] [BAP_Custom_Server] [AugmentFix] Extended augmentSelectWaitDuration on 1/1 UIAugments instance(s) to 10s.
+[02:39:16.450] [BAP_Custom_Server] [AugmentFix] auto-select: no local PlayerAugments found.
+[02:39:16.770] [BAP_Custom_Server] Installed 8 character selection tracker patch(es).
+[02:39:16.824] [BAP_Custom_Server] Installed lifecycle guard on 2 Application.Quit overload(s). Guard expires in 120s (lobby-startup window).
+[02:39:17.126] [BAP_Custom_Server] Installed 11 post-match cleanup/lobby-return hook(s).
+[02:39:17.215] [BAP_Custom_Server] Installed 3 GameMode level-name runtime patch(es).
+[02:39:17.270] [BAP_Custom_Server] Installed AddPlayerMatchmaking runtime diagnostics and Medusa skin patch.
+[02:39:17.449] [BAP_Custom_Server] Installed 7 LoginController custom guest-login patch(es).
+[02:39:17.504] [BAP_Custom_Server] Installed 2 Analytics custom-server guard patch(es).
+[02:39:17.536] [BAP_Custom_Server] Requested custom-server guest login via loaded LobbyNetworkClient: PostMatchClient (postmatch-client).
+[02:39:17.557] [BAP_Custom_Server] [NET] HTTP GET /api/load -> 200
+[02:39:17.570] [BAP_Custom_Server] [NET] HTTP GET /api/load -> 200
+[02:39:17.775] [BAP Custom Server] [GetIl2CppType Diag] Found assembly: Il2CppInterop.Runtime
+[02:39:17.777] [BAP Custom Server] [GetIl2CppType Diag] Found type: Il2CppInterop.Runtime.Il2CppType
+[02:39:17.778] [BAP Custom Server] [GetIl2CppType Diag] Found method From(Type)
+[02:39:17.778] [BAP Custom Server] [GetIl2CppType Diag] From(Type) returned type for UICharactersConfiguration
+[02:39:17.977] [BAP_Custom_Server] Suppressed Unity Analytics setup for custom-server session.
+[02:39:17.982] [BAP_Custom_Server] [NET] HTTP GET /api/iap/listing -> 200
+[02:39:17.982] [BAP_Custom_Server] [NET] HTTP GET /api/challenge/preview -> 200
+[02:39:17.982] [BAP_Custom_Server] [NET] HTTP GET /api/friends/requests -> 200
+[02:39:17.997] [BAP_Custom_Server] [LockerGuard] Swallowed Il2CppException in UILobbyLockerTabPage.AddEmoteEntry: System.NullReferenceException: Object reference not set to an instance of an object.
+--- BEGIN IL2CPP STACK TRACE ---
+System.NullReferenceException: Object refe (likely an owned AssetId missing from the client content DB)
+[02:39:17.998] [BAP_Custom_Server] [LockerGuard] Swallowed Il2CppException in UILobbyLockerTabPage.AddEmoteEntry: System.NullReferenceException: Object reference not set to an instance of an object.
+--- BEGIN IL2CPP STACK TRACE ---
+System.NullReferenceException: Object refe (likely an owned AssetId missing from the client content DB)
+[02:39:17.999] [BAP_Custom_Server] [LockerGuard] Swallowed Il2CppException in UILobbyLockerTabPage.AddEmoteEntry: System.NullReferenceException: Object reference not set to an instance of an object.
+--- BEGIN IL2CPP STACK TRACE ---
+System.NullReferenceException: Object refe (likely an owned AssetId missing from the client content DB)
+[02:39:18.000] [BAP_Custom_Server] [LockerGuard] Swallowed Il2CppException in UILobbyLockerTabPage.AddEmoteEntry: System.NullReferenceException: Object reference not set to an instance of an object.
+--- BEGIN IL2CPP STACK TRACE ---
+System.NullReferenceException: Object refe (likely an owned AssetId missing from the client content DB)
+[02:39:18.264] [BAP_Custom_Server] [NET] HTTP GET /api/shop -> 200
+[02:39:18.360] [Il2CppInterop] During invoking native->managed trampoline
+Il2CppInterop.Runtime.Il2CppException: System.NullReferenceException: Object reference not set to an instance of an object.
+--- BEGIN IL2CPP STACK TRACE ---
+System.NullReferenceException: Object reference not set to an instance of an object.
+  at BAPBAP.UI.UILobbyCharacterSelectPage.SetCharacterButtonState (System.Int32 charIndex) [0x00000] in <00000000000000000000000000000000>:0 
+  at BAPBAP.UI.UILobbyCharacterSelectPage.OnCharacterSelect (System.Int32 charIndex) [0x00000] in <00000000000000000000000000000000>:0 
+--- END IL2CPP STACK TRACE ---
+
+   at Il2CppInterop.Runtime.Il2CppException.RaiseExceptionIfNecessary(IntPtr returnedException) in /home/runner/work/Il2CppInterop/Il2CppInterop/Il2CppInterop.Runtime/Il2CppException.cs:line 36
+   at DMD<Il2CppBAPBAP.UI.UILobbyCharacterSelectPage::OnCharacterSelect>(UILobbyCharacterSelectPage this, Int32 charIndex)
+   at (il2cpp -> managed) OnCharacterSelect(IntPtr , Int32 , Il2CppMethodInfo* )
+[02:39:18.373] [BAP_Custom_Server] [CharacterSelection] selected char tracked via UILobbyCharacterSelectPage.OnCharacterButtonSelect: 0->1.
+[02:39:18.374] [BAP_Custom_Server] Custom-server load response handled by LoginController.
+[02:39:18.399] [BAP_Custom_Server] [NET] HTTP GET /api/daily -> 200
+[02:39:18.399] [BAP_Custom_Server] [NET] HTTP GET /api/leaderboards/preview -> 200
+[02:39:18.400] [BAP_Custom_Server] [NET] HTTP GET /api/chars/pass -> 200
+[02:39:18.401] [BAP_Custom_Server] [NET] HTTP GET /api/profile/levels -> 200
+[02:39:18.406] [BAP_Custom_Server] [NET] HTTP GET /api/pinger -> 200
+[02:39:18.407] [BAP_Custom_Server] [NET] HTTP GET /api/chars/listing -> 200
+[02:39:18.420] [BAP Custom Server] [GetIl2CppType Diag] Found assembly: Il2CppInterop.Runtime
+[02:39:18.432] [BAP Custom Server] [GetIl2CppType Diag] Found type: Il2CppInterop.Runtime.Il2CppType
+[02:39:18.438] [BAP_Custom_Server] [NET] HTTP GET /api/chars/mastery/preview -> 200
+[02:39:18.442] [BAP Custom Server] [GetIl2CppType Diag] Found method From(Type)
+[02:39:18.444] [BAP Custom Server] [GetIl2CppType Diag] From(Type) returned type for UICharactersConfiguration
+[02:39:18.472] [BAP_Custom_Server] [NET] HTTP GET /api/lobby/socket -> 200
+[02:39:18.480] [BAP_Custom_Server] [CharConfig] authoritative availableCharacters from LoginController.HandleLoadResponse: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15].
+[02:39:18.491] [BAP_Custom_Server] Scheduled custom-server post-login splash fallback after LoginController.HandleLoadResponse.
+[02:39:18.542] [BAP_Custom_Server] Protected UIManager 'UIManager' with DontDestroyOnLoad.
+[02:39:18.576] [BAP_Custom_Server] Protected GameNetworkManager 'NetworkManager' with DontDestroyOnLoad.
+[02:39:18.596] [BAP_Custom_Server] Protected Canvas 'OptionDropdown' with DontDestroyOnLoad.
+[02:39:18.626] [BAP_Custom_Server] Protected Canvas 'Blocker' with DontDestroyOnLoad.
+[02:39:18.649] [BAP_Custom_Server] Protected Canvas 'TemplatePiv' with DontDestroyOnLoad.
+[02:39:18.682] [BAP_Custom_Server] Protected Canvas 'Canvas_SelectionWheel' with DontDestroyOnLoad.
+[02:39:18.686] [BAP_Custom_Server] Protected Canvas 'DisplayImage' with DontDestroyOnLoad.
+[02:39:18.686] [BAP_Custom_Server] Protected Canvas 'Canvas_InviteCode' with DontDestroyOnLoad.
+[02:39:18.687] [BAP_Custom_Server] Protected Canvas 'MainSplashAnimated' with DontDestroyOnLoad.
+[02:39:18.688] [BAP_Custom_Server] Protected Canvas 'Canvas_SettingsMenu' with DontDestroyOnLoad.
+[02:39:18.688] [BAP_Custom_Server] Protected Canvas 'Canvas' with DontDestroyOnLoad.
+[02:39:18.688] [BAP_Custom_Server] Protected Canvas 'Canvas_MatchCountdown' with DontDestroyOnLoad.
+[02:39:18.689] [BAP_Custom_Server] Protected Canvas 'AppMsg_LoggedIn' with DontDestroyOnLoad.
+[02:39:18.689] [BAP_Custom_Server] Protected Canvas 'Canvas_MatchWin' with DontDestroyOnLoad.
+[02:39:18.689] [BAP_Custom_Server] Protected Canvas 'Canvas_PingWheel' with DontDestroyOnLoad.
+[02:39:18.689] [BAP_Custom_Server] Protected Canvas 'DebugConsole' with DontDestroyOnLoad.
+[02:39:18.689] [BAP_Custom_Server] Protected Canvas 'DebugCanvas' with DontDestroyOnLoad.
+[02:39:18.690] [BAP_Custom_Server] Protected Canvas 'AppMsg_Disconnected' with DontDestroyOnLoad.
+[02:39:18.690] [BAP_Custom_Server] Protected Canvas 'FillOverlayBG' with DontDestroyOnLoad.
+[02:39:18.691] [BAP_Custom_Server] Protected Canvas 'GameModePasswordWindow' with DontDestroyOnLoad.
+[02:39:18.692] [BAP_Custom_Server] Protected Canvas 'Canvas_MobileControls' with DontDestroyOnLoad.
+[02:39:18.692] [BAP_Custom_Server] Protected Canvas 'Canvas_MatchLose' with DontDestroyOnLoad.
+[02:39:18.695] [BAP_Custom_Server] Protected Canvas 'UtilitiesUI' with DontDestroyOnLoad.
+[02:39:18.696] [BAP_Custom_Server] Protected Canvas 'IconsParent' with DontDestroyOnLoad.
+[02:39:18.696] [BAP_Custom_Server] Protected Canvas 'Canvas_Spectating' with DontDestroyOnLoad.
+[02:39:18.696] [BAP_Custom_Server] Protected Canvas 'Canvas_ConsumableWheel' with DontDestroyOnLoad.
+[02:39:18.698] [BAP_Custom_Server] Protected Canvas 'Canvas_EmoteWheel' with DontDestroyOnLoad.
+[02:39:18.699] [BAP_Custom_Server] Protected Canvas 'ModalWindow_Disconnected' with DontDestroyOnLoad.
+[02:39:18.700] [BAP_Custom_Server] Protected Canvas 'ModalWindow_ExitMatch' with DontDestroyOnLoad.
+[02:39:18.701] [BAP_Custom_Server] Protected Canvas 'ModalWindow_Generic' with DontDestroyOnLoad.
+[02:39:18.702] [BAP_Custom_Server] Protected Canvas 'ModalWindow_QuitGame' with DontDestroyOnLoad.
+[02:39:18.707] [BAP_Custom_Server] Protected Canvas 'LoginCompleteWindow' with DontDestroyOnLoad.
+[02:39:18.707] [BAP_Custom_Server] Protected Canvas 'AppMsg_ServerError' with DontDestroyOnLoad.
+[02:39:18.707] [BAP_Custom_Server] Protected Canvas 'DimensionParent' with DontDestroyOnLoad.
+[02:39:18.708] [BAP_Custom_Server] Protected Canvas 'Canvas_Network' with DontDestroyOnLoad.
+[02:39:18.708] [BAP_Custom_Server] Protected Canvas 'Canvas_Graphs' with DontDestroyOnLoad.
+[02:39:18.709] [BAP_Custom_Server] Protected Canvas 'IconsParent' with DontDestroyOnLoad.
+[02:39:18.710] [BAP_Custom_Server] Protected Canvas 'Canvas_Voice' with DontDestroyOnLoad.
+[02:39:18.710] [BAP_Custom_Server] Protected Canvas 'Canvas_PlayerUI' with DontDestroyOnLoad.
+[02:39:18.711] [BAP_Custom_Server] Protected Canvas 'ModalWindow_Logout' with DontDestroyOnLoad.
+[02:39:18.717] [BAP_Custom_Server] Protected Canvas 'MapFullDisplayRect' with DontDestroyOnLoad.
+[02:39:18.722] [BAP_Custom_Server] Protected Canvas 'FFAUI' with DontDestroyOnLoad.
+[02:39:18.725] [BAP_Custom_Server] Protected Canvas 'InteractableInfoContainer' with DontDestroyOnLoad.
+[02:39:18.726] [BAP_Custom_Server] Protected Canvas 'DimensionParent' with DontDestroyOnLoad.
+[02:39:18.726] [BAP_Custom_Server] Protected Canvas 'Canvas_DeveloperLobby' with DontDestroyOnLoad.
+[02:39:18.726] [BAP_Custom_Server] Protected Canvas 'AppMsg_Maintenance' with DontDestroyOnLoad.
+[02:39:18.729] [BAP_Custom_Server] Suppressed Unity Analytics setup for custom-server session.
+[02:39:18.745] [BAP_Custom_Server] [LockerGuard] Swallowed Il2CppException in UILobbyLockerTabPage.AddEmoteEntry: System.NullReferenceException: Object reference not set to an instance of an object.
+--- BEGIN IL2CPP STACK TRACE ---
+System.NullReferenceException: Object refe (likely an owned AssetId missing from the client content DB)
+[02:39:18.749] [BAP_Custom_Server] [LockerGuard] Swallowed Il2CppException in UILobbyLockerTabPage.AddEmoteEntry: System.NullReferenceException: Object reference not set to an instance of an object.
+--- BEGIN IL2CPP STACK TRACE ---
+System.NullReferenceException: Object refe (likely an owned AssetId missing from the client content DB)
+[02:39:18.750] [BAP_Custom_Server] [LockerGuard] Swallowed Il2CppException in UILobbyLockerTabPage.AddEmoteEntry: System.NullReferenceException: Object reference not set to an instance of an object.
+--- BEGIN IL2CPP STACK TRACE ---
+System.NullReferenceException: Object refe (likely an owned AssetId missing from the client content DB)
+[02:39:18.750] [BAP_Custom_Server] [LockerGuard] Swallowed Il2CppException in UILobbyLockerTabPage.AddEmoteEntry: System.NullReferenceException: Object reference not set to an instance of an object.
+--- BEGIN IL2CPP STACK TRACE ---
+System.NullReferenceException: Object refe (likely an owned AssetId missing from the client content DB)
+[02:39:18.765] [BAP_Custom_Server] [NET] HTTP GET /api/friends/requests -> 200
+[02:39:18.787] [BAP_Custom_Server] [NET] HTTP GET /api/iap/listing -> 200
+[02:39:18.816] [Il2CppInterop] During invoking native->managed trampoline
+Il2CppInterop.Runtime.Il2CppException: System.NullReferenceException: Object reference not set to an instance of an object.
+--- BEGIN IL2CPP STACK TRACE ---
+System.NullReferenceException: Object reference not set to an instance of an object.
+  at BAPBAP.UI.UILobbyCharacterSelectPage.SetCharacterButtonState (System.Int32 charIndex) [0x00000] in <00000000000000000000000000000000>:0 
+  at BAPBAP.UI.UILobbyCharacterSelectPage.OnCharacterSelect (System.Int32 charIndex) [0x00000] in <00000000000000000000000000000000>:0 
+--- END IL2CPP STACK TRACE ---
+
+   at Il2CppInterop.Runtime.Il2CppException.RaiseExceptionIfNecessary(IntPtr returnedException) in /home/runner/work/Il2CppInterop/Il2CppInterop/Il2CppInterop.Runtime/Il2CppException.cs:line 36
+   at DMD<Il2CppBAPBAP.UI.UILobbyCharacterSelectPage::OnCharacterSelect>(UILobbyCharacterSelectPage this, Int32 charIndex)
+   at (il2cpp -> managed) OnCharacterSelect(IntPtr , Int32 , Il2CppMethodInfo* )
+[02:39:18.820] [BAP_Custom_Server] Custom-server load response handled by LoginController.
+[02:39:18.835] [BAP_Custom_Server] [NET] HTTP GET /api/shop -> 200
+[02:39:18.847] [BAP Custom Server] [GetIl2CppType Diag] Found assembly: Il2CppInterop.Runtime
+[02:39:18.847] [BAP Custom Server] [GetIl2CppType Diag] Found type: Il2CppInterop.Runtime.Il2CppType
+[02:39:18.848] [BAP Custom Server] [GetIl2CppType Diag] Found method From(Type)
+[02:39:18.848] [BAP Custom Server] [GetIl2CppType Diag] From(Type) returned type for UICharactersConfiguration
+[02:39:18.856] [BAP_Custom_Server] [NET] HTTP GET /api/daily -> 200
+[02:39:18.861] [BAP_Custom_Server] [NET] HTTP GET /api/lobby/socket -> 200
+[02:39:18.883] [BAP_Custom_Server] [NET] HTTP GET /api/chars/listing -> 200
+[02:39:18.917] [BAP_Custom_Server] [NET] HTTP GET /api/pinger -> 200
+[02:39:18.917] [BAP_Custom_Server] [NET] HTTP GET /api/leaderboards/preview -> 200
+[02:39:18.960] [BAP_Custom_Server] Proxy WS connected: local /ws -> ws://127.0.0.1:5174/ws?accountId=postmatch-client&username=PostMatchClient&discriminator=1976
+[02:39:18.992] [BAP_Custom_Server] [NET] HTTP GET /api/challenge/preview -> 200
+[02:39:19.119] [BAP_Custom_Server] [NET] HTTP GET /api/chars/pass -> 200
+[02:39:19.162] [BAP_Custom_Server] [NET] HTTP GET /api/chars/mastery/preview -> 200
+[02:39:19.177] [BAP_Custom_Server] [NET] HTTP GET /api/profile/levels -> 200
+[02:39:19.186] [BAP Custom Server] [GetIl2CppType Diag] Found assembly: Il2CppInterop.Runtime
+[02:39:19.204] [BAP Custom Server] [GetIl2CppType Diag] Found type: Il2CppInterop.Runtime.Il2CppType
+[02:39:19.209] [BAP Custom Server] [GetIl2CppType Diag] Found method From(Type)
+[02:39:19.210] [BAP Custom Server] [GetIl2CppType Diag] From(Type) returned type for UICharactersConfiguration
+[02:39:19.498] [BAP_Custom_Server] Installed 3 PreMatch UI NullRef guard(s) (fixes in-match 'Unknown Error' RPC-disconnect kick).
+[02:39:20.780] [BAP_Custom_Server] Installed 48 character-select NullRef guard prefix patch(es).
+[02:39:20.913] [BAP_Custom_Server] Installed 5 PopulateCharIdsBeforeBuild prefix(es) on UILobbyCharacterSelectPage.
+[02:39:21.003] [BAP_Custom_Server] Installed 3 PopulateCharIdsBeforeBuild prefix(es) on UILobbyPlayTabPage.
+[02:39:21.821] [BAP_Custom_Server] Installed 32 LobbyController NullRef guard finalizer patch(es).
+[02:39:21.857] [BAP_Custom_Server] Installed prefix on UICharactersConfiguration.TryGetLobbyCharConfigByIndex (right-panel-render fix).
+[02:39:21.892] [BAP_Custom_Server] Installed prefix on UIManager.Awake for pre-build char config population.
+[02:39:21.917] [BAP_Custom_Server] Installed finalizer on UIManager.Awake to suppress lobby build crash and populate char config.
+[02:39:21.973] [BAP_Custom_Server] Installed 2 UnityWebRequest callback repair patch(es).
+[02:39:22.008] [BAP Custom Server] [GetIl2CppType Diag] Found assembly: Il2CppInterop.Runtime
+[02:39:22.009] [BAP Custom Server] [GetIl2CppType Diag] Found type: Il2CppInterop.Runtime.Il2CppType
+[02:39:22.009] [BAP Custom Server] [GetIl2CppType Diag] Found method From(Type)
+[02:39:22.010] [BAP Custom Server] [GetIl2CppType Diag] From(Type) returned type for UICharactersConfiguration
+[02:39:22.040] [BAP_Custom_Server] Server match policy fetched: Both (matchmaking=allowed, custom=allowed, chars=0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15). When a path is blocked, the mod logs a clear error if the user tries to use it.
+[02:39:22.093] [BAP_Custom_Server] Patched NetworkConfig.ClientConfig ApiHost: 'http://localhost:8001' -> 'http://127.0.0.1:5174'
+[02:39:22.093] [BAP_Custom_Server] Patched NetworkConfig.ClientConfig ApiHost: 'https://broitsabrowsergame.bapbap.gg:443' -> 'http://127.0.0.1:5174'
+[02:39:22.094] [BAP_Custom_Server] Patched NetworkConfig.ClientConfig ApiHost: 'http://127.0.0.1:5055' -> 'http://127.0.0.1:5174'
+[02:39:22.098] [BAP_Custom_Server] Rewrote BAPBAP.Network.HttpClient UriBuilder for direct custom-server mode: 'Il2CppSystem.UriBuilder' -> 'Il2CppSystem.UriBuilder'.
+[02:39:22.100] [BAP_Custom_Server] ControllerManager network runtime patched via LobbyNetworkClient.loaded-sweep->controller: networkConfig=True httpClient=True uriBuilder='Il2CppSystem.UriBuilder'.
+[02:39:22.100] [BAP_Custom_Server] LobbyNetworkClient runtime patched via LobbyNetworkClient.loaded-sweep: networkConfig=True httpClient=True controller=True directUriBuilder='Il2CppSystem.UriBuilder' controllerUriBuilder='Il2CppSystem.UriBuilder'.
+[02:39:22.128] [BAP_Custom_Server] Patched WebServer callback endpoints to http://127.0.0.1:5174/api/internal.
+[02:39:22.215] [BAP_Custom_Server] [Autoplay] Login complete, will join lobby in 3s.
+[02:39:24.855] [BAP Custom Server] [GetIl2CppType Diag] Found assembly: Il2CppInterop.Runtime
+[02:39:24.857] [BAP Custom Server] [GetIl2CppType Diag] Found type: Il2CppInterop.Runtime.Il2CppType
+[02:39:24.857] [BAP Custom Server] [GetIl2CppType Diag] Found method From(Type)
+[02:39:24.858] [BAP Custom Server] [GetIl2CppType Diag] From(Type) returned type for UICharactersConfiguration
+[02:39:24.975] [BAP_Custom_Server] [CharacterPageDataGuard] hydrated UILobbyCharacterSelectPage.UpdateData(data): chars=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15] listingsPurchased=16 done=True.
+[02:39:24.975] [BAP_Custom_Server] [CharacterPageDataGuard] hydrated UILobbyCharacterSelectPage.UpdateData(instance).data: chars=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15] listingsPurchased=16 done=True.
+[02:39:24.981] [BAP_Custom_Server] [CharacterPageDataGuard] hydrated UILobbyCharacterSelectPage.method.data: chars=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15] listingsPurchased=16 done=True.
+[02:39:25.015] [BAP_Custom_Server] [CharacterPageDataGuard] hydrated UILobbyCharacterSelectPage.UpdateData(data): chars=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15] listingsPurchased=16 done=True.
+[02:39:25.015] [BAP_Custom_Server] [CharacterPageDataGuard] hydrated UILobbyCharacterSelectPage.UpdateData(instance).data: chars=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15] listingsPurchased=16 done=True.
+[02:39:25.016] [BAP_Custom_Server] [CharacterPageDataGuard] hydrated UILobbyCharacterSelectPage.method.data: chars=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15] listingsPurchased=16 done=True.
+[02:39:25.267] [BAP_Custom_Server] Installed Mirror RPC dispatch guard (1 method(s)) (durable fix for in-match 'Unknown Error' RPC-disconnect kick).
+[02:39:25.267] [BAP_Custom_Server] [PatchStagger] All 10 patch groups installed over 4 frames.
+[02:39:25.309] [BAP_Custom_Server] Applied custom-server post-login splash fallback (scheduled post-login check). lobbies=1 splashes=1 hidden=1
+[02:39:25.438] [BAP_Custom_Server] [KcpRuntime] client-autojoin-before-connect: manager=Il2CppBAPBAP.Network.GameNetworkManager ws=Il2CppMirror.SimpleWeb.SimpleWebTransport port=7777 timeout=null client=False server=False kcp=Il2Cppkcp2k.KcpTransport port=7778 timeout=60000 client=True server=True tcp=Il2CppMirror.TelepathyTransport port=7779 timeout=null client=False server=False multiplex=Il2CppMirror.MultiplexTransport port=7779 timeout=null client=False server=False patched=3.
+[02:39:25.508] [NetworkedCustomChar] [M2] loading bundle: 'C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\UserData\Medusa\medusa.bundle' (1501106 bytes).
+[02:39:25.653] [NetworkedCustomChar] [M2] visual prefab 'Medusa_Visual' loaded from bundle.
+[02:39:25.688] [NetworkedCustomChar] [M2] graft OK via GNM.OnStartClient: baseRenderersDisabled=11, charAnimWired=1, footstepsWired=1, otherAnimsDisabled=3, shadedSMRs=1, fx=True, controller='Medusa'.
+[02:39:25.688] [NetworkedCustomChar] [M2] graft applied on prefab template via GNM.OnStartClient.
+[02:39:25.694] [NetworkedCustomChar] [M3b] nulled 0 inherited Kitsu projectile/cast prefab field(s) on template via GNM.OnStartClient.
+[02:39:25.711] [NetworkedCustomChar] [M1] sanitized 1 identity(ies); root assetId=0xB0B00F0F via GNM.OnStartClient.
+[02:39:25.712] [NetworkedCustomChar] [M1] built networked prefab 'Char_Medusa' via GNM.OnStartClient (baseCharId=0).
+[02:39:25.715] [NetworkedCustomChar] [M1] characterPrefabsByCharId[15] = our prefab via GNM.OnStartClient (len 15->16).
+[02:39:25.721] [NetworkedCustomChar] [M1] charBotPrefabsByCharId[15] populated via GNM.OnStartClient (len 15->16).
+[02:39:25.726] [NetworkedCustomChar] [M1] added to InstantiatedPrefabs via GNM.OnStartClient (len 414->415).
+[02:39:25.738] [BAP_Custom_Server] [KcpRuntime] client-autojoin-after-connect: manager=Il2CppBAPBAP.Network.GameNetworkManager ws=Il2CppMirror.SimpleWeb.SimpleWebTransport port=7777 timeout=null client=False server=False kcp=Il2Cppkcp2k.KcpTransport port=7778 timeout=60000 client=True server=True tcp=Il2CppMirror.TelepathyTransport port=7779 timeout=null client=False server=False multiplex=Il2CppMirror.MultiplexTransport port=7779 timeout=null client=False server=False patched=3.
+[02:39:25.738] [BAP_Custom_Server] Requested matchmaking client connect. auth=7abc24609a1dba4f85926c33356f33a7 host=127.0.0.1 ws=7777 kcp=7778 tcp=7779
+[02:39:25.799] [BAP_Custom_Server] Proxy WS connected: local /ws -> ws://127.0.0.1:5174/ws?accountId=postmatch-client&username=PostMatchClient&discriminator=1976
+[02:39:25.966] [BAP_Custom_Server] Proxy WS client->server #1 end=True: {"event":"JOIN_LOBBY","payload":{"lobbyId":"","charId":0,"version":"0.1.1758-38212","regionId":"vewr","gameModeId":-1,"isAutoFill":true,"isInvite":false,"wasKicked":false}}
+[02:39:26.481] [NetworkedCustomChar] [MAP] PROBE SpawnLevel: name='Arena_Map2' bootstrapMapId=0 svOnly=False clOnly=True svNull=False clNull=False.
+[02:39:27.238] [BAP_Custom_Server] [AugmentFix] Auto-selected first augment via PlayerAugments.CmdSelectAugment(0), source=PlayerManager.playerAugments, currentSelection=False.
+[02:39:27.423] [BAP_Custom_Server] [Autoplay] GameManager detected - match is running!
+[02:39:27.448] [BAP_Custom_Server] [Autoplay] Players detected - match is running!
+[02:39:27.478] [BAP_Custom_Server] [Autoplay] Sent CmdTrySelectCharacter(0) + CmdTryLockCharacter via PreMatch.
+[02:39:28.521] [BAP_Custom_Server] Hid 3 match loading/splash overlay object(s). activeScene='MainScene' runtimeMatch=True
+[02:39:29.254] [BAP_Custom_Server] [AugmentFix] Auto-selected first augment via PlayerAugments.CmdSelectAugment(0), source=PlayerManager.playerAugments, currentSelection=False.
+[02:39:31.211] [BAP_Custom_Server] [AugmentFix] Auto-selected first augment via PlayerAugments.CmdSelectAugment(0), source=PlayerManager.playerAugments, currentSelection=False.
+[02:39:31.971] [BAP_Custom_Server] Proxy WS server->client #2 end=True: {"event":"JOIN_LOBBY_SUCCESS","payload":{"lobby":{"lobbyId":"7TC867","leaderAccountId":"postmatch-client","lobbyOpen":true,"players":[{"accountId":"postmatch-client","username":"PostMatchClient","discriminator":1976,"level":1,"charId":0,"bannerId":0,"skins":[300018,300000,300007,300020,300017,300026,300021,300013,300025,300023,300015,300003,300005,300016,300019,300018],"playerStatus":0,"isLeader":true,"isReady":false,"teamId":1,"spawnPosition":0}],"settings":{"regionId":"vewr","gameModeId":3,"isAutoFill":true},"gold":1000,"fractals":0,"charTokens":10,"accountXp":100000},"wasFull":false,"wasInvalid":false,"wasKicked":false}}
+[02:39:31.995] [BAP_Custom_Server] [CharacterPageDataGuard] hydrated UILobbyCharacterSelectPage.method.data: chars=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15] listingsPurchased=16 done=True.
+[02:39:31.996] [BAP_Custom_Server] [CharacterPageDataGuard] hydrated UILobbyCharacterSelectPage.method.data: chars=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15] listingsPurchased=16 done=True.
+[02:39:31.997] [BAP_Custom_Server] [CharacterSelection] selected char tracked via UILobbyCharacterSelectPage.OnCharacterSelect: 1->0.
+[02:39:32.009] [BAP_Custom_Server] [LockerGuard] Swallowed Il2CppException in UILobbyLockerTabPage.UpdateData: System.NullReferenceException: Object reference not set to an instance of an object.
+--- BEGIN IL2CPP STACK TRACE ---
+System.NullReferenceException: Object refe (likely an owned AssetId missing from the client content DB)
+[02:39:33.254] [BAP_Custom_Server] [AugmentFix] Auto-selected first augment via PlayerAugments.CmdSelectAugment(0), source=PlayerManager.playerAugments, currentSelection=False.
+[02:39:35.279] [BAP_Custom_Server] [AugmentFix] Auto-selected first augment via PlayerAugments.CmdSelectAugment(0), source=PlayerManager.playerAugments, currentSelection=False.
+[02:39:35.401] [BAP_Custom_Server] [LobbyReturnFallback] Armed fallback after post-match signal (GameNetworkManager client disconnect).
+[02:39:35.406] [BAP_Custom_Server] [PreMatchCleanup-DIAG] Armed stale PreMatch cleanup for 18s (GameNetworkManager client disconnect).
+[02:39:35.410] [BAP_Custom_Server] [LobbyReturnFallback] Armed fallback after post-match signal (GameManager/UI ClOnMatchEnded).
+[02:39:35.410] [BAP_Custom_Server] [PreMatchCleanup-DIAG] Armed stale PreMatch cleanup for 30s (GameManager/UI ClOnMatchEnded).
+[02:39:37.271] [BAP_Custom_Server] [AugmentFix] Auto-selected first augment via PlayerAugments.CmdSelectAugment(0), source=PlayerManager.playerAugments, currentSelection=False.
+[02:39:37.881] [BAP_Custom_Server] [LobbyReturnFallback] Armed fallback after post-match signal (GameNetworkManager client disconnect).
+[02:39:37.882] [BAP_Custom_Server] [PreMatchCleanup-DIAG] Armed stale PreMatch cleanup for 18s (GameNetworkManager client disconnect).
+[02:39:37.885] [BAP_Custom_Server] [LobbyReturnFallback] Armed fallback after post-match signal (Mirror match connection dropped).
+[02:39:37.885] [BAP_Custom_Server] [PreMatchCleanup-DIAG] Armed stale PreMatch cleanup for 18s (Mirror match connection dropped).
+[02:39:38.448] [BAP_Custom_Server] [PreMatchCleanup] Dismissed post-match UI on 'MainScene': uiPreMatchClosed=0 charViews=0 parents=0 lobbyPageCloseCalls=12.

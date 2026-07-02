@@ -1,0 +1,62 @@
+﻿[
+    {
+        "Target":  "BapCustomServer\\BapCustomServer.dll",
+        "Bytes":  537600,
+        "Sha256":  "AB3480F4E38CADA9615E0493E070DB8B81872A164455570DF31153F7B0C77A38"
+    },
+    {
+        "Target":  "BapCustomServer\\BapCustomServer.pdb",
+        "Bytes":  121904,
+        "Sha256":  "6CFC4872329DA91EAC784671B9CBC9BF5CD6E4805BD2B5DB129731A3382936C8"
+    },
+    {
+        "Target":  "BapCustomServer\\BapCustomServer.deps.json",
+        "Bytes":  439,
+        "Sha256":  "00AC8862422A62E0E9F29407D8F9313C638B4D8E9616F485CB5C26BD1CF1202A"
+    },
+    {
+        "Target":  "BapCustomServer\\BapCustomServer.runtimeconfig.json",
+        "Bytes":  491,
+        "Sha256":  "41442586A8262BC96A1C80F82F4D9384C03BFD465D221CBF01FB3563170F9E65"
+    },
+    {
+        "Target":  "BapCustomServer\\amp-webpanel-start.sh",
+        "Bytes":  6725,
+        "Sha256":  "6B3EB51ADC6FEF1B6A31A9E5C97D939EF52657556FF7EBEE10CC9677D60D8D38"
+    },
+    {
+        "Target":  "BapCustomServer\\start-linux-wine.sh",
+        "Bytes":  2930,
+        "Sha256":  "82B90D52E49D8D29668ECF558E5FDA4E5F4A0C04F17561B69E1A9F7E842C8FCF"
+    },
+    {
+        "Target":  "BapCustomServer\\game\\Mods\\BapCustomServerMelon.dll",
+        "Bytes":  234496,
+        "Sha256":  "4B6975AB49633E4EBB1507B8BEE6483D4194FC6B767A31533868103FD05AB885"
+    },
+    {
+        "Target":  "BapCustomServer\\game\\Mods\\BAPBAP.Medusa.dll",
+        "Bytes":  204288,
+        "Sha256":  "A825AE7DF9033ABC8E025C0E63812606B040235EC611ACA5E89CF2F9924B0054"
+    },
+    {
+        "Target":  "BapCustomServer\\game\\Mods\\BAPBAP.ModAPI.dll",
+        "Bytes":  1653248,
+        "Sha256":  "0E14F39A9C47B6EBA106A0F23E76A0989B3270D7BCDD3E4BB0DD51E63BDB3CB5"
+    },
+    {
+        "Target":  "BapCustomServer\\game\\UserLibs\\BAPBAP.ModAPI.dll",
+        "Bytes":  1653248,
+        "Sha256":  "0E14F39A9C47B6EBA106A0F23E76A0989B3270D7BCDD3E4BB0DD51E63BDB3CB5"
+    },
+    {
+        "Target":  "BapCustomServer\\game\\UserData\\Medusa\\medusa.bundle",
+        "Bytes":  1567424,
+        "Sha256":  "C4872D6E124E76F9F4B4EC75482FFC2795D051D3CA65EB7C25E9FE68023B1D70"
+    },
+    {
+        "Target":  "BapCustomServer\\deployment-info.json",
+        "Bytes":  2090,
+        "Sha256":  "1DF7CC551E041430C194B827F141FD88D8E5E7D31196AC964E7907E79E9CBFAE"
+    }
+]

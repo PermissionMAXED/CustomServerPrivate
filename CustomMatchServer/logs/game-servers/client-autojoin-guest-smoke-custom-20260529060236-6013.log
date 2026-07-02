@@ -1,0 +1,819 @@
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+Initialize engine version: 2022.3.38f1 (c5d5a7410213)
+[Subsystems] Discovering subsystems at path C:/Users/Administrator/Downloads/CustomServer/Spiel/Battleroyalebuild/bapbap_Data/UnitySubsystems
+GfxDevice: creating device client; threaded=1; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3060 Ti (ID=0x2486)
+    Vendor:   NVIDIA
+    VRAM:     3072 MB
+    Driver:   32.0.15.9621
+<b>[App UI]</b> Unable to find an AppUISettings instance, creating a default one...
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Unity.AppUI.Core.AppUI:InitializeInPlayer()
+
+<RI> Initializing input.
+New input system (experimental) initialized
+Using Windows.Gaming.Input
+<RI> Input initialized.
+<RI> Initialized touch support.
+-------------------------------------------------------------------------------------------------------
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+
+~   This Game has been MODIFIED using MelonLoader. DO NOT report any issues to the Game Developers!   ~
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+
+-------------------------------------------------------------------------------------------------------
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+
+The referenced script on this Behaviour (Game Object 'Blitz') is missing!
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+UnloadTime: 3.229800 ms
+ThreadLog initialized.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+Mirror.ThreadLog:Initialize()
+
+[PREAWAKE] ENV_PRODUCTION
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+[PREAWAKE] BACKEND_STRIP
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+[PREAWAKE] hostname= VINCENT
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+[PREAWAKE] environment= Production
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+[PREAWAKE] version = v0.1.1758-38212
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+[PREAWAKE] networkConfigEnv = Staging
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+[PREAWAKE] networkConfigsServer = ServerConfig { 
+MatchmakingHost: , 
+ListenPort: 0, 
+HeaderSecretKey: , 
+HeaderSecret: , 
+DebugPassword: , 
+DebugSquadPassword: , 
+DevGameAuthId: , 
+}
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+[PREAWAKE] networkConfigsClient = ClientConfig { 
+ApiHost: http://127.0.0.1:5055, 
+CookieDomain: .bapbap.gg, 
+CookieSessionKey: sid, 
+}
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+[PREAWAKE] logConfigEnv = Staging
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+[PREAWAKE] Args start
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\bapbap.exe
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+-logFile
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+C:\Users\Administrator\Downloads\CustomServer\CustomMatchServer\logs\game-servers\client-autojoin-guest-smoke-custom-20260529060236-6013.log
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+--melonloader.debug
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+--melonloader.captureplayerlogs
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+--melonloader.agfoffline
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+--bapcustom-use-proxy=false
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+--bapcustom-show-ui=false
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+--bapcustom-server-port=5221
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+--bapcustom-account-id=guest-smoke
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+--bapcustom-username=guest-smoke
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+--bapcustom-join-auth=14859601a9009dcb640bcf06f479c865
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+--bapcustom-join-host=127.0.0.1
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+--bapcustom-join-ws=7777
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+--bapcustom-join-kcp=7778
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+--bapcustom-join-tcp=7779
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+[PREAWAKE] Args end | http=-1 ws=-1 kcp=-1 tcp=-1
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+[LocalSavedData] InitializeSystemResolutions - nativeSystemResolution: 3440 x 1440 @ 99.998Hz
+[LocalSavedData] InitializeSystemResolutions - res: UnityEngine.Resolution[], length: 68
+Found supported resolution: (3440, 1440)
+STEAM: Steam unavailable
+[Spatial Hash] Partial Rebuild Interval = 0,25
+1800
+[UIDropdownController] No values added to the dropdown
+[UIDropdownController] No values added to the dropdown
+UILobby platform variant not found: WindowsPlayer using default
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+BAPBAP.UI.UILobbyConfiguration:get_PrefabVariant()
+BAPBAP.UI.UILobby:Build()
+BAPBAP.UI.<Awake>d__111:MoveNext()
+System.Runtime.CompilerServices.AsyncVoidMethodBuilder:Start(TStateMachine&)
+BAPBAP.UI.UIManager:Awake()
+
+Color primaries 0 is unknown or unsupported by WindowsMediaFoundation. Falling back to default may result in color shift. C:/Users/Administrator/Downloads/CustomServer/Spiel/Battleroyalebuild/bapbap_Data/sharedassets0.resource
+[UICharactersConfiguration] No characters available in lobby.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UICharactersConfiguration:TryGetLobbyCharConfigByIndex(Int32, CharacterConfiguration&)
+BAPBAP.UI.UILobbyCharacterSelectPage:OpenCharacterSummaryPage()
+BAPBAP.UI.UILobbyCharacterSelectPage:Build(Configuration, Translator)
+BAPBAP.UI.UILobbyTabGroup:Build(Configuration, Translator)
+BAPBAP.UI.UILobby:Build()
+BAPBAP.UI.<Awake>d__111:MoveNext()
+System.Runtime.CompilerServices.AsyncVoidMethodBuilder:Start(TStateMachine&)
+BAPBAP.UI.UIManager:Awake()
+
+Opening Lobby UI :) at the time of 29.05.2026 08:03:13
+TelepathyTransport initialized!
+[LocalSavedData] Set Quick cast = False
+Curl error 7: Failed to connect to 127.0.0.1 port 5055 after 2047 ms: Couldn't connect to server
+Connect MM: AuthId=14859601a9009dcb640bcf06f479c865 Hostname=127.0.0.1 wsPort=7777 kcpPort=7778 tcpPort=7779 Secure=False
+Running Client/Host Build - Vsync:0 - FPS:-1
+HttpClient HTTP Error: Cannot connect to destination host | 
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.Network.<SendGetRoutine>d__11`1:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+
+[TESTLOG] Client connected before
+[TESTLOG] Client connected
+[TESTLOG] Client registered handler
+[TESTLOG] Client sent init
+Send event Game Joined with 0 games played (exclusive)
+Warming shader: Toon_Frozen_Legacy
+Warming shader: Toon_Frozen_Amplify
+Warming shader: InstancedIndirectGrass
+Warming shader: DrownedGrass
+Warming shader: InstancedIndirectTrash
+OnClientSvInit buildVers=0.1.1758-38212 teamId=2 pId=3 | 3
+[Server Version: v0.1.1758-38212]
+[GameMode] Loading GameManager (BAPBAP.Game.GameModeBattleRoyale)
+GarbageCollector disposing of ComputeBuffer. Please use ComputeBuffer.Release() or .Dispose() to manually release the buffer.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+UnityEngine.ComputeBuffer:Finalize()
+
+GarbageCollector disposing of ComputeBuffer. Please use ComputeBuffer.Release() or .Dispose() to manually release the buffer.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+UnityEngine.ComputeBuffer:Finalize()
+
+Populating Character Buttons
+Number of characters is 15
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlockedInRotation()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsInRotation(Int32)
+BAPBAP.UI.View_PreMatch_CharSelect:PopulateCharacterButtons()
+BAPBAP.UI.UIPreMatch:PopulatePreMatchUI(QueueMatchedData)
+BAPBAP.Game.PreMatchManager:InvokeUserCode_TargetSetupPreMatch__NetworkConnectionToClient__QueueMatchedData(NetworkBehaviour, NetworkReader, NetworkConnectionToClient)
+Mirror.RemoteCalls.RemoteProcedureCalls:Invoke(UInt16, RemoteCallType, NetworkReader, NetworkBehaviour, NetworkConnectionToClient)
+Mirror.NetworkIdentity:HandleRemoteCall(Byte, UInt16, RemoteCallType, NetworkReader, NetworkConnectionToClient)
+Mirror.NetworkClient:OnRPCMessage(RpcMessage)
+Mirror.<>c__DisplayClass62_0`1:<RegisterHandler>g__HandlerWrapped|0(NetworkConnection, T)
+Mirror.<>c__DisplayClass9_0`2:<WrapHandler>g__Wrapped|0(C, T, Int32)
+Mirror.<>c__DisplayClass8_0`2:<WrapHandler>b__0(NetworkConnection, NetworkReader, Int32)
+Mirror.NetworkClient:UnpackAndInvoke(NetworkReader, Int32)
+Mirror.NetworkClient:OnTransportData(ArraySegment`1, Int32)
+kcp2k.KcpTransport:<Awake>b__29_2(ArraySegment`1, KcpChannel)
+kcp2k.KcpClient:OnData(ArraySegment`1, KcpChannel)
+kcp2k.KcpPeer:TickIncoming_Authenticated(UInt32)
+kcp2k.KcpPeer:TickIncoming()
+kcp2k.KcpClient:TickIncoming()
+kcp2k.KcpTransport:ClientEarlyUpdate()
+Mirror.NetworkClient:NetworkEarlyUpdate()
+Mirror.NetworkLoop:NetworkEarlyUpdate()
+UnityEngine.LowMemoryCallback:Invoke()
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlockedInRotation()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsInRotation(Int32)
+BAPBAP.UI.View_PreMatch_CharSelect:PopulateCharacterButtons()
+BAPBAP.UI.UIPreMatch:PopulatePreMatchUI(QueueMatchedData)
+BAPBAP.Game.PreMatchManager:InvokeUserCode_TargetSetupPreMatch__NetworkConnectionToClient__QueueMatchedData(NetworkBehaviour, NetworkReader, NetworkConnectionToClient)
+Mirror.RemoteCalls.RemoteProcedureCalls:Invoke(UInt16, RemoteCallType, NetworkReader, NetworkBehaviour, NetworkConnectionToClient)
+Mirror.NetworkIdentity:HandleRemoteCall(Byte, UInt16, RemoteCallType, NetworkReader, NetworkConnectionToClient)
+Mirror.NetworkClient:OnRPCMessage(RpcMessage)
+Mirror.<>c__DisplayClass62_0`1:<RegisterHandler>g__HandlerWrapped|0(NetworkConnection, T)
+Mirror.<>c__DisplayClass9_0`2:<WrapHandler>g__Wrapped|0(C, T, Int32)
+Mirror.<>c__DisplayClass8_0`2:<WrapHandler>b__0(NetworkConnection, NetworkReader, Int32)
+Mirror.NetworkClient:UnpackAndInvoke(NetworkReader, Int32)
+Mirror.NetworkClient:OnTransportData(ArraySegment`1, Int32)
+kcp2k.KcpTransport:<Awake>b__29_2(ArraySegment`1, KcpChannel)
+kcp2k.KcpClient:OnData(ArraySegment`1, KcpChannel)
+kcp2k.KcpPeer:TickIncoming_Authenticated(UInt32)
+kcp2k.KcpPeer:TickIncoming()
+kcp2k.KcpClient:TickIncoming()
+kcp2k.KcpTransport:ClientEarlyUpdate()
+Mirror.NetworkClient:NetworkEarlyUpdate()
+Mirror.NetworkLoop:NetworkEarlyUpdate()
+UnityEngine.LowMemoryCallback:Invoke()
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlockedInRotation()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsInRotation(Int32)
+BAPBAP.UI.View_PreMatch_CharSelect:PopulateCharacterButtons()
+BAPBAP.UI.UIPreMatch:PopulatePreMatchUI(QueueMatchedData)
+BAPBAP.Game.PreMatchManager:InvokeUserCode_TargetSetupPreMatch__NetworkConnectionToClient__QueueMatchedData(NetworkBehaviour, NetworkReader, NetworkConnectionToClient)
+Mirror.RemoteCalls.RemoteProcedureCalls:Invoke(UInt16, RemoteCallType, NetworkReader, NetworkBehaviour, NetworkConnectionToClient)
+Mirror.NetworkIdentity:HandleRemoteCall(Byte, UInt16, RemoteCallType, NetworkReader, NetworkConnectionToClient)
+Mirror.NetworkClient:OnRPCMessage(RpcMessage)
+Mirror.<>c__DisplayClass62_0`1:<RegisterHandler>g__HandlerWrapped|0(NetworkConnection, T)
+Mirror.<>c__DisplayClass9_0`2:<WrapHandler>g__Wrapped|0(C, T, Int32)
+Mirror.<>c__DisplayClass8_0`2:<WrapHandler>b__0(NetworkConnection, NetworkReader, Int32)
+Mirror.NetworkClient:UnpackAndInvoke(NetworkReader, Int32)
+Mirror.NetworkClient:OnTransportData(ArraySegment`1, Int32)
+kcp2k.KcpTransport:<Awake>b__29_2(ArraySegment`1, KcpChannel)
+kcp2k.KcpClient:OnData(ArraySegment`1, KcpChannel)
+kcp2k.KcpPeer:TickIncoming_Authenticated(UInt32)
+kcp2k.KcpPeer:TickIncoming()
+kcp2k.KcpClient:TickIncoming()
+kcp2k.KcpTransport:ClientEarlyUpdate()
+Mirror.NetworkClient:NetworkEarlyUpdate()
+Mirror.NetworkLoop:NetworkEarlyUpdate()
+UnityEngine.LowMemoryCallback:Invoke()
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlockedInRotation()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsInRotation(Int32)
+BAPBAP.UI.View_PreMatch_CharSelect:PopulateCharacterButtons()
+BAPBAP.UI.UIPreMatch:PopulatePreMatchUI(QueueMatchedData)
+BAPBAP.Game.PreMatchManager:InvokeUserCode_TargetSetupPreMatch__NetworkConnectionToClient__QueueMatchedData(NetworkBehaviour, NetworkReader, NetworkConnectionToClient)
+Mirror.RemoteCalls.RemoteProcedureCalls:Invoke(UInt16, RemoteCallType, NetworkReader, NetworkBehaviour, NetworkConnectionToClient)
+Mirror.NetworkIdentity:HandleRemoteCall(Byte, UInt16, RemoteCallType, NetworkReader, NetworkConnectionToClient)
+Mirror.NetworkClient:OnRPCMessage(RpcMessage)
+Mirror.<>c__DisplayClass62_0`1:<RegisterHandler>g__HandlerWrapped|0(NetworkConnection, T)
+Mirror.<>c__DisplayClass9_0`2:<WrapHandler>g__Wrapped|0(C, T, Int32)
+Mirror.<>c__DisplayClass8_0`2:<WrapHandler>b__0(NetworkConnection, NetworkReader, Int32)
+Mirror.NetworkClient:UnpackAndInvoke(NetworkReader, Int32)
+Mirror.NetworkClient:OnTransportData(ArraySegment`1, Int32)
+kcp2k.KcpTransport:<Awake>b__29_2(ArraySegment`1, KcpChannel)
+kcp2k.KcpClient:OnData(ArraySegment`1, KcpChannel)
+kcp2k.KcpPeer:TickIncoming_Authenticated(UInt32)
+kcp2k.KcpPeer:TickIncoming()
+kcp2k.KcpClient:TickIncoming()
+kcp2k.KcpTransport:ClientEarlyUpdate()
+Mirror.NetworkClient:NetworkEarlyUpdate()
+Mirror.NetworkLoop:NetworkEarlyUpdate()
+UnityEngine.LowMemoryCallback:Invoke()
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlockedInRotation()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsInRotation(Int32)
+BAPBAP.UI.View_PreMatch_CharSelect:PopulateCharacterButtons()
+BAPBAP.UI.UIPreMatch:PopulatePreMatchUI(QueueMatchedData)
+BAPBAP.Game.PreMatchManager:InvokeUserCode_TargetSetupPreMatch__NetworkConnectionToClient__QueueMatchedData(NetworkBehaviour, NetworkReader, NetworkConnectionToClient)
+Mirror.RemoteCalls.RemoteProcedureCalls:Invoke(UInt16, RemoteCallType, NetworkReader, NetworkBehaviour, NetworkConnectionToClient)
+Mirror.NetworkIdentity:HandleRemoteCall(Byte, UInt16, RemoteCallType, NetworkReader, NetworkConnectionToClient)
+Mirror.NetworkClient:OnRPCMessage(RpcMessage)
+Mirror.<>c__DisplayClass62_0`1:<RegisterHandler>g__HandlerWrapped|0(NetworkConnection, T)
+Mirror.<>c__DisplayClass9_0`2:<WrapHandler>g__Wrapped|0(C, T, Int32)
+Mirror.<>c__DisplayClass8_0`2:<WrapHandler>b__0(NetworkConnection, NetworkReader, Int32)
+Mirror.NetworkClient:UnpackAndInvoke(NetworkReader, Int32)
+Mirror.NetworkClient:OnTransportData(ArraySegment`1, Int32)
+kcp2k.KcpTransport:<Awake>b__29_2(ArraySegment`1, KcpChannel)
+kcp2k.KcpClient:OnData(ArraySegment`1, KcpChannel)
+kcp2k.KcpPeer:TickIncoming_Authenticated(UInt32)
+kcp2k.KcpPeer:TickIncoming()
+kcp2k.KcpClient:TickIncoming()
+kcp2k.KcpTransport:ClientEarlyUpdate()
+Mirror.NetworkClient:NetworkEarlyUpdate()
+Mirror.NetworkLoop:NetworkEarlyUpdate()
+UnityEngine.LowMemoryCallback:Invoke()
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlockedInRotation()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsInRotation(Int32)
+BAPBAP.UI.View_PreMatch_CharSelect:PopulateCharacterButtons()
+BAPBAP.UI.UIPreMatch:PopulatePreMatchUI(QueueMatchedData)
+BAPBAP.Game.PreMatchManager:InvokeUserCode_TargetSetupPreMatch__NetworkConnectionToClient__QueueMatchedData(NetworkBehaviour, NetworkReader, NetworkConnectionToClient)
+Mirror.RemoteCalls.RemoteProcedureCalls:Invoke(UInt16, RemoteCallType, NetworkReader, NetworkBehaviour, NetworkConnectionToClient)
+Mirror.NetworkIdentity:HandleRemoteCall(Byte, UInt16, RemoteCallType, NetworkReader, NetworkConnectionToClient)
+Mirror.NetworkClient:OnRPCMessage(RpcMessage)
+Mirror.<>c__DisplayClass62_0`1:<RegisterHandler>g__HandlerWrapped|0(NetworkConnection, T)
+Mirror.<>c__DisplayClass9_0`2:<WrapHandler>g__Wrapped|0(C, T, Int32)
+Mirror.<>c__DisplayClass8_0`2:<WrapHandler>b__0(NetworkConnection, NetworkReader, Int32)
+Mirror.NetworkClient:UnpackAndInvoke(NetworkReader, Int32)
+Mirror.NetworkClient:OnTransportData(ArraySegment`1, Int32)
+kcp2k.KcpTransport:<Awake>b__29_2(ArraySegment`1, KcpChannel)
+kcp2k.KcpClient:OnData(ArraySegment`1, KcpChannel)
+kcp2k.KcpPeer:TickIncoming_Authenticated(UInt32)
+kcp2k.KcpPeer:TickIncoming()
+kcp2k.KcpClient:TickIncoming()
+kcp2k.KcpTransport:ClientEarlyUpdate()
+Mirror.NetworkClient:NetworkEarlyUpdate()
+Mirror.NetworkLoop:NetworkEarlyUpdate()
+UnityEngine.LowMemoryCallback:Invoke()
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlockedInRotation()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsInRotation(Int32)
+BAPBAP.UI.View_PreMatch_CharSelect:PopulateCharacterButtons()
+BAPBAP.UI.UIPreMatch:PopulatePreMatchUI(QueueMatchedData)
+BAPBAP.Game.PreMatchManager:InvokeUserCode_TargetSetupPreMatch__NetworkConnectionToClient__QueueMatchedData(NetworkBehaviour, NetworkReader, NetworkConnectionToClient)
+Mirror.RemoteCalls.RemoteProcedureCalls:Invoke(UInt16, RemoteCallType, NetworkReader, NetworkBehaviour, NetworkConnectionToClient)
+Mirror.NetworkIdentity:HandleRemoteCall(Byte, UInt16, RemoteCallType, NetworkReader, NetworkConnectionToClient)
+Mirror.NetworkClient:OnRPCMessage(RpcMessage)
+Mirror.<>c__DisplayClass62_0`1:<RegisterHandler>g__HandlerWrapped|0(NetworkConnection, T)
+Mirror.<>c__DisplayClass9_0`2:<WrapHandler>g__Wrapped|0(C, T, Int32)
+Mirror.<>c__DisplayClass8_0`2:<WrapHandler>b__0(NetworkConnection, NetworkReader, Int32)
+Mirror.NetworkClient:UnpackAndInvoke(NetworkReader, Int32)
+Mirror.NetworkClient:OnTransportData(ArraySegment`1, Int32)
+kcp2k.KcpTransport:<Awake>b__29_2(ArraySegment`1, KcpChannel)
+kcp2k.KcpClient:OnData(ArraySegment`1, KcpChannel)
+kcp2k.KcpPeer:TickIncoming_Authenticated(UInt32)
+kcp2k.KcpPeer:TickIncoming()
+kcp2k.KcpClient:TickIncoming()
+kcp2k.KcpTransport:ClientEarlyUpdate()
+Mirror.NetworkClient:NetworkEarlyUpdate()
+Mirror.NetworkLoop:NetworkEarlyUpdate()
+UnityEngine.LowMemoryCallback:Invoke()
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlockedInRotation()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsInRotation(Int32)
+BAPBAP.UI.View_PreMatch_CharSelect:PopulateCharacterButtons()
+BAPBAP.UI.UIPreMatch:PopulatePreMatchUI(QueueMatchedData)
+BAPBAP.Game.PreMatchManager:InvokeUserCode_TargetSetupPreMatch__NetworkConnectionToClient__QueueMatchedData(NetworkBehaviour, NetworkReader, NetworkConnectionToClient)
+Mirror.RemoteCalls.RemoteProcedureCalls:Invoke(UInt16, RemoteCallType, NetworkReader, NetworkBehaviour, NetworkConnectionToClient)
+Mirror.NetworkIdentity:HandleRemoteCall(Byte, UInt16, RemoteCallType, NetworkReader, NetworkConnectionToClient)
+Mirror.NetworkClient:OnRPCMessage(RpcMessage)
+Mirror.<>c__DisplayClass62_0`1:<RegisterHandler>g__HandlerWrapped|0(NetworkConnection, T)
+Mirror.<>c__DisplayClass9_0`2:<WrapHandler>g__Wrapped|0(C, T, Int32)
+Mirror.<>c__DisplayClass8_0`2:<WrapHandler>b__0(NetworkConnection, NetworkReader, Int32)
+Mirror.NetworkClient:UnpackAndInvoke(NetworkReader, Int32)
+Mirror.NetworkClient:OnTransportData(ArraySegment`1, Int32)
+kcp2k.KcpTransport:<Awake>b__29_2(ArraySegment`1, KcpChannel)
+kcp2k.KcpClient:OnData(ArraySegment`1, KcpChannel)
+kcp2k.KcpPeer:TickIncoming_Authenticated(UInt32)
+kcp2k.KcpPeer:TickIncoming()
+kcp2k.KcpClient:TickIncoming()
+kcp2k.KcpTransport:ClientEarlyUpdate()
+Mirror.NetworkClient:NetworkEarlyUpdate()
+Mirror.NetworkLoop:NetworkEarlyUpdate()
+UnityEngine.LowMemoryCallback:Invoke()
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlockedInRotation()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsInRotation(Int32)
+BAPBAP.UI.View_PreMatch_CharSelect:PopulateCharacterButtons()
+BAPBAP.UI.UIPreMatch:PopulatePreMatchUI(QueueMatchedData)
+BAPBAP.Game.PreMatchManager:InvokeUserCode_TargetSetupPreMatch__NetworkConnectionToClient__QueueMatchedData(NetworkBehaviour, NetworkReader, NetworkConnectionToClient)
+Mirror.RemoteCalls.RemoteProcedureCalls:Invoke(UInt16, RemoteCallType, NetworkReader, NetworkBehaviour, NetworkConnectionToClient)
+Mirror.NetworkIdentity:HandleRemoteCall(Byte, UInt16, RemoteCallType, NetworkReader, NetworkConnectionToClient)
+Mirror.NetworkClient:OnRPCMessage(RpcMessage)
+Mirror.<>c__DisplayClass62_0`1:<RegisterHandler>g__HandlerWrapped|0(NetworkConnection, T)
+Mirror.<>c__DisplayClass9_0`2:<WrapHandler>g__Wrapped|0(C, T, Int32)
+Mirror.<>c__DisplayClass8_0`2:<WrapHandler>b__0(NetworkConnection, NetworkReader, Int32)
+Mirror.NetworkClient:UnpackAndInvoke(NetworkReader, Int32)
+Mirror.NetworkClient:OnTransportData(ArraySegment`1, Int32)
+kcp2k.KcpTransport:<Awake>b__29_2(ArraySegment`1, KcpChannel)
+kcp2k.KcpClient:OnData(ArraySegment`1, KcpChannel)
+kcp2k.KcpPeer:TickIncoming_Authenticated(UInt32)
+kcp2k.KcpPeer:TickIncoming()
+kcp2k.KcpClient:TickIncoming()
+kcp2k.KcpTransport:ClientEarlyUpdate()
+Mirror.NetworkClient:NetworkEarlyUpdate()
+Mirror.NetworkLoop:NetworkEarlyUpdate()
+UnityEngine.LowMemoryCallback:Invoke()
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlockedInRotation()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsInRotation(Int32)
+BAPBAP.UI.View_PreMatch_CharSelect:PopulateCharacterButtons()
+BAPBAP.UI.UIPreMatch:PopulatePreMatchUI(QueueMatchedData)
+BAPBAP.Game.PreMatchManager:InvokeUserCode_TargetSetupPreMatch__NetworkConnectionToClient__QueueMatchedData(NetworkBehaviour, NetworkReader, NetworkConnectionToClient)
+Mirror.RemoteCalls.RemoteProcedureCalls:Invoke(UInt16, RemoteCallType, NetworkReader, NetworkBehaviour, NetworkConnectionToClient)
+Mirror.NetworkIdentity:HandleRemoteCall(Byte, UInt16, RemoteCallType, NetworkReader, NetworkConnectionToClient)
+Mirror.NetworkClient:OnRPCMessage(RpcMessage)
+Mirror.<>c__DisplayClass62_0`1:<RegisterHandler>g__HandlerWrapped|0(NetworkConnection, T)
+Mirror.<>c__DisplayClass9_0`2:<WrapHandler>g__Wrapped|0(C, T, Int32)
+Mirror.<>c__DisplayClass8_0`2:<WrapHandler>b__0(NetworkConnection, NetworkReader, Int32)
+Mirror.NetworkClient:UnpackAndInvoke(NetworkReader, Int32)
+Mirror.NetworkClient:OnTransportData(ArraySegment`1, Int32)
+kcp2k.KcpTransport:<Awake>b__29_2(ArraySegment`1, KcpChannel)
+kcp2k.KcpClient:OnData(ArraySegment`1, KcpChannel)
+kcp2k.KcpPeer:TickIncoming_Authenticated(UInt32)
+kcp2k.KcpPeer:TickIncoming()
+kcp2k.KcpClient:TickIncoming()
+kcp2k.KcpTransport:ClientEarlyUpdate()
+Mirror.NetworkClient:NetworkEarlyUpdate()
+Mirror.NetworkLoop:NetworkEarlyUpdate()
+UnityEngine.LowMemoryCallback:Invoke()
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlockedInRotation()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsInRotation(Int32)
+BAPBAP.UI.View_PreMatch_CharSelect:PopulateCharacterButtons()
+BAPBAP.UI.UIPreMatch:PopulatePreMatchUI(QueueMatchedData)
+BAPBAP.Game.PreMatchManager:InvokeUserCode_TargetSetupPreMatch__NetworkConnectionToClient__QueueMatchedData(NetworkBehaviour, NetworkReader, NetworkConnectionToClient)
+Mirror.RemoteCalls.RemoteProcedureCalls:Invoke(UInt16, RemoteCallType, NetworkReader, NetworkBehaviour, NetworkConnectionToClient)
+Mirror.NetworkIdentity:HandleRemoteCall(Byte, UInt16, RemoteCallType, NetworkReader, NetworkConnectionToClient)
+Mirror.NetworkClient:OnRPCMessage(RpcMessage)
+Mirror.<>c__DisplayClass62_0`1:<RegisterHandler>g__HandlerWrapped|0(NetworkConnection, T)
+Mirror.<>c__DisplayClass9_0`2:<WrapHandler>g__Wrapped|0(C, T, Int32)
+Mirror.<>c__DisplayClass8_0`2:<WrapHandler>b__0(NetworkConnection, NetworkReader, Int32)
+Mirror.NetworkClient:UnpackAndInvoke(NetworkReader, Int32)
+Mirror.NetworkClient:OnTransportData(ArraySegment`1, Int32)
+kcp2k.KcpTransport:<Awake>b__29_2(ArraySegment`1, KcpChannel)
+kcp2k.KcpClient:OnData(ArraySegment`1, KcpChannel)
+kcp2k.KcpPeer:TickIncoming_Authenticated(UInt32)
+kcp2k.KcpPeer:TickIncoming()
+kcp2k.KcpClient:TickIncoming()
+kcp2k.KcpTransport:ClientEarlyUpdate()
+Mirror.NetworkClient:NetworkEarlyUpdate()
+Mirror.NetworkLoop:NetworkEarlyUpdate()
+UnityEngine.LowMemoryCallback:Invoke()
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlockedInRotation()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsInRotation(Int32)
+BAPBAP.UI.View_PreMatch_CharSelect:PopulateCharacterButtons()
+BAPBAP.UI.UIPreMatch:PopulatePreMatchUI(QueueMatchedData)
+BAPBAP.Game.PreMatchManager:InvokeUserCode_TargetSetupPreMatch__NetworkConnectionToClient__QueueMatchedData(NetworkBehaviour, NetworkReader, NetworkConnectionToClient)
+Mirror.RemoteCalls.RemoteProcedureCalls:Invoke(UInt16, RemoteCallType, NetworkReader, NetworkBehaviour, NetworkConnectionToClient)
+Mirror.NetworkIdentity:HandleRemoteCall(Byte, UInt16, RemoteCallType, NetworkReader, NetworkConnectionToClient)
+Mirror.NetworkClient:OnRPCMessage(RpcMessage)
+Mirror.<>c__DisplayClass62_0`1:<RegisterHandler>g__HandlerWrapped|0(NetworkConnection, T)
+Mirror.<>c__DisplayClass9_0`2:<WrapHandler>g__Wrapped|0(C, T, Int32)
+Mirror.<>c__DisplayClass8_0`2:<WrapHandler>b__0(NetworkConnection, NetworkReader, Int32)
+Mirror.NetworkClient:UnpackAndInvoke(NetworkReader, Int32)
+Mirror.NetworkClient:OnTransportData(ArraySegment`1, Int32)
+kcp2k.KcpTransport:<Awake>b__29_2(ArraySegment`1, KcpChannel)
+kcp2k.KcpClient:OnData(ArraySegment`1, KcpChannel)
+kcp2k.KcpPeer:TickIncoming_Authenticated(UInt32)
+kcp2k.KcpPeer:TickIncoming()
+kcp2k.KcpClient:TickIncoming()
+kcp2k.KcpTransport:ClientEarlyUpdate()
+Mirror.NetworkClient:NetworkEarlyUpdate()
+Mirror.NetworkLoop:NetworkEarlyUpdate()
+UnityEngine.LowMemoryCallback:Invoke()
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlockedInRotation()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsInRotation(Int32)
+BAPBAP.UI.View_PreMatch_CharSelect:PopulateCharacterButtons()
+BAPBAP.UI.UIPreMatch:PopulatePreMatchUI(QueueMatchedData)
+BAPBAP.Game.PreMatchManager:InvokeUserCode_TargetSetupPreMatch__NetworkConnectionToClient__QueueMatchedData(NetworkBehaviour, NetworkReader, NetworkConnectionToClient)
+Mirror.RemoteCalls.RemoteProcedureCalls:Invoke(UInt16, RemoteCallType, NetworkReader, NetworkBehaviour, NetworkConnectionToClient)
+Mirror.NetworkIdentity:HandleRemoteCall(Byte, UInt16, RemoteCallType, NetworkReader, NetworkConnectionToClient)
+Mirror.NetworkClient:OnRPCMessage(RpcMessage)
+Mirror.<>c__DisplayClass62_0`1:<RegisterHandler>g__HandlerWrapped|0(NetworkConnection, T)
+Mirror.<>c__DisplayClass9_0`2:<WrapHandler>g__Wrapped|0(C, T, Int32)
+Mirror.<>c__DisplayClass8_0`2:<WrapHandler>b__0(NetworkConnection, NetworkReader, Int32)
+Mirror.NetworkClient:UnpackAndInvoke(NetworkReader, Int32)
+Mirror.NetworkClient:OnTransportData(ArraySegment`1, Int32)
+kcp2k.KcpTransport:<Awake>b__29_2(ArraySegment`1, KcpChannel)
+kcp2k.KcpClient:OnData(ArraySegment`1, KcpChannel)
+kcp2k.KcpPeer:TickIncoming_Authenticated(UInt32)
+kcp2k.KcpPeer:TickIncoming()
+kcp2k.KcpClient:TickIncoming()
+kcp2k.KcpTransport:ClientEarlyUpdate()
+Mirror.NetworkClient:NetworkEarlyUpdate()
+Mirror.NetworkLoop:NetworkEarlyUpdate()
+UnityEngine.LowMemoryCallback:Invoke()
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlockedInRotation()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsInRotation(Int32)
+BAPBAP.UI.View_PreMatch_CharSelect:PopulateCharacterButtons()
+BAPBAP.UI.UIPreMatch:PopulatePreMatchUI(QueueMatchedData)
+BAPBAP.Game.PreMatchManager:InvokeUserCode_TargetSetupPreMatch__NetworkConnectionToClient__QueueMatchedData(NetworkBehaviour, NetworkReader, NetworkConnectionToClient)
+Mirror.RemoteCalls.RemoteProcedureCalls:Invoke(UInt16, RemoteCallType, NetworkReader, NetworkBehaviour, NetworkConnectionToClient)
+Mirror.NetworkIdentity:HandleRemoteCall(Byte, UInt16, RemoteCallType, NetworkReader, NetworkConnectionToClient)
+Mirror.NetworkClient:OnRPCMessage(RpcMessage)
+Mirror.<>c__DisplayClass62_0`1:<RegisterHandler>g__HandlerWrapped|0(NetworkConnection, T)
+Mirror.<>c__DisplayClass9_0`2:<WrapHandler>g__Wrapped|0(C, T, Int32)
+Mirror.<>c__DisplayClass8_0`2:<WrapHandler>b__0(NetworkConnection, NetworkReader, Int32)
+Mirror.NetworkClient:UnpackAndInvoke(NetworkReader, Int32)
+Mirror.NetworkClient:OnTransportData(ArraySegment`1, Int32)
+kcp2k.KcpTransport:<Awake>b__29_2(ArraySegment`1, KcpChannel)
+kcp2k.KcpClient:OnData(ArraySegment`1, KcpChannel)
+kcp2k.KcpPeer:TickIncoming_Authenticated(UInt32)
+kcp2k.KcpPeer:TickIncoming()
+kcp2k.KcpClient:TickIncoming()
+kcp2k.KcpTransport:ClientEarlyUpdate()
+Mirror.NetworkClient:NetworkEarlyUpdate()
+Mirror.NetworkLoop:NetworkEarlyUpdate()
+UnityEngine.LowMemoryCallback:Invoke()
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlockedInRotation()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsInRotation(Int32)
+BAPBAP.UI.View_PreMatch_CharSelect:PopulateCharacterButtons()
+BAPBAP.UI.UIPreMatch:PopulatePreMatchUI(QueueMatchedData)
+BAPBAP.Game.PreMatchManager:InvokeUserCode_TargetSetupPreMatch__NetworkConnectionToClient__QueueMatchedData(NetworkBehaviour, NetworkReader, NetworkConnectionToClient)
+Mirror.RemoteCalls.RemoteProcedureCalls:Invoke(UInt16, RemoteCallType, NetworkReader, NetworkBehaviour, NetworkConnectionToClient)
+Mirror.NetworkIdentity:HandleRemoteCall(Byte, UInt16, RemoteCallType, NetworkReader, NetworkConnectionToClient)
+Mirror.NetworkClient:OnRPCMessage(RpcMessage)
+Mirror.<>c__DisplayClass62_0`1:<RegisterHandler>g__HandlerWrapped|0(NetworkConnection, T)
+Mirror.<>c__DisplayClass9_0`2:<WrapHandler>g__Wrapped|0(C, T, Int32)
+Mirror.<>c__DisplayClass8_0`2:<WrapHandler>b__0(NetworkConnection, NetworkReader, Int32)
+Mirror.NetworkClient:UnpackAndInvoke(NetworkReader, Int32)
+Mirror.NetworkClient:OnTransportData(ArraySegment`1, Int32)
+kcp2k.KcpTransport:<Awake>b__29_2(ArraySegment`1, KcpChannel)
+kcp2k.KcpClient:OnData(ArraySegment`1, KcpChannel)
+kcp2k.KcpPeer:TickIncoming_Authenticated(UInt32)
+kcp2k.KcpPeer:TickIncoming()
+kcp2k.KcpClient:TickIncoming()
+kcp2k.KcpTransport:ClientEarlyUpdate()
+Mirror.NetworkClient:NetworkEarlyUpdate()
+Mirror.NetworkLoop:NetworkEarlyUpdate()
+UnityEngine.LowMemoryCallback:Invoke()
+
+Failed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 17753548]
+
+Failed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 17753548]
+
+Failed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 17753548]
+
+Failed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 17753548]
+
+Failed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 17753548]
+
+Failed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 17753548]
+
+Failed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 17753548]
+
+Failed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 17753548]
+
+Failed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 17753548]
+
+Failed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 17753548]
+
+Failed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 17753548]
+
+Failed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 17753548]
+
+Failed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 17753548]
+
+Failed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 17753548]
+
+[PLAYERMANAGER] [GuestSmoke] Player On Start | 3
+[Thread2] GarbageCollector disposing of ComputeBuffer. Please use ComputeBuffer.Release() or .Dispose() to manually release the buffer.
+UnityEngine.ComputeBuffer:Finalize()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.ThreadLog:OnLateUpdate()
+Mirror.NetworkLoop:NetworkLateUpdate()
+UnityEngine.LowMemoryCallback:Invoke()
+
+[Thread2] GarbageCollector disposing of ComputeBuffer. Please use ComputeBuffer.Release() or .Dispose() to manually release the buffer.
+UnityEngine.ComputeBuffer:Finalize()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.ThreadLog:OnLateUpdate()
+Mirror.NetworkLoop:NetworkLateUpdate()
+UnityEngine.LowMemoryCallback:Invoke()
+
+[PLAYERMANAGER] [LeaderSmoke] Player On Start | 4
+Prebaked navmesh data for level 'Map2_BazaarCity 3' succesfully found. Applying now.
+Loaded Map Map2_BazaarCity 3
+[GameMode] OnEnable | frameCount 50
+Cannot combine mesh that does not allow access: PD_OOB_Floor_01
+UnityEngine.Mesh:CombineMeshes(CombineInstance[], Boolean)
+BAPBAP.Maps.LevelRuntimeManager:CombineMeshes(CombineMeshesMat[], ShadowCastingMode)
+BAPBAP.Maps.LevelRuntimeManager:BakeChunkMeshes(MapChunk, Transform)
+BAPBAP.Maps.LevelRuntimeManager:LoadChunk(Int32, Vector2Int, Boolean)
+BAPBAP.Maps.LevelDynamicLoadProcess:LoadDynamicChunkImmediate(Int32, Vector2Int)
+BAPBAP.Maps.DynamicLoadTrigger:TryLoad(LevelDynamicLoadProcess, Boolean)
+BAPBAP.Maps.LevelDynamicLoadProcess:TryLoadChunk(Int32, Int32, Int32, Boolean)
+BAPBAP.Local.DynamicChunkLoader:UpdateChunkLoad(Boolean)
+BAPBAP.Local.DynamicChunkLoader:Update()
+
+[ line 17753516]
+
+Data was null on GetOwnedHighestTierCharMasteryBadge
+[GameMode] Unloading GameManager (BAPBAP.Game.GameModeBattleRoyale)
+[GameMode] OnDisable | frameCount 7146
+[GameManager] ClOnMatchEnded | frame 7146
+MM Ended | 7146
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+Opening Lobby UI :) at the time of 29.05.2026 08:04:59
+Color primaries 0 is unknown or unsupported by WindowsMediaFoundation. Falling back to default may result in color shift. C:/Users/Administrator/Downloads/CustomServer/Spiel/Battleroyalebuild/bapbap_Data/sharedassets0.resource
+Unloading 492 unused Assets to reduce memory usage. Loaded Objects now: 347511.
+Total: 171.021400 ms (FindLiveObjects: 33.078100 ms CreateObjectMapping: 19.466200 ms MarkObjects: 117.341600 ms  DeleteObjects: 1.134800 ms)
+
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+[TESTLOG] Client disconnected before
+[TESTLOG] Client disconnected
+[TESTLOG] Client unregistered handler
+Unloading 0 unused Assets to reduce memory usage. Loaded Objects now: 347484.
+Total: 163.736600 ms (FindLiveObjects: 25.222800 ms CreateObjectMapping: 18.661900 ms MarkObjects: 119.539100 ms  DeleteObjects: 0.312300 ms)
+

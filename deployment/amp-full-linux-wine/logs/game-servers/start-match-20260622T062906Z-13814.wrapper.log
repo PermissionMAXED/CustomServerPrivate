@@ -1,0 +1,19 @@
+[start-match] utc=2026-06-22T06:29:06Z
+[start-match] prewarmOnly=0
+[start-match] game=/tmp/tmp.rrVQT6YnhE/bapbap.exe
+[start-match] args=
+[start-match] wrapperLog=/c/Users/Administrator/Downloads/CustomServer/deployment/amp-full-linux-wine/logs/game-servers/start-match-20260622T062906Z-13814.wrapper.log
+[start-match] deploymentInfo=<missing>
+[start-match] wrapperVersion=20260530-graphics-modes-v3
+[start-match] wine=wine-9.0-stub
+[start-match] winePath=/tmp/tmp.rrVQT6YnhE/stub_full/wine winebootPath=/tmp/tmp.rrVQT6YnhE/stub_full/wineboot
+[start-match] xvfbRunPath=/tmp/tmp.rrVQT6YnhE/stub_full/xvfb-run xauthPath=/tmp/tmp.rrVQT6YnhE/stub_full/xauth glxinfoPath=<missing> vulkanInfoPath=<missing>
+[start-match] wineprefix=/c/Users/Administrator/Downloads/CustomServer/deployment/amp-full-linux-wine/wineprefix32
+[start-match] xvfbServerArgs=-screen 0 1280x720x24 -ac +extension GLX +render -noreset -nolisten tcp
+[start-match] graphicsMode=glcore33
+[start-match] mesa=software LIBGL_ALWAYS_SOFTWARE=1 GALLIUM_DRIVER=llvmpipe MESA_LOADER_DRIVER_OVERRIDE=swrast MESA_GL_VERSION_OVERRIDE=3.3 MESA_GLSL_VERSION_OVERRIDE=330
+[start-match] unityGraphicsArgs=-force-glcore33
+[start-match] glxinfo probe skipped: glxinfo missing
+[start-match] wineprefix key changed; resetting prefix
+[start-match] initializing wineprefix
+[start-match] wineprefix ready

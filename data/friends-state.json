@@ -1,0 +1,12 @@
+﻿{
+  "friends": [],
+  "pendingRequests": [
+    {
+      "fromAccountId": "tester1",
+      "fromUsername": "Custom53021",
+      "fromDiscriminator": 3021,
+      "toAccountId": "someoneelse",
+      "createdUtc": "2026-06-21T21:01:24.6896569+00:00"
+    }
+  ]
+}

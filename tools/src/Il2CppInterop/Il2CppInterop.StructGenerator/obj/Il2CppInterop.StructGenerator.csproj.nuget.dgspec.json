@@ -1,0 +1,105 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Administrator\\Downloads\\CustomServer\\tools\\src\\Il2CppInterop\\Il2CppInterop.StructGenerator\\Il2CppInterop.StructGenerator.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Administrator\\Downloads\\CustomServer\\tools\\src\\Il2CppInterop\\Il2CppInterop.StructGenerator\\Il2CppInterop.StructGenerator.csproj": {
+      "version": "1.5.1",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Administrator\\Downloads\\CustomServer\\tools\\src\\Il2CppInterop\\Il2CppInterop.StructGenerator\\Il2CppInterop.StructGenerator.csproj",
+        "projectName": "Il2CppInterop.StructGenerator",
+        "projectPath": "C:\\Users\\Administrator\\Downloads\\CustomServer\\tools\\src\\Il2CppInterop\\Il2CppInterop.StructGenerator\\Il2CppInterop.StructGenerator.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Administrator\\Downloads\\CustomServer\\tools\\src\\Il2CppInterop\\Il2CppInterop.StructGenerator\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "ClangSharp": {
+              "target": "Package",
+              "version": "[10.0.0-beta, )"
+            },
+            "CppAst": {
+              "target": "Package",
+              "version": "[0.8.0, )"
+            },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "PolySharp": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.14.1, )"
+            },
+            "libClangSharp.runtime.win-x64": {
+              "target": "Package",
+              "version": "[10.0.2-beta2, )"
+            },
+            "libclang": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "libclang.runtime.win-x64": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

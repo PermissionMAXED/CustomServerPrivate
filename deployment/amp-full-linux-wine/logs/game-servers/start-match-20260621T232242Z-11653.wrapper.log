@@ -1,0 +1,7 @@
+[start-match] utc=2026-06-21T23:22:42Z
+[start-match] prewarmOnly=0
+[start-match] game=/tmp/tmp.mx4LJMKVd7/bapbap.exe
+[start-match] args=
+[start-match] wrapperLog=/c/Users/Administrator/Downloads/CustomServer/deployment/amp-full-linux-wine/logs/game-servers/start-match-20260621T232242Z-11653.wrapper.log
+[start-match] deploymentInfo=<missing>
+[start-match] ERROR: wine is not installed or not in PATH

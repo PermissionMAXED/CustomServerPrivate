@@ -1,0 +1,614 @@
+﻿{
+  "players": {
+    "custom-50947": {
+      "accountId": "custom-50947",
+      "username": "Custom50947",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "custom-58288": {
+      "accountId": "custom-58288",
+      "username": "Custom58288",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "guest-smoke": {
+      "accountId": "guest-smoke",
+      "username": "GuestSmoke",
+      "points": 1100,
+      "peakPoints": 1100,
+      "gamesPlayed": 1,
+      "wins": 1,
+      "totalKills": 0,
+      "lastMatchUtc": "2026-05-29T06:17:41.3481438+00:00"
+    },
+    "leader-smoke": {
+      "accountId": "leader-smoke",
+      "username": "LeaderSmoke",
+      "points": 1070,
+      "peakPoints": 1070,
+      "gamesPlayed": 1,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "2026-05-29T06:17:41.3563987+00:00"
+    },
+    "ext-guest": {
+      "accountId": "ext-guest",
+      "username": "ExtGuest",
+      "points": 1100,
+      "peakPoints": 1100,
+      "gamesPlayed": 1,
+      "wins": 1,
+      "totalKills": 0,
+      "lastMatchUtc": "2026-05-29T06:20:18.3276372+00:00"
+    },
+    "ext-leader": {
+      "accountId": "ext-leader",
+      "username": "ExtLeader",
+      "points": 1070,
+      "peakPoints": 1070,
+      "gamesPlayed": 1,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "2026-05-29T06:20:18.3362496+00:00"
+    },
+    "codex-medusa-queue": {
+      "accountId": "codex-medusa-queue",
+      "username": "CodexMedusa",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "custom-52181": {
+      "accountId": "custom-52181",
+      "username": "Custom52181",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "custom-65266": {
+      "accountId": "custom-65266",
+      "username": "Custom65266",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "codex-medusa-v125-local-172354": {
+      "accountId": "codex-medusa-v125-local-172354",
+      "username": "Player1",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "codex-medusa-v125b-local-173212": {
+      "accountId": "codex-medusa-v125b-local-173212",
+      "username": "Player2",
+      "points": 1170,
+      "peakPoints": 1170,
+      "gamesPlayed": 2,
+      "wins": 1,
+      "totalKills": 0,
+      "lastMatchUtc": "2026-05-31T15:40:31.5634337+00:00"
+    },
+    "codex-live-v177-20260602-031425": {
+      "accountId": "codex-live-v177-20260602-031425",
+      "username": "CodexLiveV177",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "codex-live-v177-20260602-032711": {
+      "accountId": "codex-live-v177-20260602-032711",
+      "username": "CodexLiveV177",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "codex-live-v177-20260602-033941": {
+      "accountId": "codex-live-v177-20260602-033941",
+      "username": "CodexLiveV177",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "codex-live-v177-20260602-034411": {
+      "accountId": "codex-live-v177-20260602-034411",
+      "username": "CodexLiveV177",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "codex-live-v177-20260602-035004": {
+      "accountId": "codex-live-v177-20260602-035004",
+      "username": "CodexLiveV177",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "codex-live-v177-20260602-035802": {
+      "accountId": "codex-live-v177-20260602-035802",
+      "username": "CodexLiveV177",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "codex-live-v177-20260602-040313": {
+      "accountId": "codex-live-v177-20260602-040313",
+      "username": "CodexLiveV177",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "codex-live-v177-20260602-040605": {
+      "accountId": "codex-live-v177-20260602-040605",
+      "username": "CodexLiveV177",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "codex-live-v177-20260602-041136": {
+      "accountId": "codex-live-v177-20260602-041136",
+      "username": "CodexLiveV177",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "codex-live-v177-20260602-041522": {
+      "accountId": "codex-live-v177-20260602-041522",
+      "username": "CodexLiveV177",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "codex-live-v177-20260602-120530": {
+      "accountId": "codex-live-v177-20260602-120530",
+      "username": "CodexLiveV177",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "codex-live-v177-20260602-121018": {
+      "accountId": "codex-live-v177-20260602-121018",
+      "username": "CodexLiveV177",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "codex-live-v177-20260602-122346": {
+      "accountId": "codex-live-v177-20260602-122346",
+      "username": "CodexLiveV177",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "codex-live-v177-20260602-122629": {
+      "accountId": "codex-live-v177-20260602-122629",
+      "username": "CodexLiveV177",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "codex-live-v177-20260602-123128": {
+      "accountId": "codex-live-v177-20260602-123128",
+      "username": "CodexLiveV177",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "codex-live-v177-20260602-123923": {
+      "accountId": "codex-live-v177-20260602-123923",
+      "username": "CodexLiveV177",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "codex-live-v177-20260602-124355": {
+      "accountId": "codex-live-v177-20260602-124355",
+      "username": "CodexLiveV177",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "codex-live-v177-20260602-125145": {
+      "accountId": "codex-live-v177-20260602-125145",
+      "username": "CodexLiveV177",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "codex-live-v177-20260602-130147": {
+      "accountId": "codex-live-v177-20260602-130147",
+      "username": "CodexLiveV177",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "codex-live-v177-20260602-130757": {
+      "accountId": "codex-live-v177-20260602-130757",
+      "username": "CodexLiveV177",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "codex-live-v177-20260602-131456": {
+      "accountId": "codex-live-v177-20260602-131456",
+      "username": "CodexLiveV177",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "codex-live-v177-20260602-132109": {
+      "accountId": "codex-live-v177-20260602-132109",
+      "username": "CodexLiveV177",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "codex-live-v177-20260602-132426": {
+      "accountId": "codex-live-v177-20260602-132426",
+      "username": "CodexLiveV177",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "codex-live-v177-20260602-133006": {
+      "accountId": "codex-live-v177-20260602-133006",
+      "username": "CodexLiveV177",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "codex-live-v177-20260602-134257": {
+      "accountId": "codex-live-v177-20260602-134257",
+      "username": "CodexLiveV177",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "codex-live-v177-20260602-134927": {
+      "accountId": "codex-live-v177-20260602-134927",
+      "username": "CodexLiveV177",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "codex-live-v177-20260602-135716": {
+      "accountId": "codex-live-v177-20260602-135716",
+      "username": "CodexLiveV177",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "codex-live-v177-20260602-140335": {
+      "accountId": "codex-live-v177-20260602-140335",
+      "username": "CodexLiveV177",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "codex-live-v177-20260602-141503": {
+      "accountId": "codex-live-v177-20260602-141503",
+      "username": "CodexLiveV177",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "codex-live-v177-20260602-142219": {
+      "accountId": "codex-live-v177-20260602-142219",
+      "username": "CodexLiveV177",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "codex-live-v177-20260602-143020": {
+      "accountId": "codex-live-v177-20260602-143020",
+      "username": "CodexLiveV177",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "codex-live-v177-20260602-143848": {
+      "accountId": "codex-live-v177-20260602-143848",
+      "username": "CodexLiveV177",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "codex-live-v177-20260605-123950": {
+      "accountId": "codex-live-v177-20260605-123950",
+      "username": "CodexLiveV177",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "codex-live-v177-20260605-125436": {
+      "accountId": "codex-live-v177-20260605-125436",
+      "username": "CodexLiveV177",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "codex-live-v177-20260605-130503": {
+      "accountId": "codex-live-v177-20260605-130503",
+      "username": "CodexLiveV177",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "med-leader": {
+      "accountId": "med-leader",
+      "username": "Player4",
+      "points": 2510,
+      "peakPoints": 2510,
+      "gamesPlayed": 23,
+      "wins": 6,
+      "totalKills": 0,
+      "lastMatchUtc": "2026-06-18T09:41:23.5892207+00:00"
+    },
+    "med-guest": {
+      "accountId": "med-guest",
+      "username": "med-guest",
+      "points": 1830,
+      "peakPoints": 1830,
+      "gamesPlayed": 13,
+      "wins": 3,
+      "totalKills": 0,
+      "lastMatchUtc": "2026-06-18T09:41:23.5511415+00:00"
+    },
+    "custom-1": {
+      "accountId": "custom-1",
+      "username": "Player1",
+      "points": 1100,
+      "peakPoints": 1100,
+      "gamesPlayed": 1,
+      "wins": 1,
+      "totalKills": 0,
+      "lastMatchUtc": "2026-06-17T23:45:32.1065066+00:00"
+    },
+    "codex-v1668-medusa-20260608-0252": {
+      "accountId": "codex-v1668-medusa-20260608-0252",
+      "username": "Player2",
+      "points": 1070,
+      "peakPoints": 1070,
+      "gamesPlayed": 1,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "2026-06-17T23:45:32.1194165+00:00"
+    },
+    "custom-53021": {
+      "accountId": "custom-53021",
+      "username": "Custom53021",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "custom-53046": {
+      "accountId": "custom-53046",
+      "username": "Custom53046",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "custom-53087": {
+      "accountId": "custom-53087",
+      "username": "Custom53087",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "wstester": {
+      "accountId": "wstester",
+      "username": "WSTester",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "custom-53197": {
+      "accountId": "custom-53197",
+      "username": "Custom53197",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "custom-58573": {
+      "accountId": "custom-58573",
+      "username": "Custom58573",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "custom-53260": {
+      "accountId": "custom-53260",
+      "username": "Custom53260",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "custom-53862": {
+      "accountId": "custom-53862",
+      "username": "Custom53862",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "mm-player": {
+      "accountId": "mm-player",
+      "username": "MMPlayer",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "custom-382jfI238ALO": {
+      "accountId": "custom-382jfI238ALO",
+      "username": "Sonic0810",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    },
+    "codex-visible-5174": {
+      "accountId": "codex-visible-5174",
+      "username": "Player5",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    }
+  }
+}

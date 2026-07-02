@@ -1,0 +1,789 @@
+Laden...
+Selecteer een authenticatieprovider.
+Omleiden naar {0}. Voltooi de authenticatie en keer terug naar het spel.
+Authenticeren met {0}. Even geduld aub.
+Bevestigen {0} authenticatie. Even geduld aub.
+Authenticatie met {0} werd niet voltooid. Probeer het opnieuw.
+Kan niet authenticeren met {0}. Probeer het opnieuw.
+Succesvol geverifieerd met {0}!
+Aanmelden mislukt. Dit account is al ingelogd op een ander apparaat. Log in en probeer het opnieuw.
+SPEEL
+BAP PASS
+PROFIEL
+RANGEN
+GARDEROBE
+KARAKTERS
+GEREED
+NIET GEREED
+IN DE WACHTRIJ
+Spelers vinden ...
+UITNODIGING
+LOBBY CODE
+GEREED
+NIET GEREED
+ANNULEREN
+Typen...
+Online
+Link gekopieerd!
+Speler in de wachtrij
+Spelmodus
+Spelmodus
+Selecteer spelmodus
+Nodig een vriend uit!
+Resterende links
+Vorige winnaars
+De gesloten béta is nu voorbij! Houd onze Discord in de gaten voor nieuws over de ontwikkeling van het spel en toekomstige tests.
+Gewonnen met {0} eliminaties.
+Het spel start in
+Het spel begint...
+Lobby is al vol!
+Lobby was ongeldig.
+Je bent de lobby toegetreden
+Is toegetreden aan de lobby
+Heeft de lobby verlaten
+Aanmelden vereist
+In de wachtrij
+Zoeken naar een spel
+Aan het spelen.
+OP ZOEK NAAR EEN TEAM...
+Iemand heeft het team verlaten. Op zoek naar een nieuw team...
+Selecteren
+Geselecteerd
+Ontgrendeld
+Ontgrendelden voor
+Ontgrendelen voor {0}
+Vaardigheden
+Talenten
+BAP PASS
+Eindigt in {0} dagen
+LOG UIT
+Overwinningen
+Eliminaties
+Omgekomen
+Assist
+KDA
+Aangebrachte DMG
+Ontvangen DMG
+Wedstrijd historie
+Van de
+Geen wedstrijd geschiedenis gevonden.
+Scorebord is leeg
+Naam
+RANG
+Eliminaties
+Overwinningen
+Rang {0}
+RP
+Nieuw
+STICKERS
+Garderobe is leeg
+Sticker uitgerust
+Links klik om aan dit slot toe te wijzen, klik met de rechtermuisknop om te verwijderen
+Klik om te annuleren
+Afmaker
+Afmaker uitgerust
+Nieuwe item verkregen
+Nieuwe personage verkregen
+Klik om verder te gaan
+Claim
+Geclaimd
+Uitrusten
+Uitgerust
+Word vrijgespeeld op niveau {0}
+Sluiten
+Annuleren
+Volgende
+Verlaten
+XP
+BAP PASS
+Naar niveau
+Gepromoveerd
+Gedegradeerd
+Niveau {0}
+Max. Niveau
+Gewonnen
+Verslagen
+Inloggen
+Volledige login
+Voer uw gebruikersnaam in:
+Algemene voorwaarden
+Privacybeleid
+Ik ga akkord met de algemene voorwaarden en het privacybeleid
+Gebruikersnaam moet tussen de 3 en 20 karakters zijn en alleen geldige karakters bevatten
+Gebruikersnaam is al in gebruik!
+Je moett akkoord gaan met de algemene voorwaarden en privacybeleid om verder te gaan
+Ontslag nemen
+Weet je zeker dat je het spel wilt sluiten?
+De verbinding is verbroken. Vernieuw om opnieuw verbinding te maken.
+U bent al ingelogd. U kunt dit venster sluiten.
+Is toegetreden aan het spel.
+Stop met spammen! Gemute voor {0}
+Pinging
+{0} {1}
+Gevaar
+Onderweg
+Vijand gespot
+Hulp nodig!
+Een positie gealarmeerd
+Onderweg naar deze positie
+Vijand gespot
+Heeft hulp nodig
+Bondegnoot
+Vijand
+Vriendelijke NPC
+Vijandelijke NPC
+Neutraal
+Vaardigheid {0} heeft {1} secondes over!
+Vaardigheid {0} is gereed!
+Rekt door
+Werd gerekt
+Druk op {0} om te laten vallen
+of
+Om uit te breiden
+Drankjes zijn vol!
+Goud op maximum!
+Wissel
+HP
+Offering
+Opofferen
+Kopen
+Kopen
+Nodig
+Op voorraad
+Huidige
+Max. Niveau
+
+
+
+
+
+
+
+Upgrade
+Goud
+Schade
+Loopsnelheid
+Afkoel vermindering
+Crit Kans
+Crit DMG
+Levens stelen
+Aanval snelheid
+Doornen
+Schild
+Gezondheid
+Gezondheidsherstel
+Gezondheidspercentage
+Onkwetsbaar
+Genezing
+Geslagen
+Neergeslagen
+Verdoven
+Verdoofd
+Zwijg
+Tot zwijgen gebracht
+Wortel
+In geworteld
+Vertragen
+Vertraagd
+Duwen
+Geduwd
+Sprinten
+Gif
+Vergiftigd
+Verbrand
+Kloon
+Herschik
+Verzwakken
+Verzwakt
+Blootgesteld
+Schild
+Dmg verhoging
+Strik
+Gestrikt
+Verward
+Tegen
+Angst
+Gevreesd
+Blind
+Verblind
+Gigantisch
+Glibberig
+Bevroren
+Slechtziend
+Slechtziend
+Karakter
+Voorwerp
+Interactief
+Upgrade
+Upgraden
+Geen items om te upgraden in dit slot!
+Item is al van het hoogste niveau!
+Upgrade voor
+Winkel
+Verkoopautomaat
+Aankoop voor
+Verkoopautomaat is leeg.
+Gezondheidsdrank kopen voor
+Verkopen
+Verkopen voor
+Snel zand
+Vis hengel
+Begin met vissen
+VISSEN!!!
+Vis!?
+Visstaaf gebroken :(
+Geheime rots
+Gifpijl val
+Herstel Altaar
+Gebruikt Herstel Altaar
+Upgrade Station
+Plunderkrat
+Zeldzame buitkrat
+Legendarische buitkrat
+Slechte Robot
+Grote Slechte Robot
+Gesloten buitkrat
+Gesloten buitkrat
+Torentje
+Gesloten buitkrat
+Energiebol
+Voorraaddaling
+Voorraaddaling in de lucht
+Voorraaddaling geland
+Explosief vat
+
+Vriesvat
+Duwbare vriezer
+Duwbaar explosief
+
+Springkussen
+Verborgen springkussen
+Bijenkorf
+Berenval
+Berenval
+Berenval
+Berenval
+Berenval
+Berenval
+Berenval
+Berenval
+
+
+Explosieve cactus
+Snelheid Pickup
+Gezondheid Pickup
+Energizer Pickup
+Verkoopstation
+Ijzige vloer
+Stroomkristal
+Tumbleweed
+Gelei Baas
+
+
+
+
+
+
+Gesloten buitkrat
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Zone sluit!
+Zone sluit over {0} seconden
+Voorraaddaling gelanceerd!
+GA!
+VICTORY
+DEFEAT
+{0} Plaats
+Toeschouwer
+Toeschouwer
+Ga naar de lobby
+Stuur bericht naar team...
+TEAM
+Geen
+Standaard
+Onbeperkt
+Laag
+Medium
+Hoog
+Ultra
+Aangepaste
+Ingeschakeld
+Uitgeschakeld
+Sommige tekst wordt mogelijk niet bijgewerkt. Herstart het spel om de wijzigingen volledig toe te passen
+Druk op de toets
+Uitloggen
+Weet je zeker dat je wilt uitloggen?
+Alle huidige voortgang zal verloren gaan.
+Algemeen
+Graphics
+Audio
+Bedieningselementen
+Instellingen
+Algemeen
+Interface
+Spel
+Privacy
+Weergave
+Kwaliteit
+Volume
+Gameplay toetsenbindingen
+Menu toetsencombinaties
+Taal
+Regio
+Weergavemodus
+Venster
+Randloos Volledig scherm
+Volledig scherm
+Resolutie
+UI Schaal
+Ping tonen
+Toon Fps
+Toon spelversie
+Chatberichten verbergen
+Intensiteit screenshake
+Anoniem verschijnen
+Verberg Spelersnamen
+Filter voor godslastering
+Render Schaal
+Limiet framerate
+Vooraf ingestelde kwaliteit
+Antialiasing modus
+Realtime schaduwen
+Schermruimte ambient occlusie
+Bloei
+Velddiepte
+Algemeen volume
+Muziek Volume
+Omgevingsvolume
+Sfx-volume
+Ping Volume
+Omhoog
+Naar beneden
+Naar links
+Naar rechts
+Vermogen 1
+Vermogen 2
+Vermogen 3
+Ultieme vaardigheid
+Potion gebruiken
+
+Annuleren Vermogen
+Item 1 laten vallen
+Item 2 laten vallen
+Item 3 laten vallen
+Laat Potion vallen
+Laat goud vallen
+
+Cam Lock
+Chat openen/verzenden
+Ping
+Emote
+Minimap scherm Houden
+Minimap scherm Toggle
+Interactie
+Tooltip uitbreiden
+Normaal
+Gerangschikt
+Opleiding
+Opwarmen
+MINI SOLO
+MINI DUOS
+MINI TRIOS
+SOLO
+DUOS
+TRIOS
+GERANGSCHIKTE DUO'S
+GERANGSCHIKTE TRIOS
+Niet gerangschikt
+Brons
+Zilver
+Goud
+Platina
+Diamant
+Koninklijk
+Goddelijk
+Gewoon
+Ongewoon
+Zeldzaam
+Episch
+Legendarisch
+Item
+Verbruiksartikel
+Valuta
+Helm
+Torso
+Laarzen
+Grote pet
+Grote Laarzen
+Chrono Pet
+Chrono Tas
+Scherpe Zak
+Scherpe Laarzen
+Scherpe Pet
+Snap Laarzen
+Spiky Zak
+Haastige Laarzen
+Vampiertas
+Vampieren
+Sap
+Drink om wat HP te genezen
+Goud
+Valuta om te ruilen voor goederen en diensten
+Stekelige Laarzen
+Spiky muts
+Knipmuts
+Snap Bag
+Bulkzak
+Chrono Laarzen
+Haastige Pet
+Haastige Tas
+Vampieren Laarzen
+Gelei muts
+
+
+
+
+
+
+
+
+
+
+Schildpoeder
+Word gebufferd
+Explosief vat
+Draagbare loop
+Springkussen
+Implementeer een springkussen
+Onzichtbaar jump pad
+Implementeer een onzichtbaar springkussen
+Berenval
+Draagbare berenval
+Brain bevriezen
+Drink het om insta bevroren te krijgen
+Torentje
+Draagbaar torentje
+Cactus
+Draagbare cactus
+Bijenkorf
+Draagbare bijenkorf
+Pushable explosief vat
+Draagbaar duwbaar explosief vat
+Bumper
+Draagbare bumper
+Telescoop
+Draagbare telescoop
+Zandloper
+Draagbare zandloper
+Bevriesvat
+Draagbare vriesvat
+Sneeuwman
+Draagbare sneeuwpop
+Draagbare sneeuwpop
+Draagbare sneeuwpop
+Draagbare sneeuwpop
+Draagbare sneeuwpop
+Draagbare sneeuwpop
+Draagbare sneeuwpop
+Draagbare sneeuwpop
+Draagbare sneeuwpop
+Draagbare sneeuwpop
+Draagbare sneeuwpop
+Draagbare sneeuwpop
+Draagbare sneeuwpop
+Draagbare sneeuwpop
+Draagbare sneeuwpop
+Draagbare sneeuwpop
+Draagbare sneeuwpop
+Gewoon
+Ongewoon
+Zeldzaam
+Episch
+Legendarisch
+Emote
+Sticker
+Finisher
+Valuta
+Goud
+Valuta gebruikt om te ruilen voor goederen en diensten
+Fractals
+Premium valuta gebruikt om te ruilen voor nog betere goederen en diensten
+Bonus
+BAPBAP
+Het BAPBAP-logo, in zijn horizontale versie
+BAPBAP geschetst
+Het BAPBAP-logo, in zijn horizontale versie met een rode omlijning
+Brood
+Een brood emoji sticker
+Kroon
+Je hebt dit laten vallen, koning
+Geest Duimen omhoog
+Een geest die duimen omhoog geeft
+Verrast Spook
+Een geest die ergens van schrikt
+Lachende geest
+Een geest die zich kapot lacht
+Huilende geest
+Een geest die erg verdrietig is
+Boze geest
+Een geest die boos lijkt
+GGEZ
+Gebruik dit om beleefd je BAPBAP overwinningen te tonen.
+Wanneer code?
+Wanneer komt de nieuwe code uit?
+Grafsteen
+Een normale grafsteen
+Vleugel Grafsteen
+Een normale grafsteen met wat vleugels
+Beta Grafsteen
+Exclusieve grafsteen voor beta spelers
+Grote Grafsteen
+Grote boi grafsteen
+Fundamenteel
+Speciaal
+Beweging
+Ultiem
+Rennen en schieten
+Vuur 4 kleine kogels af.
+Vuur 4 kleine kogels, elk de handel {1}.
+Eet Lood
+Vuur 3 grote kogels tegelijk. Reset CYA! op hit.
+Vuur 3 grote kogels tegelijk, elk met {1}. Reset CYA! op hit.
+CYA!
+Voer een snelle sprint uit.
+Voer een snelle sprint uit.
+Kogel Hel
+Draai en schiet op alles om je heen. Pas slow toe bij hit.
+Draai en schiet alles om je heen en handelt {1}. Pas {2} toe op hit.
+Chuck Punch
+Sla voor een 3-hit combo. Als je een tegenstander raakt, krijg je een Knock stack.
+Punch voor een 3-hit combo-handel {1} ​​elk. Als je een speler raakt, ga je een klopstapel toe en laat je Chuck Knock -cooldown zakken.
+Chuck Knock
+Gooi een krachtige stoot. Veroorzaakt stun als je volle Knock-stacks hebt.
+Gooi een krachtige punch die {1} handelt en {2} toebrengt. Toebrengen {3} indien volledig gestapeld.
+Chuck Springen
+Spring naar een locatie. Pas knock up toe op land.
+Spring naar een locatie. Pas {1} toe op landhandel {2}.
+CHUCK!!!!
+Wordt gigantisch en krijg een hp, damage en speed buff.
+Gigantisch worden voor {1}, die {2} en {3} verleent. Tijdens het ultieme neemt Chuck {4} minder schade aan en geneest {5} van zijn maximale HP per seconde.
+Ribbhit
+Slash voor een 3-hit combo.
+Slash voor een 3-hit combo, die {1} handelt. Deals {2} op de derde schuine streep.
+MLEM
+Plak aan een doelwit met je tong. Pas slow toe bij een hit.
+Blijf bij een doelwit met je tong. Pas {1} toe op vijanden die hit.
+Hip Hop
+Spring naar een locatie, geef slow bij landing.
+Spring naar een locatie, het toebrengen van {1} en {2} bij het landen. Het raken van een vijand vermindert cooldown met {3} seconden.
+Slice N' Dice
+Loop vooruit en deel hoge schade uit aan tegenstanders onderweg.
+Dash Forward, de handel {1} ​​en het toepassen van {2} op tegenstanders onderweg.
+Licht het op
+Verlicht een gebied.
+Verlichting een gebied dat {1} handelt.
+Het is aangestoken
+Verander een gebied in een groeiend vuur. Verbrand en vertraag bij een treffer.
+Verander een gebied in een groeiend vuur. Deals {1}, en past {2} en {3} toe op vijanden.
+Vlam op
+Activeer een vuurschild.
+Activeer een brandschild, geef uzelf {1} en verhoogt uw {2} door {3}, duurzaam voor {4} seconden.
+Verbrand het
+Stuur een enorme meteoriet de grond in.
+Stuur een enorm meteoriet dat in de grond stortte die {1} handelt.
+Violet Strike
+Schiet een energie pijl.
+Schiet op een energiepijl en handelt {1}.
+Mooncall
+Laat pijlen regenen in een gebied. Vertraag bij een treffer.
+Regenpijlen in een gebied, de handel {1} ​​en toepassing van {2} op hit.
+Foxtrot
+Schiet op de grond om weg te springen. Pas knock up toe bij een treffer.
+Schiet op de grond om weg te springen, {1} te handelen en {2} toe te passen op hit.
+Sterren schieten
+Schiet een doordringende pijl door obstakels en vijanden. Pas slow op hit toe.
+Schiet op een doordringende pijl door obstakels en vijanden. Deals {1} en past {2} traag toe op hit.
+Chop Chop
+Stoot voor een 3-hit combo.
+Punch voor een 3-hit combo, die {1} handelt. Sla bij de derde hit de grond die {2} handelt.
+Gember Nasmaak
+Sla vijanden voor je. Verlamt en verzwakt bij een treffer.
+Klap vijanden voor je, handelen {1} en het inbrengen van {2} en {3}.
+Sushi Roll
+Laad een sprint, deel schade uit en vertraag doelen onderweg.
+Laad een dashboard op, handelt {1} en toepassing {2} toe op doelen onderweg.
+Tempura Schok
+Spring en sla in een gebied. Als je hem raakt, sla je vijanden neer en bescherm je jezelf en je bondgenoten.
+Spring en slam in een gebied, handelt {1} aan tegenstanders en breng {2} toe op bondgenoten voor {3} van uw maximale HP. Scherm uzelf op {4} voor elk doelwit dat wordt beïnvloed door de mogelijkheid.
+Reap
+Sla voor een 2-hit combo.
+Slash meerdere doelen, handelen {1}. Indien gebruikt terwijl Shadow Walk actief is, deal {2} extra.
+Klauw
+Snijd in de grond. Pas Exposed toe bij hit.
+Snijd de grond, handel {1} ​​en het toebrengen van {2}. Indien gebruikt terwijl Shadow Walk actief is, geneest u voor {3} van de toekennen van de schade.
+Schaduwloop
+Wordt onzichtbaar en win snelheid. Deel extra schade uit voor je volgende LMB of win gezondheid op Q.
+Word onzichtbaar voor {1}, verhoogt {2} en {3}.
+RIP
+Dash naar voren en slash voor je.
+Draai naar voren en schakel voor u af, handelt {1}.
+Hallo Wereld
+Schiet een digitale golf uit.
+Schiet op een digitale golf en handelt {1}.
+Raycast
+Schiet een straal uit. Langzaam bij het raken.
+Schiet een balk uit, handelt {1} en past {2} toe op hit.
+Ctrl+C & Ctrl+V
+Teleporteer naar een locatie en maak een kloon op je oorspronkelijke positie. Herschikken om van positie te wisselen met je kloon.
+Teleporteer naar een locatie en maak een kloon op uw oorspronkelijke positie, die duurzaam is voor {1}. Herstel om van positie te ruilen met uw kloon.
+memcpy
+Maak een kloon op een locatie. Herschikken om van positie te wisselen met je kloon.
+Maak een kloon op een locatie, die duurt voor {1}. Herstel om van positie te ruilen met uw kloon.
+Bazooka
+Vuur een raket af die ontploft als je hem raakt.
+Vuur een raket die {1} op impact behandelt, en {2} uit de explosie.
+Vergrendeld
+Vuur een doelzoekende raket af.
+Vuur een homing -raket die doelen volgt, die {1} over impact en {2} afhandelt uit de explosie
+Gotta Blast
+Schiet op de grond om jezelf naar een locatie te lanceren. Geef klop bij een treffer.
+Blast de grond om jezelf naar een locatie te lanceren. Deals {1} en past {2} toe op hit.
+Mijn uw stap
+Gooi nabijheidsmijnen op de grond. Pas slow op hit toe.
+Gooi de nabijheidsmijnen op de grond, elk de handel {1} ​​en het toepassen van {2} op hit. Mijnen duren voor {3} seconden.
+Fire Slash
+Slash voor een 3-hit combo.
+Voert twee snelle schuine strepen uit die {1} handelen en een derde krachtige staking die {2} handelt.
+Reflecterende houding
+Gaat aanvallen tegen en reflecteert projectielen.
+Wordt onkwetsbaar en voert {1} uit voor {2}. Tijdens het tegengaan, weerspiegelt Projectielen en tegenaanval melee -aanvallen, waarbij {3} het doelwit handelen.
+Firey Dash
+Stapt naar voren en zet je katana in brand. Wordt tot 3 keer opnieuw uitgevoerd als je een vijand raakt.
+Dash Forward, handelt {1} en het toebrengen van {2} aan doelen. Het raken van een doelwit laadt het dashboard op en stelt uw volgende vuurschuifaanval in met {3}. Herstel tot {4} tijden.
+Flamestrike
+Gooi een vuur projectiel met je katana. Flamestrike wordt opgeladen door tegenstanders te raken met melee-aanvallen.
+Hurl A Fiery Projectile, handelt {1} en brengt {2} op doelen. Flamestike wordt opgeladen door tegenstanders te raken met vuurschoten.
+Chop-kicks
+Voer een twee hitcombinatie uit, de laatste is twee snelle trappen.
+Kick -doelen die {1} handelen met een krachtige kick. Draag vervolgens {2} en {3} met twee snelle trappen.
+Bouillonstoot
+Spring schop een korte afstand in elke richting.
+Voer een jump -trap uit, handelt {1} en wekt {2} voor {3}.
+Miso Dash
+Draai naar voren met een vliegende knieaanslag.
+Dash in een richting die {1} handelt op doelen die hit.
+Express levering
+Lever een draaiende kick in een kegel en duwt doelen weg.
+Lever een draaiende kick in een kegel, handelt {1} en past {2} toe op doelen.
+Aanmelden
+Details
+{0} van {1} aanmeldingsdoel
+Beta -uitdaging
+Leven
+Vrijwaring
+{0} Het leven wordt verbruikt als het verliezen van een spel.
+Er zijn geen terugbetalingen voor game -crashes of ontkoppelen.
+Uit het leven
+Je hebt geen levens meer!
+Probeer meer levens te verdienen door taken uit te voeren:
+Krijg meer levens
+Resterende tijd om zich aan te melden
+{0} aanmeldingen
+van {0} nodig om te beginnen
+Leven leven
+U bent aangemeld
+Deel uw uitnodigingcode
+Elke {0} aanmeldingen, $ 1 wordt aan de pool toegevoegd
+Tijd aanmelden is voorbij! Blijf op de hoogte voor meer nieuws
+Leven leven
+Leven verdienen door taken te voltooien. Hoe meer levens je verdient, hoe meer kansen je hebt.
+Uw uitnodigingcode:
+Twitch Unkinked
+Link nu
+Twitch gekoppeld aan {0}
+Vriend uitnodigingen
+{0} vriend uitnodigt
+Claim!
+Beweerd
+Volgende
+Niet beschikbaar
+{0} van {1}
+Taak is niet voltooid. Nodig meer vrienden uit om de beloning te ontgrendelen
+Twitch Drops (12 - 15 oktober)
+Dag {0}
+Taak is niet voltooid. Krijg Twitch -druppels om de beloning te ontgrendelen
+Spellen spelen
+{0} Games gespeeld
+Taak is niet voltooid. Speel meer games om de beloning te ontgrendelen
+Prijzenpot
+De prijzenpool wordt gedeeld door de top 50 spelers
+{0} plaats
+{0} punten
+Deelname
+elk
+Hoe te winnen
+Blijf spelen totdat je leven op is. Degenen met de meeste overwinningen worden bekroond met de toernooimampioenen!
+Verdien extra levens
+Voltooi taken om meer levens te verdienen. Meer levens = meer kansen!
+Win wedstrijden
+Verzamel overwinningen door het laatste team te staan. Je verliest een leven als je ploeg wordt geëlimineerd.
+Beklim het leaderboard
+Alleen een top met handvol wint het prijzenpot. De maling stopt niet.
+Formaat
+4-daags evenement van 12 oktober tot 15 oktober.
+Servers zijn geopend van 9.00 tot 2 uur PST.
+Elke game heeft een lage HP als Base Game Modifier
+Dag {0}
+Gouden modificator
+Je verliest als je blut bent
+Maximaal 3 overwinningen haalbaar
+Nacht
+Kijk achter je. Boe!
+Maximaal 10 overwinningen haalbaar
+Meteorenregen
+Het is Joever als je nog steeds blijft
+Maximaal 25 overwinningen haalbaar
+Lage HP
+Veel succes
+Reglement
+Het overtreden van alle regels zal resulteren in automatische diskwalificatie + verbod
+Geen bugs misbruiken.
+Geen botsing voor extra levens.
+Geen ALT -accounts, u kunt zich maar één keer aanmelden.
+Niet samenwerken met andere teams.
+Meld u nu aan voor een kans om {0} te winnen
+{0} aanmeldingen
+van {0} om te beginnen
+Scroll naar boven
+{0} aangemeld!
+{0} ingewisseld {1} live (s)!
+Aanmelden
+Voer een uitnodigingscode in
+Binnenkomen
+Ingeschreven
+Uitnodigen Code gekopieerd!
+Leven
+Leven verdienen door taken te voltooien. Meer levens = meer kansen
+Twitch druppels
+Verdien levens door Twitch -streams te bekijken
+
+
+#VALUE!

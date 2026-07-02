@@ -1,0 +1,24 @@
+server pid=64688 port=5161
+health OK
+WS <- SOCKET_READY
+WS <- GAME_MODES_UPDATED
+WS <- JOIN_LOBBY_SUCCESS
+WS <- GAME_MODES_UPDATED
+WS <- UPDATE_CUSTOM_SETTINGS_SUCCESS
+WS <- START_CUSTOM_GAME_SUCCESS
+WS <- QUEUE_MATCHED
+WS <- GAME_STARTED
+GAME_STARTED mapId=7 ws=7777 auth=608e22d796c6ac233fb1b02148248125
+client pid=47296
+client window=1639236
+SHOT connect -> C:\Users\Administrator\Downloads\CustomServer\logs\cua\colo-connect-020225.png
+SHOT match1 -> C:\Users\Administrator\Downloads\CustomServer\logs\cua\colo-match1-020313.png
+SHOT match2 -> C:\Users\Administrator\Downloads\CustomServer\logs\cua\colo-match2-020342.png
+=== CLIENT [MAP] markers ===
+[02:02:58.891] [NetworkedCustomChar] [MAP] custom map registered: name='CustomArena' mapId=6 bundle='CustomArena\customflat.bundle' sv='CustomFlat_SvData' cl='CustomFlat_ClData' enabled=True zoneRounds=1 enableTileEdits=True useLevelDataTileMutations=True tileEdits=3.
+[02:02:58.892] [NetworkedCustomChar] [MAP] custom map registered: name='CustomColosseum' mapId=7 bundle='CustomColosseum\customflat.bundle' sv='CustomFlat_SvData' cl='CustomFlat_ClData' enabled=True zoneRounds=1 enableTileEdits=True useLevelDataTileMutations=True tileEdits=9.
+[02:02:58.893] [NetworkedCustomChar] [MAP] custom map registered: name='CustomFlat' mapId=5 bundle='CustomFlat\customflat.bundle' sv='CustomFlat_SvData' cl='CustomFlat_ClData' enabled=True zoneRounds=1 enableTileEdits=False useLevelDataTileMutations=False tileEdits=0.
+[02:02:58.894] [NetworkedCustomChar] [MAP] hooks installed (LoadLevel=True LoadLevelCoroutine=True SpawnLevel=True OnServerMatchSetup=True) for 3 custom level name(s).
+[02:03:08.219] [NetworkedCustomChar] [MAP] PROBE SpawnLevel: name='Arena_Map2' bootstrapMapId=0 svOnly=False clOnly=True svNull=False clNull=False.
+[02:03:08.252] [UNITY] Loaded Map Arena_Map2
+DONE client=47296 window=1639236 server=64688

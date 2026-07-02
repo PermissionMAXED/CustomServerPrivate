@@ -1,0 +1,789 @@
+Carregando...
+Por favor, selecione um serviço para realizar sua autenticação.
+Redirecionando ao {0}. Termine sua autenticação e retorne ao jogo.
+Autenticando com {0}. Aguarde.
+Confirmando a autenticação do {0}. Aguarde.
+A autenticação com {0} não foi concluída. Tente novamente.
+Falha ao autenticar com {0}. Tente novamente.
+A autenticação com {0} foi bem sucedida!
+Falha no Login. Esta conta já está conectada em outro dispositivo. Tente novamente.
+JOGAR
+BAP PASSE
+PERFIL
+CLASSIFICAÇÕES
+ARMÁRIO
+PERSONAGENS
+PRONTO
+PREPARANDO
+NA FILA
+Procurando jogadores...
+CONVIDAR
+CÓDIGO DO LOBBY
+PRONTO
+CANCELAR
+CANCELAR
+Digite...
+Online
+Link Copiado!
+Jogador na fila
+Modo de Jogo
+Modos de jogo
+Selecione o modo de jogo
+Convide um amigo!
+Usos restantes
+Últimos Vencedores
+O beta fechado acabou! Verifique nosso Discord para notícias sobre o desenvolvimento do jogo e testes futuros.
+Venceu com {0} abates
+A partida se inicia em
+PARTIDA INICIANDO...
+O lobby já está cheio!
+Lobby inválido!
+Você entrou no lobby
+juntou-se ao lobby
+deixou o lobby
+Uma conta registrada é necessária
+Na fila...
+NA FILA
+EM JOGO
+PROCURANDO EQUIPE
+Alguém deixou a equipe. Procurando uma nova equipe...
+SELECIONE
+SELECIONADO
+DESBLOQUEAR
+Desbloquear por
+Desbloquear por {0}
+Habilidades
+Maestria
+BAP PASSE
+Termina em {0} dias
+LOGOUT
+Vitórias
+Abates
+Mortes
+Assistências
+AMA
+Dano Causado
+Dano Sofrido
+Histórico de Partidas
+de
+Nenhum histórico de partidas encontrado
+Tabela de classificações vazia
+Nome
+Ranque
+Abates
+Vitórias
+Posição {0}
+PR
+Novo
+FIGURINHAS
+O inventário está vazio
+Figurinha equipada
+Clique com o botão esquerdo para inserir e com o botão direito para remover.
+Clique para cancelar
+Golpes Finais
+Golpe Final equipado
+Novo item obtido
+Novo personagem obtido
+Clique para continuar
+Resgatar
+Resgatado
+Equipar
+Equipado
+Desbloqueado no nível {0}
+Fechar
+Cancelar
+Próximo
+Sair
+EXP
+BAP PASSE
+Para o nível
+Promovido
+Rebaixado
+Nível {0}
+Nível Máximo
+Vitória
+Derrota
+Login
+Complete o login
+Digite seu apelido:
+Termos e Condições
+Política de Privacidade
+Eu concordo com os Termos e Condições e com a Política de Privacidade
+O apelido deve conter de 3 a 20 caracteres! Não é permitido o uso de caracteres especiais.
+O apelido já está em uso!
+É necessário concordar com os termos de uso e a política de privacidade para continuar
+Sair
+Tem certeza de que deseja fechar o jogo?
+Você foi desconectado.   Por favor, recarregue a página para reconectar.
+Você já está conectado. Por favor, feche esta janela.
+juntou-se ao jogo.
+Chega de spam! Aguarde por {0} segundo(s)
+Sinalizando
+{0} {1}
+Perigo
+A caminho
+Inimigo à vista
+Preciso de ajuda
+Alertou sobre esta posição
+Está a caminho desta posição
+Viu um inimigo
+Está pedindo ajuda
+Aliado
+Inimigo
+NPC Aliado
+NPC Inimigo
+Neutro
+Habilidade {0} poderá ser usada dentro de {1} segundo(s)
+Habilidade {0} está pronta!
+Foi solado por
+foi de base
+Aperte {0} para soltar
+ou
+para expandir
+A bolsa de poções está cheia!
+Ouro no máximo!
+Trocar
+HP
+Sacrificar
+Sacrificando
+Comprar
+Comprando
+Precisa
+Em estoque
+Atual
+Máximo
+
+
+
+
+
+
+
+Melhoria
+Ouro
+de Dano
+de Velocidade de movimento
+de Redução do tempo de recarga
+de Chance de Acerto Crítico
+de Dano Crítico
+de Roubo de vida
+de Velocidade de Ataque
+de Espinhos
+de Escudo
+de Vida
+de Regeneração de Vida
+de Porcentagem de Vida
+Invulnerável
+Cura
+Arremessa ao Ar
+No Ar
+Atordoar
+Atordoado
+Silêncio
+Silenciado
+Enraizamento
+Enraizado
+Lentidão
+Lento
+Empurrão
+Empurrado
+Acelerado
+Veneno
+Envenenado
+Combustão
+Clone
+Reconjurar
+Fraqueza
+Enfraquecido
+Vulnerável
+Escudo
+Fortalecido
+Enredar
+Enredado
+Confuso
+Contra-ataque
+Pavor
+Apavorado
+Cegueira
+Cego
+Gigantesco
+Escorregadio
+Congelado
+Redução de visão
+Visão reduzida
+Personagem
+Item
+Interativo
+Melhorar
+Melhorando
+Não há nada para melhorar neste item!
+O item já alcançou seu nível máximo!
+Melhorar por
+Loja
+Máquina de suco
+Comprar por
+A máquina está esgotada.
+Comprar suco por
+À venda
+Vender por
+Areia movediça
+Cana de pesca
+Comece a pescar
+PUXE!!!
+Peixe!?
+Rode de pesca quebrado :(
+Pedra Secreta
+Armadilha de Dardos Envenenados
+Altar de Ressurreição
+Altar de Ressurreição Inativo
+Posto de Melhorias
+Caixa de Item
+Caixa de Item Rara
+Caixa de Item Lendária
+Brabobô
+Brabobô Bolado
+Caixa de Item Trancada
+Caixa de Item Trancada
+Torreta
+Caixa de Item Trancada
+Orbe do Poder
+Entrega Aérea
+A Entrega Aérea está em percurso
+A Entrega Aérea aterrissou
+Barril Explosivo
+
+Barril Congelante
+Congelador Empurrável
+Explosivo Empurrável
+
+Hiperpulo
+Hiperpulo Camuflado
+Colmeia
+Armadilha
+Runa de Sangue
+Concede +40% de Dano
+Concede +75% de Roubo de Vida
+Você saciou a runa.
+A runa clama por sangue.
+Sacrificar
+Sacrificando
+Máximo
+Máximo
+Cacto Espinhento
+Ímpeto Instantâneo
+Cura Instantânea
+Fortalecimento Instantâneo
+Posto de Vendas
+Piso Congelado
+Cristal do Poder
+Mato seco
+Gosma Mandachuva
+Máximo
+Máximo
+Máximo
+Máximo
+Máximo
+Máximo
+Caixa de Item Trancada
+Máximo
+Máximo
+Máximo
+Máximo
+Máximo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A zona está fechando!
+A zona fechará em apenas {0} segundo(s)
+Entrega Aérea enviada!
+VAI!
+VITÓRIA
+DERROTA
+{0}º Lugar
+Assistir
+Assistindo
+Voltar ao Lobby
+Falar com o grupo...
+GRUPO
+Desligado
+Padrão
+Ilimitado
+Baixo
+Médio
+Alto
+Ultra
+Customizado
+Habilitado
+Desabilitado
+Alguns textos podem não ter sido devidamente atualizados. Reinicie o jogo para que as mudanças sejam aplicadas corretamente.
+Aperte uma tecla
+LOGOUT
+Tem certeza que deseja sair?
+Todo o progresso atual será perdido. 
+Geral
+Gráficos
+Áudio
+Controles
+Configurações
+Geral
+Interface
+Jogo
+Privacidade
+Tela
+Qualidade
+Volume
+Atalhos do Jogo
+Atalhos do Menu
+Idioma
+Região
+Modo de exibição
+Janela
+Janela sem Bordas
+Tela cheia
+Resolução
+Tamanho da Interface
+Mostrar Ping
+Mostrar FPS
+Mostrar versão atual
+Ocultar mensagens do chat
+Intensidade de estremecimento da tela
+Jogar de forma Anônima
+Ocultar apelidos
+Filtro de Linguagem
+Escala de Renderização
+Limite de frequência de quadros
+Ajuste rápido de Qualidade
+Anti-Aliasing
+Sombras em Tempo Real
+Oclusão de Ambiente
+Bloom
+Profundidade de Campo
+Volume Geral
+Volume da Música
+Volume do Ambiente
+Volume dos Efeitos Sonoros
+Volume das Sinalizações
+Mover para Cima
+Mover para Baixo
+Mover para Esquerda
+Mover para Direita
+Ataque Básico
+Habilidade Especial
+Habilidade de Movimentação
+Ultimate
+Usar Poção
+Usar Consumível
+Cancelar habilidade
+Largar Item 1
+Largar Item 2
+Largar Item 3
+Largar Poção
+Largar Ouro
+Largar Consumível
+Travar câmera
+Abrir/Enviar mensagens
+Sinalizar
+Figurinhas
+Pressionar para mostrar Minimapa
+Alternar visualização do Minimapa
+Interagir
+Mostrar mais informações
+Amistosa
+Ranqueada
+Treinamento
+Aquecimento
+MINI SOLO
+MINI DUOS
+MINI TRIOS
+SOLO
+DUOS
+TRIOS
+RANQUEADA DUO
+RANQUEADA TRIO
+Sem ranque
+Bronze
+Prata
+Ouro
+Platina
+Diamante
+Imperial
+Divino
+Comum
+Incomum
+Raro
+Épico
+Lendário
+Item
+Consumível
+Moeda
+Cabeça
+Torso
+Pés
+Boné Robusto
+Tênis Robusto
+Boné Acrônico
+Mochila Acrônica
+Mochila Pontiaguda
+Tênis Pontiagudo
+Boné Pontiagudo
+Tênis Ambidestro
+Mochila Farpada
+Tênis Ligeiro
+Mochila Vampírica
+Boné Vampírico
+Suco
+Beba para restaurar PV
+Ouro
+Moeda simples usada em diversas atividades.
+Tênis Farpado
+Boné Farpado
+Boné Ambidestro
+Mochila Ambidestra
+Mochila Robusta
+Tênis Acrônico
+Boné Ligeiro
+Mochila Ligeira
+Tênis Vampírico
+Boné Gosmento
+Boné Gosmento
+Boné Gosmento
+Boné Gosmento
+Boné Gosmento
+Boné Gosmento
+Boné Gosmento
+Boné Gosmento
+Boné Gosmento
+Boné Gosmento
+Boné Gosmento
+Proteína Protetora
+É o tankas?
+Barril Explosivo
+Cabe no bolso!
+Hiperpulo
+Instala um Hiperpulo onde quiser.
+Hiperpulo Camuflado
+Instala um Hiperpulo Camuflado onde quiser.
+Armadilha
+É portátil e funciona em ursos!
+Raspadinha Turbinada
+Beba e fique frio.
+Torreta
+Torreta portátil e fácil de instalar.
+Cacto
+Plante-o aonde quiser.
+Colméia
+Cabe no bolso!
+Explosivo Empurrável
+Empurrável e portátil, dá para ficar melhor que isso?
+Bumper 
+É portátil e amortece impactos!
+Telescópio
+Cabe no bolso!
+Ampulheta
+É quase um relógio de bolso!
+Congelador Empurrável
+Empurrável e portátil, dá para ficar melhor que isso?
+Boneco de Neve
+Ele gosta de abraços quentinhos.
+Ele gosta de abraços quentinhos.
+Ele gosta de abraços quentinhos.
+Ele gosta de abraços quentinhos.
+Ele gosta de abraços quentinhos.
+Ele gosta de abraços quentinhos.
+Ele gosta de abraços quentinhos.
+Ele gosta de abraços quentinhos.
+Ele gosta de abraços quentinhos.
+Ele gosta de abraços quentinhos.
+Ele gosta de abraços quentinhos.
+Ele gosta de abraços quentinhos.
+Ele gosta de abraços quentinhos.
+Ele gosta de abraços quentinhos.
+Ele gosta de abraços quentinhos.
+Ele gosta de abraços quentinhos.
+Ele gosta de abraços quentinhos.
+Comum
+Incomum
+Raro
+Épico
+Lendário
+Emote
+Figurinha
+Golpe Final
+Moeda
+Ouro
+Moeda simples usada em diversas atividades.
+Fractais
+Moeda exclusiva usada em serviços especiais.
+Bônus
+BAPBAP
+O logotipo do BAPBAP, em sua versão horizontal.
+BAPBAP Contornado
+O logotipo do BAPBAP, em sua versão horizontal e contornado de vermelho
+Pão
+É uma figurinha de pão.
+Coroa
+Levanta a cabeça, princesa, senão a coroa cai.
+Orgulho Espectral
+O fantasminha curtiu!
+Surpresa Espectral
+O fantasminha não esperava por essa!
+Risada Espectral
+O fantasminha está se mijando de rir.
+Tristeza Espectral
+O fantasminha não merecia isso...
+Raiva Espectral
+O fantasminha está de saco cheio.
+Achei Fácil
+Use isto aqui para mostrar quem é que manda no pedaço!
+E o código?
+Tá, mas quando é que vamos ter um código novo?
+Lápide
+É só uma lápide.
+Lápide Alada
+Uma lápide com asinhas radicais.
+Lápide do Beta
+Uma lápide chiquíssima, feita apenas para jogadores do beta.
+Lápide Grande
+Eita, é grandona mesmo.
+Básica
+Especial
+Movimentação
+Ultimate
+Bate e Corre
+Dispara 4 balas pequenas.
+Atira 4 balas pequenas, cada projétil causa {1}.
+Quer balinha?
+Dispara 3 balas de uma só vez. Reseta o tempo de recarga de FALOU! ao atingir um inimigo.
+Dispara 3 balas de uma só vez, cada uma causando {1}. Reseta o tempo de recarga de FALOU! ao atingir um inimigo.
+FALOU!
+Avança rapidamente.
+Avança rapidamente.
+Chuva de Balas
+Atira em tudo e todos ao seu redor. Causa lentidão ao atingir um inimigo.
+Atira em tudo e todos ao seu redor, causando {1}. Aplica {2} ao atingir um inimigo.
+Chuck Soco
+Uma sequência de 3 golpes. Atingir um inimigo te concede um acúmulo de Pancada.
+Uma sequência de 3 golpes, cada um causando {1}. Acertar um oponente fará com que você ganhe um acúmulo de Pancada e diminuirá o tempo de recarga de Chuck Murro.
+Chuck Murro
+Dê um soco poderoso. Atordoa inimigos caso Chuck tenha o máximo de acúmulos de Pancada.
+Dê um soco poderoso que causa {1} e aplica {2}. Aplica {3} caso Chuck tenha o máximo de acúmulos de Pancada.
+Chuck Salto
+Salta para um local. Arremessará ao ar quaisquer inimigos que estejam no ponto de aterrissagem.
+Salta para um local. {1} inimigos no ponto de aterrissagem e causa {2}.
+CHUCK!!!!
+Fica gigantesco e aumenta sua vida, dano e velocidade de movimento.
+Fica gigantesco por {1} segundos, concedendo {2} e {3}. Durante a habilidade, Chuck toma {4} a menos de dano e se cura em {5} de sua Vida Máxima por segundo.
+Croac Croac
+Uma sequência de 3 cortes.
+Uma sequência de três cortes. Os dois primeiros cortes causam {1} e o último {2}.
+MLEM
+Usa a sua língua para se grudar a um alvo. Causa lentidão ao atingir um inimigo.
+Usa a sua língua para se grudar a um alvo. Aplica {1} ao atingir inimigos.
+Hipt hopt
+Salta para um local. Causa lentidão no ponto de aterrissagem.
+Salta para um local. Aplica {1} e {2} no ponto de aterrissagem. Acertar um inimigo reduz o tempo de recarga em {3} segundos.
+Picadinho
+Avança violentamente. Causa muito dano aos Inimigos que estiverem em seu caminho.
+Avança violentamente, causando {1} e aplicando {2} nos inimigos que estiverem em seu caminho.
+Manda brasa!
+Incendeia uma área.
+Incendeia uma área que causa {1}.
+Tá pegando fogo!
+Incendeia uma área crescente. Causa combustão e lentidão ao atingir inimigos. 
+Incendeia uma área crescente. Causa {1} e {2} ao atingir inimigos. 
+Em chamas!
+Invoca uma proteção de fogo.
+Invoca uma proteção de fogo que dura {4} segundos. Concede a si mesmo {1} e aumenta seu {2} em {3}.
+Tô só aquecendo!
+Invoca um enorme meteoro para colidir com o chão.
+Invoca um enorme meteoro para colidir com o chão. Seu impacto causa {1}.
+Flecha Violeta
+Atira uma flecha de energia.
+Dispara uma flecha de energia que causa {1}
+Presente Lunar
+Cria uma chuva de flechas em uma pequena área. Causa lentidão ao atingir inimigos.
+Cria uma chuva de flechas em uma pequena área. Causa {1} e aplica {2} ao atingir inimigos.
+Foxtrote
+Atira uma flecha para se lançar para longe. Inimigos atingidos pela flecha serão arremessados ao ar.
+Dispara uma flecha para se lançar para longe. Ao atingir um inimigo que causa {1} e {2}.
+Estrela Cadente
+Atira uma enorme flecha perfurante que atravessa inimigos e obstáculos. Enraiza inimigos ao contato.
+Atira uma enorme flecha perfurante que atravessa inimigos e obstáculos. Alvos sofrem {1} e recebem o efeito {2} ao serem atingidos.
+Corta Corta
+Uma sequência de 3 golpes. 
+Uma sequência de 3 golpes. Os dois primeiros são socos que causam {1} e o terceiro é um grande impacto no chão que causa {2}.
+Gostinho de Gengibre
+Bofeteia inimigos na sua frente. Atordoa e aplica fraqueza ao acertar. 
+Bofeteia inimigos na sua frente causando {1}. Aplica {1} e {2} ao acertar.
+Rolo de Sushi
+Carrega um avanço. Causa dano e lentidão aos inimigos que estiverem no caminho.
+Carrega um avanço. Causa {1} e {2} aos inimigos que estiverem no caminho.
+Estrondo Tempura
+Salta e golpeia uma área. Você e aliados no ponto de aterrissagem receberão escudo, e inimigos serão arremessados ao ar.
+Salta e golpeia uma área. Causa {1} em oponentes atingidos e concede {2} aos aliados por {3} da sua vida máxima. Ganha {4} de escudo para cada inimigo acertado pela habilidade.
+Ceifar
+Uma sequência de dois cortes.
+Uma sequência de dois cortes que causam {1}. Caso seja usado durante o efeito de Passinho Trevoso, acresce {2} no corte.
+Rasgar
+Golpeia com força suficiente para rasgar o chão. Causa vulnerabilidade em inimigos atingidos.
+Golpeia com força suficiente para rasgar o chão. O rasgo causa {1} e inflinge {2} em quem atingir. Caso seja usado durante o efeito de Passinho Trevoso, se cura em {3} do dano causado.
+Passinho Trevoso
+Fica invisível e concede velocidade de movimento. 
+Se torna invisível por {1} segundos, ganha {2} e {3} enquanto a habilidade durar.
+Descanse em Paz
+Avança e desfere um golpe em sua frente.
+Avança e desfere um golpe em sua frente que causa {1}.
+Hello World
+Dispara um projétil eletrônico.
+Dispara um projétil eletrônico que causa {1}.
+Raycast
+Dispara um raio. Causa lentidão ao atingir inimigos.
+Dispara um raio. Causa {1} e aplica {2} em inimigos atingidos.
+Ctrl+C & Ctrl+V
+Teletransporta e cria um clone em sua posição anterior. Reconjurar a habilidade fará você trocar de lugar com seu clone.
+Teletransporta e cria um clone em sua posição anterior, a cópia durará {1} segundos. Reconjurar a habilidade fará você trocar de lugar com seu clone.
+memcpy
+Cria um clone. Reconjurar a habilidade fará você trocar de lugar com seu clone.
+Cria um clone no local alvo que durará {1} segundos. Reconjurar a habilidade fará você trocar de lugar com seu clone.
+Bazuca
+Dispara um foguete explosivo.
+Dispara um foguete explosivo. Causa {1} no impacto e {2} em sua explosão.
+Alvo Localizado
+Dispara um míssil teleguiado.
+Dispara um míssil que persegue o oponente. Causa {1} no impacto e {2} em sua explosão.
+Pulo Foguete
+Utiliza sua bazuca para realizar um salto explosivo. Inimigos no ponto da explosão serão arremessados ao ar.
+Utiliza sua bazuca para realizar um salto explosivo. Causa {1} e {2} no ponto da explosão.
+Campo Minado
+Instala minas de proximidade no chão. Causa lentidão ao atingir inimigos. 
+Instala minas de proximidade no chão. Cada uma causará {1} e aplicará {2} ao explodir. As minas durarão por {3} segundos.
+Corte Flamejante
+Uma sequência de 3 cortes.
+Dois cortes rápidos que causam {1} e em seguida um terceiro e poderoso golpe de espada que causa {2}.
+Técnica Refletiva
+Contra-ataca golpes e reflete projéteis.
+Torna-se invunerável e realizará um {1} por {2} segundos. Enquanto a Técnica Refletiva estiver ativa, será possível devolver projéteis e contra-atacar golpes. Os ataques refletidos causarão {3}.
+Avanço Ígneo
+Avança ateando fogo à sua katana. É possível reconjurar a habilidade após acertar um inimigo, até um máximo de 3 vezes. 
+Avança ateando fogo à sua katana. Causa {1} e aplica {2} aos inimigos atingidos. Acertar um inimigo diminui o tempo de recarga da habilidade e concede {3} ao seu próximo Corte Flamejante.
+Chama Cortante
+Lança um projétil ardente com sua katana. Esta habilidade carrega ao causar dano direto a inimigos.
+Lança um projétil ardente com sua katana. Causa {1} e aplica {2} aos inimigos. Chama Cortante recarrega mais rápido ao acertar inimigos com Corte Flamejante.
+Palitinhos da Dor
+Uma sequência de três chutes, sendo os dois últimos pontapés em rápida sucessão.
+Golpeia seus alvos com muita força, causando {1} no primeiro chute e então chutando rapidamente mais duas vezes, causando {2} e {3} respectivamente.
+Caldo a Jato
+Salta e chuta rapidamente em uma curta distância.
+Salta e chuta, causando {1} e aplicando {2} por {3} segundos.
+Avanço Missô
+Avança com uma joelhada voadora.
+Avança em uma direção, causando {1} aos alvos atingidos.
+Pediu, chegou!
+Performa um chute giratório e empurra inimigos atingidos.
+Performa um chute giratório e, em cone, causa {1} e aplica {2} aos alvos acertados.
+Checar
+Detalhes
+{0} de {1} Inscritos para bater a meta.
+Desafio do Beta
+Vidas
+Aviso
+{0} O jogador perderá uma vida caso perca uma partida.
+Não haverá devoluções de vidas perdidas por desconexão ou quaisquer ocorrências.
+Sem vidas restantes
+Acabaram suas vidas!
+É possível adquirir mais vidas ao concluir as tarefas:
+Consiga mais vidas
+Tempo restante para inscrição
+{0} Inscrições
+de {0} necessárias para iniciar
+Ganhe vidas
+Você está Inscrito
+Compartilhe o seu código de convite:
+A cada {1} inscrito, US$ 1 será adicionado ao valor total!
+O período de inscrições acabou! Fique ligado mais para novidades!
+Ganhe Vidas
+Ganhe vidas ao completar tarefas. Quanto mais vidas você ganhar, mais chances terá de ganhar!
+Seu código de convite:
+Conta Twitch não vinculada
+Vincular
+Conta Twitch vinculada com {0}
+Convide Amigos!
+{0} Amigos convidados
+Resgatar!
+Resgatado
+A seguir
+Indisponível
+{0} de {1} 
+Tarefa em andamento. Convide mais amigos para obter a recompensa!
+Twitch Drops (12 a 15 de Outubro)
+Dia {0}
+Tarefa em andamento. Assista transmissões na Twitch para receber Drops e obter a recompensa!
+Jogue partidas!
+{0} partidas jogadas
+Tarefa em andamento. Jogue mais partidas para obter a recompensa!
+Premiação
+O valor total da premiação será dividido entre os 50 melhores jogadores.
+{0}º lugar
+{0} ponto(s)
+Participação
+cada
+Como Ganhar
+Jogue até suas vidas acabarem. Os jogadores com mais vitórias serão coroados campeões do torneio!
+Consiga Vidas Extras
+Complete tarefas para que consiga mais vidas. Mais vidas significa mais chances!
+Ganhe partidas
+Colete vitórias ao ser o último de pé. Você perderá uma vida caso sua equipe seja eliminada.
+Suba as classificações
+Apenas os melhores ganharão o prêmio. Hora de pôr a mão na massa!
+Modalidade
+Um evento de 4 dias que ocorrerá entre o dia 12 e 15 de Outubro.
+Os servidores estarão abertos das 09:00 às 02:00  da manhã (no fuso horário PST)
+Uma variedade de modificadores de jogo que se acumulam ao passar dos dias!
+Dia {0}
+Mais Ouro
+Pilhas e pilhas de ouro.
+Máximo de 3 vitórias
+Período Noturno
+Ai! Que som foi esse!?
+Máximo de 10 vitórias
+Chuva de Meteoros
+Se correr o bicho pega, se ficar o bicho come.
+Maximo de 25 vitórias
+Vida Baixa
+Lascou.
+Regras
+Quebrar qualquer uma das regras resultará em desqualificação e banimento.
+Não abuse de bugs.
+Não utilize bots para ganhar vidas extras.
+Não use contas alternativas. Somente uma inscrição por pessoa.
+Não faça aliança com outras equipes.
+Inscreva-se agora para ter a chance de encher o bolso com {0}
+{0} Inscrições
+de {0} necessárias para iniciar
+Voltar ao topo
+{0} se inscreveu!
+{0} conseguiu {1} vida(s)!
+Inscrever-se
+Digite um código de convite.
+Entrar
+Inscrito
+Convite copiado!
+Vidas
+Ganhe vidas ao completar tarefas. Quanto mais vidas você ganhar, mais chances terá de ganhar!
+Twitch Drops
+Assista transmissões na Twitch para receber Drops e obter a recompensa!
+
+
+#VALUE!

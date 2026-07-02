@@ -1,0 +1,11 @@
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.Common\netstandard2.0\Il2CppInterop.Common.deps.json
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.Common\netstandard2.0\Il2CppInterop.Common.dll
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.Common\netstandard2.0\Il2CppInterop.Common.xml
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.Common\obj\Release\netstandard2.0\Il2CppInterop.Common.csproj.AssemblyReference.cache
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.Common\obj\Release\netstandard2.0\Il2CppInterop.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.Common\obj\Release\netstandard2.0\Il2CppInterop.Common.AssemblyInfoInputs.cache
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.Common\obj\Release\netstandard2.0\Il2CppInterop.Common.AssemblyInfo.cs
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.Common\obj\Release\netstandard2.0\Il2CppInterop.Common.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.Common\obj\Release\netstandard2.0\Il2CppInterop.Common.sourcelink.json
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.Common\obj\Release\netstandard2.0\Il2CppInterop.Common.dll
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.Common\obj\Release\netstandard2.0\Il2CppInterop.Common.xml

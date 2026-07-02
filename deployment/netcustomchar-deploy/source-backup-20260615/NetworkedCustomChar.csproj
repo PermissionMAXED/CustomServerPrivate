@@ -1,0 +1,62 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    NetworkedCustomChar (Milestone 1) — CLEAN NEW MelonLoader mod.
+    Independent of BAPBAP.ModAPI. Reference block copied from the proven working
+    BAPBAP.ModAPI.csproj / BAPBAP.ModAPI.props (verified live build setup).
+
+    PlatformTarget = x86: the shipped Battleroyalebuild runs MelonLoader patched for
+    x86 (see MelonLoader\net6\*.pre-x86support backups). The design doc said x64, but
+    the proven working mod and the actual game binary are x86 — reality wins.
+  -->
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Platforms>AnyCPU;x86</Platforms>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <AssemblyName>NetworkedCustomChar</AssemblyName>
+    <RootNamespace>NetworkedCustomChar</RootNamespace>
+    <Version>0.1.0</Version>
+    <Authors>bapcustom</Authors>
+    <Description>M1 networked custom-character spine for BAPBAP (clone+identical registration+server spawn).</Description>
+
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <NoWarn>$(NoWarn);CS0436;CS1591;CS8632;CS8600;CS8604;CS0414</NoWarn>
+
+    <!-- Game build root: the proven Battleroyalebuild next to this repo. -->
+    <BAPBAPBuildRoot Condition="'$(BAPBAPBuildRoot)' == ''">$(MSBuildThisFileDirectory)..\Battleroyalebuild</BAPBAPBuildRoot>
+    <BAPBAPMelon>$(BAPBAPBuildRoot)\MelonLoader\net6</BAPBAPMelon>
+    <BAPBAPIl2CppAsm>$(BAPBAPBuildRoot)\MelonLoader\Il2CppAssemblies</BAPBAPIl2CppAsm>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Modding loader / runtime -->
+    <Reference Include="MelonLoader"><HintPath>$(BAPBAPMelon)\MelonLoader.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="0Harmony"><HintPath>$(BAPBAPMelon)\0Harmony.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Il2CppInterop.Runtime"><HintPath>$(BAPBAPMelon)\Il2CppInterop.Runtime.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Il2CppInterop.Common"><HintPath>$(BAPBAPMelon)\Il2CppInterop.Common.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Newtonsoft.Json"><HintPath>$(BAPBAPMelon)\Newtonsoft.Json.dll</HintPath><Private>false</Private></Reference>
+
+    <!-- Game proxy assemblies -->
+    <Reference Include="Assembly-CSharp"><HintPath>$(BAPBAPIl2CppAsm)\Assembly-CSharp.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Il2Cppmscorlib"><HintPath>$(BAPBAPIl2CppAsm)\Il2Cppmscorlib.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Il2CppSystem"><HintPath>$(BAPBAPIl2CppAsm)\Il2CppSystem.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Il2CppSystem.Core"><HintPath>$(BAPBAPIl2CppAsm)\Il2CppSystem.Core.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Il2CppMirror"><HintPath>$(BAPBAPIl2CppAsm)\Il2CppMirror.dll</HintPath><Private>false</Private></Reference>
+
+    <!-- Unity engine -->
+    <Reference Include="UnityEngine"><HintPath>$(BAPBAPIl2CppAsm)\UnityEngine.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.CoreModule"><HintPath>$(BAPBAPIl2CppAsm)\UnityEngine.CoreModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.AnimationModule"><HintPath>$(BAPBAPIl2CppAsm)\UnityEngine.AnimationModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.PhysicsModule"><HintPath>$(BAPBAPIl2CppAsm)\UnityEngine.PhysicsModule.dll</HintPath><Private>false</Private></Reference>
+
+    <!-- M2 visual graft: AssetBundle support. Use MelonLoader's UnityEngine.Il2CppAssetBundleManager
+         (the in-game IL2CPP-stripped UnityEngine.AssetBundle icalls bind unreliably on this build). -->
+    <Reference Include="UnityEngine.AssetBundleModule"><HintPath>$(BAPBAPIl2CppAsm)\UnityEngine.AssetBundleModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.Il2CppAssetBundleManager"><HintPath>$(BAPBAPMelon)\UnityEngine.Il2CppAssetBundleManager.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+
+</Project>

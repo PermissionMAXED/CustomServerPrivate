@@ -1,0 +1,467 @@
+[[38;2;50;205;50m00:34:02.283[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[UnityMemory] Configuration Parameters - Can be set up in boot.config[0m
+[[38;2;50;205;50m00:34:02.285[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-bucket-allocator-granularity=16"[0m
+[[38;2;50;205;50m00:34:02.286[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-bucket-allocator-bucket-count=8"[0m
+[[38;2;50;205;50m00:34:02.287[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-bucket-allocator-block-size=4194304"[0m
+[[38;2;50;205;50m00:34:02.288[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-bucket-allocator-block-count=1"[0m
+[[38;2;50;205;50m00:34:02.290[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-main-allocator-block-size=16777216"[0m
+[[38;2;50;205;50m00:34:02.290[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-thread-allocator-block-size=16777216"[0m
+[[38;2;50;205;50m00:34:02.290[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-gfx-main-allocator-block-size=16777216"[0m
+[[38;2;50;205;50m00:34:02.290[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-gfx-thread-allocator-block-size=16777216"[0m
+[[38;2;50;205;50m00:34:02.290[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-cache-allocator-block-size=4194304"[0m
+[[38;2;50;205;50m00:34:02.290[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-typetree-allocator-block-size=2097152"[0m
+[[38;2;50;205;50m00:34:02.291[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-profiler-bucket-allocator-granularity=16"[0m
+[[38;2;50;205;50m00:34:02.291[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-profiler-bucket-allocator-bucket-count=8"[0m
+[[38;2;50;205;50m00:34:02.291[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-profiler-bucket-allocator-block-size=4194304"[0m
+[[38;2;50;205;50m00:34:02.291[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-profiler-bucket-allocator-block-count=1"[0m
+[[38;2;50;205;50m00:34:02.291[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-profiler-allocator-block-size=16777216"[0m
+[[38;2;50;205;50m00:34:02.291[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-profiler-editor-allocator-block-size=1048576"[0m
+[[38;2;50;205;50m00:34:02.291[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-temp-allocator-size-main=4194304"[0m
+[[38;2;50;205;50m00:34:02.292[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-job-temp-allocator-block-size=2097152"[0m
+[[38;2;50;205;50m00:34:02.292[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-job-temp-allocator-block-size-background=1048576"[0m
+[[38;2;50;205;50m00:34:02.292[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"[0m
+[[38;2;50;205;50m00:34:02.292[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-allocator-temp-initial-block-size-main=262144"[0m
+[[38;2;50;205;50m00:34:02.292[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-allocator-temp-initial-block-size-worker=262144"[0m
+[[38;2;50;205;50m00:34:02.292[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-temp-allocator-size-background-worker=32768"[0m
+[[38;2;50;205;50m00:34:02.292[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-temp-allocator-size-job-worker=262144"[0m
+[[38;2;50;205;50m00:34:02.292[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-temp-allocator-size-preload-manager=262144"[0m
+[[38;2;50;205;50m00:34:02.293[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"[0m
+[[38;2;50;205;50m00:34:02.293[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-temp-allocator-size-audio-worker=65536"[0m
+[[38;2;50;205;50m00:34:02.293[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-temp-allocator-size-cloud-worker=32768"[0m
+[[38;2;50;205;50m00:34:02.293[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-temp-allocator-size-gfx=262144"[0m
+
+[[38;2;50;205;50m00:34:02.773[0m] [38;2;211;211;211m------------------------------[0m
+[[38;2;50;205;50m00:34:02.775[0m] [38;2;211;211;211mMelonLoader v0.7.2 Open-Beta[0m
+[[38;2;50;205;50m00:34:02.777[0m] [38;2;211;211;211mOS: Windows 11[0m
+[[38;2;50;205;50m00:34:02.777[0m] [38;2;211;211;211mHash Code: 58AB98835E598BD67B7DB233734DE8603F92C9C6A6081B13CB9A5CC37C02DD13[0m
+[[38;2;50;205;50m00:34:02.777[0m] [38;2;211;211;211m------------------------------[0m
+[[38;2;50;205;50m00:34:02.777[0m] [38;2;211;211;211mGame Type: Il2cpp[0m
+[[38;2;50;205;50m00:34:02.777[0m] [38;2;211;211;211mGame Arch: x86[0m
+[[38;2;50;205;50m00:34:02.778[0m] [38;2;211;211;211m------------------------------[0m
+[[38;2;50;205;50m00:34:02.778[0m] [38;2;211;211;211mCommand-Line: [0m
+[[38;2;50;205;50m00:34:02.778[0m] [38;2;211;211;211m------------------------------[0m
+[[38;2;50;205;50m00:34:02.778[0m] [38;2;211;211;211mCore::BasePath = C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild[0m
+[[38;2;50;205;50m00:34:02.780[0m] [38;2;211;211;211mGame::BasePath = C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild[0m
+[[38;2;50;205;50m00:34:02.780[0m] [38;2;211;211;211mGame::DataPath = C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\bapbap_Data[0m
+[[38;2;50;205;50m00:34:02.780[0m] [38;2;211;211;211mGame::ApplicationPath = C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\bapbap.exe[0m
+[[38;2;50;205;50m00:34:02.780[0m] [38;2;211;211;211mRuntime Type: net6[0m
+[[38;2;50;205;50m00:34:03.219[0m] [38;2;255;0;255m------------------------------[0m
+[[38;2;50;205;50m00:34:03.220[0m] [38;2;211;211;211mGame Name: BAPBAP[0m
+[[38;2;50;205;50m00:34:03.220[0m] [38;2;211;211;211mGame Developer: gg.bapbap[0m
+[[38;2;50;205;50m00:34:03.222[0m] [38;2;211;211;211mUnity Version: 2022.3.38f1[0m
+[[38;2;50;205;50m00:34:03.224[0m] [38;2;211;211;211mGame Version: 0.1.1758-38212[0m
+[[38;2;50;205;50m00:34:03.224[0m] [38;2;255;0;255m------------------------------[0m
+
+[[38;2;50;205;50m00:34:04.033[0m] [38;2;211;211;211mPreferences Loaded![0m
+
+[[38;2;50;205;50m00:34:04.052[0m] [38;2;211;211;211mLoading UserLibs...[0m
+[[38;2;50;205;50m00:34:04.083[0m] [38;2;255;0;255m------------------------------[0m
+[[38;2;50;205;50m00:34:04.098[0m] [38;2;169;169;169mMelon Assembly loaded: '.\UserLibs\BAPBAP.ModAPI.dll'[0m
+[[38;2;50;205;50m00:34:04.098[0m] [38;2;169;169;169mSHA256 Hash: '0E14F39A9C47B6EBA106A0F23E76A0989B3270D7BCDD3E4BB0DD51E63BDB3CB5'[0m
+[[38;2;50;205;50m00:34:04.098[0m] [38;2;255;0;255m------------------------------[0m
+[[38;2;50;205;50m00:34:04.098[0m] [38;2;211;211;211m0 UserLibs loaded.[0m
+
+[[38;2;50;205;50m00:34:04.099[0m] [38;2;211;211;211mLoading Plugins...[0m
+[[38;2;50;205;50m00:34:04.105[0m] [38;2;211;211;211m0 Plugins loaded.[0m
+
+[[38;2;50;205;50m00:34:07.197[0m] [38;2;211;211;211mLoading Il2CppAssemblyGenerator...[0m
+[[38;2;50;205;50m00:34:07.239[0m] [[38;2;255;0;255mIl2CppAssemblyGenerator[0m] [38;2;211;211;211mUsing Cpp2IL Version: 2022.1.0-pre-release.21[0m
+[[38;2;50;205;50m00:34:07.240[0m] [[38;2;255;0;255mIl2CppAssemblyGenerator[0m] [38;2;211;211;211mUsing Il2CppInterop Version = 1.5.1+dbaf825aab891ff1e1627bea691bde0a81d1ad98[0m
+[[38;2;50;205;50m00:34:07.240[0m] [[38;2;255;0;255mIl2CppAssemblyGenerator[0m] [38;2;211;211;211mUsing Unity Dependencies Version = 2022.3.38[0m
+[[38;2;50;205;50m00:34:07.240[0m] [[38;2;255;0;255mIl2CppAssemblyGenerator[0m] [38;2;211;211;211mUsing Deobfuscation Regex = null[0m
+[[38;2;50;205;50m00:34:07.241[0m] [[38;2;255;0;255mIl2CppAssemblyGenerator[0m] [38;2;211;211;211mCpp2IL is up to date.[0m
+[[38;2;50;205;50m00:34:07.242[0m] [[38;2;255;0;255mIl2CppAssemblyGenerator[0m] [38;2;211;211;211mCpp2IL.Plugin.StrippedCodeRegSupport is up to date.[0m
+[[38;2;50;205;50m00:34:07.242[0m] [[38;2;255;0;255mIl2CppAssemblyGenerator[0m] [38;2;211;211;211mUnityDependencies is up to date.[0m
+[[38;2;50;205;50m00:34:07.242[0m] [[38;2;255;0;255mIl2CppAssemblyGenerator[0m] [38;2;211;211;211mChecking GameAssembly...[0m
+[[38;2;50;205;50m00:34:07.569[0m] [[38;2;255;0;255mIl2CppAssemblyGenerator[0m] [38;2;211;211;211mAssembly is up to date. No Generation Needed.[0m
+
+[[38;2;50;205;50m00:34:07.571[0m] [38;2;211;211;211mLoading Mods...[0m
+[[38;2;50;205;50m00:34:07.608[0m] [38;2;255;0;255m------------------------------[0m
+[[38;2;50;205;50m00:34:07.621[0m] [38;2;169;169;169mMelon Assembly loaded: '.\Mods\BapCustomServerMelon.dll'[0m
+[[38;2;50;205;50m00:34:07.621[0m] [38;2;169;169;169mSHA256 Hash: '7D8CD19A39CDEE6F2783150F5980D8FC95651A747CF9A1E4D77552FE73A0D11D'[0m
+[[38;2;50;205;50m00:34:07.623[0m] [38;2;169;169;169mMelon Assembly loaded: '.\Mods\NetworkedCustomChar.dll'[0m
+[[38;2;50;205;50m00:34:07.623[0m] [38;2;169;169;169mSHA256 Hash: 'ADC97B88D6C8DF8393A2D546964E5D1BB49422039F8B6DE2D3D31EDE0B046978'[0m
+
+[[38;2;50;205;50m00:34:08.060[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mLoaded custom server ini.[0m
+[[38;2;50;205;50m00:34:08.083[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[Perf] Client: targetFrameRate=144, vSync=0 (reduce DWM stall stutter)[0m
+[[38;2;50;205;50m00:34:08.084[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[BAPCustomConfig] mode=client upstream=http://ark.atomi23.de:5055 proxy=False localPort=5055 dedicatedPorts=http:- ws:- kcp:- tcp:- batchMode=False containsNoGraphicsArg=False autoJoin=none[0m
+[[38;2;50;205;50m00:34:08.086[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPrimed auto-login prefs for custom server session.[0m
+[[38;2;50;205;50m00:34:08.096[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 4 NetworkConfig runtime patch(es).[0m
+[[38;2;50;205;50m00:34:08.102[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 2 PreAwakeManager network config patch(es).[0m
+[[38;2;50;205;50m00:34:08.110[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 2 HttpClient host rewrite patch(es).[0m
+[[38;2;50;205;50m00:34:08.113[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled ControllerManager network runtime patch.[0m
+[[38;2;50;205;50m00:34:08.121[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 4 LobbyNetworkClient runtime network patch(es).[0m
+[[38;2;50;205;50m00:34:08.140[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 8 character selection tracker patch(es).[0m
+[[38;2;50;205;50m00:34:08.145[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 1 WebSocketClient selection propagation patch(es).[0m
+[[38;2;50;205;50m00:34:08.150[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled lifecycle guard on 2 Application.Quit overload(s). Guard expires in 120s (lobby-startup window).[0m
+[[38;2;50;205;50m00:34:08.152[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled AnalyticsManager custom-server no-op patch.[0m
+[[38;2;50;205;50m00:34:08.199[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled prefix on UILobbyCharacterSelectPage.OpenCharacterSummaryPage (lobby-build char fix).[0m
+[[38;2;50;205;50m00:34:08.226[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 40 character-select NullRef guard prefix patch(es).[0m
+[[38;2;50;205;50m00:34:08.232[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 5 PopulateCharIdsBeforeBuild prefix(es) on UILobbyCharacterSelectPage.[0m
+[[38;2;50;205;50m00:34:08.236[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 3 PopulateCharIdsBeforeBuild prefix(es) on UILobbyPlayTabPage.[0m
+[[38;2;50;205;50m00:34:08.283[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 32 LobbyController NullRef guard finalizer patch(es).[0m
+[[38;2;50;205;50m00:34:09.153[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 3 CharacterIsUnlocked force-unlock patch(es).[0m
+[[38;2;50;205;50m00:34:09.157[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled prefix on UICharactersConfiguration.TryGetLobbyCharConfigByIndex (right-panel-render fix).[0m
+[[38;2;50;205;50m00:34:09.158[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled prefix on UICharactersConfiguration.AvailableCharacterIds getter.[0m
+[[38;2;50;205;50m00:34:09.160[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled prefix on UIManager.Awake for pre-build char config population.[0m
+[[38;2;50;205;50m00:34:09.161[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled postfix on UIManager.Awake for post-build char config verification.[0m
+[[38;2;50;205;50m00:34:09.233[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mServer match policy fetched: Both (matchmaking=allowed, custom=allowed). When a path is blocked, the mod logs a clear error if the user tries to use it.[0m
+[[38;2;50;205;50m00:34:09.241[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mLocal proxy ready (port 5055)[0m
+[[38;2;50;205;50m00:34:09.241[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mDirect mode compatibility proxy enabled for legacy loopback API calls: 127.0.0.1:5055 -> http://ark.atomi23.de:5055/[0m
+[[38;2;50;205;50m00:34:09.248[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInitialized BAP Custom Server v1.0.5 during early registration. dedicated=False http=n/a ws=n/a kcp=n/a tcp=n/a[0m
+[[38;2;50;205;50m00:34:09.248[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[EarlyBoot] Pre-populated _lastAvailableCharacterIds with [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15][0m
+[[38;2;50;205;50m00:34:09.250[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstallUICharactersConfigurationAwakePostfix: installed postfix on .ctor[0m
+[[38;2;50;205;50m00:34:09.254[0m] [38;2;0;100;0m------------------------------[0m
+[[38;2;50;205;50m00:34:09.255[0m] [38;2;0;255;255mBAP Custom Server[0m v1.0.5
+[[38;2;50;205;50m00:34:09.255[0m] [38;2;211;211;211mby Sonic0810[0m
+[[38;2;50;205;50m00:34:09.255[0m] [38;2;169;169;169mAssembly: BapCustomServerMelon.dll[0m
+[[38;2;50;205;50m00:34:09.255[0m] [38;2;0;100;0m------------------------------[0m
+[[38;2;50;205;50m00:34:09.268[0m] [38;2;0;100;0m------------------------------[0m
+[[38;2;50;205;50m00:34:09.269[0m] [38;2;0;200;255mBAPBAP ModAPI[0m v2.2.1
+[[38;2;50;205;50m00:34:09.269[0m] [38;2;255;200;0mby BAPBAP Modding Community[0m
+[[38;2;50;205;50m00:34:09.269[0m] [38;2;169;169;169mAssembly: BAPBAP.ModAPI.dll[0m
+[[38;2;50;205;50m00:34:09.269[0m] [38;2;0;100;0m------------------------------[0m
+[[38;2;50;205;50m00:34:09.282[0m] [38;2;0;100;0m------------------------------[0m
+[[38;2;50;205;50m00:34:09.283[0m] [38;2;0;255;255mNetworkedCustomChar[0m v0.1.0
+[[38;2;50;205;50m00:34:09.283[0m] [38;2;211;211;211mby Sonic0810[0m
+[[38;2;50;205;50m00:34:09.283[0m] [38;2;169;169;169mAssembly: NetworkedCustomChar.dll[0m
+[[38;2;50;205;50m00:34:09.283[0m] [38;2;0;100;0m------------------------------[0m
+[[38;2;50;205;50m00:34:09.283[0m] [38;2;255;0;255m------------------------------[0m
+[[38;2;50;205;50m00:34:09.284[0m] [38;2;211;211;211m3 Mods loaded.[0m
+
+[[38;2;50;205;50m00:34:12.247[0m] [[38;2;255;255;0mIl2CppInterop[0m] [38;2;255;255;0mClass::Init signatures have been exhausted, using a substitute![0m
+[[38;2;50;205;50m00:34:14.990[0m] [[38;2;0;255;255mIl2CppInterop[0m] [38;2;211;211;211mRegistered mono type MelonLoader.Support.MonoEnumeratorWrapper in il2cpp domain[0m
+[[38;2;50;205;50m00:34:15.075[0m] [38;2;211;211;211mSupport Module Loaded: C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Dependencies\SupportModules\Il2Cpp.dll[0m
+[[38;2;50;205;50m00:34:15.084[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211mBAPBAP ModAPI v2.2.1 initializing ...[0m
+[[38;2;50;205;50m00:34:15.084[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m  by BAPBAP Modding Community[0m
+[[38;2;50;205;50m00:34:15.084[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m  loaded as C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\UserLibs\BAPBAP.ModAPI.dll[0m
+[[38;2;50;205;50m00:34:15.085[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks] Installing global hooks ...[0m
+[[38;2;50;205;50m00:34:15.091[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ PlayerHooks[0m
+[[38;2;50;205;50m00:34:15.092[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ MatchHooks[0m
+[[38;2;50;205;50m00:34:15.092[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ CombatHooks[0m
+[[38;2;50;205;50m00:34:15.092[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ChatHooks[0m
+[[38;2;50;205;50m00:34:15.092[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ NetworkHooks[0m
+[[38;2;50;205;50m00:34:15.092[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ UIHooks[0m
+[[38;2;50;205;50m00:34:15.093[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ AbilityHooks[0m
+[[38;2;50;205;50m00:34:15.093[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ StatusEffectHooks[0m
+[[38;2;50;205;50m00:34:15.093[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ItemHooks[0m
+[[38;2;50;205;50m00:34:15.093[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ VehicleHooks[0m
+[[38;2;50;205;50m00:34:15.093[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ EntityHooks[0m
+[[38;2;50;205;50m00:34:15.094[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ExtraAbilityHooks[0m
+[[38;2;50;205;50m00:34:15.094[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ExtraItemHooks[0m
+[[38;2;50;205;50m00:34:15.094[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ExtraVehicleHooks[0m
+[[38;2;50;205;50m00:34:15.094[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ExtraEntityHooks[0m
+[[38;2;50;205;50m00:34:15.094[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ExtraMovementHooks[0m
+[[38;2;50;205;50m00:34:15.095[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ExtraPassiveHooks[0m
+[[38;2;50;205;50m00:34:15.095[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ExtraInteractionHooks[0m
+[[38;2;50;205;50m00:34:15.098[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ExtraKillHooks[0m
+[[38;2;50;205;50m00:34:15.098[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ExtraEmoteHooks[0m
+[[38;2;50;205;50m00:34:15.098[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ExtraMetaHooks[0m
+[[38;2;50;205;50m00:34:15.098[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks] Done. 21 hook groups installed.[0m
+[[38;2;50;205;50m00:34:15.101[0m] [[38;2;0;255;255mIl2CppInterop[0m] [38;2;211;211;211mRegistered mono type BAPBAP.ModAPI.Lifecycle.ModUpdateRunner in il2cpp domain[0m
+[[38;2;50;205;50m00:34:15.101[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Lifecycle] ModUpdateRunner registered with Il2Cpp.[0m
+[[38;2;50;205;50m00:34:15.103[0m] [[38;2;0;255;255mIl2CppInterop[0m] [38;2;211;211;211mRegistered mono type BAPBAP.ModAPI.API.NotificationAPI+ScheduledFader in il2cpp domain[0m
+[[38;2;50;205;50m00:34:15.105[0m] [[38;2;0;255;255mIl2CppInterop[0m] [38;2;211;211;211mRegistered mono type BAPBAP.ModAPI.UI.ModLoaderUIRunner in il2cpp domain[0m
+[[38;2;50;205;50m00:34:15.105[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[ModLoaderUI] Runner registered with Il2Cpp.[0m
+[[38;2;50;205;50m00:34:15.106[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211mBAPBAP ModAPI ready. Mods should subclass ModBase to register.[0m
+[[38;2;50;205;50m00:34:15.142[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M5] loaded definition 'Blitz' (charId=15, enabled=False) from UserData\CustomChars\blitz.json.[0m
+[[38;2;50;205;50m00:34:15.143[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M5] loaded definition 'Eve' (charId=15, enabled=False) from UserData\CustomChars\eve.json.[0m
+[[38;2;50;205;50m00:34:15.145[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M5] loaded definition 'Medusa' (charId=15, enabled=True) from UserData\CustomChars\medusa.json.[0m
+[[38;2;50;205;50m00:34:15.145[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M5] active definition: name='Medusa' display='MEDUSA' charId=15 base=0 bundle='Medusa\medusa.bundle' visual='Medusa_Visual' assetId=0xB0B00F0F graft=True (loaded 3).[0m
+[[38;2;50;205;50m00:34:15.172[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] patched GameNetworkManager.Awake (pre=False post=True).[0m
+[[38;2;50;205;50m00:34:15.195[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] patched GameNetworkManager.OnStartServer (pre=False post=True).[0m
+[[38;2;50;205;50m00:34:15.216[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] patched GameNetworkManager.OnStartClient (pre=False post=True).[0m
+[[38;2;50;205;50m00:34:15.237[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] patched GameNetworkManager.GetCharacterBotPrefab (pre=True post=False).[0m
+[[38;2;50;205;50m00:34:15.277[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] patched GameMode.SpawnPlayerChar (pre=True post=False).[0m
+[[38;2;50;205;50m00:34:15.279[0m] [38;2;255;255;0mAccessTools.Method: Could not find method for type Il2CppBAPBAP.UI.UICharactersConfiguration and name OnEnable and parameters [0m
+[[38;2;50;205;50m00:34:15.279[0m] [[38;2;255;255;0mNetworkedCustomChar[0m] [38;2;255;255;0m[M1] patch target not found: UICharactersConfiguration.OnEnable[0m
+[[38;2;50;205;50m00:34:15.281[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] patched UILobbyCharacterSelectPage.GetCharacterListingIndexFromCharId (pre=True post=False).[0m
+[[38;2;50;205;50m00:34:15.307[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] patched Ability.SetState (pre=True post=True).[0m
+[[38;2;50;205;50m00:34:15.329[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] patched CatShotAbility.Shoot (pre=True post=False).[0m
+[[38;2;50;205;50m00:34:15.352[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] patched CatMissileAbility.Shoot (pre=True post=False).[0m
+[[38;2;50;205;50m00:34:15.376[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] patched CatPolymorphAbility.Shoot (pre=True post=False).[0m
+[[38;2;50;205;50m00:34:15.398[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] patched CatJumpAbility.Shoot (pre=True post=False).[0m
+[[38;2;50;205;50m00:34:15.422[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3b] patched CatShotAbility.CustomShootSubroutine.OnEnter (native visual suppress). [0m
+[[38;2;50;205;50m00:34:15.444[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3b] patched CatMissileAbility.CustomShootSubroutine.OnEnter (native visual suppress). [0m
+[[38;2;50;205;50m00:34:15.466[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3b] patched CatPolymorphAbility.CustomTargetSubroutine.OnEnter (native visual suppress). [0m
+[[38;2;50;205;50m00:34:15.491[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3b] patched CatJumpAbility.CustomShootSubroutine.OnEnter (native visual suppress). [0m
+[[38;2;50;205;50m00:34:15.513[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3b] patched CatJumpAbility.CustomJumpSubroutine.OnEnter (native visual suppress). [0m
+[[38;2;50;205;50m00:34:15.536[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3b] patched CatJumpAbility.CustomFloatSubroutine.OnEnter (native visual suppress). [0m
+[[38;2;50;205;50m00:34:15.558[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] patched CharAnimator.Awake (pre=False post=True).[0m
+[[38;2;50;205;50m00:34:15.581[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] patched CharFootsteps.Awake (pre=False post=True).[0m
+[[38;2;50;205;50m00:34:15.612[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M2] patched Animator.SetLayerWeight (overload; pre=True post=False).[0m
+[[38;2;50;205;50m00:34:15.633[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M2] patched Animator.CrossFadeInFixedTime (overload; pre=True post=False).[0m
+[[38;2;50;205;50m00:34:15.643[0m] [[38;2;0;255;255mIl2CppInterop[0m] [38;2;211;211;211mRegistered mono type Il2CppInterop.Runtime.DelegateSupport+Il2CppToMonoDelegateReference in il2cpp domain[0m
+[[38;2;50;205;50m00:34:15.660[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3] CustomNetChannel registered on EntityManager (hash=58016).[0m
+[[38;2;50;205;50m00:34:15.661[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3] CustomAbilityEngine ready (charId=15, enabled=True, networkPrefabSpawn=True, medusaBundleHitboxes=True).[0m
+[[38;2;50;205;50m00:34:15.661[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M6] ability kit: hitboxes=[Hitbox_MedusaPoisonProjectile,Hitbox_MedusaPoisonPuddle,Hitbox_MedusaWallPoison,Hitbox_MedusaWallBoxDpsPoison] dmg=[120,85,70,160] status=[poison,slow,knockup,petrify] anim=[Ability1,Ability2,,Ability4].[0m
+[[38;2;50;205;50m00:34:15.672[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[MAP] no custom map definitions found; map loader idle.[0m
+[[38;2;50;205;50m00:34:15.672[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] loaded. charId=15 baseCharId=0 assetId=0xB0B00F0F graftVisual=True[0m
+[[38;2;50;205;50m00:34:21.442[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M2] loading bundle: 'C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\UserData\Medusa\medusa.bundle' (3494760 bytes).[0m
+[[38;2;50;205;50m00:34:21.454[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M2] visual prefab 'Medusa_Visual' loaded from bundle.[0m
+[[38;2;50;205;50m00:34:21.474[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M2] graft OK via GNM.Awake: baseRenderersDisabled=11, charAnimWired=1, footstepsWired=1, otherAnimsDisabled=2, shadedSMRs=1, fx=True, controller='Medusa'.[0m
+[[38;2;50;205;50m00:34:21.474[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M2] graft applied on prefab template via GNM.Awake.[0m
+[[38;2;50;205;50m00:34:21.477[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3b] nulled 0 inherited Kitsu projectile/cast prefab field(s) on template via GNM.Awake.[0m
+[[38;2;50;205;50m00:34:21.489[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] sanitized 1 identity(ies); root assetId=0xB0B00F0F via GNM.Awake.[0m
+[[38;2;50;205;50m00:34:21.489[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] built networked prefab 'Char_Medusa' via GNM.Awake (baseCharId=0).[0m
+[[38;2;50;205;50m00:34:21.491[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] characterPrefabsByCharId[15] = our prefab via GNM.Awake (len 15->16).[0m
+[[38;2;50;205;50m00:34:21.494[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] charBotPrefabsByCharId[15] populated via GNM.Awake (len 15->16).[0m
+[[38;2;50;205;50m00:34:21.498[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] added to InstantiatedPrefabs via GNM.Awake (len 414->415).[0m
+[[38;2;50;205;50m00:34:21.545[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3c] bundle visual repaired via hitbox-slot0: renderers=0 (mr=0 smr=0 psr=0) shaderRebuilt=0 tint=(0.18,1,0.32,0.95) vfxShader='Universal Render Pipeline/Particles/Unlit'.[0m
+[[38;2;50;205;50m00:34:21.546[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3] [M3c] slot 0: grafted 'Hitbox_MedusaPoisonProjectile' as Medusa poison visual (baseRenderersDisabled=0).[0m
+[[38;2;50;205;50m00:34:21.547[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3] [M3c] slot 0 AUTHENTIC Medusa hitbox built: assetId=0xB0B0F010 base='Hitbox_Kate_BigCat' proj=True visual='Hitbox_MedusaPoisonProjectile'.[0m
+[[38;2;50;205;50m00:34:21.550[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3c] bundle visual repaired via hitbox-slot1: renderers=0 (mr=0 smr=0 psr=0) shaderRebuilt=0 tint=(0.18,1,0.32,0.95) vfxShader='Universal Render Pipeline/Particles/Unlit'.[0m
+[[38;2;50;205;50m00:34:21.550[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3] [M3c] slot 1: grafted 'Hitbox_MedusaPoisonPuddle' as Medusa poison visual (baseRenderersDisabled=0).[0m
+[[38;2;50;205;50m00:34:21.551[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3] [M3c] slot 1: grafted extra spawner 'MedusaPuddleSpawner'.[0m
+[[38;2;50;205;50m00:34:21.551[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3] [M3c] slot 1 AUTHENTIC Medusa hitbox built: assetId=0xB0B0F011 base='Hitbox_Karen_Punch' proj=False visual='Hitbox_MedusaPoisonPuddle'.[0m
+[[38;2;50;205;50m00:34:21.553[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3c] bundle visual repaired via hitbox-slot2: renderers=0 (mr=0 smr=0 psr=0) shaderRebuilt=0 tint=(0.18,1,0.32,0.95) vfxShader='Universal Render Pipeline/Particles/Unlit'.[0m
+[[38;2;50;205;50m00:34:21.553[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3] [M3c] slot 2: grafted 'Hitbox_MedusaWallPoison' as Medusa poison visual (baseRenderersDisabled=0).[0m
+[[38;2;50;205;50m00:34:21.553[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3] [M3c] slot 2 AUTHENTIC Medusa hitbox built: assetId=0xB0B0F012 base='Hitbox_Karen_Punch' proj=False visual='Hitbox_MedusaWallPoison'.[0m
+[[38;2;50;205;50m00:34:21.554[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3c] bundle visual repaired via hitbox-slot3: renderers=0 (mr=0 smr=0 psr=0) shaderRebuilt=0 tint=(0.18,1,0.32,0.95) vfxShader='Universal Render Pipeline/Particles/Unlit'.[0m
+[[38;2;50;205;50m00:34:21.554[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3] [M3c] slot 3: grafted 'Hitbox_MedusaWallBoxDpsPoison' as Medusa poison visual (baseRenderersDisabled=0).[0m
+[[38;2;50;205;50m00:34:21.555[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3] [M3c] slot 3 AUTHENTIC Medusa hitbox built: assetId=0xB0B0F013 base='Hitbox_Karen_Punch' proj=False visual='Hitbox_MedusaWallBoxDpsPoison'.[0m
+[[38;2;50;205;50m00:34:23.463[0m] [[38;2;0;255;255mIl2CppInterop[0m] [38;2;211;211;211mRegistered mono type MelonLoader.Support.SM_Component in il2cpp domain[0m
+[[38;2;50;205;50m00:34:23.471[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[SceneLoaded] Scene 'MainScene' (index 0) loaded.[0m
+[[38;2;50;205;50m00:34:23.471[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[StateReset] Resetting match flags on lobby/menu scene 'MainScene'[0m
+[[38;2;50;205;50m00:34:24.054[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:34:24.059[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[TryCreateUICharactersConfiguration] entering...[0m
+[[38;2;50;205;50m00:34:24.061[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mTryCreateUICharactersConfiguration: created ScriptableObject via reflection[0m
+[[38;2;50;205;50m00:34:24.061[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mTryCreateUICharactersConfiguration: cfgType=Il2CppBAPBAP.UI.UICharactersConfiguration instance.type=UnityEngine.ScriptableObject[0m
+[[38;2;50;205;50m00:34:24.066[0m] [[38;2;255;255;0mBAP_Custom_Server[0m] [38;2;255;255;0mTryCreateUICharactersConfiguration failed: Object does not match target type.[0m
+[[38;2;50;205;50m00:34:24.081[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[MapFix] 3 GameMode(s), spawnCounts=[-1,-1,-1]. Waiting for populated map...[0m
+[[38;2;50;205;50m00:34:24.144[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[DevPanel] Patched 2 type(s) for hide on activation: UIDeveloperLobby(1), UIDevUtilities(1)[0m
+[[38;2;50;205;50m00:34:24.174[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[ShopThrottle] Patched 1 method(s)[0m
+[[38;2;50;205;50m00:34:24.370[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[LockerGuard] Installed exception-swallow finalizer on 9 locker method(s)[0m
+[[38;2;50;205;50m00:34:24.386[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[KcpRuntime] timeout-guard-manager: manager=Il2CppBAPBAP.Network.GameNetworkManager ws=Il2CppMirror.SimpleWeb.SimpleWebTransport port=10001 timeout=null client=False server=False kcp=Il2Cppkcp2k.KcpTransport port=11001 timeout=60000 client=True server=True tcp=Il2CppMirror.TelepathyTransport port=12001 timeout=null client=False server=False multiplex=Il2CppMirror.MultiplexTransport port=12001 timeout=null client=False server=False patched=3.[0m
+[[38;2;50;205;50m00:34:24.387[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[KcpTimeoutGuard] Applied KCP timeout/port guard through GameNetworkManager transport(s); patched=3.[0m
+[[38;2;50;205;50m00:34:24.398[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[InterpFix] no NetworkTransform instances yet (attempt=1)[0m
+[[38;2;50;205;50m00:34:24.425[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[MatchFoundDedup] Installed dedup prefix on 1 PlayMatchFoundSequence target(s).[0m
+[[38;2;50;205;50m00:34:24.429[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[AugmentFix] no UIAugments instances loaded yet (attempt=1).[0m
+[[38;2;50;205;50m00:34:24.436[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[AugmentFix] auto-select: no local PlayerAugments found.[0m
+[[38;2;50;205;50m00:34:24.438[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[AugmentFix] auto-select: no UIManager instances loaded yet.[0m
+[[38;2;50;205;50m00:34:24.439[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[AugmentFix] auto-select: no UIAugments instances loaded yet.[0m
+[[38;2;50;205;50m00:34:24.506[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 3 GameMode level-name runtime patch(es).[0m
+[[38;2;50;205;50m00:34:24.551[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled AddPlayerMatchmaking runtime diagnostics and Medusa skin patch.[0m
+[[38;2;50;205;50m00:34:24.704[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 7 LoginController custom guest-login patch(es).[0m
+[[38;2;50;205;50m00:34:24.750[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 2 UnityWebRequest callback repair patch(es).[0m
+[[38;2;50;205;50m00:34:24.762[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUI patch stats: EnsureLobbyCharIdsPrefix called=0 filled=0[0m
+[[38;2;50;205;50m00:34:24.772[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom splash guest-login scan saw 0 UILobbySplashScreen object(s).[0m
+[[38;2;50;205;50m00:34:24.878[0m] [38;2;211;211;211m[AdminAuth] WS connected, sending MOD_HELLO...[0m
+[[38;2;50;205;50m00:34:24.893[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M7] portrait sprite loaded: 'C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\UserData\Medusa\medusa-portrait.png' (768x1024).[0m
+[[38;2;50;205;50m00:34:24.899[0m] [38;2;211;211;211m[AdminAuth] Ignoring SOCKET_READY while waiting for MOD_CHALLENGE...[0m
+[[38;2;50;205;50m00:34:24.900[0m] [38;2;211;211;211m[AdminAuth] Ignoring GAME_MODES_UPDATED while waiting for MOD_CHALLENGE...[0m
+[[38;2;50;205;50m00:34:24.935[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M7] portrait sprite loaded: 'C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\UserData\Medusa\medusa-wide.png' (1600x900).[0m
+[[38;2;50;205;50m00:34:24.938[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] UI row added (charId=15) via Poll; roster 15->16.[0m
+[[38;2;50;205;50m00:34:24.948[0m] [38;2;211;211;211m[AdminAuth] Mod attested. Sending admin token...[0m
+[[38;2;50;205;50m00:34:24.972[0m] [38;2;255;255;0m[AdminAuth] Account is not an admin.[0m
+[[38;2;50;205;50m00:34:25.145[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #1: [local]/api/challenge/preview[0m
+[[38;2;50;205;50m00:34:25.146[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #1: [local]/api/challenge/preview[0m
+[[38;2;50;205;50m00:34:25.147[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mRewrote UnityWebRequest loopback API URL for direct custom-server mode.[0m
+[[38;2;50;205;50m00:34:25.148[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #2: [local]/api/friends/requests[0m
+[[38;2;50;205;50m00:34:25.148[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #2: [local]/api/friends/requests[0m
+[[38;2;50;205;50m00:34:25.149[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #3: [local]/api/iap/listing[0m
+[[38;2;50;205;50m00:34:25.149[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #3: [local]/api/iap/listing[0m
+[[38;2;50;205;50m00:34:25.330[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #4: [local]/api/shop[0m
+[[38;2;50;205;50m00:34:25.331[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #4: [local]/api/shop[0m
+[[38;2;50;205;50m00:34:25.409[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #5: [remote]/v1/authentication/session-token[0m
+[[38;2;50;205;50m00:34:25.411[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #6: [local]/api/daily[0m
+[[38;2;50;205;50m00:34:25.411[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #5: [local]/api/daily[0m
+[[38;2;50;205;50m00:34:25.411[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #7: [local]/api/profile/levels[0m
+[[38;2;50;205;50m00:34:25.412[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #6: [local]/api/profile/levels[0m
+[[38;2;50;205;50m00:34:25.412[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #8: [local]/api/chars/pass[0m
+[[38;2;50;205;50m00:34:25.412[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #7: [local]/api/chars/pass[0m
+[[38;2;50;205;50m00:34:25.412[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #9: [local]/api/chars/mastery/preview[0m
+[[38;2;50;205;50m00:34:25.412[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #8: [local]/api/chars/mastery/preview[0m
+[[38;2;50;205;50m00:34:25.413[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #10: [local]/api/chars/listing[0m
+[[38;2;50;205;50m00:34:25.413[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #9: [local]/api/chars/listing[0m
+[[38;2;50;205;50m00:34:25.413[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #11: [local]/api/lobby/socket[0m
+[[38;2;50;205;50m00:34:25.413[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #10: [local]/api/lobby/socket[0m
+[[38;2;50;205;50m00:34:25.414[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mScheduled custom-server post-login splash fallback after lobby socket discovery.[0m
+[[38;2;50;205;50m00:34:25.414[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #12: [local]/api/leaderboards/preview[0m
+[[38;2;50;205;50m00:34:25.414[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #11: [local]/api/leaderboards/preview[0m
+[[38;2;50;205;50m00:34:25.415[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #13: [local]/api/pinger[0m
+[[38;2;50;205;50m00:34:25.415[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #12: [local]/api/pinger[0m
+[[38;2;50;205;50m00:34:25.416[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom-server load response handled by LoginController.[0m
+[[38;2;50;205;50m00:34:25.418[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mForwarded load-response availableCharacters into LoginController.HandleUpdateAvailableCharacterList.[0m
+[[38;2;50;205;50m00:34:25.422[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:34:25.422[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[TryCreateUICharactersConfiguration] entering...[0m
+[[38;2;50;205;50m00:34:25.424[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mTryCreateUICharactersConfiguration: created ScriptableObject via reflection[0m
+[[38;2;50;205;50m00:34:25.424[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mTryCreateUICharactersConfiguration: cfgType=Il2CppBAPBAP.UI.UICharactersConfiguration instance.type=UnityEngine.ScriptableObject[0m
+[[38;2;50;205;50m00:34:25.424[0m] [[38;2;255;255;0mBAP_Custom_Server[0m] [38;2;255;255;0mTryCreateUICharactersConfiguration failed: Object does not match target type.[0m
+[[38;2;50;205;50m00:34:25.459[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Lifecycle] ModUpdateRunner GameObject created.[0m
+[[38;2;50;205;50m00:34:27.263[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:34:27.349[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[Autoplay] Login complete, will join lobby in 3s.[0m
+[[38;2;50;205;50m00:34:29.273[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:34:29.429[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mLoaded UI diagnostics (post-login fallback waiting): activeScene='MainScene' path='Assets/MainScene.unity' isLoaded=True[0m
+[[38;2;50;205;50m00:34:29.432[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mLoaded UI diagnostics canvases=0[0m
+[[38;2;50;205;50m00:34:29.432[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPost-login splash fallback waiting for lobby UI. attempt=1 lobbies=0 splashes=0[0m
+[[38;2;50;205;50m00:34:31.286[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:34:31.450[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPost-login splash fallback waiting for lobby UI. attempt=2 lobbies=0 splashes=0[0m
+[[38;2;50;205;50m00:34:33.299[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:34:33.456[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPost-login splash fallback waiting for lobby UI. attempt=3 lobbies=0 splashes=0[0m
+[[38;2;50;205;50m00:34:34.873[0m] [38;2;211;211;211m[AdminAuth] WS connected, sending MOD_HELLO...[0m
+[[38;2;50;205;50m00:34:34.875[0m] [38;2;211;211;211m[AdminAuth] Ignoring SOCKET_READY while waiting for MOD_CHALLENGE...[0m
+[[38;2;50;205;50m00:34:34.875[0m] [38;2;211;211;211m[AdminAuth] Ignoring GAME_MODES_UPDATED while waiting for MOD_CHALLENGE...[0m
+[[38;2;50;205;50m00:34:34.912[0m] [38;2;211;211;211m[AdminAuth] Mod attested. Sending admin token...[0m
+[[38;2;50;205;50m00:34:34.932[0m] [38;2;255;255;0m[AdminAuth] Account is not an admin.[0m
+[[38;2;50;205;50m00:34:35.298[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:34:35.493[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPost-login splash fallback waiting for lobby UI. attempt=4 lobbies=0 splashes=0[0m
+[[38;2;50;205;50m00:34:37.310[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:34:37.513[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPost-login splash fallback waiting for lobby UI. attempt=5 lobbies=0 splashes=0[0m
+[[38;2;50;205;50m00:34:39.317[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:34:39.520[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPost-login splash fallback waiting for lobby UI. attempt=6 lobbies=0 splashes=0[0m
+[[38;2;50;205;50m00:34:39.781[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUI patch stats: EnsureLobbyCharIdsPrefix called=0 filled=0[0m
+[[38;2;50;205;50m00:34:41.321[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:34:41.525[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPost-login splash fallback waiting for lobby UI. attempt=7 lobbies=0 splashes=0[0m
+[[38;2;50;205;50m00:34:43.336[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:34:43.568[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[FULL DIAGNOSTICS] Total GameObjects: 0[0m
+[[38;2;50;205;50m00:34:43.569[0m] [[38;2;255;255;0mBAP_Custom_Server[0m] [38;2;255;255;0mPost-login splash fallback could not find lobby splash UI after 8 attempts. Continuing at slower rate.[0m
+[[38;2;50;205;50m00:34:44.878[0m] [38;2;211;211;211m[AdminAuth] WS connected, sending MOD_HELLO...[0m
+[[38;2;50;205;50m00:34:44.879[0m] [38;2;211;211;211m[AdminAuth] Ignoring SOCKET_READY while waiting for MOD_CHALLENGE...[0m
+[[38;2;50;205;50m00:34:44.880[0m] [38;2;211;211;211m[AdminAuth] Ignoring GAME_MODES_UPDATED while waiting for MOD_CHALLENGE...[0m
+[[38;2;50;205;50m00:34:44.916[0m] [38;2;211;211;211m[AdminAuth] Mod attested. Sending admin token...[0m
+[[38;2;50;205;50m00:34:44.936[0m] [38;2;255;255;0m[AdminAuth] Account is not an admin.[0m
+[[38;2;50;205;50m00:34:45.351[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:34:47.366[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:34:49.367[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:34:51.381[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:34:53.394[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:34:54.794[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUI patch stats: EnsureLobbyCharIdsPrefix called=0 filled=0[0m
+[[38;2;50;205;50m00:34:54.884[0m] [38;2;211;211;211m[AdminAuth] WS connected, sending MOD_HELLO...[0m
+[[38;2;50;205;50m00:34:54.885[0m] [38;2;211;211;211m[AdminAuth] Ignoring SOCKET_READY while waiting for MOD_CHALLENGE...[0m
+[[38;2;50;205;50m00:34:54.886[0m] [38;2;211;211;211m[AdminAuth] Ignoring GAME_MODES_UPDATED while waiting for MOD_CHALLENGE...[0m
+[[38;2;50;205;50m00:34:54.921[0m] [38;2;211;211;211m[AdminAuth] Mod attested. Sending admin token...[0m
+[[38;2;50;205;50m00:34:54.941[0m] [38;2;255;255;0m[AdminAuth] Account is not an admin.[0m
+[[38;2;50;205;50m00:34:55.408[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:34:57.531[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:34:59.545[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:35:01.555[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:35:03.567[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:35:04.892[0m] [38;2;211;211;211m[AdminAuth] WS connected, sending MOD_HELLO...[0m
+[[38;2;50;205;50m00:35:04.894[0m] [38;2;211;211;211m[AdminAuth] Ignoring SOCKET_READY while waiting for MOD_CHALLENGE...[0m
+[[38;2;50;205;50m00:35:04.894[0m] [38;2;211;211;211m[AdminAuth] Ignoring GAME_MODES_UPDATED while waiting for MOD_CHALLENGE...[0m
+[[38;2;50;205;50m00:35:04.930[0m] [38;2;211;211;211m[AdminAuth] Mod attested. Sending admin token...[0m
+[[38;2;50;205;50m00:35:04.949[0m] [38;2;255;255;0m[AdminAuth] Account is not an admin.[0m
+[[38;2;50;205;50m00:35:05.580[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:35:07.589[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:35:09.604[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:35:09.802[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUI patch stats: EnsureLobbyCharIdsPrefix called=0 filled=0[0m
+[[38;2;50;205;50m00:35:11.607[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:35:13.613[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:35:14.902[0m] [38;2;211;211;211m[AdminAuth] WS connected, sending MOD_HELLO...[0m
+[[38;2;50;205;50m00:35:14.903[0m] [38;2;211;211;211m[AdminAuth] Ignoring SOCKET_READY while waiting for MOD_CHALLENGE...[0m
+[[38;2;50;205;50m00:35:14.904[0m] [38;2;211;211;211m[AdminAuth] Ignoring GAME_MODES_UPDATED while waiting for MOD_CHALLENGE...[0m
+[[38;2;50;205;50m00:35:14.940[0m] [38;2;211;211;211m[AdminAuth] Mod attested. Sending admin token...[0m
+[[38;2;50;205;50m00:35:14.959[0m] [38;2;255;255;0m[AdminAuth] Account is not an admin.[0m
+[[38;2;50;205;50m00:35:15.621[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:35:17.628[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:35:19.628[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:35:21.633[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:35:23.634[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:35:24.808[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUI patch stats: EnsureLobbyCharIdsPrefix called=0 filled=0[0m
+[[38;2;50;205;50m00:35:24.908[0m] [38;2;211;211;211m[AdminAuth] WS connected, sending MOD_HELLO...[0m
+[[38;2;50;205;50m00:35:24.909[0m] [38;2;211;211;211m[AdminAuth] Ignoring SOCKET_READY while waiting for MOD_CHALLENGE...[0m
+[[38;2;50;205;50m00:35:24.909[0m] [38;2;211;211;211m[AdminAuth] Ignoring GAME_MODES_UPDATED while waiting for MOD_CHALLENGE...[0m
+[[38;2;50;205;50m00:35:24.945[0m] [38;2;211;211;211m[AdminAuth] Mod attested. Sending admin token...[0m
+[[38;2;50;205;50m00:35:24.965[0m] [38;2;255;255;0m[AdminAuth] Account is not an admin.[0m
+[[38;2;50;205;50m00:35:25.641[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:35:27.642[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:35:29.648[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:35:30.779[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[EarlyLobbyUiPatchLoop] exited after 3600 frames. preloadDone=False uiPatch=True charPatch=True[0m
+[[38;2;50;205;50m00:35:31.662[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:35:33.673[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:35:34.973[0m] [38;2;211;211;211m[AdminAuth] WS connected, sending MOD_HELLO...[0m
+[[38;2;50;205;50m00:35:34.975[0m] [38;2;211;211;211m[AdminAuth] Ignoring SOCKET_READY while waiting for MOD_CHALLENGE...[0m
+[[38;2;50;205;50m00:35:34.975[0m] [38;2;211;211;211m[AdminAuth] Ignoring GAME_MODES_UPDATED while waiting for MOD_CHALLENGE...[0m
+[[38;2;50;205;50m00:35:35.012[0m] [38;2;211;211;211m[AdminAuth] Mod attested. Sending admin token...[0m
+[[38;2;50;205;50m00:35:35.032[0m] [38;2;255;255;0m[AdminAuth] Account is not an admin.[0m
+[[38;2;50;205;50m00:35:35.685[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:35:37.694[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:35:39.703[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:35:39.817[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUI patch stats: EnsureLobbyCharIdsPrefix called=0 filled=0[0m
+[[38;2;50;205;50m00:35:41.712[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:35:43.713[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:35:44.980[0m] [38;2;211;211;211m[AdminAuth] WS connected, sending MOD_HELLO...[0m
+[[38;2;50;205;50m00:35:44.982[0m] [38;2;211;211;211m[AdminAuth] Ignoring SOCKET_READY while waiting for MOD_CHALLENGE...[0m
+[[38;2;50;205;50m00:35:44.982[0m] [38;2;211;211;211m[AdminAuth] Ignoring GAME_MODES_UPDATED while waiting for MOD_CHALLENGE...[0m
+[[38;2;50;205;50m00:35:45.019[0m] [38;2;211;211;211m[AdminAuth] Mod attested. Sending admin token...[0m
+[[38;2;50;205;50m00:35:45.040[0m] [38;2;255;255;0m[AdminAuth] Account is not an admin.[0m
+[[38;2;50;205;50m00:35:45.730[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:35:47.738[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:35:49.753[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:35:51.754[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:35:53.765[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:35:54.835[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUI patch stats: EnsureLobbyCharIdsPrefix called=0 filled=0[0m
+[[38;2;50;205;50m00:35:55.002[0m] [38;2;211;211;211m[AdminAuth] WS connected, sending MOD_HELLO...[0m
+[[38;2;50;205;50m00:35:55.003[0m] [38;2;211;211;211m[AdminAuth] Ignoring SOCKET_READY while waiting for MOD_CHALLENGE...[0m
+[[38;2;50;205;50m00:35:55.004[0m] [38;2;211;211;211m[AdminAuth] Ignoring GAME_MODES_UPDATED while waiting for MOD_CHALLENGE...[0m
+[[38;2;50;205;50m00:35:55.040[0m] [38;2;211;211;211m[AdminAuth] Mod attested. Sending admin token...[0m
+[[38;2;50;205;50m00:35:55.060[0m] [38;2;255;255;0m[AdminAuth] Account is not an admin.[0m
+[[38;2;50;205;50m00:35:55.774[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:35:57.777[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:35:59.780[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:36:01.781[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:36:03.792[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:36:05.014[0m] [38;2;211;211;211m[AdminAuth] WS connected, sending MOD_HELLO...[0m
+[[38;2;50;205;50m00:36:05.016[0m] [38;2;211;211;211m[AdminAuth] Ignoring SOCKET_READY while waiting for MOD_CHALLENGE...[0m
+[[38;2;50;205;50m00:36:05.016[0m] [38;2;211;211;211m[AdminAuth] Ignoring GAME_MODES_UPDATED while waiting for MOD_CHALLENGE...[0m
+[[38;2;50;205;50m00:36:05.052[0m] [38;2;211;211;211m[AdminAuth] Mod attested. Sending admin token...[0m
+[[38;2;50;205;50m00:36:05.072[0m] [38;2;255;255;0m[AdminAuth] Account is not an admin.[0m
+[[38;2;50;205;50m00:36:05.805[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:36:07.810[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:36:09.825[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:36:09.836[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUI patch stats: EnsureLobbyCharIdsPrefix called=0 filled=0[0m
+[[38;2;50;205;50m00:36:11.837[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:36:13.847[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:36:15.017[0m] [38;2;211;211;211m[AdminAuth] WS connected, sending MOD_HELLO...[0m
+[[38;2;50;205;50m00:36:15.018[0m] [38;2;211;211;211m[AdminAuth] Ignoring SOCKET_READY while waiting for MOD_CHALLENGE...[0m
+[[38;2;50;205;50m00:36:15.019[0m] [38;2;211;211;211m[AdminAuth] Ignoring GAME_MODES_UPDATED while waiting for MOD_CHALLENGE...[0m
+[[38;2;50;205;50m00:36:15.055[0m] [38;2;211;211;211m[AdminAuth] Mod attested. Sending admin token...[0m
+[[38;2;50;205;50m00:36:15.074[0m] [38;2;255;255;0m[AdminAuth] Account is not an admin.[0m
+[[38;2;50;205;50m00:36:15.847[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:36:17.851[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:36:19.858[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:36:21.862[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:36:23.874[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:36:24.848[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUI patch stats: EnsureLobbyCharIdsPrefix called=0 filled=0[0m
+[[38;2;50;205;50m00:36:25.024[0m] [38;2;211;211;211m[AdminAuth] WS connected, sending MOD_HELLO...[0m
+[[38;2;50;205;50m00:36:25.025[0m] [38;2;211;211;211m[AdminAuth] Ignoring SOCKET_READY while waiting for MOD_CHALLENGE...[0m
+[[38;2;50;205;50m00:36:25.025[0m] [38;2;211;211;211m[AdminAuth] Ignoring GAME_MODES_UPDATED while waiting for MOD_CHALLENGE...[0m
+[[38;2;50;205;50m00:36:25.062[0m] [38;2;211;211;211m[AdminAuth] Mod attested. Sending admin token...[0m
+[[38;2;50;205;50m00:36:25.081[0m] [38;2;255;255;0m[AdminAuth] Account is not an admin.[0m
+[[38;2;50;205;50m00:36:25.875[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:36:25.878[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[InterpFix] no NetworkTransform instances yet (attempt=61)[0m
+[[38;2;50;205;50m00:36:27.893[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:36:29.907[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:36:31.915[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:36:33.922[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:36:35.032[0m] [38;2;211;211;211m[AdminAuth] WS connected, sending MOD_HELLO...[0m
+[[38;2;50;205;50m00:36:35.033[0m] [38;2;211;211;211m[AdminAuth] Ignoring SOCKET_READY while waiting for MOD_CHALLENGE...[0m
+[[38;2;50;205;50m00:36:35.033[0m] [38;2;211;211;211m[AdminAuth] Ignoring GAME_MODES_UPDATED while waiting for MOD_CHALLENGE...[0m
+[[38;2;50;205;50m00:36:35.069[0m] [38;2;211;211;211m[AdminAuth] Mod attested. Sending admin token...[0m
+[[38;2;50;205;50m00:36:35.089[0m] [38;2;255;255;0m[AdminAuth] Account is not an admin.[0m
+[[38;2;50;205;50m00:36:35.927[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:36:37.936[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:36:39.862[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUI patch stats: EnsureLobbyCharIdsPrefix called=0 filled=0[0m
+[[38;2;50;205;50m00:36:39.950[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:36:41.957[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:36:43.974[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:36:45.041[0m] [38;2;211;211;211m[AdminAuth] WS connected, sending MOD_HELLO...[0m
+[[38;2;50;205;50m00:36:45.042[0m] [38;2;211;211;211m[AdminAuth] Ignoring SOCKET_READY while waiting for MOD_CHALLENGE...[0m
+[[38;2;50;205;50m00:36:45.042[0m] [38;2;211;211;211m[AdminAuth] Ignoring GAME_MODES_UPDATED while waiting for MOD_CHALLENGE...[0m
+[[38;2;50;205;50m00:36:45.078[0m] [38;2;211;211;211m[AdminAuth] Mod attested. Sending admin token...[0m
+[[38;2;50;205;50m00:36:45.097[0m] [38;2;255;255;0m[AdminAuth] Account is not an admin.[0m
+[[38;2;50;205;50m00:36:45.976[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:36:47.978[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:36:49.987[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:36:51.997[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:36:53.998[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:36:54.869[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUI patch stats: EnsureLobbyCharIdsPrefix called=0 filled=0[0m
+[[38;2;50;205;50m00:36:55.052[0m] [38;2;211;211;211m[AdminAuth] WS connected, sending MOD_HELLO...[0m
+[[38;2;50;205;50m00:36:55.053[0m] [38;2;211;211;211m[AdminAuth] Ignoring SOCKET_READY while waiting for MOD_CHALLENGE...[0m
+[[38;2;50;205;50m00:36:55.053[0m] [38;2;211;211;211m[AdminAuth] Ignoring GAME_MODES_UPDATED while waiting for MOD_CHALLENGE...[0m
+[[38;2;50;205;50m00:36:55.089[0m] [38;2;211;211;211m[AdminAuth] Mod attested. Sending admin token...[0m
+[[38;2;50;205;50m00:36:55.109[0m] [38;2;255;255;0m[AdminAuth] Account is not an admin.[0m
+[[38;2;50;205;50m00:36:56.012[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:36:58.015[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:37:00.026[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m00:37:02.030[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m

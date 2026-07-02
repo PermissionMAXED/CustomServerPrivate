@@ -1,0 +1,19 @@
+﻿{
+    "schemaVersion":  1,
+    "releaseLabel":  "bapcustomserver-20260607-medusa-v1655-prematch-submit-prewarm",
+    "packageBuildUtc":  "2026-06-07T16:31:11.3160678Z",
+    "configuration":  "Release",
+    "selfContained":  true,
+    "publicHost":  "ark.atomi23.de",
+    "serverDllSha256":  "E9CB574A6A61631DF71B0A7C4746E72E0349578C2DB3F51A2FD4B53B0DA56083",
+    "modDllSha256":  "2B82508D95601D3983B50AF1D79838C4CFDC8E2DB9BB8717B9C436FF655638AA",
+    "modApiDllSha256":  "0E14F39A9C47B6EBA106A0F23E76A0989B3270D7BCDD3E4BB0DD51E63BDB3CB5",
+    "medusaDllSha256":  "4E87E0652DEC0B718DC84FB809877418AEE727053F94A08FEFB200773B0AF6D1",
+    "medusaBundleSha256":  "C4872D6E124E76F9F4B4EC75482FFC2795D051D3CA65EB7C25E9FE68023B1D70",
+    "medusaCharId":  15,
+    "medusaVersion":  "1.6.54",
+    "medusaFix":  "A real View_PreMatch_CharSelect Medusa click now remembers explicit selection and submits CmdTrySelectCharacter retries without global auto-select; longer retries cover late PlayerPreMatch creation.",
+    "queueFix":  "AMP cold Wine/Unity prewarm default is 360s before app ready; match bootstrap timeout 300s, managed status timeout 180s, stall grace 210s, stall idle 90s to avoid failed first queue attempts during cold MelonLoader startup.",
+    "prewarmReadiness":  "managed-bootstrap-listener-v4-extended-coldstart",
+    "startMatchSha256":  "02E09C0B12716B296E275DCE50F4595ECC5FE24AD29A6406E2F318CEFF4049F3"
+}

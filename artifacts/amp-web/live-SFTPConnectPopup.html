@@ -1,0 +1,55 @@
+﻿ï»¿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div class="wizardContents wizardPopup" id="FMSFTPConnectPopup">
+        <h2>Connect to SFTP</h2>
+        <button class="iconButton" data-wizard="cancel"><span class="mat-icon">close</span></button>
+
+        <p>If you have a registered SFTP client such as WinSCP installed, it should open automatically.</p>
+        <p>Otherwise, you can connect using your chosen SFTP client using the following details:</p>
+
+        <table>
+            <tr>
+                <td>Full Address</td>
+                <td><a data-bind="attr: {href: SFTPURL}, text: SFTPURL"></a></td>
+            </tr>
+            <tr>
+                <td>Host</td>
+                <td data-bind="text: SFTPHost"></td>
+            </tr>
+            <tr>
+                <td>Port</td>
+                <td data-bind="text: SFTPPort"></td>
+            </tr>
+            <tr>
+                <td>Username</td>
+                <td data-bind="text: SFTPUser"></td>
+            </tr>
+        </table>
+
+        <p>Your username and password are the same as those used to log into the panel.</p>
+        <p>If you have 2FA enabled, you need to append your 2FA code to the end of your password.</p>
+
+        <!--<p>You can also see these details by right-clicking the 'connect to SFTP' button and copying the link.</p>
+
+    <p>
+        <label class="checkbox">
+            <input type="checkbox"/>
+            <span></span>
+        </label>
+        <span style="margin-left: 8px;">Don't show me this again on this browser</span>
+    </p>-->
+
+        <div class="buttonGroup flexButtonGroup">
+            <button data-bind="click: hideSFTPDialog">
+                <span>Close</span>
+            </button>
+        </div>
+    </div>
+</body>
+</html>

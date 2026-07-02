@@ -1,0 +1,26 @@
+﻿{
+    "schemaVersion":  1,
+    "releaseLabel":  "bapcustomserver-20260602-medusa-queue-hotfix-110702",
+    "packageBuildUtc":  "2026-06-02T09:07:53.6445198Z",
+    "gitCommit":  "97d16d4d9fce",
+    "gitBranch":  "main",
+    "gitDirty":  true,
+    "configuration":  "Release",
+    "selfContained":  true,
+    "publicHost":  "ark.atomi23.de",
+    "serverDllSha256":  "4FC32D3ED5663D6AB77B7A0FE75C53909C220FAADB29AE4F0912E449D2443EF5",
+    "modDllSha256":  "69B8B404158358D91D7A2B9B9CD1D305FEB6250063ECE9B5D9AE7AF297C8F6BC",
+    "medusaDllSha256":  "9356767F5E07BC48BAC565B118F43B63CB841A9E16C60795CC6F14385EFA17FD",
+    "medusaBundleSha256":  "C4872D6E124E76F9F4B4EC75482FFC2795D051D3CA65EB7C25E9FE68023B1D70",
+    "medusaCharId":  15,
+    "queueFix":  "Removed blocking post-bootstrap health poll; GAME_STARTED is sent immediately after setup-game/add-teams/queue-matched are accepted.",
+    "gameServerStartupStallGraceSeconds":  20,
+    "gameServerStartupStallSeconds":  30,
+    "ports":  {
+                  "lobby":  5055,
+                  "ws":  7777,
+                  "kcp":  7778,
+                  "tcp":  7779,
+                  "http":  7850
+              }
+}

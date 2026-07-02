@@ -1,0 +1,21 @@
+{
+  "charId": 15,
+  "name": "Blitz",
+  "displayName": "BLITZ",
+  "subtitle": "",
+  "baseCharId": 0,
+  "baseCharName": "Kitsu",
+  "bundleFileName": "blitz.bundle",
+  "visualPrefabName": "Blitz_Visual",
+  "mirrorAssetId": 1296385109,
+  "enabled": false,
+  "abilities": [],
+
+  "abilityHitboxes": [],
+  "extraSpawnerHitboxes": [],
+  "statusOnHit": [],
+  "abilityTitles": [],
+  "abilityDescriptionsShort": [],
+  "abilityDescriptions": [],
+  "abilityPaletteHex": []
+}

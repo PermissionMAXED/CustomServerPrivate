@@ -1,0 +1,789 @@
+CHARGEMENT...
+
+
+
+
+
+
+
+La connexion a échoué. Ce compte est déjà connecté sur un autre appareil. Veuillez vous déconnecter et réessayer.
+JOUER
+BAP PASS
+PROFIL
+CLASSEMENTS
+CASIER
+PERSONNAGES
+PRÊT
+PAS PRÊT
+DANS LA FILE
+Trouver des joueurs...
+INVITE
+CODE DU LOBBY
+PRÊT
+PAS PRÊT
+ANNULER
+En train d'écrire...
+En ligne
+Lien copié !
+Joueur en file
+Mode de jeu
+Modes de jeu
+Sélectionne un mode de jeu
+Inviter un ami !
+Utilisations restantes
+Derniers gagnants
+La bêta fermée est maintenant terminée ! Consultez notre Discord pour obtenir des nouvelles sur le développement du jeu et les futurs tests.
+Victoire avec {0} kills
+Début de la partie dans
+La partie commence...
+Le lobby est déjà plein !
+Le lobby est invalide !
+Tu as rejoint le lobby
+A rejoint le lobby
+A quitté le lobby
+
+En file d'attente...
+En file d'attente
+EN JEU
+Recherche d'une équipe ...
+Quelqu'un a quitté l'équipe. Recherche d'une nouvelle équipe...
+SÉLECTIONNÉ
+SÉLECTIONNÉ
+DÉBLOQUÉE
+Débloqué pour
+Débloqué pour {0}
+Compétences
+Maitrîses
+BAP PASS
+Fin dans {0} jours
+Déconnexion
+Victoire
+Kills
+Morts
+Assistances
+KDA
+Dmg infligés
+Dmg subis
+Historique de match
+hors de
+Aucun historique de match trouvé
+Le classement est vide
+Nom
+Rang
+Kills
+Victoires
+Rang {0}
+RP
+Nouveau
+AUTOCOLLANTS
+Le casier est vide
+Autocollant équipé
+Clic gauche pour attribuer à cette fente, clic droit pour supprimer
+Cliquer pour annuler
+Finishers
+Finisher équipé
+Nouvel objet obtenu 
+Nouveau personnage obtenu
+Cliquer pour continuer
+Réclamer
+Réclamé
+Équiper
+Équipé
+Débloqué au niveau {0}
+Fermer
+Annuler
+Suivant
+Quitter
+XP
+BAP PASS
+Pour monter de niveau
+Promu
+Rétrogradé
+Niveau {0}
+Niveau maximum
+Victoire
+Défaite
+Connexion
+Connexion réussie
+Entrez votre nom d'utilisateur :
+Conditions générales d'utilisation
+Politique de confidentialité
+J'accepte les conditions générales et la politique de confidentialité.
+Le nom d'utilisateur doit être compris entre 3 et 20 caractères et ne doit contenir que des caractères valides.
+Le nom d'utilisateur est déjà pris !
+Vous devez accepter les conditions et la politique de confidentialité pour continuer.
+Arrêter
+Êtes-vous sûr de vouloir fermer le jeu?
+Vous avez été déconnecté. Veuillez actualiser pour vous reconnecter.
+Vous êtes déjà connecté(e). Veuillez fermer cette fenêtre.
+a rejoint le jeu.
+Arrêtez de spammer ! Encore {0}
+Signale
+{0} {1}
+Danger
+J'arrive
+Ennemi repéré
+Besoin d'aide
+Attention ici
+Déplacement vers cette position
+A repéré un ennemi
+Besoin d'aide
+Allié
+Ennemi
+Npc allié
+Npc ennemi
+Neutre
+Capacité {0} disponible dans {1} secondes !
+Capacité {0} disponible !
+Démolit par
+S'est fait démolir
+Appuie sur {0} pour lâcher
+ou
+pour agrandir
+La poche de potions est pleine !
+Or au max !
+Échanger
+HP
+Sacrifice
+Sacrifier
+Achat
+Achête
+A besoin
+En stock
+Actuel
+Max
+
+
+
+
+
+
+
+Amélioration
+Or
+Dégâts
+Vitesse de déplacement
+Réduction du temps de recharge
+Chances de critique
+Dmg critique
+Vol de vie
+Vitesse d'attaque
+Épines
+Bouclier
+Vie
+Régénération de la vie
+Pourcentage de vie
+Invulnérable
+Soin
+Frappé
+Assommé
+Étourdissement
+Étourdi
+Silence
+Réduit au silence
+Enracine
+Enraciné
+Ralentissement
+Ralentissement
+Pousse
+Poussé
+Sprint
+Empoisonne
+Empoisonné
+Brûler
+Clone
+Relance
+Affaiblir
+Affaibli
+Exposé
+Bouclier
+Boost de dégâts
+Piège
+Piégé
+Confus
+Contre
+Effraye
+Effrayé
+Aveugle
+Aveuglé
+Gigantesque
+Glissant
+Gelé
+Réduit la vue
+Vue réduite
+Personnage
+Objet
+Interactif
+Amélioration
+Amélioration
+Il n'y a pas d'objets à améliorer dans cet emplacement !
+L'objet est déjà de niveau maximum !
+Amélioration pour
+Boutique
+Distributeur automatique
+Achète pour
+Le distributeur est vide.
+Acheter Potion de santé pour
+Vente
+Vendre pour
+Sable Mouvant
+Canne à pêche
+Commencer à pêcher
+POISSON!!!
+Poisson!?
+Coupe de pêche cassée :(
+Pierre secrète
+Piège à fléchettes empoisonnées
+Autel de renaissance
+Autel de renaissance utilisé
+Station d'amélioration
+Caisse de butin
+Caisse de butin rare
+Caisse de butin légendaire
+Robot maléfique
+Grand robot maléfique
+Caisse de butin verrouillée
+Caisse de butin verrouillée
+Tourelle
+Caisse de butin verrouillée
+Orbe de puissance
+Largage de ravitaillement
+Largage de ravitaillement en l'air
+Largage de ravitaillement à l'atterrissage
+Baril explosif
+
+Baril de givre
+Congélateur poussable
+Explosif poussable
+
+Bloc de saut
+Bloc de saut caché
+Ruche
+Piège à ours
+Rune de sang
+Subventions + 40% de dégâts
+Subventions + 75% de vie
+Vous avez assez sacrifié.
+La rune a faim de sang.
+Sacrifier
+Sacrification
+Max
+Max
+Cactus piquant
+Boost 
+Pack de soin
+Pack énergétique
+Station de vente
+Sol glacé
+Cristal de puissance
+Virevoltant
+Boss gelée
+Max
+Max
+Max
+Max
+Max
+Max
+Caisse de butin verrouillée
+Max
+Max
+Max
+Max
+Max
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+La zone rétrécit ! 
+La zone rétrécit dans {0} secondes
+Largage de ravitaillement lancé !
+GO !
+VICTOIRE
+DÉFAITE
+Top {0}
+Spectateur
+Spectateurs
+Retour au lobby
+Envoyer un message à l'équipe...
+ÉQUIPE
+Aucune
+Par défaut
+Illimité
+Faible
+Moyen
+Élevé
+Ultra
+Personnalisé
+Activé
+Désactivé
+Certains textes peuvent ne pas être mis à jour. Redémarrer le jeu pour appliquer complètement les changements
+Appuyer sur la touche
+Déconnexion
+Êtes-vous sûr de vouloir vous déconnecter ?
+Toute la progression actuelle sera perdue.
+Général
+Graphiques
+Audio
+Contrôles
+Paramètres
+Général
+Interface
+Jeu
+Confidentialité
+Affichage
+Qualité
+Volume
+Raccourcis en jeu
+Raccourcis menu
+Langue
+Région
+Mode d'affichage
+Fenêtré
+Sans bordures Plein écran
+Plein écran
+Résolution
+Échelle de l'interface utilisateur
+Afficher le ping
+Afficher les FPS
+Afficher la version du jeu
+Cacher les messages du chat
+Intensité du tremblement d'écran
+Apparaître comme anonyme
+Cacher les noms des joueurs
+Filtre d'injures
+Échelle de rendu
+Limite de la fréquence d'images
+Préréglage de la qualité
+Mode d'anti-crénelage
+Ombres en temps réel
+Occlusion ambiante
+Flou lumineux
+Profondeur de champ
+Volume général
+Volume de la musique
+Volume ambiant
+Volume Sfx
+Volume Ping
+Déplacer vers le haut
+Déplacer vers le bas
+Déplacer vers la gauche
+Déplacer à droite
+Capacité 1
+Capacité 2
+Capacité 3
+Capacité ultime
+Utiliser une potion
+
+Annuler la capacité
+Lâcher l'objet 1
+Lâcher l'objet 2
+Lâcher l'objet 3
+Lâcher une potion
+Lâcher de l'or
+
+Verrouilage caméra
+Chat Ouvert/Envoyé
+Ping
+Emote
+Maintien de l'affichage de la mini-map
+Basculer l'affichage de la mini-map
+Interagir
+Agrandir l'infobulle
+Normal
+Classé
+
+
+MINI SOLO
+MINI DUOS
+MINI TRIOS
+SOLO
+DUOS
+TRIOS
+DUOS CLASSÉS
+TRIOS CLASSÉS
+Non classé
+Bronze
+Argent
+Or
+Platine
+Diamant
+Royal
+Divin
+Commun
+Peu commun
+Rare
+Épique
+Légendaire
+Objet
+Consommable
+Monnaie
+Casque
+Torse
+Bottes
+Casquette Épaisse
+Bottes Épaisse
+Casquette Chrono
+Sac Chrono
+Sac Aiguisé
+Bottes Aiguisées
+Casquette Aiguisée
+Bottes Rapide
+Sac Piquant
+Bottes de Hâte
+Sac Vampirique
+Casquette Vampirique
+Jus
+Boire pour récupérer des PV
+L'or
+Monnaie utilisée pour échanger des biens et des services
+Bottes Aiguisées
+Casquette Aiguisée
+Casquette Rapide
+Sac Rapide
+Sac Épais
+Bottes Chrono
+Casquette de Hâte
+Sac de Hâte
+Bottes Vampiriques
+Casquette de Gelée
+Casquette de Gelée
+Casquette de Gelée
+Casquette de Gelée
+Casquette de Gelée
+Casquette de Gelée
+Casquette de Gelée
+Casquette de Gelée
+Casquette de Gelée
+Casquette de Gelée
+Casquette de Gelée
+Bouclier
+Se faire polir
+Baril explosif
+Baril portable
+Tampon à sauter
+Déployer un pad
+Coussin de saut invisible
+Déployer un pavé de saut invisible
+Piège à ours
+Piège à ours portable
+Gel de cerveau
+Buvez-le pour obtenir l'insta gelé
+Tourelle
+Tourelle portable
+Cactus
+Cactus portable
+Ruche
+Ruche portable
+Baril explosif poussable
+Baril explosif poussable portable
+Pare-chocs
+Pare-chocs portable
+Télescope
+Télescope portable
+Sablier
+Sablier portable
+Congeler
+Baril de gel portable
+Bonhomme de neige
+Bonhomme de neige portable
+Bonhomme de neige portable
+Bonhomme de neige portable
+Bonhomme de neige portable
+Bonhomme de neige portable
+Bonhomme de neige portable
+Bonhomme de neige portable
+Bonhomme de neige portable
+Bonhomme de neige portable
+Bonhomme de neige portable
+Bonhomme de neige portable
+Bonhomme de neige portable
+Bonhomme de neige portable
+Bonhomme de neige portable
+Bonhomme de neige portable
+Bonhomme de neige portable
+Bonhomme de neige portable
+Commun
+Peu commun
+Rare
+Épique
+Légendaire
+Emote
+Autocollant
+Finisher
+Monnaie
+L'Or
+Monnaie utilisée pour échanger des biens et des services
+Fractales
+Monnaie premium utilisée pour échanger des biens et des services encore meilleurs
+Prime
+BAPBAP
+Le logo de la BAPBAP, dans sa version horizontale
+BAPBAP souligné
+Le logo BAPBAP, dans sa version horizontale avec un contour rouge
+Pain
+Un autocollant d'un emoji en forme de pain
+Couronne
+T'as fais tomber ça, mon Roi
+Pouce Fantôme
+Un encouragement fantômatique !
+Fantôme surpris
+Il a vu un fantôme ?
+Fantôme rieur
+Littéralement mort de rire
+Fantôme en pleurs
+Ce fantôme vient d'apprendre sa mort !
+Fantôme en colère
+Il est d'une colère infernale !
+GGEZ
+Utilisez ceci pour célébrer vos victoires BAPBAP dans le calme et le respect
+Code Dispo ?
+Quand est ce que le nouveau code est disponible ?
+Esecuzione
+Une pierre tombale toute banale
+Pierre tombale à ailes
+Une pierre tombale ailées
+Pierre tombale bêta
+Pierre tombale exclusive pour les joueurs de la bêta
+Grande pierre tombale
+Pierre tombale pour les grands garçons
+
+
+
+
+Run N' Gun
+Tire 4 petites balles.
+
+Mange du plomb !
+Tire 3 grosses balles en même temps. Réinitialise A+ ! si la capacité touche
+
+A+ !
+Effectue un dash.
+Effectue un dash.
+Enfer Balistique
+Tourne et tire sur tout ce qui t'entoure. Inflige un ralentissement aux adversaires touchés.
+
+Chuck Frappe
+Donne un coup de poing en combo de 3 coups. Touchez un adversaire donne un point de Cogne.
+
+Chuck Cogne
+Lance un puissant coup de poing. Inflige un étourdissement si vous avez tout vos points de Cogne.
+
+Chuck Saut
+Saute vers un endroit. Inflige un Soulèvement sur la terre ferme.
+
+CHUCK !!!
+Devient gigantesque et obtient un buff d'hp, de dégâts et de vitesse.
+
+Crôattaque
+Taillade en combo de 3 coups.
+
+MLEM
+Colle à une cible avec ta langue. Inflige un ralentissement.
+
+Hip Hop
+Saute vers un endroit. Inflige un ralentissement à l'atterrissage.
+
+Crôaslash
+Dash en avant et inflige des dégâts importants aux adversaires sur le passage.
+
+Chalumeau
+Enflamme une zone
+
+C'est Chaud !
+Transformez une zone en un feu grandissant. Inflige brûlure et ralentissement.
+
+Chaud devant !
+Active un bouclier de feu.
+
+Allumer le feu
+Envoie une énorme météorite s'écraser sur le sol.
+
+Frappe Violette
+Tire une flèche d'énergie.
+
+Appel de la Lune
+Lance une pluie de flèches dans une zone. Inflige un ralentissement.
+
+Saut de Cabri
+Tire sur le sol pour s'éloigner. Projette les adversaires en l'air.
+
+Étoiles filantes
+Tire une flèche perforante à travers les obstacles et les ennemis. Inflige un ralentissement.
+
+Chop Chop
+Donne un coup de poing en combo de 3 coups.
+
+Goût de Gingembre
+Frappe les ennemis devant vous. Inflige un étourdissement et un affaiblissement.
+
+Rouleau de Sushi
+Charge un dash, infligeant des dégâts et ralentissant les cibles en chemin.
+
+Choc Tempura
+Saute et frappe dans une zone. Projette les adversaires en l'air et donne un bouclier à Sashimi et ses alliés.
+
+Fauchage
+Taillade en combo à 2 coups.
+
+Griffure
+Tranche le sol. Inflige Exposé.
+
+Pas de l'Ombre
+Deviens invisible et gagne en vitesse. Inflige des dégâts supplémentaires sur votre prochain Fauchage ou Rends des points de vie sur votre prochaine Griffure.
+
+RIP
+S'élance vers l'avant et tranche devant vous.
+
+Hello World 
+Lance une onde numérique.
+
+Flux De Diffusion
+Lance un rayon. Inflige un ralentissement.
+
+Ctrl+C & Ctrl+V
+Se téléporte à un endroit et créer un clone à votre position initiale. Relancer pour changer de position avec votre clone.
+
+memcpy
+Crée un clone à un endroit donné. Relancer pour échanger les positions avec votre clone.
+
+Bazooka
+Tirer une fusée qui explose au contact.
+
+Verrouillage
+
+
+Faut que ça saute !
+Tire sur le sol pour vous lancer vers un endroit. Inflige un Soulèvement.
+
+Terrain miné
+Lancez des mines de proximité sur le sol. Inflige un ralentissement.
+
+Coupe Feu
+Effectue un coup en combo à 3 coups.
+
+Position miroir
+Contourne les attaques et réfléchit les projectiles.
+
+Course Enflammée
+Fonce vers l'avant et enflamme le katana. Peut être relancé 3 fois en touchant un ennemi.
+
+Coup de Feu
+Lance un projectile enflammé avec votre katana. Coup de Feu se recharge en frappant les adversaires avec des attaques de mêlée.
+
+Coupe Feu
+Effectue un coup en combo à 3 coups.
+
+Position miroir
+Contourne les attaques et réfléchit les projectiles.
+
+Course Enflammée
+Fonce vers l'avant et enflamme le katana. Peut être relancé 3 fois en touchant un ennemi.
+
+Coup de Feu
+Lance un projectile enflammé avec votre katana. Coup de Feu se recharge en frappant les adversaires avec des attaques de mêlée.
+
+S'inscrire
+Détails
+{0} de {1} Inscriptions objectif
+Défi bêta
+Vies
+Clause de non-responsabilité
+{0} La vie sera consommée si vous perdez un jeu.
+Il n'y a pas de remboursement pour les accidents de jeu ou les déconnexions.
+Hors de vie
+Vous êtes hors de la vie!
+Essayez de gagner plus de vies en effectuant des tâches:
+Obtenez plus de vies
+Temps restant pour s'inscrire
+{0} Inscriptions
+de {0} nécessaire pour commencer
+Gagner la vie
+Vous êtes inscrit
+Partagez votre code d'invitation
+Chaque {0} inscriptions, 1 $ sera ajoutée à la piscine
+Le temps d'inscription est terminé! Restez à l'écoute pour plus de nouvelles
+Gagner la vie
+Gagnez des vies en effectuant des tâches. Plus vous gagnez de vies, plus vous avez de chances.
+Votre code d'invitation:
+Twitch non lié
+Lien maintenant
+Twitch lié à {0}
+Invite à l'ami
+{0} ami invite
+Réclamer!
+Revendiqué
+Suivant
+Indisponible
+{0} de {1}
+La tâche n'est pas terminée. Invitez plus d'amis à déverrouiller la récompense
+Twitch Drops (12 - 15 octobre)
+Jour {0}
+La tâche n'est pas terminée. Obtenez des gouttes Twitch pour déverrouiller la récompense
+Jouer à des jeux
+{0} Jeux joués
+La tâche n'est pas terminée. Jouez à plus de jeux pour débloquer la récompense
+Calice
+Le prize pool sera divisé par les 50 meilleurs joueurs
+{0} place
+{0} points
+Participation
+chaque
+Comment gagner
+Continuez à jouer jusqu'à ce que votre vie s'épuise. Ceux qui ont le plus de victoires seront couronnés les champions du tournoi!
+Gagnez des vies supplémentaires
+Terminez des tâches pour gagner plus de vies. Plus de vies = plus de chances!
+Gagner des matchs
+Collectez des victoires en étant la dernière équipe debout. Vous perdez une vie si votre équipe est éliminée.
+Grimper le classement
+Seule une poignée supérieure gagnera le prize pool. La mouture ne s'arrête pas.
+Format
+Événement de 4 jours du 12 octobre au 15 octobre.
+Les serveurs sont ouverts de 9h à 2h du matin PST.
+Chaque jeu aura un faible HP comme modificateur de jeu de base
+Jour {0}
+Modificateur d'or
+Tu perds si tu es cassé
+3 victoires maximales réalisables
+Nuit
+Regardez derrière vous. HUER!
+10 victoires maximales réalisables
+Pluie de météorites
+C'est joover une fois que tu resterais immobile
+Maximum 25 victoires réalisables
+HP bas
+Bonne chance
+Règles
+Enfreindre toutes les règles entraînera une disqualification automatique + l'interdiction
+Aucune abus de bogue.
+Pas de botting pour des vies supplémentaires.
+Pas de comptes Alt, vous ne pouvez vous inscrire qu'une seule fois.
+Pas de collusion avec d'autres équipes.
+Inscrivez-vous maintenant pour une chance de gagner {0}
+{0} Inscriptions
+de {0} pour commencer
+Faites défiler en haut
+{0} Inscrit!
+{0} racheté {1} live (s)!
+S'inscrire
+Entrez un code d'invitation
+Entrer
+Signé
+Inviter le code copié!
+Vies
+Gagnez des vies en effectuant des tâches. Plus de vies = plus de chances
+Twitch Drops
+Gagnez des vies en regardant Twitch Streams
+
+
+#VALUE!

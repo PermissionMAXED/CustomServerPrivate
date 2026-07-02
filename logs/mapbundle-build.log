@@ -1,0 +1,25 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+[Licensing::IpcConnector] Connection attempt to the License Client on channel: "LicenseClient-Administrator" failed because channel doesn't exist; code: "0x80000002"
+[Licensing::Module] Successfully launched the LicensingClient (PId: 16664)
+[Licensing::IpcConnector] Successfully connected to the License Client on channel: "LicenseClient-Administrator" at "2026-06-15T20:09:39.1455295Z"
+[Licensing::Client] Error: Code 10 while verifying Licensing Client signature (process Id: 16664, path: "C:/Program Files/Unity/Hub/Editor/2022.3.38f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::Module] Error: LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.15.5+a2f8afb
+  Session Id:              2db0a4c43e4e4c5f886e5f00c7a6d9c3
+  Correlation Id:          b1fd50ce45b308194e42d73bf3fe51c6
+  External correlation Id: 6413214656474950146
+  Machine Id:              8nkKhQ8OF44VWDCkfDaQZfwuh1c=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Administrator" (connect: 1.26s, validation: 0.07s, handshake: 0.10s)
+[Licensing::IpcConnector] Successfully connected to the License Notification on channel: "LicenseClient-Administrator-notifications" at "2026-06-15T20:09:39.3161516Z"
+[Licensing::Module] Connected to LicensingClient (PId: 16664, launch time: 0.01, total connection time: 1.43s)
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Error: Code 500 while processing request (status: Unable to update licenses. Errors: No ULF license found.,Token not found in cache)
+[Licensing::Client] Error: Code 500 while updating license in client (status: Unable to update licenses. Errors: No ULF license found.,Token not found in cache)
+Built from '2022.3/staging' branch; Version is '2022.3.38f1 (c5d5a7410213) revision 12965287'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.26200) 64bit Professional' Language: 'de' Physical Memory: 65462 MB
+[Licensing::Client] Successfully resolved entitlements
+[Licensing::Module] Error: License is not active (com.unity.editor.headless). HasEntitlements will fail.
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+No valid Unity Editor license found. Please activate your license.
+Exiting without the bug reporter. Application will terminate with return code 1

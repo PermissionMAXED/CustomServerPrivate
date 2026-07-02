@@ -1,0 +1,47 @@
+ManifestFileVersion: 0
+CRC: 3519202959
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 0fdfb048583895c98a2f45b1c089b8e7
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 86f09f23801b19ffbc579c6386126a6b
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 0fdfb048583895c98a2f45b1c089b8e7
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 9184b34ac4eacd89e19dcd3a9dca031d, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0e06b0fab9a6dcf43e8966d106aa05eb, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 96a890b03114735997d54d5124e1e291, type: 3}
+- Class: 212
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 238
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Resources/levels/maps/customflat_bakedata/CustomFlat_ClData.prefab
+- Assets/Resources/levels/maps/customflat_bakedata/CustomFlat_Minimap.asset
+- Assets/Resources/levels/maps/customflat_bakedata/CustomFlat_NavData.asset
+- Assets/Resources/levels/maps/customflat_bakedata/CustomFlat_SvData.prefab
+- Assets/Resources/levels/maps/customflat_bakedata/CustomFlat_MMCache.asset
+- Assets/Resources/levels/maps/customflat_bakedata/CustomFlat_Minimap.png
+Dependencies: []

@@ -1,0 +1,1586 @@
+info: BapCustomServer[0]
+      BAPCUSTOM_STARTUP release=1.0.0+97d16d4d9fce130889a5b57b7ed4113b5c4dd3ea git=unknown branch=unknown dirty=False packageUtc=unknown configuration=unknown selfContained=(null) contentRoot=C:\Users\Administrator\Downloads\CustomServer deploymentInfo=C:\Users\Administrator\Downloads\CustomServer\deployment-info.json
+info: BapCustomServer[0]
+      BAPCUSTOM_CONFIG publicBaseUrl=http://127.0.0.1:5161 publicGameHost=127.0.0.1 launchGameServers=True gameExecutable=C:/Users/Administrator/Downloads/CustomServer/Spiel/Battleroyalebuild/bapbap.exe gameLauncher= gameLauncherArgs="{gameExecutable}" {gameArguments} ports ws=7777 kcp=7778 tcp=7779 http=7850 range=200 portCooldown=0s readyTimeout=300s bootstrapHttpTimeout=20s bootstrapResetPoll=1500ms managedBootstrapTimeout=180s managedBootstrapListenerOnly=45s requireKcp=False tcpTimeout=30s kcpTimeout=45s startAttempts=2 effectiveStartAttempts=2 startRetryDelay=2s stopWait=5000ms postCleanupStartDelay=3000ms startupStallGrace=45s startupStall=25s noisyStallGrace=45s noisyStall=25s wrapperOnlyStallGrace=8s wrapperOnlyStall=5s prewarm=False prewarmTimeout=180s prewarmMatchWait=35s maxMatches=0 emptyLobbyGrace=20s emptyLobbyConnectedGrace=45s
+info: BapCustomServer[0]
+      BAPCUSTOM_ARTIFACTS serverDllSha256= modDllSha256= modApiDllSha256= medusaDllSha256= medusaBundleSha256= gameExeSha256= startMatchSha256= packageSha256=
+info: BapCustomServer[0]
+      BAPCUSTOM_MEDUSA charId=15 rosterEnabled=True advertised=True
+info: BapCustomServer[0]
+      BAPCUSTOM_RUNTIME os=Microsoft Windows 10.0.26200 arch=X64 framework=.NET 10.0.5 urls=http://127.0.0.1:5161 winePath= wineVersion= winebootPath= xvfbRunPath= xauthPath= glxinfoPath= vulkanInfoPath=
+info: BapCustomServer[0]
+      BAPCUSTOM_GRAPHICS_PACKAGES 
+info: BapCustomServer[0]
+      BAPCUSTOM_GRAPHICS_ENV LIBGL_ALWAYS_SOFTWARE= GALLIUM_DRIVER= MESA_LOADER_DRIVER_OVERRIDE= MESA_GL_VERSION_OVERRIDE= WINEPREFIX= WINEARCH=
+warn: BapCustomServer[0]
+      BAPCUSTOM_RUNTIME_CHECK missing required Wine/Xvfb tool(s): winePath= xvfbRunPath= xauthPath=
+info: BapCustomServer.FriendsService[0]
+      Loaded friends state: 0 relationships, 0 pending requests.
+info: BapCustomServer.EconomyService[0]
+      Loaded economy state: 55 players.
+info: BapCustomServer.MatchHistoryService[0]
+      Loaded 10 recent matches from history log.
+info: BapCustomServer.RankedService[0]
+      Loaded ranked state: 50 players.
+info: BapCustomServer.GameServerPrewarmService[0]
+      Game-server startup prewarm skipped: GameServerPrewarmOnStartup=false
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://127.0.0.1:5161
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Users\Administrator\Downloads\CustomServer
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.2% rss=55MB priv=26MB gc=1MB threads=34 handles=420 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.4% rss=66MB priv=29MB gc=5MB threads=36 handles=442 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=65MB priv=28MB gc=5MB threads=36 handles=442 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=65MB priv=28MB gc=5MB threads=36 handles=441 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=65MB priv=27MB gc=5MB threads=35 handles=438 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=65MB priv=27MB gc=5MB threads=36 handles=441 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=66MB priv=28MB gc=5MB threads=33 handles=441 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=65MB priv=26MB gc=5MB threads=32 handles=441 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.LobbyService[0]
+      Client codex-custom-vfx-20260619-122252 connected. admin=True
+info: BapCustomServer.LobbyService[0]
+      [Analytics] Player joined: CodexVfx (accountId=codex-custom-vfx-20260619-122252)
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.3% rss=72MB priv=31MB gc=5MB threads=32 handles=449 | lobbies=0 matches=0 conns=1 queue=0
+info: BapCustomServer.LobbyService[0]
+      Match bootstrap custom-20260619102301-5339/V22826 players: codex-custom-vfx-20260619-122252:CodexVfx charId=15 skinAssetId=-1 playerId=1 team=1
+info: BapCustomServer.LobbyService[0]
+      Match bootstrap custom-20260619102301-5339/V22826 settings: gamemode=1 unityMode=1 mapId=34 teamSize=1 maxTeams=2 botTeams=4 botDifficulty=1.
+info: BapCustomServer.GameServerProcessManager[0]
+      Started game server custom-20260619102301-5339 attempt 1/2 as PID 43732. executable=C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\bapbap.exe ws=7777 kcp=7778 tcp=7779 http=7850
+info: BapCustomServer.GameServerProcessManager[0]
+      Game server launch details custom-20260619102301-5339 attempt 1/2: cwd=C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild args=-batchmode -logFile "C:\Users\Administrator\Downloads\CustomServer\CustomMatchServer\logs\game-servers\custom-20260619102301-5339.attempt1.log" -httpport=7850 -wsport=7777 -kcpport=7778 -tcpport=7779 --bapcustom-host=127.0.0.1 --bapcustom-server-port=5161 --bapcustom-use-proxy=false logFile=C:\Users\Administrator\Downloads\CustomServer\CustomMatchServer\logs\game-servers\custom-20260619102301-5339.attempt1.log wrapperLog=C:\Users\Administrator\Downloads\CustomServer\CustomMatchServer\logs\game-servers\custom-20260619102301-5339.attempt1.wrapper.log containsNoGraphics=False
+info: BapCustomServer.GameServerProcessManager[0]
+      Waiting for game server bootstrap custom-20260619102301-5339. baseUri=http://127.0.0.1:7850/ timeout=300s poll=500ms resetPoll=1500ms httpTimeout=20s logFile=C:\Users\Administrator\Downloads\CustomServer\CustomMatchServer\logs\game-servers\custom-20260619102301-5339.attempt1.log wrapperLog=C:\Users\Administrator\Downloads\CustomServer\CustomMatchServer\logs\game-servers\custom-20260619102301-5339.attempt1.wrapper.log
+info: BapCustomServer.GameServerProcessManager[0]
+      Game server custom-20260619102301-5339 accepted /setup-game HTTP after 6.2s and 3 attempt(s). Waiting for managed setupGameApplied status timeout=180s.
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.3% rss=81MB priv=34MB gc=4MB threads=36 handles=509 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=43732 rss=519MB threads=120
+info: BapCustomServer.GameServerProcessManager[0]
+      Managed bootstrap status setupGameApplied is listener-only; replayed /setup-game (1/4) after 6.2s. realtime=0.4s lastStatus=Managed match bootstrap listener is active.
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.3% rss=86MB priv=38MB gc=5MB threads=36 handles=509 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=43732 rss=1492MB threads=161
+info: BapCustomServer.GameServerProcessManager[0]
+      Game server managed bootstrap status ready. label=setupGameApplied networkStarted=True setup=True addTeams=False queueMatched=False lastStatus=Applied managed match bootstrap payload /setup-game via OnServerMatchSetup.
+info: BapCustomServer.GameServerProcessManager[0]
+      Game server managed bootstrap status ready. label=addTeamsApplied networkStarted=True setup=True addTeams=True queueMatched=False lastStatus=Applied managed match bootstrap payload /add-teams via OnServerMatchAddTeams.
+info: BapCustomServer.GameServerProcessManager[0]
+      Game server managed bootstrap status ready. label=queueMatchedApplied networkStarted=True setup=True addTeams=True queueMatched=True lastStatus=Applied managed match bootstrap payload /queue-matched via OnServerQueueMatched.
+info: BapCustomServer.GameServerProcessManager[0]
+      Game server custom-20260619102301-5339 managed bootstrap fully applied before GAME_STARTED. ws=7777 kcp=7778 tcp=7779
+info: BapCustomServer.GameServerProcessManager[0]
+      Game server custom-20260619102301-5339 accepted bootstrap HTTP; KCP UDP 7778 listener check is diagnostic-only.
+info: BapCustomServer.GameServerProcessManager[0]
+      Bootstrapped game server custom-20260619102301-5339.
+info: BapCustomServer.LobbyService[0]
+      [Analytics] Match started: custom-20260619102301-5339 mapId=34 players=1
+info: BapCustomServer.LobbyService[0]
+      Game server custom-20260619102301-5339 bootstrap fully applied; dispatching GAME_STARTED after setup/add-teams/queue-matched. mode=custom players=1 pid=43732 http=7850 ws=7777 kcp=7778 tcp=7779 mapId=34 unityGameMode=1
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.4% rss=86MB priv=37MB gc=5MB threads=36 handles=510 | lobbies=1 matches=1 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=43732 rss=1457MB threads=174 | PID=60868 rss=470MB threads=118
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=81MB priv=32MB gc=5MB threads=34 handles=504 | lobbies=1 matches=1 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=43732 rss=1457MB threads=171 | PID=60868 rss=1392MB threads=156
+info: BapCustomServer.EconomyService[0]
+      Created new economy profile for codex-custom-vfx-20260619-122252 (CodexVfx) with 1000 starting gold.
+info: BapCustomServer.ShopService[0]
+      Loaded shop state: 8 rotation items, 0 freebie items, DropId=1.
+info: BapCustomServer.LobbyService[0]
+      Client codex-custom-vfx-20260619-122252 connected. admin=True
+info: BapCustomServer.LobbyService[0]
+      [Analytics] Player joined: Player2 (accountId=codex-custom-vfx-20260619-122252)
+info: BapCustomServer.LobbyService[0]
+      Lobby V22826 is empty while match custom-20260619102301-5339 is active; keeping game process alive for 20s grace (45s if the match account socket is still connected). matchAccounts=codex-custom-vfx-20260619-122252
+info: BapCustomServer.LobbyService[0]
+      JoinLobby normalized stale state for codex-custom-vfx-20260619-122252: removedLobbies=1 staleQueue=False.
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.3% rss=89MB priv=38MB gc=7MB threads=39 handles=538 | lobbies=1 matches=1 conns=2 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=43732 rss=1458MB threads=168 | PID=60868 rss=1468MB threads=188
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=83MB priv=33MB gc=7MB threads=39 handles=538 | lobbies=1 matches=1 conns=2 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=43732 rss=1459MB threads=167 | PID=60868 rss=1449MB threads=177
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=83MB priv=33MB gc=7MB threads=34 handles=525 | lobbies=1 matches=1 conns=2 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=43732 rss=1459MB threads=166 | PID=60868 rss=1448MB threads=172
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=83MB priv=31MB gc=7MB threads=34 handles=525 | lobbies=1 matches=1 conns=2 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=43732 rss=1461MB threads=166 | PID=60868 rss=1452MB threads=172
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=83MB priv=32MB gc=7MB threads=35 handles=527 | lobbies=1 matches=1 conns=2 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=43732 rss=1471MB threads=173 | PID=60868 rss=1453MB threads=171
+info: BapCustomServer.LobbyService[0]
+      Cleaned up empty-lobby match custom-20260619102301-5339 after 50s empty; grace=45s connectedMatchPlayers=2.
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] Cleaned 1 stale match(es).
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=87MB priv=36MB gc=11MB threads=35 handles=526 | lobbies=1 matches=0 conns=2 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=43732 rss=1480MB threads=1 | PID=60868 rss=1457MB threads=171
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=88MB priv=37MB gc=12MB threads=35 handles=528 | lobbies=1 matches=0 conns=2 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1458MB threads=168
+info: Microsoft.AspNetCore.Server.Kestrel.Connections[34]
+      Connection id "0HNMDTI6SD89M", Request id "0HNMDTI6SD89M:00000001": the application aborted the connection.
+info: BapCustomServer.LobbyService[0]
+      Client codex-custom-vfx-20260619-122252 disconnected.
+info: BapCustomServer.LobbyService[0]
+      [Analytics] Player left: CodexVfx (accountId=codex-custom-vfx-20260619-122252)
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=88MB priv=37MB gc=12MB threads=32 handles=526 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1460MB threads=170
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=88MB priv=36MB gc=12MB threads=31 handles=523 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1463MB threads=169
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=87MB priv=36MB gc=12MB threads=30 handles=521 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1466MB threads=166
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=88MB priv=37MB gc=12MB threads=31 handles=524 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1469MB threads=166
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=88MB priv=36MB gc=12MB threads=30 handles=521 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1472MB threads=164
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=88MB priv=37MB gc=12MB threads=30 handles=521 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1476MB threads=163
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=90MB priv=38MB gc=12MB threads=34 handles=529 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1479MB threads=162
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=40MB gc=12MB threads=34 handles=529 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1481MB threads=163
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=88MB priv=38MB gc=12MB threads=31 handles=527 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1481MB threads=163
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=88MB priv=36MB gc=12MB threads=31 handles=527 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1481MB threads=162
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=89MB priv=38MB gc=12MB threads=34 handles=530 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1481MB threads=161
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=89MB priv=37MB gc=12MB threads=33 handles=529 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1481MB threads=161
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=88MB priv=37MB gc=12MB threads=34 handles=532 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1481MB threads=163
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=88MB priv=36MB gc=12MB threads=32 handles=527 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1481MB threads=163
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=89MB priv=37MB gc=12MB threads=32 handles=527 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1481MB threads=164
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=89MB priv=38MB gc=12MB threads=33 handles=530 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1481MB threads=163
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=89MB priv=37MB gc=12MB threads=32 handles=527 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1481MB threads=163
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=89MB priv=37MB gc=12MB threads=32 handles=527 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1481MB threads=162
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=89MB priv=37MB gc=12MB threads=33 handles=530 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1481MB threads=162
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=89MB priv=37MB gc=12MB threads=32 handles=527 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1482MB threads=162
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=89MB priv=37MB gc=12MB threads=31 handles=530 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1482MB threads=161
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=40MB gc=13MB threads=31 handles=530 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1482MB threads=163
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=89MB priv=37MB gc=13MB threads=30 handles=527 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1490MB threads=174
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=89MB priv=37MB gc=13MB threads=30 handles=527 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1499MB threads=177
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=89MB priv=37MB gc=13MB threads=31 handles=530 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1500MB threads=176
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=89MB priv=37MB gc=13MB threads=30 handles=527 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1500MB threads=175
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=90MB priv=37MB gc=13MB threads=31 handles=530 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1501MB threads=176
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=90MB priv=38MB gc=13MB threads=31 handles=530 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1501MB threads=176
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=89MB priv=37MB gc=13MB threads=30 handles=527 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1501MB threads=176
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=89MB priv=37MB gc=13MB threads=30 handles=527 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1500MB threads=176
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=39MB gc=13MB threads=31 handles=530 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1501MB threads=176
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=90MB priv=37MB gc=13MB threads=30 handles=527 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1501MB threads=174
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=90MB priv=38MB gc=13MB threads=30 handles=527 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1500MB threads=172
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=90MB priv=38MB gc=13MB threads=31 handles=530 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1500MB threads=172
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=89MB priv=37MB gc=13MB threads=31 handles=527 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1500MB threads=172
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=90MB priv=38MB gc=13MB threads=31 handles=527 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1501MB threads=172
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=90MB priv=38MB gc=13MB threads=32 handles=530 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1501MB threads=172
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=90MB priv=38MB gc=13MB threads=31 handles=527 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1501MB threads=172
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=90MB priv=38MB gc=13MB threads=32 handles=530 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1501MB threads=172
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=38MB gc=13MB threads=32 handles=530 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1500MB threads=171
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=92MB priv=40MB gc=13MB threads=33 handles=530 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1501MB threads=172
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=90MB priv=38MB gc=13MB threads=32 handles=527 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1501MB threads=171
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=90MB priv=38MB gc=13MB threads=33 handles=530 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1501MB threads=172
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=38MB gc=13MB threads=32 handles=527 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1501MB threads=172
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=38MB gc=13MB threads=32 handles=527 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1501MB threads=172
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=38MB gc=13MB threads=33 handles=530 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1501MB threads=172
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=38MB gc=14MB threads=32 handles=527 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1501MB threads=172
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=38MB gc=14MB threads=30 handles=527 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1500MB threads=172
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=39MB gc=14MB threads=31 handles=530 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=60868 rss=1500MB threads=171
+info: Microsoft.AspNetCore.Server.Kestrel.Connections[34]
+      Connection id "0HNMDTI6SD8A0", Request id "0HNMDTI6SD8A0:00000001": the application aborted the connection.
+info: BapCustomServer.LobbyService[0]
+      Client codex-custom-vfx-20260619-122252 disconnected.
+info: BapCustomServer.LobbyService[0]
+      [Analytics] Player left: Player2 (accountId=codex-custom-vfx-20260619-122252)
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=92MB priv=40MB gc=14MB threads=31 handles=529 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=92MB priv=40MB gc=14MB threads=31 handles=529 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=92MB priv=40MB gc=14MB threads=30 handles=527 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=14MB threads=31 handles=530 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=14MB threads=30 handles=527 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=14MB threads=30 handles=527 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=14MB threads=30 handles=527 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=42MB gc=14MB threads=31 handles=530 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=91MB priv=39MB gc=14MB threads=30 handles=527 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=39MB gc=14MB threads=30 handles=527 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=91MB priv=39MB gc=14MB threads=32 handles=530 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=39MB gc=14MB threads=31 handles=527 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=39MB gc=14MB threads=31 handles=527 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=38MB gc=14MB threads=31 handles=527 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=38MB gc=14MB threads=31 handles=527 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=38MB gc=14MB threads=31 handles=527 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=38MB gc=14MB threads=31 handles=527 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=38MB gc=14MB threads=31 handles=527 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=38MB gc=14MB threads=31 handles=527 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=38MB gc=14MB threads=31 handles=527 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=38MB gc=14MB threads=31 handles=527 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=38MB gc=14MB threads=31 handles=527 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=38MB gc=14MB threads=31 handles=527 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=39MB gc=14MB threads=31 handles=527 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=38MB gc=14MB threads=31 handles=527 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=38MB gc=14MB threads=30 handles=527 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=38MB gc=14MB threads=30 handles=527 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=38MB gc=14MB threads=30 handles=527 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=39MB gc=14MB threads=30 handles=527 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=38MB gc=14MB threads=30 handles=527 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=38MB gc=14MB threads=30 handles=527 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=38MB gc=14MB threads=30 handles=527 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=38MB gc=14MB threads=30 handles=527 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=39MB gc=14MB threads=30 handles=527 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=39MB gc=14MB threads=30 handles=527 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=39MB gc=14MB threads=30 handles=527 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=39MB gc=14MB threads=30 handles=527 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=39MB gc=14MB threads=30 handles=527 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=39MB gc=14MB threads=30 handles=527 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=91MB priv=39MB gc=14MB threads=30 handles=527 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=39MB gc=14MB threads=31 handles=530 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=39MB gc=14MB threads=31 handles=530 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=39MB gc=14MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=39MB gc=14MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=39MB gc=14MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=39MB gc=14MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=39MB gc=14MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=39MB gc=14MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=39MB gc=14MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=39MB gc=14MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=39MB gc=14MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=39MB gc=14MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=39MB gc=14MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=39MB gc=14MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=39MB gc=14MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=91MB priv=39MB gc=14MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=39MB gc=14MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=39MB gc=14MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=39MB gc=14MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=39MB gc=14MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=39MB gc=14MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=39MB gc=14MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=39MB gc=14MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=39MB gc=14MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=39MB gc=15MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=39MB gc=15MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=39MB gc=15MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=92MB priv=40MB gc=15MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=92MB priv=40MB gc=15MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=92MB priv=40MB gc=15MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=92MB priv=40MB gc=15MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=92MB priv=40MB gc=15MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=92MB priv=40MB gc=15MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=92MB priv=40MB gc=15MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=92MB priv=40MB gc=15MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=92MB priv=40MB gc=15MB threads=31 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=92MB priv=40MB gc=6MB threads=31 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=6MB threads=31 handles=494 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=6MB threads=31 handles=494 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=6MB threads=31 handles=494 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=6MB threads=31 handles=494 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=6MB threads=31 handles=494 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=6MB threads=31 handles=494 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=6MB threads=31 handles=494 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=6MB threads=31 handles=494 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=6MB threads=30 handles=494 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=6MB threads=30 handles=494 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=6MB threads=30 handles=494 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=6MB threads=30 handles=494 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=6MB threads=30 handles=494 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=494 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=494 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=494 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=494 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=494 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=494 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=494 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=494 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=494 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=494 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=31 handles=497 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=31 handles=497 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=497 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=497 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=497 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=31 handles=497 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=31 handles=497 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=31 handles=497 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=31 handles=497 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=31 handles=497 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=31 handles=497 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=497 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=93MB priv=42MB gc=7MB threads=31 handles=500 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=31 handles=500 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=498 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=32 handles=504 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=31 handles=501 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=501 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=501 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=501 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=501 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=31 handles=504 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=31 handles=504 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=504 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=504 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=504 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=504 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=504 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=504 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=504 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=31 handles=507 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=31 handles=507 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=507 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=507 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=507 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=507 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=507 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=507 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=507 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=507 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=507 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=507 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=507 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=507 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=507 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=507 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=507 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=507 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=507 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=507 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=507 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=507 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=507 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=507 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=507 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=507 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=31 handles=510 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=31 handles=510 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=510 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=510 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=93MB priv=42MB gc=7MB threads=30 handles=510 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=510 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=30 handles=510 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=93MB priv=42MB gc=7MB threads=30 handles=510 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=93MB priv=42MB gc=7MB threads=30 handles=510 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=7MB threads=31 handles=513 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=31 handles=513 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=513 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=513 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=513 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=31 handles=516 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=513 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=513 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=513 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=513 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=513 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=513 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=513 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=513 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=513 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=513 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=513 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=513 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=513 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=513 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=513 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=513 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=31 handles=516 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=31 handles=516 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=31 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=31 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=8MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=9MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=9MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=9MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=9MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=9MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=9MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=9MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=9MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=9MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=9MB threads=31 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=9MB threads=31 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=9MB threads=31 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=9MB threads=31 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=9MB threads=31 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=9MB threads=31 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=93MB priv=42MB gc=9MB threads=31 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=9MB threads=31 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=9MB threads=31 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=9MB threads=31 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=9MB threads=31 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=9MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=9MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=9MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=9MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=9MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=9MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=42MB gc=9MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=95MB priv=43MB gc=9MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=31 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=31 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=31 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=31 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=31 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=31 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=31 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=31 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=30 handles=519 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=31 handles=522 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=31 handles=522 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=30 handles=522 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=30 handles=522 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=30 handles=522 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=30 handles=522 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=30 handles=522 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=30 handles=522 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=30 handles=522 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=30 handles=522 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=30 handles=522 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=30 handles=522 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=30 handles=522 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=30 handles=522 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=31 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=31 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=9MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=31 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=31 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=10MB threads=31 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=10MB threads=31 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=31 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=31 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=31 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=31 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=10MB threads=31 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=10MB threads=31 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=10MB threads=31 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=10MB threads=31 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=10MB threads=31 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=10MB threads=31 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=31 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=31 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=31 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=31 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=31 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=525 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=31 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=31 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=10MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=30 handles=528 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=32 handles=534 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=31 handles=531 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=30 handles=531 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=30 handles=531 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=30 handles=531 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=30 handles=531 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=30 handles=531 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=30 handles=531 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=30 handles=531 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=30 handles=531 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=93MB priv=41MB gc=11MB threads=30 handles=531 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=30 handles=531 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=30 handles=531 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=30 handles=531 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=30 handles=531 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=30 handles=531 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=30 handles=531 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=93MB priv=41MB gc=11MB threads=30 handles=531 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=30 handles=531 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=30 handles=531 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=30 handles=531 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=30 handles=531 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=30 handles=531 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=30 handles=531 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=30 handles=531 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=30 handles=531 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=30 handles=531 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=11MB threads=30 handles=531 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=11MB threads=31 handles=534 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=11MB threads=31 handles=534 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=11MB threads=30 handles=534 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=11MB threads=30 handles=534 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=11MB threads=30 handles=534 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=11MB threads=30 handles=534 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=11MB threads=30 handles=534 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=94MB priv=41MB gc=11MB threads=30 handles=534 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=11MB threads=30 handles=534 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=11MB threads=30 handles=534 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=11MB threads=30 handles=534 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=11MB threads=30 handles=534 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=11MB threads=30 handles=534 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=11MB threads=30 handles=534 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=11MB threads=30 handles=534 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=11MB threads=30 handles=534 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=11MB threads=30 handles=534 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=11MB threads=30 handles=534 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=11MB threads=30 handles=534 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=11MB threads=30 handles=534 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=11MB threads=30 handles=534 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=11MB threads=30 handles=534 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=11MB threads=30 handles=534 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=11MB threads=30 handles=534 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=11MB threads=30 handles=534 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=11MB threads=30 handles=534 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=11MB threads=30 handles=534 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=11MB threads=30 handles=534 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=11MB threads=30 handles=534 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=11MB threads=30 handles=534 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=11MB threads=31 handles=537 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=11MB threads=31 handles=537 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=31 handles=540 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=537 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=537 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=537 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=537 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=537 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=537 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=537 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=537 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=537 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=537 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=537 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=537 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=537 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=537 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=537 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=537 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=537 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=537 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=537 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=537 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=537 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=537 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=537 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=537 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=537 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=537 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=537 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=94MB priv=41MB gc=12MB threads=30 handles=537 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=537 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=537 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=537 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=537 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=537 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=31 handles=540 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=31 handles=540 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=540 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=540 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=31 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=31 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=94MB priv=41MB gc=12MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=94MB priv=41MB gc=12MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=94MB priv=41MB gc=12MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=12MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=94MB priv=41MB gc=12MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=31 handles=546 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=543 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=13MB threads=31 handles=551 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=13MB threads=31 handles=551 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=93MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=31 handles=552 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=94MB priv=41MB gc=13MB threads=30 handles=549 | lobbies=0 matches=0 conns=0 queue=0

@@ -1,0 +1,182 @@
+ManifestFileVersion: 0
+CRC: 2292575921
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a44791febb1ff9b9c4470a345055d918
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 91053cdb529c281552f29cc131baa5ab
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: a44791febb1ff9b9c4470a345055d918
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 54
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 82
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 96
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 860895539, guid: f5de03243f0810025e7802b3b315681e, type: 3}
+- Class: 114
+  Script: {fileID: -1510866737, guid: 0f09b8ddd7de68d6cd0e3586a033fe56, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 1460c8433876cd615dc52820edfa5045, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 823cbae65620cefaea6e1a737cdd5299, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 6b79b1dfb9205e5f03863f783caf37c8, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4f78996d3a77629b8cff3633a5460216, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: c124b5a94cfb59d2979d8d3e31e26098, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: c418ab3655a09eb5f589e4908c394b76, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: fef747ef05a421ca24897f71c46ab7f6, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: df65c82e2f36142b8b29fe113d107ecd, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: fd24e6944f6624a0d8825aba0258da4b, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 2852354ff2454771730115ea467df332, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: c05490c0e5b6d4a5cad516b54f869a9a, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 3bff23b8297e0ce26eb236b150678586, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 143f329b09f93def6b9f034fcb2d181a, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 932c48f6a69d09ed8a5f3b277e201c79, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 62dc36d362e5b0fa031f472524066b61, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 6ef55e0e085468d100d9c3091ac30cb8, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 28fe2fb61f2f37d19a256006d16f00ed, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: adc031e0241f0323d5a9dd67823acf98, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 6ea49e59988d17c0fb4f067f5f9a442a, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 9fd2bf7513da0c3735cf79c55244986d, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 00704bdccbcf94801ff971ff40422087, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: adab3e31ad806e24432087819303599b, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 132019dbec0e3b9f024ba8952b24763c, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 949fdc18057de523604055fb7744b0a7, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: ae8604a3f2cbce2661dabca4b88f8fad, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 38ca8028b8b6cd265050adf14a2bacb6, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 9d1bca18ec04b028e965e091d95bcdda, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: b710ad8b6be4b5265ad86b4176221786, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 1d47e336620f8c593921a3f0380d2e67, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 52d800488fe7351a9566d338dc4b40b0, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 696154ec638333eae0e07599727274ab, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 96bca1085b0dbf7e3893c63fcc3656cd, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8a799abebb0e0d441e9bb132eb0bd1f4, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 648232c95aaaf1cec8f2a43ef9b01406, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 2da6e6fddbc5990bb47bd39da50f564f, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: fbc7cb64e9a8a06350887b5bd629206e, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 88287e0e225262af3ab8ce12d4640eec, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8afae37ada34917f8f8ce142c76dc040, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 1c7b1efc37c6449cafdf22fe400ab7e1, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 69b6e79c7f5a8fea5fc93cd119a0c3cd, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: e9ad1bd7dca67e9a93a618e00e5d2e37, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5de9ec202ac2625f47c08f8fce084170, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: b67c98004d10b1bc445ef3bbdf567ea8, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: a16fd113c555887493f95186c1d8bafd, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: dd1fda3b0fa518be773baba784e3ab15, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: c925a52b920cb9297284aa64a0932c6a, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 956c859fc155445b3913ff591444d5f0, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 135
+  Script: {instanceID: 0}
+- Class: 136
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
+- Class: 143
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+- Class: 212
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/GameObject/Hitbox_Blitz_AOE.prefab
+- Assets/AnimatorController/Blitz.controller
+- Assets/GameObject/VFX_Blitz_AOE_Boom.prefab
+- Assets/GameObject/VFX_Blitz_AOE_Timer.prefab
+- Assets/Material/Blitz_Material.mat
+- Assets/GameObject/VFX_Blitz_Hook.prefab
+- Assets/GameObject/Hitbox_Blitz_Hook.prefab
+- Assets/GameObject/VFX_Blitz_AOE_Timer_Teevee_Ally.prefab
+- Assets/GameObject/VFX_Blitz_Hook_Impact.prefab
+- Assets/GameObject/Blitz_Visual.prefab
+- Assets/GameObject/Hitbox_Blitz_Buff.prefab
+- Assets/GameObject/Hitbox_Blitz_AOE_Teevee.prefab
+- Assets/GameObject/Hitbox_Blitz_HeavyPunch.prefab
+- Assets/GameObject/Blitz.prefab
+- Assets/GameObject/VFX_Blitz_Hook_Impact_Fail.prefab
+- Assets/GameObject/VFX_Blitz_AOE_Timer_Teevee.prefab
+- Assets/GameObject/VFX_Blitz_Hook_Muzzle.prefab
+Dependencies: []

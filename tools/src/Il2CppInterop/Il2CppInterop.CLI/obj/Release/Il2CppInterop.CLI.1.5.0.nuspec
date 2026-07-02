@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Il2CppInterop.CLI</id>
+    <version>1.5.0</version>
+    <authors>BepInEx</authors>
+    <license type="expression">LGPL-3.0-only</license>
+    <licenseUrl>https://licenses.nuget.org/LGPL-3.0-only</licenseUrl>
+    <icon>logo_icon.png</icon>
+    <readme>README.md</readme>
+    <description>CLI tool for generating managed proxy assemblies for Il2Cpp</description>
+    <packageTypes>
+      <packageType name="DotnetTool" />
+    </packageTypes>
+    <repository type="git" commit="e46b67ac217f6debeba49a7a6430d2001f13fa45" />
+  </metadata>
+  <files>
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.CLI\obj\Release\net6.0\DotnetToolSettings.xml" target="tools\net6.0\any\DotnetToolSettings.xml" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\Il2CppInterop.CLI.dll" target="tools\net6.0\any\Il2CppInterop.CLI.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\Il2CppInterop.CLI.deps.json" target="tools\net6.0\any\Il2CppInterop.CLI.deps.json" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\Il2CppInterop.CLI.runtimeconfig.json" target="tools\net6.0\any\Il2CppInterop.CLI.runtimeconfig.json" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\AsmResolver.dll" target="tools\net6.0\any\AsmResolver.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\AsmResolver.DotNet.dll" target="tools\net6.0\any\AsmResolver.DotNet.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\AsmResolver.PE.dll" target="tools\net6.0\any\AsmResolver.PE.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\AsmResolver.PE.File.dll" target="tools\net6.0\any\AsmResolver.PE.File.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\ClangSharp.dll" target="tools\net6.0\any\ClangSharp.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\CppAst.dll" target="tools\net6.0\any\CppAst.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\Iced.dll" target="tools\net6.0\any\Iced.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\Microsoft.Bcl.HashCode.dll" target="tools\net6.0\any\Microsoft.Bcl.HashCode.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\Microsoft.Extensions.Configuration.dll" target="tools\net6.0\any\Microsoft.Extensions.Configuration.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\Microsoft.Extensions.Configuration.Abstractions.dll" target="tools\net6.0\any\Microsoft.Extensions.Configuration.Abstractions.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\Microsoft.Extensions.Configuration.Binder.dll" target="tools\net6.0\any\Microsoft.Extensions.Configuration.Binder.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\Microsoft.Extensions.DependencyInjection.dll" target="tools\net6.0\any\Microsoft.Extensions.DependencyInjection.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\Microsoft.Extensions.DependencyInjection.Abstractions.dll" target="tools\net6.0\any\Microsoft.Extensions.DependencyInjection.Abstractions.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\Microsoft.Extensions.Logging.dll" target="tools\net6.0\any\Microsoft.Extensions.Logging.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\Microsoft.Extensions.Logging.Abstractions.dll" target="tools\net6.0\any\Microsoft.Extensions.Logging.Abstractions.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\Microsoft.Extensions.Logging.Configuration.dll" target="tools\net6.0\any\Microsoft.Extensions.Logging.Configuration.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\Microsoft.Extensions.Logging.Console.dll" target="tools\net6.0\any\Microsoft.Extensions.Logging.Console.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\Microsoft.Extensions.Options.dll" target="tools\net6.0\any\Microsoft.Extensions.Options.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\Microsoft.Extensions.Options.ConfigurationExtensions.dll" target="tools\net6.0\any\Microsoft.Extensions.Options.ConfigurationExtensions.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\Microsoft.Extensions.Primitives.dll" target="tools\net6.0\any\Microsoft.Extensions.Primitives.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\MonoMod.Backports.dll" target="tools\net6.0\any\MonoMod.Backports.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\MonoMod.ILHelpers.dll" target="tools\net6.0\any\MonoMod.ILHelpers.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\System.CommandLine.dll" target="tools\net6.0\any\System.CommandLine.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\System.CommandLine.NamingConventionBinder.dll" target="tools\net6.0\any\System.CommandLine.NamingConventionBinder.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\Il2CppInterop.Common.dll" target="tools\net6.0\any\Il2CppInterop.Common.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\Il2CppInterop.Generator.dll" target="tools\net6.0\any\Il2CppInterop.Generator.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\Il2CppInterop.StructGenerator.dll" target="tools\net6.0\any\Il2CppInterop.StructGenerator.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\Il2CppInterop.Generator.xml" target="tools\net6.0\any\Il2CppInterop.Generator.xml" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\Il2CppInterop.StructGenerator.xml" target="tools\net6.0\any\Il2CppInterop.StructGenerator.xml" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\Il2CppInterop.Common.xml" target="tools\net6.0\any\Il2CppInterop.Common.xml" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\Il2CppInterop.CLI.xml" target="tools\net6.0\any\Il2CppInterop.CLI.xml" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\cs\System.CommandLine.resources.dll" target="tools\net6.0\any\cs\System.CommandLine.resources.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\de\System.CommandLine.resources.dll" target="tools\net6.0\any\de\System.CommandLine.resources.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\es\System.CommandLine.resources.dll" target="tools\net6.0\any\es\System.CommandLine.resources.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\fr\System.CommandLine.resources.dll" target="tools\net6.0\any\fr\System.CommandLine.resources.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\it\System.CommandLine.resources.dll" target="tools\net6.0\any\it\System.CommandLine.resources.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\ja\System.CommandLine.resources.dll" target="tools\net6.0\any\ja\System.CommandLine.resources.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\ko\System.CommandLine.resources.dll" target="tools\net6.0\any\ko\System.CommandLine.resources.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\pl\System.CommandLine.resources.dll" target="tools\net6.0\any\pl\System.CommandLine.resources.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\pt-BR\System.CommandLine.resources.dll" target="tools\net6.0\any\pt-BR\System.CommandLine.resources.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\ru\System.CommandLine.resources.dll" target="tools\net6.0\any\ru\System.CommandLine.resources.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\tr\System.CommandLine.resources.dll" target="tools\net6.0\any\tr\System.CommandLine.resources.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\zh-Hans\System.CommandLine.resources.dll" target="tools\net6.0\any\zh-Hans\System.CommandLine.resources.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\zh-Hant\System.CommandLine.resources.dll" target="tools\net6.0\any\zh-Hant\System.CommandLine.resources.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\runtimes\win-x64\native\libclang.dll" target="tools\net6.0\any\runtimes\win-x64\native\libclang.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.CLI\net6.0\publish\runtimes\win-x64\native\libClangSharp.dll" target="tools\net6.0\any\runtimes\win-x64\native\libClangSharp.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\logo\logo_icon.png" target="logo_icon.png" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\README.md" target="README.md" />
+  </files>
+</package>

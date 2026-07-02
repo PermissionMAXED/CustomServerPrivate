@@ -1,0 +1,39 @@
+{
+  "mapId": 37,
+  "name": "UnitySample",
+  "displayName": "UNITY SAMPLE",
+  "bundleFileName": "customflat.bundle",
+  "svPrefabName": "CustomFlat_SvData",
+  "clPrefabName": "CustomFlat_ClData",
+  "baseSvResource": "levels/maps/blank_test_bakedata/Blank_Test_SvData",
+  "baseClResource": "levels/maps/blank_test_bakedata/Blank_Test_ClData",
+  "mapSettingsDisplayName": "UNITY SAMPLE",
+  "mapType": 0,
+  "customZoneRounds": true,
+  "excludeNavMeshFloor": false,
+  "excludeWaterPerimeter": false,
+  "mapSize": [ 48, 48 ],
+  "zoneRounds": [
+    {
+      "secondsUntilZoneStart": 45,
+      "secondsZoneMoveDuration": 30,
+      "closePercentage": 35,
+      "damagePercentage": 5,
+      "untilStartPlayerFactorInfluence": 0,
+      "moveDurationPlayerFactorInfluence": 0,
+      "doAugments": false
+    }
+  ],
+  "enableTileEdits": false,
+  "useLevelDataTileMutations": false,
+  "tileEdits": [],
+  "enableEntities": true,
+  "entities": [
+    { "prefab": "Npc_Boss_Chad", "x": 0, "y": 0, "z": 0, "rotY": 0 }
+  ],
+  "spawnPoints": [
+    [ 10, 0, 10 ],
+    [ -10, 0, -10 ]
+  ],
+  "enabled": true
+}

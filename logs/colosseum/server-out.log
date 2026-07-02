@@ -1,0 +1,94 @@
+info: BapCustomServer[0]
+      BAPCUSTOM_STARTUP release=1.0.0+97d16d4d9fce130889a5b57b7ed4113b5c4dd3ea git=unknown branch=unknown dirty=False packageUtc=unknown configuration=unknown selfContained=(null) contentRoot=C:\Users\Administrator\Downloads\CustomServer deploymentInfo=C:\Users\Administrator\Downloads\CustomServer\deployment-info.json
+info: BapCustomServer[0]
+      BAPCUSTOM_CONFIG publicBaseUrl=http://127.0.0.1:5164 publicGameHost=127.0.0.1 launchGameServers=True gameExecutable=C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\bapbap.exe gameLauncher= gameLauncherArgs="{gameExecutable}" {gameArguments} ports ws=7777 kcp=7778 tcp=7779 http=7850 range=200 portCooldown=0s readyTimeout=300s bootstrapHttpTimeout=20s bootstrapResetPoll=1500ms managedBootstrapTimeout=180s managedBootstrapListenerOnly=0s requireKcp=False tcpTimeout=30s kcpTimeout=45s startAttempts=2 effectiveStartAttempts=2 startRetryDelay=2s stopWait=5000ms postCleanupStartDelay=3000ms startupStallGrace=45s startupStall=25s noisyStallGrace=45s noisyStall=25s wrapperOnlyStallGrace=8s wrapperOnlyStall=5s prewarm=False prewarmTimeout=180s prewarmMatchWait=35s maxMatches=0 emptyLobbyGrace=20s emptyLobbyConnectedGrace=45s
+info: BapCustomServer[0]
+      BAPCUSTOM_ARTIFACTS serverDllSha256= modDllSha256= modApiDllSha256= medusaDllSha256= medusaBundleSha256= gameExeSha256= startMatchSha256= packageSha256=
+info: BapCustomServer[0]
+      BAPCUSTOM_MEDUSA charId=15 rosterEnabled=True advertised=True
+info: BapCustomServer[0]
+      BAPCUSTOM_RUNTIME os=Microsoft Windows 10.0.26200 arch=X64 framework=.NET 10.0.5 urls=http://127.0.0.1:5164 winePath= wineVersion= winebootPath= xvfbRunPath= xauthPath= glxinfoPath= vulkanInfoPath=
+info: BapCustomServer[0]
+      BAPCUSTOM_GRAPHICS_PACKAGES 
+info: BapCustomServer[0]
+      BAPCUSTOM_GRAPHICS_ENV LIBGL_ALWAYS_SOFTWARE= GALLIUM_DRIVER= MESA_LOADER_DRIVER_OVERRIDE= MESA_GL_VERSION_OVERRIDE= WINEPREFIX= WINEARCH=
+warn: BapCustomServer[0]
+      BAPCUSTOM_RUNTIME_CHECK missing required Wine/Xvfb tool(s): winePath= xvfbRunPath= xauthPath=
+info: BapCustomServer.FriendsService[0]
+      Loaded friends state: 0 relationships, 0 pending requests.
+info: BapCustomServer.EconomyService[0]
+      Loaded economy state: 49 players.
+info: BapCustomServer.MatchHistoryService[0]
+      Loaded 9 recent matches from history log.
+info: BapCustomServer.RankedService[0]
+      Loaded ranked state: 50 players.
+info: BapCustomServer.GameServerPrewarmService[0]
+      Game-server startup prewarm skipped: GameServerPrewarmOnStartup=false
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://127.0.0.1:5164
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Users\Administrator\Downloads\CustomServer
+info: BapCustomServer.LobbyService[0]
+      Client custom-1 connected. admin=False
+info: BapCustomServer.LobbyService[0]
+      [Analytics] Player joined: Player1 (accountId=custom-1)
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=1.1% rss=68MB priv=30MB gc=5MB threads=34 handles=446 | lobbies=0 matches=0 conns=1 queue=0
+info: BapCustomServer.LobbyService[0]
+      Match bootstrap custom-20260618093130-4641/MATCH1 players: custom-1:Player1 charId=1 skinAssetId=-1 playerId=1 team=1
+info: BapCustomServer.LobbyService[0]
+      Match bootstrap custom-20260618093130-4641/MATCH1 settings: gamemode=1 unityMode=1 mapId=33 teamSize=1 maxTeams=2 botTeams=1 botDifficulty=1.
+info: BapCustomServer.GameServerProcessManager[0]
+      Started game server custom-20260618093130-4641 attempt 1/2 as PID 66416. executable=C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\bapbap.exe ws=7777 kcp=7778 tcp=7779 http=7850
+info: BapCustomServer.GameServerProcessManager[0]
+      Game server launch details custom-20260618093130-4641 attempt 1/2: cwd=C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild args=-batchmode -logFile "C:\Users\Administrator\Downloads\CustomServer\CustomMatchServer\logs\game-servers\custom-20260618093130-4641.attempt1.log" -httpport=7850 -wsport=7777 -kcpport=7778 -tcpport=7779 --bapcustom-host=127.0.0.1 --bapcustom-server-port=5164 --bapcustom-use-proxy=false logFile=C:\Users\Administrator\Downloads\CustomServer\CustomMatchServer\logs\game-servers\custom-20260618093130-4641.attempt1.log wrapperLog=C:\Users\Administrator\Downloads\CustomServer\CustomMatchServer\logs\game-servers\custom-20260618093130-4641.attempt1.wrapper.log containsNoGraphics=False
+info: BapCustomServer.GameServerProcessManager[0]
+      Waiting for game server bootstrap custom-20260618093130-4641. baseUri=http://127.0.0.1:7850/ timeout=300s poll=500ms resetPoll=1500ms httpTimeout=20s logFile=C:\Users\Administrator\Downloads\CustomServer\CustomMatchServer\logs\game-servers\custom-20260618093130-4641.attempt1.log wrapperLog=C:\Users\Administrator\Downloads\CustomServer\CustomMatchServer\logs\game-servers\custom-20260618093130-4641.attempt1.wrapper.log
+info: BapCustomServer.GameServerProcessManager[0]
+      Game server custom-20260618093130-4641 accepted /setup-game HTTP after 7.7s and 4 attempt(s). Waiting for managed setupGameApplied status timeout=180s.
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.5% rss=81MB priv=35MB gc=4MB threads=38 handles=506 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=66416 rss=511MB threads=119
+info: BapCustomServer.GameServerProcessManager[0]
+      Managed bootstrap status setupGameApplied is listener-only; replayed /setup-game (1/4) after 6.2s. realtime=11.8s lastStatus=Managed match bootstrap listener is active.
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.7% rss=85MB priv=38MB gc=4MB threads=39 handles=514 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=66416 rss=568MB threads=121
+info: BapCustomServer.GameServerProcessManager[0]
+      Still waiting for managed bootstrap status setupGameApplied. remaining=164.6s realtime=4.4s lastStatus=Managed match bootstrap listener is active. lastError=<none>
+info: BapCustomServer.GameServerProcessManager[0]
+      Managed bootstrap status setupGameApplied is listener-only; replayed /setup-game (2/4) after 16.5s. realtime=5.4s lastStatus=Managed match bootstrap listener is active.
+info: BapCustomServer.GameServerProcessManager[0]
+      Game server managed bootstrap status ready. label=setupGameApplied networkStarted=True setup=True addTeams=False queueMatched=False lastStatus=Applied managed match bootstrap payload /setup-game via OnServerMatchSetup.
+info: BapCustomServer.GameServerProcessManager[0]
+      Game server managed bootstrap status ready. label=addTeamsApplied networkStarted=True setup=True addTeams=True queueMatched=False lastStatus=Applied managed match bootstrap payload /add-teams via OnServerMatchAddTeams.
+info: BapCustomServer.GameServerProcessManager[0]
+      Game server managed bootstrap status ready. label=queueMatchedApplied networkStarted=True setup=True addTeams=True queueMatched=True lastStatus=Applied managed match bootstrap payload /queue-matched via OnServerQueueMatched.
+info: BapCustomServer.GameServerProcessManager[0]
+      Game server custom-20260618093130-4641 managed bootstrap fully applied before GAME_STARTED. ws=7777 kcp=7778 tcp=7779
+info: BapCustomServer.GameServerProcessManager[0]
+      Game server custom-20260618093130-4641 accepted bootstrap HTTP; KCP UDP 7778 listener check is diagnostic-only.
+info: BapCustomServer.GameServerProcessManager[0]
+      Bootstrapped game server custom-20260618093130-4641.
+info: BapCustomServer.LobbyService[0]
+      [Analytics] Match started: custom-20260618093130-4641 mapId=33 players=1
+info: BapCustomServer.LobbyService[0]
+      Game server custom-20260618093130-4641 bootstrap fully applied; dispatching GAME_STARTED after setup/add-teams/queue-matched. mode=custom players=1 pid=66416 http=7850 ws=7777 kcp=7778 tcp=7779 mapId=33 unityGameMode=1
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.4% rss=85MB priv=37MB gc=5MB threads=39 handles=514 | lobbies=1 matches=1 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=66416 rss=1611MB threads=173
+info: Microsoft.AspNetCore.Server.Kestrel.Connections[34]
+      Connection id "0HNMD3HEHSTAS", Request id "0HNMD3HEHSTAS:00000001": the application aborted the connection.
+info: BapCustomServer.LobbyService[0]
+      Lobby MATCH1 is empty while match custom-20260618093130-4641 is active; keeping game process alive for 20s grace (45s if the match account socket is still connected). matchAccounts=custom-1
+info: BapCustomServer.LobbyService[0]
+      Client custom-1 disconnected.
+info: BapCustomServer.LobbyService[0]
+      [Analytics] Player left: Player1 (accountId=custom-1)

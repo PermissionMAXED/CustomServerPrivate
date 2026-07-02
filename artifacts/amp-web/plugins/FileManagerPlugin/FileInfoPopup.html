@@ -1,0 +1,55 @@
+﻿ï»¿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div class="wizardContents wizardBottom contextMenu" id="FMContextMenu">
+        <!-- ko if: selectedEntry() != null -->
+        <!-- ko with: selectedEntry -->
+        <h2 data-bind="text: name"></h2>
+        <div class="flexButtonGroup" data-bind="visible: special === 'trash'">
+            <button class="bgRed slideIcon" data-bind="click: emptyTrash"><span>Empty Trash</span><span class="mat-icon">delete_forever</span></button>
+        </div>
+        <div class="flexButtonGroup" data-bind="visible: special === ''">
+            <button class="slideIcon" data-bind="visible: downloadable, click: download"><span>Download</span><span class="mat-icon">download</span></button>
+            <button class="slideIcon" data-bind="visible: isDirectory, click: downloadAsZip"><span>Download</span><span class="mat-icon">download</span></button>
+            <button class="slideIcon" data-bind="visible: downloadable, click: calcmd5"><span>Calculate md5 hash</span><span class="mat-icon">task</span></button>
+            <button class="slideIcon" data-bind="visible: editable, click: edit"><span>Edit</span><span class="mat-icon">edit</span></button>
+            <div class="buttonListSeparator" data-bind="visible: downloadable || editable"></div>
+            <!--<button class="slideIcon"><span>Cut</span></button>-->
+            <button class="slideIcon" data-bind="click: copy"><span>Copy</span><span class="mat-icon">file_copy</span></button>
+            <button class="slideIcon" data-bind="click: paste; disable: vm.clipboardFiles.length == 0"><span>Paste</span><span class="mat-icon">content_paste</span></button>
+            <button class="slideIcon" data-bind="click: rename"><span>Rename</span><span class="mat-icon">edit</span></button>
+            <button class="slideIcon" data-bind="click: toggleBackupExclusion"><span data-bind="text: excludedFromBackups() ? 'Include in backups' : 'Exclude from backups'"></span><span class="mat-icon" data-bind="text: excludedFromBackups() ? 'cloud_done' : 'cloud_off'"></span></button>
+            <div class="buttonListSeparator"></div>
+            <button class="slideIcon" data-bind="visible: isDirectory, click: downloadFileHere"><span>Download file here</span><span class="mat-icon">download_2</span></button>
+            <button data-bind="visible: !isArchive && isDirectory, click: createArchive"><span>Create Archive</span></button>
+            <button data-bind="visible: isArchive, click: extractArchive"><span>Extract Here</span></button>
+            <button data-bind="visible: isArchive, click: extractArchiveTo"><span>Extract To...</span></button>
+            <button class="slideIcon" data-bind="click: vm.createDirectory"><span>Create Directory</span><span class="mat-icon">create_new_folder</span></button>
+            <div class="buttonListSeparator"></div>
+            <button class="bgRed slideIcon" data-bind="click: trash"><span>Trash</span><span class="mat-icon">delete</span></button>
+            <!-- ko if: customAction() != null -->
+            <div class="buttonListSeparator"></div>
+            <button data-bind="click: invokeCustomAction"><span data-bind="text: customAction().title"></span></button>
+            <!-- /ko -->
+            <div class="buttonListSeparator hiddenOnDesktop"></div>
+            <button class="slideIcon hiddenOnDesktop" data-wizard="cancel"><span>Close</span><span class="mat-icon">close</span></button>
+        </div>
+        <!-- /ko -->
+        <!-- /ko -->
+
+        <!-- ko if: selectedEntry() == null -->
+        <h2 data-bind="text: currentDisplayDirectory"></h2>
+        <div class="flexButtonGroup">
+            <button data-bind="click: downloadFileHere"><span>Download file here</span></button>
+            <button data-bind="click: createDirectory"><span>Create Directory</span></button>
+            <button class="slideIcon" data-bind="click: paste; disable: clipboardFiles.length == 0"><span>Paste Here</span><span class="mat-icon">content_paste</span></button>
+        </div>
+        <!-- /ko -->
+    </div>
+</body>
+</html>

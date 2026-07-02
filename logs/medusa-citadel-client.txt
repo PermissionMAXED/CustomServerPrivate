@@ -1,0 +1,18 @@
+10:03:28.378 [t+0s] Killing existing bapbap processes
+10:03:30.555 [t+2.2s] Health release=medusa-v1740-multimap medusaDll=6923D2F932E717D73C90CF95391178AF1C91D06106EEC7BBB6BAC47D312055A1
+10:03:30.652 [t+2.3s] Admin grant: Admin added.
+10:03:30.748 [t+2.4s] WS -> SOCKET_READY
+10:03:30.752 [t+2.4s] JOIN_LOBBY lobby=V80024 charId=15
+10:03:30.766 [t+2.4s] WS -> GAME_MODES_UPDATED
+10:03:36.784 [t+8.4s] WS -> JOIN_LOBBY_SUCCESS
+10:03:36.787 [t+8.4s] UPDATE_CUSTOM_SETTINGS map=34 botCount=4
+10:03:36.789 [t+8.4s] WS -> GAME_MODES_UPDATED
+10:03:36.808 [t+8.4s] WS -> UPDATE_CUSTOM_SETTINGS_SUCCESS
+10:03:36.809 [t+8.4s] START_CUSTOM_GAME forceStart=true
+Timed out receiving websocket message after 240000ms
+In C:\Users\Administrator\Downloads\CustomServer\tools\Test-LiveCustomMedusaVfx.ps1:62 Zeichen:48
++ ... meoutMs)) { throw "Timed out receiving websocket message after ${Time ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (Timed out recei... after 240000ms:String) [], RuntimeException
+    + FullyQualifiedErrorId : Timed out receiving websocket message after 240000ms
+ 

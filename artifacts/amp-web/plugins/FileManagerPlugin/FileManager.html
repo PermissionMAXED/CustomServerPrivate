@@ -1,0 +1,106 @@
+﻿ï»¿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="fileManagerHeader">
+        <div style="width: 100%;">
+            <!-- ko foreach: pathSegments -->
+            <div class="fmPathSegment" data-bind="text: name, click: click, css: {'disabled': $parent.editorVisible()}"></div>
+            <!-- /ko -->
+            <div id="editorFilename" class="fmPathSegment" style="display: inline-block;" data-bind="visible: editorVisible">SomeFile.json</div>
+            <span id="editorFilenameChanges">Unsaved Changes</span>
+            <div id="fmDisplaySwitcher" data-bind="visible: !editorVisible()">
+                <a class="button toolIconButton withCaption hiddenOnMobile" title="Connect via SFTP" data-bind="attr: {href: SFTPURL}, visible: SFTPAvailable, click: showSFTPDialog"><span class="mat-icon" data-bind="click: connectSFTP">smb_share</span><span>Connect to SFTP</span></a>
+                <button class="toolIconButton" title="Refresh Listing" data-bind="click: refresh"><span class="mat-icon">refresh</span></button>
+                <button class="toolIconButton" title="Display as Compact List" data-bind="click: setViewCompact"><span class="mat-icon">view_list</span></button>
+                <button class="toolIconButton" title="Display as List"  data-bind="click: setViewStandard"><span class="mat-icon">view_stream</span></button>
+                <button class="toolIconButton hiddenOnMobile" title="Display as Grid" data-bind="click: setViewGrid"><span class="mat-icon">grid_view</span></button>
+            </div>
+        </div>
+
+        <div id="editorButtons" data-bind="visible: editorVisible">
+            <button class="slimButton slideIcon bgRed slimShrinkable" id="fileManagerClose"><span>Close</span><span class="mat-icon">close</span></button>
+            <button class="slimButton slideIcon slimShrinkable" id="fileManagerReload"><span>Reload</span><span class="mat-icon">history</span></button>
+            <button class="slimButton slideIcon bgGreen slimShrinkable" id="fileManagerSave"><span>Save</span><span class="mat-icon">save</span></button>
+        </div>
+
+        <div id="editorFileWarning" data-bind="visible: controlledFileInfo() != null, css: { canImport:controlledFileInfo()?.canImport }">
+            <span><strong>This file is controlled by AMP</strong> - <span data-bind="text: controlledFileInfo()?.message"></span></span>
+            <button class="slimButton slideIcon" data-bind="visible: controlledFileInfo()?.canImport, click: fileManagerImport"><span>Import Configuration</span><span class="mat-icon">publish</span></button>
+        </div>
+    </div>
+    <div id="editorContainer">
+        <div id="editor"></div>
+    </div>
+    <div id="fileManagerList" class="splitViewBody" style="padding: 0;" data-bind="foreach: entries, event: {taphold: menu, contextmenu: menu}">
+        <div class="fileManagerEntry" data-bind="click: click, event: {taphold: menu, contextmenu: menu, dblclick: doubleClick}, css: {selected: selected}">
+            <div class="iconContainer">
+                <span class="mat-icon" data-bind="text: icon"></span>
+                <span class="mat-icon subIcon" data-bind="text: subIcon, css: {folder : isDirectory}"></span>
+            </div>
+            <div class="fileEntryTitle" data-bind="text: displayName"></div>
+            <div class="fileEntrySubtitle">
+                <span data-bind="text: subtitle"></span>
+                <span class="hiddenOnMobile subModified" data-bind="text: isDirectory ? '' : 'Modified ' + modified"></span>
+            </div>
+            <div class="fileEntryKebab" data-bind="click: menu">â </div>
+        </div>
+    </div>
+    <div id="fileManagerInfo" class="splitViewInfo" data-bind="with: selectedEntry">
+        <span class="mat-icon" data-bind="text: icon"></span>
+        <h3 data-bind="text: name"></h3>
+        <!-- ko if: (name != "..") -->
+        <table>
+            <tr>
+                <th>Size</th>
+                <td data-bind="text: sizeFriendly"></td>
+            </tr>
+            <tr>
+                <th>Created</th>
+                <td data-bind="text: created || 'Unknown'"></td>
+            </tr>
+            <tr>
+                <th>Last Modified</th>
+                <td data-bind="text: modified || 'Unknown'"></td>
+            </tr>
+            <tr>
+                <th>Editable</th>
+                <td data-bind="text: editable ? 'Yes' : 'No'"></td>
+            </tr>
+            <tr>
+                <th>Downloadable</th>
+                <td data-bind="text: editable ? 'Yes' : 'No'"></td>
+            </tr>
+            <tr>
+                <th>Full Path</th>
+                <td data-bind="text: fullPath" style="word-break: break-all; width: 50%; font-family: monospace;"></td>
+            </tr>
+            <tr>
+                <th>Excluded from backups</th>
+                <td>
+                    <label class="checkbox">
+                        <input type="checkbox" data-bind="checked: excludedFromBackups" />
+                        <span></span>
+                    </label>
+                </td>
+            </tr>
+        </table>
+        <!-- /ko -->
+    </div>
+    <div id="fileManagerDropNotice">
+        <h2 style="margin-top:48px;">Drop to upload here</h2>
+        <div class="uploadAnim">
+            <div class="uploadArrow">â</div>
+            <div class="uploadOK" style="display:none;">â</div>
+            <div class="uploadFail" style="display:none;">â</div>
+        </div>
+    </div>
+    <div data-bind="visible: entries() == null || entries().count === 0">
+        <h4>There are no files in this directory</h4>
+    </div>
+</body>
+</html>

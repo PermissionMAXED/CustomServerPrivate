@@ -1,0 +1,7 @@
+﻿
+tail entries                                                                                                                              
+---- -------                                                                                                                              
+ 500 {@{utc=2026-06-10T16:21:35.9383061+00:00; level=Information; category=BapCustomServer; message=BAPCUSTOM_STARTUP release=medusa-v1...
+
+
+

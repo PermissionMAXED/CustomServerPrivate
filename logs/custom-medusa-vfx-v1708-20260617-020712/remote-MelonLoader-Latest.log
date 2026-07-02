@@ -1,0 +1,217 @@
+
+[00:07:34.977] ------------------------------
+[00:07:34.979] MelonLoader v0.7.2 Open-Beta
+[00:07:34.980] OS: Wine/Proton 10.0
+[00:07:34.980] Hash Code: 58AB98835E598BD67B7DB233734DE8603F92C9C6A6081B13CB9A5CC37C02DD13
+[00:07:34.980] ------------------------------
+[00:07:34.982] Game Type: Il2cpp
+[00:07:34.982] Game Arch: x86
+[00:07:34.983] ------------------------------
+[00:07:34.983] Command-Line: 
+[00:07:34.983] ------------------------------
+[00:07:34.984] Core::BasePath = Z:\AMP\BapCustomServer\game
+[00:07:34.987] Game::BasePath = Z:\AMP\BapCustomServer\game
+[00:07:34.988] Game::DataPath = Z:\AMP\BapCustomServer\game\bapbap_Data
+[00:07:34.988] Game::ApplicationPath = Z:\AMP\BapCustomServer\game\bapbap.exe
+[00:07:34.988] Runtime Type: net6
+[00:07:35.276] ------------------------------
+[00:07:35.277] Game Name: BAPBAP
+[00:07:35.284] Game Developer: gg.bapbap
+[00:07:35.286] Unity Version: 2022.3.38f1
+[00:07:35.287] Game Version: 0.1.1758-38212
+[00:07:35.287] ------------------------------
+
+[00:07:35.704] Preferences Loaded!
+
+[00:07:35.716] Loading UserLibs...
+[00:07:35.733] ------------------------------
+[00:07:35.747] Melon Assembly loaded: '.\UserLibs\BAPBAP.ModAPI.dll'
+[00:07:35.748] SHA256 Hash: '0E14F39A9C47B6EBA106A0F23E76A0989B3270D7BCDD3E4BB0DD51E63BDB3CB5'
+[00:07:35.749] ------------------------------
+[00:07:35.749] 0 UserLibs loaded.
+
+[00:07:35.750] Loading Plugins...
+[00:07:35.754] 0 Plugins loaded.
+
+[00:07:37.436] Loading Il2CppAssemblyGenerator...
+[00:07:37.469] [Il2CppAssemblyGenerator] Using Cpp2IL Version: 2022.1.0-pre-release.21
+[00:07:37.469] [Il2CppAssemblyGenerator] Using Il2CppInterop Version = 1.5.1+dbaf825aab891ff1e1627bea691bde0a81d1ad98
+[00:07:37.470] [Il2CppAssemblyGenerator] Using Unity Dependencies Version = 2022.3.38
+[00:07:37.470] [Il2CppAssemblyGenerator] Using Deobfuscation Regex = null
+[00:07:37.471] [Il2CppAssemblyGenerator] Cpp2IL is up to date.
+[00:07:37.472] [Il2CppAssemblyGenerator] Cpp2IL.Plugin.StrippedCodeRegSupport is up to date.
+[00:07:37.472] [Il2CppAssemblyGenerator] UnityDependencies is up to date.
+[00:07:37.473] [Il2CppAssemblyGenerator] Checking GameAssembly...
+[00:07:37.860] [Il2CppAssemblyGenerator] Assembly is up to date. No Generation Needed.
+
+[00:07:37.861] Loading Mods...
+[00:07:37.876] ------------------------------
+[00:07:37.889] Melon Assembly loaded: '.\Mods\BapCustomServerMelon.dll'
+[00:07:37.889] SHA256 Hash: 'A32BF4340BA5E285699BE0B4A0DF9436D5C7B7171FC050E4D24A7F735FC83B86'
+[00:07:37.891] Melon Assembly loaded: '.\Mods\NetworkedCustomChar.dll'
+[00:07:37.891] SHA256 Hash: '6545FD14E27C874FCF243344B70B434924FE6DBC7223D722DD8E404F41AAD715'
+
+[00:07:38.173] [BAP_Custom_Server] Loaded custom server ini.
+[00:07:38.194] [BAP_Custom_Server] [Perf] Dedicated server: targetFrameRate=240, vSync=0 (kept default fixedDeltaTime)
+[00:07:38.195] [BAP_Custom_Server] [BAPCustomConfig] mode=dedicated upstream=http://127.0.0.1:5055 proxy=False localPort=5055 dedicatedPorts=http:7850 ws:7778 kcp:7779 tcp:7780 batchMode=True containsNoGraphicsArg=True autoJoin=none
+[00:07:38.198] [BAP_Custom_Server] Managed match bootstrap listener is active.
+[00:07:38.207] [BAP_Custom_Server] Installed 4 NetworkConfig runtime patch(es).
+[00:07:38.213] [BAP_Custom_Server] Installed 2 PreAwakeManager network config patch(es).
+[00:07:38.219] [BAP_Custom_Server] Installed 2 HttpClient host rewrite patch(es).
+[00:07:38.222] [BAP_Custom_Server] Installed ControllerManager network runtime patch.
+[00:07:38.229] [BAP_Custom_Server] Installed 4 LobbyNetworkClient runtime network patch(es).
+[00:07:38.246] [BAP_Custom_Server] Installed 8 character selection tracker patch(es).
+[00:07:38.250] [BAP_Custom_Server] Installed 1 WebSocketClient selection propagation patch(es).
+[00:07:38.254] [BAP_Custom_Server] Installed lifecycle guard on 2 Application.Quit overload(s). Guard PERMANENT (custom servers).
+[00:07:38.260] [BAP_Custom_Server] Installed AnalyticsManager custom-server no-op patch.
+[00:07:38.322] [BAP_Custom_Server] Installed 40 character-select NullRef guard prefix patch(es).
+[00:07:38.329] [BAP_Custom_Server] Installed 5 PopulateCharIdsBeforeBuild prefix(es) on UILobbyCharacterSelectPage.
+[00:07:38.332] [BAP_Custom_Server] Installed 3 PopulateCharIdsBeforeBuild prefix(es) on UILobbyPlayTabPage.
+[00:07:38.373] [BAP_Custom_Server] Installed 32 LobbyController NullRef guard finalizer patch(es).
+[00:07:38.594] [BAP_Custom_Server] Queued managed match bootstrap payload: /setup-game
+[00:07:38.899] [BAP_Custom_Server] Installed 1 CharacterIsUnlocked force-unlock patch(es).
+[00:07:38.950] [BAP_Custom_Server] Server match policy fetched: Both (matchmaking=allowed, custom=allowed). When a path is blocked, the mod logs a clear error if the user tries to use it.
+[00:07:38.954] [BAP_Custom_Server] Initialized BAP Custom Server v1.0.5 during early registration. dedicated=True http=7850 ws=7778 kcp=7779 tcp=7780
+[00:07:38.955] ------------------------------
+[00:07:38.956] BAP Custom Server v1.0.5
+[00:07:38.956] by Sonic0810
+[00:07:38.957] Assembly: BapCustomServerMelon.dll
+[00:07:38.957] ------------------------------
+[00:07:38.959] ------------------------------
+[00:07:38.959] BAPBAP ModAPI v2.2.1
+[00:07:38.960] by BAPBAP Modding Community
+[00:07:38.960] Assembly: BAPBAP.ModAPI.dll
+[00:07:38.960] ------------------------------
+[00:07:38.962] ------------------------------
+[00:07:38.962] NetworkedCustomChar v0.1.0
+[00:07:38.962] by bapcustom
+[00:07:38.963] Assembly: NetworkedCustomChar.dll
+[00:07:38.963] ------------------------------
+[00:07:38.964] ------------------------------
+[00:07:38.964] 3 Mods loaded.
+
+[00:07:42.742] [Il2CppInterop] Class::Init signatures have been exhausted, using a substitute!
+[00:07:44.633] [BAP_Custom_Server] Queued managed match bootstrap payload: /setup-game
+[00:07:44.807] [Il2CppInterop] Registered mono type MelonLoader.Support.MonoEnumeratorWrapper in il2cpp domain
+[00:07:44.847] Support Module Loaded: Z:\AMP\BapCustomServer\game\MelonLoader\Dependencies\SupportModules\Il2Cpp.dll
+[00:07:44.853] [BAPBAP_ModAPI] BAPBAP ModAPI v2.2.1 initializing ...
+[00:07:44.854] [BAPBAP_ModAPI]   by BAPBAP Modding Community
+[00:07:44.855] [BAPBAP_ModAPI]   loaded as Z:\AMP\BapCustomServer\game\UserLibs\BAPBAP.ModAPI.dll
+[00:07:44.856] [BAPBAP_ModAPI] [Hooks] Installing global hooks ...
+[00:07:44.861] [BAPBAP_ModAPI] [Hooks]   ✓ PlayerHooks
+[00:07:44.862] [BAPBAP_ModAPI] [Hooks]   ✓ MatchHooks
+[00:07:44.863] [BAPBAP_ModAPI] [Hooks]   ✓ CombatHooks
+[00:07:44.863] [BAPBAP_ModAPI] [Hooks]   ✓ ChatHooks
+[00:07:44.864] [BAPBAP_ModAPI] [Hooks]   ✓ NetworkHooks
+[00:07:44.865] [BAPBAP_ModAPI] [Hooks]   ✓ UIHooks
+[00:07:44.865] [BAPBAP_ModAPI] [Hooks]   ✓ AbilityHooks
+[00:07:44.866] [BAPBAP_ModAPI] [Hooks]   ✓ StatusEffectHooks
+[00:07:44.866] [BAPBAP_ModAPI] [Hooks]   ✓ ItemHooks
+[00:07:44.867] [BAPBAP_ModAPI] [Hooks]   ✓ VehicleHooks
+[00:07:44.867] [BAPBAP_ModAPI] [Hooks]   ✓ EntityHooks
+[00:07:44.868] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraAbilityHooks
+[00:07:44.869] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraItemHooks
+[00:07:44.870] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraVehicleHooks
+[00:07:44.870] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraEntityHooks
+[00:07:44.871] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraMovementHooks
+[00:07:44.871] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraPassiveHooks
+[00:07:44.872] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraInteractionHooks
+[00:07:44.876] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraKillHooks
+[00:07:44.876] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraEmoteHooks
+[00:07:44.877] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraMetaHooks
+[00:07:44.878] [BAPBAP_ModAPI] [Hooks] Done. 21 hook groups installed.
+[00:07:44.881] [Il2CppInterop] Registered mono type BAPBAP.ModAPI.Lifecycle.ModUpdateRunner in il2cpp domain
+[00:07:44.882] [BAPBAP_ModAPI] [Lifecycle] ModUpdateRunner registered with Il2Cpp.
+[00:07:44.885] [Il2CppInterop] Registered mono type BAPBAP.ModAPI.API.NotificationAPI+ScheduledFader in il2cpp domain
+[00:07:44.888] [Il2CppInterop] Registered mono type BAPBAP.ModAPI.UI.ModLoaderUIRunner in il2cpp domain
+[00:07:44.889] [BAPBAP_ModAPI] [ModLoaderUI] Runner registered with Il2Cpp.
+[00:07:44.890] [BAPBAP_ModAPI] BAPBAP ModAPI ready. Mods should subclass ModBase to register.
+[00:07:44.920] [NetworkedCustomChar] [M5] loaded definition 'Blitz' (charId=15, enabled=False) from UserData\CustomChars\blitz.json.
+[00:07:44.922] [NetworkedCustomChar] [M5] loaded definition 'Eve' (charId=15, enabled=False) from UserData\CustomChars\eve.json.
+[00:07:44.923] [NetworkedCustomChar] [M5] loaded definition 'Medusa' (charId=15, enabled=True) from UserData\CustomChars\medusa.json.
+[00:07:44.924] [NetworkedCustomChar] [M5] active definition: name='Medusa' display='MEDUSA' charId=15 base=0 bundle='Medusa\medusa.bundle' visual='Medusa_Visual' assetId=0xB0B00F0F graft=True (loaded 3).
+[00:07:44.932] [NetworkedCustomChar] [M1] patched GameNetworkManager.Awake (pre=False post=True).
+[00:07:44.937] [NetworkedCustomChar] [M1] patched GameNetworkManager.OnStartServer (pre=False post=True).
+[00:07:44.942] [NetworkedCustomChar] [M1] patched GameNetworkManager.OnStartClient (pre=False post=True).
+[00:07:44.949] [NetworkedCustomChar] [M1] patched GameNetworkManager.GetCharacterBotPrefab (pre=True post=False).
+[00:07:44.956] [NetworkedCustomChar] [M1] patched GameMode.SpawnPlayerChar (pre=True post=False).
+[00:07:44.957] AccessTools.Method: Could not find method for type Il2CppBAPBAP.UI.UICharactersConfiguration and name OnEnable and parameters 
+[00:07:44.958] [NetworkedCustomChar] [M1] patch target not found: UICharactersConfiguration.OnEnable
+[00:07:44.960] [NetworkedCustomChar] [M1] patched UILobbyCharacterSelectPage.GetCharacterListingIndexFromCharId (pre=True post=False).
+[00:07:44.966] [NetworkedCustomChar] [M1] patched Ability.SetState (pre=True post=True).
+[00:07:44.971] [NetworkedCustomChar] [M1] patched CharAnimator.Awake (pre=False post=True).
+[00:07:44.985] [NetworkedCustomChar] [M1] patched CharFootsteps.Awake (pre=False post=True).
+[00:07:44.996] [NetworkedCustomChar] [M2] patched Animator.SetLayerWeight (overload; pre=True post=False).
+[00:07:45.002] [NetworkedCustomChar] [M2] patched Animator.CrossFadeInFixedTime (overload; pre=True post=False).
+[00:07:45.009] [Il2CppInterop] Registered mono type Il2CppInterop.Runtime.DelegateSupport+Il2CppToMonoDelegateReference in il2cpp domain
+[00:07:45.032] [NetworkedCustomChar] [M3] CustomNetChannel registered on EntityManager (hash=-1298316792).
+[00:07:45.039] [NetworkedCustomChar] [M3] CustomAbilityEngine ready (charId=15, enabled=True, networkPrefabSpawn=True, medusaBundleHitboxes=True).
+[00:07:45.040] [NetworkedCustomChar] [M6] ability kit: hitboxes=[Hitbox_MedusaPoisonProjectile,Hitbox_MedusaPoisonPuddle,Hitbox_MedusaWallPoison,Hitbox_MedusaWallBoxDpsPoison] dmg=[120,85,70,160] status=[poison,slow,knockup,petrify] anim=[Ability1,Ability2,Ability4,Ability1].
+[00:07:45.072] [NetworkedCustomChar] [MAP] custom map registered: name='CustomFlat' mapId=5 bundle='CustomFlat\customflat.bundle' sv='CustomFlat_SvData' cl='CustomFlat_ClData' enabled=True.
+[00:07:45.072] [NetworkedCustomChar] [MAP] hooks installed (LoadLevel=True LoadLevelCoroutine=True SpawnLevel=True OnServerMatchSetup=True) for 1 custom level name(s).
+[00:07:45.073] [NetworkedCustomChar] [M1] loaded. charId=15 baseCharId=0 assetId=0xB0B00F0F graftVisual=True
+[00:07:48.427] [NetworkedCustomChar] [M2] loading bundle: 'Z:\AMP\BapCustomServer\game\UserData\Medusa\medusa.bundle' (3494760 bytes).
+[00:07:48.435] [NetworkedCustomChar] [M2] visual prefab 'Medusa_Visual' loaded from bundle.
+[00:07:48.446] [NetworkedCustomChar] [M2] graft OK via GNM.Awake: baseRenderersDisabled=11, charAnimWired=1, footstepsWired=1, otherAnimsDisabled=2, shadedSMRs=0, fx=False, controller='Medusa'.
+[00:07:48.446] [NetworkedCustomChar] [M2] graft applied on prefab template via GNM.Awake.
+[00:07:48.455] [NetworkedCustomChar] [M1] sanitized 1 identity(ies); root assetId=0xB0B00F0F via GNM.Awake.
+[00:07:48.456] [NetworkedCustomChar] [M1] built networked prefab 'Char_Medusa' via GNM.Awake (baseCharId=0).
+[00:07:48.458] [NetworkedCustomChar] [M1] characterPrefabsByCharId[15] = our prefab via GNM.Awake (len 15->16).
+[00:07:48.462] [NetworkedCustomChar] [M1] charBotPrefabsByCharId[15] populated via GNM.Awake (len 15->16).
+[00:07:48.464] [NetworkedCustomChar] [M1] added to InstantiatedPrefabs via GNM.Awake (len 414->415).
+[00:07:48.478] [NetworkedCustomChar] [M3] [M3c] slot 0 AUTHENTIC Medusa hitbox built: assetId=0xB0B0F010 base='Hitbox_Kate_BigCat' proj=True visual='Hitbox_MedusaPoisonProjectile'.
+[00:07:48.488] [NetworkedCustomChar] [M3] [M3c] slot 1 AUTHENTIC Medusa hitbox built: assetId=0xB0B0F011 base='Hitbox_Karen_Punch' proj=False visual='Hitbox_MedusaPoisonPuddle'.
+[00:07:48.489] [NetworkedCustomChar] [M3] [M3c] slot 2 AUTHENTIC Medusa hitbox built: assetId=0xB0B0F012 base='Hitbox_Karen_Punch' proj=False visual='Hitbox_MedusaWallPoison'.
+[00:07:48.490] [NetworkedCustomChar] [M3] [M3c] slot 3 AUTHENTIC Medusa hitbox built: assetId=0xB0B0F013 base='Hitbox_Karen_Punch' proj=False visual='Hitbox_MedusaWallBoxDpsPoison'.
+[00:07:50.135] [Il2CppInterop] Registered mono type MelonLoader.Support.SM_Component in il2cpp domain
+[00:07:50.141] [BAP_Custom_Server] [SceneLoaded] Scene 'MainScene' (index 0) loaded.
+[00:07:50.142] [BAP_Custom_Server] [StateReset] Resetting match flags on lobby/menu scene 'MainScene'
+[00:07:50.187] [BAP_Custom_Server] Extended dedicated matchmaking wait windows to 120s on 1 GameManager instance(s).
+[00:07:50.211] [BAP_Custom_Server] [KcpRuntime] dedicated-manager-before-start: manager=Il2CppBAPBAP.Network.GameNetworkManager ws=Il2CppMirror.SimpleWeb.SimpleWebTransport port=7778 timeout=null client=False server=False kcp=Il2Cppkcp2k.KcpTransport port=7779 timeout=60000 client=True server=True tcp=Il2CppMirror.TelepathyTransport port=7780 timeout=null client=False server=False multiplex=Il2CppMirror.MultiplexTransport port=7780 timeout=null client=False server=False patched=5.
+[00:07:50.270] [BAP_Custom_Server] [KcpRuntime] dedicated-manager-after-start: manager=Il2CppBAPBAP.Network.GameNetworkManager ws=Il2CppMirror.SimpleWeb.SimpleWebTransport port=7778 timeout=null client=False server=False kcp=Il2Cppkcp2k.KcpTransport port=7779 timeout=60000 client=True server=True tcp=Il2CppMirror.TelepathyTransport port=7780 timeout=null client=False server=False multiplex=Il2CppMirror.MultiplexTransport port=7780 timeout=null client=False server=False patched=3.
+[00:07:50.270] [BAP_Custom_Server] Requested dedicated server start through GameNetworkManager. attempt=1/10 modeBefore=Offline activeBefore=False
+[00:07:50.271] [BAP_Custom_Server] [NetworkRepair] post-StartServer: mode=ServerOnly active=True
+[00:07:50.272] [BAP_Custom_Server] Dedicated network start is pending; TCP listeners are not open yet. ws=7778 tcp=7780
+[00:07:50.273] [BAP_Custom_Server] Mirror server is active before /setup-game; applying setup payload.
+[00:07:50.281] [BAP_Custom_Server] Patched 4 GameMode levelNames array(s) for custom matches.
+[00:07:50.298] [BAP_Custom_Server] [PrematchTiming] /setup-game charSelectMillis=20000->20000 spawnSelectMillis=10000->10000 spawnShowMillis=3000->3000 changed=False.
+[00:07:50.298] [BAP_Custom_Server] Assigned GameManager.mgd on primary GameManager (single-instance write).
+[00:07:50.315] [NetworkedCustomChar] [MAP] bootstrap mapId latched = 5.
+[00:07:50.336] [BAP_Custom_Server] Assigned GameManager.mgd on primary GameManager (single-instance write).
+[00:07:50.343] [BAP_Custom_Server] [PrematchTiming] GameManager after /setup-game: mgd=charSelectMillis=20000 spawnSelectMillis=10000 spawnShowMillis=3000 gm=playersByPlayerId=0 connIdToPlayerId=0 preMatchManager=True currentGameMode=True qmd=False mgd=True.
+[00:07:50.343] [BAP_Custom_Server] Applied managed match bootstrap payload /setup-game via OnServerMatchSetup.
+[00:07:50.351] [BAP_Custom_Server] [MapFix] 3 GameMode(s), spawnCounts=[-1,-1,-1]. Waiting for populated map...
+[00:07:50.396] [BAP_Custom_Server] [DevPanel] Patched 2 type(s) for hide on activation: UIDeveloperLobby(1), UIDevUtilities(1)
+[00:07:50.409] [BAP_Custom_Server] [ShopThrottle] Patched 1 method(s)
+[00:07:50.498] [BAP_Custom_Server] [LockerGuard] Installed exception-swallow finalizer on 9 locker method(s)
+[00:07:50.506] [BAP_Custom_Server] [InterpFix] no NetworkTransform instances yet (attempt=1)
+[00:07:50.517] [BAP_Custom_Server] [MatchFoundDedup] Installed dedup prefix on 1 PlayMatchFoundSequence target(s).
+[00:07:50.519] [BAP_Custom_Server] [AugmentFix] no UIAugments instances loaded yet (attempt=1).
+[00:07:50.544] [BAP_Custom_Server] Installed 3 GameMode level-name runtime patch(es).
+[00:07:50.559] [BAP_Custom_Server] Installed AddPlayerMatchmaking runtime diagnostics and Medusa skin patch.
+[00:07:50.620] [BAP_Custom_Server] Installed 7 LoginController custom guest-login patch(es).
+[00:07:50.638] [BAP_Custom_Server] Installed 2 UnityWebRequest callback repair patch(es).
+[00:07:50.644] [BAP_Custom_Server] Game bootstrap HTTP listener is active.
+[00:07:50.658] [BAP_Custom_Server] Queued managed match bootstrap payload: /add-teams
+[00:07:50.668] [NetworkedCustomChar] [M1] UI row added (charId=15) via Poll; roster 15->16.
+[00:07:50.749] [BAPBAP_ModAPI] [Lifecycle] ModUpdateRunner GameObject created.
+[00:07:50.751] [BAP_Custom_Server] Waiting for loaded map before applying /add-teams.
+[00:07:51.131] [NetworkedCustomChar] [MAP] PROBE SpawnLevel: name='Map2_BazaarCity 3' bootstrapMapId=5 svOnly=True clOnly=False svNull=False clNull=True.
+[00:07:51.133] [NetworkedCustomChar] [MAP] LoadLiveHolder('levels/maps/blank_test_bakedata/Blank_Test_SvData'): live holder OK (go='Blank_Test_SvData').
+[00:07:51.134] [NetworkedCustomChar] [MAP] LoadLiveHolder('levels/maps/blank_test_bakedata/Blank_Test_ClData'): live holder OK (go='Blank_Test_ClData').
+[00:07:51.138] [NetworkedCustomChar] [MAP] MutateHolder 'CustomFlat': spawnPoints=2 mapSettings=present configSpawns=2 moved=2 displayNameEdited=True.
+[00:07:51.139] [NetworkedCustomChar] [MAP] SpawnLevel REWRITE -> name='CustomFlat' mapId=5 svLive=True clLive=True; native SpawnLevel will build it.
+[00:07:51.154] [BAP_Custom_Server] Applied managed match bootstrap payload /add-teams via OnServerMatchAddTeams.
+[00:07:51.161] [BAP_Custom_Server] Queued managed match bootstrap payload: /queue-matched
+[00:07:51.168] [BAP_Custom_Server] Assigned GameManager.qmd on primary GameManager (single-instance write).
+[00:07:51.169] [BAP_Custom_Server] Assigned GameManager.qmd on primary GameManager (single-instance write).
+[00:07:51.172] [BAP_Custom_Server] [PrematchTiming] GameManager after /queue-matched: qmdPlayers=auth=4aa529e87ed92907b027a371fb6e382d playerId=1 teamId=1 charId=15 available=0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 gm=playersByPlayerId=0 connIdToPlayerId=0 preMatchManager=True currentGameMode=True qmd=True mgd=True.
+[00:07:51.173] [BAP_Custom_Server] Applied managed match bootstrap payload /queue-matched via OnServerQueueMatched.
+[00:07:52.353] [BAP_Custom_Server] [MapFix] currentGameMode already populated (GameModeBattleRoyale, counts=[2,-1,-1]). Rebind skipped.
+[00:07:52.356] [BAP_Custom_Server] [CrateFix] no EntitySpawner instances loaded yet (attempt=1).
+[00:08:49.543] [BAP_Custom_Server] [EarlyLobbyUiPatchLoop] exited after 3600 frames. preloadDone=False uiPatch=False charPatch=True
+[00:09:09.537] [BAP_Custom_Server] Medusa AddPlayerMatchmaking prefix guard: charPatched=True skinPatched=True playerPatched=False playerType=UnityEngine.GameObject resolvedType=null mpd=auth=4aa529e87ed92907b027a371fb6e382d playerId=1 teamId=1 charId=15
+[00:09:09.538] [BAP_Custom_Server] AddPlayerMatchmaking preflight: connNull=False playerNull=False playerType=UnityEngine.GameObject mpd=auth=4aa529e87ed92907b027a371fb6e382d playerId=1 teamId=1 charId=15 teammates=0 gm=playersByPlayerId=0 connIdToPlayerId=0 preMatchManager=True currentGameMode=True qmd=True mgd=True
+[00:09:09.547] [BAP_Custom_Server] Medusa player state forced via AddPlayerMatchmaking.postfix.resolvedPlayer: old=14 new=15 skin=-1.
+[00:09:09.549] [BAP_Custom_Server] Medusa AddPlayerMatchmaking post guard: requested=15 charPatched=True skinPatched=True playerPatched=True loadedPlayerPatched=False queuePatched=1 prematchPatched=False playerType=UnityEngine.GameObject resolvedType=Il2CppBAPBAP.Player.PlayerManager loadedType=null mpd=auth=4aa529e87ed92907b027a371fb6e382d playerId=1 teamId=1 charId=15
+[00:09:50.742] [BAP_Custom_Server] [InterpFix] no NetworkTransform instances yet (attempt=61)

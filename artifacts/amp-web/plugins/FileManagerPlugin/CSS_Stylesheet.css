@@ -1,0 +1,304 @@
+﻿ï»¿#tab_FileManagerPlugin_FileManager {
+  overflow: initial;
+  display: flex;
+  flex-direction: column;
+}
+#TargetDirectoryList {
+  height: 500px;
+  overflow: auto;
+  margin-bottom: 16px;
+}
+.ace_search button {
+  color: black;
+  border-radius: 0;
+  box-shadow: none;
+  min-width: 0;
+}
+#editorFileWarning {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  grid-gap: 8px;
+  background-color: #e44;
+  padding: 4px 10px;
+}
+#editorFileWarning.canImport {
+  background-color: #253541;
+}
+#fileManagerHeader {
+  z-index: 10;
+  overflow: hidden;
+}
+.fmPathSegment {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 12pt;
+  background-color: #235477;
+  padding-left: 20px;
+  line-height: 32px;
+  margin-left: -4px;
+}
+.fmPathSegment#editorFilename {
+  pointer-events: none;
+  display: none;
+  background-color: #484;
+  color: white;
+}
+.fmPathSegment#editorFilename::after {
+  border-left-color: #484;
+}
+.fmPathSegment#editorFilename.dirty {
+  background-color: #e44;
+  color: white;
+}
+.fmPathSegment#editorFilename.dirty::after {
+  border-left-color: #e44;
+}
+.fmPathSegment::after {
+  width: 0;
+  height: 0;
+  border-top: 16px solid transparent;
+  border-bottom: 16px solid transparent;
+  border-left: 10px solid #235477;
+  content: ' ';
+  display: inline-block;
+  float: right;
+  position: relative;
+  left: 10px;
+}
+.fmPathSegment:nth-child(even) {
+  background-color: #326386;
+}
+.fmPathSegment:nth-child(even)::after {
+  border-left-color: #326386;
+}
+.fmPathSegment:hover {
+  background-color: #5EA8DE;
+}
+.fmPathSegment:hover::after {
+  border-left-color: #5EA8DE;
+}
+.fmPathSegment:active {
+  background-color: #235477;
+}
+.fmPathSegment:active::after {
+  border-left-color: #235477;
+}
+.fmPathSegment.disabled {
+  cursor: default;
+  background-color: dimgray;
+}
+.fmPathSegment.disabled::after {
+  border-left-color: dimgray;
+}
+.fmPathSegment.disabled:nth-child(even) {
+  background-color: #444;
+}
+.fmPathSegment.disabled:nth-child(even)::after {
+  border-left-color: #444;
+}
+.fmPathSegment.disabled:hover {
+  background-color: dimgray;
+}
+.fmPathSegment.disabled:hover::after {
+  border-left-color: dimgray;
+}
+.fmPathSegment.disabled:active {
+  background-color: dimgray;
+}
+.fmPathSegment.disabled:active::after {
+  border-left-color: dimgray;
+}
+#fileManagerList {
+  top: 32px;
+}
+#fileManagerList.standard:nth-child(even),
+#fileManagerList.compact:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+#fileManagerList.compact .fileManagerEntry {
+  display: flex;
+}
+#fileManagerList.compact .fileManagerEntry .mat-icon {
+  font-size: 18px;
+  padding: 0;
+}
+#fileManagerList.compact .fileManagerEntry .subIcon {
+  display: none;
+}
+#fileManagerList.compact .fileManagerEntry .fileEntryTitle {
+  display: inline-block;
+  margin-left: 6px;
+  flex-grow: 1;
+}
+#fileManagerList.compact .fileManagerEntry .fileEntrySubtitle {
+  display: inline-block;
+  margin-right: 16px;
+}
+#fileManagerList.compact .fileManagerEntry .fileEntrySubtitle .subModified {
+  display: none;
+}
+#fileManagerList.compact .fileManagerEntry .fileEntryKebab {
+  font-size: initial;
+}
+#fileManagerList.gridView {
+  grid-template-columns: repeat(auto-fill, minmax(320px, 2fr));
+  display: grid;
+  align-content: start;
+}
+#fileManagerList.gridView .fileManagerEntry {
+  border-bottom: none;
+  height: 50px;
+}
+.fileManagerEntry {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 4px;
+  cursor: pointer;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  position: relative;
+}
+.fileManagerEntry .iconContainer {
+  position: relative;
+  float: left;
+  margin-right: 8px;
+}
+.fileManagerEntry .mat-icon {
+  font-size: 32px;
+  padding: 2px;
+}
+.fileManagerEntry .subIcon {
+  position: absolute;
+  bottom: 7px;
+  right: 8px;
+  font-size: 16px;
+}
+.fileManagerEntry .subIcon.folder {
+  bottom: 9px;
+}
+.fileManagerEntry div {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.fileManagerEntry .fileEntryKebab {
+  font-size: 21pt;
+  margin: 1px 0 0 4px;
+  padding: 0;
+  position: absolute;
+  top: 4px;
+  right: 0px;
+}
+.fileManagerEntry:hover {
+  background: #335169;
+}
+.fileManagerEntry:active {
+  background: #253541;
+}
+.fileManagerEntry .fileEntrySubtitle {
+  font-size: 10pt;
+  color: #bbb;
+}
+.fileManagerEntry.selected {
+  background-color: #484;
+}
+#fileManagerInfo {
+  top: 32px;
+}
+#fileManagerInfo .mat-icon {
+  float: left;
+  margin: 12px 8px 0px 8px;
+}
+#fileManagerInfo h3 {
+  margin-top: 10px;
+  line-break: anywhere;
+}
+#fileManagerInfo th {
+  padding-left: 8px;
+}
+#fileManagerInfo td {
+  padding-right: 8px;
+}
+#editorFilenameChanges {
+  display: none;
+  background-color: #e44;
+  color: white;
+  border-radius: 8px;
+  padding: 2px 4px 2px 4px;
+  margin-left: 16px;
+  font-size: 10pt;
+  margin-top: 6px;
+}
+#editorButtons {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: none;
+}
+#editorButtons button {
+  margin-right: 0;
+  float: right;
+  box-shadow: none;
+  border-radius: 0;
+}
+#fmDisplaySwitcher {
+  float: right;
+}
+#editorContainer {
+  display: none;
+  flex-grow: 1;
+}
+#editorContainer #editor {
+  height: 100%;
+}
+.uploadArrow,
+.uploadOK,
+.uploadFail {
+  font-size: 50pt;
+  height: 64px;
+  width: 64px;
+  text-align: center;
+}
+.uploadOK {
+  color: #00ee00;
+}
+.uploadFail {
+  color: #ee0000;
+}
+.uploadArrow {
+  transform: rotate(-90deg) translate(-4px, -14px);
+  animation-duration: 0.5s;
+  animation-name: bounce;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.uploadAnim {
+  border-top: 4px solid white;
+  height: 66px;
+  width: 66px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 32px;
+}
+@keyframes bounce {
+  from {
+    transform: rotate(-90deg) translate(-4px, -14px);
+  }
+  to {
+    transform: rotate(-90deg) translate(-18px, -14px);
+  }
+}
+#fileManagerDropNotice {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #555;
+  width: 50%;
+  height: 256px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 8px 8px;
+  pointer-events: none;
+}

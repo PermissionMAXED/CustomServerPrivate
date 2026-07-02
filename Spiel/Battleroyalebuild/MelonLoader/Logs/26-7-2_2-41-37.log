@@ -1,0 +1,433 @@
+[02:41:38.001] [UNITY] [UnityMemory] Configuration Parameters - Can be set up in boot.config
+[02:41:38.002] [UNITY]     "memorysetup-bucket-allocator-granularity=16"
+[02:41:38.002] [UNITY]     "memorysetup-bucket-allocator-bucket-count=8"
+[02:41:38.002] [UNITY]     "memorysetup-bucket-allocator-block-size=4194304"
+[02:41:38.002] [UNITY]     "memorysetup-bucket-allocator-block-count=1"
+[02:41:38.002] [UNITY]     "memorysetup-main-allocator-block-size=16777216"
+[02:41:38.002] [UNITY]     "memorysetup-thread-allocator-block-size=16777216"
+[02:41:38.002] [UNITY]     "memorysetup-gfx-main-allocator-block-size=16777216"
+[02:41:38.003] [UNITY]     "memorysetup-gfx-thread-allocator-block-size=16777216"
+[02:41:38.003] [UNITY]     "memorysetup-cache-allocator-block-size=4194304"
+[02:41:38.003] [UNITY]     "memorysetup-typetree-allocator-block-size=2097152"
+[02:41:38.003] [UNITY]     "memorysetup-profiler-bucket-allocator-granularity=16"
+[02:41:38.003] [UNITY]     "memorysetup-profiler-bucket-allocator-bucket-count=8"
+[02:41:38.003] [UNITY]     "memorysetup-profiler-bucket-allocator-block-size=4194304"
+[02:41:38.003] [UNITY]     "memorysetup-profiler-bucket-allocator-block-count=1"
+[02:41:38.003] [UNITY]     "memorysetup-profiler-allocator-block-size=16777216"
+[02:41:38.003] [UNITY]     "memorysetup-profiler-editor-allocator-block-size=1048576"
+[02:41:38.003] [UNITY]     "memorysetup-temp-allocator-size-main=4194304"
+[02:41:38.004] [UNITY]     "memorysetup-job-temp-allocator-block-size=2097152"
+[02:41:38.004] [UNITY]     "memorysetup-job-temp-allocator-block-size-background=1048576"
+[02:41:38.004] [UNITY]     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+[02:41:38.004] [UNITY]     "memorysetup-allocator-temp-initial-block-size-main=262144"
+[02:41:38.004] [UNITY]     "memorysetup-allocator-temp-initial-block-size-worker=262144"
+[02:41:38.004] [UNITY]     "memorysetup-temp-allocator-size-background-worker=32768"
+[02:41:38.004] [UNITY]     "memorysetup-temp-allocator-size-job-worker=262144"
+[02:41:38.004] [UNITY]     "memorysetup-temp-allocator-size-preload-manager=262144"
+[02:41:38.004] [UNITY]     "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+[02:41:38.004] [UNITY]     "memorysetup-temp-allocator-size-audio-worker=65536"
+[02:41:38.005] [UNITY]     "memorysetup-temp-allocator-size-cloud-worker=32768"
+[02:41:38.005] [UNITY]     "memorysetup-temp-allocator-size-gfx=262144"
+[02:41:38.011] [BS DEBUG] Prevented the CloseHandle of stdout
+[02:41:38.017] [BS DEBUG] Prevented the CloseHandle of stderr
+[02:41:38.049] [BS DEBUG] Init
+[02:41:38.049] [BS DEBUG] Redirecting il2cpp_init
+[02:41:38.049] [BS DEBUG] Redirecting il2cpp_runtime_invoke
+[02:41:38.057] [BS DEBUG] In init detour
+[02:41:38.181] [BS DEBUG] Attempting to load hostfxr
+[02:41:38.182] [BS DEBUG] HostFXR Path: C:\Program Files (x86)\dotnet\host\fxr\10.0.5\hostfxr.dll
+[02:41:38.183] [BS DEBUG] Initializing domain
+[02:41:38.189] [BS DEBUG] Loading NativeHost assembly
+[02:41:38.224] [BS DEBUG] Invoking NativeHost entry
+
+[02:41:38.593] ------------------------------
+[02:41:38.597] MelonLoader v0.7.2 Open-Beta
+[02:41:38.599] OS: Windows 11
+[02:41:38.599] Hash Code: 58AB98835E598BD67B7DB233734DE8603F92C9C6A6081B13CB9A5CC37C02DD13
+[02:41:38.599] ------------------------------
+[02:41:38.600] Game Type: Il2cpp
+[02:41:38.600] Game Arch: x86
+[02:41:38.600] ------------------------------
+[02:41:38.600] Command-Line: 
+[02:41:38.600] ------------------------------
+[02:41:38.601] Core::BasePath = C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild
+[02:41:38.602] Game::BasePath = C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild
+[02:41:38.603] Game::DataPath = C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\bapbap_Data
+[02:41:38.603] Game::ApplicationPath = C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\bapbap.exe
+[02:41:38.603] Runtime Type: net6
+[02:41:39.235] ------------------------------
+[02:41:39.236] Game Name: BAPBAP
+[02:41:39.236] Game Developer: gg.bapbap
+[02:41:39.239] Unity Version: 2022.3.38f1
+[02:41:39.239] Game Version: 0.1.1758-38212
+[02:41:39.239] ------------------------------
+
+[02:41:39.246] [DEBUG] [MelonAssemblyResolver] Setup Successful!
+[02:41:39.248] [DEBUG] Patching MonoMod DetourContext.Dispose...
+[02:41:39.373] [DEBUG] Patched MonoMod DetourContext.Dispose -> IsDisposed
+[02:41:39.728] [DEBUG] Patching AsmResolver Utf8String.Concat(byte[])...
+[02:41:39.768] [DEBUG] Patching Il2CppInterop MethodRewriteContext.UnmangleMethodNameWithSignature...
+[02:41:39.785] [DEBUG] Patching Il2CppInterop Il2CppDetourMethodPatcher.ReportException...
+[02:41:39.803] [DEBUG] Patching Il2CppInterop ClassInjector.RegisterTypeInIl2Cpp...
+[02:41:39.850] [DEBUG] Patched Il2CppInterop ClassInjector.RegisterTypeInIl2Cpp -> FindAbstractMethods
+[02:41:39.851] [DEBUG] Patched Il2CppInterop ClassInjector.RegisterTypeInIl2Cpp -> InjectorHelpers.AddTypeToLookup
+[02:41:39.885] [DEBUG] Patching Il2CppInterop ClassInjector.IsTypeSupported...
+[02:41:39.887] [DEBUG] Patched Il2CppInterop ClassInjector.IsTypeSupported -> Type.IsByRef
+[02:41:39.891] [DEBUG] Patching Il2CppInterop ClassInjector.RewriteType...
+[02:41:39.899] [DEBUG] Patching Il2CppInterop ClassInjector.ConvertMethodInfo...
+[02:41:39.902] [DEBUG] Patched Il2CppInterop ClassInjector.ConvertMethodInfo -> Type.IsByRef
+[02:41:39.907] [DEBUG] Patching Il2CppInterop ILGeneratorEx.EmitObjectToPointer...
+[02:41:39.916] [DEBUG] Patching Il2CppInterop RewriteGlobalContext.AddAssemblyContext...
+[02:41:39.919] [DEBUG] Patching Il2CppInterop RewriteGlobalContext.Dispose...
+[02:41:39.920] [DEBUG] Patching Il2CppInterop RewriteGlobalContext.GetNewAssemblyForOriginal...
+[02:41:39.921] [DEBUG] Patching Il2CppInterop RewriteGlobalContext.TryGetNewTypeForOriginal...
+[02:41:39.929] [DEBUG] Patching Il2CppInterop GarbageCollector_RunFinalizer_Patch.FindTargetMethod...
+[02:41:39.935] [DEBUG] Patching il2cpp_resolve_icall...
+[02:41:40.167] Preferences Loaded!
+[02:41:40.173] [DEBUG] Ignoring MelonModule 'C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Dependencies\CompatibilityLayers\IPA.dll'...
+[02:41:40.173] [DEBUG] Compatibility Layer Loaded: C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Dependencies\CompatibilityLayers\IPA.dll
+
+[02:41:40.189] Loading UserLibs...
+[02:41:40.220] ------------------------------
+[02:41:40.233] Melon Assembly loaded: '.\UserLibs\BAPBAP.ModAPI.dll'
+[02:41:40.234] SHA256 Hash: '969EEA89D3A9CCDDBCA398C11FAAF27878CBB550777B1DA23C7B0267AE97E95A'
+[02:41:40.234] ------------------------------
+[02:41:40.234] 0 UserLibs loaded.
+
+[02:41:40.234] Loading Plugins...
+[02:41:40.242] 0 Plugins loaded.
+
+[02:41:43.233] [BS DEBUG] Invoke hijacked
+[02:41:43.235] Loading Il2CppAssemblyGenerator...
+[02:41:43.288] [Il2CppAssemblyGenerator] Using Cpp2IL Version: 2022.1.0-pre-release.21
+[02:41:43.289] [Il2CppAssemblyGenerator] Using Il2CppInterop Version = 1.5.1+dbaf825aab891ff1e1627bea691bde0a81d1ad98
+[02:41:43.289] [Il2CppAssemblyGenerator] Using Unity Dependencies Version = 2022.3.38
+[02:41:43.289] [Il2CppAssemblyGenerator] Using Deobfuscation Regex = null
+[02:41:43.290] [Il2CppAssemblyGenerator] Cpp2IL is up to date.
+[02:41:43.290] [Il2CppAssemblyGenerator] Cpp2IL.Plugin.StrippedCodeRegSupport is up to date.
+[02:41:43.290] [Il2CppAssemblyGenerator] UnityDependencies is up to date.
+[02:41:43.291] [Il2CppAssemblyGenerator] Checking GameAssembly...
+[02:41:43.291] [DEBUG] Last GameAssembly Hash: 01ACA5A5E6FE5D43FC989C8B3F133424C5A650D77D26D7D7AE8E2C88A557DD2EA417BED3312E41E68708851BE01F7200BF2387BB1613E01976146CBAA9F1B9BD
+[02:41:43.617] [DEBUG] Current GameAssembly Hash: 01ACA5A5E6FE5D43FC989C8B3F133424C5A650D77D26D7D7AE8E2C88A557DD2EA417BED3312E41E68708851BE01F7200BF2387BB1613E01976146CBAA9F1B9BD
+[02:41:43.618] [Il2CppAssemblyGenerator] Assembly is up to date. No Generation Needed.
+
+[02:41:43.621] Loading Mods...
+[02:41:43.665] ------------------------------
+[02:41:43.674] Melon Assembly loaded: '.\Mods\BapCustomServerMelon.dll'
+[02:41:43.674] SHA256 Hash: '478E3BABBADC58ED866691D9F6348C5BE6C958052D53FB83823835669CA0CA99'
+[02:41:43.677] Melon Assembly loaded: '.\Mods\NetworkedCustomChar.dll'
+[02:41:43.677] SHA256 Hash: '57BB091E5E7C7D30EC75D23D8609C6E30AF9A07B30705F3A46ADD71CA2A3512E'
+[02:41:43.697] [DEBUG] [MelonAssemblyResolver] Attempting to find UnityEngine.CoreModule
+[02:41:43.697] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:41:43.698] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:41:43.699] [DEBUG] [MelonAssemblyResolver] Loading UnityEngine.CoreModule from C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies\UnityEngine.CoreModule.dll...
+
+[02:41:43.793] [DEBUG] [MelonAssemblyResolver] Attempting to find UnityEngine.UIModule
+[02:41:43.795] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:41:43.797] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:41:43.797] [DEBUG] [MelonAssemblyResolver] Loading UnityEngine.UIModule from C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies\UnityEngine.UIModule.dll...
+[02:41:43.799] [DEBUG] [MelonAssemblyResolver] Attempting to find UnityEngine.UI
+[02:41:43.799] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:41:43.800] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:41:43.800] [DEBUG] [MelonAssemblyResolver] Loading UnityEngine.UI from C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies\UnityEngine.UI.dll...
+[02:41:43.808] [DEBUG] [MelonAssemblyResolver] Attempting to find UnityEngine.TextRenderingModule
+[02:41:43.808] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:41:43.809] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:41:43.810] [DEBUG] [MelonAssemblyResolver] Loading UnityEngine.TextRenderingModule from C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies\UnityEngine.TextRenderingModule.dll...
+[02:41:43.812] [DEBUG] [MelonAssemblyResolver] Attempting to find Assembly-CSharp
+[02:41:43.812] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:41:43.812] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:41:43.813] [DEBUG] [MelonAssemblyResolver] Loading Assembly-CSharp from C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies\Assembly-CSharp.dll...
+[02:41:43.981] [DEBUG] [MelonAssemblyResolver] Attempting to find Il2CppMirror.Components
+[02:41:43.982] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:41:43.984] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:41:43.985] [DEBUG] [MelonAssemblyResolver] Loading Il2CppMirror.Components from C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies\Il2CppMirror.Components.dll...
+[02:41:43.989] [DEBUG] [MelonAssemblyResolver] Attempting to find Il2Cppmscorlib
+[02:41:43.989] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:41:43.990] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:41:43.990] [DEBUG] [MelonAssemblyResolver] Loading Il2Cppmscorlib from C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies\Il2Cppmscorlib.dll...
+[02:41:44.066] [DEBUG] [MelonAssemblyResolver] Attempting to find Il2CppMirror
+[02:41:44.066] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:41:44.069] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:41:44.069] [DEBUG] [MelonAssemblyResolver] Loading Il2CppMirror from C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies\Il2CppMirror.dll...
+[02:41:44.076] [DEBUG] [MelonAssemblyResolver] Attempting to find UnityEngine.PhysicsModule
+[02:41:44.076] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:41:44.077] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:41:44.077] [DEBUG] [MelonAssemblyResolver] Loading UnityEngine.PhysicsModule from C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies\UnityEngine.PhysicsModule.dll...
+[02:41:44.082] [DEBUG] [MelonAssemblyResolver] Attempting to find UnityEngine.AudioModule
+[02:41:44.084] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:41:44.084] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:41:44.085] [DEBUG] [MelonAssemblyResolver] Loading UnityEngine.AudioModule from C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies\UnityEngine.AudioModule.dll...
+[02:41:44.089] [DEBUG] [MelonAssemblyResolver] Attempting to find UnityEngine.AssetBundleModule
+[02:41:44.089] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:41:44.091] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:41:44.092] [DEBUG] [MelonAssemblyResolver] Loading UnityEngine.AssetBundleModule from C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies\UnityEngine.AssetBundleModule.dll...
+[02:41:44.094] [DEBUG] [MelonAssemblyResolver] Attempting to find UnityEngine.InputLegacyModule
+[02:41:44.094] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:41:44.095] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:41:44.095] [DEBUG] [MelonAssemblyResolver] Loading UnityEngine.InputLegacyModule from C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies\UnityEngine.InputLegacyModule.dll...
+[02:41:44.098] [DEBUG] [MelonAssemblyResolver] Attempting to find UnityEngine.ImageConversionModule
+[02:41:44.099] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:41:44.100] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:41:44.100] [DEBUG] [MelonAssemblyResolver] Loading UnityEngine.ImageConversionModule from C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies\UnityEngine.ImageConversionModule.dll...
+[02:41:44.104] [DEBUG] [MelonAssemblyResolver] Attempting to find UnityEngine.IMGUIModule
+[02:41:44.104] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:41:44.105] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:41:44.105] [DEBUG] [MelonAssemblyResolver] Loading UnityEngine.IMGUIModule from C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies\UnityEngine.IMGUIModule.dll...
+[02:41:44.111] [DEBUG] [MelonAssemblyResolver] Attempting to find UnityEngine.AnimationModule
+[02:41:44.112] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:41:44.114] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:41:44.116] [DEBUG] [MelonAssemblyResolver] Loading UnityEngine.AnimationModule from C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies\UnityEngine.AnimationModule.dll...
+[02:41:44.134] [DEBUG] [MelonAssemblyResolver] Attempting to find UnityEngine.ParticleSystemModule
+[02:41:44.135] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:41:44.135] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:41:44.136] [DEBUG] [MelonAssemblyResolver] Loading UnityEngine.ParticleSystemModule from C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies\UnityEngine.ParticleSystemModule.dll...
+[02:41:44.164] [DEBUG] MelonAssembly 'BapCustomServerMelon' subscribed with OnApplicationQuit
+[02:41:44.164] [DEBUG] MelonAssembly 'BapCustomServerMelon' subscribed with OnUpdate
+[02:41:44.165] [DEBUG] MelonAssembly 'BapCustomServerMelon' subscribed with OnLateUpdate
+[02:41:44.165] [DEBUG] MelonAssembly 'BapCustomServerMelon' subscribed with OnGUI
+[02:41:44.165] [DEBUG] MelonAssembly 'BapCustomServerMelon' subscribed with OnFixedUpdate
+[02:41:44.165] [DEBUG] MelonAssembly 'BapCustomServerMelon' subscribed with OnApplicationLateStart
+[02:41:44.165] [DEBUG] MelonAssembly 'BapCustomServerMelon' subscribed with PrefsLoaded
+[02:41:44.165] [DEBUG] MelonAssembly 'BapCustomServerMelon' subscribed with PrefsSaved
+[02:41:44.165] [DEBUG] MelonAssembly 'BapCustomServerMelon' subscribed with OnSceneWasLoaded
+[02:41:44.165] [DEBUG] MelonAssembly 'BapCustomServerMelon' subscribed with OnSceneWasInitialized
+[02:41:44.166] [DEBUG] MelonAssembly 'BapCustomServerMelon' subscribed with OnSceneWasUnloaded
+[02:41:44.166] [DEBUG] MelonAssembly 'BapCustomServerMelon' subscribed with <RegisterObsoleteCallbacks>b__3_0
+[02:41:44.166] [DEBUG] MelonAssembly 'BapCustomServerMelon' subscribed with <RegisterObsoleteCallbacks>b__3_1
+[02:41:44.166] [DEBUG] MelonAssembly 'BapCustomServerMelon' subscribed with OnApplicationStart
+[02:41:44.192] [BAP_Custom_Server] Loaded custom server ini.
+[02:41:44.222] [BAP_Custom_Server] [Perf] Dedicated server: targetFrameRate=240, vSync=0 (kept default fixedDeltaTime)
+[02:41:44.223] [BAP_Custom_Server] [BAPCustomConfig] mode=dedicated upstream=http://127.0.0.1:5174 proxy=False localPort=5055 dedicatedPorts=http:7850 ws:7777 kcp:7778 tcp:7779 batchMode=True containsNoGraphicsArg=True autoJoin=none
+[02:41:44.226] [BAP_Custom_Server] Managed match bootstrap listener is active.
+[02:41:44.231] [BAP_Custom_Server] Direct mode compatibility proxy enabled for legacy loopback API calls: 127.0.0.1:5055 -> http://127.0.0.1:5174/
+[02:41:44.231] [BAP_Custom_Server] Initialized BAP Custom Server v1.0.5 during early registration. dedicated=True http=7850 ws=7777 kcp=7778 tcp=7779
+[02:41:44.231] [DEBUG] MelonAssembly 'BapCustomServerMelon' subscribed with HarmonyInit
+[02:41:44.232] ------------------------------
+[02:41:44.232] BAP Custom Server v1.0.5
+[02:41:44.233] by Sonic0810
+[02:41:44.233] Assembly: BapCustomServerMelon.dll
+[02:41:44.233] ------------------------------
+[02:41:44.233] [DEBUG] MelonAssembly 'BapCustomServerMelon' subscribed with LoaderInitialized
+[02:41:44.233] [DEBUG] MelonAssembly 'BapCustomServerMelon' subscribed with OnLateInitializeMelon
+[02:41:44.243] [DEBUG] MelonAssembly 'BAPBAP.ModAPI' subscribed with OnApplicationQuit
+[02:41:44.244] [DEBUG] MelonAssembly 'BAPBAP.ModAPI' subscribed with OnUpdate
+[02:41:44.244] [DEBUG] MelonAssembly 'BAPBAP.ModAPI' subscribed with OnLateUpdate
+[02:41:44.244] [DEBUG] MelonAssembly 'BAPBAP.ModAPI' subscribed with OnGUI
+[02:41:44.244] [DEBUG] MelonAssembly 'BAPBAP.ModAPI' subscribed with OnFixedUpdate
+[02:41:44.244] [DEBUG] MelonAssembly 'BAPBAP.ModAPI' subscribed with OnApplicationLateStart
+[02:41:44.244] [DEBUG] MelonAssembly 'BAPBAP.ModAPI' subscribed with PrefsLoaded
+[02:41:44.244] [DEBUG] MelonAssembly 'BAPBAP.ModAPI' subscribed with PrefsSaved
+[02:41:44.244] [DEBUG] MelonAssembly 'BAPBAP.ModAPI' subscribed with OnSceneWasLoaded
+[02:41:44.244] [DEBUG] MelonAssembly 'BAPBAP.ModAPI' subscribed with OnSceneWasInitialized
+[02:41:44.245] [DEBUG] MelonAssembly 'BAPBAP.ModAPI' subscribed with OnSceneWasUnloaded
+[02:41:44.245] [DEBUG] MelonAssembly 'BAPBAP.ModAPI' subscribed with <RegisterObsoleteCallbacks>b__3_0
+[02:41:44.245] [DEBUG] MelonAssembly 'BAPBAP.ModAPI' subscribed with <RegisterObsoleteCallbacks>b__3_1
+[02:41:44.245] [DEBUG] MelonAssembly 'BAPBAP.ModAPI' subscribed with OnApplicationStart
+[02:41:44.245] [DEBUG] MelonAssembly 'BAPBAP.ModAPI' subscribed with HarmonyInit
+[02:41:44.245] ------------------------------
+[02:41:44.245] BAPBAP ModAPI v2.2.1
+[02:41:44.245] by Sonic0810               
+[02:41:44.245] Assembly: BAPBAP.ModAPI.dll
+[02:41:44.245] ------------------------------
+[02:41:44.246] [DEBUG] MelonAssembly 'BAPBAP.ModAPI' subscribed with LoaderInitialized
+[02:41:44.246] [DEBUG] MelonAssembly 'BAPBAP.ModAPI' subscribed with OnLateInitializeMelon
+[02:41:44.256] [DEBUG] MelonAssembly 'NetworkedCustomChar' subscribed with OnApplicationQuit
+[02:41:44.257] [DEBUG] MelonAssembly 'NetworkedCustomChar' subscribed with OnUpdate
+[02:41:44.257] [DEBUG] MelonAssembly 'NetworkedCustomChar' subscribed with OnLateUpdate
+[02:41:44.257] [DEBUG] MelonAssembly 'NetworkedCustomChar' subscribed with OnGUI
+[02:41:44.257] [DEBUG] MelonAssembly 'NetworkedCustomChar' subscribed with OnFixedUpdate
+[02:41:44.257] [DEBUG] MelonAssembly 'NetworkedCustomChar' subscribed with OnApplicationLateStart
+[02:41:44.257] [DEBUG] MelonAssembly 'NetworkedCustomChar' subscribed with PrefsLoaded
+[02:41:44.258] [DEBUG] MelonAssembly 'NetworkedCustomChar' subscribed with PrefsSaved
+[02:41:44.258] [DEBUG] MelonAssembly 'NetworkedCustomChar' subscribed with OnSceneWasLoaded
+[02:41:44.258] [DEBUG] MelonAssembly 'NetworkedCustomChar' subscribed with OnSceneWasInitialized
+[02:41:44.258] [DEBUG] MelonAssembly 'NetworkedCustomChar' subscribed with OnSceneWasUnloaded
+[02:41:44.258] [DEBUG] MelonAssembly 'NetworkedCustomChar' subscribed with <RegisterObsoleteCallbacks>b__3_0
+[02:41:44.258] [DEBUG] MelonAssembly 'NetworkedCustomChar' subscribed with <RegisterObsoleteCallbacks>b__3_1
+[02:41:44.258] [DEBUG] MelonAssembly 'NetworkedCustomChar' subscribed with OnApplicationStart
+[02:41:44.258] [DEBUG] MelonAssembly 'NetworkedCustomChar' subscribed with HarmonyInit
+[02:41:44.258] ------------------------------
+[02:41:44.258] NetworkedCustomChar v0.1.0
+[02:41:44.258] by bapcustom
+[02:41:44.259] Assembly: NetworkedCustomChar.dll
+[02:41:44.259] ------------------------------
+[02:41:44.259] [DEBUG] MelonAssembly 'NetworkedCustomChar' subscribed with LoaderInitialized
+[02:41:44.259] [DEBUG] MelonAssembly 'NetworkedCustomChar' subscribed with OnLateInitializeMelon
+[02:41:44.259] ------------------------------
+[02:41:44.259] 3 Mods loaded.
+
+[02:41:44.557] [BAP_Custom_Server] Queued managed match bootstrap payload: /setup-game
+[02:41:45.857] [DEBUG] il2cpp_object_get_virtual_method: 0x50A1B930
+[02:41:45.955] [DEBUG] Object::GetVirtualMethod: 0x50A1F190
+[02:41:45.964] [DEBUG] GenericMethod::GetMethod found: 0x509F0F20
+[02:41:45.974] [DEBUG] il2cpp_image_get_class: 0x50A1B640
+[02:41:45.975] [DEBUG] Image::GetType: 0x50A4E9C0
+[02:41:45.976] [DEBUG] imageGetTypeXrefs.Length: 2
+[02:41:45.976] [DEBUG] getTypeInfoFromHandle: 50A01C30
+[02:41:45.977] [DEBUG] MetadataCache::GetTypeInfoFromTypeDefinitionIndex found: 0x50A44600
+[02:41:47.059] [DEBUG] Couldn't fetch Class::GetDefaultFieldValue with signatures, using method traversal
+[02:41:47.063] [DEBUG] il2cpp_field_static_get_value: 0x50A1B370
+[02:41:47.064] [DEBUG] Field::StaticGetValue: 0x509F8C40
+[02:41:47.068] [DEBUG] Field::StaticGetValueInternal: 0x509F8C60
+[02:41:47.069] [DEBUG] Class::GetDefaultFieldValue found: 0x509FFD20
+[02:41:47.489] [Il2CppInterop] Class::Init signatures have been exhausted, using a substitute!
+[02:41:47.490] [DEBUG] Picked mono_class_instance_size as a Class::Init substitute
+[02:41:47.490] [DEBUG] Class::Init: 0x50A1C330
+[02:41:47.491] [DEBUG] il2cpp_class_from_il2cpp_type: 0x50A1AE90
+[02:41:47.491] [DEBUG] Class::FromIl2CppType found: 0x509FF100
+[02:41:47.493] [DEBUG] il2cpp_class_from_name: 0x50A1AEB0
+[02:41:47.493] [DEBUG] Class::FromName found: 0x509FF5E0
+[02:41:47.497] [DEBUG] Runtime::UnhandledException: 0x509F8DA0
+[02:41:50.481] [DEBUG] Found 4 callers of UnhandledException
+[02:41:50.486] [DEBUG] Candidate: 0x509EADC0, calls: 6, size: 429 bytes
+[02:41:50.486] [DEBUG]   -> Rejected (call count: 6)
+[02:41:50.486] [DEBUG] Candidate: 0x509EBDB0, calls: 3, size: 59 bytes
+[02:41:50.490] [DEBUG]   -> Matched!
+[02:41:50.490] [DEBUG] GarbageCollector::RunFinalizer found: 0x509EBDB0
+[02:41:50.529] [DEBUG] [MelonAssemblyResolver] Attempting to find Il2CppSystem.Private.CoreLib
+[02:41:50.530] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:41:50.531] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:41:50.531] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\UserLibs
+[02:41:50.532] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\Plugins
+[02:41:50.533] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\Mods
+[02:41:50.533] [DEBUG] [MelonAssemblyResolver] Failed to find Il2CppSystem.Private.CoreLib in any of the known search directories
+[02:41:50.547] [Il2CppInterop] Registered mono type MelonLoader.Support.MonoEnumeratorWrapper in il2cpp domain
+[02:41:50.631] [DEBUG] Hooked into static void UnityEngine.SceneManagement.SceneManager::Internal_SceneLoaded(UnityEngine.SceneManagement.Scene scene, UnityEngine.SceneManagement.LoadSceneMode mode)
+[02:41:50.662] [DEBUG] Hooked into static void UnityEngine.SceneManagement.SceneManager::Internal_SceneUnloaded(UnityEngine.SceneManagement.Scene scene)
+[02:41:50.663] Support Module Loaded: C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Dependencies\SupportModules\Il2Cpp.dll
+[02:41:50.680] [DEBUG] MelonAssembly 'BapCustomServerMelon' unsubscribed with HarmonyInit
+[02:41:50.681] [DEBUG] MelonAssembly 'BAPBAP.ModAPI' unsubscribed with HarmonyInit
+[02:41:50.681] [DEBUG] MelonAssembly 'NetworkedCustomChar' unsubscribed with HarmonyInit
+[02:41:50.682] [DEBUG] MelonAssembly 'BapCustomServerMelon' unsubscribed with LoaderInitialized
+[02:41:50.684] [BAPBAP_ModAPI] BAPBAP ModAPI v2.2.1 initializing ...
+[02:41:50.684] [BAPBAP_ModAPI]   by BAPBAP Modding Community
+[02:41:50.684] [BAPBAP_ModAPI]   loaded as C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\UserLibs\BAPBAP.ModAPI.dll
+[02:41:50.685] [BAPBAP_ModAPI] [Hooks] Installing global hooks ...
+[02:41:50.695] [BAPBAP_ModAPI] [Hooks]   ✓ PlayerHooks
+[02:41:50.696] [BAPBAP_ModAPI] [Hooks]   ✓ MatchHooks
+[02:41:50.696] [BAPBAP_ModAPI] [Hooks]   ✓ CombatHooks
+[02:41:50.696] [BAPBAP_ModAPI] [Hooks]   ✓ ChatHooks
+[02:41:50.696] [BAPBAP_ModAPI] [Hooks]   ✓ NetworkHooks
+[02:41:50.696] [BAPBAP_ModAPI] [Hooks]   ✓ UIHooks
+[02:41:50.696] [BAPBAP_ModAPI] [Hooks]   ✓ AbilityHooks
+[02:41:50.697] [BAPBAP_ModAPI] [Hooks]   ✓ StatusEffectHooks
+[02:41:50.697] [BAPBAP_ModAPI] [Hooks]   ✓ ItemHooks
+[02:41:50.697] [BAPBAP_ModAPI] [Hooks]   ✓ VehicleHooks
+[02:41:50.697] [BAPBAP_ModAPI] [Hooks]   ✓ EntityHooks
+[02:41:50.698] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraAbilityHooks
+[02:41:50.698] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraItemHooks
+[02:41:50.698] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraVehicleHooks
+[02:41:50.698] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraEntityHooks
+[02:41:50.698] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraMovementHooks
+[02:41:50.699] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraPassiveHooks
+[02:41:50.699] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraInteractionHooks
+[02:41:50.703] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraKillHooks
+[02:41:50.706] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraEmoteHooks
+[02:41:50.706] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraMetaHooks
+[02:41:50.707] [BAPBAP_ModAPI] [Hooks] Done. 21 hook groups installed.
+[02:41:50.709] [DEBUG] [MelonAssemblyResolver] Attempting to find Il2CppSystem.Private.CoreLib
+[02:41:50.717] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:41:50.717] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:41:50.718] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\UserLibs
+[02:41:50.719] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\Plugins
+[02:41:50.719] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\Mods
+[02:41:50.719] [DEBUG] [MelonAssemblyResolver] Failed to find Il2CppSystem.Private.CoreLib in any of the known search directories
+[02:41:50.720] [Il2CppInterop] Registered mono type BAPBAP.ModAPI.Lifecycle.ModUpdateRunner in il2cpp domain
+[02:41:50.720] [BAPBAP_ModAPI] [Lifecycle] ModUpdateRunner registered with Il2Cpp.
+[02:41:50.721] [DEBUG] [MelonAssemblyResolver] Attempting to find Il2CppSystem.Private.CoreLib
+[02:41:50.721] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:41:50.721] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:41:50.722] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\UserLibs
+[02:41:50.722] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\Plugins
+[02:41:50.722] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\Mods
+[02:41:50.723] [DEBUG] [MelonAssemblyResolver] Failed to find Il2CppSystem.Private.CoreLib in any of the known search directories
+[02:41:50.723] [Il2CppInterop] Registered mono type BAPBAP.ModAPI.API.NotificationAPI+ScheduledFader in il2cpp domain
+[02:41:50.725] [DEBUG] [MelonAssemblyResolver] Attempting to find Il2CppSystem.Private.CoreLib
+[02:41:50.725] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:41:50.725] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:41:50.728] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\UserLibs
+[02:41:50.730] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\Plugins
+[02:41:50.730] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\Mods
+[02:41:50.731] [DEBUG] [MelonAssemblyResolver] Failed to find Il2CppSystem.Private.CoreLib in any of the known search directories
+[02:41:50.732] [Il2CppInterop] Registered mono type BAPBAP.ModAPI.UI.ModLoaderUIRunner in il2cpp domain
+[02:41:50.733] [BAPBAP_ModAPI] [ModLoaderUI] Runner registered with Il2Cpp.
+[02:41:50.734] [BAPBAP_ModAPI] BAPBAP ModAPI ready. Mods should subclass ModBase to register.
+[02:41:50.734] [DEBUG] MelonAssembly 'BAPBAP.ModAPI' unsubscribed with LoaderInitialized
+[02:41:50.745] [BAP_Custom_Server] Queued managed match bootstrap payload: /setup-game
+[02:41:50.788] [NetworkedCustomChar] [M5] loaded definition 'Blitz' (charId=15, enabled=False) from UserData\CustomChars\blitz.json.
+[02:41:50.788] [NetworkedCustomChar] [M5] loaded definition 'Eve' (charId=15, enabled=False) from UserData\CustomChars\eve.json.
+[02:41:50.790] [NetworkedCustomChar] [M5] loaded definition 'Medusa' (charId=15, enabled=True) from UserData\CustomChars\medusa.json.
+[02:41:50.791] [NetworkedCustomChar] [M5] active definition: name='Medusa' display='MEDUSA' charId=15 base=0 bundle='Medusa\medusa.bundle' visual='Medusa_Visual' assetId=0xB0B00F0F graft=True (loaded 3).
+[02:41:50.805] [DEBUG] [MelonAssemblyResolver] Attempting to find Il2CppSystem.Private.CoreLib
+[02:41:50.805] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:41:50.806] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:41:50.807] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\UserLibs
+[02:41:50.807] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\Plugins
+[02:41:50.808] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\Mods
+[02:41:50.808] [DEBUG] [MelonAssemblyResolver] Failed to find Il2CppSystem.Private.CoreLib in any of the known search directories
+[02:41:50.809] [Il2CppInterop] Registered mono type Il2CppInterop.Runtime.DelegateSupport+Il2CppToMonoDelegateReference in il2cpp domain
+[02:41:50.833] [NetworkedCustomChar] [M3] CustomNetChannel registered on EntityManager (hash=58016).
+[02:41:50.834] [NetworkedCustomChar] [M3] CustomAbilityEngine ready (charId=15, enabled=True, networkPrefabSpawn=False, medusaBundleHitboxes=False).
+[02:41:50.835] [NetworkedCustomChar] [M6] ability kit: hitboxes=[Hitbox_MedusaPoisonProjectile,Hitbox_MedusaPoisonPuddle,Hitbox_MedusaWallPoison,Hitbox_MedusaWallBoxDpsPoison] dmg=[80,85,70,160] status=[poison,slow,knockup,petrify] anim=[Ability1,Ability2,,Ability4].
+[02:41:50.986] [NetworkedCustomChar] [MAP] custom map registered: name='CustomArena' mapId=31 bundle='CustomArena\customflat.bundle' sv='CustomFlat_SvData' cl='CustomFlat_ClData' enabled=True zoneRounds=1 enableTileEdits=True useLevelDataTileMutations=True tileEdits=3.
+[02:41:50.987] [NetworkedCustomChar] [MAP] custom map registered: name='CustomCitadel' mapId=34 bundle='CustomCitadel\customflat.bundle' sv='CustomFlat_SvData' cl='CustomFlat_ClData' enabled=True zoneRounds=0 enableTileEdits=False useLevelDataTileMutations=False tileEdits=13.
+[02:41:50.988] [NetworkedCustomChar] [MAP] custom map registered: name='CustomColosseum' mapId=32 bundle='CustomColosseum\customflat.bundle' sv='CustomFlat_SvData' cl='CustomFlat_ClData' enabled=True zoneRounds=1 enableTileEdits=True useLevelDataTileMutations=True tileEdits=9.
+[02:41:50.988] [NetworkedCustomChar] [MAP] custom map registered: name='CustomFlat' mapId=30 bundle='CustomFlat\customflat.bundle' sv='CustomFlat_SvData' cl='CustomFlat_ClData' enabled=True zoneRounds=1 enableTileEdits=False useLevelDataTileMutations=False tileEdits=0.
+[02:41:50.988] [NetworkedCustomChar] [MAP] custom map registered: name='CustomGauntlet' mapId=33 bundle='CustomGauntlet\customflat.bundle' sv='CustomFlat_SvData' cl='CustomFlat_ClData' enabled=True zoneRounds=1 enableTileEdits=True useLevelDataTileMutations=True tileEdits=13.
+[02:41:50.989] [NetworkedCustomChar] [MAP] hooks installed (LoadLevel=True LoadLevelCoroutine=True SpawnLevel=True OnServerMatchSetup=True) for 5 custom level name(s).
+[02:41:50.989] [NetworkedCustomChar] [M1] loaded. charId=15 baseCharId=0 assetId=0xB0B00F0F graftVisual=True (Harmony patches deferred to 35s)
+[02:41:50.989] [DEBUG] MelonAssembly 'NetworkedCustomChar' unsubscribed with LoaderInitialized
+[02:41:59.605] [DEBUG] [MelonAssemblyResolver] Attempting to find Il2CppSystem.Private.CoreLib
+[02:41:59.605] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\net6
+[02:41:59.606] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Il2CppAssemblies
+[02:41:59.607] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\UserLibs
+[02:41:59.608] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\Plugins
+[02:41:59.608] [DEBUG] [MelonAssemblyResolver] Searching directory C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\Mods
+[02:41:59.608] [DEBUG] [MelonAssemblyResolver] Failed to find Il2CppSystem.Private.CoreLib in any of the known search directories
+[02:41:59.609] [Il2CppInterop] Registered mono type MelonLoader.Support.SM_Component in il2cpp domain
+[02:41:59.621] [BAP_Custom_Server] [SceneLoaded] Scene 'MainScene' (index 0) loaded.
+[02:41:59.621] [BAP_Custom_Server] [StateReset] Resetting match flags on lobby/menu scene 'MainScene'
+[02:41:59.707] [BAP_Custom_Server] Melon runtime initialized. Support Module init pending (waiting 35s for Il2CppInterop startup).
+[02:41:59.708] [DEBUG] MelonAssembly 'BapCustomServerMelon' unsubscribed with OnLateInitializeMelon
+[02:41:59.709] [DEBUG] MelonAssembly 'BAPBAP.ModAPI' unsubscribed with OnLateInitializeMelon
+[02:41:59.709] [DEBUG] MelonAssembly 'NetworkedCustomChar' unsubscribed with OnLateInitializeMelon
+[02:41:59.844] [BAP_Custom_Server] Extended dedicated matchmaking wait windows to 120s on 1 GameManager instance(s).
+[02:42:00.042] [BAP_Custom_Server] [KcpRuntime] dedicated-ui-before-start: manager=Il2CppBAPBAP.Network.GameNetworkManager ws=Il2CppMirror.SimpleWeb.SimpleWebTransport port=7777 timeout=null client=False server=False kcp=Il2Cppkcp2k.KcpTransport port=7778 timeout=60000 client=True server=True tcp=Il2CppMirror.TelepathyTransport port=7779 timeout=null client=False server=False multiplex=Il2CppMirror.MultiplexTransport port=7779 timeout=null client=False server=False patched=5.
+[02:42:00.151] [BAP_Custom_Server] Requested dedicated server start through UINetwork. attempt=1/10 ws=7777 kcp=7778 tcp=7779
+[02:42:00.182] [BAP_Custom_Server] [KcpRuntime] dedicated-manager-before-start: manager=Il2CppBAPBAP.Network.GameNetworkManager ws=Il2CppMirror.SimpleWeb.SimpleWebTransport port=7777 timeout=null client=False server=False kcp=Il2Cppkcp2k.KcpTransport port=7778 timeout=60000 client=True server=True tcp=Il2CppMirror.TelepathyTransport port=7779 timeout=null client=False server=False multiplex=Il2CppMirror.MultiplexTransport port=7779 timeout=null client=False server=False patched=3.
+[02:42:00.184] [BAP_Custom_Server] Dedicated GameNetworkManager is already active. mode=ServerOnly
+[02:42:00.184] [BAP_Custom_Server] Mirror server is active before /setup-game; applying setup payload.
+[02:42:00.266] [BAP_Custom_Server] Patched 11 GameMode levelNames array(s) for custom matches.
+[02:42:00.303] [BAP_Custom_Server] [PrematchTiming] /setup-game charSelectMillis=20000->20000 spawnSelectMillis=10000->10000 spawnShowMillis=3000->3000 changed=False.
+[02:42:00.305] [BAP_Custom_Server] Assigned GameManager.mgd on primary GameManager (single-instance write).
+[02:42:00.309] [NetworkedCustomChar] [MAP] bootstrap mapId latched = 3.
+[02:42:00.314] [BAP_Custom_Server] Assigned GameManager.mgd on primary GameManager (single-instance write).
+[02:42:00.324] [BAP_Custom_Server] [PrematchTiming] GameManager after /setup-game: mgd=charSelectMillis=20000 spawnSelectMillis=10000 spawnShowMillis=3000 gm=playersByPlayerId=0 connIdToPlayerId=0 preMatchManager=True currentGameMode=True qmd=False mgd=True.
+[02:42:00.324] [BAP_Custom_Server] Applied managed match bootstrap payload /setup-game via OnServerMatchSetup.
+[02:42:00.401] [BAP_Custom_Server] Game bootstrap HTTP listener is active.
+[02:42:00.464] [BAP_Custom_Server] Queued managed match bootstrap payload: /add-teams
+[02:42:00.481] [NetworkedCustomChar] [M1] UI row added (charId=15) via Poll; roster 15->16.
+[02:42:00.659] [BAPBAP_ModAPI] [Lifecycle] ModUpdateRunner GameObject created.
+[02:42:00.696] [BAP_Custom_Server] Waiting for loaded map before applying /add-teams.
+[02:42:00.737] [NetworkedCustomChar] [MAP] PROBE SpawnLevel: name='Arena_Map2' bootstrapMapId=3 svOnly=True clOnly=False svNull=False clNull=True.
+[02:42:00.997] [BAP_Custom_Server] [PrematchTeams] /add-teams players=1 teamRange=0-0 spawnLocationPerTeam=[0,1,2,3,4,5,6,7] shifted=False repairedSpawns=False.
+[02:42:00.998] [BAP_Custom_Server] Applied managed match bootstrap payload /add-teams via OnServerMatchAddTeams.
+[02:42:01.498] [BAP_Custom_Server] Queued managed match bootstrap payload: /queue-matched
+[02:42:01.620] [BAP_Custom_Server] [PrematchTeams] /queue-matched players=1 teamRange=0-0 shifted=False.
+[02:42:01.620] [BAP_Custom_Server] Assigned GameManager.qmd on primary GameManager (single-instance write).
+[02:42:01.621] [BAP_Custom_Server] Assigned GameManager.qmd on primary GameManager (single-instance write).
+[02:42:01.624] [BAP_Custom_Server] [PrematchTiming] GameManager after /queue-matched: qmdPlayers=auth=26e313fe5074677b604b2070ff1cd67f playerId=1 teamId=0 charId=0 available=0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 gm=playersByPlayerId=0 connIdToPlayerId=0 preMatchManager=True currentGameMode=True qmd=True mgd=True.
+[02:42:01.624] [BAP_Custom_Server] Applied managed match bootstrap payload /queue-matched via OnServerQueueMatched.
+[02:42:26.147] [BAP_Custom_Server] Installed 4 NetworkConfig runtime patch(es).
+[02:42:26.205] [BAP_Custom_Server] Installed 2 PreAwakeManager network config patch(es).
+[02:42:26.214] [Il2CppInterop] Failed to init IL2CPP patch backend for void Il2CppBAPBAP.Network.HttpClient::.ctor(UnityEngine.MonoBehaviour coroutineContext, string host, bool logs), using normal patch handlers: Derived classes must provide an implementation.
+[02:42:26.225] [BAP_Custom_Server] Installed 2 HttpClient host rewrite patch(es).
+[02:42:26.230] [Il2CppInterop] Failed to init IL2CPP patch backend for void Il2CppBAPBAP.UI.ControllerManager::.ctor(Il2CppBAPBAP.UI.ControllerManager+Config config, Il2CppBAPBAP.UI.ModelManager modelManager, Il2CppBAPBAP.UI.UILobby view, Il2CppBAPBAP.Network.HttpClient httpClient, Il2CppBAPBAP.Network.WebSocketClient webSocketClient, Il2CppBAPBAP.Network.NetworkConfig networkConfig), using normal patch handlers: Derived classes must provide an implementation.
+[02:42:26.235] [BAP_Custom_Server] Installed ControllerManager network runtime patch.
+[02:42:26.271] [BAP_Custom_Server] Installed 1 WebSocketClient selection propagation patch(es).
+[02:42:26.300] [NetworkedCustomChar] [M1] patched GameNetworkManager.Awake (pre=False post=True).
+[02:42:26.329] [NetworkedCustomChar] [M1] patched GameNetworkManager.OnStartServer (pre=False post=True).
+[02:42:26.357] [NetworkedCustomChar] [M1] patched GameNetworkManager.OnStartClient (pre=False post=True).
+[02:42:26.383] [NetworkedCustomChar] [M1] patched GameNetworkManager.GetCharacterBotPrefab (pre=True post=False).
+[02:42:26.415] [NetworkedCustomChar] [M1] patched GameMode.SpawnPlayerChar (pre=True post=False).

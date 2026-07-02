@@ -1,0 +1,4 @@
+reusing server :5161
+GAME_STARTED. gameDns=127.0.0.1 ws=7777 bots=7
+launched ONE client pid=57120. Play it; bots fill the rest.
+Match host + server left running. Close the game window when done; kill server pid  if started.

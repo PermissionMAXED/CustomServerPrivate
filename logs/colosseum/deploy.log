@@ -1,0 +1,12 @@
+[09:19:02] Child instance running=True appState=20.
+[09:19:03] Logged into child instance API.
+[09:19:03] Remote app state before deploy: 20.
+[09:19:03] Stopping application.
+[09:19:05] Remote app state after stop: 0.
+[09:19:05] Deleted remote: game/Mods/BAPBAP.Medusa.dll
+[09:19:05] Deleted remote: game/Mods/BAPCustomChars.dll
+[09:19:05] Uploading 3.4 MiB -> netcustomchar-deploy.zip.
+[09:19:06] MD5 local=a5a708f29971db4fadd44a9079aac274 remote=a5a708f29971db4fadd44a9079aac274.
+[09:19:06] Extracting archive into remote root.
+[09:19:06] Starting application.
+[09:19:07] Deploy finished. started=True

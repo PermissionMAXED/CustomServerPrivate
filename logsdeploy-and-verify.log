@@ -1,0 +1,11 @@
+In C:\Users\Administrator\Downloads\CustomServer\tools\Deploy-And-Verify.ps1:40 Zeichen:137
++ ... === TIMED OUT waiting for healthy server ƒ?" check AMP console ===" }
++                                                                       ~~~
+Die Zeichenfolge hat kein Abschlusszeichen: ".
+In C:\Users\Administrator\Downloads\CustomServer\tools\Deploy-And-Verify.ps1:40 Zeichen:57
++ if ($ok) { Write-Host "=== DEPLOY+HEALTH OK ===" } else { Write-Host  ...
++                                                         ~
+Die schlieáende "}" fehlt im Anweisungsblock oder der Typdefinition.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : TerminatorExpectedAtEndOfString
+ 

@@ -1,0 +1,29 @@
+=== Build-CharBundle ===
+Char       : Eve
+Bundle     : eve
+Project    : C:\Users\Administrator\Downloads\neueBapbap\GameCode\ExportedProject
+Build out  : C:\Users\Administrator\Downloads\CustomServer\artifacts\char-bundles\EveBundleOut
+Unity log  : C:\Users\Administrator\Downloads\CustomServer\tools\logs\char-bundle-eve-20260611135404.log
+
+Running Unity headless...
+Unity exit code: 0
+
+=== Result ===
+Bundle: C:\Users\Administrator\Downloads\CustomServer\artifacts\char-bundles\EveBundleOut\eve
+Size  : 13476526 bytes (12,852 MB)
+
+=== CharBundleBuilder log highlights ===
+[CharBundleBuilder] visual-only: animators=2 skinnedMeshRenderers=1
+[CharBundleBuilder] visual-only: saved Assets/GameObject/Eve_Visual.prefab
+[CharBundleBuilder] Tagged 56 asset(s).
+[CharBundleBuilder] controller params=7 layers=4
+[CharBundleBuilder]   param: Forward (Float)
+[CharBundleBuilder]   param: Strafe (Float)
+[CharBundleBuilder]   param: Turn (Float)
+[CharBundleBuilder]   param: IsMoving (Bool)
+[CharBundleBuilder]   param: AttackSpeed (Float)
+[CharBundleBuilder]   param: MoveSpeed (Float)
+[CharBundleBuilder]   param: FootstepCurve (Float)
+[CharBundleBuilder] Built bundle: eve
+[CharBundleBuilder] Built bundle: medusa
+[CharBundleBuilder] SUCCESS: C:\Users\Administrator\Downloads\CustomServer\artifacts\char-bundles\EveBundleOut\eve (13476526 bytes)

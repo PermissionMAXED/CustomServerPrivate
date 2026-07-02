@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>BAPBAP.Medusa</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>net6.0</TargetFramework>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>15.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="MelonLoader" />
+    <Reference Include="0Harmony" />
+    <Reference Include="UnityEngine.CoreModule" />
+    <Reference Include="Assembly-CSharp" />
+    <Reference Include="BAPBAP.ModAPI" />
+    <Reference Include="UnityEngine.Il2CppAssetBundleManager" />
+    <Reference Include="UnityEngine.AnimationModule" />
+    <Reference Include="Il2CppInterop.Runtime" />
+    <Reference Include="Il2Cppmscorlib" />
+    <Reference Include="UnityEngine.PhysicsModule" />
+    <Reference Include="UnityEngine.ParticleSystemModule" />
+    <Reference Include="Il2CppMirror" />
+    <Reference Include="UnityEngine.UIModule" />
+    <Reference Include="UnityEngine.UI" />
+    <Reference Include="Il2CppSystem.Core" />
+    <Reference Include="UnityEngine.InputLegacyModule" />
+    <Reference Include="UnityEngine.ImageConversionModule" />
+  </ItemGroup>
+</Project>

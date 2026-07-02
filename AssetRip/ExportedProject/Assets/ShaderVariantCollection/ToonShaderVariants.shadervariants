@@ -1,0 +1,2053 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!200 &20000000
+ShaderVariantCollection:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ToonShaderVariants
+  m_Shaders:
+  - first: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+      - keywords: UNITY_UI_ALPHACLIP
+        passType: 0
+      - keywords: UNITY_UI_CLIP_RECT
+        passType: 0
+  - first: {fileID: 66, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 6, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: SHADOWS_DEPTH
+        passType: 8
+  - first: {fileID: 106, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: _SUNDISK_SIMPLE
+        passType: 0
+  - first: {fileID: 108, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 207, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 9000, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 9001, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 9002, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 9003, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 9004, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 9007, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 9101, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 9103, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 10720, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 10721, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 10755, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 10757, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 6a638ab500703224e9c5e1abcba6ffab, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 8
+      - keywords: DIRECTIONAL
+        passType: 8
+      - keywords: DIRECTIONAL _AA_FWIDTH
+        passType: 8
+      - keywords: DIRECTIONAL _AA_SMOOTHSTEP
+        passType: 8
+      - keywords: _AA_FWIDTH
+        passType: 8
+      - keywords: _AA_SMOOTHSTEP
+        passType: 8
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY LIGHTPROBE_SH _AA_FWIDTH _DEPTHMASKOVERLAY _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY LIGHTPROBE_SH _AA_FWIDTH _DEPTHMASKOVERLAY _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY LIGHTPROBE_SH _AA_SMOOTHSTEP _DEPTHMASKOVERLAY _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY LIGHTPROBE_SH _AA_SMOOTHSTEP _DEPTHMASKOVERLAY _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_FWIDTH _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_FWIDTH _DEPTHMASKOVERLAY _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_FWIDTH _DEPTHMASKOVERLAY _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_FWIDTH _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _DEPTHMASKOVERLAY _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _DEPTHMASKOVERLAY _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: _SIMPLEREFLECTION
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 14
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_FWIDTH _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 14
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_FWIDTH _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 14
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 14
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 14
+  - first: {fileID: 4800000, guid: 4bac904168fe1f84dbc9d1bfcd295b67, type: 3}
+    second:
+      variants:
+      - keywords: _OUTPUT_DEPTH
+        passType: 0
+  - first: {fileID: 4800000, guid: f073df61da930b043b064d4c2b8015f3, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 0c058a2b6c0c9df4e8b0b53fdc91ded7, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: a1927ab256262d54189c03dca112edc8, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 885dd340d4ba9354890c95afcd0044f7, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 0171b33af3de3eb40a29e4b6251a905e, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+      - keywords: _INTERLEAVED_GRADIENT _SAMPLE_COUNT_LOW _SOURCE_DEPTH_MEDIUM
+        passType: 0
+  - first: {fileID: 4800000, guid: 2d06a690c1dabb245975b2181db64d83, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 13
+  - first: {fileID: 4800000, guid: 624ffa4386a048b42bfbf4d280d96043, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 8
+      - keywords: _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+        passType: 8
+      - keywords:
+        passType: 13
+      - keywords: _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A _SPECULAR_SETUP
+        passType: 13
+      - keywords: _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+        passType: 13
+  - first: {fileID: 4800000, guid: e8f7b31924415b9408d9d3d79ead8a10, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 8cc0f6b0ffab58343b33fa0bb2692a36, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_SMOOTHSTEP _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION _WORLDSPACETEXTURE_ON
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE _WORLDSPACETEXTURE_ON
+        passType: 13
+      - keywords: DIRECTIONAL _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+  - first: {fileID: 4800000, guid: bf3ea38cfa9325d4f9318c39b983cf17, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: e4fe746e6440ebe4fae7bd79e9573c5b, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 13
+  - first: {fileID: 4800000, guid: 9f24e9c7e386955459ed07f8ea347e70, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 13
+      - keywords: _FACECOLORSWITCH_ON
+        passType: 13
+  - first: {fileID: 4800000, guid: ddde99c2f3c21964598c99c0c6e393f5, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 8
+      - keywords: DIRECTIONAL
+        passType: 8
+      - keywords: DIRECTIONAL INSTANCING_ON _AA_OFF
+        passType: 8
+      - keywords: DIRECTIONAL _AA_FWIDTH
+        passType: 8
+      - keywords: DIRECTIONAL _AA_SMOOTHSTEP
+        passType: 8
+      - keywords: INSTANCING_ON _AA_OFF
+        passType: 8
+      - keywords: _AA_FWIDTH
+        passType: 8
+      - keywords: _AA_SMOOTHSTEP
+        passType: 8
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY INSTANCING_ON LIGHTPROBE_SH _AA_OFF _DEPTHMASKOVERLAY _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY INSTANCING_ON LIGHTPROBE_SH _AA_OFF _DEPTHMASKOVERLAY _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY LIGHTPROBE_SH _AA_SMOOTHSTEP _DEPTHMASKOVERLAY _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY LIGHTPROBE_SH _AA_SMOOTHSTEP _DEPTHMASKOVERLAY _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY _AA_FWIDTH _DEPTHMASKOVERLAY _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY _AA_FWIDTH _DEPTHMASKOVERLAY _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_OFF _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _DEPTHMASKOVERLAY _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _DEPTHMASKOVERLAY _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL _AA_FWIDTH _DEPTHMASKOVERLAY _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL _AA_FWIDTH _DEPTHMASKOVERLAY _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: FOW_OCCLUDE_OVERLAY LIGHTPROBE_SH _AA_FWIDTH _DEPTHMASKOVERLAY _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: INSTANCING_ON _SIMPLEREFLECTION
+        passType: 13
+      - keywords: LIGHTPROBE_SH _AA_FWIDTH _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: LIGHTPROBE_SH _AA_FWIDTH _DEPTHMASKOVERLAY _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: _SIMPLEREFLECTION
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 14
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 14
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 14
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 14
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 14
+      - keywords: DIRECTIONAL _AA_FWIDTH _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 14
+      - keywords: DIRECTIONAL _AA_FWIDTH _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 14
+      - keywords: LIGHTPROBE_SH _AA_FWIDTH _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 14
+  - first: {fileID: 4800000, guid: eaff95fe26fcdb440bada3f226dfc05a, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: bb242f7d57ada91448a3f9eea6d5fe4a, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 8
+      - keywords: DIRECTIONAL
+        passType: 8
+      - keywords: DIRECTIONAL _AA_SMOOTHSTEP _DISPLACEWITHNOISE_ON
+        passType: 8
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY LIGHTPROBE_SH _AA_SMOOTHSTEP _DEPTHMASKOVERLAY _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY LIGHTPROBE_SH _AA_SMOOTHSTEP _DEPTHMASKOVERLAY _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _BLENDBASETEXTURE_ON _DBUFFER_MRT3 _DISPLACEWITHNOISE_ON _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _BLENDBASETEXTURE_ON _DISPLACEWITHNOISE_ON _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 14
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _DISPLACEWITHNOISE_ON _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 14
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _DISPLACEWITHNOISE_ON _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 14
+  - first: {fileID: 4800000, guid: 4cbdb77bbc862e649bbd88d44d9d9999, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 13
+  - first: {fileID: 4800000, guid: 8fc8e545a12979447b457cbe49248315, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 13
+  - first: {fileID: 4800000, guid: c2a27cbc1c7081c4d8bc9b86e8d6ee0a, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 8
+      - keywords: DIRECTIONAL
+        passType: 8
+      - keywords: DIRECTIONAL INSTANCING_ON
+        passType: 8
+      - keywords: DIRECTIONAL INSTANCING_ON _AA_OFF
+        passType: 8
+      - keywords: DIRECTIONAL INSTANCING_ON _AA_OFF _GROUNDBIOME_HEIGHTBLEND
+        passType: 8
+      - keywords: DIRECTIONAL INSTANCING_ON _AA_SMOOTHSTEP _GROUNDBIOME_HEIGHTBLEND
+        passType: 8
+      - keywords: DIRECTIONAL _AA_OFF
+        passType: 8
+      - keywords: INSTANCING_ON _AA_OFF
+        passType: 8
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY LIGHTPROBE_SH _AA_OFF _DEPTHMASKOVERLAY _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY LIGHTPROBE_SH _AA_OFF _DEPTHMASKOVERLAY _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY LIGHTPROBE_SH _DEPTHMASKOVERLAY _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY LIGHTPROBE_SH _DEPTHMASKOVERLAY _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY _AA_OFF _DEPTHMASKOVERLAY _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY _AA_OFF _DEPTHMASKOVERLAY _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_OFF _DBUFFER_MRT3 _GROUNDBIOME_HEIGHTBLEND _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_OFF _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_OFF _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION _VARIATION_NOISE
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_OFF _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION _VARIATION_NOISE _WORLDSPACEHEIGHTBLEND_ON
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_OFF _GROUNDBIOME_HEIGHTBLEND _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE _VARIATION_NOISE
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE _VARIATION_NOISE _WORLDSPACEHEIGHTBLEND_ON
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_SMOOTHSTEP _DBUFFER_MRT3 _GROUNDBIOME_HEIGHTBLEND _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION _VARIATION_NOISE
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_SMOOTHSTEP _GROUNDBIOME_HEIGHTBLEND _MAIN_LIGHT_SHADOWS_CASCADE _VARIATION_NOISE
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_OFF _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION _VARIATION_NOISE
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_OFF _MAIN_LIGHT_SHADOWS _SCREEN_SPACE_OCCLUSION _VARIATION_NOISE
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_OFF _MAIN_LIGHT_SHADOWS _VARIATION_NOISE
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE _VARIATION_NOISE
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL _AA_OFF _GROUNDBIOME_HEIGHTBLEND _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL _AA_OFF _MAIN_LIGHT_SHADOWS
+        passType: 13
+      - keywords: DIRECTIONAL _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL _AA_SMOOTHSTEP _GROUNDBIOME_HEIGHTBLEND _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: FOW_OCCLUDE_OVERLAY INSTANCING_ON LIGHTPROBE_SH _AA_OFF _DEPTHMASKOVERLAY _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: INSTANCING_ON
+        passType: 13
+      - keywords: INSTANCING_ON LIGHTPROBE_SH _AA_OFF _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION _VARIATION_NOISE
+        passType: 13
+      - keywords: INSTANCING_ON _SIMPLEREFLECTION
+        passType: 13
+      - keywords: _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: _SIMPLEREFLECTION
+        passType: 13
+  - first: {fileID: 4800000, guid: d7da1de555be13b4eb2e82d2605a348b, type: 3}
+    second:
+      variants:
+      - keywords: _FACECOLORSWITCH_ON _FOW
+        passType: 0
+      - keywords: _FOW
+        passType: 0
+      - keywords: _FOW _GROUNDDEPTHFADE_ON
+        passType: 0
+      - keywords: _FOW _GROUNDDEPTHFADE_ON _MASKED_ON
+        passType: 0
+      - keywords: _FOW _MASKED_ON
+        passType: 0
+      - keywords: _FOW _MASKED_ON _POLAR_COORDINATES_ON
+        passType: 0
+  - first: {fileID: 4800000, guid: 7b5829d80ce04044289b40df81e2dfa0, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 8
+      - keywords: DIRECTIONAL _AA_OFF
+        passType: 8
+      - keywords: DIRECTIONAL _AA_SMOOTHSTEP
+        passType: 8
+      - keywords: _AA_OFF
+        passType: 8
+      - keywords: _AA_SMOOTHSTEP
+        passType: 8
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_OFF _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION _VARIATION_NOISE _WORLDSPACEHEIGHTBLEND_ON
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE _VARIATION_NOISE _WORLDSPACEHEIGHTBLEND_ON
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: LIGHTPROBE_SH _AA_OFF _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION _VARIATION_NOISE _WORLDSPACEHEIGHTBLEND_ON
+        passType: 13
+      - keywords: LIGHTPROBE_SH _AA_SMOOTHSTEP _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: _SIMPLEREFLECTION
+        passType: 13
+  - first: {fileID: 4800000, guid: b0579b642bcd09e4dade8a340f3b3874, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+  - first: {fileID: 4800000, guid: 8a10c0965f3d4864f91c9317f37212ff, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 13
+  - first: {fileID: 4800000, guid: c84d66b07fbdd5c4db2f2bddfa3de485, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+      - keywords: UNDERLAY_ON
+        passType: 0
+  - first: {fileID: 4800000, guid: bbf9fd4926c0d98469419410b85e98bb, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 13
+  - first: {fileID: 4800000, guid: 9681f058282566d44aebe9a6a87dfb49, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+      - keywords: _FACECOLORSWITCH_ON
+        passType: 0
+  - first: {fileID: 4800000, guid: c3c9a0b2a497e0d4ebd29c47d36b701c, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS
+        passType: 13
+  - first: {fileID: 4800000, guid: 5e81a62255a4e7642af02e32c348d367, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+  - first: {fileID: 4800000, guid: cad93419e41f53943b45fcc79c6b82af, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_SMOOTHSTEP _DBUFFER_MRT3 _GROUNDBIOME_HEIGHTBLEND _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_SMOOTHSTEP _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_SMOOTHSTEP _GROUNDBIOME_HEIGHTBLEND _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL _AA_SMOOTHSTEP _GROUNDBIOME_HEIGHTBLEND _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: INSTANCING_ON
+        passType: 13
+  - first: {fileID: 4800000, guid: f8561660c7a272747a838d5ef92ea1f1, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+      - keywords: _DBUFFER_MRT3 _SCREEN_SPACE_OCCLUSION _SURFACE_TYPE_TRANSPARENT
+        passType: 0
+  - first: {fileID: 4800000, guid: ebcf1996b50ac9d49b5a2e0f3be8603b, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 0cdbd4c9b84468d44b68656d5923e61c, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+      - keywords:
+        passType: 8
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_FWIDTH _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_FWIDTH _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+  - first: {fileID: 4800000, guid: 61b4ee77611aec74fb62f703419ff1d5, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 91822ecd6d70bdb4e9193e13efa6e977, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_OFF _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_OFF _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION _VARIATION_NOISE
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE _VARIATION_NOISE
+        passType: 13
+      - keywords: DIRECTIONAL _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+  - first: {fileID: 4800000, guid: 055c1cc7b33099949964783fc8fbcd93, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 13
+  - first: {fileID: 4800000, guid: 0608695b57f649744ace955f3caced5f, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY LIGHTPROBE_SH _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY LIGHTPROBE_SH _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_OFF _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 14
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 14
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 14
+  - first: {fileID: 4800000, guid: 354d06e77310c8648a3cefdfeff7445c, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 13
+  - first: {fileID: 4800000, guid: bf2c949a9dbfb3d408d4ab61416c7546, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _DBUFFER_MRT3 _GROUNDDEPTHFADE_ON _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _GROUNDDEPTHFADE_ON _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: LIGHTPROBE_SH _AA_SMOOTHSTEP _DBUFFER_MRT3 _GROUNDDEPTHFADE_ON _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+  - first: {fileID: 4800000, guid: acd3d16bda45272449aa1a379b04006a, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 13
+  - first: {fileID: 4800000, guid: f8eef7224ca1f0b4e9b10351e1fa9b6e, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 0861773e009864448bc34246bd5738bf, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 8
+      - keywords: DIRECTIONAL _AA_SMOOTHSTEP
+        passType: 8
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _BLENDBASETEXTURE_ON _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _BLENDBASETEXTURE_ON _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+  - first: {fileID: 4800000, guid: e8ed9aa13f706834397baa8f1ddd9623, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: e817c4d2e6b2fe74f90a16b282e4caa2, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 5405ccb0f4798f647a88e91acc44eb19, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: f617c6f97dcc82440a271145d5448e01, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 8
+      - keywords: DIRECTIONAL INSTANCING_ON _AA_OFF
+        passType: 8
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_OFF _BLENDWITHRGVERTEXVALUES_ON _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_OFF _BLENDWITHRGVERTEXVALUES_ON _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_OFF _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION _VARIATION_NOISE _WORLDTILEBOTTOMTEXTURE_ON _WORLDTILETOPTEXTURE_ON
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_OFF _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION _WORLDTILEBOTTOMTEXTURE_ON
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_OFF _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION _WORLDTILEBOTTOMTEXTURE_ON _WORLDTILETOPTEXTURE_ON
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_OFF _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION _WORLDTILETOPTEXTURE_ON
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE _VARIATION_NOISE _WORLDTILEBOTTOMTEXTURE_ON _WORLDTILETOPTEXTURE_ON
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE _WORLDTILEBOTTOMTEXTURE_ON
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE _WORLDTILEBOTTOMTEXTURE_ON _WORLDTILETOPTEXTURE_ON
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE _WORLDTILETOPTEXTURE_ON
+        passType: 13
+      - keywords: DIRECTIONAL _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: INSTANCING_ON
+        passType: 13
+  - first: {fileID: 4800000, guid: acde13b3c8894c64aa5f0e25bc4cbbb6, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 8
+      - keywords: DIRECTIONAL
+        passType: 8
+      - keywords: DIRECTIONAL _AA_SMOOTHSTEP
+        passType: 8
+      - keywords: _AA_SMOOTHSTEP
+        passType: 8
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION _VARIATION_NOISE
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE _VARIATION_NOISE
+        passType: 13
+      - keywords: _SIMPLEREFLECTION
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 14
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 14
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 14
+  - first: {fileID: 4800000, guid: df7134527e16f724a8281ce0464e6379, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 8
+      - keywords: DIRECTIONAL
+        passType: 8
+      - keywords: DIRECTIONAL _AA_SMOOTHSTEP
+        passType: 8
+      - keywords: _AA_SMOOTHSTEP
+        passType: 8
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: FOW_OCCLUDE_OVERLAY LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: LIGHTPROBE_SH _AA_SMOOTHSTEP _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+  - first: {fileID: 4800000, guid: 2838b08449449d344aab9f05d69ef5ec, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 13
+  - first: {fileID: 4800000, guid: d2ef6f8dfc0d3f145bd8c372bd57299c, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 13
+  - first: {fileID: 4800000, guid: 48b5dcc81eb5e8d41bd33ac93bd12231, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 13
+  - first: {fileID: 4800000, guid: adcd310826dd82847833fcd28fb5442f, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY LIGHTPROBE_SH _AA_OFF _DEPTHMASKOVERLAY _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY LIGHTPROBE_SH _AA_OFF _DEPTHMASKOVERLAY _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY LIGHTPROBE_SH _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY LIGHTPROBE_SH _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_OFF _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL _AA_OFF _DEPTHMASKOVERLAY _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL _AA_OFF _DEPTHMASKOVERLAY _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: FOW_OCCLUDE_OVERLAY LIGHTPROBE_SH _AA_OFF _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: LIGHTPROBE_SH _AA_OFF _AA_SMOOTHSTEP _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: _SIMPLEREFLECTION
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 14
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 14
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 14
+      - keywords: LIGHTPROBE_SH _AA_OFF _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 14
+  - first: {fileID: 4800000, guid: 892240f84d1d74440b8370aa42a681f4, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_SMOOTHSTEP _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: INSTANCING_ON
+        passType: 13
+  - first: {fileID: 4800000, guid: 9a9f665d5f48bbc4e954519427d713bd, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 8
+      - keywords: DIRECTIONAL INSTANCING_ON _AA_OFF
+        passType: 8
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_OFF _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION _WORLDSPACEHEIGHTBLEND_ON
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE _WORLDSPACEHEIGHTBLEND_ON
+        passType: 13
+      - keywords: DIRECTIONAL _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+  - first: {fileID: 4800000, guid: 08365353db335b3408c488061de46508, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 7348ee78566506f409e2fb4dd903f070, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 8
+      - keywords: DIRECTIONAL INSTANCING_ON
+        passType: 8
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION _WORLDSPACEHEIGHTBLEND_ON
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _MAIN_LIGHT_SHADOWS_CASCADE _WORLDSPACEHEIGHTBLEND_ON
+        passType: 13
+      - keywords: DIRECTIONAL _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: INSTANCING_ON
+        passType: 13
+  - first: {fileID: 4800000, guid: 8005090e80d16964d9d2517ea5448f3b, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_OFF _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+  - first: {fileID: 4800000, guid: 3b6a6f70ca69b954bb742dc85aa57369, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 13
+  - first: {fileID: 4800000, guid: cf7f9a2b26db6e34e88c37742c7914b6, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 13
+  - first: {fileID: 4800000, guid: 95d384043151c6849a8e85c2995fad94, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+      - keywords: SMOOTHSTEP _FOW
+        passType: 0
+      - keywords: _FOW
+        passType: 0
+  - first: {fileID: 4800000, guid: 69755af8a89c65246be2c533cb1fd9e7, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _DBUFFER_MRT3 _GROUNDDEPTHFADE_ON _MAIN_LIGHT_SHADOWS_CASCADE _MASKED_ON _POLAR_COORDINATES_ON _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _DBUFFER_MRT3 _GROUNDDEPTHFADE_ON _MAIN_LIGHT_SHADOWS_CASCADE _MASKED_ON _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _GROUNDDEPTHFADE_ON _MAIN_LIGHT_SHADOWS_CASCADE _MASKED_ON
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _GROUNDDEPTHFADE_ON _MAIN_LIGHT_SHADOWS_CASCADE _MASKED_ON _POLAR_COORDINATES_ON
+        passType: 13
+      - keywords: LIGHTPROBE_SH _AA_SMOOTHSTEP _DBUFFER_MRT3 _GROUNDDEPTHFADE_ON _MAIN_LIGHT_SHADOWS_CASCADE _MASKED_ON _SCREEN_SPACE_OCCLUSION
+        passType: 13
+  - first: {fileID: 4800000, guid: 4ab57b77d878d5d408a60db2b311e674, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 8
+      - keywords: DIRECTIONAL _AA_SMOOTHSTEP
+        passType: 8
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 14
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 14
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 14
+  - first: {fileID: 4800000, guid: 364de6f3d52151b42b9d96e4df30b596, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 8
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 14
+  - first: {fileID: 4800000, guid: fe8a09a2398a90f41b83f21fb4eef804, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 69288365668124643b958314150f6108, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+  - first: {fileID: 4800000, guid: 030d0349e76c711438362e277c3e8c63, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 8
+      - keywords: DIRECTIONAL INSTANCING_ON _AA_SMOOTHSTEP
+        passType: 8
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_SMOOTHSTEP _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION _VARIATION_NOISE
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE _VARIATION_NOISE
+        passType: 13
+      - keywords: DIRECTIONAL _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: INSTANCING_ON
+        passType: 13
+  - first: {fileID: 4800000, guid: 089e59b74da923d4789814818d4ab771, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 32d84032ec7023648ab0f7c4b3ca0b2f, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 13
+  - first: {fileID: 4800000, guid: 4aa02bb2d24216649a4fe07883d2b70a, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 13
+  - first: {fileID: 4800000, guid: 333a04046cae5924597d40641e3dda69, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION _VARIATION_NOISE
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _MAIN_LIGHT_SHADOWS_CASCADE _VARIATION_NOISE
+        passType: 13
+      - keywords: DIRECTIONAL _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+  - first: {fileID: 4800000, guid: 0f8c7802300fe7946b7fa70623b01c30, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 13
+      - keywords: _DBUFFER_MRT3 _SCREEN_SPACE_OCCLUSION
+        passType: 13
+  - first: {fileID: 4800000, guid: bf6845191fcf0ae4da9a2d7de8077c2e, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 23cfce556dd8edc4a9ed93850c719a3c, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 8
+      - keywords: DIRECTIONAL
+        passType: 8
+      - keywords: DIRECTIONAL INSTANCING_ON _AA_SMOOTHSTEP
+        passType: 8
+      - keywords: DIRECTIONAL _AA_SMOOTHSTEP
+        passType: 8
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY INSTANCING_ON LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY INSTANCING_ON LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_SMOOTHSTEP _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS
+        passType: 13
+      - keywords: DIRECTIONAL _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: INSTANCING_ON
+        passType: 13
+  - first: {fileID: 4800000, guid: 197bf0948462e0747a38410f969fb734, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 8
+      - keywords: DIRECTIONAL
+        passType: 8
+      - keywords: DIRECTIONAL INSTANCING_ON _AA_OFF
+        passType: 8
+      - keywords: DIRECTIONAL INSTANCING_ON _AA_SMOOTHSTEP
+        passType: 8
+      - keywords: DIRECTIONAL _AA_SMOOTHSTEP
+        passType: 8
+      - keywords: INSTANCING_ON _AA_OFF
+        passType: 8
+      - keywords: INSTANCING_ON _AA_SMOOTHSTEP
+        passType: 8
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY LIGHTPROBE_SH _AA_OFF _DEPTHMASKOVERLAY _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY LIGHTPROBE_SH _AA_OFF _DEPTHMASKOVERLAY _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY LIGHTPROBE_SH _AA_SMOOTHSTEP _DEPTHMASKOVERLAY _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY LIGHTPROBE_SH _AA_SMOOTHSTEP _DEPTHMASKOVERLAY _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_SMOOTHSTEP _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: FOW_OCCLUDE_OVERLAY INSTANCING_ON LIGHTPROBE_SH _AA_OFF _DEPTHMASKOVERLAY _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: FOW_OCCLUDE_OVERLAY INSTANCING_ON LIGHTPROBE_SH _AA_SMOOTHSTEP _DEPTHMASKOVERLAY _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: INSTANCING_ON
+        passType: 13
+      - keywords: INSTANCING_ON LIGHTPROBE_SH _AA_OFF _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: INSTANCING_ON LIGHTPROBE_SH _AA_SMOOTHSTEP _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: INSTANCING_ON _SIMPLEREFLECTION
+        passType: 13
+      - keywords: _SIMPLEREFLECTION
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 14
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 14
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 14
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 14
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 14
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 14
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 14
+      - keywords: INSTANCING_ON LIGHTPROBE_SH _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 14
+      - keywords: INSTANCING_ON LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 14
+  - first: {fileID: 4800000, guid: 4d6446b89688daa42a4deaae44b6d827, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 8
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+  - first: {fileID: 4800000, guid: 7105a2b0d4514b346a5d26e12824f2ec, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 13
+  - first: {fileID: 4800000, guid: 8f80cdd75be7de04f98abd6c8f740372, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 6143b8a745a93a042bccb474f476b9cc, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 8
+      - keywords: DIRECTIONAL
+        passType: 8
+      - keywords: DIRECTIONAL INSTANCING_ON _COVERAGE_LAYER _RAMP_SHADING
+        passType: 8
+      - keywords: INSTANCING_ON _COVERAGE_LAYER _RAMP_SHADING
+        passType: 8
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 14
+  - first: {fileID: 4800000, guid: a52c9bcd523d8c6498f69d9aa7ee5339, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 13
+  - first: {fileID: 4800000, guid: 058316d52a6b2a949a9f227948f3f475, type: 3}
+    second:
+      variants:
+      - keywords: _COLORPALETTE_ENEMY
+        passType: 0
+      - keywords: _COLORPALETTE_LOCALPLAYER
+        passType: 0
+  - first: {fileID: 4800000, guid: 635c2c3b67cdd704f9cd0fa577645042, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+      - keywords: DIRECTIONAL
+        passType: 13
+  - first: {fileID: 4800000, guid: 6cf8fc66f4173c44ba9d42e86889d4c4, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 13
+  - first: {fileID: 4800000, guid: bece7f2e0bffbd64781bbec25c0d324b, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 8
+      - keywords: INSTANCING_ON
+        passType: 8
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+  - first: {fileID: 4800000, guid: 1a6f4cf15f083364a9565580bd3f6f35, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: a5a7b797cc911b440bcb63e7061cb778, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 8
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+  - first: {fileID: 4800000, guid: 55ebbe740294fbc4bb1398aa908e2b0e, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 8
+      - keywords: DIRECTIONAL
+        passType: 8
+      - keywords: DIRECTIONAL INSTANCING_ON _AA_OFF
+        passType: 8
+      - keywords: DIRECTIONAL INSTANCING_ON _AA_OFF _ALPHAOCCLUDED_ON
+        passType: 8
+      - keywords: INSTANCING_ON _AA_FWIDTH _AA_OFF
+        passType: 8
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY INSTANCING_ON LIGHTPROBE_SH _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY INSTANCING_ON LIGHTPROBE_SH _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_OFF _ALPHAOCCLUDED_ON _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_OFF _ALPHAOCCLUDED_ON _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_OFF _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL _AA_OFF _ALPHAOCCLUDED_ON _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: INSTANCING_ON
+        passType: 13
+  - first: {fileID: 4800000, guid: a81269915c2ba2d4f81aff381a85aa9a, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 1c4e2f7f19de916479a653d894a5ddc9, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+  - first: {fileID: 4800000, guid: ba4f22b1dc60c3f4fa2d9f98b6ba992d, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 14
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 14
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 14
+  - first: {fileID: 4800000, guid: 671024193e90b9f47bf0d94e84a8c64b, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 8
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 14
+  - first: {fileID: 4800000, guid: 28fc30a8d40d1134e8d486e28a63e678, type: 3}
+    second:
+      variants:
+      - keywords: OUTLINE_ON
+        passType: 0
+  - first: {fileID: 4800000, guid: ad047132e2791ff4abe2ea28d61b9603, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 916f7426f65cc7d4284128fe02bb7473, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 749d8149ca784734c909fe686f85ad33, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _DBUFFER_MRT3 _ENABLESPLATMAP_ON _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION _VARIATION_NOISE
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _ENABLESPLATMAP_ON _MAIN_LIGHT_SHADOWS_CASCADE _VARIATION_NOISE
+        passType: 13
+      - keywords: DIRECTIONAL _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: INSTANCING_ON
+        passType: 13
+  - first: {fileID: 4800000, guid: 27a661e4b593f7d43810e497def1f3e6, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL FOW_OCCLUDE_OVERLAY LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+  - first: {fileID: 4800000, guid: 364787ce009798948bbbf40d4e20c1d6, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_OFF _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION _WORLDSPACEHEIGHTBLEND_ON
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE _WORLDSPACEHEIGHTBLEND_ON
+        passType: 13
+      - keywords: LIGHTPROBE_SH _AA_OFF _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION _WORLDSPACEHEIGHTBLEND_ON
+        passType: 13
+  - first: {fileID: 4800000, guid: d362196448d67b642a273b0eea0063c2, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+  - first: {fileID: 4800000, guid: 7494ac00f8c5abc499f86eeaa534f24a, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 8
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+  - first: {fileID: 4800000, guid: 55a2a980fd91cbf4da53ce3588663464, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 13
+  - first: {fileID: 4800000, guid: 9df1aa1eb4f931a419fa3df3fc81fc81, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 9d6b4ede1fb603049943c312eaaea807, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 8
+      - keywords: DIRECTIONAL _AA_OFF
+        passType: 8
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_OFF _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+  - first: {fileID: 4800000, guid: ba4af72eca60b884dbe918adf61f62f6, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: bad51608be03cb24a819d980ee96803a, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 5a9101b26ff0c4145ab526c577ba577a, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 5bdd4c4e0b977e8459d7e449eb9907d1, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 6402c495833f10f42b8ef41c8b6ef1d3, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 0b9a16ab678df2f4d956271831fbf7a3, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 2081f02bcf2c2aa4cb8f7eab8a39b16a, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 8
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+  - first: {fileID: 4800000, guid: 3628dd6de63544a40803e20fa5f782a1, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: ceff6f2b293ff4442bb971423856897a, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 56544a8390386f349a4511ec944842ea, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 02ad1f75439a390499d32dfe84e90b90, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 8
+      - keywords: DIRECTIONAL
+        passType: 13
+  - first: {fileID: 4800000, guid: 7b46d067e3c25b348b9b30e0894133ad, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: c48f2b0e6a224644da63000cd5bb0945, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 2947a502faf9dd446a966a8d0e79c4e0, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: a710e649baf037a40b2c1028d14868f1, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: dd52977cd21cd9348b79569c408bd871, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 5dca39294c67b7a4abfbce8e3d136406, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+  - first: {fileID: 4800000, guid: e89fb1723c4c20349a89266e9b6da349, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: f918290b7eef55e498f0d403429ca5c4, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: d81588970edcfa4428bb045294de4036, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: ee6ee7016da61314296c10203c1f8f8c, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 7c83b1c52f58e2044b42f3706df7fc79, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: d80e8a0672a7afc47bdba7a0fda3a18f, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: f13e11890fc408744bc00b5e4d086816, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 531a9464264dd094c8b379ecd122b0b8, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 37b6eee50449fe9478170a9499f59dbe, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: f03f52b6a8577e745abb2e376b6a1c9c, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 6d486030e102d7647ba4b235df9ea240, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 67d36c3608e604a45bcd7d7bb65bdbb0, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 8
+      - keywords: DIRECTIONAL
+        passType: 8
+      - keywords: DIRECTIONAL _AA_SMOOTHSTEP
+        passType: 8
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS
+        passType: 13
+  - first: {fileID: 4800000, guid: a661f6947e889144a93616ae8b0b348f, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 4f53ab7c5dcecfd499e15d891b45c616, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 346f4fea819977e4ab82e7f4ea9a7e8c, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 734506e77b0864543ba27664d6e122ac, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 15fcf95481e36974e8196e361a50fed2, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 6263a82e2f3440f46b1095c787dcca92, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 33bf68ffd6ab79345b530323114baf07, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 3e4fd304918cada4b81d86aa0f4f1e14, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 3048b5b2086fa6241a00f03d80cbbead, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 4c1a2c7ebc051e8469a90f7dd456124e, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: e0b2c0e346dae76448e496aec2f3da4d, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 0f5b14715b18df64e80e46d30c7a9d36, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: f6cd31edeac5cd54ea37322d40f8e5cf, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 6000d3545c2b78348a632cfdd3e73b3d, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: a8e2cd8a1ae48c3428707e642e2759de, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 18b50161d5decc54d9a6bec22c0e2d7a, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 1b914930755cc64408e16ad10a1fb2d3, type: 3}
+    second:
+      variants:
+      - keywords: _DBUFFER_MRT3
+        passType: 0
+  - first: {fileID: 4800000, guid: b9639c13a16950c4ba2b9e985eb6b1a3, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 1582a3ba7ad0b3f44bbfefc3c3540db4, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 1867fdce721dff64e8c4ee787b7f40e0, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: cecc940584de7804bafdad2722636644, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: aa6cf516682d89440a2665017b0498b0, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: d51f400323911fc458b0e5b4910dcc48, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: b6a256b792b5db94a99308c1a4ccc7f3, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 08f65d2c491ef8745ba65dc4dace3a4a, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: d59e37b47f5db4044ba1f659e9d523fd, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 02d3a182ee4dc0945a715dc2a28a6fb5, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 04017bb0bcb44dc4c82d5a56153ffd0b, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 507fbdab2db68e94a9b34532d22b8ed1, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: f67147d6a4ae12a4b822ef349433da10, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: abbb6a6a5653d9b43a4e502a80035069, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 39f0de5270e1aa84ca00d65d26e7e9d6, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: d70eba1756d8aad4f92906a7b966adc1, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 457f8ebbd7adedd4ab6a24a7afd7febb, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 848e5712373e0ae4dbb4689afe5ed553, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_SMOOTHSTEP _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: INSTANCING_ON
+        passType: 13
+      - keywords: INSTANCING_ON LIGHTPROBE_SH _AA_SMOOTHSTEP _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 14
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 14
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 14
+      - keywords: INSTANCING_ON LIGHTPROBE_SH _AA_SMOOTHSTEP _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 14
+  - first: {fileID: 4800000, guid: d00f52289140dce4e95035e20cd431db, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 2d132cbba8fdb954db0cfb4fb63dfc8a, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 5e5516cd9acb5fa4da199d79b6323277, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: b50c065dcc2dcc34893c3c43f7647f48, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: a6de91d1e174b4b4e949abac00642c06, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 378bf746db02b5d4db1a10c6ff8baf90, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: debfcdb07c6402248949d2818c7b8408, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 5812144dc7596634892911c337bc2472, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: df0e82e93f41bcc49991f0b2542471d7, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 4be78af54924d3d45ad52dea2c71d8eb, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: c88339d38703a124292d83549f9e16c8, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: b813de6dbf26d114aa2c77ef3b35fad4, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: d6ed72d35ae1bf345a4172ee51c317ae, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 2690577f5a06edd4db90c15e40601140, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: ebaa633371fb1dd419c9a57ad517ee49, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 96961a5155552f74ab45a9d936f94ed6, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: ab863e027cc634e47bca0bfb20f57252, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+      - keywords:
+        passType: 8
+      - keywords: DIRECTIONAL
+        passType: 13
+  - first: {fileID: 4800000, guid: 2b95f490a4797ee45be27219d7b4c91a, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 0
+      - keywords:
+        passType: 8
+      - keywords:
+        passType: 13
+  - first: {fileID: 4800000, guid: 5fe2df56f6a49bc4db53806c5facd1ce, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 2c7cd56d2bc251a43b23e07a55df5b3b, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 8befc02a96c550641835b90a588d70ac, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 99ab2c2ae75e99746ae854a09b019901, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: a9a94e2f2efe27249a1c7909c1f79a73, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: ddf6983d41e292a4390c3ff64d2c19f7, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 06c4b418ddc00d147b580e5a9b6035d3, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: c8f9dc28da0d93b4db34b5563b20daab, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 9939912cc740d0c438145f8b8bb097a3, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 1b099fc74acc3284fb4a7e39cb5df78b, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: bc2c89342f0ba7c4db68c4f1a2e50e5d, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 13
+  - first: {fileID: 4800000, guid: 2651630fdd578434daf1bc6a1857ab52, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 13
+  - first: {fileID: 4800000, guid: e0f768b856f60cd4f80650c1f524d6d8, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _DBUFFER_MRT3 _FACECOLORSWITCH_ON _MAIN_LIGHT_SHADOWS_CASCADE _MULTIPLYTINTALPHA_ON _MULTIPLY_FOW_TO_ALPHA _MULTIPLY_FOW_TO_COLOR _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_SMOOTHSTEP _FACECOLORSWITCH_ON _MAIN_LIGHT_SHADOWS_CASCADE _MULTIPLYTINTALPHA_ON _MULTIPLY_FOW_TO_ALPHA _MULTIPLY_FOW_TO_COLOR
+        passType: 13
+  - first: {fileID: 4800000, guid: fdb5ceac4b51cb245bd6dfef8010e17f, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_SMOOTHSTEP _CAUSTICS_ON _DBUFFER_MRT3 _ENVIRONMENTEFFECTS_ON _FLOW_GINT_ON _INTERSECTION_FOAM_ON _MAIN_LIGHT_SHADOWS_CASCADE _REFLECTIONS_ON _RIVER_ON _SCREEN_SPACE_OCCLUSION _SURFACE_FOAM_ON
+        passType: 13
+      - keywords: DIRECTIONAL INSTANCING_ON LIGHTPROBE_SH _AA_SMOOTHSTEP _CAUSTICS_ON _ENVIRONMENTEFFECTS_ON _FLOW_GINT_ON _INTERSECTION_FOAM_ON _MAIN_LIGHT_SHADOWS_CASCADE _REFLECTIONS_ON _RIVER_ON _SURFACE_FOAM_ON
+        passType: 13
+      - keywords: INSTANCING_ON
+        passType: 13
+      - keywords: INSTANCING_ON LIGHTPROBE_SH _AA_SMOOTHSTEP _CAUSTICS_ON _DBUFFER_MRT3 _ENVIRONMENTEFFECTS_ON _FLOW_GINT_ON _INTERSECTION_FOAM_ON _MAIN_LIGHT_SHADOWS_CASCADE _REFLECTIONS_ON _RIVER_ON _SCREEN_SPACE_OCCLUSION _SURFACE_FOAM_ON
+        passType: 13
+  - first: {fileID: 4800000, guid: aece4230fbdc51842bc0852395a86367, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 18c44890bef3c774bafe64fd35e717a6, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 55b663adde0ae774992c3bc539ec1f82, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 8
+      - keywords: DIRECTIONAL INSTANCING_ON _AA_OFF
+        passType: 8
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_OFF _DBUFFER_MRT3 _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 13
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 14
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE
+        passType: 14
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _AA_OFF _MAIN_LIGHT_SHADOWS_CASCADE _SCREEN_SPACE_OCCLUSION
+        passType: 14
+  - first: {fileID: 4800000, guid: 71b00ae3906985e40b30d3d5802a59cb, type: 3}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 8
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13
+  - first: {fileID: 0}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 8
+      - keywords:
+        passType: 13
+      - keywords: DIRECTIONAL
+        passType: 13

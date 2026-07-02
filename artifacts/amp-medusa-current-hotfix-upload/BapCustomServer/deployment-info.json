@@ -1,0 +1,35 @@
+﻿{
+    "schemaVersion":  1,
+    "releaseLabel":  "bapcustomserver-20260602-medusa-localproof-20260602-122945",
+    "packageBuildUtc":  "2026-06-02T10:29:45.3984171Z",
+    "gitCommit":  "97d16d4d9fce",
+    "gitBranch":  "main",
+    "gitDirty":  true,
+    "configuration":  "Release",
+    "publicHost":  "ark.atomi23.de",
+    "serverDllSha256":  "AB3480F4E38CADA9615E0493E070DB8B81872A164455570DF31153F7B0C77A38",
+    "modDllSha256":  "4B6975AB49633E4EBB1507B8BEE6483D4194FC6B767A31533868103FD05AB885",
+    "modApiDllSha256":  "0E14F39A9C47B6EBA106A0F23E76A0989B3270D7BCDD3E4BB0DD51E63BDB3CB5",
+    "medusaDllSha256":  "A825AE7DF9033ABC8E025C0E63812606B040235EC611ACA5E89CF2F9924B0054",
+    "medusaBundleSha256":  "C4872D6E124E76F9F4B4EC75482FFC2795D051D3CA65EB7C25E9FE68023B1D70",
+    "medusaCharId":  15,
+    "queueFix":  "Removed post-bootstrap health wait; GAME_STARTED is sent immediately after bootstrap endpoints accept. Startup stall watchdog remains 20s grace / 30s stall / 2 attempts.",
+    "medusaFix":  "Client/server charId 15 guard, native Medusa visual force-before-hide, non-mutating Medusa ability data, native Medusa cast FX hooks. Residual early UILobby mastery-notification NullRef remains non-blocking.",
+    "localProof":  {
+                       "latestRun":  "logs/live-medusa-direct-20260602-122629.log",
+                       "latestClientLog":  "logs/live-medusa-direct-client-20260602-122629.log",
+                       "latestGameServerLog":  "CustomMatchServer/logs/game-servers/matchmaking-20260602102702-1049.attempt1.log",
+                       "screenshot":  "logs/live-medusa-direct-20260602-122629-t75.png",
+                       "queueMatchedSeconds":  40.1,
+                       "bootstrapSeconds":  6.7,
+                       "connectedCharId":  15,
+                       "observedFps":  0
+                   },
+    "ports":  {
+                  "lobby":  5055,
+                  "ws":  7777,
+                  "kcp":  7778,
+                  "tcp":  7779,
+                  "http":  7850
+              }
+}

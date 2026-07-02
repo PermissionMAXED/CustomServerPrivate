@@ -1,0 +1,42 @@
+﻿[
+    {
+        "Target":  "BapCustomServer\\BapCustomServer.dll",
+        "Bytes":  538112,
+        "Sha256":  "8848C3EFE3AD76E8E314BB07A8B7520EA971585BFB4D26325B8374C08155330B"
+    },
+    {
+        "Target":  "BapCustomServer\\BapCustomServer.pdb",
+        "Bytes":  122284,
+        "Sha256":  "D60CF8E7634D3464898E7C6FB2625AD4CC4603AC35D5A75C162BB80BF6CFD68B"
+    },
+    {
+        "Target":  "BapCustomServer\\deployment-info.json",
+        "Bytes":  1169,
+        "Sha256":  "1A52C6974663347F6F9EDA5D7C5382B704C164483B76712BAA711A3497D4F1A4"
+    },
+    {
+        "Target":  "BapCustomServer\\game\\Mods\\BAPBAP.Medusa.dll",
+        "Bytes":  204288,
+        "Sha256":  "9356767F5E07BC48BAC565B118F43B63CB841A9E16C60795CC6F14385EFA17FD"
+    },
+    {
+        "Target":  "BapCustomServer\\game\\Mods\\BAPBAP.ModAPI.dll",
+        "Bytes":  1653248,
+        "Sha256":  "0E14F39A9C47B6EBA106A0F23E76A0989B3270D7BCDD3E4BB0DD51E63BDB3CB5"
+    },
+    {
+        "Target":  "BapCustomServer\\game\\Mods\\BapCustomServerMelon.dll",
+        "Bytes":  229376,
+        "Sha256":  "A08A9DFF8E1240D27AB9564E12DF2891D01CA203331CA980001B358E2F87A4D3"
+    },
+    {
+        "Target":  "BapCustomServer\\game\\UserData\\Medusa\\medusa.bundle",
+        "Bytes":  1567424,
+        "Sha256":  "C4872D6E124E76F9F4B4EC75482FFC2795D051D3CA65EB7C25E9FE68023B1D70"
+    },
+    {
+        "Target":  "BapCustomServer\\game\\UserLibs\\BAPBAP.ModAPI.dll",
+        "Bytes":  1653248,
+        "Sha256":  "0E14F39A9C47B6EBA106A0F23E76A0989B3270D7BCDD3E4BB0DD51E63BDB3CB5"
+    }
+]

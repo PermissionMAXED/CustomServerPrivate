@@ -1,0 +1,302 @@
+info: BapCustomServer[0]
+      BAPCUSTOM_STARTUP release=1.0.0+97d16d4d9fce130889a5b57b7ed4113b5c4dd3ea git=unknown branch=unknown dirty=False packageUtc=unknown configuration=unknown selfContained=(null) contentRoot=C:\Users\Administrator\Downloads\CustomServer deploymentInfo=C:\Users\Administrator\Downloads\CustomServer\deployment-info.json
+info: BapCustomServer[0]
+      BAPCUSTOM_CONFIG publicBaseUrl=http://127.0.0.1:5161 publicGameHost=127.0.0.1 launchGameServers=True gameExecutable=C:/Users/Administrator/Downloads/CustomServer/Spiel/Battleroyalebuild/bapbap.exe gameLauncher= gameLauncherArgs="{gameExecutable}" {gameArguments} ports ws=7777 kcp=7778 tcp=7779 http=7850 range=200 portCooldown=0s readyTimeout=200s bootstrapHttpTimeout=20s bootstrapResetPoll=1500ms managedBootstrapTimeout=180s managedBootstrapListenerOnly=0s requireKcp=False tcpTimeout=30s kcpTimeout=45s startAttempts=2 effectiveStartAttempts=2 startRetryDelay=2s stopWait=5000ms postCleanupStartDelay=3000ms startupStallGrace=45s startupStall=25s noisyStallGrace=45s noisyStall=25s wrapperOnlyStallGrace=8s wrapperOnlyStall=5s prewarm=False prewarmTimeout=180s prewarmMatchWait=35s maxMatches=0 emptyLobbyGrace=20s emptyLobbyConnectedGrace=45s
+info: BapCustomServer[0]
+      BAPCUSTOM_ARTIFACTS serverDllSha256= modDllSha256= modApiDllSha256= medusaDllSha256= medusaBundleSha256= gameExeSha256= startMatchSha256= packageSha256=
+info: BapCustomServer[0]
+      BAPCUSTOM_MEDUSA charId=15 rosterEnabled=True advertised=True
+info: BapCustomServer[0]
+      BAPCUSTOM_RUNTIME os=Microsoft Windows 10.0.26200 arch=X64 framework=.NET 10.0.5 urls=http://127.0.0.1:5161 winePath= wineVersion= winebootPath= xvfbRunPath= xauthPath= glxinfoPath= vulkanInfoPath=
+info: BapCustomServer[0]
+      BAPCUSTOM_GRAPHICS_PACKAGES 
+info: BapCustomServer[0]
+      BAPCUSTOM_GRAPHICS_ENV LIBGL_ALWAYS_SOFTWARE= GALLIUM_DRIVER= MESA_LOADER_DRIVER_OVERRIDE= MESA_GL_VERSION_OVERRIDE= WINEPREFIX= WINEARCH=
+warn: BapCustomServer[0]
+      BAPCUSTOM_RUNTIME_CHECK missing required Wine/Xvfb tool(s): winePath= xvfbRunPath= xauthPath=
+info: BapCustomServer.FriendsService[0]
+      Loaded friends state: 0 relationships, 0 pending requests.
+info: BapCustomServer.EconomyService[0]
+      Loaded economy state: 49 players.
+info: BapCustomServer.MatchHistoryService[0]
+      Loaded 10 recent matches from history log.
+info: BapCustomServer.RankedService[0]
+      Loaded ranked state: 50 players.
+info: BapCustomServer.GameServerPrewarmService[0]
+      Game-server startup prewarm skipped: GameServerPrewarmOnStartup=false
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://127.0.0.1:5161
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Users\Administrator\Downloads\CustomServer
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.2% rss=56MB priv=25MB gc=1MB threads=34 handles=421 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.5% rss=67MB priv=28MB gc=5MB threads=35 handles=443 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=66MB priv=29MB gc=5MB threads=35 handles=443 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=67MB priv=28MB gc=5MB threads=36 handles=443 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=66MB priv=27MB gc=5MB threads=36 handles=443 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=66MB priv=26MB gc=5MB threads=35 handles=443 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.LobbyService[0]
+      Client codex-custom-vfx-20260619-020418 connected. admin=True
+info: BapCustomServer.LobbyService[0]
+      [Analytics] Player joined: CodexVfx (accountId=codex-custom-vfx-20260619-020418)
+info: BapCustomServer.LobbyService[0]
+      Match bootstrap custom-20260619000426-9630/V62696 players: codex-custom-vfx-20260619-020418:CodexVfx charId=15 skinAssetId=-1 playerId=1 team=1
+info: BapCustomServer.LobbyService[0]
+      Match bootstrap custom-20260619000426-9630/V62696 settings: gamemode=1 unityMode=1 mapId=34 teamSize=1 maxTeams=2 botTeams=2 botDifficulty=1.
+info: BapCustomServer.GameServerProcessManager[0]
+      Started game server custom-20260619000426-9630 attempt 1/2 as PID 21192. executable=C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\bapbap.exe ws=7777 kcp=7778 tcp=7779 http=7850
+info: BapCustomServer.GameServerProcessManager[0]
+      Game server launch details custom-20260619000426-9630 attempt 1/2: cwd=C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild args=-batchmode -logFile "C:\Users\Administrator\Downloads\CustomServer\CustomMatchServer\logs\game-servers\custom-20260619000426-9630.attempt1.log" -httpport=7850 -wsport=7777 -kcpport=7778 -tcpport=7779 --bapcustom-host=127.0.0.1 --bapcustom-server-port=5161 --bapcustom-use-proxy=false logFile=C:\Users\Administrator\Downloads\CustomServer\CustomMatchServer\logs\game-servers\custom-20260619000426-9630.attempt1.log wrapperLog=C:\Users\Administrator\Downloads\CustomServer\CustomMatchServer\logs\game-servers\custom-20260619000426-9630.attempt1.wrapper.log containsNoGraphics=False
+info: BapCustomServer.GameServerProcessManager[0]
+      Waiting for game server bootstrap custom-20260619000426-9630. baseUri=http://127.0.0.1:7850/ timeout=200s poll=500ms resetPoll=1500ms httpTimeout=20s logFile=C:\Users\Administrator\Downloads\CustomServer\CustomMatchServer\logs\game-servers\custom-20260619000426-9630.attempt1.log wrapperLog=C:\Users\Administrator\Downloads\CustomServer\CustomMatchServer\logs\game-servers\custom-20260619000426-9630.attempt1.wrapper.log
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.6% rss=79MB priv=34MB gc=4MB threads=35 handles=502 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=21192 rss=125MB threads=27
+info: BapCustomServer.GameServerProcessManager[0]
+      Game server custom-20260619000426-9630 accepted /setup-game HTTP after 8.3s and 4 attempt(s). Waiting for managed setupGameApplied status timeout=180s.
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.3% rss=82MB priv=33MB gc=4MB threads=35 handles=507 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=21192 rss=567MB threads=120
+info: BapCustomServer.GameServerProcessManager[0]
+      Managed bootstrap status setupGameApplied is listener-only; replayed /setup-game (1/4) after 6.2s. realtime=0.4s lastStatus=Managed match bootstrap listener is active.
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.3% rss=86MB priv=36MB gc=5MB threads=35 handles=507 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=21192 rss=1522MB threads=168
+info: BapCustomServer.GameServerProcessManager[0]
+      Game server managed bootstrap status ready. label=setupGameApplied networkStarted=True setup=True addTeams=False queueMatched=False lastStatus=Applied managed match bootstrap payload /setup-game via OnServerMatchSetup.
+info: BapCustomServer.GameServerProcessManager[0]
+      Game server managed bootstrap status ready. label=addTeamsApplied networkStarted=True setup=True addTeams=True queueMatched=False lastStatus=Applied managed match bootstrap payload /add-teams via OnServerMatchAddTeams.
+info: BapCustomServer.GameServerProcessManager[0]
+      Game server managed bootstrap status ready. label=queueMatchedApplied networkStarted=True setup=True addTeams=True queueMatched=True lastStatus=Applied managed match bootstrap payload /queue-matched via OnServerQueueMatched.
+info: BapCustomServer.GameServerProcessManager[0]
+      Game server custom-20260619000426-9630 managed bootstrap fully applied before GAME_STARTED. ws=7777 kcp=7778 tcp=7779
+info: BapCustomServer.GameServerProcessManager[0]
+      Game server custom-20260619000426-9630 accepted bootstrap HTTP; KCP UDP 7778 listener check is diagnostic-only.
+info: BapCustomServer.GameServerProcessManager[0]
+      Bootstrapped game server custom-20260619000426-9630.
+info: BapCustomServer.LobbyService[0]
+      [Analytics] Match started: custom-20260619000426-9630 mapId=34 players=1
+info: BapCustomServer.LobbyService[0]
+      Game server custom-20260619000426-9630 bootstrap fully applied; dispatching GAME_STARTED after setup/add-teams/queue-matched. mode=custom players=1 pid=21192 http=7850 ws=7777 kcp=7778 tcp=7779 mapId=34 unityGameMode=1
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.3% rss=84MB priv=35MB gc=5MB threads=35 handles=506 | lobbies=1 matches=1 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=21192 rss=1444MB threads=173 | PID=47004 rss=488MB threads=120
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=83MB priv=32MB gc=5MB threads=35 handles=506 | lobbies=1 matches=1 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=21192 rss=1445MB threads=168 | PID=47004 rss=1200MB threads=154
+info: BapCustomServer.EconomyService[0]
+      Created new economy profile for codex-custom-vfx-20260619-020418 (CodexVfx) with 1000 starting gold.
+info: BapCustomServer.ShopService[0]
+      Loaded shop state: 8 rotation items, 0 freebie items, DropId=1.
+info: BapCustomServer.LobbyService[0]
+      Client codex-custom-vfx-20260619-020418 connected. admin=True
+info: BapCustomServer.LobbyService[0]
+      [Analytics] Player joined: Player2 (accountId=codex-custom-vfx-20260619-020418)
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.3% rss=91MB priv=38MB gc=7MB threads=41 handles=546 | lobbies=1 matches=1 conns=2 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=21192 rss=1452MB threads=169 | PID=47004 rss=1472MB threads=185
+info: BapCustomServer.LobbyService[0]
+      Lobby V62696 is empty while match custom-20260619000426-9630 is active; keeping game process alive for 20s grace (45s if the match account socket is still connected). matchAccounts=codex-custom-vfx-20260619-020418
+info: BapCustomServer.LobbyService[0]
+      JoinLobby normalized stale state for codex-custom-vfx-20260619-020418: removedLobbies=1 staleQueue=False.
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=85MB priv=32MB gc=7MB threads=40 handles=546 | lobbies=1 matches=1 conns=2 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=21192 rss=1453MB threads=164 | PID=47004 rss=1458MB threads=173
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=84MB priv=32MB gc=7MB threads=33 handles=535 | lobbies=1 matches=1 conns=2 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=21192 rss=1454MB threads=168 | PID=47004 rss=1458MB threads=169
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=85MB priv=32MB gc=7MB threads=32 handles=533 | lobbies=1 matches=1 conns=2 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=21192 rss=1457MB threads=177 | PID=47004 rss=1461MB threads=171
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=85MB priv=32MB gc=7MB threads=33 handles=535 | lobbies=1 matches=1 conns=2 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=21192 rss=1467MB threads=174 | PID=47004 rss=1464MB threads=170
+info: BapCustomServer.LobbyService[0]
+      Cleaned up empty-lobby match custom-20260619000426-9630 after 48s empty; grace=45s connectedMatchPlayers=2.
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] Cleaned 1 stale match(es).
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=89MB priv=35MB gc=11MB threads=34 handles=537 | lobbies=1 matches=0 conns=2 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=21192 rss=1466MB threads=1 | PID=47004 rss=1466MB threads=169
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=92MB priv=39MB gc=11MB threads=33 handles=534 | lobbies=1 matches=0 conns=2 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=47004 rss=1470MB threads=167
+info: Microsoft.AspNetCore.Server.Kestrel.Connections[34]
+      Connection id "0HNMDIOOE8P7C", Request id "0HNMDIOOE8P7C:00000001": the application aborted the connection.
+info: BapCustomServer.LobbyService[0]
+      Client codex-custom-vfx-20260619-020418 disconnected.
+info: BapCustomServer.LobbyService[0]
+      [Analytics] Player left: CodexVfx (accountId=codex-custom-vfx-20260619-020418)
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=89MB priv=37MB gc=11MB threads=33 handles=538 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=47004 rss=1473MB threads=169
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=89MB priv=36MB gc=11MB threads=33 handles=538 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=47004 rss=1476MB threads=169
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=97MB priv=44MB gc=12MB threads=31 handles=533 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=47004 rss=1479MB threads=167
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=89MB priv=35MB gc=12MB threads=31 handles=536 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=47004 rss=1482MB threads=166
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=89MB priv=36MB gc=12MB threads=31 handles=536 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=47004 rss=1486MB threads=163
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=90MB priv=36MB gc=12MB threads=30 handles=533 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=47004 rss=1490MB threads=165
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=92MB priv=39MB gc=12MB threads=32 handles=530 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=47004 rss=1492MB threads=165
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=90MB priv=36MB gc=12MB threads=31 handles=527 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=47004 rss=1492MB threads=164
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=90MB priv=37MB gc=12MB threads=30 handles=525 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=47004 rss=1492MB threads=164
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=90MB priv=36MB gc=12MB threads=31 handles=528 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=47004 rss=1492MB threads=164
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=37MB gc=12MB threads=31 handles=528 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=47004 rss=1492MB threads=163
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=90MB priv=36MB gc=12MB threads=31 handles=528 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=47004 rss=1492MB threads=162
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=38MB gc=12MB threads=33 handles=528 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=47004 rss=1492MB threads=162
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=90MB priv=36MB gc=12MB threads=32 handles=525 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=47004 rss=1492MB threads=162
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=90MB priv=36MB gc=12MB threads=32 handles=525 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=47004 rss=1492MB threads=163
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=90MB priv=37MB gc=12MB threads=33 handles=528 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=47004 rss=1492MB threads=164
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=90MB priv=36MB gc=12MB threads=32 handles=525 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=47004 rss=1492MB threads=164
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=38MB gc=12MB threads=32 handles=525 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=47004 rss=1493MB threads=164
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=90MB priv=37MB gc=12MB threads=33 handles=528 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=47004 rss=1493MB threads=164
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=38MB gc=12MB threads=32 handles=525 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=47004 rss=1486MB threads=166
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=90MB priv=37MB gc=12MB threads=33 handles=528 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=47004 rss=1486MB threads=164
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=92MB priv=38MB gc=12MB threads=33 handles=528 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=47004 rss=1487MB threads=165
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=90MB priv=36MB gc=12MB threads=32 handles=528 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=47004 rss=1494MB threads=174
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=90MB priv=36MB gc=12MB threads=31 handles=525 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=47004 rss=1501MB threads=175
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=90MB priv=36MB gc=12MB threads=32 handles=528 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=47004 rss=1502MB threads=173
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=37MB gc=12MB threads=32 handles=528 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=47004 rss=1502MB threads=175
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=37MB gc=13MB threads=31 handles=525 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=47004 rss=1502MB threads=174
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=37MB gc=13MB threads=32 handles=528 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=47004 rss=1502MB threads=174
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=37MB gc=13MB threads=32 handles=528 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=47004 rss=1503MB threads=175
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=37MB gc=13MB threads=31 handles=528 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=47004 rss=1503MB threads=174
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=37MB gc=13MB threads=31 handles=528 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=47004 rss=1503MB threads=174
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=37MB gc=13MB threads=31 handles=528 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=47004 rss=1503MB threads=172
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=37MB gc=13MB threads=30 handles=525 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=47004 rss=1502MB threads=171
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=37MB gc=13MB threads=30 handles=525 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=47004 rss=1502MB threads=174
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=37MB gc=13MB threads=30 handles=525 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=47004 rss=1502MB threads=173
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=37MB gc=13MB threads=30 handles=525 | lobbies=1 matches=0 conns=1 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] bapbap.exe: PID=47004 rss=1502MB threads=173
+info: BapCustomServer.LobbyService[0]
+      Client codex-custom-vfx-20260619-020418 disconnected.
+info: BapCustomServer.LobbyService[0]
+      [Analytics] Player left: Player2 (accountId=codex-custom-vfx-20260619-020418)
+info: Microsoft.AspNetCore.Server.Kestrel.Connections[34]
+      Connection id "0HNMDIOOE8P7P", Request id "0HNMDIOOE8P7P:00000001": the application aborted the connection.
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=91MB priv=37MB gc=13MB threads=32 handles=530 | lobbies=0 matches=0 conns=0 queue=0

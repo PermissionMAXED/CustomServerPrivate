@@ -1,0 +1,9 @@
+﻿{
+    "schemaVersion":  1,
+    "releaseLabel":  "medusa-v1730-auth-admin",
+    "packageBuildUtc":  "2026-06-23T10:46:57.2076220Z",
+    "gitCommit":  "db573cf",
+    "gitBranch":  "main",
+    "configuration":  "Release",
+    "serverDllSha256":  "349561843CFF93226A629CD0C1284292C9D1AF8395E38CE922246A615582308B"
+}

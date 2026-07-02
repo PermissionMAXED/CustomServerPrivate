@@ -1,0 +1,7 @@
+Timed out receiving websocket message.
+In C:\Users\Administrator\Downloads\CustomServer\tools\Test-MatchStartSmoke.ps1:106 Zeichen:17
++                 throw "Timed out receiving websocket message."
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (Timed out receiving websocket message.:String) [], RuntimeException
+    + FullyQualifiedErrorId : Timed out receiving websocket message.
+ 

@@ -1,0 +1,14 @@
+starting local server :5161
+GAME_STARTED both. gameDns=127.0.0.1 ws=7777
+launched clients pids=33992,17336
+med-leader pid=33992 wid=2097328
+med-guest pid=17336 wid=4785830
+shot med-leader r1 = C:\Users\Administrator\Downloads\CustomServer\logs\cua\2c-med-leader-r1-003210.png
+shot med-guest r1 = C:\Users\Administrator\Downloads\CustomServer\logs\cua\2c-med-guest-r1-003232.png
+shot med-leader r2 = C:\Users\Administrator\Downloads\CustomServer\logs\cua\2c-med-leader-r2-003246.png
+shot med-guest r2 = C:\Users\Administrator\Downloads\CustomServer\logs\cua\2c-med-guest-r2-003252.png
+shot med-leader r3 = C:\Users\Administrator\Downloads\CustomServer\logs\cua\2c-med-leader-r3-003306.png
+shot med-guest r3 = C:\Users\Administrator\Downloads\CustomServer\logs\cua\2c-med-guest-r3-003311.png
+shot med-leader r4 = C:\Users\Administrator\Downloads\CustomServer\logs\cua\2c-med-leader-r4-003322.png
+shot med-guest r4 = C:\Users\Administrator\Downloads\CustomServer\logs\cua\2c-med-guest-r4-003325.png
+CAPTURE DONE. Guest shots should show leader's charId-15 Medusa with nameplate 'med-leader'.

@@ -1,0 +1,7 @@
+15:54:48.608 trigger View_PreMatch_CharSelect.Initialize
+15:54:51.114 click lock-in-visible-1 x=1275 y=755
+15:54:52.793 click lock-in-visible-2 x=1275 y=755
+15:54:55.080 click open-select x=1450 y=650
+15:54:55.954 click medusa-tile-1 x=1630 y=1085
+15:54:57.112 click medusa-tile-2 x=1630 y=1085
+15:54:58.159 click lock-in x=1275 y=755

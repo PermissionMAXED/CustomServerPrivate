@@ -1,0 +1,50 @@
+info: BapCustomServer[0]
+      BAPCUSTOM_STARTUP release=1.0.0+97d16d4d9fce130889a5b57b7ed4113b5c4dd3ea git=unknown branch=unknown dirty=False packageUtc=unknown configuration=unknown selfContained=(null) contentRoot=C:\Users\Administrator\Downloads\CustomServer deploymentInfo=C:\Users\Administrator\Downloads\CustomServer\deployment-info.json
+info: BapCustomServer[0]
+      BAPCUSTOM_CONFIG publicBaseUrl=http://127.0.0.1:5161 publicGameHost=127.0.0.1 launchGameServers=True gameExecutable=C:/Users/Administrator/Downloads/CustomServer/Spiel/Battleroyalebuild/bapbap.exe gameLauncher= gameLauncherArgs="{gameExecutable}" {gameArguments} ports ws=7777 kcp=7778 tcp=7779 http=7850 range=200 portCooldown=0s readyTimeout=300s bootstrapHttpTimeout=20s bootstrapResetPoll=1500ms managedBootstrapTimeout=180s managedBootstrapListenerOnly=0s requireKcp=False tcpTimeout=30s kcpTimeout=45s startAttempts=2 effectiveStartAttempts=2 startRetryDelay=2s stopWait=5000ms postCleanupStartDelay=3000ms startupStallGrace=45s startupStall=25s noisyStallGrace=45s noisyStall=25s wrapperOnlyStallGrace=8s wrapperOnlyStall=5s prewarm=False prewarmTimeout=180s prewarmMatchWait=35s maxMatches=0 emptyLobbyGrace=20s emptyLobbyConnectedGrace=45s
+info: BapCustomServer[0]
+      BAPCUSTOM_ARTIFACTS serverDllSha256= modDllSha256= modApiDllSha256= medusaDllSha256= medusaBundleSha256= gameExeSha256= startMatchSha256= packageSha256=
+info: BapCustomServer[0]
+      BAPCUSTOM_MEDUSA charId=15 rosterEnabled=True advertised=True
+info: BapCustomServer[0]
+      BAPCUSTOM_RUNTIME os=Microsoft Windows 10.0.26200 arch=X64 framework=.NET 10.0.5 urls=http://127.0.0.1:5161 winePath= wineVersion= winebootPath= xvfbRunPath= xauthPath= glxinfoPath= vulkanInfoPath=
+info: BapCustomServer[0]
+      BAPCUSTOM_GRAPHICS_PACKAGES 
+info: BapCustomServer[0]
+      BAPCUSTOM_GRAPHICS_ENV LIBGL_ALWAYS_SOFTWARE= GALLIUM_DRIVER= MESA_LOADER_DRIVER_OVERRIDE= MESA_GL_VERSION_OVERRIDE= WINEPREFIX= WINEARCH=
+warn: BapCustomServer[0]
+      BAPCUSTOM_RUNTIME_CHECK missing required Wine/Xvfb tool(s): winePath= xvfbRunPath= xauthPath=
+info: BapCustomServer.FriendsService[0]
+      Loaded friends state: 0 relationships, 0 pending requests.
+info: BapCustomServer.EconomyService[0]
+      Loaded economy state: 55 players.
+info: BapCustomServer.MatchHistoryService[0]
+      Loaded 10 recent matches from history log.
+info: BapCustomServer.RankedService[0]
+      Loaded ranked state: 50 players.
+info: BapCustomServer.GameServerPrewarmService[0]
+      Game-server startup prewarm skipped: GameServerPrewarmOnStartup=false
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://127.0.0.1:5161
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Users\Administrator\Downloads\CustomServer
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.2% rss=55MB priv=26MB gc=1MB threads=34 handles=420 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.4% rss=66MB priv=29MB gc=5MB threads=35 handles=439 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=65MB priv=27MB gc=5MB threads=36 handles=440 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=66MB priv=28MB gc=5MB threads=37 handles=441 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=65MB priv=27MB gc=5MB threads=35 handles=439 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=65MB priv=28MB gc=5MB threads=36 handles=442 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=66MB priv=28MB gc=5MB threads=33 handles=442 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=65MB priv=26MB gc=5MB threads=32 handles=440 | lobbies=0 matches=0 conns=0 queue=0

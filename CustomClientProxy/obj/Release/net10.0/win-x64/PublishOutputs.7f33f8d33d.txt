@@ -1,0 +1,5 @@
+C:\Users\Administrator\Downloads\CustomServer\CustomClientProxy\publish\win-x64\BapCustomClientProxy.exe
+C:\Users\Administrator\Downloads\CustomServer\CustomClientProxy\publish\win-x64\BapCustomClientProxy.dll
+C:\Users\Administrator\Downloads\CustomServer\CustomClientProxy\publish\win-x64\BapCustomClientProxy.deps.json
+C:\Users\Administrator\Downloads\CustomServer\CustomClientProxy\publish\win-x64\BapCustomClientProxy.runtimeconfig.json
+C:\Users\Administrator\Downloads\CustomServer\CustomClientProxy\publish\win-x64\BapCustomClientProxy.pdb

@@ -1,0 +1,9 @@
+START_CUSTOM_GAME_FAIL payload={"warningMessage":"The game server could not be started or did not accept match 
+bootstrap data.","errorCode":"ERR_GAME_SERVER_BOOTSTRAP","showForceStartModal":false}
+In C:\Users\Administrator\Downloads\CustomServer\tools\Test-LiveCustomMedusaVfx.ps1:217 Zeichen:9
++         throw "START_CUSTOM_GAME_FAIL payload=$($started.payload | Co ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (START_CUSTOM_GA...rtModal":false}:String) [], RuntimeException
+    + FullyQualifiedErrorId : START_CUSTOM_GAME_FAIL payload={"warningMessage":"The game server could not be started o 
+   r did not accept match bootstrap data.","errorCode":"ERR_GAME_SERVER_BOOTSTRAP","showForceStartModal":false}
+ 

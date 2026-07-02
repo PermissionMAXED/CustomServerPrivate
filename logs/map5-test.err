@@ -1,0 +1,7 @@
+Ausnahme beim Aufrufen von "Wait" mit 1 Argument(en):  "Mindestens ein Fehler ist aufgetreten."
+In C:\Users\Administrator\Downloads\CustomServer\tools\Test-LiveCustomMedusaVfx.ps1:62 Zeichen:17
++             if (-not $task.Wait($TimeoutMs)) { throw "Timed out recei ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : AggregateException
+ 

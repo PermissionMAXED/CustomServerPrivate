@@ -1,0 +1,134 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "LavaGang.MelonLoader/0.7.2": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/MelonLoader.dll": {
+            "related": ".runtimeconfig.json;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/_._": {
+            "related": ".runtimeconfig.json;.xml"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LavaGang.MelonLoader/0.7.2": {
+      "sha512": "s/4Mk1mv0qYnNRS+i2KS72HwkPIgyE6D/GgUpyBNjrxhfZDyxtlBexUaerhMFpkwmN5leGnDYSiInQwKKZU1HA==",
+      "type": "package",
+      "path": "lavagang.melonloader/0.7.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lavagang.melonloader.0.7.2.nupkg.sha512",
+        "lavagang.melonloader.nuspec",
+        "lib/net35/MelonLoader.dll",
+        "lib/net35/MelonLoader.xml",
+        "lib/net6.0/MelonLoader.dll",
+        "lib/net6.0/MelonLoader.runtimeconfig.json",
+        "lib/net6.0/MelonLoader.xml"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "LavaGang.MelonLoader >= 0.7.2"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Administrator\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Administrator\\Downloads\\CustomServer\\BapCustomServerMelon\\BapCustomServerMelon.csproj",
+      "projectName": "BapCustomServerMelon",
+      "projectPath": "C:\\Users\\Administrator\\Downloads\\CustomServer\\BapCustomServerMelon\\BapCustomServerMelon.csproj",
+      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Administrator\\Downloads\\CustomServer\\BapCustomServerMelon\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "10.0.200"
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "dependencies": {
+          "LavaGang.MelonLoader": {
+            "include": "Compile, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[0.7.2, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.36, 6.0.36]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.36, 6.0.36]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.36, 6.0.36]"
+          }
+        ],
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

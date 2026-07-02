@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "releaseLabel": "bapcustomserver-20260607-medusa-v1648-native-vfx",
+  "packageBuildUtc": "2026-06-07T10:20:00Z",
+  "configuration": "Release",
+  "publicHost": "ark.atomi23.de",
+  "serverDllSha256": "B6F43BACEE6E5E8697458E859F3B0DD99CF0CCC762989E2B177FC5A123711D0F",
+  "modDllSha256": "5C9FC161FEED8DD1D1856CA5B91E81C85B1B17584021A4E10DDA6A59B6FD0C48",
+  "modApiDllSha256": "0E14F39A9C47B6EBA106A0F23E76A0989B3270D7BCDD3E4BB0DD51E63BDB3CB5",
+  "medusaDllSha256": "379AAF16ADBF29347B6990B0CAF1BAD3F55D8686D7F608D1B6A05F275B535CFE",
+  "medusaBundleSha256": "C4872D6E124E76F9F4B4EC75482FFC2795D051D3CA65EB7C25E9FE68023B1D70",
+  "medusaCharId": 15,
+  "medusaVersion": "1.6.48",
+  "medusaFix": "Suppress Arrow-family inherited projectiles, use authored Medusa VFX without green primitive fallback or forced recoloring, drive Medusa attack animations, and apply authoritative Slither movement.",
+  "prewarmReadiness": "managed-bootstrap-listener-v3"
+}

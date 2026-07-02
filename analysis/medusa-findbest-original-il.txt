@@ -1,0 +1,187 @@
+﻿DLL=C:\Users\Administrator\Downloads\CustomServer\artifacts\BAPBAP.Medusa.v1.6.59.dll
+METHOD=Il2CppBAPBAP.Entities.EntityManager BAPBAP.Medusa.MedusaMod::FindBestLocalMedusaEntity(Il2CppBAPBAP.Player.PlayerManager,System.String&,System.Int32&)
+VARS:
+  V_0: BAPBAP.Medusa.MedusaMod/<>c__DisplayClass252_0
+  V_1: System.Int32
+  V_2: UnityEngine.GameObject
+  V_3: Il2CppInterop.Runtime.InteropTypes.Arrays.Il2CppArrayBase`1<Il2CppBAPBAP.Entities.EntityManager>
+  V_4: Il2CppBAPBAP.Entities.EntityManager
+  V_5: Il2CppBAPBAP.Entities.EntityManager
+  V_6: System.Int32
+  V_7: BAPBAP.Medusa.MedusaMod/<>c__DisplayClass252_1
+  V_8: System.Int32
+  V_9: Il2CppBAPBAP.Entities.EntityManager
+EXCEPTION_HANDLERS:
+  Catch Try=IL_0017-IL_01E0 Handler=IL_01E0-IL_01E3 Catch=System.Object
+IL:
+   0 IL_0000: newobj       System.Void BAPBAP.Medusa.MedusaMod/<>c__DisplayClass252_0::.ctor()
+   1 IL_0005: stloc.0      
+   2 IL_0006: ldloc.0      
+   3 IL_0007: ldarg.0      
+   4 IL_0008: stfld        Il2CppBAPBAP.Player.PlayerManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass252_0::local
+   5 IL_000D: ldarg.1      
+   6 IL_000E: ldstr        none
+   7 IL_0013: stind.ref    
+   8 IL_0014: ldarg.2      
+   9 IL_0015: ldc.i4.0     
+  10 IL_0016: stind.i4     
+  11 IL_0017: ldloc.0      
+  12 IL_0018: ldftn        System.Int32 BAPBAP.Medusa.MedusaMod/<>c__DisplayClass252_0::<FindBestLocalMedusaEntity>b__0()
+  13 IL_001E: newobj       System.Void System.Func`1<System.Int32>::.ctor(System.Object,System.IntPtr)
+  14 IL_0023: call         System.Int32 BAPBAP.Medusa.MedusaMod::SafeIntValue(System.Func`1<System.Int32>)
+  15 IL_0028: stloc.1      
+  16 IL_0029: ldloc.0      
+  17 IL_002A: ldfld        Il2CppBAPBAP.Player.PlayerManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass252_0::local
+  18 IL_002F: callvirt     UnityEngine.GameObject UnityEngine.Component::get_gameObject()
+  19 IL_0034: stloc.2      
+  20 IL_0035: call         Il2CppInterop.Runtime.InteropTypes.Arrays.Il2CppArrayBase`1<!!0> UnityEngine.Object::FindObjectsOfType<Il2CppBAPBAP.Entities.EntityManager>()
+  21 IL_003A: stloc.3      
+  22 IL_003B: ldnull       
+  23 IL_003C: stloc.s      V_4
+  24 IL_003E: ldloc.3      
+  25 IL_003F: brfalse      IL_0177
+  26 IL_0044: ldc.i4.0     
+  27 IL_0045: stloc.s      V_6
+  28 IL_0047: br           IL_016A
+  29 IL_004C: newobj       System.Void BAPBAP.Medusa.MedusaMod/<>c__DisplayClass252_1::.ctor()
+  30 IL_0051: stloc.s      V_7
+  31 IL_0053: ldloc.s      V_7
+  32 IL_0055: ldloc.3      
+  33 IL_0056: ldloc.s      V_6
+  34 IL_0058: callvirt     !0 Il2CppInterop.Runtime.InteropTypes.Arrays.Il2CppArrayBase`1<Il2CppBAPBAP.Entities.EntityManager>::get_Item(System.Int32)
+  35 IL_005D: stfld        Il2CppBAPBAP.Entities.EntityManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass252_1::entity
+  36 IL_0062: ldloc.s      V_7
+  37 IL_0064: ldfld        Il2CppBAPBAP.Entities.EntityManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass252_1::entity
+  38 IL_0069: castclass    UnityEngine.Object
+  39 IL_006E: ldnull       
+  40 IL_006F: call         System.Boolean UnityEngine.Object::op_Equality(UnityEngine.Object,UnityEngine.Object)
+  41 IL_0074: brtrue       IL_0164
+  42 IL_0079: ldloc.s      V_7
+  43 IL_007B: ldfld        Il2CppBAPBAP.Entities.EntityManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass252_1::entity
+  44 IL_0080: call         System.Boolean BAPBAP.Medusa.MedusaMod::LooksLikeMedusaEntity(Il2CppBAPBAP.Entities.EntityManager)
+  45 IL_0085: brfalse      IL_0164
+  46 IL_008A: ldarg.2      
+  47 IL_008B: ldarg.2      
+  48 IL_008C: ldind.i4     
+  49 IL_008D: ldc.i4.1     
+  50 IL_008E: add          
+  51 IL_008F: stind.i4     
+  52 IL_0090: ldloc.s      V_4
+  53 IL_0092: castclass    UnityEngine.Object
+  54 IL_0097: ldnull       
+  55 IL_0098: call         System.Boolean UnityEngine.Object::op_Equality(UnityEngine.Object,UnityEngine.Object)
+  56 IL_009D: brfalse.s    IL_00B6
+  57 IL_009F: ldloc.s      V_7
+  58 IL_00A1: ldfld        Il2CppBAPBAP.Entities.EntityManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass252_1::entity
+  59 IL_00A6: call         System.Boolean BAPBAP.Medusa.MedusaMod::IsExplicitMedusaRootEntity(Il2CppBAPBAP.Entities.EntityManager)
+  60 IL_00AB: brfalse.s    IL_00B6
+  61 IL_00AD: ldloc.s      V_7
+  62 IL_00AF: ldfld        Il2CppBAPBAP.Entities.EntityManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass252_1::entity
+  63 IL_00B4: stloc.s      V_4
+  64 IL_00B6: ldloc.s      V_7
+  65 IL_00B8: ldfld        Il2CppBAPBAP.Entities.EntityManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass252_1::entity
+  66 IL_00BD: callvirt     Il2CppBAPBAP.Player.PlayerManager Il2CppBAPBAP.Entities.EntityManager::get_playerManager()
+  67 IL_00C2: castclass    UnityEngine.Object
+  68 IL_00C7: ldloc.0      
+  69 IL_00C8: ldfld        Il2CppBAPBAP.Player.PlayerManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass252_0::local
+  70 IL_00CD: castclass    UnityEngine.Object
+  71 IL_00D2: call         System.Boolean UnityEngine.Object::op_Equality(UnityEngine.Object,UnityEngine.Object)
+  72 IL_00D7: brfalse.s    IL_00EE
+  73 IL_00D9: ldarg.1      
+  74 IL_00DA: ldstr        entityPlayerRef
+  75 IL_00DF: stind.ref    
+  76 IL_00E0: ldloc.s      V_7
+  77 IL_00E2: ldfld        Il2CppBAPBAP.Entities.EntityManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass252_1::entity
+  78 IL_00E7: stloc.s      V_9
+  79 IL_00E9: leave        IL_01E5
+  80 IL_00EE: ldloc.s      V_7
+  81 IL_00F0: ldfld        Il2CppBAPBAP.Entities.EntityManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass252_1::entity
+  82 IL_00F5: callvirt     UnityEngine.GameObject Il2CppBAPBAP.Entities.EntityManager::get_playerObj()
+  83 IL_00FA: castclass    UnityEngine.Object
+  84 IL_00FF: ldloc.2      
+  85 IL_0100: castclass    UnityEngine.Object
+  86 IL_0105: call         System.Boolean UnityEngine.Object::op_Equality(UnityEngine.Object,UnityEngine.Object)
+  87 IL_010A: brfalse.s    IL_0121
+  88 IL_010C: ldarg.1      
+  89 IL_010D: ldstr        entityPlayerObj
+  90 IL_0112: stind.ref    
+  91 IL_0113: ldloc.s      V_7
+  92 IL_0115: ldfld        Il2CppBAPBAP.Entities.EntityManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass252_1::entity
+  93 IL_011A: stloc.s      V_9
+  94 IL_011C: leave        IL_01E5
+  95 IL_0121: ldloc.s      V_7
+  96 IL_0123: ldftn        System.Int32 BAPBAP.Medusa.MedusaMod/<>c__DisplayClass252_1::<FindBestLocalMedusaEntity>b__1()
+  97 IL_0129: newobj       System.Void System.Func`1<System.Int32>::.ctor(System.Object,System.IntPtr)
+  98 IL_012E: call         System.Int32 BAPBAP.Medusa.MedusaMod::SafeIntValue(System.Func`1<System.Int32>)
+  99 IL_0133: ldloc.s      V_7
+ 100 IL_0135: ldftn        System.Int32 BAPBAP.Medusa.MedusaMod/<>c__DisplayClass252_1::<FindBestLocalMedusaEntity>b__2()
+ 101 IL_013B: newobj       System.Void System.Func`1<System.Int32>::.ctor(System.Object,System.IntPtr)
+ 102 IL_0140: call         System.Int32 BAPBAP.Medusa.MedusaMod::SafeIntValue(System.Func`1<System.Int32>)
+ 103 IL_0145: stloc.s      V_8
+ 104 IL_0147: ldloc.1      
+ 105 IL_0148: beq.s        IL_014F
+ 106 IL_014A: ldloc.s      V_8
+ 107 IL_014C: ldloc.1      
+ 108 IL_014D: bne.un.s     IL_0164
+ 109 IL_014F: ldarg.1      
+ 110 IL_0150: ldstr        ownerMatch
+ 111 IL_0155: stind.ref    
+ 112 IL_0156: ldloc.s      V_7
+ 113 IL_0158: ldfld        Il2CppBAPBAP.Entities.EntityManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass252_1::entity
+ 114 IL_015D: stloc.s      V_9
+ 115 IL_015F: leave        IL_01E5
+ 116 IL_0164: ldloc.s      V_6
+ 117 IL_0166: ldc.i4.1     
+ 118 IL_0167: add          
+ 119 IL_0168: stloc.s      V_6
+ 120 IL_016A: ldloc.s      V_6
+ 121 IL_016C: ldloc.3      
+ 122 IL_016D: callvirt     System.Int32 Il2CppInterop.Runtime.InteropTypes.Arrays.Il2CppArrayBase`1<Il2CppBAPBAP.Entities.EntityManager>::get_Length()
+ 123 IL_0172: blt          IL_004C
+ 124 IL_0177: ldloc.s      V_4
+ 125 IL_0179: castclass    UnityEngine.Object
+ 126 IL_017E: ldnull       
+ 127 IL_017F: call         System.Boolean UnityEngine.Object::op_Inequality(UnityEngine.Object,UnityEngine.Object)
+ 128 IL_0184: brfalse.s    IL_0193
+ 129 IL_0186: ldarg.1      
+ 130 IL_0187: ldstr        explicitMedusaRoot
+ 131 IL_018C: stind.ref    
+ 132 IL_018D: ldloc.s      V_4
+ 133 IL_018F: stloc.s      V_9
+ 134 IL_0191: leave.s      IL_01E5
+ 135 IL_0193: ldsfld       Il2CppBAPBAP.Entities.EntityManager BAPBAP.Medusa.MedusaMod::_lastLiveMedusaEntity
+ 136 IL_0198: stloc.s      V_5
+ 137 IL_019A: ldloc.s      V_5
+ 138 IL_019C: castclass    UnityEngine.Object
+ 139 IL_01A1: ldnull       
+ 140 IL_01A2: call         System.Boolean UnityEngine.Object::op_Inequality(UnityEngine.Object,UnityEngine.Object)
+ 141 IL_01A7: brfalse.s    IL_01DE
+ 142 IL_01A9: ldloc.s      V_5
+ 143 IL_01AB: ldloc.0      
+ 144 IL_01AC: ldfld        Il2CppBAPBAP.Player.PlayerManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass252_0::local
+ 145 IL_01B1: call         System.Boolean BAPBAP.Medusa.MedusaMod::EntityMatchesPlayer(Il2CppBAPBAP.Entities.EntityManager,Il2CppBAPBAP.Player.PlayerManager)
+ 146 IL_01B6: brfalse.s    IL_01DE
+ 147 IL_01B8: ldloc.s      V_5
+ 148 IL_01BA: ldstr        FindBestLocalMedusaEntity.lastLive
+ 149 IL_01BF: ldc.i4.0     
+ 150 IL_01C0: call         System.Boolean BAPBAP.Medusa.MedusaMod::ShouldPatchLiveMedusaEntity(Il2CppBAPBAP.Entities.EntityManager,System.String,System.Boolean)
+ 151 IL_01C5: brfalse.s    IL_01DE
+ 152 IL_01C7: ldarg.2      
+ 153 IL_01C8: ldarg.2      
+ 154 IL_01C9: ldind.i4     
+ 155 IL_01CA: ldc.i4.1     
+ 156 IL_01CB: call         System.Int32 System.Math::Max(System.Int32,System.Int32)
+ 157 IL_01D0: stind.i4     
+ 158 IL_01D1: ldarg.1      
+ 159 IL_01D2: ldstr        lastLiveEntity
+ 160 IL_01D7: stind.ref    
+ 161 IL_01D8: ldloc.s      V_5
+ 162 IL_01DA: stloc.s      V_9
+ 163 IL_01DC: leave.s      IL_01E5
+ 164 IL_01DE: leave.s      IL_01E3
+ 165 IL_01E0: pop          
+ 166 IL_01E1: leave.s      IL_01E3
+ 167 IL_01E3: ldnull       
+ 168 IL_01E4: ret          
+ 169 IL_01E5: ldloc.s      V_9
+ 170 IL_01E7: ret          

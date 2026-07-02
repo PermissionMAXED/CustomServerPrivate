@@ -1,0 +1,27 @@
+﻿{
+    "schemaVersion":  1,
+    "releaseLabel":  "backup-pre-amp-refactor-20260527-174239-46-g1ed6721-dirty",
+    "packageBuildUtc":  "2026-06-24T00:22:41.6996550Z",
+    "gitCommit":  "1ed67211e039",
+    "gitBranch":  "main",
+    "gitDirty":  true,
+    "configuration":  "Release",
+    "selfContained":  true,
+    "publicHost":  "ark.atomi23.de",
+    "serverDllSha256":  "A04597FB638E0514DB2F6C9F3CF3442D03BCE4451442B912BEC4F06A8F766B26",
+    "modDllSha256":  "9EC8585B9CC6B7B843D98D60564FA119D82CEF1B10DE1E94FE77E811EAA71919",
+    "modApiDllSha256":  "0E14F39A9C47B6EBA106A0F23E76A0989B3270D7BCDD3E4BB0DD51E63BDB3CB5",
+    "medusaDllSha256":  "88CE3999CC51E0EE25735306337336284295BCF0F7DE573C3138C87F7EADE776",
+    "medusaBundleSha256":  "C4872D6E124E76F9F4B4EC75482FFC2795D051D3CA65EB7C25E9FE68023B1D70",
+    "medusaCharId":  15,
+    "gameExeSha256":  "7CF5E8746DEDD1B2183A8C5B733B06B394B667EF8F041831C293C27097B57EF0",
+    "startMatchSha256":  "F797CF10401AB150D90E053FD84FBA4827779463B47C485805B2F06980B5CE73",
+    "packageSha256":  "",
+    "ports":  {
+                  "lobby":  5055,
+                  "ws":  7777,
+                  "kcp":  7778,
+                  "tcp":  7779,
+                  "http":  7850
+              }
+}

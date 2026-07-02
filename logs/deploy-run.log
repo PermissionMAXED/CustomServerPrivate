@@ -1,0 +1,21 @@
+=== Pre-deploy /health ===
+  release=medusa-v1733-headless-safe medusaDll=0E14F39A9C47B6EBA106A0F23E76A0989B3270D7BCDD3E4BB0DD51E63BDB3CB5
+=== Deploying (stops + restarts production) ===
+[00:12:31] Child instance running=True appState=20.
+[00:12:31] Logged into child instance API.
+[00:12:32] Remote app state before deploy: 20.
+[00:12:32] Stopping application.
+[00:12:34] Remote app state after stop: 0.
+[00:12:34] Deleted remote: game/Mods/BAPBAP.Medusa.dll
+[00:12:34] Deleted remote: game/Mods/BAPCustomChars.dll
+[00:12:34] Uploading 3.02 MiB -> netcustomchar-deploy.zip.
+[00:12:35] MD5 local=22321ea0bfcdf9c4eb2f551af34063fa remote=22321ea0bfcdf9c4eb2f551af34063fa.
+[00:12:35] Extracting archive into remote root.
+[00:12:35] Starting application.
+[00:12:35] Deploy finished. started=True
+=== Waiting for server to come back (max 240s) ===
+  t+8s release=medusa-v1733-headless-safe ok=True prewarm=running medusaAvail=True
+  serverDll=289074107744B62EFE4FD831F5D51202B5ED107CBDF66881654B8AB9579A3B1A
+  medusaDll=6923D2F932E717D73C90CF95391178AF1C91D06106EEC7BBB6BAC47D312055A1
+  modApiDll=0E14F39A9C47B6EBA106A0F23E76A0989B3270D7BCDD3E4BB0DD51E63BDB3CB5
+=== DEPLOY+HEALTH OK ===

@@ -1,0 +1,62 @@
+﻿[
+    {
+        "Target":  "amp-webpanel-start.sh",
+        "Bytes":  6725,
+        "Sha256":  "6B3EB51ADC6FEF1B6A31A9E5C97D939EF52657556FF7EBEE10CC9677D60D8D38"
+    },
+    {
+        "Target":  "BapCustomServer.deps.json",
+        "Bytes":  439,
+        "Sha256":  "00AC8862422A62E0E9F29407D8F9313C638B4D8E9616F485CB5C26BD1CF1202A"
+    },
+    {
+        "Target":  "BapCustomServer.dll",
+        "Bytes":  546816,
+        "Sha256":  "D5ABAB2581C5C36DB58306139ED7CD85110439BC32D61E313BBB67548F930AFD"
+    },
+    {
+        "Target":  "BapCustomServer.pdb",
+        "Bytes":  123412,
+        "Sha256":  "34700DB19B325B379EFBE47752E4393F5361A4C63B32F74439755DAFAF18D561"
+    },
+    {
+        "Target":  "BapCustomServer.runtimeconfig.json",
+        "Bytes":  491,
+        "Sha256":  "41442586A8262BC96A1C80F82F4D9384C03BFD465D221CBF01FB3563170F9E65"
+    },
+    {
+        "Target":  "deployment-info.json",
+        "Bytes":  42521,
+        "Sha256":  "97446AB729934EEBBC8D8CA6111FF8A46958535705791114F2CAC42B64815A6A"
+    },
+    {
+        "Target":  "start-linux-wine.sh",
+        "Bytes":  2930,
+        "Sha256":  "82B90D52E49D8D29668ECF558E5FDA4E5F4A0C04F17561B69E1A9F7E842C8FCF"
+    },
+    {
+        "Target":  "game\\Mods\\BAPBAP.Medusa.dll",
+        "Bytes":  216064,
+        "Sha256":  "C16A6DED3BF30F0D43FBF6E23525AD56BA3CEBA1E3BD7B992692D6C0A2078F2C"
+    },
+    {
+        "Target":  "game\\Mods\\BAPBAP.ModAPI.dll",
+        "Bytes":  1653248,
+        "Sha256":  "0E14F39A9C47B6EBA106A0F23E76A0989B3270D7BCDD3E4BB0DD51E63BDB3CB5"
+    },
+    {
+        "Target":  "game\\Mods\\BapCustomServerMelon.dll",
+        "Bytes":  249856,
+        "Sha256":  "5C9FC161FEED8DD1D1856CA5B91E81C85B1B17584021A4E10DDA6A59B6FD0C48"
+    },
+    {
+        "Target":  "game\\UserData\\Medusa\\medusa.bundle",
+        "Bytes":  1567424,
+        "Sha256":  "C4872D6E124E76F9F4B4EC75482FFC2795D051D3CA65EB7C25E9FE68023B1D70"
+    },
+    {
+        "Target":  "game\\UserLibs\\BAPBAP.ModAPI.dll",
+        "Bytes":  1653248,
+        "Sha256":  "0E14F39A9C47B6EBA106A0F23E76A0989B3270D7BCDD3E4BB0DD51E63BDB3CB5"
+    }
+]

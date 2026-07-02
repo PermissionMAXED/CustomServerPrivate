@@ -1,0 +1,90 @@
+
+[10:59:03.955] ------------------------------
+[10:59:03.956] MelonLoader v0.7.2 Open-Beta
+[10:59:03.957] OS: Wine/Proton 10.0
+[10:59:03.957] Hash Code: 58AB98835E598BD67B7DB233734DE8603F92C9C6A6081B13CB9A5CC37C02DD13
+[10:59:03.958] ------------------------------
+[10:59:03.958] Game Type: Il2cpp
+[10:59:03.958] Game Arch: x86
+[10:59:03.959] ------------------------------
+[10:59:03.959] Command-Line: 
+[10:59:03.959] ------------------------------
+[10:59:03.960] Core::BasePath = Z:\AMP\BapCustomServer\game
+[10:59:03.963] Game::BasePath = Z:\AMP\BapCustomServer\game
+[10:59:03.963] Game::DataPath = Z:\AMP\BapCustomServer\game\bapbap_Data
+[10:59:03.964] Game::ApplicationPath = Z:\AMP\BapCustomServer\game\bapbap.exe
+[10:59:03.964] Runtime Type: net6
+[10:59:04.265] ------------------------------
+[10:59:04.266] Game Name: BAPBAP
+[10:59:04.266] Game Developer: gg.bapbap
+[10:59:04.268] Unity Version: 2022.3.38f1
+[10:59:04.268] Game Version: 0.1.1758-38212
+[10:59:04.269] ------------------------------
+
+[10:59:04.694] Preferences Loaded!
+
+[10:59:04.706] Loading UserLibs...
+[10:59:04.724] ------------------------------
+[10:59:04.739] Melon Assembly loaded: '.\UserLibs\BAPBAP.ModAPI.dll'
+[10:59:04.739] SHA256 Hash: '0E14F39A9C47B6EBA106A0F23E76A0989B3270D7BCDD3E4BB0DD51E63BDB3CB5'
+[10:59:04.740] ------------------------------
+[10:59:04.740] 0 UserLibs loaded.
+
+[10:59:04.741] Loading Plugins...
+[10:59:04.745] 0 Plugins loaded.
+
+[10:59:06.525] Loading Il2CppAssemblyGenerator...
+[10:59:06.558] [Il2CppAssemblyGenerator] Using Cpp2IL Version: 2022.1.0-pre-release.21
+[10:59:06.559] [Il2CppAssemblyGenerator] Using Il2CppInterop Version = 1.5.1+dbaf825aab891ff1e1627bea691bde0a81d1ad98
+[10:59:06.559] [Il2CppAssemblyGenerator] Using Unity Dependencies Version = 2022.3.38
+[10:59:06.560] [Il2CppAssemblyGenerator] Using Deobfuscation Regex = null
+[10:59:06.560] [Il2CppAssemblyGenerator] Cpp2IL is up to date.
+[10:59:06.561] [Il2CppAssemblyGenerator] Cpp2IL.Plugin.StrippedCodeRegSupport is up to date.
+[10:59:06.562] [Il2CppAssemblyGenerator] UnityDependencies is up to date.
+[10:59:06.562] [Il2CppAssemblyGenerator] Checking GameAssembly...
+[10:59:06.957] [Il2CppAssemblyGenerator] Assembly is up to date. No Generation Needed.
+
+[10:59:06.958] Loading Mods...
+[10:59:06.992] ------------------------------
+[10:59:06.996] Melon Assembly loaded: '.\Mods\BAPBAP.Medusa.dll'
+[10:59:06.996] SHA256 Hash: '7F9423B398347747A7B13F0B208DB2E34566CEDACD8B5DD1944E0C702B394D46'
+[10:59:07.004] Melon Assembly loaded: '.\Mods\BapCustomServerMelon.dll'
+[10:59:07.004] SHA256 Hash: '6BE42859592828552716B6C9D1D1A045B82AB3DCD0333898F29A49D864B8C6D0'
+
+[10:59:07.325] [BAP_Custom_Server] Loaded custom server ini.
+[10:59:07.338] [BAP_Custom_Server] [Perf] Dedicated server: targetFrameRate=240, vSync=0 (kept default fixedDeltaTime)
+[10:59:07.339] [BAP_Custom_Server] [BAPCustomConfig] mode=dedicated upstream=http://127.0.0.1:5055 proxy=False localPort=5055 dedicatedPorts=http:8000 ws:7928 kcp:7929 tcp:7930 batchMode=True containsNoGraphicsArg=True autoJoin=none
+[10:59:07.341] [BAP_Custom_Server] Managed match bootstrap listener is active.
+[10:59:07.350] [BAP_Custom_Server] Installed 4 NetworkConfig runtime patch(es).
+[10:59:07.355] [BAP_Custom_Server] Installed 2 PreAwakeManager network config patch(es).
+[10:59:07.364] [BAP_Custom_Server] Installed 2 HttpClient host rewrite patch(es).
+[10:59:07.368] [BAP_Custom_Server] Installed ControllerManager network runtime patch.
+[10:59:07.376] [BAP_Custom_Server] Installed 4 LobbyNetworkClient runtime network patch(es).
+[10:59:07.381] [BAP_Custom_Server] Installed lifecycle guard on 2 Application.Quit overload(s). Guard PERMANENT (custom servers).
+[10:59:07.383] [BAP_Custom_Server] Installed AnalyticsManager custom-server no-op patch.
+[10:59:07.438] [BAP_Custom_Server] Installed 40 character-select NullRef guard prefix patch(es).
+[10:59:07.444] [BAP_Custom_Server] Installed 5 PopulateCharIdsBeforeBuild prefix(es) on UILobbyCharacterSelectPage.
+[10:59:07.450] [BAP_Custom_Server] Installed 3 PopulateCharIdsBeforeBuild prefix(es) on UILobbyPlayTabPage.
+[10:59:07.484] [BAP_Custom_Server] Installed 32 LobbyController NullRef guard finalizer patch(es).
+[10:59:08.005] [BAP_Custom_Server] Installed 1 CharacterIsUnlocked force-unlock patch(es).
+[10:59:08.065] [BAP_Custom_Server] Server match policy fetched: Both (matchmaking=allowed, custom=allowed). When a path is blocked, the mod logs a clear error if the user tries to use it.
+[10:59:08.068] [BAP_Custom_Server] Initialized BAP Custom Server v1.0.5 during early registration. dedicated=True http=8000 ws=7928 kcp=7929 tcp=7930
+[10:59:08.069] ------------------------------
+[10:59:08.070] BAP Custom Server v1.0.5
+[10:59:08.071] by Sonic0810
+[10:59:08.071] Assembly: BapCustomServerMelon.dll
+[10:59:08.071] ------------------------------
+[10:59:08.073] ------------------------------
+[10:59:08.074] BAPBAP ModAPI v2.2.1
+[10:59:08.074] by BAPBAP Modding Community
+[10:59:08.074] Assembly: BAPBAP.ModAPI.dll
+[10:59:08.075] ------------------------------
+[10:59:08.076] ------------------------------
+[10:59:08.077] Medusa v1.6.66
+[10:59:08.077] by BAPBAPCommunity
+[10:59:08.077] Assembly: BAPBAP.Medusa.dll
+[10:59:08.078] ------------------------------
+[10:59:08.078] ------------------------------
+[10:59:08.079] 3 Mods loaded.
+
+[10:59:11.793] [Il2CppInterop] Class::Init signatures have been exhausted, using a substitute!

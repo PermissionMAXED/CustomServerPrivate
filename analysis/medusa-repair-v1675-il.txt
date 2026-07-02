@@ -1,0 +1,565 @@
+﻿DLL=C:\Users\Administrator\Downloads\CustomServer\artifacts\BAPBAP.Medusa.v1.6.62.ilguard.dll
+METHOD=System.Void BAPBAP.Medusa.MedusaMod::RepairLocalMedusaBinding(Il2CppBAPBAP.Entities.EntityManager,System.String,System.Boolean)
+VARS:
+  V_0: BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_0
+  V_1: BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_1
+  V_2: Il2CppBAPBAP.Entities.EntityManager
+  V_3: UnityEngine.GameObject
+  V_4: UnityEngine.GameObject
+  V_5: System.Int32
+  V_6: System.Int32
+  V_7: System.Int32
+  V_8: System.Int32
+  V_9: System.Boolean
+  V_10: System.Boolean
+  V_11: System.Boolean
+  V_12: System.Boolean
+  V_13: BAPBAP.Medusa.MedusaMod
+  V_14: System.Runtime.CompilerServices.DefaultInterpolatedStringHandler
+  V_15: BAPBAP.Medusa.MedusaMod
+  V_16: Il2CppBAPBAP.Entities.EntityManager
+  V_17: Il2CppBAPBAP.Entities.EntityManager
+  V_18: System.Runtime.CompilerServices.DefaultInterpolatedStringHandler
+  V_19: System.Exception
+  V_20: BAPBAP.Medusa.MedusaMod
+EXCEPTION_HANDLERS:
+  Catch Try=IL_02F4-IL_0306 Handler=IL_0306-IL_0309 Catch=System.Object
+  Catch Try=IL_030A-IL_031C Handler=IL_031C-IL_031F Catch=System.Object
+  Catch Try=IL_0320-IL_0333 Handler=IL_0333-IL_0336 Catch=System.Object
+  Catch Try=IL_0337-IL_0346 Handler=IL_0346-IL_0349 Catch=System.Object
+  Catch Try=IL_034A-IL_0359 Handler=IL_0359-IL_035C Catch=System.Object
+  Catch Try=IL_035D-IL_036D Handler=IL_036D-IL_0370 Catch=System.Object
+  Catch Try=IL_0371-IL_0380 Handler=IL_0380-IL_0383 Catch=System.Object
+  Catch Try=IL_0384-IL_0392 Handler=IL_0392-IL_0395 Catch=System.Object
+  Catch Try=IL_0396-IL_03A4 Handler=IL_03A4-IL_03A7 Catch=System.Object
+  Catch Try=IL_03A8-IL_03BB Handler=IL_03BB-IL_03BE Catch=System.Object
+  Catch Try=IL_03BF-IL_03D7 Handler=IL_03D7-IL_03DA Catch=System.Object
+  Catch Try=IL_03DB-IL_03E8 Handler=IL_03E8-IL_03EB Catch=System.Object
+  Catch Try=IL_03EC-IL_0400 Handler=IL_0400-IL_0403 Catch=System.Object
+  Catch Try=IL_0404-IL_0411 Handler=IL_0411-IL_0414 Catch=System.Object
+  Catch Try=IL_0415-IL_042D Handler=IL_042D-IL_0430 Catch=System.Object
+  Catch Try=IL_000D-IL_062B Handler=IL_062B-IL_0672 Catch=System.Exception
+IL:
+   0 IL_0000: newobj       System.Void BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_0::.ctor()
+   1 IL_0005: stloc.0      
+   2 IL_0006: ldloc.0      
+   3 IL_0007: ldarg.0      
+   4 IL_0008: stfld        Il2CppBAPBAP.Entities.EntityManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_0::entity
+   5 IL_000D: newobj       System.Void BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_1::.ctor()
+   6 IL_0012: stloc.1      
+   7 IL_0013: ldloc.0      
+   8 IL_0014: ldfld        Il2CppBAPBAP.Entities.EntityManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_0::entity
+   9 IL_0019: castclass    UnityEngine.Object
+  10 IL_001E: ldnull       
+  11 IL_001F: call         System.Boolean UnityEngine.Object::op_Equality(UnityEngine.Object,UnityEngine.Object)
+  12 IL_0024: brtrue.s     IL_0033
+  13 IL_0026: ldloc.0      
+  14 IL_0027: ldfld        Il2CppBAPBAP.Entities.EntityManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_0::entity
+  15 IL_002C: call         System.Boolean BAPBAP.Medusa.MedusaMod::LooksLikeMedusaEntity(Il2CppBAPBAP.Entities.EntityManager)
+  16 IL_0031: brtrue.s     IL_0038
+  17 IL_0033: leave        IL_0672
+  18 IL_0038: ldloc.1      
+  19 IL_0039: call         Il2CppBAPBAP.Player.PlayerManager BAPBAP.ModAPI.API.PlayerAPI::get_Local()
+  20 IL_003E: stfld        Il2CppBAPBAP.Player.PlayerManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_1::local
+  21 IL_0043: ldloc.1      
+  22 IL_0044: ldfld        Il2CppBAPBAP.Player.PlayerManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_1::local
+  23 IL_0049: castclass    UnityEngine.Object
+  24 IL_004E: ldnull       
+  25 IL_004F: call         System.Boolean UnityEngine.Object::op_Equality(UnityEngine.Object,UnityEngine.Object)
+  26 IL_0054: brtrue.s     IL_006E
+  27 IL_0056: ldloc.1      
+  28 IL_0057: ldftn        System.Int32 BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_1::<RepairLocalMedusaBinding>b__0()
+  29 IL_005D: newobj       System.Void System.Func`1<System.Int32>::.ctor(System.Object,System.IntPtr)
+  30 IL_0062: call         System.Int32 BAPBAP.Medusa.MedusaMod::SafeIntValue(System.Func`1<System.Int32>)
+  31 IL_0067: call         System.Boolean BAPBAP.Medusa.MedusaMod::IsMedusaId(System.Int32)
+  32 IL_006C: brtrue.s     IL_0073
+  33 IL_006E: leave        IL_0672
+  34 IL_0073: ldloc.1      
+  35 IL_0074: ldfld        Il2CppBAPBAP.Player.PlayerManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_1::local
+  36 IL_0079: callvirt     Il2CppBAPBAP.Entities.EntityManager Il2CppBAPBAP.Player.PlayerManager::get_primaryCharManager()
+  37 IL_007E: stloc.2      
+  38 IL_007F: ldloc.2      
+  39 IL_0080: castclass    UnityEngine.Object
+  40 IL_0085: ldloc.0      
+  41 IL_0086: ldfld        Il2CppBAPBAP.Entities.EntityManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_0::entity
+  42 IL_008B: castclass    UnityEngine.Object
+  43 IL_0090: call         System.Boolean UnityEngine.Object::op_Equality(UnityEngine.Object,UnityEngine.Object)
+  44 IL_0095: brfalse.s    IL_00B2
+  45 IL_0097: ldloc.0      
+  46 IL_0098: ldfld        Il2CppBAPBAP.Entities.EntityManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_0::entity
+  47 IL_009D: ldarg.1      
+  48 IL_009E: ldstr        .alreadyPrimary
+  49 IL_00A3: call         System.String System.String::Concat(System.String,System.String)
+  50 IL_00A8: call         System.Void BAPBAP.Medusa.MedusaMod::RepairMedusaCameraTarget(Il2CppBAPBAP.Entities.EntityManager,System.String)
+  51 IL_00AD: leave        IL_0672
+  52 IL_00B2: ldloc.0      
+  53 IL_00B3: ldfld        Il2CppBAPBAP.Entities.EntityManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_0::entity
+  54 IL_00B8: callvirt     UnityEngine.GameObject UnityEngine.Component::get_gameObject()
+  55 IL_00BD: stloc.3      
+  56 IL_00BE: ldloc.1      
+  57 IL_00BF: ldfld        Il2CppBAPBAP.Player.PlayerManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_1::local
+  58 IL_00C4: callvirt     UnityEngine.GameObject UnityEngine.Component::get_gameObject()
+  59 IL_00C9: stloc.s      V_4
+  60 IL_00CB: ldloc.3      
+  61 IL_00CC: castclass    UnityEngine.Object
+  62 IL_00D1: ldnull       
+  63 IL_00D2: call         System.Boolean UnityEngine.Object::op_Equality(UnityEngine.Object,UnityEngine.Object)
+  64 IL_00D7: brtrue.s     IL_00E1
+  65 IL_00D9: ldloc.3      
+  66 IL_00DA: callvirt     System.Int32 UnityEngine.Object::GetInstanceID()
+  67 IL_00DF: br.s         IL_00E2
+  68 IL_00E1: ldc.i4.0     
+  69 IL_00E2: stloc.s      V_5
+  70 IL_00E4: ldloc.1      
+  71 IL_00E5: ldftn        System.Int32 BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_1::<RepairLocalMedusaBinding>b__1()
+  72 IL_00EB: newobj       System.Void System.Func`1<System.Int32>::.ctor(System.Object,System.IntPtr)
+  73 IL_00F0: call         System.Int32 BAPBAP.Medusa.MedusaMod::SafeIntValue(System.Func`1<System.Int32>)
+  74 IL_00F5: stloc.s      V_6
+  75 IL_00F7: ldloc.0      
+  76 IL_00F8: ldftn        System.Int32 BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_0::<RepairLocalMedusaBinding>b__2()
+  77 IL_00FE: newobj       System.Void System.Func`1<System.Int32>::.ctor(System.Object,System.IntPtr)
+  78 IL_0103: call         System.Int32 BAPBAP.Medusa.MedusaMod::SafeIntValue(System.Func`1<System.Int32>)
+  79 IL_0108: stloc.s      V_7
+  80 IL_010A: ldloc.0      
+  81 IL_010B: ldftn        System.Int32 BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_0::<RepairLocalMedusaBinding>b__3()
+  82 IL_0111: newobj       System.Void System.Func`1<System.Int32>::.ctor(System.Object,System.IntPtr)
+  83 IL_0116: call         System.Int32 BAPBAP.Medusa.MedusaMod::SafeIntValue(System.Func`1<System.Int32>)
+  84 IL_011B: stloc.s      V_8
+  85 IL_011D: ldloc.2      
+  86 IL_011E: castclass    UnityEngine.Object
+  87 IL_0123: ldnull       
+  88 IL_0124: call         System.Boolean UnityEngine.Object::op_Equality(UnityEngine.Object,UnityEngine.Object)
+  89 IL_0129: stloc.s      V_9
+  90 IL_012B: ldloc.s      V_7
+  91 IL_012D: ldloc.s      V_6
+  92 IL_012F: beq.s        IL_0139
+  93 IL_0131: ldloc.s      V_8
+  94 IL_0133: ldloc.s      V_6
+  95 IL_0135: ceq          
+  96 IL_0137: br.s         IL_013A
+  97 IL_0139: ldc.i4.1     
+  98 IL_013A: ldloc.0      
+  99 IL_013B: ldfld        Il2CppBAPBAP.Entities.EntityManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_0::entity
+ 100 IL_0140: callvirt     Il2CppBAPBAP.Player.PlayerManager Il2CppBAPBAP.Entities.EntityManager::get_playerManager()
+ 101 IL_0145: castclass    UnityEngine.Object
+ 102 IL_014A: ldloc.1      
+ 103 IL_014B: ldfld        Il2CppBAPBAP.Player.PlayerManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_1::local
+ 104 IL_0150: castclass    UnityEngine.Object
+ 105 IL_0155: call         System.Boolean UnityEngine.Object::op_Equality(UnityEngine.Object,UnityEngine.Object)
+ 106 IL_015A: brtrue.s     IL_017A
+ 107 IL_015C: ldloc.0      
+ 108 IL_015D: ldfld        Il2CppBAPBAP.Entities.EntityManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_0::entity
+ 109 IL_0162: callvirt     UnityEngine.GameObject Il2CppBAPBAP.Entities.EntityManager::get_playerObj()
+ 110 IL_0167: castclass    UnityEngine.Object
+ 111 IL_016C: ldloc.s      V_4
+ 112 IL_016E: castclass    UnityEngine.Object
+ 113 IL_0173: call         System.Boolean UnityEngine.Object::op_Equality(UnityEngine.Object,UnityEngine.Object)
+ 114 IL_0178: br.s         IL_017B
+ 115 IL_017A: ldc.i4.1     
+ 116 IL_017B: stloc.s      V_10
+ 117 IL_017D: ldloc.s      V_7
+ 118 IL_017F: ldc.i4.0     
+ 119 IL_0180: bgt.s        IL_018C
+ 120 IL_0182: ldloc.s      V_8
+ 121 IL_0184: ldc.i4.0     
+ 122 IL_0185: cgt          
+ 123 IL_0187: ldc.i4.0     
+ 124 IL_0188: ceq          
+ 125 IL_018A: br.s         IL_018D
+ 126 IL_018C: ldc.i4.0     
+ 127 IL_018D: stloc.s      V_11
+ 128 IL_018F: ldarg.2      
+ 129 IL_0190: ldloc.s      V_9
+ 130 IL_0192: and          
+ 131 IL_0193: ldloc.s      V_11
+ 132 IL_0195: and          
+ 133 IL_0196: stloc.s      V_12
+ 134 IL_0198: brtrue       IL_02F3
+ 135 IL_019D: ldloc.s      V_10
+ 136 IL_019F: brtrue       IL_02F3
+ 137 IL_01A4: nop          
+ 138 IL_01A5: nop          
+ 139 IL_01A6: nop          
+ 140 IL_01A7: nop          
+ 141 IL_01A8: nop          
+ 142 IL_01A9: nop          
+ 143 IL_01AA: ldsfld       System.Int32 BAPBAP.Medusa.MedusaMod::_localBindingRepairLogCount
+ 144 IL_01AF: ldc.i4.s     16
+ 145 IL_01B1: bge          IL_02EE
+ 146 IL_01B6: ldsfld       System.Collections.Generic.HashSet`1<System.Int32> BAPBAP.Medusa.MedusaMod::_localBindingRepairIds
+ 147 IL_01BB: ldloc.s      V_5
+ 148 IL_01BD: neg          
+ 149 IL_01BE: callvirt     System.Boolean System.Collections.Generic.HashSet`1<System.Int32>::Add(!0)
+ 150 IL_01C3: brfalse      IL_02EE
+ 151 IL_01C8: ldsfld       System.Int32 BAPBAP.Medusa.MedusaMod::_localBindingRepairLogCount
+ 152 IL_01CD: ldc.i4.1     
+ 153 IL_01CE: add          
+ 154 IL_01CF: stsfld       System.Int32 BAPBAP.Medusa.MedusaMod::_localBindingRepairLogCount
+ 155 IL_01D4: ldsfld       BAPBAP.Medusa.MedusaMod BAPBAP.Medusa.MedusaMod::_instance
+ 156 IL_01D9: stloc.s      V_13
+ 157 IL_01DB: ldloc.s      V_13
+ 158 IL_01DD: brfalse      IL_02EE
+ 159 IL_01E2: ldloc.s      V_13
+ 160 IL_01E4: callvirt     BAPBAP.ModAPI.ModLogger BAPBAP.ModAPI.ModBase::get_Log()
+ 161 IL_01E9: ldc.i4       128
+ 162 IL_01EE: ldc.i4.s     9
+ 163 IL_01F0: newobj       System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::.ctor(System.Int32,System.Int32)
+ 164 IL_01F5: stloc.s      V_14
+ 165 IL_01F7: ldloca.s     V_14
+ 166 IL_01F9: ldstr        [Medusa] local binding skipped via 
+ 167 IL_01FE: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendLiteral(System.String)
+ 168 IL_0203: ldloca.s     V_14
+ 169 IL_0205: ldarg.1      
+ 170 IL_0206: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendFormatted(System.String)
+ 171 IL_020B: ldloca.s     V_14
+ 172 IL_020D: ldstr        : entity='
+ 173 IL_0212: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendLiteral(System.String)
+ 174 IL_0217: ldloca.s     V_14
+ 175 IL_0219: ldloc.3      
+ 176 IL_021A: call         System.String BAPBAP.Medusa.MedusaMod::ObjName(UnityEngine.Object)
+ 177 IL_021F: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendFormatted(System.String)
+ 178 IL_0224: ldloca.s     V_14
+ 179 IL_0226: ldstr        ' owner=
+ 180 IL_022B: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendLiteral(System.String)
+ 181 IL_0230: ldloca.s     V_14
+ 182 IL_0232: ldloc.s      V_7
+ 183 IL_0234: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendFormatted<System.Int32>(!!0)
+ 184 IL_0239: ldloca.s     V_14
+ 185 IL_023B: ldstr         getPlayerId=
+ 186 IL_0240: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendLiteral(System.String)
+ 187 IL_0245: ldloca.s     V_14
+ 188 IL_0247: ldloc.s      V_8
+ 189 IL_0249: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendFormatted<System.Int32>(!!0)
+ 190 IL_024E: ldloca.s     V_14
+ 191 IL_0250: ldstr         localId=
+ 192 IL_0255: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendLiteral(System.String)
+ 193 IL_025A: ldloca.s     V_14
+ 194 IL_025C: ldloc.s      V_6
+ 195 IL_025E: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendFormatted<System.Int32>(!!0)
+ 196 IL_0263: ldloca.s     V_14
+ 197 IL_0265: ldstr         localPrimary='
+ 198 IL_026A: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendLiteral(System.String)
+ 199 IL_026F: ldloca.s     V_14
+ 200 IL_0271: ldloc.2      
+ 201 IL_0272: call         System.String BAPBAP.Medusa.MedusaMod::ObjName(UnityEngine.Object)
+ 202 IL_0277: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendFormatted(System.String)
+ 203 IL_027C: ldloca.s     V_14
+ 204 IL_027E: ldstr        ' playerObj='
+ 205 IL_0283: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendLiteral(System.String)
+ 206 IL_0288: ldloca.s     V_14
+ 207 IL_028A: ldloc.0      
+ 208 IL_028B: ldfld        Il2CppBAPBAP.Entities.EntityManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_0::entity
+ 209 IL_0290: callvirt     UnityEngine.GameObject Il2CppBAPBAP.Entities.EntityManager::get_playerObj()
+ 210 IL_0295: call         System.String BAPBAP.Medusa.MedusaMod::ObjName(UnityEngine.Object)
+ 211 IL_029A: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendFormatted(System.String)
+ 212 IL_029F: ldloca.s     V_14
+ 213 IL_02A1: ldstr        ' entityPlayer='
+ 214 IL_02A6: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendLiteral(System.String)
+ 215 IL_02AB: ldloca.s     V_14
+ 216 IL_02AD: ldloc.0      
+ 217 IL_02AE: ldfld        Il2CppBAPBAP.Entities.EntityManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_0::entity
+ 218 IL_02B3: callvirt     Il2CppBAPBAP.Player.PlayerManager Il2CppBAPBAP.Entities.EntityManager::get_playerManager()
+ 219 IL_02B8: call         System.String BAPBAP.Medusa.MedusaMod::ObjName(UnityEngine.Object)
+ 220 IL_02BD: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendFormatted(System.String)
+ 221 IL_02C2: ldloca.s     V_14
+ 222 IL_02C4: ldstr        ' force=
+ 223 IL_02C9: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendLiteral(System.String)
+ 224 IL_02CE: ldloca.s     V_14
+ 225 IL_02D0: ldarg.2      
+ 226 IL_02D1: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendFormatted<System.Boolean>(!!0)
+ 227 IL_02D6: ldloca.s     V_14
+ 228 IL_02D8: ldstr        .
+ 229 IL_02DD: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendLiteral(System.String)
+ 230 IL_02E2: ldloca.s     V_14
+ 231 IL_02E4: call         System.String System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::ToStringAndClear()
+ 232 IL_02E9: callvirt     System.Void BAPBAP.ModAPI.ModLogger::Info(System.String)
+ 233 IL_02EE: leave        IL_0672
+ 234 IL_02F3: nop          
+ 235 IL_02F4: ldloc.0      
+ 236 IL_02F5: ldfld        Il2CppBAPBAP.Entities.EntityManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_0::entity
+ 237 IL_02FA: call         System.Int32 BAPBAP.Medusa.MedusaMod::CurrentMedusaId()
+ 238 IL_02FF: callvirt     System.Void Il2CppBAPBAP.Entities.EntityManager::set_charId(System.Int32)
+ 239 IL_0304: leave.s      IL_0309
+ 240 IL_0306: pop          
+ 241 IL_0307: leave.s      IL_0309
+ 242 IL_0309: nop          
+ 243 IL_030A: ldloc.0      
+ 244 IL_030B: ldfld        Il2CppBAPBAP.Entities.EntityManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_0::entity
+ 245 IL_0310: call         System.Int32 BAPBAP.Medusa.MedusaMod::CurrentMedusaId()
+ 246 IL_0315: callvirt     System.Void Il2CppBAPBAP.Entities.EntityManager::set_NetworkcharId(System.Int32)
+ 247 IL_031A: leave.s      IL_031F
+ 248 IL_031C: pop          
+ 249 IL_031D: leave.s      IL_031F
+ 250 IL_031F: nop          
+ 251 IL_0320: ldloc.0      
+ 252 IL_0321: ldfld        Il2CppBAPBAP.Entities.EntityManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_0::entity
+ 253 IL_0326: ldloc.1      
+ 254 IL_0327: ldfld        Il2CppBAPBAP.Player.PlayerManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_1::local
+ 255 IL_032C: callvirt     System.Void Il2CppBAPBAP.Entities.EntityManager::set_playerManager(Il2CppBAPBAP.Player.PlayerManager)
+ 256 IL_0331: leave.s      IL_0336
+ 257 IL_0333: pop          
+ 258 IL_0334: leave.s      IL_0336
+ 259 IL_0336: nop          
+ 260 IL_0337: ldloc.0      
+ 261 IL_0338: ldfld        Il2CppBAPBAP.Entities.EntityManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_0::entity
+ 262 IL_033D: ldloc.s      V_4
+ 263 IL_033F: callvirt     System.Void Il2CppBAPBAP.Entities.EntityManager::set_playerObj(UnityEngine.GameObject)
+ 264 IL_0344: leave.s      IL_0349
+ 265 IL_0346: pop          
+ 266 IL_0347: leave.s      IL_0349
+ 267 IL_0349: nop          
+ 268 IL_034A: ldloc.0      
+ 269 IL_034B: ldfld        Il2CppBAPBAP.Entities.EntityManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_0::entity
+ 270 IL_0350: ldloc.s      V_4
+ 271 IL_0352: callvirt     System.Void Il2CppBAPBAP.Entities.EntityManager::set_NetworkplayerObj(UnityEngine.GameObject)
+ 272 IL_0357: leave.s      IL_035C
+ 273 IL_0359: pop          
+ 274 IL_035A: leave.s      IL_035C
+ 275 IL_035C: nop          
+ 276 IL_035D: ldloc.0      
+ 277 IL_035E: ldfld        Il2CppBAPBAP.Entities.EntityManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_0::entity
+ 278 IL_0363: ldnull       
+ 279 IL_0364: ldloc.s      V_4
+ 280 IL_0366: callvirt     System.Void Il2CppBAPBAP.Entities.EntityManager::OnPlayerObjChanged(UnityEngine.GameObject,UnityEngine.GameObject)
+ 281 IL_036B: leave.s      IL_0370
+ 282 IL_036D: pop          
+ 283 IL_036E: leave.s      IL_0370
+ 284 IL_0370: nop          
+ 285 IL_0371: ldloc.0      
+ 286 IL_0372: ldfld        Il2CppBAPBAP.Entities.EntityManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_0::entity
+ 287 IL_0377: ldloc.s      V_6
+ 288 IL_0379: callvirt     System.Void Il2CppBAPBAP.Entities.EntityManager::set_ownerPlayerId(System.Int32)
+ 289 IL_037E: leave.s      IL_0383
+ 290 IL_0380: pop          
+ 291 IL_0381: leave.s      IL_0383
+ 292 IL_0383: nop          
+ 293 IL_0384: ldloc.0      
+ 294 IL_0385: ldfld        Il2CppBAPBAP.Entities.EntityManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_0::entity
+ 295 IL_038A: ldc.i4.1     
+ 296 IL_038B: callvirt     System.Void Il2CppBAPBAP.Entities.EntityManager::set_isPrimary(System.Boolean)
+ 297 IL_0390: leave.s      IL_0395
+ 298 IL_0392: pop          
+ 299 IL_0393: leave.s      IL_0395
+ 300 IL_0395: nop          
+ 301 IL_0396: ldloc.0      
+ 302 IL_0397: ldfld        Il2CppBAPBAP.Entities.EntityManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_0::entity
+ 303 IL_039C: ldc.i4.1     
+ 304 IL_039D: callvirt     System.Void Il2CppBAPBAP.Entities.EntityManager::set_NetworkisPrimary(System.Boolean)
+ 305 IL_03A2: leave.s      IL_03A7
+ 306 IL_03A4: pop          
+ 307 IL_03A5: leave.s      IL_03A7
+ 308 IL_03A7: nop          
+ 309 IL_03A8: ldloc.1      
+ 310 IL_03A9: ldfld        Il2CppBAPBAP.Player.PlayerManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_1::local
+ 311 IL_03AE: ldloc.0      
+ 312 IL_03AF: ldfld        Il2CppBAPBAP.Entities.EntityManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_0::entity
+ 313 IL_03B4: callvirt     System.Void Il2CppBAPBAP.Player.PlayerManager::set_primaryCharManager(Il2CppBAPBAP.Entities.EntityManager)
+ 314 IL_03B9: leave.s      IL_03BE
+ 315 IL_03BB: pop          
+ 316 IL_03BC: leave.s      IL_03BE
+ 317 IL_03BE: nop          
+ 318 IL_03BF: ldloc.1      
+ 319 IL_03C0: ldfld        Il2CppBAPBAP.Player.PlayerManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_1::local
+ 320 IL_03C5: ldloc.0      
+ 321 IL_03C6: ldfld        Il2CppBAPBAP.Entities.EntityManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_0::entity
+ 322 IL_03CB: callvirt     UnityEngine.Transform UnityEngine.Component::get_transform()
+ 323 IL_03D0: callvirt     System.Void Il2CppBAPBAP.Player.PlayerManager::set_followTargetOverride(UnityEngine.Transform)
+ 324 IL_03D5: leave.s      IL_03DA
+ 325 IL_03D7: pop          
+ 326 IL_03D8: leave.s      IL_03DA
+ 327 IL_03DA: nop          
+ 328 IL_03DB: ldloc.1      
+ 329 IL_03DC: ldfld        Il2CppBAPBAP.Player.PlayerManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_1::local
+ 330 IL_03E1: call         System.Void Il2CppBAPBAP.Player.PlayerManager::set_LocalInstance(Il2CppBAPBAP.Player.PlayerManager)
+ 331 IL_03E6: leave.s      IL_03EB
+ 332 IL_03E8: pop          
+ 333 IL_03E9: leave.s      IL_03EB
+ 334 IL_03EB: nop          
+ 335 IL_03EC: ldloc.1      
+ 336 IL_03ED: ldfld        Il2CppBAPBAP.Player.PlayerManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_1::local
+ 337 IL_03F2: ldloc.0      
+ 338 IL_03F3: ldfld        Il2CppBAPBAP.Entities.EntityManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_0::entity
+ 339 IL_03F8: ldc.i4.1     
+ 340 IL_03F9: callvirt     System.Void Il2CppBAPBAP.Player.PlayerManager::AddCharObj(Il2CppBAPBAP.Entities.EntityManager,System.Boolean)
+ 341 IL_03FE: leave.s      IL_0403
+ 342 IL_0400: pop          
+ 343 IL_0401: leave.s      IL_0403
+ 344 IL_0403: nop          
+ 345 IL_0404: ldloc.0      
+ 346 IL_0405: ldfld        Il2CppBAPBAP.Entities.EntityManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_0::entity
+ 347 IL_040A: callvirt     System.Void Il2CppBAPBAP.Entities.EntityManager::ClStartAuth()
+ 348 IL_040F: leave.s      IL_0414
+ 349 IL_0411: pop          
+ 350 IL_0412: leave.s      IL_0414
+ 351 IL_0414: nop          
+ 352 IL_0415: ldloc.1      
+ 353 IL_0416: ldfld        Il2CppBAPBAP.Player.PlayerManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_1::local
+ 354 IL_041B: ldloc.0      
+ 355 IL_041C: ldfld        Il2CppBAPBAP.Entities.EntityManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_0::entity
+ 356 IL_0421: callvirt     UnityEngine.Transform UnityEngine.Component::get_transform()
+ 357 IL_0426: callvirt     System.Void Il2CppBAPBAP.Player.PlayerManager::UpdateAOI(UnityEngine.Transform)
+ 358 IL_042B: leave.s      IL_0430
+ 359 IL_042D: pop          
+ 360 IL_042E: leave.s      IL_0430
+ 361 IL_0430: ldloc.0      
+ 362 IL_0431: ldfld        Il2CppBAPBAP.Entities.EntityManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_0::entity
+ 363 IL_0436: ldarg.1      
+ 364 IL_0437: call         System.Void BAPBAP.Medusa.MedusaMod::RepairMedusaCameraTarget(Il2CppBAPBAP.Entities.EntityManager,System.String)
+ 365 IL_043C: ldsfld       System.Int32 BAPBAP.Medusa.MedusaMod::_localBindingRepairLogCount
+ 366 IL_0441: ldc.i4.s     24
+ 367 IL_0443: bge          IL_0629
+ 368 IL_0448: ldsfld       System.Collections.Generic.HashSet`1<System.Int32> BAPBAP.Medusa.MedusaMod::_localBindingRepairIds
+ 369 IL_044D: ldloc.s      V_5
+ 370 IL_044F: callvirt     System.Boolean System.Collections.Generic.HashSet`1<System.Int32>::Add(!0)
+ 371 IL_0454: brfalse      IL_0629
+ 372 IL_0459: ldsfld       System.Int32 BAPBAP.Medusa.MedusaMod::_localBindingRepairLogCount
+ 373 IL_045E: ldc.i4.1     
+ 374 IL_045F: add          
+ 375 IL_0460: stsfld       System.Int32 BAPBAP.Medusa.MedusaMod::_localBindingRepairLogCount
+ 376 IL_0465: ldsfld       BAPBAP.Medusa.MedusaMod BAPBAP.Medusa.MedusaMod::_instance
+ 377 IL_046A: stloc.s      V_15
+ 378 IL_046C: ldloc.s      V_15
+ 379 IL_046E: brfalse      IL_0629
+ 380 IL_0473: ldloc.1      
+ 381 IL_0474: ldfld        Il2CppBAPBAP.Player.PlayerManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_1::local
+ 382 IL_0479: callvirt     Il2CppBAPBAP.Entities.EntityManager Il2CppBAPBAP.Player.PlayerManager::get_primaryCharManager()
+ 383 IL_047E: stloc.s      V_16
+ 384 IL_0480: call         Il2CppBAPBAP.Entities.EntityManager BAPBAP.ModAPI.API.PlayerAPI::get_AuthViewCharacter()
+ 385 IL_0485: stloc.s      V_17
+ 386 IL_0487: ldloc.s      V_15
+ 387 IL_0489: callvirt     BAPBAP.ModAPI.ModLogger BAPBAP.ModAPI.ModBase::get_Log()
+ 388 IL_048E: ldc.i4       161
+ 389 IL_0493: ldc.i4.s     14
+ 390 IL_0495: newobj       System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::.ctor(System.Int32,System.Int32)
+ 391 IL_049A: stloc.s      V_18
+ 392 IL_049C: ldloca.s     V_18
+ 393 IL_049E: ldstr        [Medusa] local binding repaired via 
+ 394 IL_04A3: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendLiteral(System.String)
+ 395 IL_04A8: ldloca.s     V_18
+ 396 IL_04AA: ldarg.1      
+ 397 IL_04AB: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendFormatted(System.String)
+ 398 IL_04B0: ldloca.s     V_18
+ 399 IL_04B2: ldstr        : entity='
+ 400 IL_04B7: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendLiteral(System.String)
+ 401 IL_04BC: ldloca.s     V_18
+ 402 IL_04BE: ldloc.3      
+ 403 IL_04BF: call         System.String BAPBAP.Medusa.MedusaMod::ObjName(UnityEngine.Object)
+ 404 IL_04C4: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendFormatted(System.String)
+ 405 IL_04C9: ldloca.s     V_18
+ 406 IL_04CB: ldstr        ' owner 
+ 407 IL_04D0: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendLiteral(System.String)
+ 408 IL_04D5: ldloca.s     V_18
+ 409 IL_04D7: ldloc.s      V_7
+ 410 IL_04D9: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendFormatted<System.Int32>(!!0)
+ 411 IL_04DE: ldloca.s     V_18
+ 412 IL_04E0: ldstr        ->
+ 413 IL_04E5: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendLiteral(System.String)
+ 414 IL_04EA: ldloca.s     V_18
+ 415 IL_04EC: ldloc.0      
+ 416 IL_04ED: ldftn        System.Int32 BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_0::<RepairLocalMedusaBinding>b__4()
+ 417 IL_04F3: newobj       System.Void System.Func`1<System.Int32>::.ctor(System.Object,System.IntPtr)
+ 418 IL_04F8: call         System.Int32 BAPBAP.Medusa.MedusaMod::SafeIntValue(System.Func`1<System.Int32>)
+ 419 IL_04FD: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendFormatted<System.Int32>(!!0)
+ 420 IL_0502: ldloca.s     V_18
+ 421 IL_0504: ldstr         localId=
+ 422 IL_0509: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendLiteral(System.String)
+ 423 IL_050E: ldloca.s     V_18
+ 424 IL_0510: ldloc.s      V_6
+ 425 IL_0512: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendFormatted<System.Int32>(!!0)
+ 426 IL_0517: ldloca.s     V_18
+ 427 IL_0519: ldstr         hadPrimary='
+ 428 IL_051E: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendLiteral(System.String)
+ 429 IL_0523: ldloca.s     V_18
+ 430 IL_0525: ldloc.2      
+ 431 IL_0526: call         System.String BAPBAP.Medusa.MedusaMod::ObjName(UnityEngine.Object)
+ 432 IL_052B: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendFormatted(System.String)
+ 433 IL_0530: ldloca.s     V_18
+ 434 IL_0532: ldstr        ' nowPrimary='
+ 435 IL_0537: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendLiteral(System.String)
+ 436 IL_053C: ldloca.s     V_18
+ 437 IL_053E: ldloc.s      V_16
+ 438 IL_0540: call         System.String BAPBAP.Medusa.MedusaMod::ObjName(UnityEngine.Object)
+ 439 IL_0545: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendFormatted(System.String)
+ 440 IL_054A: ldloca.s     V_18
+ 441 IL_054C: ldstr        ' auth='
+ 442 IL_0551: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendLiteral(System.String)
+ 443 IL_0556: ldloca.s     V_18
+ 444 IL_0558: ldloc.s      V_17
+ 445 IL_055A: call         System.String BAPBAP.Medusa.MedusaMod::ObjName(UnityEngine.Object)
+ 446 IL_055F: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendFormatted(System.String)
+ 447 IL_0564: ldloca.s     V_18
+ 448 IL_0566: ldstr        ' pos=
+ 449 IL_056B: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendLiteral(System.String)
+ 450 IL_0570: ldloca.s     V_18
+ 451 IL_0572: ldloc.0      
+ 452 IL_0573: ldfld        Il2CppBAPBAP.Entities.EntityManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_0::entity
+ 453 IL_0578: call         System.String BAPBAP.Medusa.MedusaMod::FmtPos(UnityEngine.Component)
+ 454 IL_057D: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendFormatted(System.String)
+ 455 IL_0582: ldloca.s     V_18
+ 456 IL_0584: ldstr         screen=
+ 457 IL_0589: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendLiteral(System.String)
+ 458 IL_058E: ldloca.s     V_18
+ 459 IL_0590: ldloc.0      
+ 460 IL_0591: ldfld        Il2CppBAPBAP.Entities.EntityManager BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_0::entity
+ 461 IL_0596: call         System.String BAPBAP.Medusa.MedusaMod::ScreenPos(UnityEngine.Component)
+ 462 IL_059B: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendFormatted(System.String)
+ 463 IL_05A0: ldloca.s     V_18
+ 464 IL_05A2: ldstr         owned=
+ 465 IL_05A7: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendLiteral(System.String)
+ 466 IL_05AC: ldloca.s     V_18
+ 467 IL_05AE: ldloc.0      
+ 468 IL_05AF: ldftn        System.Boolean BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_0::<RepairLocalMedusaBinding>b__5()
+ 469 IL_05B5: newobj       System.Void System.Func`1<System.Boolean>::.ctor(System.Object,System.IntPtr)
+ 470 IL_05BA: call         System.String BAPBAP.Medusa.MedusaMod::SafeBool(System.Func`1<System.Boolean>)
+ 471 IL_05BF: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendFormatted(System.String)
+ 472 IL_05C4: ldloca.s     V_18
+ 473 IL_05C6: ldstr         localPlayerOwned=
+ 474 IL_05CB: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendLiteral(System.String)
+ 475 IL_05D0: ldloca.s     V_18
+ 476 IL_05D2: ldloc.1      
+ 477 IL_05D3: ldftn        System.Boolean BAPBAP.Medusa.MedusaMod/<>c__DisplayClass430_1::<RepairLocalMedusaBinding>b__6()
+ 478 IL_05D9: newobj       System.Void System.Func`1<System.Boolean>::.ctor(System.Object,System.IntPtr)
+ 479 IL_05DE: call         System.String BAPBAP.Medusa.MedusaMod::SafeBool(System.Func`1<System.Boolean>)
+ 480 IL_05E3: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendFormatted(System.String)
+ 481 IL_05E8: ldloca.s     V_18
+ 482 IL_05EA: ldstr         force=
+ 483 IL_05EF: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendLiteral(System.String)
+ 484 IL_05F4: ldloca.s     V_18
+ 485 IL_05F6: ldarg.2      
+ 486 IL_05F7: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendFormatted<System.Boolean>(!!0)
+ 487 IL_05FC: ldloca.s     V_18
+ 488 IL_05FE: ldstr         forceAllowed=
+ 489 IL_0603: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendLiteral(System.String)
+ 490 IL_0608: ldloca.s     V_18
+ 491 IL_060A: ldloc.s      V_12
+ 492 IL_060C: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendFormatted<System.Boolean>(!!0)
+ 493 IL_0611: ldloca.s     V_18
+ 494 IL_0613: ldstr        .
+ 495 IL_0618: call         System.Void System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendLiteral(System.String)
+ 496 IL_061D: ldloca.s     V_18
+ 497 IL_061F: call         System.String System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::ToStringAndClear()
+ 498 IL_0624: callvirt     System.Void BAPBAP.ModAPI.ModLogger::Info(System.String)
+ 499 IL_0629: leave.s      IL_0672
+ 500 IL_062B: stloc.s      V_19
+ 501 IL_062D: ldsfld       BAPBAP.Medusa.MedusaMod BAPBAP.Medusa.MedusaMod::_instance
+ 502 IL_0632: stloc.s      V_20
+ 503 IL_0634: ldloc.s      V_20
+ 504 IL_0636: brfalse.s    IL_0670
+ 505 IL_0638: ldsfld       System.Int32 BAPBAP.Medusa.MedusaMod::_localBindingRepairLogCount
+ 506 IL_063D: ldc.i4.s     24
+ 507 IL_063F: bge.s        IL_0670
+ 508 IL_0641: ldsfld       System.Int32 BAPBAP.Medusa.MedusaMod::_localBindingRepairLogCount
+ 509 IL_0646: ldc.i4.1     
+ 510 IL_0647: add          
+ 511 IL_0648: stsfld       System.Int32 BAPBAP.Medusa.MedusaMod::_localBindingRepairLogCount
+ 512 IL_064D: ldloc.s      V_20
+ 513 IL_064F: callvirt     BAPBAP.ModAPI.ModLogger BAPBAP.ModAPI.ModBase::get_Log()
+ 514 IL_0654: ldstr        [Medusa] local binding repair failed via 
+ 515 IL_0659: ldarg.1      
+ 516 IL_065A: ldstr        : 
+ 517 IL_065F: ldloc.s      V_19
+ 518 IL_0661: callvirt     System.String System.Exception::get_Message()
+ 519 IL_0666: call         System.String System.String::Concat(System.String,System.String,System.String,System.String)
+ 520 IL_066B: callvirt     System.Void BAPBAP.ModAPI.ModLogger::Warn(System.String)
+ 521 IL_0670: leave.s      IL_0672
+ 522 IL_0672: ret          

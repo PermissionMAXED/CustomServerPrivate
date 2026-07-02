@@ -1,0 +1,5 @@
+{
+    "Title":  "Missing Method",
+    "Message":  "No such web method \u0027GetAPISpec\u0027",
+    "StackTrace":  "   at GSMyAdmin.WebServer.MethodInvocation.InvokeMethod(String MethodName, JObject Data, HttpContext context, IWebSession Session, WebMethodsBase MethodsClass, IPAddress RealIP)\n   at GSMyAdmin.WebServer.ApiService.InvokeAPI(HttpContext context, IWebSession session, JObject data, String requestModule, String requestMethod)\n   at GSMyAdmin.WebServer.MethodInvocation.InvokeMethod(String MethodName, JObject Data, HttpContext context, IWebSession Session, WebMethodsBase MethodsClass, IPAddress RealIP)\n   at GSMyAdmin.WebServer.ApiService.InvokeAPI(HttpContext context, IWebSession session, JObject data, String requestModule, String requestMethod)"
+}

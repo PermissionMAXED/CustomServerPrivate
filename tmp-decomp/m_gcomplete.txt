@@ -1,0 +1,145 @@
+using System;
+
+namespace BAPBAP.Network;
+
+[Serializable]
+public class GameCompletedMessage
+{
+	[Serializable]
+	public class Payload
+	{
+		public SquadStats squadStats;
+
+		public RankStats rankStats;
+
+		public XP xp;
+
+		public Asset[] rewards;
+
+		public Asset[] costs;
+
+		public DailyReward dailies;
+	}
+
+	[Serializable]
+	public class Asset
+	{
+		public int assetId;
+
+		public int amount;
+
+		public int balance;
+	}
+
+	[Serializable]
+	public class SquadStats
+	{
+		[Serializable]
+		public class PlayerStats
+		{
+			public string accountId;
+
+			public string username;
+
+			public int discriminator;
+
+			public int charId;
+
+			public int bannerId;
+
+			public int kills;
+
+			public int deaths;
+
+			public int assists;
+
+			public int damageDealt;
+
+			public int damageReceived;
+
+			public int healingReceived;
+		}
+
+		public int placement;
+
+		public int squadKills;
+
+		public PlayerStats[] allPlayerStats;
+	}
+
+	[Serializable]
+	public class RankStats
+	{
+		[Serializable]
+		public class Breakdown
+		{
+			public int placement;
+
+			public int squadKills;
+
+			public int mmrAdjustment;
+
+			public int entryFee;
+		}
+
+		public bool isRanked;
+
+		public int currPoints;
+
+		public int newPoints;
+
+		public int pointsDelta;
+
+		public bool isPromotion;
+
+		public bool isDemotion;
+
+		public int gameModeId;
+
+		public Breakdown breakdown;
+	}
+
+	[Serializable]
+	public class XP
+	{
+		[Serializable]
+		public class Breakdown
+		{
+			public int placement;
+
+			public int squadKills;
+
+			public int timeAlive;
+		}
+
+		public int total;
+
+		public Breakdown breakdown;
+	}
+
+	[Serializable]
+	public class DailyReward
+	{
+		[Serializable]
+		public class Breakdown
+		{
+			public int placement;
+
+			public int squadKills;
+		}
+
+		public int currProgress;
+
+		public int delta;
+
+		public int newProgress;
+
+		public int max;
+
+		public Breakdown breakdown;
+	}
+
+	public string @event;
+
+	public Payload payload;
+}

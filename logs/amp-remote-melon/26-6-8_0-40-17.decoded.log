@@ -1,0 +1,305 @@
+﻿[00:40:18.078] [UNITY] [UnityMemory] Configuration Parameters - Can be set up in boot.config
+[00:40:18.079] [UNITY]     "memorysetup-bucket-allocator-granularity=16"
+[00:40:18.079] [UNITY]     "memorysetup-bucket-allocator-bucket-count=8"
+[00:40:18.080] [UNITY]     "memorysetup-bucket-allocator-block-size=4194304"
+[00:40:18.080] [UNITY]     "memorysetup-bucket-allocator-block-count=1"
+[00:40:18.081] [UNITY]     "memorysetup-main-allocator-block-size=16777216"
+[00:40:18.081] [UNITY]     "memorysetup-thread-allocator-block-size=16777216"
+[00:40:18.082] [UNITY]     "memorysetup-gfx-main-allocator-block-size=16777216"
+[00:40:18.083] [UNITY]     "memorysetup-gfx-thread-allocator-block-size=16777216"
+[00:40:18.083] [UNITY]     "memorysetup-cache-allocator-block-size=4194304"
+[00:40:18.084] [UNITY]     "memorysetup-typetree-allocator-block-size=2097152"
+[00:40:18.084] [UNITY]     "memorysetup-profiler-bucket-allocator-granularity=16"
+[00:40:18.085] [UNITY]     "memorysetup-profiler-bucket-allocator-bucket-count=8"
+[00:40:18.086] [UNITY]     "memorysetup-profiler-bucket-allocator-block-size=4194304"
+[00:40:18.086] [UNITY]     "memorysetup-profiler-bucket-allocator-block-count=1"
+[00:40:18.087] [UNITY]     "memorysetup-profiler-allocator-block-size=16777216"
+[00:40:18.087] [UNITY]     "memorysetup-profiler-editor-allocator-block-size=1048576"
+[00:40:18.088] [UNITY]     "memorysetup-temp-allocator-size-main=4194304"
+[00:40:18.089] [UNITY]     "memorysetup-job-temp-allocator-block-size=2097152"
+[00:40:18.090] [UNITY]     "memorysetup-job-temp-allocator-block-size-background=1048576"
+[00:40:18.090] [UNITY]     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+[00:40:18.091] [UNITY]     "memorysetup-allocator-temp-initial-block-size-main=262144"
+[00:40:18.091] [UNITY]     "memorysetup-allocator-temp-initial-block-size-worker=262144"
+[00:40:18.092] [UNITY]     "memorysetup-temp-allocator-size-background-worker=32768"
+[00:40:18.092] [UNITY]     "memorysetup-temp-allocator-size-job-worker=262144"
+[00:40:18.093] [UNITY]     "memorysetup-temp-allocator-size-preload-manager=262144"
+[00:40:18.093] [UNITY]     "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+[00:40:18.094] [UNITY]     "memorysetup-temp-allocator-size-audio-worker=65536"
+[00:40:18.094] [UNITY]     "memorysetup-temp-allocator-size-cloud-worker=32768"
+[00:40:18.095] [UNITY]     "memorysetup-temp-allocator-size-gfx=262144"
+
+[00:40:18.607] ------------------------------
+[00:40:18.608] MelonLoader v0.7.2 Open-Beta
+[00:40:18.609] OS: Wine/Proton 10.0
+[00:40:18.609] Hash Code: 58AB98835E598BD67B7DB233734DE8603F92C9C6A6081B13CB9A5CC37C02DD13
+[00:40:18.609] ------------------------------
+[00:40:18.610] Game Type: Il2cpp
+[00:40:18.610] Game Arch: x86
+[00:40:18.611] ------------------------------
+[00:40:18.611] Command-Line: 
+[00:40:18.612] ------------------------------
+[00:40:18.612] Core::BasePath = Z:\AMP\BapCustomServer\game
+[00:40:18.616] Game::BasePath = Z:\AMP\BapCustomServer\game
+[00:40:18.617] Game::DataPath = Z:\AMP\BapCustomServer\game\bapbap_Data
+[00:40:18.617] Game::ApplicationPath = Z:\AMP\BapCustomServer\game\bapbap.exe
+[00:40:18.618] Runtime Type: net6
+[00:40:18.961] ------------------------------
+[00:40:18.962] Game Name: BAPBAP
+[00:40:18.962] Game Developer: gg.bapbap
+[00:40:18.964] Unity Version: 2022.3.38f1
+[00:40:18.965] Game Version: 0.1.1758-38212
+[00:40:18.965] ------------------------------
+
+[00:40:19.388] Preferences Loaded!
+
+[00:40:19.400] Loading UserLibs...
+[00:40:19.416] ------------------------------
+[00:40:19.431] Melon Assembly loaded: '.\UserLibs\BAPBAP.ModAPI.dll'
+[00:40:19.432] SHA256 Hash: '0E14F39A9C47B6EBA106A0F23E76A0989B3270D7BCDD3E4BB0DD51E63BDB3CB5'
+[00:40:19.432] ------------------------------
+[00:40:19.433] 0 UserLibs loaded.
+
+[00:40:19.433] Loading Plugins...
+[00:40:19.438] 0 Plugins loaded.
+
+[00:40:21.116] Loading Il2CppAssemblyGenerator...
+[00:40:21.150] [Il2CppAssemblyGenerator] Using Cpp2IL Version: 2022.1.0-pre-release.21
+[00:40:21.151] [Il2CppAssemblyGenerator] Using Il2CppInterop Version = 1.5.1+dbaf825aab891ff1e1627bea691bde0a81d1ad98
+[00:40:21.151] [Il2CppAssemblyGenerator] Using Unity Dependencies Version = 2022.3.38
+[00:40:21.152] [Il2CppAssemblyGenerator] Using Deobfuscation Regex = null
+[00:40:21.152] [Il2CppAssemblyGenerator] Cpp2IL is up to date.
+[00:40:21.153] [Il2CppAssemblyGenerator] Cpp2IL.Plugin.StrippedCodeRegSupport is up to date.
+[00:40:21.154] [Il2CppAssemblyGenerator] UnityDependencies is up to date.
+[00:40:21.154] [Il2CppAssemblyGenerator] Checking GameAssembly...
+[00:40:21.551] [Il2CppAssemblyGenerator] Assembly is up to date. No Generation Needed.
+
+[00:40:21.552] Loading Mods...
+[00:40:21.585] ------------------------------
+[00:40:21.589] Melon Assembly loaded: '.\Mods\BAPBAP.Medusa.dll'
+[00:40:21.590] SHA256 Hash: '49E3F28BF2318AB0CB2CFD2B9D55FD6CC498F2E267BDEB219FC1185F6C5B61C4'
+[00:40:21.599] Melon Assembly loaded: '.\Mods\BapCustomServerMelon.dll'
+[00:40:21.599] SHA256 Hash: '35942181ED16CD1FE3A06350F7D2255030CFD6C6D30BE0109BC1E4123CE4C611'
+
+[00:40:21.928] [BAP_Custom_Server] Loaded custom server ini.
+[00:40:21.941] [BAP_Custom_Server] [Perf] Dedicated server: targetFrameRate=240, vSync=0 (kept default fixedDeltaTime)
+[00:40:21.942] [BAP_Custom_Server] [BAPCustomConfig] mode=dedicated upstream=http://127.0.0.1:5055 proxy=False localPort=5055 dedicatedPorts=http:7850 ws:7778 kcp:7779 tcp:7780 batchMode=True containsNoGraphicsArg=True autoJoin=none
+[00:40:21.945] [BAP_Custom_Server] Managed match bootstrap listener is active.
+[00:40:21.953] [BAP_Custom_Server] Installed 4 NetworkConfig runtime patch(es).
+[00:40:21.959] [BAP_Custom_Server] Installed 2 PreAwakeManager network config patch(es).
+[00:40:21.966] [BAP_Custom_Server] Installed 2 HttpClient host rewrite patch(es).
+[00:40:21.968] [BAP_Custom_Server] Installed ControllerManager network runtime patch.
+[00:40:21.975] [BAP_Custom_Server] Installed 4 LobbyNetworkClient runtime network patch(es).
+[00:40:21.978] [BAP_Custom_Server] Installed lifecycle guard on 2 Application.Quit overload(s). Guard PERMANENT (custom servers).
+[00:40:21.982] [BAP_Custom_Server] Installed AnalyticsManager custom-server no-op patch.
+[00:40:22.038] [BAP_Custom_Server] Installed 40 character-select NullRef guard prefix patch(es).
+[00:40:22.048] [BAP_Custom_Server] Installed 5 PopulateCharIdsBeforeBuild prefix(es) on UILobbyCharacterSelectPage.
+[00:40:22.051] [BAP_Custom_Server] Installed 3 PopulateCharIdsBeforeBuild prefix(es) on UILobbyPlayTabPage.
+[00:40:22.097] [BAP_Custom_Server] Installed 32 LobbyController NullRef guard finalizer patch(es).
+[00:40:22.125] [BAP_Custom_Server] Queued managed match bootstrap payload: /setup-game
+[00:40:22.615] [BAP_Custom_Server] Installed 1 CharacterIsUnlocked force-unlock patch(es).
+[00:40:22.661] [BAP_Custom_Server] Server match policy fetched: Both (matchmaking=allowed, custom=allowed). When a path is blocked, the mod logs a clear error if the user tries to use it.
+[00:40:22.663] [BAP_Custom_Server] Initialized during early registration.
+[00:40:22.664] ------------------------------
+[00:40:22.665] BAP Custom Server v1.0.2
+[00:40:22.667] by Sonic0810
+[00:40:22.667] Assembly: BapCustomServerMelon.dll
+[00:40:22.667] ------------------------------
+[00:40:22.669] ------------------------------
+[00:40:22.669] BAPBAP ModAPI v2.2.1
+[00:40:22.670] by BAPBAP Modding Community
+[00:40:22.670] Assembly: BAPBAP.ModAPI.dll
+[00:40:22.670] ------------------------------
+[00:40:22.672] ------------------------------
+[00:40:22.672] Medusa v1.6.56
+[00:40:22.673] by BAPBAPCommunity
+[00:40:22.673] Assembly: BAPBAP.Medusa.dll
+[00:40:22.673] ------------------------------
+[00:40:22.674] ------------------------------
+[00:40:22.674] 3 Mods loaded.
+
+[00:40:26.456] [Il2CppInterop] Class::Init signatures have been exhausted, using a substitute!
+[00:40:28.498] [Il2CppInterop] Registered mono type MelonLoader.Support.MonoEnumeratorWrapper in il2cpp domain
+[00:40:28.541] Support Module Loaded: Z:\AMP\BapCustomServer\game\MelonLoader\Dependencies\SupportModules\Il2Cpp.dll
+[00:40:28.999] [BAPBAP_ModAPI] BAPBAP ModAPI v2.2.1 initializing ...
+[00:40:29.000] [BAPBAP_ModAPI]   by BAPBAP Modding Community
+[00:40:29.002] [BAPBAP_ModAPI]   loaded as Z:\AMP\BapCustomServer\game\UserLibs\BAPBAP.ModAPI.dll
+[00:40:29.002] [BAPBAP_ModAPI] [Hooks] Installing global hooks ...
+[00:40:29.004] [BAPBAP_ModAPI] [Hooks]   ✓ PlayerHooks
+[00:40:29.005] [BAPBAP_ModAPI] [Hooks]   ✓ MatchHooks
+[00:40:29.005] [BAPBAP_ModAPI] [Hooks]   ✓ CombatHooks
+[00:40:29.006] [BAPBAP_ModAPI] [Hooks]   ✓ ChatHooks
+[00:40:29.006] [BAPBAP_ModAPI] [Hooks]   ✓ NetworkHooks
+[00:40:29.007] [BAPBAP_ModAPI] [Hooks]   ✓ UIHooks
+[00:40:29.008] [BAPBAP_ModAPI] [Hooks]   ✓ AbilityHooks
+[00:40:29.008] [BAPBAP_ModAPI] [Hooks]   ✓ StatusEffectHooks
+[00:40:29.009] [BAPBAP_ModAPI] [Hooks]   ✓ ItemHooks
+[00:40:29.009] [BAPBAP_ModAPI] [Hooks]   ✓ VehicleHooks
+[00:40:29.010] [BAPBAP_ModAPI] [Hooks]   ✓ EntityHooks
+[00:40:29.011] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraAbilityHooks
+[00:40:29.011] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraItemHooks
+[00:40:29.012] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraVehicleHooks
+[00:40:29.012] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraEntityHooks
+[00:40:29.013] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraMovementHooks
+[00:40:29.014] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraPassiveHooks
+[00:40:29.014] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraInteractionHooks
+[00:40:29.015] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraKillHooks
+[00:40:29.015] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraEmoteHooks
+[00:40:29.016] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraMetaHooks
+[00:40:29.016] [BAPBAP_ModAPI] [Hooks] Done. 21 hook groups installed.
+[00:40:29.020] [Il2CppInterop] Registered mono type BAPBAP.ModAPI.Lifecycle.ModUpdateRunner in il2cpp domain
+[00:40:29.020] [BAPBAP_ModAPI] [Lifecycle] ModUpdateRunner registered with Il2Cpp.
+[00:40:29.023] [Il2CppInterop] Registered mono type BAPBAP.ModAPI.API.NotificationAPI+ScheduledFader in il2cpp domain
+[00:40:29.025] [Il2CppInterop] Registered mono type BAPBAP.ModAPI.UI.ModLoaderUIRunner in il2cpp domain
+[00:40:29.026] [BAPBAP_ModAPI] [ModLoaderUI] Runner registered with Il2Cpp.
+[00:40:29.027] [BAPBAP_ModAPI] BAPBAP ModAPI ready. Mods should subclass ModBase to register.
+[00:40:29.029] [BAPBAP_ModAPI] [Registry] Mod registered: Medusa (com.bapbap.medusa)
+[00:40:29.032] [BAPBAP_ModAPI] [Keybind] registered 'medusa.register' -> F7 (ctrl=False shift=False alt=False)
+[00:40:29.033] [Medusa] [Medusa] Loaded (v1.6.57). Auto-registers at the lobby; /medusa or F7 to force, /medusa status, /medusa anim.
+[00:40:29.034] [Medusa] [Medusa] v1.6.57: writes repaired CharacterPageModel data onto the live UILobbyCharacterSelectPage before native listing resolution, stabilizes custom roster indexes, binds the prematch Medusa icon through an IL2CPP click proxy, caches repaired Lush particle materials, deduplicates casts by stable owner and slot, supports native RMB input for Venom Spit, suppresses inherited Cat and Arrow-family Shoot paths, drives all four Medusa abilities, triggers Medusa attack animations, reasserts opaque CharMaterial after ability casts, avoids stale local auto-selection in QueueMatched data, submits explicit prematch Medusa clicks through CmdTrySelectCharacter including View_PreMatch_CharSelect, performs server-authoritative Slither movement, and restores native Medusa ability titles. Bundle: UserData\Medusa\medusa.bundle.
+[00:40:29.039] [Medusa] [Medusa] bundle file located: 'Z:\AMP\BapCustomServer\game\UserData\Medusa\medusa.bundle' (1567424 bytes).
+[00:40:29.130] [Medusa] [Medusa] AssetBundle loaded (handle obtained).
+[00:40:29.134] [Medusa] [Medusa] bundle contains 36 asset(s). Sample: assets/animationclip/medusa_attack_01.anim | assets/animationclip/medusa_attack_02.anim | assets/animationclip/medusa_attack_03.anim | assets/animationclip/medusa_idle.anim | assets/animationclip/medusa_idle_blend.anim | assets/animationclip/medusa_idle_turn_left.anim
+[00:40:29.144] [Medusa] [Medusa] visual prefab 'Medusa_Visual' loaded from bundle.
+[00:40:29.149] [Medusa] [Medusa] cached bundle textures/material: albedo='Medusa_Tex_Albedo_1024' normal='Medusa_Tex_Normal_1024' material='Medusa_Material'.
+[00:40:29.160] [Medusa] [Medusa] native VFX prefabs loaded: 6/6 [VFX_Medusa_Poison_Escape, VFX_Medusa_Poison_Hit, VFX_Medusa_Poison_Muzzle, VFX_Medusa_Poison_Puddle, VFX_Medusa_Poison_Trail, VFX_Medusa_Poison_Wall].
+[00:40:29.172] [Medusa] [Medusa] cached animator controller via TryLoadBundle.prefab: animator='Medusa_Visual' controller='Medusa'.
+[00:40:29.198] [Medusa] [Medusa] visual diagnostics via TryLoadBundle.prefab: root='Medusa_Visual' visualActive=False layer=0 world=(0,0,0) local=(0,0,0) scale=(1,1,1) renderers=4 smrs=1 firstRenderer='Base_BlobShadow' firstRendererLayer=0 firstSmr='MedusaBase' mesh='MedusaBase' rootBone='Def-Hips' material='Medusa_Material' shader='Standard' bounds=-0.026,0.792,-0.022/2.008,2.416,2.271 screen='<no-main-camera>'.
+[00:40:29.212] [Medusa] [Medusa] Harmony rebind patches installed (CharAnimator.Awake + CharFootsteps.Awake postfixes).
+[00:40:29.582] [Medusa] [Medusa] Harmony UI/prematch patches installed: ok=64, failed=0.
+[00:40:29.588] [Medusa] [Medusa] Harmony status-on-hit patch installed (HitboxBase.OnHitSuccess postfix: poison + petrify).
+[00:40:32.758] [Medusa] [Medusa] runtime scene state reset: scene unloaded -1:
+[00:40:32.926] [Medusa] [Medusa] cloning base character 'Kitsu' (charId=0).
+[00:40:32.945] [Il2CppInterop] During invoking native->managed trampoline
+Il2CppInterop.Runtime.Il2CppException: System.NullReferenceException: Object reference not set to an instance of an object.
+--- BEGIN IL2CPP STACK TRACE ---
+System.NullReferenceException: Object reference not set to an instance of an object.
+  at BAPBAP.Game.GameManager.get_IsClient () [0x00000] in <00000000000000000000000000000000>:0 
+  at UnityEngine.Object.Internal_CloneSingle (UnityEngine.Object data) [0x00000] in <00000000000000000000000000000000>:0 
+  at UnityEngine.Object.Instantiate[T] (T original) [0x00000] in <00000000000000000000000000000000>:0 
+  at BAPBAP.Local.PreAwakeManager.Awake () [0x00000] in <00000000000000000000000000000000>:0 
+--- END IL2CPP STACK TRACE ---
+
+   at Il2CppInterop.Runtime.Il2CppException.RaiseExceptionIfNecessary(IntPtr returnedException) in /home/runner/work/Il2CppInterop/Il2CppInterop/Il2CppInterop.Runtime/Il2CppException.cs:line 36
+   at DMD<Il2CppBAPBAP.Entities.CharAnimator::Awake>(CharAnimator this)
+   at (il2cpp -> managed) Awake(IntPtr , Il2CppMethodInfo* )
+[00:40:32.955] [Medusa] [Medusa] graft: captured native toon template - SMR='KitsuBase', material='Kitsu_Material', shader='Custom/Toon/Toon_Character_Amplify'.
+[00:40:32.957] [Medusa] [Medusa] graft: disabled 13 base Renderer(s).
+[00:40:32.961] [Medusa] [Medusa] visual anchor via GraftMedusaVisual: root='Char_Medusa' parent Char_Medusa->Root localPos=(0,0,0) worldPos=(0,-0,-0).
+[00:40:32.962] [Medusa] [Medusa] visual fit via GraftMedusaVisual: skinnedBaseH=2.153 skinnedVisualH=2.11 scaleFactor=0.808 localScale=0.808 localPos=(-0.168,-0.647,0.86).
+[00:40:32.963] [Medusa] [Medusa] visual default transform captured via GraftMedusaVisual: localPos=(-0.168,-0.647,0.86) localScale=0.808.
+[00:40:32.967] [Medusa] [Medusa] visual layer sync via GraftMedusaVisual: layer=0 'Default' objects=59.
+[00:40:32.970] [Medusa] [Medusa] visual render enable via GraftMedusaVisual: renderers=4 newlyEnabled=0 smrsUpdateWhenOffscreen=1 active=False localPos=(-0.168,-0.647,0.86) localScale=0.808.
+[00:40:32.975] [Medusa] [Medusa] visual layer sync via GraftMedusaVisual.postCharMaterial: layer=0 'Default' objects=59.
+[00:40:32.978] [Medusa] [Medusa] visual layer sync via GraftMedusaVisual.postCharMaterial.postVisibility: layer=0 'Default' objects=59.
+[00:40:32.986] [Medusa] [Medusa] CharMaterial visibility forced via GraftMedusaVisual.postCharMaterial: alpha=1 opaque=true partialHidden=false rendererActive=true visualActive=False.
+[00:40:32.986] [Medusa] [Medusa] CharMaterial rebound via GraftMedusaVisual: primary='MedusaBase' primaryLayer=0 renderers=4 extras=3 customBounds=True.
+[00:40:32.987] [Medusa] [Medusa] cached animator controller via GraftMedusaVisual: animator='Medusa_Visual' controller='Medusa'.
+[00:40:32.991] [Medusa] [Medusa] graft: shader applied to 'MedusaBase' (shader='Custom/Toon/Toon_Character_Amplify', albedo='<none>', normal='<none>').
+[00:40:32.991] [Medusa] [Medusa] graft: applied native toon shader 'Custom/Toon/Toon_Character_Amplify' to 1 Medusa SkinnedMeshRenderer(s).
+[00:40:32.996] [Medusa] [Medusa] material visibility via GraftMedusaVisual.postShader: smrs=1 shader='Custom/Toon/Toon_Character_Amplify' localPos=(-0.168,-0.647,0.86).
+[00:40:32.996] [Medusa] [Medusa] visual render enable via GraftMedusaVisual.postMaterial: renderers=4 newlyEnabled=0 smrsUpdateWhenOffscreen=1 active=False localPos=(-0.168,-0.647,0.86) localScale=0.808.
+[00:40:32.997] [Medusa] [Medusa] visual layer sync via GraftMedusaVisual.postMaterial.postVisibility: layer=0 'Default' objects=59.
+[00:40:32.998] [Medusa] [Medusa] CharMaterial visibility forced via GraftMedusaVisual.postMaterial: alpha=1 opaque=true partialHidden=false rendererActive=true visualActive=False.
+[00:40:32.999] [Medusa] [Medusa] visual diagnostics via GraftMedusaVisual.postMaterial: root='Char_Medusa' visualActive=False layer=0 world=(-0.193,0.988,0.744) local=(-0.168,-0.647,0.86) scale=(0.808,0.808,0.808) renderers=4 smrs=1 firstRenderer='Base_BlobShadow' firstRendererLayer=0 firstSmr='MedusaBase' mesh='MedusaBase' rootBone='Def-Hips' material='Medusa_Material_Native' shader='Custom/Toon/Toon_Character_Amplify' bounds=-0.217,0.968,0.008/1.866,2.11,2.245 screen='563.9,118.5,-0.9'.
+[00:40:32.999] [Medusa] [Medusa] graft: wired CharAnimator.animator -> Medusa's Animator (count=1, customAnimator=true, controller='Medusa').
+[00:40:33.000] [Medusa] [Medusa] graft: wired CharFootsteps.animator -> Medusa's Animator (count=1).
+[00:40:33.001] [Medusa] [Medusa] graft: disabled 3 non-Medusa Animator(s) on the clone.
+[00:40:33.001] [Medusa] [Medusa] graft: instantiated Medusa_Visual under clone (SkinnedMeshRenderers=1, animator=yes, controller='Medusa').
+[00:40:33.005] [Medusa] [Medusa] Mirror runtime identity sanitized via RegisterPrefab.clone: prefab='Char_Medusa' identities=1.
+[00:40:33.006] [Medusa] [Medusa] Mirror client registration delegated to NetworkManager.spawnPrefabs for assetId=0x4D454455; skipped direct NetworkClient.RegisterPrefab via RegisterPrefab.clone.
+[00:40:33.014] [Medusa] [Medusa] NetworkPrefabPool ready via RegisterPrefab.clone: prefab='Char_Medusa' libraryHad=False libraryAppended=True clientActive=False clientCreated=False serverActive=False serverCreated=False.
+[00:40:33.016] [Medusa] [Medusa] Mirror prefab ready via RegisterPrefab.clone: prefab='Char_Medusa' oldAssetId=0xD2D60B88 newAssetId=0x4D454455 oldSceneId=0 oldNetId=0 oldHasSpawned=True oldSpawnedFromInstantiate=False sceneId=0 hasSpawned=false.
+[00:40:33.021] [Medusa] [Medusa] NetworkManager.spawnPrefabs appended via RegisterPrefab.clone: prefab='Char_Medusa' count=1.
+[00:40:33.021] [Medusa] [Medusa] prefab cloned -> characterPrefabsByCharId[15] (visualGrafted=True).
+[00:40:33.035] [Medusa] [Medusa] suppressed 8 inherited Kitsu VFX prefab reference(s) via TuneCharAbilities(prefab) on 'Char_Medusa'.
+[00:40:33.047] [Medusa] [Medusa] tuned CharAbilities: damage 0->0, attackSpeed 0->0, cooldown 0->0, critChance 0->0.2, maxAttackSpeed 10->9.5.
+[00:40:33.047] [Medusa] [Medusa] prefab registration ready via TryRegisterMedusa: baseCharId=0 medusaCharId=15.
+[00:40:33.058] [Medusa] [Medusa] moved Medusa into visible match select slot via TryRegisterMedusa.appended: oldIndex=15 newIndex=7 lobbyChanged=False.
+[00:40:33.062] [Medusa] [Medusa] made 16 characters available in lobby (incl. Medusa).
+[00:40:33.076] [Medusa] [Medusa] phrases injected (added=14, updated=0, total=14). Sample MEDUSA_AB_LMB_TITLE -> 'Serpent Bolt'.
+[00:40:33.076] [Medusa] [Medusa] ✓ registered as CharId=15, name='Medusa'. Roster now 16.
+[00:40:33.085] [BAPBAP_ModAPI] [NotificationAPI] Canvas created.
+[00:40:33.092] [Medusa] [Medusa] UIManager early registration via UIManager.PreAwake: charId=15 roster=16.
+[00:40:33.153] [Medusa] [Medusa] Mirror runtime identity sanitized via GameNetworkManager.Awake.existing: prefab='Char_Medusa' identities=1.
+[00:40:33.154] [Medusa] [Medusa] NetworkPrefabPool ready via GameNetworkManager.Awake.existing: prefab='Char_Medusa' libraryHad=True libraryAppended=False clientActive=False clientCreated=False serverActive=False serverCreated=False.
+[00:40:33.155] [Medusa] [Medusa] Mirror prefab ready via GameNetworkManager.Awake.existing: prefab='Char_Medusa' oldAssetId=0x4D454455 newAssetId=0x4D454455 oldSceneId=0 oldNetId=0 oldHasSpawned=False oldSpawnedFromInstantiate=False sceneId=0 hasSpawned=false.
+[00:40:33.160] [Medusa] [Medusa] Mirror runtime identity sanitized via GameNetworkManager.Awake.existing: prefab='Char_Medusa' identities=1.
+[00:40:33.161] [Medusa] [Medusa] NetworkPrefabPool ready via GameNetworkManager.Awake.existing: prefab='Char_Medusa' libraryHad=True libraryAppended=False clientActive=False clientCreated=False serverActive=False serverCreated=False.
+[00:40:33.161] [Medusa] [Medusa] Mirror prefab ready via GameNetworkManager.Awake.existing: prefab='Char_Medusa' oldAssetId=0x4D454455 newAssetId=0x4D454455 oldSceneId=0 oldNetId=0 oldHasSpawned=False oldSpawnedFromInstantiate=False sceneId=0 hasSpawned=false.
+[00:40:33.237] [Medusa] [Medusa] lobby page model unlocked via View_PreMatch_CharSelect.Initialize.new: ids=2,1,5,0,3,4,6,15,7,8,9,10,11,12,13,14.
+[00:40:33.238] [Medusa] [Medusa] ensured UILobbyCharacterSelectPage data before View_PreMatch_CharSelect.Initialize: pages=1.
+[00:40:33.238] [Medusa] [Medusa] Mirror runtime identity sanitized via View_PreMatch_CharSelect.Initialize.prefab.existing: prefab='Char_Medusa' identities=1.
+[00:40:33.239] [Medusa] [Medusa] NetworkPrefabPool ready via View_PreMatch_CharSelect.Initialize.prefab.existing: prefab='Char_Medusa' libraryHad=True libraryAppended=False clientActive=False clientCreated=False serverActive=False serverCreated=False.
+[00:40:33.240] [Medusa] [Medusa] Mirror prefab ready via View_PreMatch_CharSelect.Initialize.prefab.existing: prefab='Char_Medusa' oldAssetId=0x4D454455 newAssetId=0x4D454455 oldSceneId=0 oldNetId=0 oldHasSpawned=False oldSpawnedFromInstantiate=False sceneId=0 hasSpawned=false.
+[00:40:33.250] [Medusa] [Medusa] made 16 characters available in lobby (incl. Medusa).
+[00:40:33.250] [Medusa] [Medusa] Mirror runtime identity sanitized via TryRegisterMedusa.registered.existing: prefab='Char_Medusa' identities=1.
+[00:40:33.251] [Medusa] [Medusa] NetworkPrefabPool ready via TryRegisterMedusa.registered.existing: prefab='Char_Medusa' libraryHad=True libraryAppended=False clientActive=False clientCreated=False serverActive=False serverCreated=False.
+[00:40:33.252] [Medusa] [Medusa] Mirror prefab ready via TryRegisterMedusa.registered.existing: prefab='Char_Medusa' oldAssetId=0x4D454455 newAssetId=0x4D454455 oldSceneId=0 oldNetId=0 oldHasSpawned=False oldSpawnedFromInstantiate=False sceneId=0 hasSpawned=false.
+[00:40:33.264] [Medusa] [Medusa] made 16 characters available in lobby (incl. Medusa).
+[00:40:33.264] [Medusa] [Medusa] UI warmup before View_PreMatch_CharSelect.Initialize: registered=True charId=15.
+[00:40:33.265] [Medusa] [Medusa] made 16 characters available in lobby (incl. Medusa).
+[00:40:33.266] [Medusa] [Medusa] Mirror runtime identity sanitized via TryRegisterMedusa.registered.existing: prefab='Char_Medusa' identities=1.
+[00:40:33.267] [Medusa] [Medusa] NetworkPrefabPool ready via TryRegisterMedusa.registered.existing: prefab='Char_Medusa' libraryHad=True libraryAppended=False clientActive=False clientCreated=False serverActive=False serverCreated=False.
+[00:40:33.276] [Medusa] [Medusa] made 16 characters available in lobby (incl. Medusa).
+[00:40:33.287] [Medusa] [Medusa] lobby page model unlocked via View_PreMatch_CharSelect.Initialize.existing: ids=2,1,5,0,3,4,6,15,7,8,9,10,11,12,13,14.
+[00:40:33.296] [Medusa] [Medusa] ensured UILobbyCharacterSelectPage data before View_PreMatch_CharSelect.Initialize: pages=1.
+[00:40:33.297] [Medusa] [Medusa] NetworkPrefabPool ready via View_PreMatch_CharSelect.Initialize.prefab.existing: prefab='Char_Medusa' libraryHad=True libraryAppended=False clientActive=False clientCreated=False serverActive=False serverCreated=False.
+[00:40:33.306] [Medusa] [Medusa] made 16 characters available in lobby (incl. Medusa).
+[00:40:33.307] [Medusa] [Medusa] NetworkPrefabPool ready via TryRegisterMedusa.registered.existing: prefab='Char_Medusa' libraryHad=True libraryAppended=False clientActive=False clientCreated=False serverActive=False serverCreated=False.
+[00:40:33.320] [Medusa] [Medusa] made 16 characters available in lobby (incl. Medusa).
+[00:40:33.321] [Medusa] [Medusa] made 16 characters available in lobby (incl. Medusa).
+[00:40:33.322] [Medusa] [Medusa] NetworkPrefabPool ready via TryRegisterMedusa.registered.existing: prefab='Char_Medusa' libraryHad=True libraryAppended=False clientActive=False clientCreated=False serverActive=False serverCreated=False.
+[00:40:33.331] [Medusa] [Medusa] made 16 characters available in lobby (incl. Medusa).
+[00:40:34.933] [Il2CppInterop] Registered mono type MelonLoader.Support.SM_Component in il2cpp domain
+[00:40:34.939] [BAP_Custom_Server] [SceneLoaded] Scene 'MainScene' (index 0) loaded.
+[00:40:34.940] [BAP_Custom_Server] [StateReset] Resetting match flags on lobby/menu scene 'MainScene'
+[00:40:34.941] [Medusa] [Medusa] runtime scene state reset: scene loaded 0:MainScene
+[00:40:34.989] [BAP_Custom_Server] Extended dedicated matchmaking wait windows to 120s on 1 GameManager instance(s).
+[00:40:34.993] [BAP_Custom_Server] Waiting for Mirror server to be active before applying /setup-game.
+[00:40:35.001] [BAP_Custom_Server] [MapFix] 3 GameMode(s), spawnCounts=[-1,-1,-1]. Waiting for populated map...
+[00:40:35.024] [BAP_Custom_Server] [DevPanel] Patched 2 type(s) for hide on activation: UIDeveloperLobby(1), UIDevUtilities(1)
+[00:40:35.032] [BAP_Custom_Server] [ShopThrottle] Patched 1 method(s)
+[00:40:35.094] [BAP_Custom_Server] [LockerGuard] Installed exception-swallow finalizer on 9 locker method(s)
+[00:40:35.101] [BAP_Custom_Server] [InterpFix] no NetworkTransform instances yet (attempt=1)
+[00:40:35.111] [BAP_Custom_Server] [MatchFoundDedup] Installed dedup prefix on 1 PlayMatchFoundSequence target(s).
+[00:40:35.114] [BAP_Custom_Server] [AugmentFix] no UIAugments instances loaded yet (attempt=1).
+[00:40:35.135] [BAP_Custom_Server] Installed 3 GameMode level-name runtime patch(es).
+[00:40:35.146] [BAP_Custom_Server] Installed AddPlayerMatchmaking runtime diagnostics and Medusa skin patch.
+[00:40:35.199] [BAP_Custom_Server] Installed 7 LoginController custom guest-login patch(es).
+[00:40:35.214] [BAP_Custom_Server] Installed 2 UnityWebRequest callback repair patch(es).
+[00:40:35.265] [Medusa] [Medusa] NetworkPrefabPool ready via GameNetworkManager.OnStartServer.existing: prefab='Char_Medusa' libraryHad=True libraryAppended=False clientActive=False clientCreated=False serverActive=True serverCreated=True.
+[00:40:35.310] [BAP_Custom_Server] Requested dedicated server start through GameNetworkManager. modeBefore=Offline activeBefore=False
+[00:40:35.311] [BAP_Custom_Server] [NetworkRepair] post-StartServer: mode=ServerOnly active=True
+[00:40:35.312] [BAP_Custom_Server] Dedicated network start is pending; TCP listeners are not open yet. ws=7778 tcp=7780
+[00:40:35.316] [BAP_Custom_Server] Game bootstrap HTTP listener is active.
+[00:40:35.377] [BAPBAP_ModAPI] [Lifecycle] ModUpdateRunner GameObject created.
+[00:40:35.383] [BAP_Custom_Server] Patched 4 GameMode levelNames array(s) for custom matches.
+[00:40:35.397] [BAP_Custom_Server] [PrematchTiming] /setup-game charSelectMillis=60000->60000 spawnSelectMillis=10000->10000 spawnShowMillis=3000->3000 changed=False.
+[00:40:35.399] [BAP_Custom_Server] Assigned GameManager.mgd on primary GameManager (single-instance write).
+[00:40:35.412] [BAP_Custom_Server] Assigned GameManager.mgd on primary GameManager (single-instance write).
+[00:40:35.416] [BAP_Custom_Server] [PrematchTiming] GameManager after /setup-game: mgd=charSelectMillis=60000 spawnSelectMillis=10000 spawnShowMillis=3000 gm=playersByPlayerId=0 connIdToPlayerId=0 preMatchManager=True currentGameMode=True qmd=False mgd=True.
+[00:40:35.417] [BAP_Custom_Server] Applied managed match bootstrap payload /setup-game via OnServerMatchSetup.
+[00:40:35.688] [BAP_Custom_Server] Queued managed match bootstrap payload: /add-teams
+[00:40:35.705] [BAP_Custom_Server] Waiting for loaded map before applying /add-teams.
+[00:40:36.206] [BAP_Custom_Server] Applied managed match bootstrap payload /add-teams via OnServerMatchAddTeams.
+[00:40:36.692] [BAP_Custom_Server] Queued managed match bootstrap payload: /queue-matched
+[00:40:36.699] [BAP_Custom_Server] Assigned GameManager.qmd on primary GameManager (single-instance write).
+[00:40:36.768] [Medusa] [Medusa] made 16 characters available in lobby (incl. Medusa).
+[00:40:36.783] [Medusa] [Medusa] already registered; verified prefab/pool/roster for CharId=15.
+[00:40:36.798] [Medusa] [Medusa] made 16 characters available in lobby (incl. Medusa).
+[00:40:36.818] [Medusa] [Medusa] prematch qmd via GameNetworkManager.OnServerQueueMatched: available=2,1,5,0,3,4,6,15,7,8,9,10,11,12,13,14 players=[codex-v1667-proxy-20260608-0231:1].
+[00:40:36.861] [Medusa] [Medusa] made 16 characters available in lobby (incl. Medusa).
+[00:40:36.902] [Medusa] [Medusa] made 16 characters available in lobby (incl. Medusa).
+[00:40:36.917] [Medusa] [Medusa] prematch qmd via GameNetworkManager.OnServerQueueMatched: available=2,1,5,0,3,4,6,15,7,8,9,10,11,12,13,14 players=[codex-v1667-proxy-20260608-0231:1].
+[00:40:36.923] [BAP_Custom_Server] Assigned GameManager.qmd on primary GameManager (single-instance write).
+[00:40:36.927] [BAP_Custom_Server] [PrematchTiming] GameManager after /queue-matched: qmdPlayers=auth=7546b393555990d6923d12ade2a4b520 playerId=1 teamId=1 charId=1 available=2,1,5,0,3,4,6,15,7,8,9,10,11,12,13,14 gm=playersByPlayerId=0 connIdToPlayerId=0 preMatchManager=True currentGameMode=True qmd=True mgd=True.
+[00:40:36.927] [BAP_Custom_Server] Applied managed match bootstrap payload /queue-matched via OnServerQueueMatched.
+[00:40:36.997] [BAP_Custom_Server] [MapFix] currentGameMode already populated (GameModeBattleRoyale, counts=[35,-1,-1]). Rebind skipped.
+[00:40:37.000] [BAP_Custom_Server] [CrateFix] no EntitySpawner instances loaded yet (attempt=1).
+[00:40:40.327] [Medusa] [Medusa] UICharactersConfiguration first seen at poll #1 (roster=16).
+[00:40:41.412] [BAP_Custom_Server] AddPlayerMatchmaking preflight: connNull=False playerNull=False playerType=UnityEngine.GameObject mpd=auth=7546b393555990d6923d12ade2a4b520 playerId=1 teamId=1 charId=1 teammates=0 gm=playersByPlayerId=0 connIdToPlayerId=0 preMatchManager=True currentGameMode=True qmd=True mgd=True
+[00:40:44.307] [Medusa] [Medusa] anim(prefab): name='Medusa_Visual' enabled=True controller='Medusa' parameterCount=0
+[00:40:44.311] [Medusa] [Medusa] anim(prefab): parameters not enumerable on inactive prefab (n=0).
+[00:40:44.312] [Medusa] [Medusa] anim(LIVE): no Medusa instance in the active scene yet (need a match with someone selecting Medusa).
+

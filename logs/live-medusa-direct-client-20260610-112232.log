@@ -1,0 +1,1389 @@
+[[38;2;50;205;50m11:23:24.591[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[UnityMemory] Configuration Parameters - Can be set up in boot.config[0m
+[[38;2;50;205;50m11:23:24.592[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-bucket-allocator-granularity=16"[0m
+[[38;2;50;205;50m11:23:24.593[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-bucket-allocator-bucket-count=8"[0m
+[[38;2;50;205;50m11:23:24.594[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-bucket-allocator-block-size=4194304"[0m
+[[38;2;50;205;50m11:23:24.594[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-bucket-allocator-block-count=1"[0m
+[[38;2;50;205;50m11:23:24.594[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-main-allocator-block-size=16777216"[0m
+[[38;2;50;205;50m11:23:24.594[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-thread-allocator-block-size=16777216"[0m
+[[38;2;50;205;50m11:23:24.594[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-gfx-main-allocator-block-size=16777216"[0m
+[[38;2;50;205;50m11:23:24.594[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-gfx-thread-allocator-block-size=16777216"[0m
+[[38;2;50;205;50m11:23:24.595[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-cache-allocator-block-size=4194304"[0m
+[[38;2;50;205;50m11:23:24.595[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-typetree-allocator-block-size=2097152"[0m
+[[38;2;50;205;50m11:23:24.595[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-profiler-bucket-allocator-granularity=16"[0m
+[[38;2;50;205;50m11:23:24.595[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-profiler-bucket-allocator-bucket-count=8"[0m
+[[38;2;50;205;50m11:23:24.595[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-profiler-bucket-allocator-block-size=4194304"[0m
+[[38;2;50;205;50m11:23:24.595[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-profiler-bucket-allocator-block-count=1"[0m
+[[38;2;50;205;50m11:23:24.595[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-profiler-allocator-block-size=16777216"[0m
+[[38;2;50;205;50m11:23:24.595[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-profiler-editor-allocator-block-size=1048576"[0m
+[[38;2;50;205;50m11:23:24.596[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-temp-allocator-size-main=4194304"[0m
+[[38;2;50;205;50m11:23:24.596[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-job-temp-allocator-block-size=2097152"[0m
+[[38;2;50;205;50m11:23:24.596[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-job-temp-allocator-block-size-background=1048576"[0m
+[[38;2;50;205;50m11:23:24.596[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"[0m
+[[38;2;50;205;50m11:23:24.596[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-allocator-temp-initial-block-size-main=262144"[0m
+[[38;2;50;205;50m11:23:24.596[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-allocator-temp-initial-block-size-worker=262144"[0m
+[[38;2;50;205;50m11:23:24.596[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-temp-allocator-size-background-worker=32768"[0m
+[[38;2;50;205;50m11:23:24.596[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-temp-allocator-size-job-worker=262144"[0m
+[[38;2;50;205;50m11:23:24.596[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-temp-allocator-size-preload-manager=262144"[0m
+[[38;2;50;205;50m11:23:24.597[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"[0m
+[[38;2;50;205;50m11:23:24.597[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-temp-allocator-size-audio-worker=65536"[0m
+[[38;2;50;205;50m11:23:24.597[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-temp-allocator-size-cloud-worker=32768"[0m
+[[38;2;50;205;50m11:23:24.597[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-temp-allocator-size-gfx=262144"[0m
+
+[[38;2;50;205;50m11:23:26.382[0m] [38;2;211;211;211m------------------------------[0m
+[[38;2;50;205;50m11:23:26.383[0m] [38;2;211;211;211mMelonLoader v0.7.2 Open-Beta[0m
+[[38;2;50;205;50m11:23:26.384[0m] [38;2;211;211;211mOS: Windows 11[0m
+[[38;2;50;205;50m11:23:26.384[0m] [38;2;211;211;211mHash Code: 58AB98835E598BD67B7DB233734DE8603F92C9C6A6081B13CB9A5CC37C02DD13[0m
+[[38;2;50;205;50m11:23:26.385[0m] [38;2;211;211;211m------------------------------[0m
+[[38;2;50;205;50m11:23:26.385[0m] [38;2;211;211;211mGame Type: Il2cpp[0m
+[[38;2;50;205;50m11:23:26.385[0m] [38;2;211;211;211mGame Arch: x86[0m
+[[38;2;50;205;50m11:23:26.385[0m] [38;2;211;211;211m------------------------------[0m
+[[38;2;50;205;50m11:23:26.385[0m] [38;2;211;211;211mCommand-Line: [0m
+[[38;2;50;205;50m11:23:26.385[0m] [38;2;211;211;211m------------------------------[0m
+[[38;2;50;205;50m11:23:26.386[0m] [38;2;211;211;211mCore::BasePath = C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild[0m
+[[38;2;50;205;50m11:23:26.387[0m] [38;2;211;211;211mGame::BasePath = C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild[0m
+[[38;2;50;205;50m11:23:26.387[0m] [38;2;211;211;211mGame::DataPath = C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\bapbap_Data[0m
+[[38;2;50;205;50m11:23:26.387[0m] [38;2;211;211;211mGame::ApplicationPath = C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\bapbap.exe[0m
+[[38;2;50;205;50m11:23:26.387[0m] [38;2;211;211;211mRuntime Type: net6[0m
+[[38;2;50;205;50m11:23:26.983[0m] [38;2;255;0;255m------------------------------[0m
+[[38;2;50;205;50m11:23:26.983[0m] [38;2;211;211;211mGame Name: BAPBAP[0m
+[[38;2;50;205;50m11:23:26.984[0m] [38;2;211;211;211mGame Developer: gg.bapbap[0m
+[[38;2;50;205;50m11:23:26.985[0m] [38;2;211;211;211mUnity Version: 2022.3.38f1[0m
+[[38;2;50;205;50m11:23:26.986[0m] [38;2;211;211;211mGame Version: 0.1.1758-38212[0m
+[[38;2;50;205;50m11:23:26.986[0m] [38;2;255;0;255m------------------------------[0m
+
+[[38;2;50;205;50m11:23:28.727[0m] [38;2;211;211;211mPreferences Loaded![0m
+
+[[38;2;50;205;50m11:23:28.874[0m] [38;2;211;211;211mLoading UserLibs...[0m
+[[38;2;50;205;50m11:23:29.381[0m] [38;2;255;0;255m------------------------------[0m
+[[38;2;50;205;50m11:23:29.392[0m] [38;2;169;169;169mMelon Assembly loaded: '.\UserLibs\BAPBAP.ModAPI.dll'[0m
+[[38;2;50;205;50m11:23:29.392[0m] [38;2;169;169;169mSHA256 Hash: '0E14F39A9C47B6EBA106A0F23E76A0989B3270D7BCDD3E4BB0DD51E63BDB3CB5'[0m
+[[38;2;50;205;50m11:23:29.393[0m] [38;2;255;0;255m------------------------------[0m
+[[38;2;50;205;50m11:23:29.393[0m] [38;2;211;211;211m0 UserLibs loaded.[0m
+
+[[38;2;50;205;50m11:23:29.393[0m] [38;2;211;211;211mLoading Plugins...[0m
+[[38;2;50;205;50m11:23:29.399[0m] [38;2;211;211;211m0 Plugins loaded.[0m
+
+[[38;2;50;205;50m11:23:29.446[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.[0m
+[[38;2;50;205;50m11:23:29.486[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mInitialize engine version: 2022.3.38f1 (c5d5a7410213)[0m
+[[38;2;50;205;50m11:23:29.487[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[Subsystems] Discovering subsystems at path C:/Users/Administrator/Downloads/CustomServer/Spiel/Battleroyalebuild/bapbap_Data/UnitySubsystems[0m
+[[38;2;50;205;50m11:23:29.487[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mGfxDevice: creating device client; threaded=1; jobified=0[0m
+[[38;2;50;205;50m11:23:29.789[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mDirect3D:[0m
+[[38;2;50;205;50m11:23:29.790[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    Version:  Direct3D 11.0 [level 11.1][0m
+[[38;2;50;205;50m11:23:29.790[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    Renderer: NVIDIA GeForce RTX 3060 Ti (ID=0x2486)[0m
+[[38;2;50;205;50m11:23:29.790[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    Vendor:   NVIDIA[0m
+[[38;2;50;205;50m11:23:29.790[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    VRAM:     3072 MB[0m
+[[38;2;50;205;50m11:23:29.790[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    Driver:   32.0.15.9621[0m
+[[38;2;50;205;50m11:23:31.814[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m<b>[App UI]</b> Unable to find an AppUISettings instance, creating a default one...
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Unity.AppUI.Core.AppUI:InitializeInPlayer()
+[0m
+[[38;2;50;205;50m11:23:31.898[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m<RI> Initializing input.[0m
+[[38;2;50;205;50m11:23:31.899[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mNew input system (experimental) initialized[0m
+[[38;2;50;205;50m11:23:31.908[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mUsing Windows.Gaming.Input[0m
+[[38;2;50;205;50m11:23:31.912[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m<RI> Input initialized.[0m
+[[38;2;50;205;50m11:23:31.941[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m<RI> Initialized touch support.[0m
+[[38;2;50;205;50m11:23:31.943[0m] [38;2;211;211;211mLoading Il2CppAssemblyGenerator...[0m
+[[38;2;50;205;50m11:23:32.169[0m] [[38;2;255;0;255mIl2CppAssemblyGenerator[0m] [38;2;211;211;211mUsing Cpp2IL Version: 2022.1.0-pre-release.21[0m
+[[38;2;50;205;50m11:23:32.169[0m] [[38;2;255;0;255mIl2CppAssemblyGenerator[0m] [38;2;211;211;211mUsing Il2CppInterop Version = 1.5.1+dbaf825aab891ff1e1627bea691bde0a81d1ad98[0m
+[[38;2;50;205;50m11:23:32.169[0m] [[38;2;255;0;255mIl2CppAssemblyGenerator[0m] [38;2;211;211;211mUsing Unity Dependencies Version = 2022.3.38[0m
+[[38;2;50;205;50m11:23:32.169[0m] [[38;2;255;0;255mIl2CppAssemblyGenerator[0m] [38;2;211;211;211mUsing Deobfuscation Regex = null[0m
+[[38;2;50;205;50m11:23:32.170[0m] [[38;2;255;0;255mIl2CppAssemblyGenerator[0m] [38;2;211;211;211mCpp2IL is up to date.[0m
+[[38;2;50;205;50m11:23:32.171[0m] [[38;2;255;0;255mIl2CppAssemblyGenerator[0m] [38;2;211;211;211mCpp2IL.Plugin.StrippedCodeRegSupport is up to date.[0m
+[[38;2;50;205;50m11:23:32.171[0m] [[38;2;255;0;255mIl2CppAssemblyGenerator[0m] [38;2;211;211;211mUnityDependencies is up to date.[0m
+[[38;2;50;205;50m11:23:32.171[0m] [[38;2;255;0;255mIl2CppAssemblyGenerator[0m] [38;2;211;211;211mChecking GameAssembly...[0m
+[[38;2;50;205;50m11:23:32.481[0m] [[38;2;255;0;255mIl2CppAssemblyGenerator[0m] [38;2;211;211;211mAssembly is up to date. No Generation Needed.[0m
+
+[[38;2;50;205;50m11:23:32.482[0m] [38;2;211;211;211mLoading Mods...[0m
+[[38;2;50;205;50m11:23:34.172[0m] [38;2;255;0;255m------------------------------[0m
+[[38;2;50;205;50m11:23:34.175[0m] [38;2;169;169;169mMelon Assembly loaded: '.\Mods\BAPBAP.Medusa.dll'[0m
+[[38;2;50;205;50m11:23:34.176[0m] [38;2;169;169;169mSHA256 Hash: 'AADDB5E8E5452833AED66646EE4516797C504031FDA1A2E21F6056541A0CCC32'[0m
+[[38;2;50;205;50m11:23:34.182[0m] [38;2;169;169;169mMelon Assembly loaded: '.\Mods\BapCustomServerMelon.dll'[0m
+[[38;2;50;205;50m11:23:34.182[0m] [38;2;169;169;169mSHA256 Hash: 'A32BF4340BA5E285699BE0B4A0DF9436D5C7B7171FC050E4D24A7F735FC83B86'[0m
+
+[[38;2;50;205;50m11:23:38.040[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mLoaded custom server ini.[0m
+[[38;2;50;205;50m11:23:38.058[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[Perf] Client: targetFrameRate=144, vSync=0 (reduce DWM stall stutter)[0m
+[[38;2;50;205;50m11:23:38.060[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[BAPCustomConfig] mode=client upstream=http://ark.atomi23.de:5055 proxy=False localPort=5055 dedicatedPorts=http:- ws:- kcp:- tcp:- batchMode=False containsNoGraphicsArg=False autoJoin=ark.atomi23.de:7779[0m
+[[38;2;50;205;50m11:23:38.062[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPrimed auto-login prefs for custom server session.[0m
+[[38;2;50;205;50m11:23:38.070[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 4 NetworkConfig runtime patch(es).[0m
+[[38;2;50;205;50m11:23:38.076[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 2 PreAwakeManager network config patch(es).[0m
+[[38;2;50;205;50m11:23:38.083[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 2 HttpClient host rewrite patch(es).[0m
+[[38;2;50;205;50m11:23:38.085[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled ControllerManager network runtime patch.[0m
+[[38;2;50;205;50m11:23:38.092[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 4 LobbyNetworkClient runtime network patch(es).[0m
+[[38;2;50;205;50m11:23:38.111[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 8 character selection tracker patch(es).[0m
+[[38;2;50;205;50m11:23:38.115[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 1 WebSocketClient selection propagation patch(es).[0m
+[[38;2;50;205;50m11:23:38.118[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled lifecycle guard on 2 Application.Quit overload(s). Guard PERMANENT (custom servers).[0m
+[[38;2;50;205;50m11:23:38.120[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled AnalyticsManager custom-server no-op patch.[0m
+[[38;2;50;205;50m11:23:38.178[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 40 character-select NullRef guard prefix patch(es).[0m
+[[38;2;50;205;50m11:23:38.184[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 5 PopulateCharIdsBeforeBuild prefix(es) on UILobbyCharacterSelectPage.[0m
+[[38;2;50;205;50m11:23:38.187[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 3 PopulateCharIdsBeforeBuild prefix(es) on UILobbyPlayTabPage.[0m
+[[38;2;50;205;50m11:23:38.236[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 32 LobbyController NullRef guard finalizer patch(es).[0m
+[[38;2;50;205;50m11:23:41.488[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 1 CharacterIsUnlocked force-unlock patch(es).[0m
+[[38;2;50;205;50m11:23:41.572[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mServer match policy fetched: Both (matchmaking=allowed, custom=allowed). When a path is blocked, the mod logs a clear error if the user tries to use it.[0m
+[[38;2;50;205;50m11:23:41.580[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mLocal proxy ready (port 5055)[0m
+[[38;2;50;205;50m11:23:41.581[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mDirect mode compatibility proxy enabled for legacy loopback API calls: 127.0.0.1:5055 -> http://ark.atomi23.de:5055/[0m
+[[38;2;50;205;50m11:23:41.582[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInitialized BAP Custom Server v1.0.5 during early registration. dedicated=False http=n/a ws=n/a kcp=n/a tcp=n/a[0m
+[[38;2;50;205;50m11:23:41.583[0m] [38;2;0;100;0m------------------------------[0m
+[[38;2;50;205;50m11:23:41.584[0m] [38;2;0;255;255mBAP Custom Server[0m v1.0.5
+[[38;2;50;205;50m11:23:41.584[0m] [38;2;211;211;211mby Sonic0810[0m
+[[38;2;50;205;50m11:23:41.584[0m] [38;2;169;169;169mAssembly: BapCustomServerMelon.dll[0m
+[[38;2;50;205;50m11:23:41.584[0m] [38;2;0;100;0m------------------------------[0m
+[[38;2;50;205;50m11:23:41.589[0m] [38;2;0;100;0m------------------------------[0m
+[[38;2;50;205;50m11:23:41.590[0m] [38;2;0;200;255mBAPBAP ModAPI[0m v2.2.1
+[[38;2;50;205;50m11:23:41.590[0m] [38;2;255;200;0mby BAPBAP Modding Community[0m
+[[38;2;50;205;50m11:23:41.590[0m] [38;2;169;169;169mAssembly: BAPBAP.ModAPI.dll[0m
+[[38;2;50;205;50m11:23:41.590[0m] [38;2;0;100;0m------------------------------[0m
+[[38;2;50;205;50m11:23:41.594[0m] [38;2;0;100;0m------------------------------[0m
+[[38;2;50;205;50m11:23:41.595[0m] [38;2;0;255;255mMedusa[0m v1.6.66
+[[38;2;50;205;50m11:23:41.595[0m] [38;2;211;211;211mby BAPBAPCommunity[0m
+[[38;2;50;205;50m11:23:41.595[0m] [38;2;169;169;169mAssembly: BAPBAP.Medusa.dll[0m
+[[38;2;50;205;50m11:23:41.595[0m] [38;2;0;100;0m------------------------------[0m
+[[38;2;50;205;50m11:23:41.595[0m] [38;2;255;0;255m------------------------------[0m
+[[38;2;50;205;50m11:23:41.595[0m] [38;2;211;211;211m3 Mods loaded.[0m
+
+[[38;2;50;205;50m11:23:57.283[0m] [[38;2;255;255;0mIl2CppInterop[0m] [38;2;255;255;0mClass::Init signatures have been exhausted, using a substitute![0m
+[[38;2;50;205;50m11:23:59.870[0m] [[38;2;0;255;255mIl2CppInterop[0m] [38;2;211;211;211mRegistered mono type MelonLoader.Support.MonoEnumeratorWrapper in il2cpp domain[0m
+[[38;2;50;205;50m11:23:59.947[0m] [38;2;211;211;211mSupport Module Loaded: C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Dependencies\SupportModules\Il2Cpp.dll[0m
+[[38;2;50;205;50m11:23:59.950[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m-------------------------------------------------------------------------------------------------------
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+[0m
+[[38;2;50;205;50m11:23:59.950[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m~   This Game has been MODIFIED using MelonLoader. DO NOT report any issues to the Game Developers!   ~
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+[0m
+[[38;2;50;205;50m11:23:59.950[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m-------------------------------------------------------------------------------------------------------
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+[0m
+[[38;2;50;205;50m11:24:01.198[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211mBAPBAP ModAPI v2.2.1 initializing ...[0m
+[[38;2;50;205;50m11:24:01.199[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m  by BAPBAP Modding Community[0m
+[[38;2;50;205;50m11:24:01.199[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m  loaded as C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\UserLibs\BAPBAP.ModAPI.dll[0m
+[[38;2;50;205;50m11:24:01.200[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks] Installing global hooks ...[0m
+[[38;2;50;205;50m11:24:01.201[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ PlayerHooks[0m
+[[38;2;50;205;50m11:24:01.201[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ MatchHooks[0m
+[[38;2;50;205;50m11:24:01.201[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ CombatHooks[0m
+[[38;2;50;205;50m11:24:01.202[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ChatHooks[0m
+[[38;2;50;205;50m11:24:01.202[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ NetworkHooks[0m
+[[38;2;50;205;50m11:24:01.202[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ UIHooks[0m
+[[38;2;50;205;50m11:24:01.202[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ AbilityHooks[0m
+[[38;2;50;205;50m11:24:01.202[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ StatusEffectHooks[0m
+[[38;2;50;205;50m11:24:01.202[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ItemHooks[0m
+[[38;2;50;205;50m11:24:01.203[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ VehicleHooks[0m
+[[38;2;50;205;50m11:24:01.203[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ EntityHooks[0m
+[[38;2;50;205;50m11:24:01.203[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ExtraAbilityHooks[0m
+[[38;2;50;205;50m11:24:01.203[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ExtraItemHooks[0m
+[[38;2;50;205;50m11:24:01.203[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ExtraVehicleHooks[0m
+[[38;2;50;205;50m11:24:01.204[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ExtraEntityHooks[0m
+[[38;2;50;205;50m11:24:01.204[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ExtraMovementHooks[0m
+[[38;2;50;205;50m11:24:01.204[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ExtraPassiveHooks[0m
+[[38;2;50;205;50m11:24:01.204[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ExtraInteractionHooks[0m
+[[38;2;50;205;50m11:24:01.204[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ExtraKillHooks[0m
+[[38;2;50;205;50m11:24:01.205[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ExtraEmoteHooks[0m
+[[38;2;50;205;50m11:24:01.205[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ExtraMetaHooks[0m
+[[38;2;50;205;50m11:24:01.205[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks] Done. 21 hook groups installed.[0m
+[[38;2;50;205;50m11:24:01.210[0m] [[38;2;0;255;255mIl2CppInterop[0m] [38;2;211;211;211mRegistered mono type BAPBAP.ModAPI.Lifecycle.ModUpdateRunner in il2cpp domain[0m
+[[38;2;50;205;50m11:24:01.210[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Lifecycle] ModUpdateRunner registered with Il2Cpp.[0m
+[[38;2;50;205;50m11:24:01.211[0m] [[38;2;0;255;255mIl2CppInterop[0m] [38;2;211;211;211mRegistered mono type BAPBAP.ModAPI.API.NotificationAPI+ScheduledFader in il2cpp domain[0m
+[[38;2;50;205;50m11:24:01.214[0m] [[38;2;0;255;255mIl2CppInterop[0m] [38;2;211;211;211mRegistered mono type BAPBAP.ModAPI.UI.ModLoaderUIRunner in il2cpp domain[0m
+[[38;2;50;205;50m11:24:01.214[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[ModLoaderUI] Runner registered with Il2Cpp.[0m
+[[38;2;50;205;50m11:24:01.215[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211mBAPBAP ModAPI ready. Mods should subclass ModBase to register.[0m
+[[38;2;50;205;50m11:24:01.216[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Registry] Mod registered: Medusa (com.bapbap.medusa)[0m
+[[38;2;50;205;50m11:24:01.222[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Keybind] registered 'medusa.register' -> F7 (ctrl=False shift=False alt=False)[0m
+[[38;2;50;205;50m11:24:01.222[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] Loaded (v1.6.70). Auto-registers at the lobby; /medusa or F7 to force, /medusa status, /medusa anim.[0m
+[[38;2;50;205;50m11:24:01.222[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] v1.6.70: cleans runtime Medusa FX on scene reset and GameMode shutdown, guards invalid animator layer writes/crossfades, restricts input fallback to the local Medusa entity, debounces duplicate cast drivers, and keeps the v1.6.66 native VFX isolation. Bundle: UserData\Medusa\medusa.bundle.[0m
+[[38;2;50;205;50m11:24:01.228[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] bundle file located: 'C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\UserData\Medusa\medusa.bundle' (1567424 bytes).[0m
+[[38;2;50;205;50m11:24:01.340[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] AssetBundle loaded (handle obtained).[0m
+[[38;2;50;205;50m11:24:01.347[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] bundle contains 36 asset(s). Sample: assets/animationclip/medusa_attack_01.anim | assets/animationclip/medusa_attack_02.anim | assets/animationclip/medusa_attack_03.anim | assets/animationclip/medusa_idle.anim | assets/animationclip/medusa_idle_blend.anim | assets/animationclip/medusa_idle_turn_left.anim[0m
+[[38;2;50;205;50m11:24:01.369[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual prefab 'Medusa_Visual' loaded from bundle.[0m
+[[38;2;50;205;50m11:24:01.378[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] cached bundle textures/material: albedo='Medusa_Tex_Albedo_1024' normal='Medusa_Tex_Normal_1024' material='Medusa_Material'.[0m
+[[38;2;50;205;50m11:24:01.394[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native VFX prefabs loaded: 6/6 [VFX_Medusa_Poison_Escape, VFX_Medusa_Poison_Hit, VFX_Medusa_Poison_Muzzle, VFX_Medusa_Poison_Puddle, VFX_Medusa_Poison_Trail, VFX_Medusa_Poison_Wall].[0m
+[[38;2;50;205;50m11:24:01.408[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] cached animator controller via TryLoadBundle.prefab: animator='Medusa_Visual' controller='Medusa'.[0m
+[[38;2;50;205;50m11:24:01.446[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual diagnostics via TryLoadBundle.prefab: root='Medusa_Visual' visualActive=False layer=0 world=(0,0,0) local=(0,0,0) scale=(1,1,1) renderers=4 smrs=1 firstRenderer='Base_BlobShadow' firstRendererLayer=0 firstSmr='MedusaBase' mesh='MedusaBase' rootBone='Def-Hips' material='Medusa_Material' shader='Standard' bounds=-0.026,0.792,-0.022/2.008,2.416,2.271 screen='<no-main-camera>'.[0m
+[[38;2;50;205;50m11:24:01.489[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] Harmony rebind patches installed (CharAnimator.Awake + CharFootsteps.Awake postfixes).[0m
+[[38;2;50;205;50m11:24:02.384[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] Harmony UI/prematch patches installed: ok=51, failed=0, skipped=13.[0m
+[[38;2;50;205;50m11:24:02.385[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] Skipped known IL2CPP page-warmup prefixes; runtime UIManager, prematch, selection, spawn, and ability patches remain active.[0m
+[[38;2;50;205;50m11:24:02.403[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] Harmony status-on-hit patch installed (HitboxBase.OnHitSuccess postfix: poison + petrify).[0m
+[[38;2;50;205;50m11:24:06.608[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Blitz') is missing![0m
+[[38;2;50;205;50m11:24:07.097[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] runtime scene state reset: scene unloaded -1:[0m
+[[38;2;50;205;50m11:24:07.102[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.[0m
+[[38;2;50;205;50m11:24:07.103[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mUnloadTime: 66.367600 ms[0m
+[[38;2;50;205;50m11:24:07.261[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThreadLog initialized.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+[0m
+[[38;2;50;205;50m11:24:07.280[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[PREAWAKE] ENV_PRODUCTION
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+[0m
+[[38;2;50;205;50m11:24:07.280[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[PREAWAKE] BACKEND_STRIP
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+[0m
+[[38;2;50;205;50m11:24:07.281[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[PREAWAKE] hostname= VINCENT
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+[0m
+[[38;2;50;205;50m11:24:07.281[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[PREAWAKE] environment= Production
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+[0m
+[[38;2;50;205;50m11:24:07.281[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[PREAWAKE] version = v0.1.1758-38212
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+[0m
+[[38;2;50;205;50m11:24:07.281[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[PREAWAKE] networkConfigEnv = Staging
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+[0m
+[[38;2;50;205;50m11:24:07.329[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[PREAWAKE] networkConfigsServer = ServerConfig { 
+MatchmakingHost: , 
+ListenPort: 0, 
+HeaderSecretKey: , 
+HeaderSecret: , 
+DebugPassword: , 
+DebugSquadPassword: , 
+DevGameAuthId: , 
+}
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+[0m
+[[38;2;50;205;50m11:24:07.329[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[PREAWAKE] networkConfigsClient = ClientConfig { 
+ApiHost: http://127.0.0.1:5055, 
+CookieDomain: .bapbap.gg, 
+CookieSessionKey: sid, 
+}
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+[0m
+[[38;2;50;205;50m11:24:07.329[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[PREAWAKE] logConfigEnv = Staging
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+[0m
+[[38;2;50;205;50m11:24:07.330[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[PREAWAKE] Args start
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+[0m
+[[38;2;50;205;50m11:24:07.330[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mC:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\bapbap.exe
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+[0m
+[[38;2;50;205;50m11:24:07.330[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m--melonloader.agfoffline
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+[0m
+[[38;2;50;205;50m11:24:07.330[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m--melonloader.captureplayerlogs
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+[0m
+[[38;2;50;205;50m11:24:07.330[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m--bapcustom-use-proxy=false
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+[0m
+[[38;2;50;205;50m11:24:07.331[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m--bapcustom-show-ui=false
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+[0m
+[[38;2;50;205;50m11:24:07.331[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m--bapcustom-host=ark.atomi23.de
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+[0m
+[[38;2;50;205;50m11:24:07.331[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m--bapcustom-server-port=5055
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+[0m
+[[38;2;50;205;50m11:24:07.331[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m--bapcustom-account-id=codex-live-v177-20260610-112232
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+[0m
+[[38;2;50;205;50m11:24:07.331[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m--bapcustom-username=CodexLiveV177
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+[0m
+[[38;2;50;205;50m11:24:07.331[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m--bapcustom-auto-select-augment
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+[0m
+[[38;2;50;205;50m11:24:07.332[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m--bapcustom-selected-char=15
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+[0m
+[[38;2;50;205;50m11:24:07.332[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m--bapcustom-join-auth=6a9779774692aa269189ca923c268550
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+[0m
+[[38;2;50;205;50m11:24:07.332[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m--bapcustom-join-host=ark.atomi23.de
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+[0m
+[[38;2;50;205;50m11:24:07.332[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m--bapcustom-join-ws=7778
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+[0m
+[[38;2;50;205;50m11:24:07.332[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m--bapcustom-join-kcp=7779
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+[0m
+[[38;2;50;205;50m11:24:07.333[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m--bapcustom-join-tcp=7780
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+[0m
+[[38;2;50;205;50m11:24:07.333[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[PREAWAKE] Args end | http=-1 ws=-1 kcp=-1 tcp=-1
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+[0m
+[[38;2;50;205;50m11:24:07.355[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[LocalSavedData] InitializeSystemResolutions - nativeSystemResolution: 1920 x 1080 @ 60Hz[0m
+[[38;2;50;205;50m11:24:07.355[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[LocalSavedData] InitializeSystemResolutions - res: UnityEngine.Resolution[], length: 17[0m
+[[38;2;50;205;50m11:24:07.356[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mFound supported resolution: (1920, 1080)[0m
+[[38;2;50;205;50m11:24:07.490[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] cloning base character 'Kitsu' (charId=0).[0m
+[[38;2;50;205;50m11:24:07.515[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] graft: captured native toon template - SMR='KitsuBase', material='Kitsu_Material', shader='Custom/Toon/Toon_Character_Amplify'.[0m
+[[38;2;50;205;50m11:24:07.517[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] graft: disabled 11 base Renderer(s).[0m
+[[38;2;50;205;50m11:24:07.522[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual anchor via GraftMedusaVisual: root='Char_Medusa' parent Char_Medusa->Root localPos=(0,0,0) worldPos=(0,-0,-0).[0m
+[[38;2;50;205;50m11:24:07.523[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual fit via GraftMedusaVisual: skinnedBaseH=2.153 skinnedVisualH=2.11 scaleFactor=0.808 localScale=0.808 localPos=(-0.168,-0.647,0.86).[0m
+[[38;2;50;205;50m11:24:07.524[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual default transform captured via GraftMedusaVisual: localPos=(-0.168,-0.647,0.86) localScale=0.808.[0m
+[[38;2;50;205;50m11:24:07.528[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual layer sync via GraftMedusaVisual: layer=0 'Default' objects=59.[0m
+[[38;2;50;205;50m11:24:07.531[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual render enable via GraftMedusaVisual: renderers=4 newlyEnabled=0 smrsUpdateWhenOffscreen=1 active=False localPos=(-0.168,-0.647,0.86) localScale=0.808.[0m
+[[38;2;50;205;50m11:24:07.540[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual layer sync via GraftMedusaVisual.postCharMaterial: layer=0 'Default' objects=59.[0m
+[[38;2;50;205;50m11:24:07.543[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual layer sync via GraftMedusaVisual.postCharMaterial.postVisibility: layer=0 'Default' objects=59.[0m
+[[38;2;50;205;50m11:24:07.543[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] CharMaterial visibility forced via GraftMedusaVisual.postCharMaterial: alpha=1 opaque=true partialHidden=false rendererActive=true visualActive=False.[0m
+[[38;2;50;205;50m11:24:07.543[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] CharMaterial rebound via GraftMedusaVisual: primary='MedusaBase' primaryLayer=0 renderers=4 extras=3 customBounds=True.[0m
+[[38;2;50;205;50m11:24:07.543[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] cached animator controller via GraftMedusaVisual: animator='Medusa_Visual' controller='Medusa'.[0m
+[[38;2;50;205;50m11:24:07.549[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] copied bundle material props via GraftMedusaVisual: target='Medusa_Material_Native' textures=1 colors=2 floats=0 sourceMaterial='Medusa_Material'.[0m
+[[38;2;50;205;50m11:24:07.549[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] graft: shader applied to 'MedusaBase' (shader='Custom/Toon/Toon_Character_Amplify', albedo='Medusa_Tex_Albedo_1024', normal='Medusa_Tex_Normal_1024').[0m
+[[38;2;50;205;50m11:24:07.550[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] graft: applied native toon shader 'Custom/Toon/Toon_Character_Amplify' to 1 Medusa SkinnedMeshRenderer(s).[0m
+[[38;2;50;205;50m11:24:07.555[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] copied bundle material props via GraftMedusaVisual.postShader: target='Medusa_Material_Native' textures=1 colors=2 floats=0 sourceMaterial='Medusa_Material'.[0m
+[[38;2;50;205;50m11:24:07.556[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] material visibility via GraftMedusaVisual.postShader: smrs=1 shader='Custom/Toon/Toon_Character_Amplify' localPos=(-0.168,-0.647,0.86).[0m
+[[38;2;50;205;50m11:24:07.556[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual render enable via GraftMedusaVisual.postMaterial: renderers=4 newlyEnabled=0 smrsUpdateWhenOffscreen=1 active=False localPos=(-0.168,-0.647,0.86) localScale=0.808.[0m
+[[38;2;50;205;50m11:24:07.557[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual layer sync via GraftMedusaVisual.postMaterial.postVisibility: layer=0 'Default' objects=59.[0m
+[[38;2;50;205;50m11:24:07.557[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] CharMaterial visibility forced via GraftMedusaVisual.postMaterial: alpha=1 opaque=true partialHidden=false rendererActive=true visualActive=False.[0m
+[[38;2;50;205;50m11:24:07.558[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual diagnostics via GraftMedusaVisual.postMaterial: root='Char_Medusa' visualActive=False layer=0 world=(-0.193,0.988,0.744) local=(-0.168,-0.647,0.86) scale=(0.808,0.808,0.808) renderers=4 smrs=1 firstRenderer='Base_BlobShadow' firstRendererLayer=0 firstSmr='MedusaBase' mesh='MedusaBase' rootBone='Def-Hips' material='Medusa_Material_Native' shader='Custom/Toon/Toon_Character_Amplify' bounds=-0.217,0.968,0.008/1.866,2.11,2.245 screen='763.1,167.9,-0.9'.[0m
+[[38;2;50;205;50m11:24:07.558[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] graft: wired CharAnimator.animator -> Medusa's Animator (count=1, customAnimator=true, controller='Medusa').[0m
+[[38;2;50;205;50m11:24:07.559[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] graft: wired CharFootsteps.animator -> Medusa's Animator (count=1).[0m
+[[38;2;50;205;50m11:24:07.559[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] graft: disabled 3 non-Medusa Animator(s) on the clone.[0m
+[[38;2;50;205;50m11:24:07.559[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] graft: instantiated Medusa_Visual under clone (SkinnedMeshRenderers=1, animator=yes, controller='Medusa').[0m
+[[38;2;50;205;50m11:24:07.564[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] Mirror runtime identity sanitized via RegisterPrefab.clone: prefab='Char_Medusa' identities=1.[0m
+[[38;2;50;205;50m11:24:07.565[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] Mirror client registration delegated to NetworkManager.spawnPrefabs for assetId=0x4D454455; skipped direct NetworkClient.RegisterPrefab via RegisterPrefab.clone.[0m
+[[38;2;50;205;50m11:24:07.574[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] NetworkPrefabPool ready via RegisterPrefab.clone: prefab='Char_Medusa' libraryHad=False libraryAppended=False clientActive=False clientCreated=False serverActive=False serverCreated=False.[0m
+[[38;2;50;205;50m11:24:07.575[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] Mirror prefab ready via RegisterPrefab.clone: prefab='Char_Medusa' oldAssetId=0xD2D60B88 newAssetId=0x4D454455 oldSceneId=0 oldNetId=0 oldHasSpawned=False oldSpawnedFromInstantiate=False sceneId=0 hasSpawned=false.[0m
+[[38;2;50;205;50m11:24:07.582[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] NetworkManager.spawnPrefabs appended via RegisterPrefab.clone: prefab='Char_Medusa' count=1.[0m
+[[38;2;50;205;50m11:24:07.582[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] prefab cloned -> characterPrefabsByCharId[15] (visualGrafted=True).[0m
+[[38;2;50;205;50m11:24:07.599[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] suppressed 8 inherited Kitsu VFX prefab reference(s) via TuneCharAbilities(prefab) on 'Char_Medusa'.[0m
+[[38;2;50;205;50m11:24:07.600[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] tuned CharAbilities: damage 0->0, attackSpeed 0->0, cooldown 0->0, critChance 0->0.2, maxAttackSpeed 10->9.5.[0m
+[[38;2;50;205;50m11:24:07.600[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] prefab registration ready via TryRegisterMedusa: baseCharId=0 medusaCharId=15.[0m
+[[38;2;50;205;50m11:24:07.686[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] custom artwork applied: portrait=True wide=True.[0m
+[[38;2;50;205;50m11:24:07.689[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] moved Medusa into visible match select slot via TryRegisterMedusa.appended: oldIndex=15 newIndex=7 lobbyChanged=False.[0m
+[[38;2;50;205;50m11:24:07.694[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] made 16 characters available in lobby (incl. Medusa).[0m
+[[38;2;50;205;50m11:24:07.712[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] phrases injected (added=14, updated=0, total=14). Sample MEDUSA_AB_LMB_TITLE -> 'Serpent Bolt'.[0m
+[[38;2;50;205;50m11:24:07.712[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] ✓ registered as CharId=15, name='Medusa'. Roster now 16.[0m
+[[38;2;50;205;50m11:24:07.723[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[NotificationAPI] Canvas created.[0m
+[[38;2;50;205;50m11:24:07.731[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] UIManager early registration via UIManager.PreAwake: charId=15 roster=16.[0m
+[[38;2;50;205;50m11:24:07.950[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mSTEAM: Steam unavailable[0m
+[[38;2;50;205;50m11:24:08.021[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] Mirror runtime identity sanitized via GameNetworkManager.Awake.existing: prefab='Char_Medusa' identities=1.[0m
+[[38;2;50;205;50m11:24:08.022[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] NetworkPrefabPool ready via GameNetworkManager.Awake.existing: prefab='Char_Medusa' libraryHad=False libraryAppended=False clientActive=False clientCreated=False serverActive=False serverCreated=False.[0m
+[[38;2;50;205;50m11:24:08.022[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] Mirror prefab ready via GameNetworkManager.Awake.existing: prefab='Char_Medusa' oldAssetId=0x4D454455 newAssetId=0x4D454455 oldSceneId=0 oldNetId=0 oldHasSpawned=False oldSpawnedFromInstantiate=False sceneId=0 hasSpawned=false.[0m
+[[38;2;50;205;50m11:24:08.028[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] Mirror runtime identity sanitized via GameNetworkManager.Awake.existing: prefab='Char_Medusa' identities=1.[0m
+[[38;2;50;205;50m11:24:08.028[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] NetworkPrefabPool ready via GameNetworkManager.Awake.existing: prefab='Char_Medusa' libraryHad=False libraryAppended=False clientActive=False clientCreated=False serverActive=False serverCreated=False.[0m
+[[38;2;50;205;50m11:24:08.028[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] Mirror prefab ready via GameNetworkManager.Awake.existing: prefab='Char_Medusa' oldAssetId=0x4D454455 newAssetId=0x4D454455 oldSceneId=0 oldNetId=0 oldHasSpawned=False oldSpawnedFromInstantiate=False sceneId=0 hasSpawned=false.[0m
+[[38;2;50;205;50m11:24:08.051[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[Spatial Hash] Partial Rebuild Interval = 0,25[0m
+[[38;2;50;205;50m11:24:08.051[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m1800[0m
+[[38;2;50;205;50m11:24:08.359[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[UIDropdownController] No values added to the dropdown[0m
+[[38;2;50;205;50m11:24:08.360[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[UIDropdownController] No values added to the dropdown[0m
+[[38;2;50;205;50m11:24:08.419[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] lobby page model unlocked via View_PreMatch_CharSelect.Initialize.new: ids=2,1,5,0,3,4,6,15,7,8,9,10,11,12,13,14.[0m
+[[38;2;50;205;50m11:24:08.419[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] ensured UILobbyCharacterSelectPage data before View_PreMatch_CharSelect.Initialize: pages=1.[0m
+[[38;2;50;205;50m11:24:08.419[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] Mirror runtime identity sanitized via View_PreMatch_CharSelect.Initialize.prefab.existing: prefab='Char_Medusa' identities=1.[0m
+[[38;2;50;205;50m11:24:08.420[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] NetworkPrefabPool ready via View_PreMatch_CharSelect.Initialize.prefab.existing: prefab='Char_Medusa' libraryHad=False libraryAppended=False clientActive=False clientCreated=False serverActive=False serverCreated=False.[0m
+[[38;2;50;205;50m11:24:08.420[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] Mirror prefab ready via View_PreMatch_CharSelect.Initialize.prefab.existing: prefab='Char_Medusa' oldAssetId=0x4D454455 newAssetId=0x4D454455 oldSceneId=0 oldNetId=0 oldHasSpawned=False oldSpawnedFromInstantiate=False sceneId=0 hasSpawned=false.[0m
+[[38;2;50;205;50m11:24:08.428[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] made 16 characters available in lobby (incl. Medusa).[0m
+[[38;2;50;205;50m11:24:08.429[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] Mirror runtime identity sanitized via TryRegisterMedusa.registered.existing: prefab='Char_Medusa' identities=1.[0m
+[[38;2;50;205;50m11:24:08.429[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] NetworkPrefabPool ready via TryRegisterMedusa.registered.existing: prefab='Char_Medusa' libraryHad=False libraryAppended=False clientActive=False clientCreated=False serverActive=False serverCreated=False.[0m
+[[38;2;50;205;50m11:24:08.429[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] Mirror prefab ready via TryRegisterMedusa.registered.existing: prefab='Char_Medusa' oldAssetId=0x4D454455 newAssetId=0x4D454455 oldSceneId=0 oldNetId=0 oldHasSpawned=False oldSpawnedFromInstantiate=False sceneId=0 hasSpawned=false.[0m
+[[38;2;50;205;50m11:24:08.441[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] made 16 characters available in lobby (incl. Medusa).[0m
+[[38;2;50;205;50m11:24:08.441[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] UI warmup before View_PreMatch_CharSelect.Initialize: registered=True charId=15.[0m
+[[38;2;50;205;50m11:24:08.441[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] made 16 characters available in lobby (incl. Medusa).[0m
+[[38;2;50;205;50m11:24:08.441[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] Mirror runtime identity sanitized via TryRegisterMedusa.registered.existing: prefab='Char_Medusa' identities=1.[0m
+[[38;2;50;205;50m11:24:08.441[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] NetworkPrefabPool ready via TryRegisterMedusa.registered.existing: prefab='Char_Medusa' libraryHad=False libraryAppended=False clientActive=False clientCreated=False serverActive=False serverCreated=False.[0m
+[[38;2;50;205;50m11:24:08.449[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] made 16 characters available in lobby (incl. Medusa).[0m
+[[38;2;50;205;50m11:24:08.462[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] lobby page model unlocked via View_PreMatch_CharSelect.Initialize.existing: ids=2,1,5,0,3,4,6,15,7,8,9,10,11,12,13,14.[0m
+[[38;2;50;205;50m11:24:08.462[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] ensured UILobbyCharacterSelectPage data before View_PreMatch_CharSelect.Initialize: pages=1.[0m
+[[38;2;50;205;50m11:24:08.463[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] NetworkPrefabPool ready via View_PreMatch_CharSelect.Initialize.prefab.existing: prefab='Char_Medusa' libraryHad=False libraryAppended=False clientActive=False clientCreated=False serverActive=False serverCreated=False.[0m
+[[38;2;50;205;50m11:24:08.473[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] made 16 characters available in lobby (incl. Medusa).[0m
+[[38;2;50;205;50m11:24:08.474[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] NetworkPrefabPool ready via TryRegisterMedusa.registered.existing: prefab='Char_Medusa' libraryHad=False libraryAppended=False clientActive=False clientCreated=False serverActive=False serverCreated=False.[0m
+[[38;2;50;205;50m11:24:08.487[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] made 16 characters available in lobby (incl. Medusa).[0m
+[[38;2;50;205;50m11:24:08.487[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] made 16 characters available in lobby (incl. Medusa).[0m
+[[38;2;50;205;50m11:24:08.487[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] NetworkPrefabPool ready via TryRegisterMedusa.registered.existing: prefab='Char_Medusa' libraryHad=False libraryAppended=False clientActive=False clientCreated=False serverActive=False serverCreated=False.[0m
+[[38;2;50;205;50m11:24:08.495[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] made 16 characters available in lobby (incl. Medusa).[0m
+[[38;2;50;205;50m11:24:08.500[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mUILobby platform variant not found: WindowsPlayer using default
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+[0m
+[[38;2;50;205;50m11:24:08.932[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mColor primaries 0 is unknown or unsupported by WindowsMediaFoundation. Falling back to default may result in color shift. C:/Users/Administrator/Downloads/CustomServer/Spiel/Battleroyalebuild/bapbap_Data/sharedassets0.resource[0m
+[[38;2;50;205;50m11:24:10.155[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mOpening Lobby UI :) at the time of 10.06.2026 11:24:10[0m
+[[38;2;50;205;50m11:24:10.307[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mTelepathyTransport initialized![0m
+[[38;2;50;205;50m11:24:10.354[0m] [[38;2;0;255;255mIl2CppInterop[0m] [38;2;211;211;211mRegistered mono type MelonLoader.Support.SM_Component in il2cpp domain[0m
+[[38;2;50;205;50m11:24:10.362[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[SceneLoaded] Scene 'MainScene' (index 0) loaded.[0m
+[[38;2;50;205;50m11:24:10.363[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[StateReset] Resetting match flags on lobby/menu scene 'MainScene'[0m
+[[38;2;50;205;50m11:24:10.499[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] runtime scene state reset: scene loaded 0:MainScene[0m
+[[38;2;50;205;50m11:24:11.039[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[LocalSavedData] Set Quick cast = False[0m
+[[38;2;50;205;50m11:24:11.095[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[MapFix] 3 GameMode(s), spawnCounts=[-1,-1,-1]. Waiting for populated map...[0m
+[[38;2;50;205;50m11:24:11.148[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[DevPanel] Patched 2 type(s) for hide on activation: UIDeveloperLobby(1), UIDevUtilities(1)[0m
+[[38;2;50;205;50m11:24:11.193[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[ShopThrottle] Patched 1 method(s)[0m
+[[38;2;50;205;50m11:24:11.365[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[LockerGuard] Installed exception-swallow finalizer on 9 locker method(s)[0m
+[[38;2;50;205;50m11:24:11.381[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[KcpRuntime] timeout-guard-manager: manager=Il2CppBAPBAP.Network.GameNetworkManager ws=Il2CppMirror.SimpleWeb.SimpleWebTransport port=7778 timeout=null client=False server=False kcp=Il2Cppkcp2k.KcpTransport port=7779 timeout=60000 client=True server=True tcp=Il2CppMirror.TelepathyTransport port=7780 timeout=null client=False server=False multiplex=Il2CppMirror.MultiplexTransport port=7780 timeout=null client=False server=False patched=5.[0m
+[[38;2;50;205;50m11:24:11.381[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[KcpTimeoutGuard] Applied KCP timeout/port guard through GameNetworkManager transport(s); patched=5.[0m
+[[38;2;50;205;50m11:24:11.389[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[InterpFix] no NetworkTransform instances yet (attempt=1)[0m
+[[38;2;50;205;50m11:24:11.413[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[MatchFoundDedup] Installed dedup prefix on 1 PlayMatchFoundSequence target(s).[0m
+[[38;2;50;205;50m11:24:11.416[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[AugmentFix] no UIAugments instances loaded yet (attempt=1).[0m
+[[38;2;50;205;50m11:24:11.419[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[AugmentFix] auto-select: no local PlayerAugments found.[0m
+[[38;2;50;205;50m11:24:11.420[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[AugmentFix] auto-select: no UIManager instances loaded yet.[0m
+[[38;2;50;205;50m11:24:11.420[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[AugmentFix] auto-select: no UIAugments instances loaded yet.[0m
+[[38;2;50;205;50m11:24:11.479[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 3 GameMode level-name runtime patch(es).[0m
+[[38;2;50;205;50m11:24:11.518[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled AddPlayerMatchmaking runtime diagnostics and Medusa skin patch.[0m
+[[38;2;50;205;50m11:24:11.648[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 7 LoginController custom guest-login patch(es).[0m
+[[38;2;50;205;50m11:24:11.690[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 2 UnityWebRequest callback repair patch(es).[0m
+[[38;2;50;205;50m11:24:11.697[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom splash guest-login scan saw 0 UILobbySplashScreen object(s).[0m
+[[38;2;50;205;50m11:24:11.700[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[KcpRuntime] client-autojoin-before-connect: manager=Il2CppBAPBAP.Network.GameNetworkManager ws=Il2CppMirror.SimpleWeb.SimpleWebTransport port=7778 timeout=null client=False server=False kcp=Il2Cppkcp2k.KcpTransport port=7779 timeout=60000 client=True server=True tcp=Il2CppMirror.TelepathyTransport port=7780 timeout=null client=False server=False multiplex=Il2CppMirror.MultiplexTransport port=7780 timeout=null client=False server=False patched=3.[0m
+[[38;2;50;205;50m11:24:11.700[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mConnect MM: AuthId=6a9779774692aa269189ca923c268550 Hostname=ark.atomi23.de wsPort=7778 kcpPort=7779 tcpPort=7780 Secure=False[0m
+[[38;2;50;205;50m11:24:11.734[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mRunning Client/Host Build - Vsync:0 - FPS:-1[0m
+[[38;2;50;205;50m11:24:11.734[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[KcpRuntime] client-autojoin-after-connect: manager=Il2CppBAPBAP.Network.GameNetworkManager ws=Il2CppMirror.SimpleWeb.SimpleWebTransport port=7778 timeout=null client=False server=False kcp=Il2Cppkcp2k.KcpTransport port=7779 timeout=60000 client=True server=True tcp=Il2CppMirror.TelepathyTransport port=7780 timeout=null client=False server=False multiplex=Il2CppMirror.MultiplexTransport port=7780 timeout=null client=False server=False patched=3.[0m
+[[38;2;50;205;50m11:24:11.735[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mRequested matchmaking client connect. auth=6a9779774692aa269189ca923c268550 host=ark.atomi23.de ws=7778 kcp=7779 tcp=7780[0m
+[[38;2;50;205;50m11:24:11.877[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mGarbageCollector disposing of ComputeBuffer. Please use ComputeBuffer.Release() or .Dispose() to manually release the buffer.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+[0m
+[[38;2;50;205;50m11:24:11.877[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mGarbageCollector disposing of ComputeBuffer. Please use ComputeBuffer.Release() or .Dispose() to manually release the buffer.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+[0m
+[[38;2;50;205;50m11:24:11.908[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mWarming shader: Toon_Frozen_Legacy[0m
+[[38;2;50;205;50m11:24:11.908[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mWarming shader: Toon_Frozen_Amplify[0m
+[[38;2;50;205;50m11:24:11.908[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mWarming shader: InstancedIndirectGrass[0m
+[[38;2;50;205;50m11:24:11.908[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mWarming shader: DrownedGrass[0m
+[[38;2;50;205;50m11:24:11.909[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mWarming shader: InstancedIndirectTrash[0m
+[[38;2;50;205;50m11:24:11.952[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mStart GameAnalytics with accountId=codex-live-v177-20260610-112232[0m
+[[38;2;50;205;50m11:24:11.952[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mInitializing with custom id: codex-live-v177-20260610-112232[0m
+[[38;2;50;205;50m11:24:11.956[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mSet dimension01 = Account[0m
+[[38;2;50;205;50m11:24:11.956[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mSet dimension02 = Steam[0m
+[[38;2;50;205;50m11:24:11.957[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mSet dimension03 = 0[0m
+[[38;2;50;205;50m11:24:11.958[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mFinished setting up GameAnalytics[0m
+[[38;2;50;205;50m11:24:11.958[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mSend new user event[0m
+[[38;2;50;205;50m11:24:11.961[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #1: [local]/api/challenge/preview[0m
+[[38;2;50;205;50m11:24:11.961[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #1: [local]/api/challenge/preview[0m
+[[38;2;50;205;50m11:24:11.962[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mRewrote UnityWebRequest loopback API URL for direct custom-server mode.[0m
+[[38;2;50;205;50m11:24:11.963[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #2: [local]/api/friends/requests[0m
+[[38;2;50;205;50m11:24:11.963[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #2: [local]/api/friends/requests[0m
+[[38;2;50;205;50m11:24:11.963[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #3: [local]/api/iap/listing[0m
+[[38;2;50;205;50m11:24:11.963[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #3: [local]/api/iap/listing[0m
+[[38;2;50;205;50m11:24:11.963[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300000 amount=0 balance=1[0m
+[[38;2;50;205;50m11:24:11.971[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300002 amount=0 balance=1[0m
+[[38;2;50;205;50m11:24:11.971[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300003 amount=0 balance=1[0m
+[[38;2;50;205;50m11:24:11.972[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300005 amount=0 balance=1[0m
+[[38;2;50;205;50m11:24:11.972[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mWarning/GameAnalytics: New identifier spotted compared to last one used, clearing cached configs hash!!
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+[0m
+[[38;2;50;205;50m11:24:11.973[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300007 amount=0 balance=1[0m
+[[38;2;50;205;50m11:24:11.973[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300008 amount=0 balance=1[0m
+[[38;2;50;205;50m11:24:11.974[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300009 amount=0 balance=1[0m
+[[38;2;50;205;50m11:24:11.975[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300010 amount=0 balance=1[0m
+[[38;2;50;205;50m11:24:11.975[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300011 amount=0 balance=1[0m
+[[38;2;50;205;50m11:24:11.976[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300012 amount=0 balance=1[0m
+[[38;2;50;205;50m11:24:11.977[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300013 amount=0 balance=1[0m
+[[38;2;50;205;50m11:24:11.978[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300014 amount=0 balance=1[0m
+[[38;2;50;205;50m11:24:11.979[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300015 amount=0 balance=1[0m
+[[38;2;50;205;50m11:24:11.980[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300016 amount=0 balance=1[0m
+[[38;2;50;205;50m11:24:11.981[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300017 amount=0 balance=1[0m
+[[38;2;50;205;50m11:24:11.983[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300018 amount=0 balance=1[0m
+[[38;2;50;205;50m11:24:11.985[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300019 amount=0 balance=1[0m
+[[38;2;50;205;50m11:24:11.986[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300020 amount=0 balance=1[0m
+[[38;2;50;205;50m11:24:11.987[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300021 amount=0 balance=1[0m
+[[38;2;50;205;50m11:24:11.989[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300022 amount=0 balance=1[0m
+[[38;2;50;205;50m11:24:11.990[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300023 amount=0 balance=1[0m
+[[38;2;50;205;50m11:24:11.990[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300024 amount=0 balance=1[0m
+[[38;2;50;205;50m11:24:11.991[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300025 amount=0 balance=1[0m
+[[38;2;50;205;50m11:24:11.992[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300026 amount=0 balance=1[0m
+[[38;2;50;205;50m11:24:11.992[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=-1 amount=0 balance=1[0m
+[[38;2;50;205;50m11:24:11.992[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=-1 amount=0 balance=1[0m
+[[38;2;50;205;50m11:24:11.993[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=-1 amount=0 balance=1[0m
+[[38;2;50;205;50m11:24:11.993[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=-1 amount=0 balance=1[0m
+[[38;2;50;205;50m11:24:11.993[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=1 amount=0 balance=999999[0m
+[[38;2;50;205;50m11:24:11.993[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=2 amount=0 balance=0[0m
+[[38;2;50;205;50m11:24:11.993[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=3 amount=0 balance=999999[0m
+[[38;2;50;205;50m11:24:11.993[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=4 amount=0 balance=999999[0m
+[[38;2;50;205;50m11:24:11.994[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=5 amount=0 balance=999999[0m
+[[38;2;50;205;50m11:24:11.994[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=0 amount=0 balance=1000[0m
+[[38;2;50;205;50m11:24:11.994[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #4: [local]/api/shop[0m
+[[38;2;50;205;50m11:24:11.994[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #4: [local]/api/shop[0m
+[[38;2;50;205;50m11:24:12.072[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #5: [remote]/v1/authentication/session-token[0m
+[[38;2;50;205;50m11:24:12.074[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mWarning: charTokenPass was null on UpdateCharTokenPassXp[0m
+[[38;2;50;205;50m11:24:12.074[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #6: [local]/api/daily[0m
+[[38;2;50;205;50m11:24:12.074[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #5: [local]/api/daily[0m
+[[38;2;50;205;50m11:24:12.074[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #7: [local]/api/profile/levels[0m
+[[38;2;50;205;50m11:24:12.074[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #6: [local]/api/profile/levels[0m
+[[38;2;50;205;50m11:24:12.075[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #8: [local]/api/chars/pass[0m
+[[38;2;50;205;50m11:24:12.075[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #7: [local]/api/chars/pass[0m
+[[38;2;50;205;50m11:24:12.075[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #9: [local]/api/chars/mastery/preview[0m
+[[38;2;50;205;50m11:24:12.075[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #8: [local]/api/chars/mastery/preview[0m
+[[38;2;50;205;50m11:24:12.075[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #10: [local]/api/chars/listing[0m
+[[38;2;50;205;50m11:24:12.076[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #9: [local]/api/chars/listing[0m
+[[38;2;50;205;50m11:24:12.076[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #11: [local]/api/lobby/socket[0m
+[[38;2;50;205;50m11:24:12.076[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #10: [local]/api/lobby/socket[0m
+[[38;2;50;205;50m11:24:12.076[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mScheduled custom-server post-login splash fallback after lobby socket discovery.[0m
+[[38;2;50;205;50m11:24:12.077[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #12: [local]/api/leaderboards/preview[0m
+[[38;2;50;205;50m11:24:12.077[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #11: [local]/api/leaderboards/preview[0m
+[[38;2;50;205;50m11:24:12.077[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #13: [local]/api/pinger[0m
+[[38;2;50;205;50m11:24:12.077[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #12: [local]/api/pinger[0m
+[[38;2;50;205;50m11:24:12.078[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom-server load response handled by LoginController.[0m
+[[38;2;50;205;50m11:24:12.085[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m11:24:12.085[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[IapController] Handle Xsolla Listing Response[0m
+[[38;2;50;205;50m11:24:12.086[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m{"iapListings":[]}[0m
+[[38;2;50;205;50m11:24:12.086[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[LNC] HandleFriendsRequestResponse[0m
+[[38;2;50;205;50m11:24:12.094[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[TESTLOG] Client connected before[0m
+[[38;2;50;205;50m11:24:12.094[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[TESTLOG] Client connected[0m
+[[38;2;50;205;50m11:24:12.095[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[TESTLOG] Client registered handler[0m
+[[38;2;50;205;50m11:24:12.095[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[TESTLOG] Client sent init[0m
+[[38;2;50;205;50m11:24:12.095[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mSend event Game Joined with 0 games played (exclusive)[0m
+[[38;2;50;205;50m11:24:12.100[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Lifecycle] ModUpdateRunner GameObject created.[0m
+[[38;2;50;205;50m11:24:12.102[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mServicesInitializationException: The Analytics service has not been initialized. Please initialize Unity Services.
+  at Unity.Services.Analytics.AnalyticsService.get_Instance () [0x00000] in <00000000000000000000000000000000>:0 
+  at System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Start[TStateMachine] (TStateMachine& stateMachine) [0x00000] in <00000000000000000000000000000000>:0 
+  at BAPBAP.Local.AnalyticsManager.SetupAnalytics (System.String accountId, System.Boolean isGuest, System.Int32 totalGames) [0x00000] in <00000000000000000000000000000000>:0 
+  at BAPBAP.UI.LoginController.HandleLoadResponse (BAPBAP.Network.LoadResponse response) [0x00000] in <00000000000000000000000000000000>:0 
+--- End of stack trace from previous location where exception was thrown ---
+
+  at System.Runtime.CompilerServices.AsyncMethodBuilderCore+<>c.<ThrowAsync>b__7_0 (System.Object state) [0x00000] in <00000000000000000000000000000000>:0 
+  at UnityEngine.UnitySynchronizationContext+WorkRequest.Invoke () [0x00000] in <00000000000000000000000000000000>:0 
+  at UnityEngine.UnitySynchronizationContext.Exec () [0x00000] in <00000000000000000000000000000000>:0 
+  at UnityEngine.UnitySynchronizationContext.ExecuteTasks () [0x00000] in <00000000000000000000000000000000>:0 
+[0m
+[[38;2;50;205;50m11:24:12.104[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[Thread2] GarbageCollector disposing of ComputeBuffer. Please use ComputeBuffer.Release() or .Dispose() to manually release the buffer.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+[0m
+[[38;2;50;205;50m11:24:12.104[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[Thread2] GarbageCollector disposing of ComputeBuffer. Please use ComputeBuffer.Release() or .Dispose() to manually release the buffer.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+[0m
+[[38;2;50;205;50m11:24:12.104[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[Thread7] Warning/GameAnalytics: New identifier spotted compared to last one used, clearing cached configs hash!!
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+[0m
+[[38;2;50;205;50m11:24:12.186[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mData was null on UpdateCharMasteryXp[0m
+[[38;2;50;205;50m11:24:12.186[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mData was null on UpdateCharMasteryBadge[0m
+[[38;2;50;205;50m11:24:12.187[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mData was null on IsMasteryAvailable[0m
+[[38;2;50;205;50m11:24:12.187[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mNullReferenceException: Object reference not set to an instance of an object.
+  at BAPBAP.UI.UILobbyCharacterSelectPage.GetCharacterListingIndexFromCharId (System.Int32 charId) [0x00000] in <00000000000000000000000000000000>:0 
+  at BAPBAP.UI.UILobbyCharacterSelectPage.SetCharacterButtonState (System.Int32 charIndex) [0x00000] in <00000000000000000000000000000000>:0 
+  at BAPBAP.UI.UILobbyCharacterSelectPage.OnCharacterSelect (System.Int32 charIndex) [0x00000] in <00000000000000000000000000000000>:0 
+  at BAPBAP.UI.UILobbyCharacterSelectPage.OnCharacterButtonSelect (BAPBAP.UI.UILobbyCharacterSelectIcon icon, System.Int32 index) [0x00000] in <00000000000000000000000000000000>:0 
+  at BAPBAP.UI.UILobbyCharacterSelectPage.UpdateData (BAPBAP.UI.CharacterPageModel data) [0x00000] in <00000000000000000000000000000000>:0 
+  at BAPBAP.UI.UILobbyCharacterSelectPage.UpdateAvailableCharactersData () [0x00000] in <00000000000000000000000000000000>:0 
+  at BAPBAP.UI.CharSelectController+<<HandleUpdateAvailableCharacterList>g___Delay|16_0>d.MoveNext () [0x00000] in <00000000000000000000000000000000>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) [0x00000] in <00000000000000000000000000000000>:0 
+[0m
+[[38;2;50;205;50m11:24:12.197[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[LNC] HandleCharMasteryPreviewResponse[0m
+[[38;2;50;205;50m11:24:12.197[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m{"passes":[]}[0m
+[[38;2;50;205;50m11:24:12.197[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mHandleDailyRewardResponse[0m
+[[38;2;50;205;50m11:24:12.198[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[SetCurrentDailyRewardUI] Invalid UNIX timestamp
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+[0m
+[[38;2;50;205;50m11:24:12.198[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[LNC] HandleAccountPassPassResponse[0m
+[[38;2;50;205;50m11:24:12.199[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m{"passId":1,"passLevels":[{"level":1,"xpNeeded":0,"listings":[]},{"level":2,"xpNeeded":100,"listings":[]},{"level":3,"xpNeeded":200,"listings":[]},{"level":4,"xpNeeded":300,"listings":[]},{"level":5,"xpNeeded":400,"listings":[]},{"level":6,"xpNeeded":500,"listings":[]},{"level":7,"xpNeeded":600,"listings":[]},{"level":8,"xpNeeded":700,"listings":[]},{"level":9,"xpNeeded":800,"listings":[]},{"level":10,"xpNeeded":900,"listings":[]},{"level":11,"xpNeeded":1000,"listings":[]},{"level":12,"xpNeeded":1100,"listings":[]},{"level":13,"xpNeeded":1200,"listings":[]},{"level":14,"xpNeeded":1300,"listings":[]},{"level":15,"xpNeeded":1400,"listings":[]},{"level":16,"xpNeeded":1500,"listings":[]},{"level":17,"xpNeeded":1600,"listings":[]},{"level":18,"xpNeeded":1700,"listings":[]},{"level":19,"xpNeeded":1800,"listings":[]},{"level":20,"xpNeeded":1900,"listings":[]},{"level":21,"xpNeeded":2000,"listings":[]},{"level":22,"xpNeeded":2100,"listings":[]},{"level":23,"xpNeeded":2200,"listings":[]},{"level":24,"xpNeeded":2300,"listings":[]},{"level":25,"xpNeeded":2400,"listings":[]},{"level":26,"xpNeeded":2500,"listings":[]},{"level":27,"xpNeeded":2600,"listings":[]},{"level":28,"xpNeeded":2700,"listings":[]},{"level":29,"xpNeeded":2800,"listings":[]},{"level":30,"xpNeeded":2900,"listings":[]},{"level":31,"xpNeeded":3000,"listings":[]},{"level":32,"xpNeeded":3100,"listings":[]},{"level":33,"xpNeeded":3200,"listings":[]},{"level":34,"xpNeeded":3300,"listings":[]},{"level":35,"xpNeeded":3400,"listings":[]},{"level":36,"xpNeeded":3500,"listings":[]},{"level":37,"xpNeeded":3600,"listings":[]},{"level":38,"xpNeeded":3700,"listings":[]},{"level":39,"xpNeeded":3800,"listings":[]},{"level":40,"xpNeeded":3900,"listings":[]},{"level":41,"xpNeeded":4000,"listings":[]},{"level":42,"xpNeeded":4100,"listings":[]},{"level":43,"xpNeeded":4200,"listings":[]},{"level":44,"xpNeeded":4300,"listings":[]},{"level":45,"xpNeeded":4400,"listings":[]},{"level":46,"xpNeeded":4500,"listings":[]},{"level":47,"xpNeeded":4600,"listings":[]},{"level":48,"xpNeeded":4700,"listings":[]},{"level":49,"xpNeeded":4800,"listings":[]},{"level":50,"xpNeeded":4900,"listings":[]},{"level":51,"xpNeeded":5000,"listings":[]},{"level":52,"xpNeeded":5100,"listings":[]},{"level":53,"xpNeeded":5200,"listings":[]},{"level":54,"xpNeeded":5300,"listings":[]},{"level":55,"xpNeeded":5400,"listings":[]},{"level":56,"xpNeeded":5500,"listings":[]},{"level":57,"xpNeeded":5600,"listings":[]},{"level":58,"xpNeeded":5700,"listings":[]},{"level":59,"xpNeeded":5800,"listings":[]},{"level":60,"xpNeeded":5900,"listings":[]},{"level":61,"xpNeeded":6000,"listings":[]},{"level":62,"xpNeeded":6100,"listings":[]},{"level":63,"xpNeeded":6200,"listings":[]},{"level":64,"xpNeeded":6300,"listings":[]},{"level":65,"xpNeeded":6400,"listings":[]},{"level":66,"xpNeeded":6500,"listings":[]},{"level":67,"xpNeeded":6600,"listings":[]},{"level":68,"xpNeeded":6700,"listings":[]},{"level":69,"xpNeeded":6800,"listings":[]},{"level":70,"xpNeeded":6900,"listings":[]},{"level":71,"xpNeeded":7000,"listings":[]},{"level":72,"xpNeeded":7100,"listings":[]},{"level":73,"xpNeeded":7200,"listings":[]},{"level":74,"xpNeeded":7300,"listings":[]},{"level":75,"xpNeeded":7400,"listings":[]},{"level":76,"xpNeeded":7500,"listings":[]},{"level":77,"xpNeeded":7600,"listings":[]},{"level":78,"xpNeeded":7700,"listings":[]},{"level":79,"xpNeeded":7800,"listings":[]},{"level":80,"xpNeeded":7900,"listings":[]},{"level":81,"xpNeeded":8000,"listings":[]},{"level":82,"xpNeeded":8100,"listings":[]},{"level":83,"xpNeeded":8200,"listings":[]},{"level":84,"xpNeeded":8300,"listings":[]},{"level":85,"xpNeeded":8400,"listings":[]},{"level":86,"xpNeeded":8500,"listings":[]},{"level":87,"xpNeeded":8600,"listings":[]},{"level":88,"xpNeeded":8700,"listings":[]},{"level":89,"xpNeeded":8800,"listings":[]},{"level":90,"xpNeeded":8900,"listings":[]},{"level":91,"xpNeeded":9000,"listings":[]},{"level":92,"xpNeeded":9100,"listings":[]},{"level":93,"xpNeeded":9200,"listings":[]},{"level":94,"xpNeeded":9300,"listings":[]},{"level":95,"xpNeeded":9400,"listings":[]},{"level":96,"xpNeeded":9500,"listings":[]},{"level":97,"xpNeeded":9600,"listings":[]},{"level":98,"xpNeeded":9700,"listings":[]},{"level":99,"xpNeeded":9800,"listings":[]},{"level":100,"xpNeeded":9900,"listings":[]}]}[0m
+[[38;2;50;205;50m11:24:12.200[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[LNC] HandleCharTokensPassResponse[0m
+[[38;2;50;205;50m11:24:12.200[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m{"passId":1,"passLevels":[{"level":1,"xpNeeded":0,"listings":[]},{"level":2,"xpNeeded":100,"listings":[]},{"level":3,"xpNeeded":200,"listings":[]},{"level":4,"xpNeeded":300,"listings":[]},{"level":5,"xpNeeded":400,"listings":[]},{"level":6,"xpNeeded":500,"listings":[]},{"level":7,"xpNeeded":600,"listings":[]},{"level":8,"xpNeeded":700,"listings":[]},{"level":9,"xpNeeded":800,"listings":[]},{"level":10,"xpNeeded":900,"listings":[]},{"level":11,"xpNeeded":1000,"listings":[]},{"level":12,"xpNeeded":1100,"listings":[]},{"level":13,"xpNeeded":1200,"listings":[]},{"level":14,"xpNeeded":1300,"listings":[]},{"level":15,"xpNeeded":1400,"listings":[]},{"level":16,"xpNeeded":1500,"listings":[]},{"level":17,"xpNeeded":1600,"listings":[]},{"level":18,"xpNeeded":1700,"listings":[]},{"level":19,"xpNeeded":1800,"listings":[]},{"level":20,"xpNeeded":1900,"listings":[]},{"level":21,"xpNeeded":2000,"listings":[]},{"level":22,"xpNeeded":2100,"listings":[]},{"level":23,"xpNeeded":2200,"listings":[]},{"level":24,"xpNeeded":2300,"listings":[]},{"level":25,"xpNeeded":2400,"listings":[]},{"level":26,"xpNeeded":2500,"listings":[]},{"level":27,"xpNeeded":2600,"listings":[]},{"level":28,"xpNeeded":2700,"listings":[]},{"level":29,"xpNeeded":2800,"listings":[]},{"level":30,"xpNeeded":2900,"listings":[]},{"level":31,"xpNeeded":3000,"listings":[]},{"level":32,"xpNeeded":3100,"listings":[]},{"level":33,"xpNeeded":3200,"listings":[]},{"level":34,"xpNeeded":3300,"listings":[]},{"level":35,"xpNeeded":3400,"listings":[]},{"level":36,"xpNeeded":3500,"listings":[]},{"level":37,"xpNeeded":3600,"listings":[]},{"level":38,"xpNeeded":3700,"listings":[]},{"level":39,"xpNeeded":3800,"listings":[]},{"level":40,"xpNeeded":3900,"listings":[]},{"level":41,"xpNeeded":4000,"listings":[]},{"level":42,"xpNeeded":4100,"listings":[]},{"level":43,"xpNeeded":4200,"listings":[]},{"level":44,"xpNeeded":4300,"listings":[]},{"level":45,"xpNeeded":4400,"listings":[]},{"level":46,"xpNeeded":4500,"listings":[]},{"level":47,"xpNeeded":4600,"listings":[]},{"level":48,"xpNeeded":4700,"listings":[]},{"level":49,"xpNeeded":4800,"listings":[]},{"level":50,"xpNeeded":4900,"listings":[]},{"level":51,"xpNeeded":5000,"listings":[]},{"level":52,"xpNeeded":5100,"listings":[]},{"level":53,"xpNeeded":5200,"listings":[]},{"level":54,"xpNeeded":5300,"listings":[]},{"level":55,"xpNeeded":5400,"listings":[]},{"level":56,"xpNeeded":5500,"listings":[]},{"level":57,"xpNeeded":5600,"listings":[]},{"level":58,"xpNeeded":5700,"listings":[]},{"level":59,"xpNeeded":5800,"listings":[]},{"level":60,"xpNeeded":5900,"listings":[]},{"level":61,"xpNeeded":6000,"listings":[]},{"level":62,"xpNeeded":6100,"listings":[]},{"level":63,"xpNeeded":6200,"listings":[]},{"level":64,"xpNeeded":6300,"listings":[]},{"level":65,"xpNeeded":6400,"listings":[]},{"level":66,"xpNeeded":6500,"listings":[]},{"level":67,"xpNeeded":6600,"listings":[]},{"level":68,"xpNeeded":6700,"listings":[]},{"level":69,"xpNeeded":6800,"listings":[]},{"level":70,"xpNeeded":6900,"listings":[]},{"level":71,"xpNeeded":7000,"listings":[]},{"level":72,"xpNeeded":7100,"listings":[]},{"level":73,"xpNeeded":7200,"listings":[]},{"level":74,"xpNeeded":7300,"listings":[]},{"level":75,"xpNeeded":7400,"listings":[]},{"level":76,"xpNeeded":7500,"listings":[]},{"level":77,"xpNeeded":7600,"listings":[]},{"level":78,"xpNeeded":7700,"listings":[]},{"level":79,"xpNeeded":7800,"listings":[]},{"level":80,"xpNeeded":7900,"listings":[]},{"level":81,"xpNeeded":8000,"listings":[]},{"level":82,"xpNeeded":8100,"listings":[]},{"level":83,"xpNeeded":8200,"listings":[]},{"level":84,"xpNeeded":8300,"listings":[]},{"level":85,"xpNeeded":8400,"listings":[]},{"level":86,"xpNeeded":8500,"listings":[]},{"level":87,"xpNeeded":8600,"listings":[]},{"level":88,"xpNeeded":8700,"listings":[]},{"level":89,"xpNeeded":8800,"listings":[]},{"level":90,"xpNeeded":8900,"listings":[]},{"level":91,"xpNeeded":9000,"listings":[]},{"level":92,"xpNeeded":9100,"listings":[]},{"level":93,"xpNeeded":9200,"listings":[]},{"level":94,"xpNeeded":9300,"listings":[]},{"level":95,"xpNeeded":9400,"listings":[]},{"level":96,"xpNeeded":9500,"listings":[]},{"level":97,"xpNeeded":9600,"listings":[]},{"level":98,"xpNeeded":9700,"listings":[]},{"level":99,"xpNeeded":9800,"listings":[]},{"level":100,"xpNeeded":9900,"listings":[]}]}[0m
+[[38;2;50;205;50m11:24:12.202[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[LNC] Handle Char Listing Response[0m
+[[38;2;50;205;50m11:24:12.203[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m{"charListings":[{"listingId":"custom-char-0","levelRequirement":0,"costs":[],"rewards":[],"charId":0,"purchases":1},{"listingId":"custom-char-1","levelRequirement":0,"costs":[],"rewards":[],"charId":1,"purchases":1},{"listingId":"custom-char-2","levelRequirement":0,"costs":[],"rewards":[],"charId":2,"purchases":1},{"listingId":"custom-char-3","levelRequirement":0,"costs":[],"rewards":[],"charId":3,"purchases":1},{"listingId":"custom-char-4","levelRequirement":0,"costs":[],"rewards":[],"charId":4,"purchases":1},{"listingId":"custom-char-5","levelRequirement":0,"costs":[],"rewards":[],"charId":5,"purchases":1},{"listingId":"custom-char-6","levelRequirement":0,"costs":[],"rewards":[],"charId":6,"purchases":1},{"listingId":"custom-char-7","levelRequirement":0,"costs":[],"rewards":[],"charId":7,"purchases":1},{"listingId":"custom-char-8","levelRequirement":0,"costs":[],"rewards":[],"charId":8,"purchases":1},{"listingId":"custom-char-9","levelRequirement":0,"costs":[],"rewards":[],"charId":9,"purchases":1},{"listingId":"custom-char-10","levelRequirement":0,"costs":[],"rewards":[],"charId":10,"purchases":1},{"listingId":"custom-char-11","levelRequirement":0,"costs":[],"rewards":[],"charId":11,"purchases":1},{"listingId":"custom-char-12","levelRequirement":0,"costs":[],"rewards":[],"charId":12,"purchases":1},{"listingId":"custom-char-13","levelRequirement":0,"costs":[],"rewards":[],"charId":13,"purchases":1},{"listingId":"custom-char-14","levelRequirement":0,"costs":[],"rewards":[],"charId":14,"purchases":1},{"listingId":"custom-char-15","levelRequirement":0,"costs":[],"rewards":[],"charId":15,"purchases":1}]}[0m
+[[38;2;50;205;50m11:24:12.206[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[LNC] HandleLeaderboardPreviewResponse[0m
+[[38;2;50;205;50m11:24:12.206[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m{"gameModes":[{"gameModeId":1,"showRanks":false,"showPoints":false,"showCharacters":true}]}[0m
+[[38;2;50;205;50m11:24:12.212[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] AugmentFix typed auto-select enabled for this test client.[0m
+[[38;2;50;205;50m11:24:12.261[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] AugmentFix no selectable augment UI yet via OnUpdate scan=1.[0m
+[[38;2;50;205;50m11:24:12.288[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mOnClientSvInit buildVers=0.1.1758-38212 teamId=1 pId=1 | 4[0m
+[[38;2;50;205;50m11:24:12.289[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[Server Version: v0.1.1758-38212][0m
+[[38;2;50;205;50m11:24:12.413[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] forced PlayerManager char via PlayerManager.OnCharacterChanged(0->15): old=15 new=15 skin=-1->-1 isServer=false isLocal=true.[0m
+[[38;2;50;205;50m11:24:12.434[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] forced PlayerManager char via PlayerManager.OnCharacterChanged(0->15): old=15 new=15 skin=-1->-1 isServer=false isLocal=true.[0m
+[[38;2;50;205;50m11:24:12.436[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[GameMode] Loading GameManager (BAPBAP.Game.GameModeBattleRoyale)[0m
+[[38;2;50;205;50m11:24:12.501[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] lobby page model unlocked via UIPreMatch.PopulatePreMatchUI.existing: ids=2,1,5,0,3,4,6,15,7,8,9,10,11,12,13,14.[0m
+[[38;2;50;205;50m11:24:12.513[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] lobby page model unlocked via UIPreMatch.PopulatePreMatchUI.existing: ids=2,1,5,0,3,4,6,15,7,8,9,10,11,12,13,14.[0m
+[[38;2;50;205;50m11:24:12.517[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] NetworkPrefabPool ready via UIPreMatch.PopulatePreMatchUI.prefab.existing: prefab='Char_Medusa' libraryHad=False libraryAppended=False clientActive=True clientCreated=False serverActive=False serverCreated=False.[0m
+[[38;2;50;205;50m11:24:12.555[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] made 16 characters available in lobby (incl. Medusa).[0m
+[[38;2;50;205;50m11:24:12.567[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] already registered; verified prefab/pool/roster for CharId=15.[0m
+[[38;2;50;205;50m11:24:12.578[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] made 16 characters available in lobby (incl. Medusa).[0m
+[[38;2;50;205;50m11:24:12.677[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] recorded non-Medusa intent via UIPreMatch.PopulatePreMatchUI: playerId=1 account=codex-live-v177-20260610-112232 charId=8.[0m
+[[38;2;50;205;50m11:24:12.691[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] explicit local Medusa selection remembered via UIPreMatch.PopulatePreMatchUI.qmd.local.[0m
+[[38;2;50;205;50m11:24:12.743[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] forced PlayerManager char via UIPreMatch.PopulatePreMatchUI.qmd.local: old=15 new=15 skin=-1->-1 isServer=false isLocal=true.[0m
+[[38;2;50;205;50m11:24:12.743[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] qmd Medusa normalized via UIPreMatch.PopulatePreMatchUI: playerId=1 account=codex-live-v177-20260610-112232 localMatch=True old=8 new=15 skin=-1->-1.[0m
+[[38;2;50;205;50m11:24:12.744[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] qmd Medusa selection summary via UIPreMatch.PopulatePreMatchUI: forcedPlayers=1 prematchSelections=0 explicitLocal=True launch=True autoSelect=False remembered=False localPlayerId=1.[0m
+[[38;2;50;205;50m11:24:12.803[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] made 16 characters available in lobby (incl. Medusa).[0m
+[[38;2;50;205;50m11:24:12.840[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] made 16 characters available in lobby (incl. Medusa).[0m
+[[38;2;50;205;50m11:24:12.894[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] forced PlayerManager char via UIPreMatch.PopulatePreMatchUI.qmd.local: old=15 new=15 skin=-1->-1 isServer=false isLocal=true.[0m
+[[38;2;50;205;50m11:24:12.894[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] qmd Medusa normalized via UIPreMatch.PopulatePreMatchUI: playerId=1 account=codex-live-v177-20260610-112232 localMatch=True old=15 new=15 skin=-1->-1.[0m
+[[38;2;50;205;50m11:24:12.895[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] qmd Medusa selection summary via UIPreMatch.PopulatePreMatchUI: forcedPlayers=1 prematchSelections=0 explicitLocal=True launch=True autoSelect=False remembered=True localPlayerId=1.[0m
+[[38;2;50;205;50m11:24:13.372[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] made 16 characters available in lobby (incl. Medusa).[0m
+[[38;2;50;205;50m11:24:13.418[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] made 16 characters available in lobby (incl. Medusa).[0m
+[[38;2;50;205;50m11:24:13.445[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] made 16 characters available in lobby (incl. Medusa).[0m
+[[38;2;50;205;50m11:24:13.495[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] made 16 characters available in lobby (incl. Medusa).[0m
+[[38;2;50;205;50m11:24:13.496[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mPopulating Character Buttons[0m
+[[38;2;50;205;50m11:24:13.496[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mNumber of characters is 16[0m
+[[38;2;50;205;50m11:24:13.534[0m] [[38;2;0;255;255mIl2CppInterop[0m] [38;2;211;211;211mRegistered mono type BAPBAP.Medusa.PrematchMedusaClickProxy in il2cpp domain[0m
+[[38;2;50;205;50m11:24:13.536[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[Medusa] prematch Medusa click proxy attached via View_PreMatch_CharSelect.PopulateCharacterButtons.[0m
+[[38;2;50;205;50m11:24:13.537[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] prematch Medusa icon rebound via View_PreMatch_CharSelect.PopulateCharacterButtons: button=True charId=15.[0m
+[[38;2;50;205;50m11:24:13.538[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] prematch Medusa button repaired via View_PreMatch_CharSelect.PopulateCharacterButtons: index=7/16 beforeLocal=(0.00, 112.50, 0.00) afterLocal=(0.00, 262.50, 0.00) beforeAnchored=(0.00, 0.00) afterAnchored=(0.00, 150.00).[0m
+[[38;2;50;205;50m11:24:13.556[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[Medusa] prematch Medusa click proxy attached via View_PreMatch_CharSelect.PopulateCharacterButtons.[0m
+[[38;2;50;205;50m11:24:13.556[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] prematch Medusa icon rebound via View_PreMatch_CharSelect.PopulateCharacterButtons: button=True charId=15.[0m
+[[38;2;50;205;50m11:24:13.556[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] prematch Medusa button repaired via View_PreMatch_CharSelect.PopulateCharacterButtons: index=7/16 beforeLocal=(0.00, 262.50, 0.00) afterLocal=(0.00, 262.50, 0.00) beforeAnchored=(0.00, 150.00) afterAnchored=(0.00, 150.00).[0m
+[[38;2;50;205;50m11:24:13.566[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mFailed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 7269268]
+[0m
+[[38;2;50;205;50m11:24:13.567[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mFailed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 7269268]
+[0m
+[[38;2;50;205;50m11:24:13.567[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mFailed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 7269268]
+[0m
+[[38;2;50;205;50m11:24:13.568[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mFailed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 7269268]
+[0m
+[[38;2;50;205;50m11:24:13.568[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mFailed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 7269268]
+[0m
+[[38;2;50;205;50m11:24:13.569[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mFailed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 7269268]
+[0m
+[[38;2;50;205;50m11:24:13.569[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mFailed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 7269268]
+[0m
+[[38;2;50;205;50m11:24:13.570[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mFailed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 7269268]
+[0m
+[[38;2;50;205;50m11:24:13.571[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mFailed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 7269268]
+[0m
+[[38;2;50;205;50m11:24:13.571[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mFailed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 7269268]
+[0m
+[[38;2;50;205;50m11:24:13.572[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mFailed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 7269268]
+[0m
+[[38;2;50;205;50m11:24:13.572[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mFailed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 7269268]
+[0m
+[[38;2;50;205;50m11:24:13.572[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mFailed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 7269268]
+[0m
+[[38;2;50;205;50m11:24:13.576[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[PLAYERMANAGER] [CodexLiveV177] Player On Start | 4[0m
+[[38;2;50;205;50m11:24:13.585[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] AugmentFix auto-selected first augment via OnUpdate.PlayerAPI.Local.uiAugments.ClSelectAugment(0), total=1.[0m
+[[38;2;50;205;50m11:24:13.590[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[UpdateGameModes] selectedAvailable True, selectedGameModeId 3[0m
+[[38;2;50;205;50m11:24:14.269[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[RegionController] WS for custom - Connection error - Unable to connect to the remote server[0m
+[[38;2;50;205;50m11:24:14.270[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[RegionController] WS for custom - Connection closed - Abnormal[0m
+[[38;2;50;205;50m11:24:14.456[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mFailed to create agent because there is no valid NavMesh
+UnityEngine.GameObject:SetActive(Boolean)
+Mirror.NetworkClient:ApplySpawnPayload(NetworkIdentity, SpawnMessage)
+Mirror.NetworkClient:OnSpawn(SpawnMessage)
+Mirror.<>c__DisplayClass62_0`1:<RegisterHandler>g__HandlerWrapped|0(NetworkConnection, T)
+Mirror.<>c__DisplayClass9_0`2:<WrapHandler>g__Wrapped|0(C, T, Int32)
+Mirror.<>c__DisplayClass8_0`2:<WrapHandler>b__0(NetworkConnection, NetworkReader, Int32)
+Mirror.NetworkClient:UnpackAndInvoke(NetworkReader, Int32)
+Mirror.NetworkClient:OnTransportData(ArraySegment`1, Int32)
+kcp2k.KcpTransport:<Awake>b__29_2(ArraySegment`1, KcpChannel)
+kcp2k.KcpClient:OnData(ArraySegment`1, KcpChannel)
+kcp2k.KcpPeer:TickIncoming_Authenticated(UInt32)
+kcp2k.KcpPeer:TickIncoming()
+kcp2k.KcpClient:TickIncoming()
+kcp2k.KcpTransport:ClientEarlyUpdate()
+Mirror.NetworkClient:NetworkEarlyUpdate()
+Mirror.NetworkLoop:NetworkEarlyUpdate()
+UnityEngine.LowMemoryCallback:Invoke()
+
+[ line 7268228]
+[0m
+[[38;2;50;205;50m11:24:14.458[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] animator controller repaired via FindMedusaAnimator: animator='Medusa_Visual' controller='Medusa'.[0m
+[[38;2;50;205;50m11:24:14.458[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] HM postfix rebound CharAnimator on 'Char_Medusa(Clone)' -> Medusa's Animator (controller='Medusa').[0m
+[[38;2;50;205;50m11:24:14.458[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] HM postfix rebound CharAnimator on 'Char_Medusa(Clone)' -> Medusa's Animator (controller='Medusa').[0m
+[[38;2;50;205;50m11:24:14.485[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] camera target repair via EntityManager.OnStartClient.alreadyPrimary: entity='Char_Medusa(Clone)' target='Char_Medusa(Clone)' updated=0 already=1 controllers=1 localPrimary='Char_Medusa(Clone)' auth='Char_Medusa(Clone)' entityScreen=568.1,558.4,-112.4 camera=Camera pos=(-7.268,7.928,-6.232) rot=(34.239,49.816,359.941) size=640x480.[0m
+[[38;2;50;205;50m11:24:14.510[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual anchor via EntityManager.OnStartClient.existing: root='Char_Medusa(Clone)' parent Root->CharHolder localPos=(0,0,0) worldPos=(-158.636,0.06,-46.113).[0m
+[[38;2;50;205;50m11:24:14.510[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual fit via EntityManager.OnStartClient.existing: skinnedBaseH=2.153 skinnedVisualH=1.998 scaleFactor=1 localScale=1 localPos=(-0.171,0.063,0.096).[0m
+[[38;2;50;205;50m11:24:14.510[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual layer sync via EntityManager.OnStartClient.existing: layer=0 'Default' objects=59.[0m
+[[38;2;50;205;50m11:24:14.510[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual render enable via EntityManager.OnStartClient.existing: renderers=4 newlyEnabled=0 smrsUpdateWhenOffscreen=1 active=True localPos=(-0.171,0.063,0.096) localScale=1.[0m
+[[38;2;50;205;50m11:24:14.511[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual layer sync via EntityManager.OnStartClient.existing.postCharMaterial: layer=0 'Default' objects=59.[0m
+[[38;2;50;205;50m11:24:14.511[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual layer sync via EntityManager.OnStartClient.existing.postCharMaterial.postVisibility: layer=0 'Default' objects=59.[0m
+[[38;2;50;205;50m11:24:14.511[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] CharMaterial visibility forced via EntityManager.OnStartClient.existing.postCharMaterial: alpha=1 opaque=true partialHidden=false rendererActive=true visualActive=True.[0m
+[[38;2;50;205;50m11:24:14.511[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] CharMaterial rebound via EntityManager.OnStartClient.existing: primary='MedusaBase' primaryLayer=0 renderers=4 extras=3 customBounds=True.[0m
+[[38;2;50;205;50m11:24:14.511[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] copied bundle material props via EntityManager.OnStartClient.existing.postCharMaterial: target='Medusa_Material_Native' textures=1 colors=2 floats=0 sourceMaterial='Medusa_Material'.[0m
+[[38;2;50;205;50m11:24:14.512[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] material visibility via EntityManager.OnStartClient.existing.postCharMaterial: smrs=1 shader='Custom/Toon/Toon_Character_Amplify' localPos=(-0.171,0.063,0.096).[0m
+[[38;2;50;205;50m11:24:14.512[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual render enable via EntityManager.OnStartClient.existing.postFit: renderers=4 newlyEnabled=0 smrsUpdateWhenOffscreen=1 active=True localPos=(-0.171,0.063,0.096) localScale=1.[0m
+[[38;2;50;205;50m11:24:14.512[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual layer sync via EntityManager.OnStartClient.existing.postFit.postVisibility: layer=0 'Default' objects=59.[0m
+[[38;2;50;205;50m11:24:14.512[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] CharMaterial visibility forced via EntityManager.OnStartClient.existing.postFit: alpha=1 opaque=true partialHidden=false rendererActive=true visualActive=True.[0m
+[[38;2;50;205;50m11:24:14.512[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual diagnostics via EntityManager.OnStartClient.existing.postFit: root='Char_Medusa(Clone)' visualActive=True layer=0 world=(-158.807,0.123,-46.017) local=(-0.171,0.063,0.096) scale=(1,1,1) renderers=4 smrs=1 firstRenderer='Base_BlobShadow' firstRendererLayer=0 firstSmr='MedusaBase' mesh='MedusaBase' rootBone='Def-Hips' material='Medusa_Material_Native' shader='Custom/Toon/Toon_Character_Amplify' bounds=-158.853,0.972,-46.105/1.359,1.998,1.507 screen='567.2,554.1,-113.1'.[0m
+[[38;2;50;205;50m11:24:16.045[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] dismissed 73 loading overlay object(s) after live spawn via EntityManager.OnStartClient.existing.[0m
+[[38;2;50;205;50m11:24:16.050[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] live rebind via EntityManager.OnStartClient.existing: root='Char_Medusa(Clone)' charAnim=1 footsteps=1 controller='Medusa'.[0m
+[[38;2;50;205;50m11:24:16.074[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] runtime ability UI applied via EntityManager.OnStartClient.CharAbilities: abilities=4 colors=medusa-green.[0m
+[[38;2;50;205;50m11:24:16.132[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual anchor via EntityManager.OnStartClient.existing: root='Char_Medusa(Clone)' parent CharHolder->CharHolder localPos=(0,0,0) worldPos=(-158.636,0.06,-46.113).[0m
+[[38;2;50;205;50m11:24:16.133[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual layer sync via EntityManager.OnStartClient.existing: layer=0 'Default' objects=59.[0m
+[[38;2;50;205;50m11:24:16.133[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual render enable via EntityManager.OnStartClient.existing: renderers=4 newlyEnabled=0 smrsUpdateWhenOffscreen=1 active=True localPos=(-0.171,0.063,0.096) localScale=1.[0m
+[[38;2;50;205;50m11:24:16.136[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] forced renderer material opacity via EntityManager.OnStartClient.existing.postCharMaterial.prepared: materials=5.[0m
+[[38;2;50;205;50m11:24:16.136[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual render enable via EntityManager.OnStartClient.existing.postFit: renderers=4 newlyEnabled=0 smrsUpdateWhenOffscreen=1 active=True localPos=(-0.171,0.063,0.096) localScale=1.[0m
+[[38;2;50;205;50m11:24:16.136[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual layer sync via EntityManager.OnStartClient.existing.postFit.postVisibility: layer=0 'Default' objects=59.[0m
+[[38;2;50;205;50m11:24:16.137[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] CharMaterial visibility forced via EntityManager.OnStartClient.existing.postFit: alpha=1 opaque=true partialHidden=false rendererActive=true visualActive=True.[0m
+[[38;2;50;205;50m11:24:16.152[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] runtime ability UI applied via EntityManager.OnStartClient.CharAbilities: abilities=4 colors=medusa-green.[0m
+[[38;2;50;205;50m11:24:16.209[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual anchor via EntityManager.Start.existing: root='[CodexLiveV177] Medusa' parent CharHolder->CharHolder localPos=(0,0,0) worldPos=(-158.636,0.006,-46.113).[0m
+[[38;2;50;205;50m11:24:16.209[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual fit via EntityManager.Start.existing: skinnedBaseH=2.153 skinnedVisualH=1.998 scaleFactor=1 localScale=1 localPos=(-0.28,0.063,0.055).[0m
+[[38;2;50;205;50m11:24:16.209[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual layer sync via EntityManager.Start.existing: layer=0 'Default' objects=59.[0m
+[[38;2;50;205;50m11:24:16.209[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual render enable via EntityManager.Start.existing: renderers=4 newlyEnabled=0 smrsUpdateWhenOffscreen=1 active=True localPos=(-0.28,0.063,0.055) localScale=1.[0m
+[[38;2;50;205;50m11:24:16.210[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] forced renderer material opacity via EntityManager.Start.existing.postCharMaterial.prepared: materials=8.[0m
+[[38;2;50;205;50m11:24:16.210[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual render enable via EntityManager.Start.existing.postFit: renderers=4 newlyEnabled=0 smrsUpdateWhenOffscreen=1 active=True localPos=(-0.28,0.063,0.055) localScale=1.[0m
+[[38;2;50;205;50m11:24:16.210[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual layer sync via EntityManager.Start.existing.postFit.postVisibility: layer=0 'Default' objects=59.[0m
+[[38;2;50;205;50m11:24:16.210[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] CharMaterial visibility forced via EntityManager.Start.existing.postFit: alpha=1 opaque=true partialHidden=false rendererActive=true visualActive=True.[0m
+[[38;2;50;205;50m11:24:16.211[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual diagnostics via EntityManager.Start.existing.postFit: root='[CodexLiveV177] Medusa' visualActive=True layer=0 world=(-158.805,0.069,-45.884) local=(-0.28,0.063,0.055) scale=(1,1,1) renderers=4 smrs=1 firstRenderer='Base_BlobShadow' firstRendererLayer=0 firstSmr='MedusaBase' mesh='MedusaBase' rootBone='Def-Hips' material='Medusa_Material_Native (Instance)' shader='Custom/Toon/Toon_Character_Amplify' bounds=-158.79,0.918,-45.96/1.1,1.998,1.525 screen='567.8,554.4,-112.9'.[0m
+[[38;2;50;205;50m11:24:16.224[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] runtime ability UI applied via EntityManager.Start.CharAbilities: abilities=4 colors=medusa-green.[0m
+[[38;2;50;205;50m11:24:16.266[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual anchor via EntityManager.Start.existing: root='[CodexLiveV177] Medusa' parent CharHolder->CharHolder localPos=(0,0,0) worldPos=(-158.636,0.006,-46.113).[0m
+[[38;2;50;205;50m11:24:16.267[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual render enable via EntityManager.Start.existing: renderers=4 newlyEnabled=0 smrsUpdateWhenOffscreen=1 active=True localPos=(-0.28,0.063,0.055) localScale=1.[0m
+[[38;2;50;205;50m11:24:16.267[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] forced renderer material opacity via EntityManager.Start.existing.postCharMaterial.prepared: materials=8.[0m
+[[38;2;50;205;50m11:24:16.267[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] CharMaterial visibility forced via EntityManager.Start.existing.postFit: alpha=1 opaque=true partialHidden=false rendererActive=true visualActive=True.[0m
+[[38;2;50;205;50m11:24:16.282[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] runtime ability UI applied via EntityManager.Start.CharAbilities: abilities=4 colors=medusa-green.[0m
+[[38;2;50;205;50m11:24:16.324[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] ability LoadAbilityUI bridge applied via Ability.LoadAbilityUI: slot=0.[0m
+[[38;2;50;205;50m11:24:16.357[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] ability LoadAbilityUI bridge applied via Ability.LoadAbilityUI: slot=0.[0m
+[[38;2;50;205;50m11:24:16.363[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] ability element palette applied via UIAbilityElement.LoadIcon(Sprite,Color,Color,string,string): cmd=0 title='MEDUSA_AB_LMB_TITLE'.[0m
+[[38;2;50;205;50m11:24:16.363[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] ability element palette applied via UIAbilityElement.LoadIcon(Sprite,Color,Color,string,string): cmd=0 title='MEDUSA_AB_LMB_TITLE'.[0m
+[[38;2;50;205;50m11:24:16.389[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] ability LoadAbilityUI bridge applied via Ability.LoadAbilityUI: slot=1.[0m
+[[38;2;50;205;50m11:24:16.416[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] ability LoadAbilityUI bridge applied via Ability.LoadAbilityUI: slot=1.[0m
+[[38;2;50;205;50m11:24:16.417[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] ability element palette applied via UIAbilityElement.LoadIcon(Sprite,Color,Color,string,string): cmd=1 title='MEDUSA_AB_Q_TITLE'.[0m
+[[38;2;50;205;50m11:24:16.417[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] ability element palette applied via UIAbilityElement.LoadIcon(Sprite,Color,Color,string,string): cmd=1 title='MEDUSA_AB_Q_TITLE'.[0m
+[[38;2;50;205;50m11:24:16.450[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] ability LoadAbilityUI bridge applied via Ability.LoadAbilityUI: slot=2.[0m
+[[38;2;50;205;50m11:24:16.477[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] ability LoadAbilityUI bridge applied via Ability.LoadAbilityUI: slot=2.[0m
+[[38;2;50;205;50m11:24:16.478[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] ability element palette applied via UIAbilityElement.LoadIcon(Sprite,Color,Color,string,string): cmd=2 title='MEDUSA_AB_SPACE_TITLE'.[0m
+[[38;2;50;205;50m11:24:16.478[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] ability element palette applied via UIAbilityElement.LoadIcon(Sprite,Color,Color,string,string): cmd=2 title='MEDUSA_AB_SPACE_TITLE'.[0m
+[[38;2;50;205;50m11:24:16.509[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] ability LoadAbilityUI bridge applied via Ability.LoadAbilityUI: slot=3.[0m
+[[38;2;50;205;50m11:24:16.534[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] ability LoadAbilityUI bridge applied via Ability.LoadAbilityUI: slot=3.[0m
+[[38;2;50;205;50m11:24:16.535[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] ability element palette applied via UIAbilityElement.LoadIcon(Sprite,Color,Color,string,string): cmd=3 title='MEDUSA_AB_ULT_TITLE'.[0m
+[[38;2;50;205;50m11:24:16.535[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] ability element palette applied via UIAbilityElement.LoadIcon(Sprite,Color,Color,string,string): cmd=3 title='MEDUSA_AB_ULT_TITLE'.[0m
+[[38;2;50;205;50m11:24:16.562[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] ability element palette applied via UIAbilityElement.LoadIcon(CharacterConfiguration): cmd=4 title=''.[0m
+[[38;2;50;205;50m11:24:16.562[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] ability element palette applied via UIAbilityElement.LoadIcon(CharacterConfiguration): cmd=4 title=''.[0m
+[[38;2;50;205;50m11:24:16.591[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] ability element palette applied via UIAbilityElement.LoadIcon(CharacterConfiguration): cmd=5 title=''.[0m
+[[38;2;50;205;50m11:24:16.591[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] ability element palette applied via UIAbilityElement.LoadIcon(CharacterConfiguration): cmd=5 title=''.[0m
+[[38;2;50;205;50m11:24:16.616[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] ability element palette applied via UIAbilityElement.LoadIcon(CharacterConfiguration): cmd=6 title=''.[0m
+[[38;2;50;205;50m11:24:16.617[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] ability element palette applied via UIAbilityElement.LoadIcon(CharacterConfiguration): cmd=6 title=''.[0m
+[[38;2;50;205;50m11:24:16.642[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] ability element palette applied via UIAbilityElement.LoadIcon(CharacterConfiguration): cmd=7 title=''.[0m
+[[38;2;50;205;50m11:24:16.642[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] ability element palette applied via UIAbilityElement.LoadIcon(CharacterConfiguration): cmd=7 title=''.[0m
+[[38;2;50;205;50m11:24:16.643[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mChar Mastery was null on GetOwnedHighestTierCharMasteryBadge[0m
+[[38;2;50;205;50m11:24:16.654[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mLoaded UI diagnostics (post-login fallback waiting): activeScene='MainScene' path='Assets/MainScene.unity' isLoaded=True[0m
+[[38;2;50;205;50m11:24:16.655[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mLoaded UI diagnostics canvases=0[0m
+[[38;2;50;205;50m11:24:16.655[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPost-login splash fallback waiting for lobby UI. attempt=1 lobbies=0 splashes=0[0m
+[[38;2;50;205;50m11:24:16.743[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual anchor via EntityManager.OnStartClient+0.15s.existing: root='[CodexLiveV177] Medusa' parent CharHolder->CharHolder localPos=(0,0,0) worldPos=(-158.636,0.006,-46.113).[0m
+[[38;2;50;205;50m11:24:16.819[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual anchor via EntityManager.OnStartClient+0.45s.existing: root='[CodexLiveV177] Medusa' parent CharHolder->CharHolder localPos=(0,0,0) worldPos=(-158.636,0.006,-46.113).[0m
+[[38;2;50;205;50m11:24:16.904[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mFailed to create agent because there is no valid NavMesh
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion)
+UnityEngine.Object:Instantiate(T, Vector3, Quaternion)
+Mirror.NetworkClient:SpawnPrefab(SpawnMessage)
+Mirror.NetworkClient:FindOrSpawnObject(SpawnMessage, NetworkIdentity&)
+Mirror.NetworkClient:OnSpawn(SpawnMessage)
+Mirror.<>c__DisplayClass62_0`1:<RegisterHandler>g__HandlerWrapped|0(NetworkConnection, T)
+Mirror.<>c__DisplayClass9_0`2:<WrapHandler>g__Wrapped|0(C, T, Int32)
+Mirror.<>c__DisplayClass8_0`2:<WrapHandler>b__0(NetworkConnection, NetworkReader, Int32)
+Mirror.NetworkClient:UnpackAndInvoke(NetworkReader, Int32)
+Mirror.NetworkClient:OnTransportData(ArraySegment`1, Int32)
+kcp2k.KcpTransport:<Awake>b__29_2(ArraySegment`1, KcpChannel)
+kcp2k.KcpClient:OnData(ArraySegment`1, KcpChannel)
+kcp2k.KcpPeer:TickIncoming_Authenticated(UInt32)
+kcp2k.KcpPeer:TickIncoming()
+kcp2k.KcpClient:TickIncoming()
+kcp2k.KcpTransport:ClientEarlyUpdate()
+Mirror.NetworkClient:NetworkEarlyUpdate()
+Mirror.NetworkLoop:NetworkEarlyUpdate()
+UnityEngine.LowMemoryCallback:Invoke()
+
+[ line 7267996]
+[0m
+[[38;2;50;205;50m11:24:16.938[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mFailed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 7269268]
+[0m
+[[38;2;50;205;50m11:24:16.940[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mFailed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 7269268]
+[0m
+[[38;2;50;205;50m11:24:16.942[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mFailed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 7269268]
+[0m
+[[38;2;50;205;50m11:24:16.942[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mFailed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 7269268]
+[0m
+[[38;2;50;205;50m11:24:16.944[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mFailed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 7269268]
+[0m
+[[38;2;50;205;50m11:24:17.092[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual anchor via EntityManager.OnStartClient+0.95s.existing: root='[CodexLiveV177] Medusa' parent CharHolder->CharHolder localPos=(0,0,0) worldPos=(-158.636,0,-46.113).[0m
+[[38;2;50;205;50m11:24:17.320[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mPrebaked navmesh data for level 'Map2_BazaarCity 3' succesfully found. Applying now.[0m
+[[38;2;50;205;50m11:24:17.322[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mLoaded Map Map2_BazaarCity 3[0m
+[[38;2;50;205;50m11:24:17.510[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mCannot combine mesh that does not allow access: PD_OOB_Floor_01
+UnityEngine.Mesh:CombineMeshes(CombineInstance[], Boolean)
+BAPBAP.Maps.LevelRuntimeManager:CombineMeshes(CombineMeshesMat[], ShadowCastingMode)
+BAPBAP.Maps.LevelRuntimeManager:BakeChunkMeshes(MapChunk, Transform)
+BAPBAP.Maps.LevelRuntimeManager:LoadChunk(Int32, Vector2Int, Boolean)
+BAPBAP.Maps.LevelDynamicLoadProcess:LoadDynamicChunkImmediate(Int32, Vector2Int)
+BAPBAP.Maps.DynamicLoadTrigger:TryLoad(LevelDynamicLoadProcess, Boolean)
+BAPBAP.Maps.LevelDynamicLoadProcess:TryLoadChunk(Int32, Int32, Int32, Boolean)
+BAPBAP.Local.DynamicChunkLoader:UpdateChunkLoad(Boolean)
+BAPBAP.Local.DynamicChunkLoader:Update()
+
+[ line 7269236]
+[0m
+[[38;2;50;205;50m11:24:17.511[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[GameMode] OnEnable | frameCount 47[0m
+[[38;2;50;205;50m11:24:17.986[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual anchor via EntityManager.OnStartClient+1.80s.existing: root='[CodexLiveV177] Medusa' parent CharHolder->CharHolder localPos=(0,0,0) worldPos=(-158.636,0.06,-46.113).[0m
+[[38;2;50;205;50m11:24:18.730[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] no loading overlay candidates found after live spawn via EntityManager.OnStartClient+1.80s.existing.[0m
+[[38;2;50;205;50m11:24:19.074[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPost-login splash fallback waiting for lobby UI. attempt=2 lobbies=0 splashes=0[0m
+[[38;2;50;205;50m11:24:19.677[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mPlayer: {"accountId":"codex-live-v177-20260610-112232","username":"Player2","discriminator":1002,"level":1,"charId":0,"bannerId":0,"skins":[300018,300000,300007,300020,300017,300026,300021,300013,300025,300023,300015,300003,300005,300016,300019,300018],"playerStatus":0,"isLeader":true,"isReady":false,"teamId":1,"spawnPosition":0}[0m
+[[38;2;50;205;50m11:24:19.678[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mLobby: {"lobbyId":"DWKNJ3","isInvited":false,"LocalAccountId":"codex-live-v177-20260610-112232","isOpenLobby":true,"gameModeId":1,"isAutoFill":true,"regionId":"vewr","leaderAccountId":"codex-live-v177-20260610-112232","queueSize":0,"queuePlayerCount":0,"mmIsCounting":false,"mmStartingTime":0.0,"queueIsCounting":false,"queueStartingDelay":0,"queueStartingTime":0.0,"isMatchmaking":false,"isInQueue":false,"isInGame":false,"isAdmin":false,"isGuest":false,"isCompleted":true,"gold":1000,"fractals":999999,"charTokens":0,"accountPass":{"passLevels":[{"level":1,"xpNeeded":0},{"level":2,"xpNeeded":100},{"level":3,"xpNeeded":200},{"level":4,"xpNeeded":300},{"level":5,"xpNeeded":400},{"level":6,"xpNeeded":500},{"level":7,"xpNeeded":600},{"level":8,"xpNeeded":700},{"level":9,"xpNeeded":800},{"level":10,"xpNeeded":900},{"level":11,"xpNeeded":1000},{"level":12,"xpNeeded":1100},{"level":13,"xpNeeded":1200},{"level":14,"xpNeeded":1300},{"level":15,"xpNeeded":1400},{"level":16,"xpNeeded":1500},{"level":17,"xpNeeded":1600},{"level":18,"xpNeeded":1700},{"level":19,"xpNeeded":1800},{"level":20,"xpNeeded":1900},{"level":21,"xpNeeded":2000},{"level":22,"xpNeeded":2100},{"level":23,"xpNeeded":2200},{"level":24,"xpNeeded":2300},{"level":25,"xpNeeded":2400},{"level":26,"xpNeeded":2500},{"level":27,"xpNeeded":2600},{"level":28,"xpNeeded":2700},{"level":29,"xpNeeded":2800},{"level":30,"xpNeeded":2900},{"level":31,"xpNeeded":3000},{"level":32,"xpNeeded":3100},{"level":33,"xpNeeded":3200},{"level":34,"xpNeeded":3300},{"level":35,"xpNeeded":3400},{"level":36,"xpNeeded":3500},{"level":37,"xpNeeded":3600},{"level":38,"xpNeeded":3700},{"level":39,"xpNeeded":3800},{"level":40,"xpNeeded":3900},{"level":41,"xpNeeded":4000},{"level":42,"xpNeeded":4100},{"level":43,"xpNeeded":4200},{"level":44,"xpNeeded":4300},{"level":45,"xpNeeded":4400},{"level":46,"xpNeeded":4500},{"level":47,"xpNeeded":4600},{"level":48,"xpNeeded":4700},{"level":49,"xpNeeded":4800},{"level":50,"xpNeeded":4900},{"level":51,"xpNeeded":5000},{"level":52,"xpNeeded":5100},{"level":53,"xpNeeded":5200},{"level":54,"xpNeeded":5300},{"level":55,"xpNeeded":5400},{"level":56,"xpNeeded":5500},{"level":57,"xpNeeded":5600},{"level":58,"xpNeeded":5700},{"level":59,"xpNeeded":5800},{"level":60,"xpNeeded":5900},{"level":61,"xpNeeded":6000},{"level":62,"xpNeeded":6100},{"level":63,"xpNeeded":6200},{"level":64,"xpNeeded":6300},{"level":65,"xpNeeded":6400},{"level":66,"xpNeeded":6500},{"level":67,"xpNeeded":6600},{"level":68,"xpNeeded":6700},{"level":69,"xpNeeded":6800},{"level":70,"xpNeeded":6900},{"level":71,"xpNeeded":7000},{"level":72,"xpNeeded":7100},{"level":73,"xpNeeded":7200},{"level":74,"xpNeeded":7300},{"level":75,"xpNeeded":7400},{"level":76,"xpNeeded":7500},{"level":77,"xpNeeded":7600},{"level":78,"xpNeeded":7700},{"level":79,"xpNeeded":7800},{"level":80,"xpNeeded":7900},{"level":81,"xpNeeded":8000},{"level":82,"xpNeeded":8100},{"level":83,"xpNeeded":8200},{"level":84,"xpNeeded":8300},{"level":85,"xpNeeded":8400},{"level":86,"xpNeeded":8500},{"level":87,"xpNeeded":8600},{"level":88,"xpNeeded":8700},{"level":89,"xpNeeded":8800},{"level":90,"xpNeeded":8900},{"level":91,"xpNeeded":9000},{"level":92,"xpNeeded":9100},{"level":93,"xpNeeded":9200},{"level":94,"xpNeeded":9300},{"level":95,"xpNeeded":9400},{"level":96,"xpNeeded":9500},{"level":97,"xpNeeded":9600},{"level":98,"xpNeeded":9700},{"level":99,"xpNeeded":9800},{"level":100,"xpNeeded":9900}]},"accountXp":0,"iapEnabled":false,"creatorCode":"","creatorName":""}[0m
+[[38;2;50;205;50m11:24:19.680[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[UpdateGameModes] selectedAvailable False, selectedGameModeId 1[0m
+[[38;2;50;205;50m11:24:19.688[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mChar Mastery was null on UpdateCharMasteryXp[0m
+[[38;2;50;205;50m11:24:19.688[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mChar Mastery was null on UpdateCharMasteryBadge[0m
+[[38;2;50;205;50m11:24:19.689[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mChar Mastery was null on IsMasteryAvailable[0m
+[[38;2;50;205;50m11:24:19.701[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[UpdateGameModes] selectedAvailable True, selectedGameModeId 3[0m
+[[38;2;50;205;50m11:24:19.727[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[LNC] HandleGameModeUpdatedMessage - Received GAME_MODE_UPDATED[0m
+[[38;2;50;205;50m11:24:19.728[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[UpdateGameModes] selectedAvailable True, selectedGameModeId 3[0m
+[[38;2;50;205;50m11:24:21.074[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPost-login splash fallback waiting for lobby UI. attempt=3 lobbies=0 splashes=0[0m
+[[38;2;50;205;50m11:24:23.077[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPost-login splash fallback waiting for lobby UI. attempt=4 lobbies=0 splashes=0[0m
+[[38;2;50;205;50m11:24:25.081[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPost-login splash fallback waiting for lobby UI. attempt=5 lobbies=0 splashes=0[0m
+[[38;2;50;205;50m11:24:27.084[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPost-login splash fallback waiting for lobby UI. attempt=6 lobbies=0 splashes=0[0m
+[[38;2;50;205;50m11:24:29.088[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPost-login splash fallback waiting for lobby UI. attempt=7 lobbies=0 splashes=0[0m
+[[38;2;50;205;50m11:24:31.091[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[FULL DIAGNOSTICS] Total GameObjects: 0[0m
+[[38;2;50;205;50m11:24:31.092[0m] [[38;2;255;255;0mBAP_Custom_Server[0m] [38;2;255;255;0mPost-login splash fallback could not find lobby splash UI after 8 attempts. Continuing at slower rate.[0m
+[[38;2;50;205;50m11:24:35.062[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] UICharactersConfiguration first seen at poll #1 (roster=16).[0m
+[[38;2;50;205;50m11:24:35.084[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual anchor via PollOnce.primary.existing: root='[CodexLiveV177] Medusa' parent CharHolder->CharHolder localPos=(0,0,0) worldPos=(-158.636,0.06,-46.113).[0m
+[[38;2;50;205;50m11:24:35.085[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual fit via PollOnce.primary.existing: skinnedBaseH=2.153 skinnedVisualH=2.11 scaleFactor=0.874 localScale=0.874 localPos=(-0.202,0.273,0.029).[0m
+[[38;2;50;205;50m11:24:35.086[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual diagnostics via PollOnce.primary.existing.postFit: root='[CodexLiveV177] Medusa' visualActive=True layer=0 world=(-158.447,0.333,-46.036) local=(-0.202,0.273,0.029) scale=(0.874,0.874,0.874) renderers=7 smrs=1 firstRenderer='Base_BlobShadow' firstRendererLayer=0 firstSmr='MedusaBase' mesh='MedusaBase' rootBone='Def-Hips' material='Medusa_Material_Native (Instance)' shader='Custom/Toon/Toon_Character_Amplify' bounds=-158.447,0.333,-46.036/72.413,51.42,72.413 screen='278.5,398.7,15.0'.[0m
+[[38;2;50;205;50m11:24:36.051[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] live local diag ready: localPlayerId=1 localChar=15 localPrimary='[CodexLiveV177] Medusa' auth='[CodexLiveV177] Medusa' pos=(-158.636,0.06,-46.113) screen=274.9,392.5,15.2 players=1 entities=40 camera=MainCamera pos=(-156.636,12.03,-57.667) rot=(70,0,0) size=640x480.[0m
+[[38;2;50;205;50m11:24:36.160[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual anchor via PollOnce.primary.existing: root='[CodexLiveV177] Medusa' parent CharHolder->CharHolder localPos=(0,0,0) worldPos=(-158.636,0.06,-46.113).[0m
+[[38;2;50;205;50m11:24:37.166[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] visual anchor via PollOnce.primary.existing: root='[CodexLiveV177] Medusa' parent CharHolder->CharHolder localPos=(0,0,0) worldPos=(-158.636,0.06,-46.113).[0m
+[[38;2;50;205;50m11:24:39.381[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] anim(prefab): name='Medusa_Visual' enabled=True controller='Medusa' parameterCount=0[0m
+[[38;2;50;205;50m11:24:39.385[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] anim(prefab): parameters not enumerable on inactive prefab (n=0).[0m
+[[38;2;50;205;50m11:24:39.385[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] anim(LIVE@1): name='Medusa_Anims_v01' enabled=False controller='Medusa'[0m
+[[38;2;50;205;50m11:24:39.387[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] anim(LIVE@1): Forward=0.00 Strafe=0.00 Turn=0.00 MoveSpeed=1.00 AttackSpeed=1.00 IsMoving=False state[hash=1467989883 norm=0.00][0m
+[[38;2;50;205;50m11:24:39.388[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] anim(LIVE@1): parameters(7/7) = [Forward(Float), Strafe(Float), Turn(Float), IsMoving(Bool), AttackSpeed(Float), MoveSpeed(Float), FootstepCurve(Float)][0m
+[[38;2;50;205;50m11:24:39.388[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] anim(LIVE@2): name='Medusa_Visual' enabled=True controller='Medusa'[0m
+[[38;2;50;205;50m11:24:39.388[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] anim(LIVE@2): Forward=0.00 Strafe=0.00 Turn=0.00 MoveSpeed=1.00 AttackSpeed=1.00 IsMoving=False state[hash=1467989883 norm=14.94][0m
+[[38;2;50;205;50m11:24:39.388[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] anim(LIVE@2): parameters(7/7) = [Forward(Float), Strafe(Float), Turn(Float), IsMoving(Bool), AttackSpeed(Float), MoveSpeed(Float), FootstepCurve(Float)][0m
+[[38;2;50;205;50m11:24:40.553[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[EarlyLobbyUiPatchLoop] exited after 3600 frames. preloadDone=False uiPatch=False charPatch=True[0m
+[[38;2;50;205;50m11:24:46.556[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mLOCAL POOLED OBJECT NULL ON DESPAWN: SFXPrefab[0m
+[[38;2;50;205;50m11:24:52.652[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mLOCAL POOLED OBJECT NULL ON DESPAWN: SFXPrefab[0m
+[[38;2;50;205;50m11:24:55.172[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mLOCAL POOLED OBJECT NULL ON DESPAWN: VFX_Sashimi_Punch_Left[0m
+[[38;2;50;205;50m11:24:58.209[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mLOCAL POOLED OBJECT NULL ON DESPAWN: SFXPrefab[0m
+[[38;2;50;205;50m11:25:01.952[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mLOCAL POOLED OBJECT NULL ON DESPAWN: SFXPrefab[0m
+[[38;2;50;205;50m11:25:07.967[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native FX renderer repair: name='VFX_Medusa_Poison_Muzzle' renderers=7 enabled=6 repaired=6 shaders=[Universal Render Pipeline/Particles/Unlit].[0m
+[[38;2;50;205;50m11:25:07.968[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native FX spawned: name='VFX_Medusa_Poison_Muzzle' particles=7 renderers=7 ttl=1.80 scale=1.10 pos=(-159.06,0.81,-45.97).[0m
+[[38;2;50;205;50m11:25:07.968[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native FX renderer repair: name='VFX_Medusa_Poison_Trail' renderers=3 enabled=3 repaired=3 shaders=[Universal Render Pipeline/Particles/Unlit].[0m
+[[38;2;50;205;50m11:25:07.968[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native FX spawned: name='VFX_Medusa_Poison_Trail' particles=3 renderers=3 ttl=1.80 scale=1.20 pos=(-159.91,0.81,-45.67).[0m
+[[38;2;50;205;50m11:25:07.970[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native FX renderer repair: name='VFX_Medusa_Poison_Hit' renderers=10 enabled=10 repaired=10 shaders=[Universal Render Pipeline/Particles/Unlit].[0m
+[[38;2;50;205;50m11:25:07.970[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native FX spawned: name='VFX_Medusa_Poison_Hit' particles=10 renderers=10 ttl=1.80 scale=1.15 pos=(-162.04,0.81,-44.94).[0m
+[[38;2;50;205;50m11:25:07.970[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native cast FX emitted: slot=0 prefabCount=6.[0m
+[[38;2;50;205;50m11:25:07.971[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] authored ability driver via CharAbilities.SetCastAbility: slot=0 server=False hits=0; inherited Kitsu Shoot suppressed.[0m
+[[38;2;50;205;50m11:25:20.096[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] direct ability tooltip via UIAbilities.ShowAbilityTooltip: cmd=3 slot=3 title='Petrifying Gaze'.[0m
+[[38;2;50;205;50m11:25:20.138[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] direct ability tooltip via UIAbilities.ShowAbilityTooltip: cmd=3 slot=3 title='Petrifying Gaze'.[0m
+[[38;2;50;205;50m11:25:21.440[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native FX renderer repair: name='VFX_Medusa_Poison_Muzzle' renderers=7 enabled=6 repaired=6 shaders=[Universal Render Pipeline/Particles/Unlit].[0m
+[[38;2;50;205;50m11:25:21.441[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native FX spawned: name='VFX_Medusa_Poison_Muzzle' particles=7 renderers=7 ttl=1.80 scale=1.10 pos=(-158.19,0.81,-46.09).[0m
+[[38;2;50;205;50m11:25:21.442[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native FX renderer repair: name='VFX_Medusa_Poison_Trail' renderers=3 enabled=3 repaired=3 shaders=[Universal Render Pipeline/Particles/Unlit].[0m
+[[38;2;50;205;50m11:25:21.442[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native FX spawned: name='VFX_Medusa_Poison_Trail' particles=3 renderers=3 ttl=1.80 scale=1.20 pos=(-157.29,0.81,-46.06).[0m
+[[38;2;50;205;50m11:25:21.443[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native FX renderer repair: name='VFX_Medusa_Poison_Hit' renderers=10 enabled=10 repaired=10 shaders=[Universal Render Pipeline/Particles/Unlit].[0m
+[[38;2;50;205;50m11:25:21.443[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native FX spawned: name='VFX_Medusa_Poison_Hit' particles=10 renderers=10 ttl=1.80 scale=1.15 pos=(-155.04,0.81,-45.97).[0m
+[[38;2;50;205;50m11:25:21.443[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native cast FX emitted: slot=0 prefabCount=6.[0m
+[[38;2;50;205;50m11:25:21.444[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] authored ability driver via CharAbilities.SetCastAbility: slot=0 server=False hits=0; inherited Kitsu Shoot suppressed.[0m
+[[38;2;50;205;50m11:25:23.611[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native FX renderer repair: name='VFX_Medusa_Poison_Muzzle' renderers=7 enabled=6 repaired=6 shaders=[Universal Render Pipeline/Particles/Unlit].[0m
+[[38;2;50;205;50m11:25:23.611[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native FX spawned: name='VFX_Medusa_Poison_Muzzle' particles=7 renderers=7 ttl=1.80 scale=1.10 pos=(-158.20,0.81,-46.22).[0m
+[[38;2;50;205;50m11:25:23.611[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native FX renderer repair: name='VFX_Medusa_Poison_Trail' renderers=3 enabled=3 repaired=3 shaders=[Universal Render Pipeline/Particles/Unlit].[0m
+[[38;2;50;205;50m11:25:23.611[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native FX spawned: name='VFX_Medusa_Poison_Trail' particles=3 renderers=3 ttl=1.80 scale=1.20 pos=(-157.32,0.81,-46.42).[0m
+[[38;2;50;205;50m11:25:23.612[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native FX renderer repair: name='VFX_Medusa_Poison_Hit' renderers=10 enabled=10 repaired=10 shaders=[Universal Render Pipeline/Particles/Unlit].[0m
+[[38;2;50;205;50m11:25:23.612[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native FX spawned: name='VFX_Medusa_Poison_Hit' particles=10 renderers=10 ttl=1.80 scale=1.15 pos=(-155.13,0.81,-46.94).[0m
+[[38;2;50;205;50m11:25:23.612[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native cast FX emitted: slot=0 prefabCount=6.[0m
+[[38;2;50;205;50m11:25:23.613[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] authored ability driver via CharAbilities.SetCastAbility: slot=0 server=False hits=0; inherited Kitsu Shoot suppressed.[0m
+[[38;2;50;205;50m11:25:25.794[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native FX renderer repair: name='VFX_Medusa_Poison_Muzzle' renderers=7 enabled=6 repaired=6 shaders=[Universal Render Pipeline/Particles/Unlit].[0m
+[[38;2;50;205;50m11:25:25.795[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native FX spawned: name='VFX_Medusa_Poison_Muzzle' particles=7 renderers=7 ttl=1.80 scale=1.10 pos=(-158.20,0.81,-46.22).[0m
+[[38;2;50;205;50m11:25:25.796[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native FX renderer repair: name='VFX_Medusa_Poison_Trail' renderers=3 enabled=3 repaired=3 shaders=[Universal Render Pipeline/Particles/Unlit].[0m
+[[38;2;50;205;50m11:25:25.796[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native FX spawned: name='VFX_Medusa_Poison_Trail' particles=3 renderers=3 ttl=1.80 scale=1.20 pos=(-157.33,0.81,-46.45).[0m
+[[38;2;50;205;50m11:25:25.797[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native FX renderer repair: name='VFX_Medusa_Poison_Hit' renderers=10 enabled=10 repaired=10 shaders=[Universal Render Pipeline/Particles/Unlit].[0m
+[[38;2;50;205;50m11:25:25.797[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native FX spawned: name='VFX_Medusa_Poison_Hit' particles=10 renderers=10 ttl=1.80 scale=1.15 pos=(-155.15,0.81,-47.00).[0m
+[[38;2;50;205;50m11:25:25.797[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native cast FX emitted: slot=0 prefabCount=6.[0m
+[[38;2;50;205;50m11:25:25.798[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] authored ability driver via CharAbilities.SetCastAbility: slot=0 server=False hits=0; inherited Kitsu Shoot suppressed.[0m
+[[38;2;50;205;50m11:25:26.369[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native FX renderer repair: name='VFX_Medusa_Poison_Muzzle' renderers=7 enabled=6 repaired=6 shaders=[Universal Render Pipeline/Particles/Unlit].[0m
+[[38;2;50;205;50m11:25:26.370[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native FX spawned: name='VFX_Medusa_Poison_Muzzle' particles=7 renderers=7 ttl=1.80 scale=1.10 pos=(-158.15,0.81,-46.24).[0m
+[[38;2;50;205;50m11:25:26.370[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native FX renderer repair: name='VFX_Medusa_Poison_Trail' renderers=3 enabled=3 repaired=3 shaders=[Universal Render Pipeline/Particles/Unlit].[0m
+[[38;2;50;205;50m11:25:26.371[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native FX spawned: name='VFX_Medusa_Poison_Trail' particles=3 renderers=3 ttl=1.80 scale=1.20 pos=(-157.42,0.81,-46.42).[0m
+[[38;2;50;205;50m11:25:26.372[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native FX renderer repair: name='VFX_Medusa_Poison_Puddle' renderers=7 enabled=6 repaired=6 shaders=[Universal Render Pipeline/Particles/Unlit].[0m
+[[38;2;50;205;50m11:25:26.372[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native FX spawned: name='VFX_Medusa_Poison_Puddle' particles=7 renderers=7 ttl=3.20 scale=1.05 pos=(-157.04,0.24,-46.52).[0m
+[[38;2;50;205;50m11:25:26.372[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native cast FX emitted: slot=1 prefabCount=6.[0m
+[[38;2;50;205;50m11:25:26.373[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] authored ability driver via CharAbilities.SetCastAbility: slot=1 server=False hits=0; inherited Kitsu Shoot suppressed.[0m
+[[38;2;50;205;50m11:25:27.771[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native FX renderer repair: name='VFX_Medusa_Poison_Escape' renderers=12 enabled=11 repaired=11 shaders=[Universal Render Pipeline/Particles/Unlit].[0m
+[[38;2;50;205;50m11:25:27.772[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native FX spawned: name='VFX_Medusa_Poison_Escape' particles=12 renderers=12 ttl=2.20 scale=1.10 pos=(-158.64,0.24,-46.11).[0m
+[[38;2;50;205;50m11:25:27.773[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native FX renderer repair: name='VFX_Medusa_Poison_Trail' renderers=3 enabled=3 repaired=3 shaders=[Universal Render Pipeline/Particles/Unlit].[0m
+[[38;2;50;205;50m11:25:27.773[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native FX spawned: name='VFX_Medusa_Poison_Trail' particles=3 renderers=3 ttl=1.80 scale=1.20 pos=(-159.46,0.59,-45.90).[0m
+[[38;2;50;205;50m11:25:27.774[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native FX renderer repair: name='VFX_Medusa_Poison_Puddle' renderers=7 enabled=6 repaired=6 shaders=[Universal Render Pipeline/Particles/Unlit].[0m
+[[38;2;50;205;50m11:25:27.774[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native FX spawned: name='VFX_Medusa_Poison_Puddle' particles=7 renderers=7 ttl=3.00 scale=1.05 pos=(-158.64,0.24,-46.11).[0m
+[[38;2;50;205;50m11:25:27.774[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] native cast FX emitted: slot=2 prefabCount=6.[0m
+[[38;2;50;205;50m11:25:27.775[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] authored ability driver via CharAbilities.SetCastAbility: slot=2 server=False hits=0; inherited Kitsu Shoot suppressed.[0m
+[[38;2;50;205;50m11:25:35.241[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211mBAPBAP ModAPI shutting down ...[0m
+[[38;2;50;205;50m11:25:35.248[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Registry] Mod unregistered: Medusa[0m
+[[38;2;50;205;50m11:25:35.249[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211mNativeHook.UnpatchAll: removed 0 of 0 patch(es).[0m
+[[38;2;50;205;50m11:25:36.781[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[TESTLOG] Client disconnected before[0m
+[[38;2;50;205;50m11:25:36.782[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[TESTLOG] Client disconnected[0m
+[[38;2;50;205;50m11:25:36.782[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[TESTLOG] Client unregistered handler[0m
+[[38;2;50;205;50m11:25:36.783[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[GameMode] OnDisable | frameCount 8325[0m
+[[38;2;50;205;50m11:25:36.963[0m] [[38;2;0;255;255mMedusa[0m] [38;2;211;211;211m[Medusa] runtime scene state reset: match ended GameMode.OnDisable:GameManager:main[0m
+[[38;2;50;205;50m11:25:36.965[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mTelepathyTransport Shutdown()[0m
+[[38;2;50;205;50m11:25:36.965[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mTelepathyTransport Shutdown()[0m
+[[38;2;50;205;50m11:25:36.965[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mTelepathyTransport Shutdown()[0m
+[[38;2;50;205;50m11:25:37.093[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[Client] function 'System.Void BAPBAP.Entities.Passive::ClDestroyLoopVfxObj(System.Int32)' called when client was not active
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+[0m
+[[38;2;50;205;50m11:25:37.094[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mNullReferenceException: Object reference not set to an instance of an object.
+  at UnityEngine.Behaviour.set_enabled (System.Boolean value) [0x00000] in <00000000000000000000000000000000>:0 
+  at BAPBAP.UI.UICanvasEffect.ApplyDownedEffect (System.Boolean isDowned) [0x00000] in <00000000000000000000000000000000>:0 
+  at BAPBAP.Entities.CharFX.DoDestroy () [0x00000] in <00000000000000000000000000000000>:0 
+[0m
+[38;2;205;92;92m[11:25:37.117] HarmonyLib.HarmonyException: IL Compile Error (unknown location)
+ ---> HarmonyLib.HarmonyException: IL Compile Error (unknown location)
+ ---> System.ComponentModel.Win32Exception (487): Es wurde versucht, auf eine unzulässige Adresse zuzugreifen.
+   at MonoMod.RuntimeDetour.Platforms.DetourNativeWindowsPlatform.MakeWritable(IntPtr src, UInt32 size)
+   at MonoMod.RuntimeDetour.DetourHelper.MakeWritable(IDetourNativePlatform plat, NativeDetourData detour)
+   at MonoMod.RuntimeDetour.NativeDetour.Undo()
+   at MonoMod.RuntimeDetour.Detour._TopUndo()
+   at MonoMod.RuntimeDetour.Detour._RefreshChain(MethodBase method)
+   at MonoMod.RuntimeDetour.Detour.Undo()
+   at MonoMod.RuntimeDetour.Detour.Dispose()
+   at DMD<MonoMod.RuntimeDetour.ILHook+Context::Refresh>(Context this)
+   at Trampoline<MonoMod.RuntimeDetour.ILHook+Context::Refresh>?8274172(Object )
+   at HarmonyLib.Internal.RuntimeFixes.StackTraceFixes.OnILChainRefresh(Object self)
+   at MonoMod.RuntimeDetour.ILHook.Apply()
+   at HarmonyLib.Public.Patching.ManagedMethodPatcher.DetourTo(MethodBase replacement)
+   --- End of inner exception stack trace ---
+   at HarmonyLib.Public.Patching.ManagedMethodPatcher.DetourTo(MethodBase replacement)
+   at HarmonyLib.PatchFunctions.UpdateWrapper(MethodBase original, PatchInfo patchInfo)
+   --- End of inner exception stack trace ---
+   at HarmonyLib.PatchFunctions.UpdateWrapper(MethodBase original, PatchInfo patchInfo)
+   at DMD<HarmonyLib.PatchProcessor::Unpatch>(PatchProcessor this, MethodInfo patch)
+   at HarmonyLib.PatchFunctions.<>c__DisplayClass5_0.<UnpatchConditional>b__1(Patch patchInfo)
+   at HarmonyLib.PatchFunctions.UnpatchConditional(Func`2 executionCondition)
+   at HarmonyLib.Harmony.UnpatchID(String harmonyID)
+   at HarmonyLib.Harmony.UnpatchSelf()
+   at MelonLoader.MelonBase.UnregisterInstance(String reason, Boolean silent)
+   at MelonLoader.MelonAssembly.UnregisterMelons(String reason, Boolean silent)
+   at MelonLoader.MelonAssembly.OnApplicationQuit()
+   at MelonLoader.MelonEvent.<>c.<Invoke>b__1_0(LemonAction x)
+   at MelonLoader.MelonEventBase`1.Invoke(Action`1 delegateInvoker)[0m
+[38;2;205;92;92m[11:25:37.149] HarmonyLib.HarmonyException: IL Compile Error (unknown location)
+ ---> HarmonyLib.HarmonyException: IL Compile Error (unknown location)
+ ---> System.ComponentModel.Win32Exception (487): Es wurde versucht, auf eine unzulässige Adresse zuzugreifen.
+   at MonoMod.RuntimeDetour.Platforms.DetourNativeWindowsPlatform.MakeWritable(IntPtr src, UInt32 size)
+   at MonoMod.RuntimeDetour.DetourHelper.MakeWritable(IDetourNativePlatform plat, NativeDetourData detour)
+   at MonoMod.RuntimeDetour.NativeDetour.Undo()
+   at MonoMod.RuntimeDetour.Detour._TopUndo()
+   at MonoMod.RuntimeDetour.Detour._RefreshChain(MethodBase method)
+   at MonoMod.RuntimeDetour.Detour.Undo()
+   at MonoMod.RuntimeDetour.Detour.Dispose()
+   at DMD<MonoMod.RuntimeDetour.ILHook+Context::Refresh>(Context this)
+   at Trampoline<MonoMod.RuntimeDetour.ILHook+Context::Refresh>?8274172(Object )
+   at HarmonyLib.Internal.RuntimeFixes.StackTraceFixes.OnILChainRefresh(Object self)
+   at MonoMod.RuntimeDetour.ILHook.Apply()
+   at HarmonyLib.Public.Patching.ManagedMethodPatcher.DetourTo(MethodBase replacement)
+   --- End of inner exception stack trace ---
+   at HarmonyLib.Public.Patching.ManagedMethodPatcher.DetourTo(MethodBase replacement)
+   at HarmonyLib.PatchFunctions.UpdateWrapper(MethodBase original, PatchInfo patchInfo)
+   --- End of inner exception stack trace ---
+   at HarmonyLib.PatchFunctions.UpdateWrapper(MethodBase original, PatchInfo patchInfo)
+   at DMD<HarmonyLib.PatchProcessor::Unpatch>(PatchProcessor this, MethodInfo patch)
+   at HarmonyLib.PatchFunctions.<>c__DisplayClass5_0.<UnpatchConditional>b__0(Patch patchInfo)
+   at HarmonyLib.PatchFunctions.UnpatchConditional(Func`2 executionCondition)
+   at HarmonyLib.Harmony.UnpatchID(String harmonyID)
+   at HarmonyLib.Harmony.UnpatchSelf()
+   at MelonLoader.MelonBase.UnregisterInstance(String reason, Boolean silent)
+   at MelonLoader.MelonAssembly.UnregisterMelons(String reason, Boolean silent)
+   at MelonLoader.MelonAssembly.OnApplicationQuit()
+   at MelonLoader.MelonEvent.<>c.<Invoke>b__1_0(LemonAction x)
+   at MelonLoader.MelonEventBase`1.Invoke(Action`1 delegateInvoker)[0m
+[[38;2;50;205;50m11:25:37.162[0m] [38;2;211;211;211mPreferences Saved![0m
+[38;2;205;92;92m[11:25:37.219] [Il2CppInterop] Exception in IL2CPP-to-Managed trampoline, not passing it to il2cpp: HarmonyLib.HarmonyException: IL Compile Error (unknown location)
+ ---> HarmonyLib.HarmonyException: IL Compile Error (unknown location)
+ ---> System.ComponentModel.Win32Exception (87): Falscher Parameter.
+   at MonoMod.RuntimeDetour.Platforms.DetourNativeWindowsPlatform.MakeWritable(IntPtr src, UInt32 size)
+   at MonoMod.RuntimeDetour.DetourHelper.MakeWritable(IDetourNativePlatform plat, NativeDetourData detour)
+   at MonoMod.RuntimeDetour.NativeDetour.Undo()
+   at MonoMod.RuntimeDetour.Detour._TopUndo()
+   at MonoMod.RuntimeDetour.Detour._RefreshChain(MethodBase method)
+   at MonoMod.RuntimeDetour.Detour.Undo()
+   at MonoMod.RuntimeDetour.Detour.Dispose()
+   at DMD<MonoMod.RuntimeDetour.ILHook+Context::Refresh>(Context this)
+   at Trampoline<MonoMod.RuntimeDetour.ILHook+Context::Refresh>?8274172(Object )
+   at HarmonyLib.Internal.RuntimeFixes.StackTraceFixes.OnILChainRefresh(Object self)
+   at MonoMod.RuntimeDetour.ILHook.Apply()
+   at HarmonyLib.Public.Patching.ManagedMethodPatcher.DetourTo(MethodBase replacement)
+   --- End of inner exception stack trace ---
+   at HarmonyLib.Public.Patching.ManagedMethodPatcher.DetourTo(MethodBase replacement)
+   at HarmonyLib.PatchFunctions.UpdateWrapper(MethodBase original, PatchInfo patchInfo)
+   --- End of inner exception stack trace ---
+   at HarmonyLib.PatchFunctions.UpdateWrapper(MethodBase original, PatchInfo patchInfo)
+   at DMD<HarmonyLib.PatchProcessor::Unpatch>(PatchProcessor this, MethodInfo patch)
+   at HarmonyLib.PatchFunctions.<>c__DisplayClass5_0.<UnpatchConditional>b__1(Patch patchInfo)
+   at HarmonyLib.PatchFunctions.UnpatchConditional(Func`2 executionCondition)
+   at HarmonyLib.Harmony.UnpatchID(String harmonyID)
+   at MelonLoader.Core.Quit()
+   at MelonLoader.SupportModule_From.DefiniteQuit()
+   at MelonLoader.Support.SM_Component.OnApplicationDefiniteQuit() in D:\a\MelonLoader\MelonLoader\Dependencies\SupportModules\Component.cs:line 108
+   at MelonLoader.Support.SM_Component.OnDestroy() in D:\a\MelonLoader\MelonLoader\Dependencies\SupportModules\Component.cs:line 94
+   at Trampoline_VoidThisMelonLoader.Support.SM_ComponentOnDestroy(IntPtr , Il2CppMethodInfo* )[0m
+[[38;2;50;205;50m11:25:37.319[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Lifecycle] ModUpdateRunner destroyed - will be recreated on next scene.[0m
+[[38;2;50;205;50m11:25:38.893[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mMemory Statistics:[0m
+[[38;2;50;205;50m11:25:38.893[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[ALLOC_TEMP_TLS] TLS Allocator[0m
+[[38;2;50;205;50m11:25:38.893[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m  StackAllocators : [0m
+[[38;2;50;205;50m11:25:38.893[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TEMP_MAIN][0m
+[[38;2;50;205;50m11:25:38.893[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak usage frame count: [128.0 KB-256.0 KB]: 8056 frames, [256.0 KB-0.5 MB]: 1 frames, [0.5 MB-1.0 MB]: 263 frames, [2.0 MB-4.0 MB]: 2 frames, [4.0 MB-8.0 MB]: 2 frames[0m
+[[38;2;50;205;50m11:25:38.894[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Initial Block Size 4.0 MB[0m
+[[38;2;50;205;50m11:25:38.894[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Current Block Size 7.9 MB[0m
+[[38;2;50;205;50m11:25:38.894[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated Bytes 7.9 MB[0m
+[[38;2;50;205;50m11:25:38.894[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Overflow Count 15[0m
+[[38;2;50;205;50m11:25:38.894[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TEMP_Background Job.Worker 2][0m
+[[38;2;50;205;50m11:25:38.894[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Initial Block Size 32.0 KB[0m
+[[38;2;50;205;50m11:25:38.894[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Current Block Size 32.0 KB[0m
+[[38;2;50;205;50m11:25:38.894[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated Bytes 1.6 KB[0m
+[[38;2;50;205;50m11:25:38.895[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Overflow Count 0[0m
+[[38;2;50;205;50m11:25:38.895[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TEMP_Background Job.Worker 7][0m
+[[38;2;50;205;50m11:25:38.895[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Initial Block Size 32.0 KB[0m
+[[38;2;50;205;50m11:25:38.895[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Current Block Size 32.0 KB[0m
+[[38;2;50;205;50m11:25:38.895[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated Bytes 110 B[0m
+[[38;2;50;205;50m11:25:38.896[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Overflow Count 0[0m
+[[38;2;50;205;50m11:25:38.896[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TEMP_Loading.PreloadManager][0m
+[[38;2;50;205;50m11:25:38.896[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Initial Block Size 256.0 KB[0m
+[[38;2;50;205;50m11:25:38.896[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Current Block Size 0.5 MB[0m
+[[38;2;50;205;50m11:25:38.896[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated Bytes 499.7 KB[0m
+[[38;2;50;205;50m11:25:38.897[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Overflow Count 215[0m
+[[38;2;50;205;50m11:25:38.897[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TEMP_UnityGfxDeviceWorker][0m
+[[38;2;50;205;50m11:25:38.897[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Initial Block Size 256.0 KB[0m
+[[38;2;50;205;50m11:25:38.897[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Current Block Size 280.0 KB[0m
+[[38;2;50;205;50m11:25:38.897[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated Bytes 279.5 KB[0m
+[[38;2;50;205;50m11:25:38.897[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Overflow Count 0[0m
+[[38;2;50;205;50m11:25:38.897[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TEMP_AssetGarbageCollectorHelper] x 15[0m
+[[38;2;50;205;50m11:25:38.897[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Initial Block Size 64.0 KB[0m
+[[38;2;50;205;50m11:25:38.898[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Current Block Size 64.0 KB[0m
+[[38;2;50;205;50m11:25:38.898[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated Bytes 114 B[0m
+[[38;2;50;205;50m11:25:38.898[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Overflow Count 0[0m
+[[38;2;50;205;50m11:25:38.898[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TEMP_Background Job.Worker 5][0m
+[[38;2;50;205;50m11:25:38.898[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Initial Block Size 32.0 KB[0m
+[[38;2;50;205;50m11:25:38.898[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Current Block Size 32.0 KB[0m
+[[38;2;50;205;50m11:25:38.899[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated Bytes 110 B[0m
+[[38;2;50;205;50m11:25:38.899[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Overflow Count 0[0m
+[[38;2;50;205;50m11:25:38.899[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TEMP_Background Job.Worker 8][0m
+[[38;2;50;205;50m11:25:38.899[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Initial Block Size 32.0 KB[0m
+[[38;2;50;205;50m11:25:38.899[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Current Block Size 32.0 KB[0m
+[[38;2;50;205;50m11:25:38.899[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated Bytes 110 B[0m
+[[38;2;50;205;50m11:25:38.899[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Overflow Count 0[0m
+[[38;2;50;205;50m11:25:38.900[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TEMP_Job.Worker 6][0m
+[[38;2;50;205;50m11:25:38.900[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Initial Block Size 256.0 KB[0m
+[[38;2;50;205;50m11:25:38.900[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Current Block Size 256.0 KB[0m
+[[38;2;50;205;50m11:25:38.900[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated Bytes 26.3 KB[0m
+[[38;2;50;205;50m11:25:38.900[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Overflow Count 0[0m
+[[38;2;50;205;50m11:25:38.900[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TEMP_Job.Worker 9][0m
+[[38;2;50;205;50m11:25:38.901[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Initial Block Size 256.0 KB[0m
+[[38;2;50;205;50m11:25:38.901[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Current Block Size 256.0 KB[0m
+[[38;2;50;205;50m11:25:38.901[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated Bytes 26.3 KB[0m
+[[38;2;50;205;50m11:25:38.901[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Overflow Count 0[0m
+[[38;2;50;205;50m11:25:38.901[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TEMP_Job.Worker 0][0m
+[[38;2;50;205;50m11:25:38.901[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Initial Block Size 256.0 KB[0m
+[[38;2;50;205;50m11:25:38.901[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Current Block Size 256.0 KB[0m
+[[38;2;50;205;50m11:25:38.902[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated Bytes 26.3 KB[0m
+[[38;2;50;205;50m11:25:38.902[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Overflow Count 0[0m
+[[38;2;50;205;50m11:25:38.902[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TEMP_Background Job.Worker 10][0m
+[[38;2;50;205;50m11:25:38.902[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Initial Block Size 32.0 KB[0m
+[[38;2;50;205;50m11:25:38.902[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Current Block Size 32.0 KB[0m
+[[38;2;50;205;50m11:25:38.902[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated Bytes 111 B[0m
+[[38;2;50;205;50m11:25:38.903[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Overflow Count 0[0m
+[[38;2;50;205;50m11:25:38.903[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TEMP_Loading.AsyncRead][0m
+[[38;2;50;205;50m11:25:38.903[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Initial Block Size 64.0 KB[0m
+[[38;2;50;205;50m11:25:38.903[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Current Block Size 112.0 KB[0m
+[[38;2;50;205;50m11:25:38.903[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated Bytes 111.6 KB[0m
+[[38;2;50;205;50m11:25:38.903[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Overflow Count 0[0m
+[[38;2;50;205;50m11:25:38.904[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TEMP_Background Job.Worker 9][0m
+[[38;2;50;205;50m11:25:38.904[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Initial Block Size 32.0 KB[0m
+[[38;2;50;205;50m11:25:38.904[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Current Block Size 32.0 KB[0m
+[[38;2;50;205;50m11:25:38.904[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated Bytes 110 B[0m
+[[38;2;50;205;50m11:25:38.904[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Overflow Count 0[0m
+[[38;2;50;205;50m11:25:38.905[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TEMP_Background Job.Worker 13][0m
+[[38;2;50;205;50m11:25:38.905[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Initial Block Size 32.0 KB[0m
+[[38;2;50;205;50m11:25:38.905[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Current Block Size 32.0 KB[0m
+[[38;2;50;205;50m11:25:38.905[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated Bytes 111 B[0m
+[[38;2;50;205;50m11:25:38.905[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Overflow Count 0[0m
+[[38;2;50;205;50m11:25:38.905[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TEMP_Job.Worker 5][0m
+[[38;2;50;205;50m11:25:38.906[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Initial Block Size 256.0 KB[0m
+[[38;2;50;205;50m11:25:38.906[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Current Block Size 256.0 KB[0m
+[[38;2;50;205;50m11:25:38.906[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated Bytes 26.3 KB[0m
+[[38;2;50;205;50m11:25:38.906[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Overflow Count 0[0m
+[[38;2;50;205;50m11:25:38.906[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TEMP_Background Job.Worker 14][0m
+[[38;2;50;205;50m11:25:38.906[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Initial Block Size 32.0 KB[0m
+[[38;2;50;205;50m11:25:38.907[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Current Block Size 32.0 KB[0m
+[[38;2;50;205;50m11:25:38.907[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated Bytes 111 B[0m
+[[38;2;50;205;50m11:25:38.907[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Overflow Count 0[0m
+[[38;2;50;205;50m11:25:38.907[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TEMP_Job.Worker 8][0m
+[[38;2;50;205;50m11:25:38.907[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Initial Block Size 256.0 KB[0m
+[[38;2;50;205;50m11:25:38.908[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Current Block Size 256.0 KB[0m
+[[38;2;50;205;50m11:25:38.908[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated Bytes 26.3 KB[0m
+[[38;2;50;205;50m11:25:38.908[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Overflow Count 0[0m
+[[38;2;50;205;50m11:25:38.908[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TEMP_Background Job.Worker 6][0m
+[[38;2;50;205;50m11:25:38.908[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Initial Block Size 32.0 KB[0m
+[[38;2;50;205;50m11:25:38.908[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Current Block Size 32.0 KB[0m
+[[38;2;50;205;50m11:25:38.908[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated Bytes 110 B[0m
+[[38;2;50;205;50m11:25:38.909[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Overflow Count 0[0m
+[[38;2;50;205;50m11:25:38.909[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TEMP_Job.Worker 4][0m
+[[38;2;50;205;50m11:25:38.909[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Initial Block Size 256.0 KB[0m
+[[38;2;50;205;50m11:25:38.909[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Current Block Size 256.0 KB[0m
+[[38;2;50;205;50m11:25:38.909[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated Bytes 26.6 KB[0m
+[[38;2;50;205;50m11:25:38.909[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Overflow Count 0[0m
+[[38;2;50;205;50m11:25:38.909[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TEMP_ReadCacheIndex][0m
+[[38;2;50;205;50m11:25:38.910[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Initial Block Size 64.0 KB[0m
+[[38;2;50;205;50m11:25:38.910[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Current Block Size 64.0 KB[0m
+[[38;2;50;205;50m11:25:38.910[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated Bytes 489 B[0m
+[[38;2;50;205;50m11:25:38.910[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Overflow Count 0[0m
+[[38;2;50;205;50m11:25:38.910[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TEMP_Job.Worker 7][0m
+[[38;2;50;205;50m11:25:38.910[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Initial Block Size 256.0 KB[0m
+[[38;2;50;205;50m11:25:38.910[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Current Block Size 256.0 KB[0m
+[[38;2;50;205;50m11:25:38.910[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated Bytes 26.3 KB[0m
+[[38;2;50;205;50m11:25:38.911[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Overflow Count 0[0m
+[[38;2;50;205;50m11:25:38.911[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TEMP_Job.Worker 1][0m
+[[38;2;50;205;50m11:25:38.911[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Initial Block Size 256.0 KB[0m
+[[38;2;50;205;50m11:25:38.911[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Current Block Size 0.5 MB[0m
+[[38;2;50;205;50m11:25:38.911[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated Bytes 509.8 KB[0m
+[[38;2;50;205;50m11:25:38.911[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Overflow Count 24[0m
+[[38;2;50;205;50m11:25:38.911[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TEMP_Background Job.Worker 11][0m
+[[38;2;50;205;50m11:25:38.912[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Initial Block Size 32.0 KB[0m
+[[38;2;50;205;50m11:25:38.912[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Current Block Size 32.0 KB[0m
+[[38;2;50;205;50m11:25:38.912[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated Bytes 111 B[0m
+[[38;2;50;205;50m11:25:38.912[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Overflow Count 0[0m
+[[38;2;50;205;50m11:25:38.912[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TEMP_Job.Worker 2][0m
+[[38;2;50;205;50m11:25:38.912[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Initial Block Size 256.0 KB[0m
+[[38;2;50;205;50m11:25:38.913[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Current Block Size 256.0 KB[0m
+[[38;2;50;205;50m11:25:38.913[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated Bytes 26.3 KB[0m
+[[38;2;50;205;50m11:25:38.913[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Overflow Count 0[0m
+[[38;2;50;205;50m11:25:38.913[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TEMP_Background Job.Worker 3][0m
+[[38;2;50;205;50m11:25:38.913[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Initial Block Size 32.0 KB[0m
+[[38;2;50;205;50m11:25:38.913[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Current Block Size 32.0 KB[0m
+[[38;2;50;205;50m11:25:38.913[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated Bytes 110 B[0m
+[[38;2;50;205;50m11:25:38.914[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Overflow Count 0[0m
+[[38;2;50;205;50m11:25:38.914[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TEMP_Job.Worker 14][0m
+[[38;2;50;205;50m11:25:38.914[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Initial Block Size 256.0 KB[0m
+[[38;2;50;205;50m11:25:38.914[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Current Block Size 256.0 KB[0m
+[[38;2;50;205;50m11:25:38.914[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated Bytes 26.3 KB[0m
+[[38;2;50;205;50m11:25:38.914[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Overflow Count 0[0m
+[[38;2;50;205;50m11:25:38.914[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TEMP_Job.Worker 10][0m
+[[38;2;50;205;50m11:25:38.915[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Initial Block Size 256.0 KB[0m
+[[38;2;50;205;50m11:25:38.915[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Current Block Size 256.0 KB[0m
+[[38;2;50;205;50m11:25:38.915[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated Bytes 26.3 KB[0m
+[[38;2;50;205;50m11:25:38.915[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Overflow Count 0[0m
+[[38;2;50;205;50m11:25:38.915[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TEMP_Job.Worker 3][0m
+[[38;2;50;205;50m11:25:38.915[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Initial Block Size 256.0 KB[0m
+[[38;2;50;205;50m11:25:38.915[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Current Block Size 256.0 KB[0m
+[[38;2;50;205;50m11:25:38.916[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated Bytes 26.3 KB[0m
+[[38;2;50;205;50m11:25:38.916[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Overflow Count 0[0m
+[[38;2;50;205;50m11:25:38.916[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TEMP_Background Job.Worker 0][0m
+[[38;2;50;205;50m11:25:38.916[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Initial Block Size 32.0 KB[0m
+[[38;2;50;205;50m11:25:38.916[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Current Block Size 32.0 KB[0m
+[[38;2;50;205;50m11:25:38.916[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated Bytes 110 B[0m
+[[38;2;50;205;50m11:25:38.916[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Overflow Count 0[0m
+[[38;2;50;205;50m11:25:38.917[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TEMP_CloudJob.Worker 0][0m
+[[38;2;50;205;50m11:25:38.917[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Initial Block Size 32.0 KB[0m
+[[38;2;50;205;50m11:25:38.917[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Current Block Size 32.0 KB[0m
+[[38;2;50;205;50m11:25:38.917[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated Bytes 3.2 KB[0m
+[[38;2;50;205;50m11:25:38.917[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Overflow Count 0[0m
+[[38;2;50;205;50m11:25:38.917[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TEMP_Job.Worker 13][0m
+[[38;2;50;205;50m11:25:38.917[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Initial Block Size 256.0 KB[0m
+[[38;2;50;205;50m11:25:38.918[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Current Block Size 256.0 KB[0m
+[[38;2;50;205;50m11:25:38.918[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated Bytes 26.3 KB[0m
+[[38;2;50;205;50m11:25:38.918[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Overflow Count 0[0m
+[[38;2;50;205;50m11:25:38.918[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TEMP_Background Job.Worker 12][0m
+[[38;2;50;205;50m11:25:38.918[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Initial Block Size 32.0 KB[0m
+[[38;2;50;205;50m11:25:38.918[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Current Block Size 32.0 KB[0m
+[[38;2;50;205;50m11:25:38.918[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated Bytes 111 B[0m
+[[38;2;50;205;50m11:25:38.919[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Overflow Count 0[0m
+[[38;2;50;205;50m11:25:38.919[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TEMP_HIDInput][0m
+[[38;2;50;205;50m11:25:38.919[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Initial Block Size 64.0 KB[0m
+[[38;2;50;205;50m11:25:38.919[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Current Block Size 64.0 KB[0m
+[[38;2;50;205;50m11:25:38.919[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated Bytes 9.6 KB[0m
+[[38;2;50;205;50m11:25:38.919[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Overflow Count 0[0m
+[[38;2;50;205;50m11:25:38.919[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TEMP_EnlightenWorker] x 4[0m
+[[38;2;50;205;50m11:25:38.920[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Initial Block Size 64.0 KB[0m
+[[38;2;50;205;50m11:25:38.920[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Current Block Size 64.0 KB[0m
+[[38;2;50;205;50m11:25:38.920[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated Bytes 42 B[0m
+[[38;2;50;205;50m11:25:38.920[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Overflow Count 0[0m
+[[38;2;50;205;50m11:25:38.920[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TEMP_Job.Worker 11][0m
+[[38;2;50;205;50m11:25:38.920[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Initial Block Size 256.0 KB[0m
+[[38;2;50;205;50m11:25:38.921[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Current Block Size 256.0 KB[0m
+[[38;2;50;205;50m11:25:38.921[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated Bytes 26.3 KB[0m
+[[38;2;50;205;50m11:25:38.921[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Overflow Count 0[0m
+[[38;2;50;205;50m11:25:38.921[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TEMP_Background Job.Worker 15][0m
+[[38;2;50;205;50m11:25:38.921[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Initial Block Size 32.0 KB[0m
+[[38;2;50;205;50m11:25:38.921[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Current Block Size 32.0 KB[0m
+[[38;2;50;205;50m11:25:38.921[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated Bytes 111 B[0m
+[[38;2;50;205;50m11:25:38.922[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Overflow Count 0[0m
+[[38;2;50;205;50m11:25:38.922[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TEMP_Job.Worker 12][0m
+[[38;2;50;205;50m11:25:38.922[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Initial Block Size 256.0 KB[0m
+[[38;2;50;205;50m11:25:38.922[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Current Block Size 256.0 KB[0m
+[[38;2;50;205;50m11:25:38.922[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated Bytes 26.3 KB[0m
+[[38;2;50;205;50m11:25:38.922[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Overflow Count 0[0m
+[[38;2;50;205;50m11:25:38.923[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TEMP_Background Job.Worker 1][0m
+[[38;2;50;205;50m11:25:38.923[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Initial Block Size 32.0 KB[0m
+[[38;2;50;205;50m11:25:38.923[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Current Block Size 32.0 KB[0m
+[[38;2;50;205;50m11:25:38.923[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated Bytes 2.7 KB[0m
+[[38;2;50;205;50m11:25:38.923[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Overflow Count 0[0m
+[[38;2;50;205;50m11:25:38.923[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TEMP_Background Job.Worker 4][0m
+[[38;2;50;205;50m11:25:38.923[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Initial Block Size 32.0 KB[0m
+[[38;2;50;205;50m11:25:38.924[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Current Block Size 32.0 KB[0m
+[[38;2;50;205;50m11:25:38.924[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated Bytes 110 B[0m
+[[38;2;50;205;50m11:25:38.924[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Overflow Count 0[0m
+[[38;2;50;205;50m11:25:38.924[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TEMP_BatchDeleteObjects][0m
+[[38;2;50;205;50m11:25:38.924[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Initial Block Size 64.0 KB[0m
+[[38;2;50;205;50m11:25:38.924[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Current Block Size 64.0 KB[0m
+[[38;2;50;205;50m11:25:38.924[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated Bytes 42 B[0m
+[[38;2;50;205;50m11:25:38.925[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Overflow Count 0[0m
+[[38;2;50;205;50m11:25:38.925[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[ALLOC_DEFAULT] Dual Thread Allocator[0m
+[[38;2;50;205;50m11:25:38.925[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m  Peak main deferred allocation count 37464[0m
+[[38;2;50;205;50m11:25:38.925[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_BUCKET][0m
+[[38;2;50;205;50m11:25:38.925[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Large Block size 4.0 MB[0m
+[[38;2;50;205;50m11:25:38.925[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Used Block count 1[0m
+[[38;2;50;205;50m11:25:38.925[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated bytes 4.0 MB[0m
+[[38;2;50;205;50m11:25:38.926[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Failed Allocations. Bucket layout:[0m
+[[38;2;50;205;50m11:25:38.926[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m        16B: 173 Subsections = 177152 buckets. Failed count: 2509321[0m
+[[38;2;50;205;50m11:25:38.926[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m        32B: 28 Subsections = 14336 buckets. Failed count: 3981310[0m
+[[38;2;50;205;50m11:25:38.926[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m        48B: 20 Subsections = 6826 buckets. Failed count: 408767[0m
+[[38;2;50;205;50m11:25:38.926[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m        64B: 15 Subsections = 3840 buckets. Failed count: 176020[0m
+[[38;2;50;205;50m11:25:38.926[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m        80B: 12 Subsections = 2457 buckets. Failed count: 210651[0m
+[[38;2;50;205;50m11:25:38.926[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m        96B: 5 Subsections = 853 buckets. Failed count: 321806[0m
+[[38;2;50;205;50m11:25:38.927[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m        112B: 2 Subsections = 292 buckets. Failed count: 9706[0m
+[[38;2;50;205;50m11:25:38.927[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m        128B: 1 Subsections = 128 buckets. Failed count: 86722[0m
+[[38;2;50;205;50m11:25:38.927[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_DEFAULT_MAIN][0m
+[[38;2;50;205;50m11:25:38.927[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak usage frame count: [64.0 MB-128.0 MB]: 43 frames, [128.0 MB-256.0 MB]: 8281 frames[0m
+[[38;2;50;205;50m11:25:38.927[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Requested Block Size 16.0 MB[0m
+[[38;2;50;205;50m11:25:38.927[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Block count 10[0m
+[[38;2;50;205;50m11:25:38.928[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated memory 139.0 MB[0m
+[[38;2;50;205;50m11:25:38.928[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Large allocation bytes 8.0 MB[0m
+[[38;2;50;205;50m11:25:38.928[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_DEFAULT_THREAD][0m
+[[38;2;50;205;50m11:25:38.928[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak usage frame count: [128.0 MB-256.0 MB]: 8324 frames[0m
+[[38;2;50;205;50m11:25:38.928[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Requested Block Size 16.0 MB[0m
+[[38;2;50;205;50m11:25:38.928[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Block count 14[0m
+[[38;2;50;205;50m11:25:38.928[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated memory 222.6 MB[0m
+[[38;2;50;205;50m11:25:38.929[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Large allocation bytes 96.0 MB[0m
+[[38;2;50;205;50m11:25:38.929[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[ALLOC_TEMP_JOB_1_FRAME][0m
+[[38;2;50;205;50m11:25:38.929[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m  Initial Block Size 2.0 MB[0m
+[[38;2;50;205;50m11:25:38.929[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m  Used Block Count 0[0m
+[[38;2;50;205;50m11:25:38.929[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m  Overflow Count (too large) 0[0m
+[[38;2;50;205;50m11:25:38.929[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m  Overflow Count (full) 0[0m
+[[38;2;50;205;50m11:25:38.930[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[ALLOC_TEMP_JOB_2_FRAMES][0m
+[[38;2;50;205;50m11:25:38.930[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m  Initial Block Size 2.0 MB[0m
+[[38;2;50;205;50m11:25:38.930[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m  Used Block Count 0[0m
+[[38;2;50;205;50m11:25:38.930[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m  Overflow Count (too large) 0[0m
+[[38;2;50;205;50m11:25:38.930[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m  Overflow Count (full) 0[0m
+[[38;2;50;205;50m11:25:38.930[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[ALLOC_TEMP_JOB_4_FRAMES (JobTemp)][0m
+[[38;2;50;205;50m11:25:38.930[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m  Initial Block Size 2.0 MB[0m
+[[38;2;50;205;50m11:25:38.931[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m  Used Block Count 1[0m
+[[38;2;50;205;50m11:25:38.931[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m  Overflow Count (too large) 0[0m
+[[38;2;50;205;50m11:25:38.931[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m  Overflow Count (full) 0[0m
+[[38;2;50;205;50m11:25:38.931[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[ALLOC_TEMP_JOB_ASYNC (Background)][0m
+[[38;2;50;205;50m11:25:38.931[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m  Initial Block Size 1.0 MB[0m
+[[38;2;50;205;50m11:25:38.931[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m  Used Block Count 1[0m
+[[38;2;50;205;50m11:25:38.931[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m  Overflow Count (too large) 0[0m
+[[38;2;50;205;50m11:25:38.932[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m  Overflow Count (full) 0[0m
+[[38;2;50;205;50m11:25:38.932[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[ALLOC_GFX] Dual Thread Allocator[0m
+[[38;2;50;205;50m11:25:38.932[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m  Peak main deferred allocation count 26[0m
+[[38;2;50;205;50m11:25:38.932[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_BUCKET][0m
+[[38;2;50;205;50m11:25:38.932[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Large Block size 4.0 MB[0m
+[[38;2;50;205;50m11:25:38.932[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Used Block count 1[0m
+[[38;2;50;205;50m11:25:38.933[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated bytes 4.0 MB[0m
+[[38;2;50;205;50m11:25:38.933[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Failed Allocations. Bucket layout:[0m
+[[38;2;50;205;50m11:25:38.933[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m        16B: 173 Subsections = 177152 buckets. Failed count: 2509321[0m
+[[38;2;50;205;50m11:25:38.933[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m        32B: 28 Subsections = 14336 buckets. Failed count: 3981310[0m
+[[38;2;50;205;50m11:25:38.933[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m        48B: 20 Subsections = 6826 buckets. Failed count: 408767[0m
+[[38;2;50;205;50m11:25:38.933[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m        64B: 15 Subsections = 3840 buckets. Failed count: 176020[0m
+[[38;2;50;205;50m11:25:38.934[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m        80B: 12 Subsections = 2457 buckets. Failed count: 210651[0m
+[[38;2;50;205;50m11:25:38.934[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m        96B: 5 Subsections = 853 buckets. Failed count: 321806[0m
+[[38;2;50;205;50m11:25:38.934[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m        112B: 2 Subsections = 292 buckets. Failed count: 9706[0m
+[[38;2;50;205;50m11:25:38.934[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m        128B: 1 Subsections = 128 buckets. Failed count: 86722[0m
+[[38;2;50;205;50m11:25:38.934[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_GFX_MAIN][0m
+[[38;2;50;205;50m11:25:38.934[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak usage frame count: [8.0 MB-16.0 MB]: 46 frames, [16.0 MB-32.0 MB]: 8277 frames, [32.0 MB-64.0 MB]: 1 frames[0m
+[[38;2;50;205;50m11:25:38.934[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Requested Block Size 16.0 MB[0m
+[[38;2;50;205;50m11:25:38.935[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Block count 3[0m
+[[38;2;50;205;50m11:25:38.935[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated memory 35.0 MB[0m
+[[38;2;50;205;50m11:25:38.935[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Large allocation bytes 0 B[0m
+[[38;2;50;205;50m11:25:38.935[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_GFX_THREAD][0m
+[[38;2;50;205;50m11:25:38.935[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak usage frame count: [64.0 MB-128.0 MB]: 8 frames, [128.0 MB-256.0 MB]: 8316 frames[0m
+[[38;2;50;205;50m11:25:38.935[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Requested Block Size 16.0 MB[0m
+[[38;2;50;205;50m11:25:38.935[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Block count 10[0m
+[[38;2;50;205;50m11:25:38.935[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated memory 154.8 MB[0m
+[[38;2;50;205;50m11:25:38.936[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Large allocation bytes 0 B[0m
+[[38;2;50;205;50m11:25:38.936[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[ALLOC_CACHEOBJECTS] Dual Thread Allocator[0m
+[[38;2;50;205;50m11:25:38.936[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m  Peak main deferred allocation count 9[0m
+[[38;2;50;205;50m11:25:38.936[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_BUCKET][0m
+[[38;2;50;205;50m11:25:38.936[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Large Block size 4.0 MB[0m
+[[38;2;50;205;50m11:25:38.936[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Used Block count 1[0m
+[[38;2;50;205;50m11:25:38.937[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated bytes 4.0 MB[0m
+[[38;2;50;205;50m11:25:38.937[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Failed Allocations. Bucket layout:[0m
+[[38;2;50;205;50m11:25:38.937[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m        16B: 173 Subsections = 177152 buckets. Failed count: 2509321[0m
+[[38;2;50;205;50m11:25:38.937[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m        32B: 28 Subsections = 14336 buckets. Failed count: 3981310[0m
+[[38;2;50;205;50m11:25:38.937[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m        48B: 20 Subsections = 6826 buckets. Failed count: 408767[0m
+[[38;2;50;205;50m11:25:38.937[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m        64B: 15 Subsections = 3840 buckets. Failed count: 176020[0m
+[[38;2;50;205;50m11:25:38.937[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m        80B: 12 Subsections = 2457 buckets. Failed count: 210651[0m
+[[38;2;50;205;50m11:25:38.937[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m        96B: 5 Subsections = 853 buckets. Failed count: 321806[0m
+[[38;2;50;205;50m11:25:38.938[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m        112B: 2 Subsections = 292 buckets. Failed count: 9706[0m
+[[38;2;50;205;50m11:25:38.938[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m        128B: 1 Subsections = 128 buckets. Failed count: 86722[0m
+[[38;2;50;205;50m11:25:38.938[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_CACHEOBJECTS_MAIN][0m
+[[38;2;50;205;50m11:25:38.938[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak usage frame count: [128.0 MB-256.0 MB]: 8324 frames[0m
+[[38;2;50;205;50m11:25:38.938[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Requested Block Size 4.0 MB[0m
+[[38;2;50;205;50m11:25:38.938[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Block count 31[0m
+[[38;2;50;205;50m11:25:38.938[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated memory 209.1 MB[0m
+[[38;2;50;205;50m11:25:38.938[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Large allocation bytes 116.5 MB[0m
+[[38;2;50;205;50m11:25:38.939[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_CACHEOBJECTS_THREAD][0m
+[[38;2;50;205;50m11:25:38.939[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak usage frame count: [128.0 MB-256.0 MB]: 8324 frames[0m
+[[38;2;50;205;50m11:25:38.939[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Requested Block Size 4.0 MB[0m
+[[38;2;50;205;50m11:25:38.939[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Block count 52[0m
+[[38;2;50;205;50m11:25:38.939[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated memory 186.1 MB[0m
+[[38;2;50;205;50m11:25:38.939[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Large allocation bytes 2.7 MB[0m
+[[38;2;50;205;50m11:25:38.939[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[ALLOC_TYPETREE] Dual Thread Allocator[0m
+[[38;2;50;205;50m11:25:38.940[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m  Peak main deferred allocation count 2[0m
+[[38;2;50;205;50m11:25:38.940[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_BUCKET][0m
+[[38;2;50;205;50m11:25:38.940[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Large Block size 4.0 MB[0m
+[[38;2;50;205;50m11:25:38.940[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Used Block count 1[0m
+[[38;2;50;205;50m11:25:38.940[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated bytes 4.0 MB[0m
+[[38;2;50;205;50m11:25:38.940[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Failed Allocations. Bucket layout:[0m
+[[38;2;50;205;50m11:25:38.940[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m        16B: 173 Subsections = 177152 buckets. Failed count: 2509321[0m
+[[38;2;50;205;50m11:25:38.940[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m        32B: 28 Subsections = 14336 buckets. Failed count: 3981310[0m
+[[38;2;50;205;50m11:25:38.941[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m        48B: 20 Subsections = 6826 buckets. Failed count: 408767[0m
+[[38;2;50;205;50m11:25:38.941[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m        64B: 15 Subsections = 3840 buckets. Failed count: 176020[0m
+[[38;2;50;205;50m11:25:38.941[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m        80B: 12 Subsections = 2457 buckets. Failed count: 210651[0m
+[[38;2;50;205;50m11:25:38.941[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m        96B: 5 Subsections = 853 buckets. Failed count: 321806[0m
+[[38;2;50;205;50m11:25:38.941[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m        112B: 2 Subsections = 292 buckets. Failed count: 9706[0m
+[[38;2;50;205;50m11:25:38.941[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m        128B: 1 Subsections = 128 buckets. Failed count: 86722[0m
+[[38;2;50;205;50m11:25:38.941[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TYPETREE_MAIN][0m
+[[38;2;50;205;50m11:25:38.941[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak usage frame count: [0.5 MB-1.0 MB]: 8324 frames[0m
+[[38;2;50;205;50m11:25:38.942[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Requested Block Size 2.0 MB[0m
+[[38;2;50;205;50m11:25:38.942[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Block count 1[0m
+[[38;2;50;205;50m11:25:38.942[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated memory 0.9 MB[0m
+[[38;2;50;205;50m11:25:38.942[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Large allocation bytes 0 B[0m
+[[38;2;50;205;50m11:25:38.942[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    [ALLOC_TYPETREE_THREAD][0m
+[[38;2;50;205;50m11:25:38.942[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak usage frame count: [256.0 KB-0.5 MB]: 8324 frames[0m
+[[38;2;50;205;50m11:25:38.942[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Requested Block Size 2.0 MB[0m
+[[38;2;50;205;50m11:25:38.943[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Block count 1[0m
+[[38;2;50;205;50m11:25:38.943[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Allocated memory 476.6 KB[0m
+[[38;2;50;205;50m11:25:38.943[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m      Peak Large allocation bytes 0 B[0m

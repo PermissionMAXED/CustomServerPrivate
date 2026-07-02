@@ -1,0 +1,122 @@
+﻿[00:37:28.114] [UNITY] [UnityMemory] Configuration Parameters - Can be set up in boot.config
+[00:37:28.115] [UNITY]     "memorysetup-bucket-allocator-granularity=16"
+[00:37:28.116] [UNITY]     "memorysetup-bucket-allocator-bucket-count=8"
+[00:37:28.117] [UNITY]     "memorysetup-bucket-allocator-block-size=4194304"
+[00:37:28.119] [UNITY]     "memorysetup-bucket-allocator-block-count=1"
+[00:37:28.119] [UNITY]     "memorysetup-main-allocator-block-size=16777216"
+[00:37:28.120] [UNITY]     "memorysetup-thread-allocator-block-size=16777216"
+[00:37:28.120] [UNITY]     "memorysetup-gfx-main-allocator-block-size=16777216"
+[00:37:28.121] [UNITY]     "memorysetup-gfx-thread-allocator-block-size=16777216"
+[00:37:28.121] [UNITY]     "memorysetup-cache-allocator-block-size=4194304"
+[00:37:28.122] [UNITY]     "memorysetup-typetree-allocator-block-size=2097152"
+[00:37:28.122] [UNITY]     "memorysetup-profiler-bucket-allocator-granularity=16"
+[00:37:28.123] [UNITY]     "memorysetup-profiler-bucket-allocator-bucket-count=8"
+[00:37:28.123] [UNITY]     "memorysetup-profiler-bucket-allocator-block-size=4194304"
+[00:37:28.124] [UNITY]     "memorysetup-profiler-bucket-allocator-block-count=1"
+[00:37:28.124] [UNITY]     "memorysetup-profiler-allocator-block-size=16777216"
+[00:37:28.125] [UNITY]     "memorysetup-profiler-editor-allocator-block-size=1048576"
+[00:37:28.126] [UNITY]     "memorysetup-temp-allocator-size-main=4194304"
+[00:37:28.126] [UNITY]     "memorysetup-job-temp-allocator-block-size=2097152"
+[00:37:28.127] [UNITY]     "memorysetup-job-temp-allocator-block-size-background=1048576"
+[00:37:28.127] [UNITY]     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+[00:37:28.128] [UNITY]     "memorysetup-allocator-temp-initial-block-size-main=262144"
+[00:37:28.129] [UNITY]     "memorysetup-allocator-temp-initial-block-size-worker=262144"
+[00:37:28.129] [UNITY]     "memorysetup-temp-allocator-size-background-worker=32768"
+[00:37:28.130] [UNITY]     "memorysetup-temp-allocator-size-job-worker=262144"
+[00:37:28.130] [UNITY]     "memorysetup-temp-allocator-size-preload-manager=262144"
+[00:37:28.131] [UNITY]     "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+[00:37:28.131] [UNITY]     "memorysetup-temp-allocator-size-audio-worker=65536"
+[00:37:28.132] [UNITY]     "memorysetup-temp-allocator-size-cloud-worker=32768"
+[00:37:28.133] [UNITY]     "memorysetup-temp-allocator-size-gfx=262144"
+
+[00:37:28.650] ------------------------------
+[00:37:28.652] MelonLoader v0.7.2 Open-Beta
+[00:37:28.653] OS: Wine/Proton 10.0
+[00:37:28.653] Hash Code: 58AB98835E598BD67B7DB233734DE8603F92C9C6A6081B13CB9A5CC37C02DD13
+[00:37:28.654] ------------------------------
+[00:37:28.654] Game Type: Il2cpp
+[00:37:28.654] Game Arch: x86
+[00:37:28.655] ------------------------------
+[00:37:28.655] Command-Line: 
+[00:37:28.655] ------------------------------
+[00:37:28.656] Core::BasePath = Z:\AMP\BapCustomServer\game
+[00:37:28.659] Game::BasePath = Z:\AMP\BapCustomServer\game
+[00:37:28.659] Game::DataPath = Z:\AMP\BapCustomServer\game\bapbap_Data
+[00:37:28.660] Game::ApplicationPath = Z:\AMP\BapCustomServer\game\bapbap.exe
+[00:37:28.660] Runtime Type: net6
+[00:37:28.975] ------------------------------
+[00:37:28.975] Game Name: BAPBAP
+[00:37:28.976] Game Developer: gg.bapbap
+[00:37:28.977] Unity Version: 2022.3.38f1
+[00:37:28.978] Game Version: 0.1.1758-38212
+[00:37:28.979] ------------------------------
+
+[00:37:29.399] Preferences Loaded!
+
+[00:37:29.412] Loading UserLibs...
+[00:37:29.429] ------------------------------
+[00:37:29.443] Melon Assembly loaded: '.\UserLibs\BAPBAP.ModAPI.dll'
+[00:37:29.444] SHA256 Hash: '0E14F39A9C47B6EBA106A0F23E76A0989B3270D7BCDD3E4BB0DD51E63BDB3CB5'
+[00:37:29.444] ------------------------------
+[00:37:29.444] 0 UserLibs loaded.
+
+[00:37:29.445] Loading Plugins...
+[00:37:29.449] 0 Plugins loaded.
+
+[00:37:31.153] Loading Il2CppAssemblyGenerator...
+[00:37:31.186] [Il2CppAssemblyGenerator] Using Cpp2IL Version: 2022.1.0-pre-release.21
+[00:37:31.187] [Il2CppAssemblyGenerator] Using Il2CppInterop Version = 1.5.1+dbaf825aab891ff1e1627bea691bde0a81d1ad98
+[00:37:31.188] [Il2CppAssemblyGenerator] Using Unity Dependencies Version = 2022.3.38
+[00:37:31.188] [Il2CppAssemblyGenerator] Using Deobfuscation Regex = null
+[00:37:31.189] [Il2CppAssemblyGenerator] Cpp2IL is up to date.
+[00:37:31.190] [Il2CppAssemblyGenerator] Cpp2IL.Plugin.StrippedCodeRegSupport is up to date.
+[00:37:31.191] [Il2CppAssemblyGenerator] UnityDependencies is up to date.
+[00:37:31.191] [Il2CppAssemblyGenerator] Checking GameAssembly...
+[00:37:31.609] [Il2CppAssemblyGenerator] Assembly is up to date. No Generation Needed.
+
+[00:37:31.610] Loading Mods...
+[00:37:31.642] ------------------------------
+[00:37:31.646] Melon Assembly loaded: '.\Mods\BAPBAP.Medusa.dll'
+[00:37:31.646] SHA256 Hash: '49E3F28BF2318AB0CB2CFD2B9D55FD6CC498F2E267BDEB219FC1185F6C5B61C4'
+[00:37:31.654] Melon Assembly loaded: '.\Mods\BapCustomServerMelon.dll'
+[00:37:31.654] SHA256 Hash: '35942181ED16CD1FE3A06350F7D2255030CFD6C6D30BE0109BC1E4123CE4C611'
+
+[00:37:31.969] [BAP_Custom_Server] Loaded custom server ini.
+[00:37:31.982] [BAP_Custom_Server] [Perf] Dedicated server: targetFrameRate=240, vSync=0 (kept default fixedDeltaTime)
+[00:37:31.983] [BAP_Custom_Server] [BAPCustomConfig] mode=dedicated upstream=http://127.0.0.1:5055 proxy=False localPort=5055 dedicatedPorts=http:7850 ws:7778 kcp:7779 tcp:7780 batchMode=True containsNoGraphicsArg=True autoJoin=none
+[00:37:31.986] [BAP_Custom_Server] Managed match bootstrap listener is active.
+[00:37:31.995] [BAP_Custom_Server] Installed 4 NetworkConfig runtime patch(es).
+[00:37:32.000] [BAP_Custom_Server] Installed 2 PreAwakeManager network config patch(es).
+[00:37:32.006] [BAP_Custom_Server] Installed 2 HttpClient host rewrite patch(es).
+[00:37:32.009] [BAP_Custom_Server] Installed ControllerManager network runtime patch.
+[00:37:32.015] [BAP_Custom_Server] Installed 4 LobbyNetworkClient runtime network patch(es).
+[00:37:32.018] [BAP_Custom_Server] Installed lifecycle guard on 2 Application.Quit overload(s). Guard PERMANENT (custom servers).
+[00:37:32.019] [BAP_Custom_Server] Installed AnalyticsManager custom-server no-op patch.
+[00:37:32.076] [BAP_Custom_Server] Installed 40 character-select NullRef guard prefix patch(es).
+[00:37:32.082] [BAP_Custom_Server] Installed 5 PopulateCharIdsBeforeBuild prefix(es) on UILobbyCharacterSelectPage.
+[00:37:32.089] [BAP_Custom_Server] Installed 3 PopulateCharIdsBeforeBuild prefix(es) on UILobbyPlayTabPage.
+[00:37:32.134] [BAP_Custom_Server] Installed 32 LobbyController NullRef guard finalizer patch(es).
+[00:37:32.156] [BAP_Custom_Server] Queued managed match bootstrap payload: /setup-game
+[00:37:32.659] [BAP_Custom_Server] Installed 1 CharacterIsUnlocked force-unlock patch(es).
+[00:37:32.732] [BAP_Custom_Server] Server match policy fetched: Both (matchmaking=allowed, custom=allowed). When a path is blocked, the mod logs a clear error if the user tries to use it.
+[00:37:32.734] [BAP_Custom_Server] Initialized during early registration.
+[00:37:32.735] ------------------------------
+[00:37:32.736] BAP Custom Server v1.0.2
+[00:37:32.736] by Sonic0810
+[00:37:32.737] Assembly: BapCustomServerMelon.dll
+[00:37:32.737] ------------------------------
+[00:37:32.739] ------------------------------
+[00:37:32.739] BAPBAP ModAPI v2.2.1
+[00:37:32.740] by BAPBAP Modding Community
+[00:37:32.740] Assembly: BAPBAP.ModAPI.dll
+[00:37:32.740] ------------------------------
+[00:37:32.742] ------------------------------
+[00:37:32.742] Medusa v1.6.56
+[00:37:32.742] by BAPBAPCommunity
+[00:37:32.743] Assembly: BAPBAP.Medusa.dll
+[00:37:32.743] ------------------------------
+[00:37:32.744] ------------------------------
+[00:37:32.744] 3 Mods loaded.
+
+[00:37:36.569] [Il2CppInterop] Class::Init signatures have been exhausted, using a substitute!
+

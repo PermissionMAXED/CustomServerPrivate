@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "releaseLabel": "bapcustomserver-20260607-medusa-v1649-dedup-native-vfx",
+  "packageBuildUtc": "2026-06-07T10:42:12Z",
+  "configuration": "Release",
+  "publicHost": "ark.atomi23.de",
+  "serverDllSha256": "B6F43BACEE6E5E8697458E859F3B0DD99CF0CCC762989E2B177FC5A123711D0F",
+  "modDllSha256": "5C9FC161FEED8DD1D1856CA5B91E81C85B1B17584021A4E10DDA6A59B6FD0C48",
+  "modApiDllSha256": "0E14F39A9C47B6EBA106A0F23E76A0989B3270D7BCDD3E4BB0DD51E63BDB3CB5",
+  "medusaDllSha256": "DDFCD8DFD1F81079A683857429642A028C6F1E27DE0EC9BB2EE1390A5E1543EC",
+  "medusaBundleSha256": "C4872D6E124E76F9F4B4EC75482FFC2795D051D3CA65EB7C25E9FE68023B1D70",
+  "medusaCharId": 15,
+  "medusaVersion": "1.6.49",
+  "medusaFix": "Deduplicate authored ability drivers across SetCastAbility and input fallback hooks, retain native Medusa VFX, and expose native Medusa ability titles in the live HUD.",
+  "prewarmReadiness": "managed-bootstrap-listener-v3"
+}

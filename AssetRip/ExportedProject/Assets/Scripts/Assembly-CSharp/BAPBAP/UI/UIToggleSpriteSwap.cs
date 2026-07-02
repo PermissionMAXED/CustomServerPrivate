@@ -1,0 +1,28 @@
+using UnityEngine;
+using UnityEngine.UI;
+
+namespace BAPBAP.UI
+{
+	public class UIToggleSpriteSwap : MonoBehaviour
+	{
+		[SerializeField]
+		public Toggle toggle;
+
+		[SerializeField]
+		public Image image;
+
+		[SerializeField]
+		public Sprite onSprite;
+
+		[SerializeField]
+		public Sprite offSprite;
+
+		public void Awake()
+		{
+		}
+
+		public void SwapSprite(bool isOn)
+		{
+		}
+	}
+}

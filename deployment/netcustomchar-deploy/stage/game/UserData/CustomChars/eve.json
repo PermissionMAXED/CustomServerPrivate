@@ -1,0 +1,21 @@
+{
+  "charId": 15,
+  "name": "Eve",
+  "displayName": "EVE",
+  "subtitle": "",
+  "baseCharId": 0,
+  "baseCharName": "Kitsu",
+  "bundleFileName": "eve.bundle",
+  "visualPrefabName": "Eve_Visual",
+  "mirrorAssetId": 1296385110,
+  "enabled": false,
+  "abilities": [],
+
+  "abilityHitboxes": [],
+  "extraSpawnerHitboxes": [],
+  "statusOnHit": [],
+  "abilityTitles": [],
+  "abilityDescriptionsShort": [],
+  "abilityDescriptions": [],
+  "abilityPaletteHex": []
+}

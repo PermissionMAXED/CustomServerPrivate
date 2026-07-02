@@ -1,0 +1,60 @@
+{
+  "charId": 15,
+  "name": "Medusa",
+  "displayName": "MEDUSA",
+  "subtitle": "",
+  "baseCharId": 0,
+  "baseCharName": "Kitsu",
+  "bundleFileName": "medusa.bundle",
+  "visualPrefabName": "Medusa_Visual",
+  "mirrorAssetId": 1296385109,
+  "enabled": true,
+  "abilities": [],
+
+  "abilityHitboxes": [
+    "Hitbox_MedusaPoisonProjectile",
+    "Hitbox_MedusaPoisonPuddle",
+    "Hitbox_MedusaWallPoison",
+    "Hitbox_MedusaWallBoxDpsPoison"
+  ],
+  "extraSpawnerHitboxes": [
+    "MedusaPuddleSpawner"
+  ],
+
+  "abilityDamage": [ 120, 85, 70, 160 ],
+  "abilityStatusOnHit": [ "poison", "slow", "knockup", "petrify" ],
+  "abilityStatusDuration": [ 3.0, 4.0, 1.0, 2.5 ],
+  "abilityAnimState": [ "Ability1", "Ability2", "Ability4", "Ability3" ],
+  "abilityVfx": [
+    "VFX_Medusa_Poison_Muzzle;VFX_Medusa_Poison_Trail;VFX_Medusa_Poison_Hit",
+    "VFX_Medusa_Poison_Muzzle;VFX_Medusa_Poison_Trail;VFX_Medusa_Poison_Puddle",
+    "VFX_Medusa_Poison_Escape;VFX_Medusa_Poison_Trail;VFX_Medusa_Poison_Puddle",
+    "VFX_Medusa_Poison_Muzzle;VFX_Medusa_Poison_Wall;VFX_Medusa_Poison_Hit"
+  ],
+
+  "statusOnHit": [ "poison", "petrify" ],
+
+  "charDescription": "Gorgon priestess of the cursed temple. Petrifies foes with her gaze and strikes from afar with venom-tipped serpent bolts.",
+  "abilityTitles": [ "Serpent Bolt", "Venom Spit", "Slither", "Petrifying Gaze" ],
+  "abilityDescriptionsShort": [
+    "Loose a venom-tipped bolt at a single target.",
+    "Spit a wave of venom into an area. Slows foes caught in it.",
+    "Coil and slither away. Knocks up foes at the launch point.",
+    "Pierce all in your line of sight. Stone-roots whoever you hit."
+  ],
+  "abilityDescriptions": [
+    "Loose a venom-tipped serpent bolt, dealing {1}.",
+    "Rain venom on an area, dealing {1} and applying {2} on hit.",
+    "Coil and slither away from the ground, dealing {1} and applying {2} on hit.",
+    "Stare a piercing curse through obstacles and enemies, dealing {1} and petrifying (root) any target struck for {2}."
+  ],
+  "abilityPaletteHex": [
+    "#4CF26B",
+    "#C7FF9E",
+    "#0D331AF2",
+    "#73D959",
+    "#2EFF52F2",
+    "#08C72EB3",
+    "#C7D1BCF5"
+  ]
+}

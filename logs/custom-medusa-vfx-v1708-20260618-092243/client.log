@@ -1,0 +1,336 @@
+[[38;2;50;205;50m09:23:09.812[0m] [[38;2;255;255;0mMelonLoader.Bootstrap[0m] [38;2;255;255;0mFailed to delete log file: '26-6-18_2-1-14.log'[0m
+[[38;2;50;205;50m09:23:10.633[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[UnityMemory] Configuration Parameters - Can be set up in boot.config[0m
+[[38;2;50;205;50m09:23:10.634[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-bucket-allocator-granularity=16"[0m
+[[38;2;50;205;50m09:23:10.635[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-bucket-allocator-bucket-count=8"[0m
+[[38;2;50;205;50m09:23:10.636[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-bucket-allocator-block-size=4194304"[0m
+[[38;2;50;205;50m09:23:10.637[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-bucket-allocator-block-count=1"[0m
+[[38;2;50;205;50m09:23:10.637[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-main-allocator-block-size=16777216"[0m
+[[38;2;50;205;50m09:23:10.637[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-thread-allocator-block-size=16777216"[0m
+[[38;2;50;205;50m09:23:10.638[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-gfx-main-allocator-block-size=16777216"[0m
+[[38;2;50;205;50m09:23:10.638[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-gfx-thread-allocator-block-size=16777216"[0m
+[[38;2;50;205;50m09:23:10.639[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-cache-allocator-block-size=4194304"[0m
+[[38;2;50;205;50m09:23:10.639[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-typetree-allocator-block-size=2097152"[0m
+[[38;2;50;205;50m09:23:10.639[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-profiler-bucket-allocator-granularity=16"[0m
+[[38;2;50;205;50m09:23:10.639[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-profiler-bucket-allocator-bucket-count=8"[0m
+[[38;2;50;205;50m09:23:10.639[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-profiler-bucket-allocator-block-size=4194304"[0m
+[[38;2;50;205;50m09:23:10.639[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-profiler-bucket-allocator-block-count=1"[0m
+[[38;2;50;205;50m09:23:10.639[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-profiler-allocator-block-size=16777216"[0m
+[[38;2;50;205;50m09:23:10.640[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-profiler-editor-allocator-block-size=1048576"[0m
+[[38;2;50;205;50m09:23:10.640[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-temp-allocator-size-main=4194304"[0m
+[[38;2;50;205;50m09:23:10.640[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-job-temp-allocator-block-size=2097152"[0m
+[[38;2;50;205;50m09:23:10.640[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-job-temp-allocator-block-size-background=1048576"[0m
+[[38;2;50;205;50m09:23:10.640[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"[0m
+[[38;2;50;205;50m09:23:10.640[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-allocator-temp-initial-block-size-main=262144"[0m
+[[38;2;50;205;50m09:23:10.641[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-allocator-temp-initial-block-size-worker=262144"[0m
+[[38;2;50;205;50m09:23:10.641[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-temp-allocator-size-background-worker=32768"[0m
+[[38;2;50;205;50m09:23:10.641[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-temp-allocator-size-job-worker=262144"[0m
+[[38;2;50;205;50m09:23:10.641[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-temp-allocator-size-preload-manager=262144"[0m
+[[38;2;50;205;50m09:23:10.641[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"[0m
+[[38;2;50;205;50m09:23:10.642[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-temp-allocator-size-audio-worker=65536"[0m
+[[38;2;50;205;50m09:23:10.642[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-temp-allocator-size-cloud-worker=32768"[0m
+[[38;2;50;205;50m09:23:10.642[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-temp-allocator-size-gfx=262144"[0m
+
+[[38;2;50;205;50m09:23:12.184[0m] [38;2;211;211;211m------------------------------[0m
+[[38;2;50;205;50m09:23:12.185[0m] [38;2;211;211;211mMelonLoader v0.7.2 Open-Beta[0m
+[[38;2;50;205;50m09:23:12.186[0m] [38;2;211;211;211mOS: Windows 11[0m
+[[38;2;50;205;50m09:23:12.186[0m] [38;2;211;211;211mHash Code: 58AB98835E598BD67B7DB233734DE8603F92C9C6A6081B13CB9A5CC37C02DD13[0m
+[[38;2;50;205;50m09:23:12.187[0m] [38;2;211;211;211m------------------------------[0m
+[[38;2;50;205;50m09:23:12.187[0m] [38;2;211;211;211mGame Type: Il2cpp[0m
+[[38;2;50;205;50m09:23:12.187[0m] [38;2;211;211;211mGame Arch: x86[0m
+[[38;2;50;205;50m09:23:12.187[0m] [38;2;211;211;211m------------------------------[0m
+[[38;2;50;205;50m09:23:12.187[0m] [38;2;211;211;211mCommand-Line: [0m
+[[38;2;50;205;50m09:23:12.187[0m] [38;2;211;211;211m------------------------------[0m
+[[38;2;50;205;50m09:23:12.188[0m] [38;2;211;211;211mCore::BasePath = C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild[0m
+[[38;2;50;205;50m09:23:12.188[0m] [38;2;211;211;211mGame::BasePath = C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild[0m
+[[38;2;50;205;50m09:23:12.189[0m] [38;2;211;211;211mGame::DataPath = C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\bapbap_Data[0m
+[[38;2;50;205;50m09:23:12.189[0m] [38;2;211;211;211mGame::ApplicationPath = C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\bapbap.exe[0m
+[[38;2;50;205;50m09:23:12.189[0m] [38;2;211;211;211mRuntime Type: net6[0m
+[[38;2;50;205;50m09:23:12.735[0m] [38;2;255;0;255m------------------------------[0m
+[[38;2;50;205;50m09:23:12.735[0m] [38;2;211;211;211mGame Name: BAPBAP[0m
+[[38;2;50;205;50m09:23:12.736[0m] [38;2;211;211;211mGame Developer: gg.bapbap[0m
+[[38;2;50;205;50m09:23:12.737[0m] [38;2;211;211;211mUnity Version: 2022.3.38f1[0m
+[[38;2;50;205;50m09:23:12.738[0m] [38;2;211;211;211mGame Version: 0.1.1758-38212[0m
+[[38;2;50;205;50m09:23:12.738[0m] [38;2;255;0;255m------------------------------[0m
+
+[[38;2;50;205;50m09:23:14.439[0m] [38;2;211;211;211mPreferences Loaded![0m
+
+[[38;2;50;205;50m09:23:14.593[0m] [38;2;211;211;211mLoading UserLibs...[0m
+[[38;2;50;205;50m09:23:15.047[0m] [38;2;255;0;255m------------------------------[0m
+[[38;2;50;205;50m09:23:15.060[0m] [38;2;169;169;169mMelon Assembly loaded: '.\UserLibs\BAPBAP.ModAPI.dll'[0m
+[[38;2;50;205;50m09:23:15.060[0m] [38;2;169;169;169mSHA256 Hash: '0E14F39A9C47B6EBA106A0F23E76A0989B3270D7BCDD3E4BB0DD51E63BDB3CB5'[0m
+[[38;2;50;205;50m09:23:15.060[0m] [38;2;255;0;255m------------------------------[0m
+[[38;2;50;205;50m09:23:15.060[0m] [38;2;211;211;211m0 UserLibs loaded.[0m
+
+[[38;2;50;205;50m09:23:15.061[0m] [38;2;211;211;211mLoading Plugins...[0m
+[[38;2;50;205;50m09:23:15.067[0m] [38;2;211;211;211m0 Plugins loaded.[0m
+
+[[38;2;50;205;50m09:23:17.916[0m] [38;2;211;211;211mLoading Il2CppAssemblyGenerator...[0m
+[[38;2;50;205;50m09:23:18.168[0m] [[38;2;255;0;255mIl2CppAssemblyGenerator[0m] [38;2;211;211;211mUsing Cpp2IL Version: 2022.1.0-pre-release.21[0m
+[[38;2;50;205;50m09:23:18.169[0m] [[38;2;255;0;255mIl2CppAssemblyGenerator[0m] [38;2;211;211;211mUsing Il2CppInterop Version = 1.5.1+dbaf825aab891ff1e1627bea691bde0a81d1ad98[0m
+[[38;2;50;205;50m09:23:18.169[0m] [[38;2;255;0;255mIl2CppAssemblyGenerator[0m] [38;2;211;211;211mUsing Unity Dependencies Version = 2022.3.38[0m
+[[38;2;50;205;50m09:23:18.169[0m] [[38;2;255;0;255mIl2CppAssemblyGenerator[0m] [38;2;211;211;211mUsing Deobfuscation Regex = null[0m
+[[38;2;50;205;50m09:23:18.170[0m] [[38;2;255;0;255mIl2CppAssemblyGenerator[0m] [38;2;211;211;211mCpp2IL is up to date.[0m
+[[38;2;50;205;50m09:23:18.170[0m] [[38;2;255;0;255mIl2CppAssemblyGenerator[0m] [38;2;211;211;211mCpp2IL.Plugin.StrippedCodeRegSupport is up to date.[0m
+[[38;2;50;205;50m09:23:18.171[0m] [[38;2;255;0;255mIl2CppAssemblyGenerator[0m] [38;2;211;211;211mUnityDependencies is up to date.[0m
+[[38;2;50;205;50m09:23:18.171[0m] [[38;2;255;0;255mIl2CppAssemblyGenerator[0m] [38;2;211;211;211mChecking GameAssembly...[0m
+[[38;2;50;205;50m09:23:18.496[0m] [[38;2;255;0;255mIl2CppAssemblyGenerator[0m] [38;2;211;211;211mAssembly is up to date. No Generation Needed.[0m
+
+[[38;2;50;205;50m09:23:18.497[0m] [38;2;211;211;211mLoading Mods...[0m
+[[38;2;50;205;50m09:23:20.831[0m] [38;2;255;0;255m------------------------------[0m
+[[38;2;50;205;50m09:23:20.840[0m] [38;2;169;169;169mMelon Assembly loaded: '.\Mods\BapCustomServerMelon.dll'[0m
+[[38;2;50;205;50m09:23:20.840[0m] [38;2;169;169;169mSHA256 Hash: 'A32BF4340BA5E285699BE0B4A0DF9436D5C7B7171FC050E4D24A7F735FC83B86'[0m
+[[38;2;50;205;50m09:23:20.842[0m] [38;2;169;169;169mMelon Assembly loaded: '.\Mods\NetworkedCustomChar.dll'[0m
+[[38;2;50;205;50m09:23:20.842[0m] [38;2;169;169;169mSHA256 Hash: 'F99B78A0EA9964781AFF70DFDA03AD4E4610EB590FC321468E91B08C40DEA7DE'[0m
+
+[[38;2;50;205;50m09:23:26.037[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mLoaded custom server ini.[0m
+[[38;2;50;205;50m09:23:26.058[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[Perf] Client: targetFrameRate=144, vSync=0 (reduce DWM stall stutter)[0m
+[[38;2;50;205;50m09:23:26.059[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[BAPCustomConfig] mode=client upstream=http://ark.atomi23.de:5055 proxy=False localPort=5055 dedicatedPorts=http:- ws:- kcp:- tcp:- batchMode=False containsNoGraphicsArg=False autoJoin=ark.atomi23.de:7779[0m
+[[38;2;50;205;50m09:23:26.061[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPrimed auto-login prefs for custom server session.[0m
+[[38;2;50;205;50m09:23:26.070[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 4 NetworkConfig runtime patch(es).[0m
+[[38;2;50;205;50m09:23:26.076[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 2 PreAwakeManager network config patch(es).[0m
+[[38;2;50;205;50m09:23:26.083[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 2 HttpClient host rewrite patch(es).[0m
+[[38;2;50;205;50m09:23:26.086[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled ControllerManager network runtime patch.[0m
+[[38;2;50;205;50m09:23:26.092[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 4 LobbyNetworkClient runtime network patch(es).[0m
+[[38;2;50;205;50m09:23:26.109[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 8 character selection tracker patch(es).[0m
+[[38;2;50;205;50m09:23:26.113[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 1 WebSocketClient selection propagation patch(es).[0m
+[[38;2;50;205;50m09:23:26.116[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled lifecycle guard on 2 Application.Quit overload(s). Guard PERMANENT (custom servers).[0m
+[[38;2;50;205;50m09:23:26.118[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled AnalyticsManager custom-server no-op patch.[0m
+[[38;2;50;205;50m09:23:26.183[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 40 character-select NullRef guard prefix patch(es).[0m
+[[38;2;50;205;50m09:23:26.190[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 5 PopulateCharIdsBeforeBuild prefix(es) on UILobbyCharacterSelectPage.[0m
+[[38;2;50;205;50m09:23:26.195[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 3 PopulateCharIdsBeforeBuild prefix(es) on UILobbyPlayTabPage.[0m
+[[38;2;50;205;50m09:23:26.254[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 32 LobbyController NullRef guard finalizer patch(es).[0m
+[[38;2;50;205;50m09:23:28.090[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 1 CharacterIsUnlocked force-unlock patch(es).[0m
+[[38;2;50;205;50m09:23:28.162[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mServer match policy fetched: Both (matchmaking=allowed, custom=allowed). When a path is blocked, the mod logs a clear error if the user tries to use it.[0m
+[38;2;205;92;92m[09:23:28.176] [BAP_Custom_Server] Failed to start local proxy: System.Net.HttpListenerException (183): Failed to listen on prefix 'http://127.0.0.1:5055/' because it conflicts with an existing registration on the machine.
+   at System.Net.HttpListener.AddPrefixCore(String registeredPrefix)
+   at System.Net.HttpListener.AddAllPrefixes()
+   at System.Net.HttpListener.Start()
+   at BapCustomServerMelon.LocalReverseProxy.Start()
+   at BapCustomServerMelon.CustomServerMod.RestartProxy(Int32 localPort, Uri upstream)[0m
+[[38;2;50;205;50m09:23:28.176[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mDirect mode compatibility proxy enabled for legacy loopback API calls: 127.0.0.1:5055 -> http://ark.atomi23.de:5055/[0m
+[[38;2;50;205;50m09:23:28.179[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInitialized BAP Custom Server v1.0.5 during early registration. dedicated=False http=n/a ws=n/a kcp=n/a tcp=n/a[0m
+[[38;2;50;205;50m09:23:28.181[0m] [38;2;0;100;0m------------------------------[0m
+[[38;2;50;205;50m09:23:28.181[0m] [38;2;0;255;255mBAP Custom Server[0m v1.0.5
+[[38;2;50;205;50m09:23:28.181[0m] [38;2;211;211;211mby Sonic0810[0m
+[[38;2;50;205;50m09:23:28.182[0m] [38;2;169;169;169mAssembly: BapCustomServerMelon.dll[0m
+[[38;2;50;205;50m09:23:28.182[0m] [38;2;0;100;0m------------------------------[0m
+[[38;2;50;205;50m09:23:28.192[0m] [38;2;0;100;0m------------------------------[0m
+[[38;2;50;205;50m09:23:28.192[0m] [38;2;0;200;255mBAPBAP ModAPI[0m v2.2.1
+[[38;2;50;205;50m09:23:28.192[0m] [38;2;255;200;0mby BAPBAP Modding Community[0m
+[[38;2;50;205;50m09:23:28.193[0m] [38;2;169;169;169mAssembly: BAPBAP.ModAPI.dll[0m
+[[38;2;50;205;50m09:23:28.193[0m] [38;2;0;100;0m------------------------------[0m
+[[38;2;50;205;50m09:23:28.200[0m] [38;2;0;100;0m------------------------------[0m
+[[38;2;50;205;50m09:23:28.200[0m] [38;2;0;255;255mNetworkedCustomChar[0m v0.1.0
+[[38;2;50;205;50m09:23:28.200[0m] [38;2;211;211;211mby bapcustom[0m
+[[38;2;50;205;50m09:23:28.200[0m] [38;2;169;169;169mAssembly: NetworkedCustomChar.dll[0m
+[[38;2;50;205;50m09:23:28.201[0m] [38;2;0;100;0m------------------------------[0m
+[[38;2;50;205;50m09:23:28.201[0m] [38;2;255;0;255m------------------------------[0m
+[[38;2;50;205;50m09:23:28.201[0m] [38;2;211;211;211m3 Mods loaded.[0m
+
+[[38;2;50;205;50m09:23:41.369[0m] [[38;2;255;255;0mIl2CppInterop[0m] [38;2;255;255;0mClass::Init signatures have been exhausted, using a substitute![0m
+[[38;2;50;205;50m09:23:43.676[0m] [[38;2;0;255;255mIl2CppInterop[0m] [38;2;211;211;211mRegistered mono type MelonLoader.Support.MonoEnumeratorWrapper in il2cpp domain[0m
+[[38;2;50;205;50m09:23:43.749[0m] [38;2;211;211;211mSupport Module Loaded: C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Dependencies\SupportModules\Il2Cpp.dll[0m
+[[38;2;50;205;50m09:23:43.756[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211mBAPBAP ModAPI v2.2.1 initializing ...[0m
+[[38;2;50;205;50m09:23:43.756[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m  by BAPBAP Modding Community[0m
+[[38;2;50;205;50m09:23:43.756[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m  loaded as C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\UserLibs\BAPBAP.ModAPI.dll[0m
+[[38;2;50;205;50m09:23:43.756[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks] Installing global hooks ...[0m
+[[38;2;50;205;50m09:23:43.762[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ PlayerHooks[0m
+[[38;2;50;205;50m09:23:43.762[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ MatchHooks[0m
+[[38;2;50;205;50m09:23:43.762[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ CombatHooks[0m
+[[38;2;50;205;50m09:23:43.763[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ChatHooks[0m
+[[38;2;50;205;50m09:23:43.763[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ NetworkHooks[0m
+[[38;2;50;205;50m09:23:43.763[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ UIHooks[0m
+[[38;2;50;205;50m09:23:43.763[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ AbilityHooks[0m
+[[38;2;50;205;50m09:23:43.763[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ StatusEffectHooks[0m
+[[38;2;50;205;50m09:23:43.764[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ItemHooks[0m
+[[38;2;50;205;50m09:23:43.764[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ VehicleHooks[0m
+[[38;2;50;205;50m09:23:43.764[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ EntityHooks[0m
+[[38;2;50;205;50m09:23:43.764[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ExtraAbilityHooks[0m
+[[38;2;50;205;50m09:23:43.764[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ExtraItemHooks[0m
+[[38;2;50;205;50m09:23:43.765[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ExtraVehicleHooks[0m
+[[38;2;50;205;50m09:23:43.765[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ExtraEntityHooks[0m
+[[38;2;50;205;50m09:23:43.765[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ExtraMovementHooks[0m
+[[38;2;50;205;50m09:23:43.765[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ExtraPassiveHooks[0m
+[[38;2;50;205;50m09:23:43.766[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ExtraInteractionHooks[0m
+[[38;2;50;205;50m09:23:43.768[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ExtraKillHooks[0m
+[[38;2;50;205;50m09:23:43.769[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ExtraEmoteHooks[0m
+[[38;2;50;205;50m09:23:43.769[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ExtraMetaHooks[0m
+[[38;2;50;205;50m09:23:43.769[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks] Done. 21 hook groups installed.[0m
+[[38;2;50;205;50m09:23:43.771[0m] [[38;2;0;255;255mIl2CppInterop[0m] [38;2;211;211;211mRegistered mono type BAPBAP.ModAPI.Lifecycle.ModUpdateRunner in il2cpp domain[0m
+[[38;2;50;205;50m09:23:43.771[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Lifecycle] ModUpdateRunner registered with Il2Cpp.[0m
+[[38;2;50;205;50m09:23:43.773[0m] [[38;2;0;255;255mIl2CppInterop[0m] [38;2;211;211;211mRegistered mono type BAPBAP.ModAPI.API.NotificationAPI+ScheduledFader in il2cpp domain[0m
+[[38;2;50;205;50m09:23:43.774[0m] [[38;2;0;255;255mIl2CppInterop[0m] [38;2;211;211;211mRegistered mono type BAPBAP.ModAPI.UI.ModLoaderUIRunner in il2cpp domain[0m
+[[38;2;50;205;50m09:23:43.774[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[ModLoaderUI] Runner registered with Il2Cpp.[0m
+[[38;2;50;205;50m09:23:43.776[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211mBAPBAP ModAPI ready. Mods should subclass ModBase to register.[0m
+[[38;2;50;205;50m09:23:43.815[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M5] loaded definition 'Blitz' (charId=15, enabled=False) from UserData\CustomChars\blitz.json.[0m
+[[38;2;50;205;50m09:23:43.822[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M5] loaded definition 'Eve' (charId=15, enabled=False) from UserData\CustomChars\eve.json.[0m
+[[38;2;50;205;50m09:23:43.832[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M5] loaded definition 'Medusa' (charId=15, enabled=True) from UserData\CustomChars\medusa.json.[0m
+[[38;2;50;205;50m09:23:43.833[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M5] active definition: name='Medusa' display='MEDUSA' charId=15 base=0 bundle='Medusa\medusa.bundle' visual='Medusa_Visual' assetId=0xB0B00F0F graft=True (loaded 3).[0m
+[[38;2;50;205;50m09:23:43.853[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] patched GameNetworkManager.Awake (pre=False post=True).[0m
+[[38;2;50;205;50m09:23:43.879[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] patched GameNetworkManager.OnStartServer (pre=False post=True).[0m
+[[38;2;50;205;50m09:23:43.900[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] patched GameNetworkManager.OnStartClient (pre=False post=True).[0m
+[[38;2;50;205;50m09:23:43.922[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] patched GameNetworkManager.GetCharacterBotPrefab (pre=True post=False).[0m
+[[38;2;50;205;50m09:23:43.943[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] patched GameMode.SpawnPlayerChar (pre=True post=False).[0m
+[[38;2;50;205;50m09:23:43.944[0m] [38;2;255;255;0mAccessTools.Method: Could not find method for type Il2CppBAPBAP.UI.UICharactersConfiguration and name OnEnable and parameters [0m
+[[38;2;50;205;50m09:23:43.944[0m] [[38;2;255;255;0mNetworkedCustomChar[0m] [38;2;255;255;0m[M1] patch target not found: UICharactersConfiguration.OnEnable[0m
+[[38;2;50;205;50m09:23:43.947[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] patched UILobbyCharacterSelectPage.GetCharacterListingIndexFromCharId (pre=True post=False).[0m
+[[38;2;50;205;50m09:23:43.965[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] patched Ability.SetState (pre=True post=True).[0m
+[[38;2;50;205;50m09:23:43.983[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] patched CharAnimator.Awake (pre=False post=True).[0m
+[[38;2;50;205;50m09:23:44.003[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] patched CharFootsteps.Awake (pre=False post=True).[0m
+[[38;2;50;205;50m09:23:44.026[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M2] patched Animator.SetLayerWeight (overload; pre=True post=False).[0m
+[[38;2;50;205;50m09:23:44.043[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M2] patched Animator.CrossFadeInFixedTime (overload; pre=True post=False).[0m
+[[38;2;50;205;50m09:23:44.052[0m] [[38;2;0;255;255mIl2CppInterop[0m] [38;2;211;211;211mRegistered mono type Il2CppInterop.Runtime.DelegateSupport+Il2CppToMonoDelegateReference in il2cpp domain[0m
+[[38;2;50;205;50m09:23:44.075[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3] CustomNetChannel registered on EntityManager (hash=-1298316792).[0m
+[[38;2;50;205;50m09:23:44.077[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3] CustomAbilityEngine ready (charId=15, enabled=True, networkPrefabSpawn=True, medusaBundleHitboxes=True).[0m
+[[38;2;50;205;50m09:23:44.077[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M6] ability kit: hitboxes=[Hitbox_MedusaPoisonProjectile,Hitbox_MedusaPoisonPuddle,Hitbox_MedusaWallPoison,Hitbox_MedusaWallBoxDpsPoison] dmg=[120,85,70,160] status=[poison,slow,knockup,petrify] anim=[Ability1,Ability2,Ability4,Ability1].[0m
+[[38;2;50;205;50m09:23:44.198[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[MAP] custom map registered: name='CustomArena' mapId=6 bundle='CustomArena\customflat.bundle' sv='CustomFlat_SvData' cl='CustomFlat_ClData' enabled=True zoneRounds=1 enableTileEdits=True useLevelDataTileMutations=True tileEdits=3.[0m
+[[38;2;50;205;50m09:23:44.199[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[MAP] custom map registered: name='CustomColosseum' mapId=7 bundle='CustomColosseum\customflat.bundle' sv='CustomFlat_SvData' cl='CustomFlat_ClData' enabled=True zoneRounds=1 enableTileEdits=True useLevelDataTileMutations=True tileEdits=9.[0m
+[[38;2;50;205;50m09:23:44.199[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[MAP] custom map registered: name='CustomFlat' mapId=5 bundle='CustomFlat\customflat.bundle' sv='CustomFlat_SvData' cl='CustomFlat_ClData' enabled=True zoneRounds=1 enableTileEdits=False useLevelDataTileMutations=False tileEdits=0.[0m
+[[38;2;50;205;50m09:23:44.199[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[MAP] hooks installed (LoadLevel=True LoadLevelCoroutine=True SpawnLevel=True OnServerMatchSetup=True) for 3 custom level name(s).[0m
+[[38;2;50;205;50m09:23:44.199[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] loaded. charId=15 baseCharId=0 assetId=0xB0B00F0F graftVisual=True[0m
+[[38;2;50;205;50m09:23:49.426[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M2] loading bundle: 'C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\UserData\Medusa\medusa.bundle' (3494760 bytes).[0m
+[[38;2;50;205;50m09:23:49.443[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M2] visual prefab 'Medusa_Visual' loaded from bundle.[0m
+[[38;2;50;205;50m09:23:49.466[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M2] graft OK via GNM.Awake: baseRenderersDisabled=11, charAnimWired=1, footstepsWired=1, otherAnimsDisabled=2, shadedSMRs=1, fx=True, controller='Medusa'.[0m
+[[38;2;50;205;50m09:23:49.467[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M2] graft applied on prefab template via GNM.Awake.[0m
+[[38;2;50;205;50m09:23:49.479[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] sanitized 1 identity(ies); root assetId=0xB0B00F0F via GNM.Awake.[0m
+[[38;2;50;205;50m09:23:49.479[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] built networked prefab 'Char_Medusa' via GNM.Awake (baseCharId=0).[0m
+[[38;2;50;205;50m09:23:49.481[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] characterPrefabsByCharId[15] = our prefab via GNM.Awake (len 15->16).[0m
+[[38;2;50;205;50m09:23:49.485[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] charBotPrefabsByCharId[15] populated via GNM.Awake (len 15->16).[0m
+[[38;2;50;205;50m09:23:49.489[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] added to InstantiatedPrefabs via GNM.Awake (len 414->415).[0m
+[[38;2;50;205;50m09:23:49.536[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3] [M3c] slot 0: grafted 'Hitbox_MedusaPoisonProjectile' as Medusa poison visual (baseRenderersDisabled=0).[0m
+[[38;2;50;205;50m09:23:49.539[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3] [M3c] slot 0 AUTHENTIC Medusa hitbox built: assetId=0xB0B0F010 base='Hitbox_Kate_BigCat' proj=True visual='Hitbox_MedusaPoisonProjectile'.[0m
+[[38;2;50;205;50m09:23:49.543[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3] [M3c] slot 1: grafted 'Hitbox_MedusaPoisonPuddle' as Medusa poison visual (baseRenderersDisabled=0).[0m
+[[38;2;50;205;50m09:23:49.543[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3] [M3c] slot 1 AUTHENTIC Medusa hitbox built: assetId=0xB0B0F011 base='Hitbox_Karen_Punch' proj=False visual='Hitbox_MedusaPoisonPuddle'.[0m
+[[38;2;50;205;50m09:23:49.544[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3] [M3c] slot 2: grafted 'Hitbox_MedusaWallPoison' as Medusa poison visual (baseRenderersDisabled=0).[0m
+[[38;2;50;205;50m09:23:49.545[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3] [M3c] slot 2 AUTHENTIC Medusa hitbox built: assetId=0xB0B0F012 base='Hitbox_Karen_Punch' proj=False visual='Hitbox_MedusaWallPoison'.[0m
+[[38;2;50;205;50m09:23:49.546[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3] [M3c] slot 3: grafted 'Hitbox_MedusaWallBoxDpsPoison' as Medusa poison visual (baseRenderersDisabled=0).[0m
+[[38;2;50;205;50m09:23:49.547[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3] [M3c] slot 3 AUTHENTIC Medusa hitbox built: assetId=0xB0B0F013 base='Hitbox_Karen_Punch' proj=False visual='Hitbox_MedusaWallBoxDpsPoison'.[0m
+[[38;2;50;205;50m09:23:53.105[0m] [[38;2;0;255;255mIl2CppInterop[0m] [38;2;211;211;211mRegistered mono type MelonLoader.Support.SM_Component in il2cpp domain[0m
+[[38;2;50;205;50m09:23:53.112[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[SceneLoaded] Scene 'MainScene' (index 0) loaded.[0m
+[[38;2;50;205;50m09:23:53.113[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[StateReset] Resetting match flags on lobby/menu scene 'MainScene'[0m
+[[38;2;50;205;50m09:23:53.895[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[MapFix] 3 GameMode(s), spawnCounts=[-1,-1,-1]. Waiting for populated map...[0m
+[[38;2;50;205;50m09:23:53.952[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[DevPanel] Patched 2 type(s) for hide on activation: UIDeveloperLobby(1), UIDevUtilities(1)[0m
+[[38;2;50;205;50m09:23:53.981[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[ShopThrottle] Patched 1 method(s)[0m
+[[38;2;50;205;50m09:23:54.175[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[LockerGuard] Installed exception-swallow finalizer on 9 locker method(s)[0m
+[[38;2;50;205;50m09:23:54.193[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[KcpRuntime] timeout-guard-manager: manager=Il2CppBAPBAP.Network.GameNetworkManager ws=Il2CppMirror.SimpleWeb.SimpleWebTransport port=7778 timeout=null client=False server=False kcp=Il2Cppkcp2k.KcpTransport port=7779 timeout=60000 client=True server=True tcp=Il2CppMirror.TelepathyTransport port=7780 timeout=null client=False server=False multiplex=Il2CppMirror.MultiplexTransport port=7780 timeout=null client=False server=False patched=5.[0m
+[[38;2;50;205;50m09:23:54.193[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[KcpTimeoutGuard] Applied KCP timeout/port guard through GameNetworkManager transport(s); patched=5.[0m
+[[38;2;50;205;50m09:23:54.204[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[InterpFix] no NetworkTransform instances yet (attempt=1)[0m
+[[38;2;50;205;50m09:23:54.233[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[MatchFoundDedup] Installed dedup prefix on 1 PlayMatchFoundSequence target(s).[0m
+[[38;2;50;205;50m09:23:54.236[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[AugmentFix] no UIAugments instances loaded yet (attempt=1).[0m
+[[38;2;50;205;50m09:23:54.241[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[AugmentFix] auto-select: no local PlayerAugments found.[0m
+[[38;2;50;205;50m09:23:54.242[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[AugmentFix] auto-select: no UIManager instances loaded yet.[0m
+[[38;2;50;205;50m09:23:54.242[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[AugmentFix] auto-select: no UIAugments instances loaded yet.[0m
+[[38;2;50;205;50m09:23:54.317[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 3 GameMode level-name runtime patch(es).[0m
+[[38;2;50;205;50m09:23:54.362[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled AddPlayerMatchmaking runtime diagnostics and Medusa skin patch.[0m
+[[38;2;50;205;50m09:23:54.513[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 7 LoginController custom guest-login patch(es).[0m
+[[38;2;50;205;50m09:23:54.579[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 2 UnityWebRequest callback repair patch(es).[0m
+[[38;2;50;205;50m09:23:54.592[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom splash guest-login scan saw 0 UILobbySplashScreen object(s).[0m
+[[38;2;50;205;50m09:23:54.596[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[KcpRuntime] client-autojoin-before-connect: manager=Il2CppBAPBAP.Network.GameNetworkManager ws=Il2CppMirror.SimpleWeb.SimpleWebTransport port=7778 timeout=null client=False server=False kcp=Il2Cppkcp2k.KcpTransport port=7779 timeout=60000 client=True server=True tcp=Il2CppMirror.TelepathyTransport port=7780 timeout=null client=False server=False multiplex=Il2CppMirror.MultiplexTransport port=7780 timeout=null client=False server=False patched=3.[0m
+[[38;2;50;205;50m09:23:54.663[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[KcpRuntime] client-autojoin-after-connect: manager=Il2CppBAPBAP.Network.GameNetworkManager ws=Il2CppMirror.SimpleWeb.SimpleWebTransport port=7778 timeout=null client=False server=False kcp=Il2Cppkcp2k.KcpTransport port=7779 timeout=60000 client=True server=True tcp=Il2CppMirror.TelepathyTransport port=7780 timeout=null client=False server=False multiplex=Il2CppMirror.MultiplexTransport port=7780 timeout=null client=False server=False patched=3.[0m
+[[38;2;50;205;50m09:23:54.664[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mRequested matchmaking client connect. auth=98705e104626274d6d35233f41452f28 host=ark.atomi23.de ws=7778 kcp=7779 tcp=7780[0m
+[[38;2;50;205;50m09:23:54.713[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] UI row added (charId=15) via Poll; roster 15->16.[0m
+[[38;2;50;205;50m09:23:54.921[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #1: [local]/api/challenge/preview[0m
+[[38;2;50;205;50m09:23:54.922[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #1: [local]/api/challenge/preview[0m
+[[38;2;50;205;50m09:23:54.923[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mRewrote UnityWebRequest loopback API URL for direct custom-server mode.[0m
+[[38;2;50;205;50m09:23:54.924[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #2: [local]/api/friends/requests[0m
+[[38;2;50;205;50m09:23:54.924[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #2: [local]/api/friends/requests[0m
+[[38;2;50;205;50m09:23:54.924[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #3: [local]/api/iap/listing[0m
+[[38;2;50;205;50m09:23:54.925[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #3: [local]/api/iap/listing[0m
+[[38;2;50;205;50m09:23:54.938[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #4: [local]/api/shop[0m
+[[38;2;50;205;50m09:23:54.939[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #4: [local]/api/shop[0m
+[[38;2;50;205;50m09:23:55.029[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #5: [remote]/v1/authentication/session-token[0m
+[[38;2;50;205;50m09:23:55.030[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #6: [local]/api/daily[0m
+[[38;2;50;205;50m09:23:55.030[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #5: [local]/api/daily[0m
+[[38;2;50;205;50m09:23:55.030[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #7: [local]/api/profile/levels[0m
+[[38;2;50;205;50m09:23:55.030[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #6: [local]/api/profile/levels[0m
+[[38;2;50;205;50m09:23:55.031[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #8: [local]/api/chars/pass[0m
+[[38;2;50;205;50m09:23:55.031[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #7: [local]/api/chars/pass[0m
+[[38;2;50;205;50m09:23:55.031[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #9: [local]/api/chars/mastery/preview[0m
+[[38;2;50;205;50m09:23:55.031[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #8: [local]/api/chars/mastery/preview[0m
+[[38;2;50;205;50m09:23:55.032[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #10: [local]/api/chars/listing[0m
+[[38;2;50;205;50m09:23:55.032[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #9: [local]/api/chars/listing[0m
+[[38;2;50;205;50m09:23:55.032[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #11: [local]/api/lobby/socket[0m
+[[38;2;50;205;50m09:23:55.032[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #10: [local]/api/lobby/socket[0m
+[[38;2;50;205;50m09:23:55.033[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mScheduled custom-server post-login splash fallback after lobby socket discovery.[0m
+[[38;2;50;205;50m09:23:55.033[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #12: [local]/api/leaderboards/preview[0m
+[[38;2;50;205;50m09:23:55.033[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #11: [local]/api/leaderboards/preview[0m
+[[38;2;50;205;50m09:23:55.033[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #13: [local]/api/pinger[0m
+[[38;2;50;205;50m09:23:55.034[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #12: [local]/api/pinger[0m
+[[38;2;50;205;50m09:23:55.034[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom-server load response handled by LoginController.[0m
+[[38;2;50;205;50m09:23:55.040[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m09:23:55.057[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Lifecycle] ModUpdateRunner GameObject created.[0m
+[[38;2;50;205;50m09:23:55.486[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[MAP] PROBE SpawnLevel: name='Arena_Map2' bootstrapMapId=0 svOnly=False clOnly=True svNull=False clNull=False.[0m
+[[38;2;50;205;50m09:23:59.311[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mLoaded UI diagnostics (post-login fallback waiting): activeScene='MainScene' path='Assets/MainScene.unity' isLoaded=True[0m
+[[38;2;50;205;50m09:23:59.313[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mLoaded UI diagnostics canvases=0[0m
+[[38;2;50;205;50m09:23:59.313[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPost-login splash fallback waiting for lobby UI. attempt=1 lobbies=0 splashes=0[0m
+[[38;2;50;205;50m09:24:01.316[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPost-login splash fallback waiting for lobby UI. attempt=2 lobbies=0 splashes=0[0m
+[[38;2;50;205;50m09:24:03.365[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPost-login splash fallback waiting for lobby UI. attempt=3 lobbies=0 splashes=0[0m
+[[38;2;50;205;50m09:24:05.700[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPost-login splash fallback waiting for lobby UI. attempt=4 lobbies=0 splashes=0[0m
+[[38;2;50;205;50m09:24:07.774[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPost-login splash fallback waiting for lobby UI. attempt=5 lobbies=0 splashes=0[0m
+[[38;2;50;205;50m09:24:09.824[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPost-login splash fallback waiting for lobby UI. attempt=6 lobbies=0 splashes=0[0m
+[[38;2;50;205;50m09:24:12.068[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPost-login splash fallback waiting for lobby UI. attempt=7 lobbies=0 splashes=0[0m
+[[38;2;50;205;50m09:24:14.091[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[FULL DIAGNOSTICS] Total GameObjects: 0[0m
+[[38;2;50;205;50m09:24:14.092[0m] [[38;2;255;255;0mBAP_Custom_Server[0m] [38;2;255;255;0mPost-login splash fallback could not find lobby splash UI after 8 attempts. Continuing at slower rate.[0m
+[[38;2;50;205;50m09:25:27.887[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211mBAPBAP ModAPI shutting down ...[0m
+[[38;2;50;205;50m09:25:27.890[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211mNativeHook.UnpatchAll: removed 0 of 0 patch(es).[0m
+[38;2;205;92;92m[09:25:29.687] HarmonyLib.HarmonyException: IL Compile Error (unknown location)
+ ---> HarmonyLib.HarmonyException: IL Compile Error (unknown location)
+ ---> System.ComponentModel.Win32Exception (487): Es wurde versucht, auf eine unzulässige Adresse zuzugreifen.
+   at MonoMod.RuntimeDetour.Platforms.DetourNativeWindowsPlatform.MakeWritable(IntPtr src, UInt32 size)
+   at MonoMod.RuntimeDetour.DetourHelper.MakeWritable(IDetourNativePlatform plat, NativeDetourData detour)
+   at MonoMod.RuntimeDetour.NativeDetour.Undo()
+   at MonoMod.RuntimeDetour.Detour._TopUndo()
+   at MonoMod.RuntimeDetour.Detour._RefreshChain(MethodBase method)
+   at MonoMod.RuntimeDetour.Detour.Undo()
+   at MonoMod.RuntimeDetour.Detour.Dispose()
+   at DMD<MonoMod.RuntimeDetour.ILHook+Context::Refresh>(Context this)
+   at Trampoline<MonoMod.RuntimeDetour.ILHook+Context::Refresh>?8274172(Object )
+   at HarmonyLib.Internal.RuntimeFixes.StackTraceFixes.OnILChainRefresh(Object self)
+   at MonoMod.RuntimeDetour.ILHook.Apply()
+   at HarmonyLib.Public.Patching.ManagedMethodPatcher.DetourTo(MethodBase replacement)
+   --- End of inner exception stack trace ---
+   at HarmonyLib.Public.Patching.ManagedMethodPatcher.DetourTo(MethodBase replacement)
+   at HarmonyLib.PatchFunctions.UpdateWrapper(MethodBase original, PatchInfo patchInfo)
+   --- End of inner exception stack trace ---
+   at HarmonyLib.PatchFunctions.UpdateWrapper(MethodBase original, PatchInfo patchInfo)
+   at DMD<HarmonyLib.PatchProcessor::Unpatch>(PatchProcessor this, MethodInfo patch)
+   at HarmonyLib.PatchFunctions.<>c__DisplayClass5_0.<UnpatchConditional>b__1(Patch patchInfo)
+   at HarmonyLib.PatchFunctions.UnpatchConditional(Func`2 executionCondition)
+   at HarmonyLib.Harmony.UnpatchID(String harmonyID)
+   at HarmonyLib.Harmony.UnpatchSelf()
+   at MelonLoader.MelonBase.UnregisterInstance(String reason, Boolean silent)
+   at MelonLoader.MelonAssembly.UnregisterMelons(String reason, Boolean silent)
+   at MelonLoader.MelonAssembly.OnApplicationQuit()
+   at MelonLoader.MelonEvent.<>c.<Invoke>b__1_0(LemonAction x)
+   at MelonLoader.MelonEventBase`1.Invoke(Action`1 delegateInvoker)[0m
+[[38;2;50;205;50m09:25:30.195[0m] [38;2;211;211;211mPreferences Saved![0m
+[38;2;205;92;92m[09:25:30.197] [Il2CppInterop] Exception in IL2CPP-to-Managed trampoline, not passing it to il2cpp: HarmonyLib.HarmonyException: IL Compile Error (unknown location)
+ ---> HarmonyLib.HarmonyException: IL Compile Error (unknown location)
+ ---> System.ComponentModel.Win32Exception (487): Es wurde versucht, auf eine unzulässige Adresse zuzugreifen.
+   at MonoMod.RuntimeDetour.Platforms.DetourNativeWindowsPlatform.MakeWritable(IntPtr src, UInt32 size)
+   at MonoMod.RuntimeDetour.DetourHelper.MakeWritable(IDetourNativePlatform plat, NativeDetourData detour)
+   at MonoMod.RuntimeDetour.NativeDetour.Undo()
+   at MonoMod.RuntimeDetour.Detour._TopUndo()
+   at MonoMod.RuntimeDetour.Detour._RefreshChain(MethodBase method)
+   at MonoMod.RuntimeDetour.Detour.Undo()
+   at MonoMod.RuntimeDetour.Detour.Dispose()
+   at DMD<MonoMod.RuntimeDetour.ILHook+Context::Refresh>(Context this)
+   at Trampoline<MonoMod.RuntimeDetour.ILHook+Context::Refresh>?8274172(Object )
+   at HarmonyLib.Internal.RuntimeFixes.StackTraceFixes.OnILChainRefresh(Object self)
+   at MonoMod.RuntimeDetour.ILHook.Apply()
+   at HarmonyLib.Public.Patching.ManagedMethodPatcher.DetourTo(MethodBase replacement)
+   --- End of inner exception stack trace ---
+   at HarmonyLib.Public.Patching.ManagedMethodPatcher.DetourTo(MethodBase replacement)
+   at HarmonyLib.PatchFunctions.UpdateWrapper(MethodBase original, PatchInfo patchInfo)
+   --- End of inner exception stack trace ---
+   at HarmonyLib.PatchFunctions.UpdateWrapper(MethodBase original, PatchInfo patchInfo)
+   at DMD<HarmonyLib.PatchProcessor::Unpatch>(PatchProcessor this, MethodInfo patch)
+   at HarmonyLib.PatchFunctions.<>c__DisplayClass5_0.<UnpatchConditional>b__1(Patch patchInfo)
+   at HarmonyLib.PatchFunctions.UnpatchConditional(Func`2 executionCondition)
+   at HarmonyLib.Harmony.UnpatchID(String harmonyID)
+   at MelonLoader.Core.Quit()
+   at MelonLoader.SupportModule_From.DefiniteQuit()
+   at MelonLoader.Support.SM_Component.OnApplicationDefiniteQuit() in D:\a\MelonLoader\MelonLoader\Dependencies\SupportModules\Component.cs:line 108
+   at MelonLoader.Support.SM_Component.OnDestroy() in D:\a\MelonLoader\MelonLoader\Dependencies\SupportModules\Component.cs:line 94
+   at Trampoline_VoidThisMelonLoader.Support.SM_ComponentOnDestroy(IntPtr , Il2CppMethodInfo* )[0m
+[[38;2;50;205;50m09:25:30.310[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Lifecycle] ModUpdateRunner destroyed - will be recreated on next scene.[0m

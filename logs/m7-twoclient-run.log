@@ -1,0 +1,24 @@
+starting local server :5161
+GAME_STARTED both. gameDns=127.0.0.1 ws=7777
+launched clients pids=16856,47260
+med-leader pid=16856 wid=13108120
+med-guest pid=47260 wid=7409188
+shot med-leader r1 = C:\Users\Administrator\Downloads\CustomServer\logs\cua\2c-med-leader-r1-143332.png
+shot med-guest r1 = C:\Users\Administrator\Downloads\CustomServer\logs\cua\2c-med-guest-r1-143340.png
+shot med-leader r2 = C:\Users\Administrator\Downloads\CustomServer\logs\cua\2c-med-leader-r2-143357.png
+shot med-guest r2 = C:\Users\Administrator\Downloads\CustomServer\logs\cua\2c-med-guest-r2-143404.png
+shot med-leader r3 = C:\Users\Administrator\Downloads\CustomServer\logs\cua\2c-med-leader-r3-143421.png
+shot med-guest r3 = C:\Users\Administrator\Downloads\CustomServer\logs\cua\2c-med-guest-r3-143429.png
+shot med-leader r4 = C:\Users\Administrator\Downloads\CustomServer\logs\cua\2c-med-leader-r4-143440.png
+shot med-guest r4 = C:\Users\Administrator\Downloads\CustomServer\logs\cua\2c-med-guest-r4-143443.png
+shot med-leader r5 = C:\Users\Administrator\Downloads\CustomServer\logs\cua\2c-med-leader-r5-143454.png
+shot med-guest r5 = C:\Users\Administrator\Downloads\CustomServer\logs\cua\2c-med-guest-r5-143456.png
+shot med-leader r6 = C:\Users\Administrator\Downloads\CustomServer\logs\cua\2c-med-leader-r6-143508.png
+shot med-guest r6 = C:\Users\Administrator\Downloads\CustomServer\logs\cua\2c-med-guest-r6-143510.png
+shot med-leader r7 = C:\Users\Administrator\Downloads\CustomServer\logs\cua\2c-med-leader-r7-143522.png
+shot med-guest r7 = C:\Users\Administrator\Downloads\CustomServer\logs\cua\2c-med-guest-r7-143524.png
+shot med-leader r8 = C:\Users\Administrator\Downloads\CustomServer\logs\cua\2c-med-leader-r8-143536.png
+shot med-guest r8 = C:\Users\Administrator\Downloads\CustomServer\logs\cua\2c-med-guest-r8-143538.png
+shot med-leader r9 = C:\Users\Administrator\Downloads\CustomServer\logs\cua\2c-med-leader-r9-143550.png
+shot med-guest r9 = C:\Users\Administrator\Downloads\CustomServer\logs\cua\2c-med-guest-r9-143552.png
+CAPTURE DONE. Guest shots should show leader's charId-15 Medusa with nameplate 'med-leader'.

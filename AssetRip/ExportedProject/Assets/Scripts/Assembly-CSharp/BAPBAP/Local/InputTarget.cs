@@ -1,0 +1,42 @@
+namespace BAPBAP.Local
+{
+	public enum InputTarget
+	{
+		MoveUp = 0,
+		MoveDown = 1,
+		MoveLeft = 2,
+		MoveRight = 3,
+		Ability1 = 4,
+		Ability2 = 5,
+		Ability3 = 6,
+		Ability4 = 7,
+		Ability5 = 8,
+		CancelAbility = 9,
+		AbilityHeal = 10,
+		Drop1 = 11,
+		Drop2 = 12,
+		Drop3 = 13,
+		DropGold = 14,
+		CamLock = 15,
+		ChatKey = 16,
+		Ping = 17,
+		Emote = 18,
+		MinimapHold = 19,
+		MinimapToggle = 20,
+		Interact = 21,
+		TooltipExpand = 22,
+		MoveAxis = 23,
+		AimAxis = 24,
+		Ability6 = 25,
+		DropConsumable1 = 26,
+		Ability7 = 27,
+		DropLootableAbility = 28,
+		VehicleDrift = 29,
+		VehicleTurbo = 30,
+		Drop4 = 31,
+		Ability8 = 32,
+		DropConsumable2 = 33,
+		DropJuice = 34,
+		VehicleHorn = 35
+	}
+}

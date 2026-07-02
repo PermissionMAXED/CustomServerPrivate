@@ -1,0 +1,1 @@
+INFO_ERROR=6

@@ -1,0 +1,9 @@
+﻿{
+  "adminAccountIds": [
+    "admin-smoke-user"
+  ],
+  "bans": [],
+  "configBanExclusions": [
+    "banned-smoke-user"
+  ]
+}

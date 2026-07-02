@@ -1,0 +1,37 @@
+{
+  "mapId": 30,
+  "name": "CustomFlat",
+  "displayName": "CUSTOM FLAT",
+  "bundleFileName": "customflat.bundle",
+  "svPrefabName": "CustomFlat_SvData",
+  "clPrefabName": "CustomFlat_ClData",
+  "baseSvResource": "levels/maps/blank_test_bakedata/Blank_Test_SvData",
+  "baseClResource": "levels/maps/blank_test_bakedata/Blank_Test_ClData",
+  "mapSettingsDisplayName": "CUSTOM FLAT ARENA",
+  "mapType": 0,
+  "customZoneRounds": true,
+  "excludeNavMeshFloor": false,
+  "excludeWaterPerimeter": false,
+  "mapSize": [ 48, 48 ],
+  "zoneRounds": [
+    {
+      "secondsUntilZoneStart": 45,
+      "secondsZoneMoveDuration": 30,
+      "closePercentage": 35,
+      "damagePercentage": 5,
+      "untilStartPlayerFactorInfluence": 0,
+      "moveDurationPlayerFactorInfluence": 0,
+      "doAugments": false
+    }
+  ],
+  "enableTileEdits": false,
+  "useLevelDataTileMutations": false,
+  "tileEdits": [],
+  "enableEntities": false,
+  "entities": [],
+  "spawnPoints": [
+    [ 10, 0, 10 ],
+    [ -10, 0, -10 ]
+  ],
+  "enabled": true
+}

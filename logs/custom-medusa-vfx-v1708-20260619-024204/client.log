@@ -1,0 +1,1467 @@
+[[38;2;50;205;50m02:42:30.966[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[UnityMemory] Configuration Parameters - Can be set up in boot.config[0m
+[[38;2;50;205;50m02:42:30.968[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-bucket-allocator-granularity=16"[0m
+[[38;2;50;205;50m02:42:30.969[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-bucket-allocator-bucket-count=8"[0m
+[[38;2;50;205;50m02:42:30.970[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-bucket-allocator-block-size=4194304"[0m
+[[38;2;50;205;50m02:42:30.970[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-bucket-allocator-block-count=1"[0m
+[[38;2;50;205;50m02:42:30.971[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-main-allocator-block-size=16777216"[0m
+[[38;2;50;205;50m02:42:30.972[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-thread-allocator-block-size=16777216"[0m
+[[38;2;50;205;50m02:42:30.972[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-gfx-main-allocator-block-size=16777216"[0m
+[[38;2;50;205;50m02:42:30.972[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-gfx-thread-allocator-block-size=16777216"[0m
+[[38;2;50;205;50m02:42:30.972[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-cache-allocator-block-size=4194304"[0m
+[[38;2;50;205;50m02:42:30.972[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-typetree-allocator-block-size=2097152"[0m
+[[38;2;50;205;50m02:42:30.972[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-profiler-bucket-allocator-granularity=16"[0m
+[[38;2;50;205;50m02:42:30.973[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-profiler-bucket-allocator-bucket-count=8"[0m
+[[38;2;50;205;50m02:42:30.973[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-profiler-bucket-allocator-block-size=4194304"[0m
+[[38;2;50;205;50m02:42:30.973[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-profiler-bucket-allocator-block-count=1"[0m
+[[38;2;50;205;50m02:42:30.973[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-profiler-allocator-block-size=16777216"[0m
+[[38;2;50;205;50m02:42:30.973[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-profiler-editor-allocator-block-size=1048576"[0m
+[[38;2;50;205;50m02:42:30.973[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-temp-allocator-size-main=4194304"[0m
+[[38;2;50;205;50m02:42:30.973[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-job-temp-allocator-block-size=2097152"[0m
+[[38;2;50;205;50m02:42:30.973[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-job-temp-allocator-block-size-background=1048576"[0m
+[[38;2;50;205;50m02:42:30.974[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"[0m
+[[38;2;50;205;50m02:42:30.974[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-allocator-temp-initial-block-size-main=262144"[0m
+[[38;2;50;205;50m02:42:30.974[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-allocator-temp-initial-block-size-worker=262144"[0m
+[[38;2;50;205;50m02:42:30.974[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-temp-allocator-size-background-worker=32768"[0m
+[[38;2;50;205;50m02:42:30.974[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-temp-allocator-size-job-worker=262144"[0m
+[[38;2;50;205;50m02:42:30.974[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-temp-allocator-size-preload-manager=262144"[0m
+[[38;2;50;205;50m02:42:30.975[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"[0m
+[[38;2;50;205;50m02:42:30.975[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-temp-allocator-size-audio-worker=65536"[0m
+[[38;2;50;205;50m02:42:30.975[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-temp-allocator-size-cloud-worker=32768"[0m
+[[38;2;50;205;50m02:42:30.975[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    "memorysetup-temp-allocator-size-gfx=262144"[0m
+
+[[38;2;50;205;50m02:42:31.408[0m] [38;2;211;211;211m------------------------------[0m
+[[38;2;50;205;50m02:42:31.409[0m] [38;2;211;211;211mMelonLoader v0.7.2 Open-Beta[0m
+[[38;2;50;205;50m02:42:31.410[0m] [38;2;211;211;211mOS: Windows 11[0m
+[[38;2;50;205;50m02:42:31.411[0m] [38;2;211;211;211mHash Code: 58AB98835E598BD67B7DB233734DE8603F92C9C6A6081B13CB9A5CC37C02DD13[0m
+[[38;2;50;205;50m02:42:31.411[0m] [38;2;211;211;211m------------------------------[0m
+[[38;2;50;205;50m02:42:31.411[0m] [38;2;211;211;211mGame Type: Il2cpp[0m
+[[38;2;50;205;50m02:42:31.411[0m] [38;2;211;211;211mGame Arch: x86[0m
+[[38;2;50;205;50m02:42:31.411[0m] [38;2;211;211;211m------------------------------[0m
+[[38;2;50;205;50m02:42:31.411[0m] [38;2;211;211;211mCommand-Line: [0m
+[[38;2;50;205;50m02:42:31.412[0m] [38;2;211;211;211m------------------------------[0m
+[[38;2;50;205;50m02:42:31.412[0m] [38;2;211;211;211mCore::BasePath = C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild[0m
+[[38;2;50;205;50m02:42:31.413[0m] [38;2;211;211;211mGame::BasePath = C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild[0m
+[[38;2;50;205;50m02:42:31.413[0m] [38;2;211;211;211mGame::DataPath = C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\bapbap_Data[0m
+[[38;2;50;205;50m02:42:31.413[0m] [38;2;211;211;211mGame::ApplicationPath = C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\bapbap.exe[0m
+[[38;2;50;205;50m02:42:31.413[0m] [38;2;211;211;211mRuntime Type: net6[0m
+[[38;2;50;205;50m02:42:31.783[0m] [38;2;255;0;255m------------------------------[0m
+[[38;2;50;205;50m02:42:31.783[0m] [38;2;211;211;211mGame Name: BAPBAP[0m
+[[38;2;50;205;50m02:42:31.783[0m] [38;2;211;211;211mGame Developer: gg.bapbap[0m
+[[38;2;50;205;50m02:42:31.785[0m] [38;2;211;211;211mUnity Version: 2022.3.38f1[0m
+[[38;2;50;205;50m02:42:31.785[0m] [38;2;211;211;211mGame Version: 0.1.1758-38212[0m
+[[38;2;50;205;50m02:42:31.786[0m] [38;2;255;0;255m------------------------------[0m
+
+[[38;2;50;205;50m02:42:32.485[0m] [38;2;211;211;211mPreferences Loaded![0m
+
+[[38;2;50;205;50m02:42:32.500[0m] [38;2;211;211;211mLoading UserLibs...[0m
+[[38;2;50;205;50m02:42:32.523[0m] [38;2;255;0;255m------------------------------[0m
+[[38;2;50;205;50m02:42:32.534[0m] [38;2;169;169;169mMelon Assembly loaded: '.\UserLibs\BAPBAP.ModAPI.dll'[0m
+[[38;2;50;205;50m02:42:32.535[0m] [38;2;169;169;169mSHA256 Hash: '0E14F39A9C47B6EBA106A0F23E76A0989B3270D7BCDD3E4BB0DD51E63BDB3CB5'[0m
+[[38;2;50;205;50m02:42:32.535[0m] [38;2;255;0;255m------------------------------[0m
+[[38;2;50;205;50m02:42:32.535[0m] [38;2;211;211;211m0 UserLibs loaded.[0m
+
+[[38;2;50;205;50m02:42:32.536[0m] [38;2;211;211;211mLoading Plugins...[0m
+[[38;2;50;205;50m02:42:32.542[0m] [38;2;211;211;211m0 Plugins loaded.[0m
+
+[[38;2;50;205;50m02:42:32.553[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.[0m
+[[38;2;50;205;50m02:42:32.565[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mInitialize engine version: 2022.3.38f1 (c5d5a7410213)[0m
+[[38;2;50;205;50m02:42:32.565[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[Subsystems] Discovering subsystems at path C:/Users/Administrator/Downloads/CustomServer/Spiel/Battleroyalebuild/bapbap_Data/UnitySubsystems[0m
+[[38;2;50;205;50m02:42:32.565[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mGfxDevice: creating device client; threaded=1; jobified=0[0m
+[[38;2;50;205;50m02:42:32.826[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mDirect3D:[0m
+[[38;2;50;205;50m02:42:32.826[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    Version:  Direct3D 11.0 [level 11.1][0m
+[[38;2;50;205;50m02:42:32.826[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    Renderer: NVIDIA GeForce RTX 3060 Ti (ID=0x2486)[0m
+[[38;2;50;205;50m02:42:32.827[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    Vendor:   NVIDIA[0m
+[[38;2;50;205;50m02:42:32.827[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    VRAM:     3072 MB[0m
+[[38;2;50;205;50m02:42:32.827[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m    Driver:   32.0.15.9621[0m
+[[38;2;50;205;50m02:42:35.258[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m<b>[App UI]</b> Unable to find an AppUISettings instance, creating a default one...
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Unity.AppUI.Core.AppUI:InitializeInPlayer()
+[0m
+[[38;2;50;205;50m02:42:35.284[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m<RI> Initializing input.[0m
+[[38;2;50;205;50m02:42:35.284[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mNew input system (experimental) initialized[0m
+[[38;2;50;205;50m02:42:35.288[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mUsing Windows.Gaming.Input[0m
+[[38;2;50;205;50m02:42:35.289[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m<RI> Input initialized.[0m
+[[38;2;50;205;50m02:42:35.320[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m<RI> Initialized touch support.[0m
+[[38;2;50;205;50m02:42:35.321[0m] [38;2;211;211;211mLoading Il2CppAssemblyGenerator...[0m
+[[38;2;50;205;50m02:42:35.359[0m] [[38;2;255;0;255mIl2CppAssemblyGenerator[0m] [38;2;211;211;211mUsing Cpp2IL Version: 2022.1.0-pre-release.21[0m
+[[38;2;50;205;50m02:42:35.359[0m] [[38;2;255;0;255mIl2CppAssemblyGenerator[0m] [38;2;211;211;211mUsing Il2CppInterop Version = 1.5.1+dbaf825aab891ff1e1627bea691bde0a81d1ad98[0m
+[[38;2;50;205;50m02:42:35.359[0m] [[38;2;255;0;255mIl2CppAssemblyGenerator[0m] [38;2;211;211;211mUsing Unity Dependencies Version = 2022.3.38[0m
+[[38;2;50;205;50m02:42:35.359[0m] [[38;2;255;0;255mIl2CppAssemblyGenerator[0m] [38;2;211;211;211mUsing Deobfuscation Regex = null[0m
+[[38;2;50;205;50m02:42:35.360[0m] [[38;2;255;0;255mIl2CppAssemblyGenerator[0m] [38;2;211;211;211mCpp2IL is up to date.[0m
+[[38;2;50;205;50m02:42:35.360[0m] [[38;2;255;0;255mIl2CppAssemblyGenerator[0m] [38;2;211;211;211mCpp2IL.Plugin.StrippedCodeRegSupport is up to date.[0m
+[[38;2;50;205;50m02:42:35.361[0m] [[38;2;255;0;255mIl2CppAssemblyGenerator[0m] [38;2;211;211;211mUnityDependencies is up to date.[0m
+[[38;2;50;205;50m02:42:35.361[0m] [[38;2;255;0;255mIl2CppAssemblyGenerator[0m] [38;2;211;211;211mChecking GameAssembly...[0m
+[[38;2;50;205;50m02:42:35.656[0m] [[38;2;255;0;255mIl2CppAssemblyGenerator[0m] [38;2;211;211;211mAssembly is up to date. No Generation Needed.[0m
+
+[[38;2;50;205;50m02:42:35.657[0m] [38;2;211;211;211mLoading Mods...[0m
+[[38;2;50;205;50m02:42:35.690[0m] [38;2;255;0;255m------------------------------[0m
+[[38;2;50;205;50m02:42:35.698[0m] [38;2;169;169;169mMelon Assembly loaded: '.\Mods\BapCustomServerMelon.dll'[0m
+[[38;2;50;205;50m02:42:35.707[0m] [38;2;169;169;169mSHA256 Hash: 'A9C0556854D61679F8CB549B07A69B1D1C243B6DC09BF50EA7C51EA149E3F528'[0m
+[[38;2;50;205;50m02:42:35.710[0m] [38;2;169;169;169mMelon Assembly loaded: '.\Mods\NetworkedCustomChar.dll'[0m
+[[38;2;50;205;50m02:42:35.710[0m] [38;2;169;169;169mSHA256 Hash: '09AB5C1A30CF1C53B2AC85BFF8FAB4F5E96DCC9BAA136B19A167AE3DC6413780'[0m
+
+[[38;2;50;205;50m02:42:36.110[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mLoaded custom server ini.[0m
+[[38;2;50;205;50m02:42:36.132[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[Perf] Client: targetFrameRate=144, vSync=0 (reduce DWM stall stutter)[0m
+[[38;2;50;205;50m02:42:36.134[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[BAPCustomConfig] mode=client upstream=http://ark.atomi23.de:5055 proxy=False localPort=5055 dedicatedPorts=http:- ws:- kcp:- tcp:- batchMode=False containsNoGraphicsArg=False autoJoin=ark.atomi23.de:7779[0m
+[[38;2;50;205;50m02:42:36.135[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPrimed auto-login prefs for custom server session.[0m
+[[38;2;50;205;50m02:42:36.145[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 4 NetworkConfig runtime patch(es).[0m
+[[38;2;50;205;50m02:42:36.151[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 2 PreAwakeManager network config patch(es).[0m
+[[38;2;50;205;50m02:42:36.158[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 2 HttpClient host rewrite patch(es).[0m
+[[38;2;50;205;50m02:42:36.160[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled ControllerManager network runtime patch.[0m
+[[38;2;50;205;50m02:42:36.167[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 4 LobbyNetworkClient runtime network patch(es).[0m
+[[38;2;50;205;50m02:42:36.185[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 8 character selection tracker patch(es).[0m
+[[38;2;50;205;50m02:42:36.189[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 1 WebSocketClient selection propagation patch(es).[0m
+[[38;2;50;205;50m02:42:36.191[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled lifecycle guard on 2 Application.Quit overload(s). Guard PERMANENT (custom servers).[0m
+[[38;2;50;205;50m02:42:36.193[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled AnalyticsManager custom-server no-op patch.[0m
+[[38;2;50;205;50m02:42:36.274[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 40 character-select NullRef guard prefix patch(es).[0m
+[[38;2;50;205;50m02:42:36.280[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 5 PopulateCharIdsBeforeBuild prefix(es) on UILobbyCharacterSelectPage.[0m
+[[38;2;50;205;50m02:42:36.284[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 3 PopulateCharIdsBeforeBuild prefix(es) on UILobbyPlayTabPage.[0m
+[[38;2;50;205;50m02:42:36.331[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 32 LobbyController NullRef guard finalizer patch(es).[0m
+[[38;2;50;205;50m02:42:36.983[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 1 CharacterIsUnlocked force-unlock patch(es).[0m
+[[38;2;50;205;50m02:42:37.054[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mServer match policy fetched: Both (matchmaking=allowed, custom=allowed). When a path is blocked, the mod logs a clear error if the user tries to use it.[0m
+[[38;2;50;205;50m02:42:37.060[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mLocal proxy ready (port 5055)[0m
+[[38;2;50;205;50m02:42:37.060[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mDirect mode compatibility proxy enabled for legacy loopback API calls: 127.0.0.1:5055 -> http://ark.atomi23.de:5055/[0m
+[[38;2;50;205;50m02:42:37.062[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInitialized BAP Custom Server v1.0.5 during early registration. dedicated=False http=n/a ws=n/a kcp=n/a tcp=n/a[0m
+[[38;2;50;205;50m02:42:37.063[0m] [38;2;0;100;0m------------------------------[0m
+[[38;2;50;205;50m02:42:37.063[0m] [38;2;0;255;255mBAP Custom Server[0m v1.0.5
+[[38;2;50;205;50m02:42:37.063[0m] [38;2;211;211;211mby Sonic0810[0m
+[[38;2;50;205;50m02:42:37.064[0m] [38;2;169;169;169mAssembly: BapCustomServerMelon.dll[0m
+[[38;2;50;205;50m02:42:37.064[0m] [38;2;0;100;0m------------------------------[0m
+[[38;2;50;205;50m02:42:37.073[0m] [38;2;0;100;0m------------------------------[0m
+[[38;2;50;205;50m02:42:37.073[0m] [38;2;0;200;255mBAPBAP ModAPI[0m v2.2.1
+[[38;2;50;205;50m02:42:37.073[0m] [38;2;255;200;0mby BAPBAP Modding Community[0m
+[[38;2;50;205;50m02:42:37.074[0m] [38;2;169;169;169mAssembly: BAPBAP.ModAPI.dll[0m
+[[38;2;50;205;50m02:42:37.074[0m] [38;2;0;100;0m------------------------------[0m
+[[38;2;50;205;50m02:42:37.080[0m] [38;2;0;100;0m------------------------------[0m
+[[38;2;50;205;50m02:42:37.081[0m] [38;2;0;255;255mNetworkedCustomChar[0m v0.1.0
+[[38;2;50;205;50m02:42:37.081[0m] [38;2;211;211;211mby bapcustom[0m
+[[38;2;50;205;50m02:42:37.081[0m] [38;2;169;169;169mAssembly: NetworkedCustomChar.dll[0m
+[[38;2;50;205;50m02:42:37.081[0m] [38;2;0;100;0m------------------------------[0m
+[[38;2;50;205;50m02:42:37.081[0m] [38;2;255;0;255m------------------------------[0m
+[[38;2;50;205;50m02:42:37.081[0m] [38;2;211;211;211m3 Mods loaded.[0m
+
+[[38;2;50;205;50m02:42:39.177[0m] [[38;2;255;255;0mIl2CppInterop[0m] [38;2;255;255;0mClass::Init signatures have been exhausted, using a substitute![0m
+[[38;2;50;205;50m02:42:41.258[0m] [[38;2;0;255;255mIl2CppInterop[0m] [38;2;211;211;211mRegistered mono type MelonLoader.Support.MonoEnumeratorWrapper in il2cpp domain[0m
+[[38;2;50;205;50m02:42:41.332[0m] [38;2;211;211;211mSupport Module Loaded: C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Dependencies\SupportModules\Il2Cpp.dll[0m
+[[38;2;50;205;50m02:42:41.334[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m-------------------------------------------------------------------------------------------------------
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+[0m
+[[38;2;50;205;50m02:42:41.334[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m~   This Game has been MODIFIED using MelonLoader. DO NOT report any issues to the Game Developers!   ~
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+[0m
+[[38;2;50;205;50m02:42:41.334[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m-------------------------------------------------------------------------------------------------------
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+[0m
+[[38;2;50;205;50m02:42:41.340[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211mBAPBAP ModAPI v2.2.1 initializing ...[0m
+[[38;2;50;205;50m02:42:41.340[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m  by BAPBAP Modding Community[0m
+[[38;2;50;205;50m02:42:41.341[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m  loaded as C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\UserLibs\BAPBAP.ModAPI.dll[0m
+[[38;2;50;205;50m02:42:41.341[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks] Installing global hooks ...[0m
+[[38;2;50;205;50m02:42:41.347[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ PlayerHooks[0m
+[[38;2;50;205;50m02:42:41.348[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ MatchHooks[0m
+[[38;2;50;205;50m02:42:41.348[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ CombatHooks[0m
+[[38;2;50;205;50m02:42:41.348[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ChatHooks[0m
+[[38;2;50;205;50m02:42:41.348[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ NetworkHooks[0m
+[[38;2;50;205;50m02:42:41.349[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ UIHooks[0m
+[[38;2;50;205;50m02:42:41.349[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ AbilityHooks[0m
+[[38;2;50;205;50m02:42:41.349[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ StatusEffectHooks[0m
+[[38;2;50;205;50m02:42:41.349[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ItemHooks[0m
+[[38;2;50;205;50m02:42:41.350[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ VehicleHooks[0m
+[[38;2;50;205;50m02:42:41.350[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ EntityHooks[0m
+[[38;2;50;205;50m02:42:41.350[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ExtraAbilityHooks[0m
+[[38;2;50;205;50m02:42:41.350[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ExtraItemHooks[0m
+[[38;2;50;205;50m02:42:41.351[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ExtraVehicleHooks[0m
+[[38;2;50;205;50m02:42:41.351[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ExtraEntityHooks[0m
+[[38;2;50;205;50m02:42:41.351[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ExtraMovementHooks[0m
+[[38;2;50;205;50m02:42:41.351[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ExtraPassiveHooks[0m
+[[38;2;50;205;50m02:42:41.351[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ExtraInteractionHooks[0m
+[[38;2;50;205;50m02:42:41.354[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ExtraKillHooks[0m
+[[38;2;50;205;50m02:42:41.354[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ExtraEmoteHooks[0m
+[[38;2;50;205;50m02:42:41.355[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks]   ✓ ExtraMetaHooks[0m
+[[38;2;50;205;50m02:42:41.355[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Hooks] Done. 21 hook groups installed.[0m
+[[38;2;50;205;50m02:42:41.357[0m] [[38;2;0;255;255mIl2CppInterop[0m] [38;2;211;211;211mRegistered mono type BAPBAP.ModAPI.Lifecycle.ModUpdateRunner in il2cpp domain[0m
+[[38;2;50;205;50m02:42:41.357[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Lifecycle] ModUpdateRunner registered with Il2Cpp.[0m
+[[38;2;50;205;50m02:42:41.358[0m] [[38;2;0;255;255mIl2CppInterop[0m] [38;2;211;211;211mRegistered mono type BAPBAP.ModAPI.API.NotificationAPI+ScheduledFader in il2cpp domain[0m
+[[38;2;50;205;50m02:42:41.360[0m] [[38;2;0;255;255mIl2CppInterop[0m] [38;2;211;211;211mRegistered mono type BAPBAP.ModAPI.UI.ModLoaderUIRunner in il2cpp domain[0m
+[[38;2;50;205;50m02:42:41.360[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[ModLoaderUI] Runner registered with Il2Cpp.[0m
+[[38;2;50;205;50m02:42:41.361[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211mBAPBAP ModAPI ready. Mods should subclass ModBase to register.[0m
+[[38;2;50;205;50m02:42:41.393[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M5] loaded definition 'Blitz' (charId=15, enabled=False) from UserData\CustomChars\blitz.json.[0m
+[[38;2;50;205;50m02:42:41.393[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M5] loaded definition 'Eve' (charId=15, enabled=False) from UserData\CustomChars\eve.json.[0m
+[[38;2;50;205;50m02:42:41.395[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M5] loaded definition 'Medusa' (charId=15, enabled=True) from UserData\CustomChars\medusa.json.[0m
+[[38;2;50;205;50m02:42:41.395[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M5] active definition: name='Medusa' display='MEDUSA' charId=15 base=0 bundle='Medusa\medusa.bundle' visual='Medusa_Visual' assetId=0xB0B00F0F graft=True (loaded 3).[0m
+[[38;2;50;205;50m02:42:41.415[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] patched GameNetworkManager.Awake (pre=False post=True).[0m
+[[38;2;50;205;50m02:42:41.433[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] patched GameNetworkManager.OnStartServer (pre=False post=True).[0m
+[[38;2;50;205;50m02:42:41.451[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] patched GameNetworkManager.OnStartClient (pre=False post=True).[0m
+[[38;2;50;205;50m02:42:41.468[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] patched GameNetworkManager.GetCharacterBotPrefab (pre=True post=False).[0m
+[[38;2;50;205;50m02:42:41.491[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] patched GameMode.SpawnPlayerChar (pre=True post=False).[0m
+[[38;2;50;205;50m02:42:41.492[0m] [38;2;255;255;0mAccessTools.Method: Could not find method for type Il2CppBAPBAP.UI.UICharactersConfiguration and name OnEnable and parameters [0m
+[[38;2;50;205;50m02:42:41.492[0m] [[38;2;255;255;0mNetworkedCustomChar[0m] [38;2;255;255;0m[M1] patch target not found: UICharactersConfiguration.OnEnable[0m
+[[38;2;50;205;50m02:42:41.494[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] patched UILobbyCharacterSelectPage.GetCharacterListingIndexFromCharId (pre=True post=False).[0m
+[[38;2;50;205;50m02:42:41.515[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] patched Ability.SetState (pre=True post=True).[0m
+[[38;2;50;205;50m02:42:41.532[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] patched CharAnimator.Awake (pre=False post=True).[0m
+[[38;2;50;205;50m02:42:41.550[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] patched CharFootsteps.Awake (pre=False post=True).[0m
+[[38;2;50;205;50m02:42:41.576[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M2] patched Animator.SetLayerWeight (overload; pre=True post=False).[0m
+[[38;2;50;205;50m02:42:41.594[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M2] patched Animator.CrossFadeInFixedTime (overload; pre=True post=False).[0m
+[[38;2;50;205;50m02:42:41.602[0m] [[38;2;0;255;255mIl2CppInterop[0m] [38;2;211;211;211mRegistered mono type Il2CppInterop.Runtime.DelegateSupport+Il2CppToMonoDelegateReference in il2cpp domain[0m
+[[38;2;50;205;50m02:42:41.627[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3] CustomNetChannel registered on EntityManager (hash=-1298316792).[0m
+[[38;2;50;205;50m02:42:41.629[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3] CustomAbilityEngine ready (charId=15, enabled=True, networkPrefabSpawn=True, medusaBundleHitboxes=True).[0m
+[[38;2;50;205;50m02:42:41.629[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M6] ability kit: hitboxes=[Hitbox_MedusaPoisonProjectile,Hitbox_MedusaPoisonPuddle,Hitbox_MedusaWallPoison,Hitbox_MedusaWallBoxDpsPoison] dmg=[120,85,70,160] status=[poison,slow,knockup,petrify] anim=[Ability1,Ability2,,Ability4].[0m
+[[38;2;50;205;50m02:42:41.725[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[MAP] custom map registered: name='CustomArena' mapId=31 bundle='CustomArena\customflat.bundle' sv='CustomFlat_SvData' cl='CustomFlat_ClData' enabled=True zoneRounds=1 enableTileEdits=True useLevelDataTileMutations=True tileEdits=3.[0m
+[[38;2;50;205;50m02:42:41.725[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[MAP] custom map registered: name='CustomCitadel' mapId=34 bundle='CustomCitadel\customflat.bundle' sv='CustomFlat_SvData' cl='CustomFlat_ClData' enabled=True zoneRounds=2 enableTileEdits=True useLevelDataTileMutations=True tileEdits=13.[0m
+[[38;2;50;205;50m02:42:41.725[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[MAP] custom map registered: name='CustomColosseum' mapId=32 bundle='CustomColosseum\customflat.bundle' sv='CustomFlat_SvData' cl='CustomFlat_ClData' enabled=True zoneRounds=1 enableTileEdits=True useLevelDataTileMutations=True tileEdits=9.[0m
+[[38;2;50;205;50m02:42:41.726[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[MAP] custom map registered: name='CustomFlat' mapId=30 bundle='CustomFlat\customflat.bundle' sv='CustomFlat_SvData' cl='CustomFlat_ClData' enabled=True zoneRounds=1 enableTileEdits=False useLevelDataTileMutations=False tileEdits=0.[0m
+[[38;2;50;205;50m02:42:41.726[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[MAP] custom map registered: name='CustomGauntlet' mapId=33 bundle='CustomGauntlet\customflat.bundle' sv='CustomFlat_SvData' cl='CustomFlat_ClData' enabled=True zoneRounds=1 enableTileEdits=True useLevelDataTileMutations=True tileEdits=13.[0m
+[[38;2;50;205;50m02:42:41.726[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[MAP] hooks installed (LoadLevel=True LoadLevelCoroutine=True SpawnLevel=True OnServerMatchSetup=True) for 5 custom level name(s).[0m
+[[38;2;50;205;50m02:42:41.726[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] loaded. charId=15 baseCharId=0 assetId=0xB0B00F0F graftVisual=True[0m
+[[38;2;50;205;50m02:42:45.710[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Blitz') is missing![0m
+[[38;2;50;205;50m02:42:46.174[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.[0m
+[[38;2;50;205;50m02:42:46.175[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mUnloadTime: 7.181000 ms[0m
+[[38;2;50;205;50m02:42:46.384[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThreadLog initialized.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+Mirror.ThreadLog:Initialize()
+[0m
+[[38;2;50;205;50m02:42:46.399[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[PREAWAKE] ENV_PRODUCTION
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+[0m
+[[38;2;50;205;50m02:42:46.400[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[PREAWAKE] BACKEND_STRIP
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+[0m
+[[38;2;50;205;50m02:42:46.400[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[PREAWAKE] hostname= VINCENT
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+[0m
+[[38;2;50;205;50m02:42:46.400[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[PREAWAKE] environment= Production
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+[0m
+[[38;2;50;205;50m02:42:46.401[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[PREAWAKE] version = v0.1.1758-38212
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+[0m
+[[38;2;50;205;50m02:42:46.401[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[PREAWAKE] networkConfigEnv = Staging
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+[0m
+[[38;2;50;205;50m02:42:46.442[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[PREAWAKE] networkConfigsServer = ServerConfig { 
+MatchmakingHost: , 
+ListenPort: 0, 
+HeaderSecretKey: , 
+HeaderSecret: , 
+DebugPassword: , 
+DebugSquadPassword: , 
+DevGameAuthId: , 
+}
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+[0m
+[[38;2;50;205;50m02:42:46.443[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[PREAWAKE] networkConfigsClient = ClientConfig { 
+ApiHost: http://127.0.0.1:5055, 
+CookieDomain: .bapbap.gg, 
+CookieSessionKey: sid, 
+}
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+[0m
+[[38;2;50;205;50m02:42:46.443[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[PREAWAKE] logConfigEnv = Staging
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+[0m
+[[38;2;50;205;50m02:42:46.443[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[PREAWAKE] Args start
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+[0m
+[[38;2;50;205;50m02:42:46.443[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mC:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\bapbap.exe
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+[0m
+[[38;2;50;205;50m02:42:46.444[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m--melonloader.agfoffline
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+[0m
+[[38;2;50;205;50m02:42:46.444[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m--melonloader.captureplayerlogs
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+[0m
+[[38;2;50;205;50m02:42:46.444[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m--bapcustom-use-proxy=false
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+[0m
+[[38;2;50;205;50m02:42:46.444[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m--bapcustom-show-ui=false
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+[0m
+[[38;2;50;205;50m02:42:46.444[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m--bapcustom-host=ark.atomi23.de
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+[0m
+[[38;2;50;205;50m02:42:46.444[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m--bapcustom-server-port=5055
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+[0m
+[[38;2;50;205;50m02:42:46.445[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m--bapcustom-account-id=codex-custom-vfx-20260619-024204
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+[0m
+[[38;2;50;205;50m02:42:46.445[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m--bapcustom-username=CodexVfx
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+[0m
+[[38;2;50;205;50m02:42:46.445[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m--bapcustom-auto-select-augment
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+[0m
+[[38;2;50;205;50m02:42:46.445[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m--bapcustom-selected-char=15
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+[0m
+[[38;2;50;205;50m02:42:46.445[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m--bapcustom-join-auth=29e5814bc17906306b41c6edfdbc3999
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+[0m
+[[38;2;50;205;50m02:42:46.446[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m--bapcustom-join-host=ark.atomi23.de
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+[0m
+[[38;2;50;205;50m02:42:46.446[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m--bapcustom-join-ws=7778
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+[0m
+[[38;2;50;205;50m02:42:46.446[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m--bapcustom-join-kcp=7779
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+[0m
+[[38;2;50;205;50m02:42:46.446[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m--bapcustom-join-tcp=7780
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+[0m
+[[38;2;50;205;50m02:42:46.447[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[PREAWAKE] Args end | http=-1 ws=-1 kcp=-1 tcp=-1
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+[0m
+[[38;2;50;205;50m02:42:46.469[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[LocalSavedData] InitializeSystemResolutions - nativeSystemResolution: 3440 x 1440 @ 99.998Hz[0m
+[[38;2;50;205;50m02:42:46.469[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[LocalSavedData] InitializeSystemResolutions - res: UnityEngine.Resolution[], length: 23[0m
+[[38;2;50;205;50m02:42:46.470[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mExact supported resolution match not found ((3440, 1440)). Finding closest one...[0m
+[[38;2;50;205;50m02:42:46.470[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mFound supported resolution: (1920, 1440)[0m
+[[38;2;50;205;50m02:42:46.699[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mSTEAM: Steam unavailable[0m
+[[38;2;50;205;50m02:42:46.789[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M2] loading bundle: 'C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\UserData\Medusa\medusa.bundle' (3494760 bytes).[0m
+[[38;2;50;205;50m02:42:46.799[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M2] visual prefab 'Medusa_Visual' loaded from bundle.[0m
+[[38;2;50;205;50m02:42:46.821[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M2] graft OK via GNM.Awake: baseRenderersDisabled=11, charAnimWired=1, footstepsWired=1, otherAnimsDisabled=2, shadedSMRs=1, fx=True, controller='Medusa'.[0m
+[[38;2;50;205;50m02:42:46.822[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M2] graft applied on prefab template via GNM.Awake.[0m
+[[38;2;50;205;50m02:42:46.834[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] sanitized 1 identity(ies); root assetId=0xB0B00F0F via GNM.Awake.[0m
+[[38;2;50;205;50m02:42:46.835[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] built networked prefab 'Char_Medusa' via GNM.Awake (baseCharId=0).[0m
+[[38;2;50;205;50m02:42:46.838[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] characterPrefabsByCharId[15] = our prefab via GNM.Awake (len 15->16).[0m
+[[38;2;50;205;50m02:42:46.842[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] charBotPrefabsByCharId[15] populated via GNM.Awake (len 15->16).[0m
+[[38;2;50;205;50m02:42:46.845[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] added to InstantiatedPrefabs via GNM.Awake (len 414->415).[0m
+[[38;2;50;205;50m02:42:46.868[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mRecursive Serialization is not supported. You can't dereference a PPtr while loading. (Constructors of C# classes may not load objects either. See stacktrace.)
+UnityEngine.ResourcesAPI:Load(String, Type)
+UnityEngine.Resources:Load(String, Type)
+GameAnalyticsSDK.GameAnalytics:InitAPI()
+GameAnalyticsSDK.GameAnalytics:get_SettingsGA()
+UnityEngine.Application:CallLogCallback(String, String, LogType, Boolean)
+
+[ line 11461012]
+[0m
+[[38;2;50;205;50m02:42:46.869[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mRecursive Serialization is not supported. You can't dereference a PPtr while loading. (Constructors of C# classes may not load objects either. See stacktrace.)
+UnityEngine.ResourcesAPI:Load(String, Type)
+UnityEngine.Resources:Load(String, Type)
+GameAnalyticsSDK.State.GAState:Init()
+GameAnalyticsSDK.GameAnalytics:InitAPI()
+GameAnalyticsSDK.GameAnalytics:get_SettingsGA()
+UnityEngine.Application:CallLogCallback(String, String, LogType, Boolean)
+
+[ line 11460964]
+[0m
+[[38;2;50;205;50m02:42:46.869[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object '') is missing![0m
+[[38;2;50;205;50m02:42:46.869[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mRecursive Serialization is not supported. You can't dereference a PPtr while loading. (Constructors of C# classes may not load objects either. See stacktrace.)
+UnityEngine.ResourcesAPI:Load(String, Type)
+UnityEngine.Resources:Load(String, Type)
+GameAnalyticsSDK.GameAnalytics:InitAPI()
+GameAnalyticsSDK.GameAnalytics:get_SettingsGA()
+UnityEngine.Application:CallLogCallback(String, String, LogType, Boolean)
+
+[ line 11461012]
+[0m
+[[38;2;50;205;50m02:42:46.869[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mRecursive Serialization is not supported. You can't dereference a PPtr while loading. (Constructors of C# classes may not load objects either. See stacktrace.)
+UnityEngine.ResourcesAPI:Load(String, Type)
+UnityEngine.Resources:Load(String, Type)
+GameAnalyticsSDK.State.GAState:Init()
+GameAnalyticsSDK.GameAnalytics:InitAPI()
+GameAnalyticsSDK.GameAnalytics:get_SettingsGA()
+UnityEngine.Application:CallLogCallback(String, String, LogType, Boolean)
+
+[ line 11460964]
+[0m
+[[38;2;50;205;50m02:42:46.870[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object '') is missing![0m
+[[38;2;50;205;50m02:42:46.872[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:Instantiate(Object, Transform, Boolean)
+UnityEngine.Object:Instantiate(T, Transform, Boolean)
+
+[ line 11462180]
+[0m
+[[38;2;50;205;50m02:42:46.873[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:Instantiate(Object, Transform, Boolean)
+UnityEngine.Object:Instantiate(T, Transform, Boolean)
+
+[ line 11462180]
+[0m
+[[38;2;50;205;50m02:42:46.873[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Hitbox_MedusaPoisonProjectile') is missing!
+UnityEngine.Object:Instantiate(Object, Transform, Boolean)
+UnityEngine.Object:Instantiate(T, Transform, Boolean)
+
+[ line 11462436]
+[0m
+[[38;2;50;205;50m02:42:46.873[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Hitbox_MedusaPoisonProjectile') is missing!
+UnityEngine.Object:Instantiate(Object, Transform, Boolean)
+UnityEngine.Object:Instantiate(T, Transform, Boolean)
+
+[ line 11462436]
+[0m
+[[38;2;50;205;50m02:42:46.873[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Hitbox_MedusaPoisonProjectile') is missing!
+UnityEngine.Object:Instantiate(Object, Transform, Boolean)
+UnityEngine.Object:Instantiate(T, Transform, Boolean)
+
+[ line 11462436]
+[0m
+[[38;2;50;205;50m02:42:46.874[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Hitbox_MedusaPoisonProjectile') is missing!
+UnityEngine.Object:Instantiate(Object, Transform, Boolean)
+UnityEngine.Object:Instantiate(T, Transform, Boolean)
+
+[ line 11462436]
+[0m
+[[38;2;50;205;50m02:42:46.878[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3] [M3c] slot 0: grafted 'Hitbox_MedusaPoisonProjectile' as Medusa poison visual (baseRenderersDisabled=0).[0m
+[[38;2;50;205;50m02:42:46.880[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3] [M3c] slot 0 AUTHENTIC Medusa hitbox built: assetId=0xB0B0F010 base='Hitbox_Kate_BigCat' proj=True visual='Hitbox_MedusaPoisonProjectile'.[0m
+[[38;2;50;205;50m02:42:46.882[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Hitbox_MedusaPoisonPuddle') is missing![0m
+[[38;2;50;205;50m02:42:46.883[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Hitbox_MedusaPoisonPuddle') is missing![0m
+[[38;2;50;205;50m02:42:46.883[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Hitbox_MedusaPoisonPuddle') is missing![0m
+[[38;2;50;205;50m02:42:46.883[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:Instantiate(Object, Transform, Boolean)
+UnityEngine.Object:Instantiate(T, Transform, Boolean)
+
+[ line 11462180]
+[0m
+[[38;2;50;205;50m02:42:46.884[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:Instantiate(Object, Transform, Boolean)
+UnityEngine.Object:Instantiate(T, Transform, Boolean)
+
+[ line 11462180]
+[0m
+[[38;2;50;205;50m02:42:46.884[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:Instantiate(Object, Transform, Boolean)
+UnityEngine.Object:Instantiate(T, Transform, Boolean)
+
+[ line 11462180]
+[0m
+[[38;2;50;205;50m02:42:46.884[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Hitbox_MedusaPoisonPuddle') is missing!
+UnityEngine.Object:Instantiate(Object, Transform, Boolean)
+UnityEngine.Object:Instantiate(T, Transform, Boolean)
+
+[ line 11462436]
+[0m
+[[38;2;50;205;50m02:42:46.884[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Hitbox_MedusaPoisonPuddle') is missing!
+UnityEngine.Object:Instantiate(Object, Transform, Boolean)
+UnityEngine.Object:Instantiate(T, Transform, Boolean)
+
+[ line 11462436]
+[0m
+[[38;2;50;205;50m02:42:46.885[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Hitbox_MedusaPoisonPuddle') is missing!
+UnityEngine.Object:Instantiate(Object, Transform, Boolean)
+UnityEngine.Object:Instantiate(T, Transform, Boolean)
+
+[ line 11462436]
+[0m
+[[38;2;50;205;50m02:42:46.885[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Hitbox_MedusaPoisonPuddle') is missing!
+UnityEngine.Object:Instantiate(Object, Transform, Boolean)
+UnityEngine.Object:Instantiate(T, Transform, Boolean)
+
+[ line 11462436]
+[0m
+[[38;2;50;205;50m02:42:46.885[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Hitbox_MedusaPoisonPuddle') is missing!
+UnityEngine.Object:Instantiate(Object, Transform, Boolean)
+UnityEngine.Object:Instantiate(T, Transform, Boolean)
+
+[ line 11462436]
+[0m
+[[38;2;50;205;50m02:42:46.885[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Hitbox_MedusaPoisonPuddle') is missing!
+UnityEngine.Object:Instantiate(Object, Transform, Boolean)
+UnityEngine.Object:Instantiate(T, Transform, Boolean)
+
+[ line 11462436]
+[0m
+[[38;2;50;205;50m02:42:46.886[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3] [M3c] slot 1: grafted 'Hitbox_MedusaPoisonPuddle' as Medusa poison visual (baseRenderersDisabled=0).[0m
+[[38;2;50;205;50m02:42:46.886[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'MedusaPuddleSpawner') is missing![0m
+[[38;2;50;205;50m02:42:46.886[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:Instantiate(Object, Transform, Boolean)
+UnityEngine.Object:Instantiate(T, Transform, Boolean)
+
+[ line 11462180]
+[0m
+[[38;2;50;205;50m02:42:46.887[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'MedusaPuddleSpawner') is missing!
+UnityEngine.Object:Instantiate(Object, Transform, Boolean)
+UnityEngine.Object:Instantiate(T, Transform, Boolean)
+
+[ line 11462436]
+[0m
+[[38;2;50;205;50m02:42:46.887[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'MedusaPuddleSpawner') is missing!
+UnityEngine.Object:Instantiate(Object, Transform, Boolean)
+UnityEngine.Object:Instantiate(T, Transform, Boolean)
+
+[ line 11462436]
+[0m
+[[38;2;50;205;50m02:42:46.887[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3] [M3c] slot 1: grafted extra spawner 'MedusaPuddleSpawner'.[0m
+[[38;2;50;205;50m02:42:46.888[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3] [M3c] slot 1 AUTHENTIC Medusa hitbox built: assetId=0xB0B0F011 base='Hitbox_Karen_Punch' proj=False visual='Hitbox_MedusaPoisonPuddle'.[0m
+[[38;2;50;205;50m02:42:46.889[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object '') is missing![0m
+[[38;2;50;205;50m02:42:46.890[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object '') is missing![0m
+[[38;2;50;205;50m02:42:46.890[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object '') is missing![0m
+[[38;2;50;205;50m02:42:46.890[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object '') is missing![0m
+[[38;2;50;205;50m02:42:46.891[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object '') is missing![0m
+[[38;2;50;205;50m02:42:46.891[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:Instantiate(Object, Transform, Boolean)
+UnityEngine.Object:Instantiate(T, Transform, Boolean)
+
+[ line 11462164]
+[0m
+[[38;2;50;205;50m02:42:46.891[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:Instantiate(Object, Transform, Boolean)
+UnityEngine.Object:Instantiate(T, Transform, Boolean)
+
+[ line 11462164]
+[0m
+[[38;2;50;205;50m02:42:46.891[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:Instantiate(Object, Transform, Boolean)
+UnityEngine.Object:Instantiate(T, Transform, Boolean)
+
+[ line 11462164]
+[0m
+[[38;2;50;205;50m02:42:46.891[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:Instantiate(Object, Transform, Boolean)
+UnityEngine.Object:Instantiate(T, Transform, Boolean)
+
+[ line 11462164]
+[0m
+[[38;2;50;205;50m02:42:46.892[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:Instantiate(Object, Transform, Boolean)
+UnityEngine.Object:Instantiate(T, Transform, Boolean)
+
+[ line 11462164]
+[0m
+[[38;2;50;205;50m02:42:46.892[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Hitbox_MedusaWallPoison') is missing!
+UnityEngine.Object:Instantiate(Object, Transform, Boolean)
+UnityEngine.Object:Instantiate(T, Transform, Boolean)
+
+[ line 11462436]
+[0m
+[[38;2;50;205;50m02:42:46.892[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Hitbox_MedusaWallPoison') is missing!
+UnityEngine.Object:Instantiate(Object, Transform, Boolean)
+UnityEngine.Object:Instantiate(T, Transform, Boolean)
+
+[ line 11462436]
+[0m
+[[38;2;50;205;50m02:42:46.892[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Obstacle') is missing!
+UnityEngine.Object:Instantiate(Object, Transform, Boolean)
+UnityEngine.Object:Instantiate(T, Transform, Boolean)
+
+[ line 11462436]
+[0m
+[[38;2;50;205;50m02:42:46.892[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Obstacle') is missing!
+UnityEngine.Object:Instantiate(Object, Transform, Boolean)
+UnityEngine.Object:Instantiate(T, Transform, Boolean)
+
+[ line 11462436]
+[0m
+[[38;2;50;205;50m02:42:46.893[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Hitbox_MedusaWallPoison') is missing!
+UnityEngine.Object:Instantiate(Object, Transform, Boolean)
+UnityEngine.Object:Instantiate(T, Transform, Boolean)
+
+[ line 11462436]
+[0m
+[[38;2;50;205;50m02:42:46.893[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Hitbox_MedusaWallPoison') is missing!
+UnityEngine.Object:Instantiate(Object, Transform, Boolean)
+UnityEngine.Object:Instantiate(T, Transform, Boolean)
+
+[ line 11462436]
+[0m
+[[38;2;50;205;50m02:42:46.893[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Hitbox_MedusaWallPoison') is missing!
+UnityEngine.Object:Instantiate(Object, Transform, Boolean)
+UnityEngine.Object:Instantiate(T, Transform, Boolean)
+
+[ line 11462436]
+[0m
+[[38;2;50;205;50m02:42:46.893[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Hitbox_MedusaWallPoison') is missing!
+UnityEngine.Object:Instantiate(Object, Transform, Boolean)
+UnityEngine.Object:Instantiate(T, Transform, Boolean)
+
+[ line 11462436]
+[0m
+[[38;2;50;205;50m02:42:46.893[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Hitbox_MedusaWallPoison') is missing!
+UnityEngine.Object:Instantiate(Object, Transform, Boolean)
+UnityEngine.Object:Instantiate(T, Transform, Boolean)
+
+[ line 11462436]
+[0m
+[[38;2;50;205;50m02:42:46.894[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Hitbox_MedusaWallPoison') is missing!
+UnityEngine.Object:Instantiate(Object, Transform, Boolean)
+UnityEngine.Object:Instantiate(T, Transform, Boolean)
+
+[ line 11462436]
+[0m
+[[38;2;50;205;50m02:42:46.894[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3] [M3c] slot 2: grafted 'Hitbox_MedusaWallPoison' as Medusa poison visual (baseRenderersDisabled=0).[0m
+[[38;2;50;205;50m02:42:46.894[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3] [M3c] slot 2 AUTHENTIC Medusa hitbox built: assetId=0xB0B0F012 base='Hitbox_Karen_Punch' proj=False visual='Hitbox_MedusaWallPoison'.[0m
+[[38;2;50;205;50m02:42:46.895[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object '') is missing![0m
+[[38;2;50;205;50m02:42:46.895[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Hitbox_MedusaWallBoxDpsPoison') is missing![0m
+[[38;2;50;205;50m02:42:46.895[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:Instantiate(Object, Transform, Boolean)
+UnityEngine.Object:Instantiate(T, Transform, Boolean)
+
+[ line 11462180]
+[0m
+[[38;2;50;205;50m02:42:46.896[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:Instantiate(Object, Transform, Boolean)
+UnityEngine.Object:Instantiate(T, Transform, Boolean)
+
+[ line 11462180]
+[0m
+[[38;2;50;205;50m02:42:46.896[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Hitbox_MedusaWallBoxDpsPoison') is missing!
+UnityEngine.Object:Instantiate(Object, Transform, Boolean)
+UnityEngine.Object:Instantiate(T, Transform, Boolean)
+
+[ line 11462436]
+[0m
+[[38;2;50;205;50m02:42:46.896[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Hitbox_MedusaWallBoxDpsPoison') is missing!
+UnityEngine.Object:Instantiate(Object, Transform, Boolean)
+UnityEngine.Object:Instantiate(T, Transform, Boolean)
+
+[ line 11462436]
+[0m
+[[38;2;50;205;50m02:42:46.896[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Hitbox_MedusaWallBoxDpsPoison') is missing!
+UnityEngine.Object:Instantiate(Object, Transform, Boolean)
+UnityEngine.Object:Instantiate(T, Transform, Boolean)
+
+[ line 11462436]
+[0m
+[[38;2;50;205;50m02:42:46.896[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Hitbox_MedusaWallBoxDpsPoison') is missing!
+UnityEngine.Object:Instantiate(Object, Transform, Boolean)
+UnityEngine.Object:Instantiate(T, Transform, Boolean)
+
+[ line 11462436]
+[0m
+[[38;2;50;205;50m02:42:46.897[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3] [M3c] slot 3: grafted 'Hitbox_MedusaWallBoxDpsPoison' as Medusa poison visual (baseRenderersDisabled=0).[0m
+[[38;2;50;205;50m02:42:46.897[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M3] [M3c] slot 3 AUTHENTIC Medusa hitbox built: assetId=0xB0B0F013 base='Hitbox_Karen_Punch' proj=False visual='Hitbox_MedusaWallBoxDpsPoison'.[0m
+[[38;2;50;205;50m02:42:46.905[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[Spatial Hash] Partial Rebuild Interval = 0,25[0m
+[[38;2;50;205;50m02:42:46.906[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m1800[0m
+[[38;2;50;205;50m02:42:47.000[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[UIDropdownController] No values added to the dropdown[0m
+[[38;2;50;205;50m02:42:47.001[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[UIDropdownController] No values added to the dropdown[0m
+[[38;2;50;205;50m02:42:47.027[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mUILobby platform variant not found: WindowsPlayer using default
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+BAPBAP.UI.UILobbyConfiguration:get_PrefabVariant()
+BAPBAP.UI.UILobby:Build()
+BAPBAP.UI.<Awake>d__111:MoveNext()
+System.Runtime.CompilerServices.AsyncVoidMethodBuilder:Start(TStateMachine&)
+BAPBAP.UI.UIManager:Awake()
+[0m
+[[38;2;50;205;50m02:42:47.458[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mColor primaries 0 is unknown or unsupported by WindowsMediaFoundation. Falling back to default may result in color shift. C:/Users/Administrator/Downloads/CustomServer/Spiel/Battleroyalebuild/bapbap_Data/sharedassets0.resource[0m
+[[38;2;50;205;50m02:42:48.591[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[UICharactersConfiguration] No characters available in lobby.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UICharactersConfiguration:TryGetLobbyCharConfigByIndex(Int32, CharacterConfiguration&)
+BAPBAP.UI.UILobbyCharacterSelectPage:OpenCharacterSummaryPage()
+BAPBAP.UI.UILobbyCharacterSelectPage:Build(Configuration, Translator)
+BAPBAP.UI.UILobbyTabGroup:Build(Configuration, Translator)
+BAPBAP.UI.UILobby:Build()
+BAPBAP.UI.<Awake>d__111:MoveNext()
+System.Runtime.CompilerServices.AsyncVoidMethodBuilder:Start(TStateMachine&)
+BAPBAP.UI.UIManager:Awake()
+[0m
+[[38;2;50;205;50m02:42:48.622[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mOpening Lobby UI :) at the time of 19.06.2026 02:42:48[0m
+[[38;2;50;205;50m02:42:48.777[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mTelepathyTransport initialized![0m
+[[38;2;50;205;50m02:42:48.817[0m] [[38;2;0;255;255mIl2CppInterop[0m] [38;2;211;211;211mRegistered mono type MelonLoader.Support.SM_Component in il2cpp domain[0m
+[[38;2;50;205;50m02:42:48.824[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[SceneLoaded] Scene 'MainScene' (index 0) loaded.[0m
+[[38;2;50;205;50m02:42:48.825[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[StateReset] Resetting match flags on lobby/menu scene 'MainScene'[0m
+[[38;2;50;205;50m02:42:49.361[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[LocalSavedData] Set Quick cast = False[0m
+[[38;2;50;205;50m02:42:49.406[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[MapFix] 3 GameMode(s), spawnCounts=[-1,-1,-1]. Waiting for populated map...[0m
+[[38;2;50;205;50m02:42:49.462[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[DevPanel] Patched 2 type(s) for hide on activation: UIDeveloperLobby(1), UIDevUtilities(1)[0m
+[[38;2;50;205;50m02:42:49.483[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[ShopThrottle] Patched 1 method(s)[0m
+[[38;2;50;205;50m02:42:49.657[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[LockerGuard] Installed exception-swallow finalizer on 9 locker method(s)[0m
+[[38;2;50;205;50m02:42:49.673[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[KcpRuntime] timeout-guard-manager: manager=Il2CppBAPBAP.Network.GameNetworkManager ws=Il2CppMirror.SimpleWeb.SimpleWebTransport port=7778 timeout=null client=False server=False kcp=Il2Cppkcp2k.KcpTransport port=7779 timeout=60000 client=True server=True tcp=Il2CppMirror.TelepathyTransport port=7780 timeout=null client=False server=False multiplex=Il2CppMirror.MultiplexTransport port=7780 timeout=null client=False server=False patched=5.[0m
+[[38;2;50;205;50m02:42:49.673[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[KcpTimeoutGuard] Applied KCP timeout/port guard through GameNetworkManager transport(s); patched=5.[0m
+[[38;2;50;205;50m02:42:49.680[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[InterpFix] no NetworkTransform instances yet (attempt=1)[0m
+[[38;2;50;205;50m02:42:49.703[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[MatchFoundDedup] Installed dedup prefix on 1 PlayMatchFoundSequence target(s).[0m
+[[38;2;50;205;50m02:42:49.705[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[AugmentFix] no UIAugments instances loaded yet (attempt=1).[0m
+[[38;2;50;205;50m02:42:49.708[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[AugmentFix] auto-select: no local PlayerAugments found.[0m
+[[38;2;50;205;50m02:42:49.709[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[AugmentFix] auto-select: no UIManager instances loaded yet.[0m
+[[38;2;50;205;50m02:42:49.709[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[AugmentFix] auto-select: no UIAugments instances loaded yet.[0m
+[[38;2;50;205;50m02:42:49.774[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 3 GameMode level-name runtime patch(es).[0m
+[[38;2;50;205;50m02:42:49.820[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled AddPlayerMatchmaking runtime diagnostics and Medusa skin patch.[0m
+[[38;2;50;205;50m02:42:49.962[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 7 LoginController custom guest-login patch(es).[0m
+[[38;2;50;205;50m02:42:50.007[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mInstalled 2 UnityWebRequest callback repair patch(es).[0m
+[[38;2;50;205;50m02:42:50.014[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom splash guest-login scan saw 0 UILobbySplashScreen object(s).[0m
+[[38;2;50;205;50m02:42:50.016[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[KcpRuntime] client-autojoin-before-connect: manager=Il2CppBAPBAP.Network.GameNetworkManager ws=Il2CppMirror.SimpleWeb.SimpleWebTransport port=7778 timeout=null client=False server=False kcp=Il2Cppkcp2k.KcpTransport port=7779 timeout=60000 client=True server=True tcp=Il2CppMirror.TelepathyTransport port=7780 timeout=null client=False server=False multiplex=Il2CppMirror.MultiplexTransport port=7780 timeout=null client=False server=False patched=3.[0m
+[[38;2;50;205;50m02:42:50.017[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mConnect MM: AuthId=29e5814bc17906306b41c6edfdbc3999 Hostname=ark.atomi23.de wsPort=7778 kcpPort=7779 tcpPort=7780 Secure=False[0m
+[[38;2;50;205;50m02:42:50.052[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mReplacing existing prefab with assetId '2964328207'. Old prefab 'Char_Medusa', New prefab 'Char_Medusa'
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject)
+BAPBAP.Network.GameNetworkManager:OnStartClient()
+[0m
+[[38;2;50;205;50m02:42:50.052[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mReplacing existing prefab with assetId '2964385808'. Old prefab 'Hitbox_Medusa_NetSlot0', New prefab 'Hitbox_Medusa_NetSlot0'
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject)
+BAPBAP.Network.GameNetworkManager:OnStartClient()
+[0m
+[[38;2;50;205;50m02:42:50.053[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mReplacing existing prefab with assetId '2964385809'. Old prefab 'Hitbox_Medusa_NetSlot1', New prefab 'Hitbox_Medusa_NetSlot1'
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject)
+BAPBAP.Network.GameNetworkManager:OnStartClient()
+[0m
+[[38;2;50;205;50m02:42:50.053[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mReplacing existing prefab with assetId '2964385810'. Old prefab 'Hitbox_Medusa_NetSlot2', New prefab 'Hitbox_Medusa_NetSlot2'
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject)
+BAPBAP.Network.GameNetworkManager:OnStartClient()
+[0m
+[[38;2;50;205;50m02:42:50.053[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mReplacing existing prefab with assetId '2964385811'. Old prefab 'Hitbox_Medusa_NetSlot3', New prefab 'Hitbox_Medusa_NetSlot3'
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject)
+BAPBAP.Network.GameNetworkManager:OnStartClient()
+[0m
+[[38;2;50;205;50m02:42:50.053[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mRunning Client/Host Build - Vsync:0 - FPS:-1[0m
+[[38;2;50;205;50m02:42:50.054[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mReplacing existing prefab with assetId '2964328207'. Old prefab 'Char_Medusa', New prefab 'Char_Medusa'
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+[0m
+[[38;2;50;205;50m02:42:50.055[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211massetId '2964328207' is already used by prefab 'Char_Medusa', unregister the prefab first before trying to add handler
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+Mirror.NetworkClient:RegisterPrefab(GameObject, SpawnHandlerDelegate, UnSpawnDelegate)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+[0m
+[[38;2;50;205;50m02:42:50.056[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mReplacing existing prefab with assetId '2964385808'. Old prefab 'Hitbox_Medusa_NetSlot0', New prefab 'Hitbox_Medusa_NetSlot0'
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+[0m
+[[38;2;50;205;50m02:42:50.056[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Int32)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+
+[ line 11460324]
+[0m
+[[38;2;50;205;50m02:42:50.056[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Int32)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+
+[ line 11460324]
+[0m
+[[38;2;50;205;50m02:42:50.056[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Medusa_Poison_Visual') is missing!
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Int32)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+
+[ line 11460596]
+[0m
+[[38;2;50;205;50m02:42:50.057[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Medusa_Poison_Visual') is missing!
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Int32)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+
+[ line 11460596]
+[0m
+[[38;2;50;205;50m02:42:50.057[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Medusa_Poison_Visual') is missing!
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Int32)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+
+[ line 11460596]
+[0m
+[[38;2;50;205;50m02:42:50.057[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Medusa_Poison_Visual') is missing!
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Int32)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+
+[ line 11460596]
+[0m
+[[38;2;50;205;50m02:42:50.057[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211massetId '2964385808' is already used by prefab 'Hitbox_Medusa_NetSlot0', unregister the prefab first before trying to add handler
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+Mirror.NetworkClient:RegisterPrefab(GameObject, SpawnHandlerDelegate, UnSpawnDelegate)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+[0m
+[[38;2;50;205;50m02:42:50.058[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mReplacing existing prefab with assetId '2964385809'. Old prefab 'Hitbox_Medusa_NetSlot1', New prefab 'Hitbox_Medusa_NetSlot1'
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+[0m
+[[38;2;50;205;50m02:42:50.058[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Int32)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+
+[ line 11460324]
+[0m
+[[38;2;50;205;50m02:42:50.058[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Int32)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+
+[ line 11460324]
+[0m
+[[38;2;50;205;50m02:42:50.058[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Int32)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+
+[ line 11460324]
+[0m
+[[38;2;50;205;50m02:42:50.058[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Int32)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+
+[ line 11460324]
+[0m
+[[38;2;50;205;50m02:42:50.059[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Medusa_Extra_Spawner') is missing!
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Int32)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+
+[ line 11460596]
+[0m
+[[38;2;50;205;50m02:42:50.059[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Medusa_Extra_Spawner') is missing!
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Int32)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+
+[ line 11460596]
+[0m
+[[38;2;50;205;50m02:42:50.059[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Medusa_Poison_Visual') is missing!
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Int32)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+
+[ line 11460596]
+[0m
+[[38;2;50;205;50m02:42:50.059[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Medusa_Poison_Visual') is missing!
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Int32)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+
+[ line 11460596]
+[0m
+[[38;2;50;205;50m02:42:50.059[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Medusa_Poison_Visual') is missing!
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Int32)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+
+[ line 11460596]
+[0m
+[[38;2;50;205;50m02:42:50.060[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Medusa_Poison_Visual') is missing!
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Int32)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+
+[ line 11460596]
+[0m
+[[38;2;50;205;50m02:42:50.060[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Medusa_Poison_Visual') is missing!
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Int32)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+
+[ line 11460596]
+[0m
+[[38;2;50;205;50m02:42:50.060[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Medusa_Poison_Visual') is missing!
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Int32)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+
+[ line 11460596]
+[0m
+[[38;2;50;205;50m02:42:50.061[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211massetId '2964385809' is already used by prefab 'Hitbox_Medusa_NetSlot1', unregister the prefab first before trying to add handler
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+Mirror.NetworkClient:RegisterPrefab(GameObject, SpawnHandlerDelegate, UnSpawnDelegate)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+[0m
+[[38;2;50;205;50m02:42:50.061[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mReplacing existing prefab with assetId '2964385810'. Old prefab 'Hitbox_Medusa_NetSlot2', New prefab 'Hitbox_Medusa_NetSlot2'
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+[0m
+[[38;2;50;205;50m02:42:50.061[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Int32)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+
+[ line 11460324]
+[0m
+[[38;2;50;205;50m02:42:50.061[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Int32)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+
+[ line 11460324]
+[0m
+[[38;2;50;205;50m02:42:50.062[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Int32)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+
+[ line 11460324]
+[0m
+[[38;2;50;205;50m02:42:50.062[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Int32)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+
+[ line 11460324]
+[0m
+[[38;2;50;205;50m02:42:50.062[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Int32)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+
+[ line 11460324]
+[0m
+[[38;2;50;205;50m02:42:50.062[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Obstacle') is missing!
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Int32)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+
+[ line 11460596]
+[0m
+[[38;2;50;205;50m02:42:50.063[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Obstacle') is missing!
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Int32)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+
+[ line 11460596]
+[0m
+[[38;2;50;205;50m02:42:50.063[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Medusa_Poison_Visual') is missing!
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Int32)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+
+[ line 11460596]
+[0m
+[[38;2;50;205;50m02:42:50.063[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Medusa_Poison_Visual') is missing!
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Int32)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+
+[ line 11460596]
+[0m
+[[38;2;50;205;50m02:42:50.063[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Medusa_Poison_Visual') is missing!
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Int32)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+
+[ line 11460596]
+[0m
+[[38;2;50;205;50m02:42:50.063[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Medusa_Poison_Visual') is missing!
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Int32)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+
+[ line 11460596]
+[0m
+[[38;2;50;205;50m02:42:50.064[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Medusa_Poison_Visual') is missing!
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Int32)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+
+[ line 11460596]
+[0m
+[[38;2;50;205;50m02:42:50.064[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Medusa_Poison_Visual') is missing!
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Int32)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+
+[ line 11460596]
+[0m
+[[38;2;50;205;50m02:42:50.064[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Medusa_Poison_Visual') is missing!
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Int32)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+
+[ line 11460596]
+[0m
+[[38;2;50;205;50m02:42:50.064[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Medusa_Poison_Visual') is missing!
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Int32)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+
+[ line 11460596]
+[0m
+[[38;2;50;205;50m02:42:50.064[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211massetId '2964385810' is already used by prefab 'Hitbox_Medusa_NetSlot2', unregister the prefab first before trying to add handler
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+Mirror.NetworkClient:RegisterPrefab(GameObject, SpawnHandlerDelegate, UnSpawnDelegate)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+[0m
+[[38;2;50;205;50m02:42:50.065[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mReplacing existing prefab with assetId '2964385811'. Old prefab 'Hitbox_Medusa_NetSlot3', New prefab 'Hitbox_Medusa_NetSlot3'
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+[0m
+[[38;2;50;205;50m02:42:50.065[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Int32)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+
+[ line 11460324]
+[0m
+[[38;2;50;205;50m02:42:50.065[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Int32)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+
+[ line 11460324]
+[0m
+[[38;2;50;205;50m02:42:50.065[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Medusa_Poison_Visual') is missing!
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Int32)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+
+[ line 11460596]
+[0m
+[[38;2;50;205;50m02:42:50.065[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Medusa_Poison_Visual') is missing!
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Int32)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+
+[ line 11460596]
+[0m
+[[38;2;50;205;50m02:42:50.066[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Medusa_Poison_Visual') is missing!
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Int32)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+
+[ line 11460596]
+[0m
+[[38;2;50;205;50m02:42:50.066[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mThe referenced script on this Behaviour (Game Object 'Medusa_Poison_Visual') is missing!
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Int32)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+
+[ line 11460596]
+[0m
+[[38;2;50;205;50m02:42:50.066[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211massetId '2964385811' is already used by prefab 'Hitbox_Medusa_NetSlot3', unregister the prefab first before trying to add handler
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+Mirror.NetworkClient:RegisterPrefab(GameObject, SpawnHandlerDelegate, UnSpawnDelegate)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+[0m
+[[38;2;50;205;50m02:42:50.066[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[KcpRuntime] client-autojoin-after-connect: manager=Il2CppBAPBAP.Network.GameNetworkManager ws=Il2CppMirror.SimpleWeb.SimpleWebTransport port=7778 timeout=null client=False server=False kcp=Il2Cppkcp2k.KcpTransport port=7779 timeout=60000 client=True server=True tcp=Il2CppMirror.TelepathyTransport port=7780 timeout=null client=False server=False multiplex=Il2CppMirror.MultiplexTransport port=7780 timeout=null client=False server=False patched=3.[0m
+[[38;2;50;205;50m02:42:50.066[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mRequested matchmaking client connect. auth=29e5814bc17906306b41c6edfdbc3999 host=ark.atomi23.de ws=7778 kcp=7779 tcp=7780[0m
+[[38;2;50;205;50m02:42:50.098[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M1] UI row added (charId=15) via Poll; roster 15->16.[0m
+[[38;2;50;205;50m02:42:50.226[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mWarming shader: Toon_Frozen_Legacy[0m
+[[38;2;50;205;50m02:42:50.227[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mWarming shader: Toon_Frozen_Amplify[0m
+[[38;2;50;205;50m02:42:50.227[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mWarming shader: InstancedIndirectGrass[0m
+[[38;2;50;205;50m02:42:50.227[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mWarming shader: DrownedGrass[0m
+[[38;2;50;205;50m02:42:50.227[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mWarming shader: InstancedIndirectTrash[0m
+[[38;2;50;205;50m02:42:50.273[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mStart GameAnalytics with accountId=codex-custom-vfx-20260619-024204[0m
+[[38;2;50;205;50m02:42:50.274[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mInitializing with custom id: codex-custom-vfx-20260619-024204[0m
+[[38;2;50;205;50m02:42:50.278[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mSet dimension01 = Account[0m
+[[38;2;50;205;50m02:42:50.278[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mSet dimension02 = Steam[0m
+[[38;2;50;205;50m02:42:50.278[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mSet dimension03 = 0[0m
+[[38;2;50;205;50m02:42:50.279[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mFinished setting up GameAnalytics[0m
+[[38;2;50;205;50m02:42:50.279[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mSend new user event[0m
+[[38;2;50;205;50m02:42:50.282[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #1: [local]/api/challenge/preview[0m
+[[38;2;50;205;50m02:42:50.282[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #1: [local]/api/challenge/preview[0m
+[[38;2;50;205;50m02:42:50.283[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mRewrote UnityWebRequest loopback API URL for direct custom-server mode.[0m
+[[38;2;50;205;50m02:42:50.284[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #2: [local]/api/friends/requests[0m
+[[38;2;50;205;50m02:42:50.284[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #2: [local]/api/friends/requests[0m
+[[38;2;50;205;50m02:42:50.284[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #3: [local]/api/iap/listing[0m
+[[38;2;50;205;50m02:42:50.285[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #3: [local]/api/iap/listing[0m
+[[38;2;50;205;50m02:42:50.285[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300000 amount=0 balance=1[0m
+[[38;2;50;205;50m02:42:50.286[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mWarning/GameAnalytics: New identifier spotted compared to last one used, clearing cached configs hash!!
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+GameAnalyticsSDK.Net.Logging.GALogger:W(String)
+GameAnalyticsSDK.Net.State.GAState:EnsurePersistedStates()
+GameAnalyticsSDK.Net.State.GAState:InternalInitialize()
+GameAnalyticsSDK.Net.Threading.GAThreading:RunBlocks()
+System.Threading.ThreadHelper:ThreadStart_Context(Object)
+System.Threading.ExecutionContext:RunInternal(ExecutionContext, ContextCallback, Object, Boolean)
+System.Threading.ExecutionContext:Run(ExecutionContext, ContextCallback, Object)
+System.Threading.ThreadHelper:ThreadStart()
+UnityEngine.LowMemoryCallback:Invoke()
+[0m
+[[38;2;50;205;50m02:42:50.290[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300002 amount=0 balance=1[0m
+[[38;2;50;205;50m02:42:50.291[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300003 amount=0 balance=1[0m
+[[38;2;50;205;50m02:42:50.291[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300005 amount=0 balance=1[0m
+[[38;2;50;205;50m02:42:50.292[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300007 amount=0 balance=1[0m
+[[38;2;50;205;50m02:42:50.292[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300008 amount=0 balance=1[0m
+[[38;2;50;205;50m02:42:50.293[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300009 amount=0 balance=1[0m
+[[38;2;50;205;50m02:42:50.294[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300010 amount=0 balance=1[0m
+[[38;2;50;205;50m02:42:50.294[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300011 amount=0 balance=1[0m
+[[38;2;50;205;50m02:42:50.295[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300012 amount=0 balance=1[0m
+[[38;2;50;205;50m02:42:50.295[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300013 amount=0 balance=1[0m
+[[38;2;50;205;50m02:42:50.296[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300014 amount=0 balance=1[0m
+[[38;2;50;205;50m02:42:50.297[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300015 amount=0 balance=1[0m
+[[38;2;50;205;50m02:42:50.299[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300016 amount=0 balance=1[0m
+[[38;2;50;205;50m02:42:50.302[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300017 amount=0 balance=1[0m
+[[38;2;50;205;50m02:42:50.304[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300018 amount=0 balance=1[0m
+[[38;2;50;205;50m02:42:50.307[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300019 amount=0 balance=1[0m
+[[38;2;50;205;50m02:42:50.310[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300020 amount=0 balance=1[0m
+[[38;2;50;205;50m02:42:50.311[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300021 amount=0 balance=1[0m
+[[38;2;50;205;50m02:42:50.312[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300022 amount=0 balance=1[0m
+[[38;2;50;205;50m02:42:50.312[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300023 amount=0 balance=1[0m
+[[38;2;50;205;50m02:42:50.313[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300024 amount=0 balance=1[0m
+[[38;2;50;205;50m02:42:50.314[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300025 amount=0 balance=1[0m
+[[38;2;50;205;50m02:42:50.315[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=300026 amount=0 balance=1[0m
+[[38;2;50;205;50m02:42:50.316[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=-1 amount=0 balance=1[0m
+[[38;2;50;205;50m02:42:50.316[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=-1 amount=0 balance=1[0m
+[[38;2;50;205;50m02:42:50.316[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=-1 amount=0 balance=1[0m
+[[38;2;50;205;50m02:42:50.317[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=-1 amount=0 balance=1[0m
+[[38;2;50;205;50m02:42:50.317[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=1 amount=0 balance=999999[0m
+[[38;2;50;205;50m02:42:50.317[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=2 amount=0 balance=0[0m
+[[38;2;50;205;50m02:42:50.317[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=3 amount=0 balance=999999[0m
+[[38;2;50;205;50m02:42:50.317[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=4 amount=0 balance=999999[0m
+[[38;2;50;205;50m02:42:50.317[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=5 amount=0 balance=999999[0m
+[[38;2;50;205;50m02:42:50.317[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mAdd Asset - assetId=0 amount=0 balance=1000[0m
+[[38;2;50;205;50m02:42:50.318[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #4: [local]/api/shop[0m
+[[38;2;50;205;50m02:42:50.318[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #4: [local]/api/shop[0m
+[[38;2;50;205;50m02:42:50.375[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mGarbageCollector disposing of ComputeBuffer. Please use ComputeBuffer.Release() or .Dispose() to manually release the buffer.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+UnityEngine.ComputeBuffer:Finalize()
+[0m
+[[38;2;50;205;50m02:42:50.376[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mGarbageCollector disposing of ComputeBuffer. Please use ComputeBuffer.Release() or .Dispose() to manually release the buffer.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+UnityEngine.ComputeBuffer:Finalize()
+[0m
+[[38;2;50;205;50m02:42:50.385[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #5: [remote]/v1/authentication/session-token[0m
+[[38;2;50;205;50m02:42:50.386[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mWarning: charTokenPass was null on UpdateCharTokenPassXp[0m
+[[38;2;50;205;50m02:42:50.386[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #6: [local]/api/internal/servers[0m
+[[38;2;50;205;50m02:42:50.387[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #5: [local]/api/internal/servers[0m
+[[38;2;50;205;50m02:42:50.387[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mRewrote UnityWebRequest callback URL.[0m
+[[38;2;50;205;50m02:42:50.387[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #7: [local]/api/daily[0m
+[[38;2;50;205;50m02:42:50.387[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #6: [local]/api/daily[0m
+[[38;2;50;205;50m02:42:50.388[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #8: [local]/api/profile/levels[0m
+[[38;2;50;205;50m02:42:50.388[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #7: [local]/api/profile/levels[0m
+[[38;2;50;205;50m02:42:50.388[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #9: [local]/api/chars/pass[0m
+[[38;2;50;205;50m02:42:50.388[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #8: [local]/api/chars/pass[0m
+[[38;2;50;205;50m02:42:50.389[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #10: [local]/api/chars/mastery/preview[0m
+[[38;2;50;205;50m02:42:50.389[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #9: [local]/api/chars/mastery/preview[0m
+[[38;2;50;205;50m02:42:50.389[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #11: [local]/api/chars/listing[0m
+[[38;2;50;205;50m02:42:50.389[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #10: [local]/api/chars/listing[0m
+[[38;2;50;205;50m02:42:50.390[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #12: [local]/api/lobby/socket[0m
+[[38;2;50;205;50m02:42:50.390[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #11: [local]/api/lobby/socket[0m
+[[38;2;50;205;50m02:42:50.390[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mScheduled custom-server post-login splash fallback after lobby socket discovery.[0m
+[[38;2;50;205;50m02:42:50.391[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #13: [local]/api/leaderboards/preview[0m
+[[38;2;50;205;50m02:42:50.391[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #12: [local]/api/leaderboards/preview[0m
+[[38;2;50;205;50m02:42:50.391[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mUnityWebRequest #14: [local]/api/pinger[0m
+[[38;2;50;205;50m02:42:50.391[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom server HTTP request #13: [local]/api/pinger[0m
+[[38;2;50;205;50m02:42:50.392[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mCustom-server load response handled by LoginController.[0m
+[[38;2;50;205;50m02:42:50.399[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPopulateAllUICharactersConfigurations: no instances found yet[0m
+[[38;2;50;205;50m02:42:50.400[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[LNC] HandleFriendsRequestResponse[0m
+[[38;2;50;205;50m02:42:50.401[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[IapController] Handle Xsolla Listing Response[0m
+[[38;2;50;205;50m02:42:50.401[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m{"iapListings":[]}[0m
+[[38;2;50;205;50m02:42:50.404[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[TESTLOG] Client connected before[0m
+[[38;2;50;205;50m02:42:50.404[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[TESTLOG] Client connected[0m
+[[38;2;50;205;50m02:42:50.405[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[TESTLOG] Client registered handler[0m
+[[38;2;50;205;50m02:42:50.405[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[TESTLOG] Client sent init[0m
+[[38;2;50;205;50m02:42:50.405[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mSend event Game Joined with 0 games played (exclusive)[0m
+[[38;2;50;205;50m02:42:50.412[0m] [[38;2;0;200;255mBAPBAP_ModAPI[0m] [38;2;211;211;211m[Lifecycle] ModUpdateRunner GameObject created.[0m
+[[38;2;50;205;50m02:42:50.413[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mServicesInitializationException: The Analytics service has not been initialized. Please initialize Unity Services.
+  at Unity.Services.Analytics.AnalyticsService.get_Instance () [0x00000] in <00000000000000000000000000000000>:0 
+  at System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Start[TStateMachine] (TStateMachine& stateMachine) [0x00000] in <00000000000000000000000000000000>:0 
+  at BAPBAP.Local.AnalyticsManager.SetupAnalytics (System.String accountId, System.Boolean isGuest, System.Int32 totalGames) [0x00000] in <00000000000000000000000000000000>:0 
+  at BAPBAP.UI.LoginController.HandleLoadResponse (BAPBAP.Network.LoadResponse response) [0x00000] in <00000000000000000000000000000000>:0 
+--- End of stack trace from previous location where exception was thrown ---
+
+  at System.Runtime.CompilerServices.AsyncMethodBuilderCore+<>c.<ThrowAsync>b__7_0 (System.Object state) [0x00000] in <00000000000000000000000000000000>:0 
+  at UnityEngine.UnitySynchronizationContext+WorkRequest.Invoke () [0x00000] in <00000000000000000000000000000000>:0 
+  at UnityEngine.UnitySynchronizationContext.Exec () [0x00000] in <00000000000000000000000000000000>:0 
+  at UnityEngine.UnitySynchronizationContext.ExecuteTasks () [0x00000] in <00000000000000000000000000000000>:0 
+[0m
+[[38;2;50;205;50m02:42:50.415[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[Thread6] Warning/GameAnalytics: New identifier spotted compared to last one used, clearing cached configs hash!!
+UnityEngine.Debug:LogWarning(Object)
+GameAnalyticsSDK.Net.Logging.GALogger:W(String)
+GameAnalyticsSDK.Net.State.GAState:EnsurePersistedStates()
+GameAnalyticsSDK.Net.State.GAState:InternalInitialize()
+GameAnalyticsSDK.Net.Threading.GAThreading:RunBlocks()
+UnityEngine.LowMemoryCallback:Invoke()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.ThreadLog:OnLateUpdate()
+Mirror.NetworkLoop:NetworkLateUpdate()
+UnityEngine.LowMemoryCallback:Invoke()
+[0m
+[[38;2;50;205;50m02:42:50.415[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[Thread2] GarbageCollector disposing of ComputeBuffer. Please use ComputeBuffer.Release() or .Dispose() to manually release the buffer.
+UnityEngine.ComputeBuffer:Finalize()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.ThreadLog:OnLateUpdate()
+Mirror.NetworkLoop:NetworkLateUpdate()
+UnityEngine.LowMemoryCallback:Invoke()
+[0m
+[[38;2;50;205;50m02:42:50.415[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[Thread2] GarbageCollector disposing of ComputeBuffer. Please use ComputeBuffer.Release() or .Dispose() to manually release the buffer.
+UnityEngine.ComputeBuffer:Finalize()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.ThreadLog:OnLateUpdate()
+Mirror.NetworkLoop:NetworkLateUpdate()
+UnityEngine.LowMemoryCallback:Invoke()
+[0m
+[[38;2;50;205;50m02:42:50.444[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mData was null on UpdateCharMasteryXp[0m
+[[38;2;50;205;50m02:42:50.444[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mData was null on UpdateCharMasteryBadge[0m
+[[38;2;50;205;50m02:42:50.445[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mData was null on IsMasteryAvailable[0m
+[[38;2;50;205;50m02:42:50.445[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mNullReferenceException: Object reference not set to an instance of an object.
+  at BAPBAP.UI.UILobbyCharacterSelectPage.GetCharacterListingIndexFromCharId (System.Int32 charId) [0x00000] in <00000000000000000000000000000000>:0 
+  at BAPBAP.UI.UILobbyCharacterSelectPage.SetCharacterButtonState (System.Int32 charIndex) [0x00000] in <00000000000000000000000000000000>:0 
+  at BAPBAP.UI.UILobbyCharacterSelectPage.OnCharacterSelect (System.Int32 charIndex) [0x00000] in <00000000000000000000000000000000>:0 
+  at BAPBAP.UI.UILobbyCharacterSelectPage.OnCharacterButtonSelect (BAPBAP.UI.UILobbyCharacterSelectIcon icon, System.Int32 index) [0x00000] in <00000000000000000000000000000000>:0 
+  at BAPBAP.UI.UILobbyCharacterSelectPage.UpdateData (BAPBAP.UI.CharacterPageModel data) [0x00000] in <00000000000000000000000000000000>:0 
+  at BAPBAP.UI.UILobbyCharacterSelectPage.UpdateAvailableCharactersData () [0x00000] in <00000000000000000000000000000000>:0 
+  at BAPBAP.UI.CharSelectController+<<HandleUpdateAvailableCharacterList>g___Delay|16_0>d.MoveNext () [0x00000] in <00000000000000000000000000000000>:0 
+  at UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) [0x00000] in <00000000000000000000000000000000>:0 
+[0m
+[[38;2;50;205;50m02:42:50.446[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mHandleDailyRewardResponse[0m
+[[38;2;50;205;50m02:42:50.446[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[SetCurrentDailyRewardUI] Invalid UNIX timestamp
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+BAPBAP.UI.UILobbyPlayTabPage:SetCurrentDailyRewardUI()
+BAPBAP.UI.UILobbyPlayTabPage:UpdateDailyRewardData(DailyReward)
+BAPBAP.UI.LobbyController:HandleDailyRewardResponse(DailyResponse)
+BAPBAP.Network.<SendGetRoutine>d__11`1:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+[0m
+[[38;2;50;205;50m02:42:50.446[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[LobbyController] Populate Developer servers dropdown - BAPBAP.Network.InternalServersResponse[0m
+[[38;2;50;205;50m02:42:50.448[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[LNC] HandleAccountPassPassResponse[0m
+[[38;2;50;205;50m02:42:50.448[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m{"passId":1,"passLevels":[{"level":1,"xpNeeded":0,"listings":[]},{"level":2,"xpNeeded":100,"listings":[]},{"level":3,"xpNeeded":200,"listings":[]},{"level":4,"xpNeeded":300,"listings":[]},{"level":5,"xpNeeded":400,"listings":[]},{"level":6,"xpNeeded":500,"listings":[]},{"level":7,"xpNeeded":600,"listings":[]},{"level":8,"xpNeeded":700,"listings":[]},{"level":9,"xpNeeded":800,"listings":[]},{"level":10,"xpNeeded":900,"listings":[]},{"level":11,"xpNeeded":1000,"listings":[]},{"level":12,"xpNeeded":1100,"listings":[]},{"level":13,"xpNeeded":1200,"listings":[]},{"level":14,"xpNeeded":1300,"listings":[]},{"level":15,"xpNeeded":1400,"listings":[]},{"level":16,"xpNeeded":1500,"listings":[]},{"level":17,"xpNeeded":1600,"listings":[]},{"level":18,"xpNeeded":1700,"listings":[]},{"level":19,"xpNeeded":1800,"listings":[]},{"level":20,"xpNeeded":1900,"listings":[]},{"level":21,"xpNeeded":2000,"listings":[]},{"level":22,"xpNeeded":2100,"listings":[]},{"level":23,"xpNeeded":2200,"listings":[]},{"level":24,"xpNeeded":2300,"listings":[]},{"level":25,"xpNeeded":2400,"listings":[]},{"level":26,"xpNeeded":2500,"listings":[]},{"level":27,"xpNeeded":2600,"listings":[]},{"level":28,"xpNeeded":2700,"listings":[]},{"level":29,"xpNeeded":2800,"listings":[]},{"level":30,"xpNeeded":2900,"listings":[]},{"level":31,"xpNeeded":3000,"listings":[]},{"level":32,"xpNeeded":3100,"listings":[]},{"level":33,"xpNeeded":3200,"listings":[]},{"level":34,"xpNeeded":3300,"listings":[]},{"level":35,"xpNeeded":3400,"listings":[]},{"level":36,"xpNeeded":3500,"listings":[]},{"level":37,"xpNeeded":3600,"listings":[]},{"level":38,"xpNeeded":3700,"listings":[]},{"level":39,"xpNeeded":3800,"listings":[]},{"level":40,"xpNeeded":3900,"listings":[]},{"level":41,"xpNeeded":4000,"listings":[]},{"level":42,"xpNeeded":4100,"listings":[]},{"level":43,"xpNeeded":4200,"listings":[]},{"level":44,"xpNeeded":4300,"listings":[]},{"level":45,"xpNeeded":4400,"listings":[]},{"level":46,"xpNeeded":4500,"listings":[]},{"level":47,"xpNeeded":4600,"listings":[]},{"level":48,"xpNeeded":4700,"listings":[]},{"level":49,"xpNeeded":4800,"listings":[]},{"level":50,"xpNeeded":4900,"listings":[]},{"level":51,"xpNeeded":5000,"listings":[]},{"level":52,"xpNeeded":5100,"listings":[]},{"level":53,"xpNeeded":5200,"listings":[]},{"level":54,"xpNeeded":5300,"listings":[]},{"level":55,"xpNeeded":5400,"listings":[]},{"level":56,"xpNeeded":5500,"listings":[]},{"level":57,"xpNeeded":5600,"listings":[]},{"level":58,"xpNeeded":5700,"listings":[]},{"level":59,"xpNeeded":5800,"listings":[]},{"level":60,"xpNeeded":5900,"listings":[]},{"level":61,"xpNeeded":6000,"listings":[]},{"level":62,"xpNeeded":6100,"listings":[]},{"level":63,"xpNeeded":6200,"listings":[]},{"level":64,"xpNeeded":6300,"listings":[]},{"level":65,"xpNeeded":6400,"listings":[]},{"level":66,"xpNeeded":6500,"listings":[]},{"level":67,"xpNeeded":6600,"listings":[]},{"level":68,"xpNeeded":6700,"listings":[]},{"level":69,"xpNeeded":6800,"listings":[]},{"level":70,"xpNeeded":6900,"listings":[]},{"level":71,"xpNeeded":7000,"listings":[]},{"level":72,"xpNeeded":7100,"listings":[]},{"level":73,"xpNeeded":7200,"listings":[]},{"level":74,"xpNeeded":7300,"listings":[]},{"level":75,"xpNeeded":7400,"listings":[]},{"level":76,"xpNeeded":7500,"listings":[]},{"level":77,"xpNeeded":7600,"listings":[]},{"level":78,"xpNeeded":7700,"listings":[]},{"level":79,"xpNeeded":7800,"listings":[]},{"level":80,"xpNeeded":7900,"listings":[]},{"level":81,"xpNeeded":8000,"listings":[]},{"level":82,"xpNeeded":8100,"listings":[]},{"level":83,"xpNeeded":8200,"listings":[]},{"level":84,"xpNeeded":8300,"listings":[]},{"level":85,"xpNeeded":8400,"listings":[]},{"level":86,"xpNeeded":8500,"listings":[]},{"level":87,"xpNeeded":8600,"listings":[]},{"level":88,"xpNeeded":8700,"listings":[]},{"level":89,"xpNeeded":8800,"listings":[]},{"level":90,"xpNeeded":8900,"listings":[]},{"level":91,"xpNeeded":9000,"listings":[]},{"level":92,"xpNeeded":9100,"listings":[]},{"level":93,"xpNeeded":9200,"listings":[]},{"level":94,"xpNeeded":9300,"listings":[]},{"level":95,"xpNeeded":9400,"listings":[]},{"level":96,"xpNeeded":9500,"listings":[]},{"level":97,"xpNeeded":9600,"listings":[]},{"level":98,"xpNeeded":9700,"listings":[]},{"level":99,"xpNeeded":9800,"listings":[]},{"level":100,"xpNeeded":9900,"listings":[]}]}[0m
+[[38;2;50;205;50m02:42:50.450[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[LNC] HandleCharTokensPassResponse[0m
+[[38;2;50;205;50m02:42:50.450[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m{"passId":1,"passLevels":[{"level":1,"xpNeeded":0,"listings":[]},{"level":2,"xpNeeded":100,"listings":[]},{"level":3,"xpNeeded":200,"listings":[]},{"level":4,"xpNeeded":300,"listings":[]},{"level":5,"xpNeeded":400,"listings":[]},{"level":6,"xpNeeded":500,"listings":[]},{"level":7,"xpNeeded":600,"listings":[]},{"level":8,"xpNeeded":700,"listings":[]},{"level":9,"xpNeeded":800,"listings":[]},{"level":10,"xpNeeded":900,"listings":[]},{"level":11,"xpNeeded":1000,"listings":[]},{"level":12,"xpNeeded":1100,"listings":[]},{"level":13,"xpNeeded":1200,"listings":[]},{"level":14,"xpNeeded":1300,"listings":[]},{"level":15,"xpNeeded":1400,"listings":[]},{"level":16,"xpNeeded":1500,"listings":[]},{"level":17,"xpNeeded":1600,"listings":[]},{"level":18,"xpNeeded":1700,"listings":[]},{"level":19,"xpNeeded":1800,"listings":[]},{"level":20,"xpNeeded":1900,"listings":[]},{"level":21,"xpNeeded":2000,"listings":[]},{"level":22,"xpNeeded":2100,"listings":[]},{"level":23,"xpNeeded":2200,"listings":[]},{"level":24,"xpNeeded":2300,"listings":[]},{"level":25,"xpNeeded":2400,"listings":[]},{"level":26,"xpNeeded":2500,"listings":[]},{"level":27,"xpNeeded":2600,"listings":[]},{"level":28,"xpNeeded":2700,"listings":[]},{"level":29,"xpNeeded":2800,"listings":[]},{"level":30,"xpNeeded":2900,"listings":[]},{"level":31,"xpNeeded":3000,"listings":[]},{"level":32,"xpNeeded":3100,"listings":[]},{"level":33,"xpNeeded":3200,"listings":[]},{"level":34,"xpNeeded":3300,"listings":[]},{"level":35,"xpNeeded":3400,"listings":[]},{"level":36,"xpNeeded":3500,"listings":[]},{"level":37,"xpNeeded":3600,"listings":[]},{"level":38,"xpNeeded":3700,"listings":[]},{"level":39,"xpNeeded":3800,"listings":[]},{"level":40,"xpNeeded":3900,"listings":[]},{"level":41,"xpNeeded":4000,"listings":[]},{"level":42,"xpNeeded":4100,"listings":[]},{"level":43,"xpNeeded":4200,"listings":[]},{"level":44,"xpNeeded":4300,"listings":[]},{"level":45,"xpNeeded":4400,"listings":[]},{"level":46,"xpNeeded":4500,"listings":[]},{"level":47,"xpNeeded":4600,"listings":[]},{"level":48,"xpNeeded":4700,"listings":[]},{"level":49,"xpNeeded":4800,"listings":[]},{"level":50,"xpNeeded":4900,"listings":[]},{"level":51,"xpNeeded":5000,"listings":[]},{"level":52,"xpNeeded":5100,"listings":[]},{"level":53,"xpNeeded":5200,"listings":[]},{"level":54,"xpNeeded":5300,"listings":[]},{"level":55,"xpNeeded":5400,"listings":[]},{"level":56,"xpNeeded":5500,"listings":[]},{"level":57,"xpNeeded":5600,"listings":[]},{"level":58,"xpNeeded":5700,"listings":[]},{"level":59,"xpNeeded":5800,"listings":[]},{"level":60,"xpNeeded":5900,"listings":[]},{"level":61,"xpNeeded":6000,"listings":[]},{"level":62,"xpNeeded":6100,"listings":[]},{"level":63,"xpNeeded":6200,"listings":[]},{"level":64,"xpNeeded":6300,"listings":[]},{"level":65,"xpNeeded":6400,"listings":[]},{"level":66,"xpNeeded":6500,"listings":[]},{"level":67,"xpNeeded":6600,"listings":[]},{"level":68,"xpNeeded":6700,"listings":[]},{"level":69,"xpNeeded":6800,"listings":[]},{"level":70,"xpNeeded":6900,"listings":[]},{"level":71,"xpNeeded":7000,"listings":[]},{"level":72,"xpNeeded":7100,"listings":[]},{"level":73,"xpNeeded":7200,"listings":[]},{"level":74,"xpNeeded":7300,"listings":[]},{"level":75,"xpNeeded":7400,"listings":[]},{"level":76,"xpNeeded":7500,"listings":[]},{"level":77,"xpNeeded":7600,"listings":[]},{"level":78,"xpNeeded":7700,"listings":[]},{"level":79,"xpNeeded":7800,"listings":[]},{"level":80,"xpNeeded":7900,"listings":[]},{"level":81,"xpNeeded":8000,"listings":[]},{"level":82,"xpNeeded":8100,"listings":[]},{"level":83,"xpNeeded":8200,"listings":[]},{"level":84,"xpNeeded":8300,"listings":[]},{"level":85,"xpNeeded":8400,"listings":[]},{"level":86,"xpNeeded":8500,"listings":[]},{"level":87,"xpNeeded":8600,"listings":[]},{"level":88,"xpNeeded":8700,"listings":[]},{"level":89,"xpNeeded":8800,"listings":[]},{"level":90,"xpNeeded":8900,"listings":[]},{"level":91,"xpNeeded":9000,"listings":[]},{"level":92,"xpNeeded":9100,"listings":[]},{"level":93,"xpNeeded":9200,"listings":[]},{"level":94,"xpNeeded":9300,"listings":[]},{"level":95,"xpNeeded":9400,"listings":[]},{"level":96,"xpNeeded":9500,"listings":[]},{"level":97,"xpNeeded":9600,"listings":[]},{"level":98,"xpNeeded":9700,"listings":[]},{"level":99,"xpNeeded":9800,"listings":[]},{"level":100,"xpNeeded":9900,"listings":[]}]}[0m
+[[38;2;50;205;50m02:42:50.452[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[LNC] Handle Char Listing Response[0m
+[[38;2;50;205;50m02:42:50.452[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m{"charListings":[{"listingId":"custom-char-0","levelRequirement":0,"costs":[],"rewards":[],"charId":0,"purchases":1},{"listingId":"custom-char-1","levelRequirement":0,"costs":[],"rewards":[],"charId":1,"purchases":1},{"listingId":"custom-char-2","levelRequirement":0,"costs":[],"rewards":[],"charId":2,"purchases":1},{"listingId":"custom-char-3","levelRequirement":0,"costs":[],"rewards":[],"charId":3,"purchases":1},{"listingId":"custom-char-4","levelRequirement":0,"costs":[],"rewards":[],"charId":4,"purchases":1},{"listingId":"custom-char-5","levelRequirement":0,"costs":[],"rewards":[],"charId":5,"purchases":1},{"listingId":"custom-char-6","levelRequirement":0,"costs":[],"rewards":[],"charId":6,"purchases":1},{"listingId":"custom-char-7","levelRequirement":0,"costs":[],"rewards":[],"charId":7,"purchases":1},{"listingId":"custom-char-8","levelRequirement":0,"costs":[],"rewards":[],"charId":8,"purchases":1},{"listingId":"custom-char-9","levelRequirement":0,"costs":[],"rewards":[],"charId":9,"purchases":1},{"listingId":"custom-char-10","levelRequirement":0,"costs":[],"rewards":[],"charId":10,"purchases":1},{"listingId":"custom-char-11","levelRequirement":0,"costs":[],"rewards":[],"charId":11,"purchases":1},{"listingId":"custom-char-12","levelRequirement":0,"costs":[],"rewards":[],"charId":12,"purchases":1},{"listingId":"custom-char-13","levelRequirement":0,"costs":[],"rewards":[],"charId":13,"purchases":1},{"listingId":"custom-char-14","levelRequirement":0,"costs":[],"rewards":[],"charId":14,"purchases":1},{"listingId":"custom-char-15","levelRequirement":0,"costs":[],"rewards":[],"charId":15,"purchases":1}]}[0m
+[[38;2;50;205;50m02:42:50.453[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[LNC] HandleCharMasteryPreviewResponse[0m
+[[38;2;50;205;50m02:42:50.453[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m{"passes":[]}[0m
+[[38;2;50;205;50m02:42:50.455[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[LNC] HandleLeaderboardPreviewResponse[0m
+[[38;2;50;205;50m02:42:50.455[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m{"gameModes":[{"gameModeId":1,"showRanks":false,"showPoints":false,"showCharacters":true}]}[0m
+[[38;2;50;205;50m02:42:50.456[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mOnClientSvInit buildVers=0.1.1758-38212 teamId=1 pId=1 | 3[0m
+[[38;2;50;205;50m02:42:50.456[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[Server Version: v0.1.1758-38212][0m
+[[38;2;50;205;50m02:42:50.485[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[GameMode] Loading GameManager (BAPBAP.Game.GameModeBattleRoyale)[0m
+[[38;2;50;205;50m02:42:50.558[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mPopulating Character Buttons[0m
+[[38;2;50;205;50m02:42:50.559[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mNumber of characters is 16[0m
+[[38;2;50;205;50m02:42:50.572[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[PLAYERMANAGER] [CodexVfx] Player On Start | 3[0m
+[[38;2;50;205;50m02:42:50.623[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[UpdateGameModes] selectedAvailable True, selectedGameModeId 3[0m
+[[38;2;50;205;50m02:42:50.644[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[MAP] PROBE SpawnLevel: name='Arena_Map2' bootstrapMapId=0 svOnly=False clOnly=True svNull=False clNull=False.[0m
+[[38;2;50;205;50m02:42:50.671[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mPrebaked navmesh data for level 'Arena_Map2' succesfully found. Applying now.[0m
+[[38;2;50;205;50m02:42:50.672[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mLoaded Map Arena_Map2[0m
+[[38;2;50;205;50m02:42:50.674[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[GameMode] OnEnable | frameCount 5[0m
+[[38;2;50;205;50m02:42:52.487[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[RegionController] WS for custom - Connection error - Unable to connect to the remote server[0m
+[[38;2;50;205;50m02:42:52.487[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[RegionController] WS for custom - Connection closed - Abnormal[0m
+[[38;2;50;205;50m02:42:54.405[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mLoaded UI diagnostics (post-login fallback waiting): activeScene='MainScene' path='Assets/MainScene.unity' isLoaded=True[0m
+[[38;2;50;205;50m02:42:54.407[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mLoaded UI diagnostics canvases=0[0m
+[[38;2;50;205;50m02:42:54.407[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPost-login splash fallback waiting for lobby UI. attempt=1 lobbies=0 splashes=0[0m
+[[38;2;50;205;50m02:42:56.410[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPost-login splash fallback waiting for lobby UI. attempt=2 lobbies=0 splashes=0[0m
+[[38;2;50;205;50m02:42:56.701[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mPlayer: {"accountId":"codex-custom-vfx-20260619-024204","username":"Player6","discriminator":1006,"level":1,"charId":0,"bannerId":0,"skins":[300018,300000,300007,300020,300017,300026,300021,300013,300025,300023,300015,300003,300005,300016,300019,300018],"playerStatus":0,"isLeader":true,"isReady":false,"teamId":1,"spawnPosition":0}[0m
+[[38;2;50;205;50m02:42:56.702[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mLobby: {"lobbyId":"Z2JTLF","isInvited":false,"LocalAccountId":"codex-custom-vfx-20260619-024204","isOpenLobby":true,"gameModeId":1,"isAutoFill":true,"regionId":"vewr","leaderAccountId":"codex-custom-vfx-20260619-024204","queueSize":0,"queuePlayerCount":0,"mmIsCounting":false,"mmStartingTime":0.0,"queueIsCounting":false,"queueStartingDelay":0,"queueStartingTime":0.0,"isMatchmaking":false,"isInQueue":false,"isInGame":false,"isAdmin":true,"isGuest":false,"isCompleted":true,"gold":1000,"fractals":999999,"charTokens":0,"accountPass":{"passLevels":[{"level":1,"xpNeeded":0},{"level":2,"xpNeeded":100},{"level":3,"xpNeeded":200},{"level":4,"xpNeeded":300},{"level":5,"xpNeeded":400},{"level":6,"xpNeeded":500},{"level":7,"xpNeeded":600},{"level":8,"xpNeeded":700},{"level":9,"xpNeeded":800},{"level":10,"xpNeeded":900},{"level":11,"xpNeeded":1000},{"level":12,"xpNeeded":1100},{"level":13,"xpNeeded":1200},{"level":14,"xpNeeded":1300},{"level":15,"xpNeeded":1400},{"level":16,"xpNeeded":1500},{"level":17,"xpNeeded":1600},{"level":18,"xpNeeded":1700},{"level":19,"xpNeeded":1800},{"level":20,"xpNeeded":1900},{"level":21,"xpNeeded":2000},{"level":22,"xpNeeded":2100},{"level":23,"xpNeeded":2200},{"level":24,"xpNeeded":2300},{"level":25,"xpNeeded":2400},{"level":26,"xpNeeded":2500},{"level":27,"xpNeeded":2600},{"level":28,"xpNeeded":2700},{"level":29,"xpNeeded":2800},{"level":30,"xpNeeded":2900},{"level":31,"xpNeeded":3000},{"level":32,"xpNeeded":3100},{"level":33,"xpNeeded":3200},{"level":34,"xpNeeded":3300},{"level":35,"xpNeeded":3400},{"level":36,"xpNeeded":3500},{"level":37,"xpNeeded":3600},{"level":38,"xpNeeded":3700},{"level":39,"xpNeeded":3800},{"level":40,"xpNeeded":3900},{"level":41,"xpNeeded":4000},{"level":42,"xpNeeded":4100},{"level":43,"xpNeeded":4200},{"level":44,"xpNeeded":4300},{"level":45,"xpNeeded":4400},{"level":46,"xpNeeded":4500},{"level":47,"xpNeeded":4600},{"level":48,"xpNeeded":4700},{"level":49,"xpNeeded":4800},{"level":50,"xpNeeded":4900},{"level":51,"xpNeeded":5000},{"level":52,"xpNeeded":5100},{"level":53,"xpNeeded":5200},{"level":54,"xpNeeded":5300},{"level":55,"xpNeeded":5400},{"level":56,"xpNeeded":5500},{"level":57,"xpNeeded":5600},{"level":58,"xpNeeded":5700},{"level":59,"xpNeeded":5800},{"level":60,"xpNeeded":5900},{"level":61,"xpNeeded":6000},{"level":62,"xpNeeded":6100},{"level":63,"xpNeeded":6200},{"level":64,"xpNeeded":6300},{"level":65,"xpNeeded":6400},{"level":66,"xpNeeded":6500},{"level":67,"xpNeeded":6600},{"level":68,"xpNeeded":6700},{"level":69,"xpNeeded":6800},{"level":70,"xpNeeded":6900},{"level":71,"xpNeeded":7000},{"level":72,"xpNeeded":7100},{"level":73,"xpNeeded":7200},{"level":74,"xpNeeded":7300},{"level":75,"xpNeeded":7400},{"level":76,"xpNeeded":7500},{"level":77,"xpNeeded":7600},{"level":78,"xpNeeded":7700},{"level":79,"xpNeeded":7800},{"level":80,"xpNeeded":7900},{"level":81,"xpNeeded":8000},{"level":82,"xpNeeded":8100},{"level":83,"xpNeeded":8200},{"level":84,"xpNeeded":8300},{"level":85,"xpNeeded":8400},{"level":86,"xpNeeded":8500},{"level":87,"xpNeeded":8600},{"level":88,"xpNeeded":8700},{"level":89,"xpNeeded":8800},{"level":90,"xpNeeded":8900},{"level":91,"xpNeeded":9000},{"level":92,"xpNeeded":9100},{"level":93,"xpNeeded":9200},{"level":94,"xpNeeded":9300},{"level":95,"xpNeeded":9400},{"level":96,"xpNeeded":9500},{"level":97,"xpNeeded":9600},{"level":98,"xpNeeded":9700},{"level":99,"xpNeeded":9800},{"level":100,"xpNeeded":9900}]},"accountXp":0,"iapEnabled":false,"creatorCode":"","creatorName":""}[0m
+[[38;2;50;205;50m02:42:56.703[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[UpdateGameModes] selectedAvailable False, selectedGameModeId 1[0m
+[[38;2;50;205;50m02:42:56.704[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mChar Mastery was null on UpdateCharMasteryXp[0m
+[[38;2;50;205;50m02:42:56.704[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mChar Mastery was null on UpdateCharMasteryBadge[0m
+[[38;2;50;205;50m02:42:56.704[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mChar Mastery was null on IsMasteryAvailable[0m
+[[38;2;50;205;50m02:42:56.713[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mChar Mastery was null on UpdateCharMasteryXp[0m
+[[38;2;50;205;50m02:42:56.713[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mChar Mastery was null on UpdateCharMasteryBadge[0m
+[[38;2;50;205;50m02:42:56.713[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mChar Mastery was null on IsMasteryAvailable[0m
+[[38;2;50;205;50m02:42:56.725[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[UpdateGameModes] selectedAvailable True, selectedGameModeId 3[0m
+[[38;2;50;205;50m02:42:56.762[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[LNC] HandleGameModeUpdatedMessage - Received GAME_MODE_UPDATED[0m
+[[38;2;50;205;50m02:42:56.762[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211m[UpdateGameModes] selectedAvailable True, selectedGameModeId 3[0m
+[[38;2;50;205;50m02:42:58.411[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPost-login splash fallback waiting for lobby UI. attempt=3 lobbies=0 splashes=0[0m
+[[38;2;50;205;50m02:43:00.414[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPost-login splash fallback waiting for lobby UI. attempt=4 lobbies=0 splashes=0[0m
+[[38;2;50;205;50m02:43:02.420[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPost-login splash fallback waiting for lobby UI. attempt=5 lobbies=0 splashes=0[0m
+[[38;2;50;205;50m02:43:04.420[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPost-login splash fallback waiting for lobby UI. attempt=6 lobbies=0 splashes=0[0m
+[[38;2;50;205;50m02:43:06.423[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211mPost-login splash fallback waiting for lobby UI. attempt=7 lobbies=0 splashes=0[0m
+[[38;2;50;205;50m02:43:06.547[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[EarlyLobbyUiPatchLoop] exited after 3600 frames. preloadDone=False uiPatch=False charPatch=True[0m
+[[38;2;50;205;50m02:43:08.426[0m] [[38;2;0;255;255mBAP_Custom_Server[0m] [38;2;211;211;211m[FULL DIAGNOSTICS] Total GameObjects: 0[0m
+[[38;2;50;205;50m02:43:08.426[0m] [[38;2;255;255;0mBAP_Custom_Server[0m] [38;2;255;255;0mPost-login splash fallback could not find lobby splash UI after 8 attempts. Continuing at slower rate.[0m
+[[38;2;50;205;50m02:43:19.483[0m] [[38;2;64;224;208mUNITY[0m] [38;2;211;211;211mChar Mastery was null on GetOwnedHighestTierCharMasteryBadge[0m

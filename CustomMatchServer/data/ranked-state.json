@@ -1,0 +1,34 @@
+﻿{
+  "players": {
+    "codex-medusa-v122-local-164435": {
+      "accountId": "codex-medusa-v122-local-164435",
+      "username": "Player1",
+      "points": 1170,
+      "peakPoints": 1170,
+      "gamesPlayed": 2,
+      "wins": 1,
+      "totalKills": 0,
+      "lastMatchUtc": "2026-05-31T15:00:54.5341741+00:00"
+    },
+    "codex-medusa-v123-local-170232": {
+      "accountId": "codex-medusa-v123-local-170232",
+      "username": "Player2",
+      "points": 1170,
+      "peakPoints": 1170,
+      "gamesPlayed": 2,
+      "wins": 1,
+      "totalKills": 0,
+      "lastMatchUtc": "2026-05-31T15:13:29.358642+00:00"
+    },
+    "codex-medusa-v124-local-171443": {
+      "accountId": "codex-medusa-v124-local-171443",
+      "username": "Player1",
+      "points": 1000,
+      "peakPoints": 1000,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "totalKills": 0,
+      "lastMatchUtc": "0001-01-01T00:00:00+00:00"
+    }
+  }
+}

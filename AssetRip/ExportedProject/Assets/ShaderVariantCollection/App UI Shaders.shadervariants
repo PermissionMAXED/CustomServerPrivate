@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!200 &20000000
+ShaderVariantCollection:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: App UI Shaders
+  m_Shaders:
+  - first: {fileID: 4800000, guid: e283806734bdd9246b401e7d24c7428a, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+      - keywords: PROGRESS_INDETERMINATE
+        passType: 0
+  - first: {fileID: 4800000, guid: e1556207b9ff46b4d986039aaca1d97f, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+      - keywords: PROGRESS_INDETERMINATE
+        passType: 0
+  - first: {fileID: 4800000, guid: ae3753e51f9b5a345a01b84716248d04, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 4e0b922d78d5e0448b71fbf1cee86562, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 70444c4929272fb46a0da1b13f5e0133, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 64f44c953dd45e74d93a649f4bad166c, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+      - keywords: ENABLE_BORDER
+        passType: 0
+      - keywords: ENABLE_OUTLINE
+        passType: 0
+      - keywords: ENABLE_SHADOW
+        passType: 0
+  - first: {fileID: 4800000, guid: a7d80847379d4a54c90f6cb2ed477a57, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+  - first: {fileID: 4800000, guid: 4e6970d4e99dfea479d990fd7ff7009b, type: 3}
+    second:
+      variants:
+      - keywords:
+        passType: 0
+      - keywords: DRAW_POINTS_ON
+        passType: 0

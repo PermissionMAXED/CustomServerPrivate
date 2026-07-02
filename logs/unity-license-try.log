@@ -1,0 +1,22 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+[Licensing::IpcConnector] Connection attempt to the License Client on channel: "LicenseClient-Administrator" failed because channel doesn't exist; code: "0x80000002"
+[Licensing::Module] Successfully launched the LicensingClient (PId: 6528)
+[Licensing::IpcConnector] Successfully connected to the License Client on channel: "LicenseClient-Administrator" at "2026-06-15T20:11:20.8477967Z"
+[Licensing::Client] Error: Code 10 while verifying Licensing Client signature (process Id: 6528, path: "C:/Program Files/Unity/Hub/Editor/2022.3.38f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::Module] Error: LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.15.5+a2f8afb
+  Session Id:              fc029932e5a8419886060a3d9a2f6391
+  Correlation Id:          e95cca8e599c54ea925fd5b30b461ecc
+  External correlation Id: 60685798003573136
+  Machine Id:              8nkKhQ8OF44VWDCkfDaQZfwuh1c=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Administrator" (connect: 0.69s, validation: 0.04s, handshake: 0.04s)
+[Licensing::IpcConnector] Successfully connected to the License Notification on channel: "LicenseClient-Administrator-notifications" at "2026-06-15T20:11:20.9296201Z"
+[Licensing::Module] Connected to LicensingClient (PId: 6528, launch time: 0.00, total connection time: 0.77s)
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Error: Code 500 while processing request (status: Unable to update licenses. Errors: No ULF license found.,Token not found in cache)
+[Licensing::Client] Error: Code 500 while updating license in client (status: Unable to update licenses. Errors: No ULF license found.,Token not found in cache)
+[Licensing::Module] Generating manual activation license file: C:\Users\Administrator\Downloads\CustomServer/Unity_v2022.3.38f1.alf
+[Licensing::Client] Successfully processed ALF generation request: C:\Users\Administrator\Downloads\CustomServer\Unity_v2022.3.38f1.alf
+[Licensing::Module] Manual activation license file successfully saved.
+Exiting without the bug reporter. Application will terminate with return code 0

@@ -1,0 +1,36 @@
+02:57:52.830 [t+0s] Killing existing bapbap processes
+02:57:54.991 [t+2.2s] Health release=medusa-v1740-multimap medusaDll=6923D2F932E717D73C90CF95391178AF1C91D06106EEC7BBB6BAC47D312055A1
+02:57:55.088 [t+2.3s] Admin grant: Admin added.
+02:57:55.181 [t+2.4s] WS -> SOCKET_READY
+02:57:55.184 [t+2.4s] JOIN_LOBBY lobby=V52894 charId=15
+02:57:55.200 [t+2.4s] WS -> GAME_MODES_UPDATED
+02:58:01.216 [t+8.4s] WS -> JOIN_LOBBY_SUCCESS
+02:58:01.218 [t+8.4s] UPDATE_CUSTOM_SETTINGS map=34 botCount=2
+02:58:01.221 [t+8.4s] WS -> GAME_MODES_UPDATED
+02:58:01.239 [t+8.4s] WS -> UPDATE_CUSTOM_SETTINGS_SUCCESS
+02:58:01.241 [t+8.4s] START_CUSTOM_GAME forceStart=true
+03:01:44.523 [t+231.7s] WS -> START_CUSTOM_GAME_SUCCESS
+03:01:44.526 [t+231.7s] WS -> QUEUE_MATCHED
+03:01:44.529 [t+231.7s] WS -> GAME_STARTED
+03:01:44.533 [t+231.7s] Game started payload={"gameId":"custom-20260619005801-6218","gameAuthId":"4dbe016771bce4ab61fab11f8a3f7fcd","gameDns":"ark.atomi23.de","wsPort":7778,"kcpPort":7779,"tcpPort":7780,"mapId":34,"levelId":34,"unityGameMode":1}
+03:01:44.544 [t+231.7s] Starting visible client: --melonloader.agfoffline --melonloader.captureplayerlogs --bapcustom-use-proxy=false --bapcustom-show-ui=false --bapcustom-host=ark.atomi23.de --bapcustom-server-port=5055 --bapcustom-account-id=codex-custom-vfx-20260619-025752 --bapcustom-username=CodexVfx --bapcustom-auto-select-augment --bapcustom-selected-char=15 --bapcustom-join-auth=4dbe016771bce4ab61fab11f8a3f7fcd --bapcustom-join-host=ark.atomi23.de --bapcustom-join-ws=7778 --bapcustom-join-kcp=7779 --bapcustom-join-tcp=7780
+03:01:44.569 [t+231.7s] Visible client started pid=37848 stdout=C:\Users\Administrator\Downloads\CustomServer\logs\custom-medusa-vfx-v1708-20260619-025752\client.log stderr=C:\Users\Administrator\Downloads\CustomServer\logs\custom-medusa-vfx-v1708-20260619-025752\client.err.log
+03:01:48.870 [t+236s] Window handle=3018764
+03:02:01.470 [t+248.6s]   shot: No window handle
+03:02:01.495 [t+248.7s] Screenshot t12-loading path=C:\Users\Administrator\Downloads\CustomServer\logs\custom-medusa-vfx-v1708-20260619-025752\t12-loading.png size=0
+03:02:23.997 [t+271.2s]   shot: Get-Process : Es kann kein Prozess mit der Prozess-ID 37848 gefunden werden.
+03:02:23.999 [t+271.2s]   shot: In C:\Users\Administrator\Downloads\CustomServer\tools\Take-WindowShot.ps1:16 Zeichen:6
+03:02:24.001 [t+271.2s]   shot: + $p = Get-Process -Id $ProcId -ErrorAction Stop
+03:02:24.002 [t+271.2s]   shot: +      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+03:02:24.003 [t+271.2s]   shot:     + CategoryInfo          : ObjectNotFound: (37848:Int32) [Get-Process], ProcessCommandException
+03:02:24.004 [t+271.2s]   shot:     + FullyQualifiedErrorId : NoProcessFoundForGivenId,Microsoft.PowerShell.Commands.GetProcessCommand
+03:02:24.005 [t+271.2s]   shot:  
+03:02:24.009 [t+271.2s] Screenshot t34-before-augment path=C:\Users\Administrator\Downloads\CustomServer\logs\custom-medusa-vfx-v1708-20260619-025752\t34-before-augment.png size=0
+03:02:24.014 [t+271.2s] Input keys='{ENTER}' name=after-enter
+powershell.exe : Get-Process : Es kann kein Prozess mit der Prozess-ID 37848 gefunden werden.
+In C:\Users\Administrator\Downloads\CustomServer\tools\Test-LiveCustomMedusaVfx.ps1:116 Zeichen:5
++     & powershell -ExecutionPolicy Bypass -File (Join-Path $Root "tool ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Get-Process : E...efunden werden.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 

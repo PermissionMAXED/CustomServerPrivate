@@ -1,0 +1,71 @@
+﻿{
+  "rotationListings": [
+    {
+      "listingId": "shop-rotation-300003",
+      "assetId": 300003,
+      "price": 300,
+      "category": "rotation",
+      "addedUtc": "2026-05-26T18:48:42.5718725+00:00",
+      "addedBy": "loopback-admin"
+    },
+    {
+      "listingId": "shop-rotation-300005",
+      "assetId": 300005,
+      "price": 400,
+      "category": "rotation",
+      "addedUtc": "2026-05-26T18:48:42.5856212+00:00",
+      "addedBy": "loopback-admin"
+    },
+    {
+      "listingId": "shop-rotation-300008",
+      "assetId": 300008,
+      "price": 350,
+      "category": "rotation",
+      "addedUtc": "2026-05-26T18:48:42.592968+00:00",
+      "addedBy": "loopback-admin"
+    },
+    {
+      "listingId": "shop-rotation-300009",
+      "assetId": 300009,
+      "price": 500,
+      "category": "rotation",
+      "addedUtc": "2026-05-26T18:48:42.6012346+00:00",
+      "addedBy": "loopback-admin"
+    },
+    {
+      "listingId": "shop-rotation-300010",
+      "assetId": 300010,
+      "price": 450,
+      "category": "rotation",
+      "addedUtc": "2026-05-26T18:48:42.6122973+00:00",
+      "addedBy": "loopback-admin"
+    },
+    {
+      "listingId": "shop-rotation-300026",
+      "assetId": 300026,
+      "price": 600,
+      "category": "rotation",
+      "addedUtc": "2026-05-26T18:48:42.6186672+00:00",
+      "addedBy": "loopback-admin"
+    },
+    {
+      "listingId": "shop-rotation-500015",
+      "assetId": 500015,
+      "price": 150,
+      "category": "rotation",
+      "addedUtc": "2026-05-26T18:48:42.6271583+00:00",
+      "addedBy": "loopback-admin"
+    },
+    {
+      "listingId": "shop-rotation-700001",
+      "assetId": 700001,
+      "price": 200,
+      "category": "rotation",
+      "addedUtc": "2026-05-26T18:48:42.637825+00:00",
+      "addedBy": "loopback-admin"
+    }
+  ],
+  "freebieListings": [],
+  "dropEndDate": "2026-06-02T18:16:54.078Z",
+  "dropId": 1
+}

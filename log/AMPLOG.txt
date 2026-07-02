@@ -1,0 +1,474 @@
+```vbnet
+[amp-start] release=admin-auth-fix-20260626 git=97d16d4d9fce branch=main
+[amp-start] deploymentInfo=﻿{
+    "configuration":  "Release",
+    "releaseLabel":  "admin-auth-fix-20260626",
+    "selfContained":  false,
+    "packageBuildUtc":  "2026-06-26T07:35:08.1188572Z",
+    "schemaVersion":  1,
+    "serverDllSha256":  "7CE8F68440B1786DCD07093102A8BAF5A8B58016588884081271E782CA826228"
+}
+[amp-start] uname=Linux z.atomi23.de 6.8.0-117-generic #117-Ubuntu SMP PREEMPT_DYNAMIC Tue May  5 19:26:24 UTC 2026 x86_64 GNU/Linux
+[amp-start] winePath=/usr/bin/wine
+[amp-start] wineVersion=wine-10.0 (Debian 10.0~repack-6)
+[amp-start] winebootPath=/usr/bin/wineboot
+[amp-start] xvfbRunPath=/usr/bin/xvfb-run
+[amp-start] xauthPath=/usr/bin/xauth
+[amp-start] glxinfoPath=/usr/bin/glxinfo
+[amp-start] vulkanInfoPath=/usr/bin/vulkaninfo
+[amp-start] prewarm begin
+[start-match] utc=2026-06-27T12:33:28Z
+[start-match] prewarmOnly=1
+[start-match] game=./game/bapbap.exe
+[start-match] args=-batchmode -nographics
+[start-match] wrapperLog=/AMP/BapCustomServer/logs/game-servers/start-match-20260627T123328Z-39989.wrapper.log
+[start-match] deploymentInfo=/AMP/BapCustomServer/deployment-info.json
+[start-match] deployment.releaseLabel=admin-auth-fix-20260626
+[start-match] deployment.packageBuildUtc=2026-06-26T07:35:08.1188572Z
+[start-match] wrapperVersion=20260530-graphics-modes-v3
+[start-match] wine=wine-10.0 (Debian 10.0~repack-6)
+[start-match] winePath=/usr/bin/wine winebootPath=/usr/bin/wineboot
+[start-match] xvfbRunPath=/usr/bin/xvfb-run xauthPath=/usr/bin/xauth glxinfoPath=/usr/bin/glxinfo vulkanInfoPath=/usr/bin/vulkaninfo
+[start-match] wineprefix=/AMP/BapCustomServer/wineprefix32
+[start-match] xvfbServerArgs=-screen 0 1280x720x24 -ac +extension GLX +render -noreset -nolisten tcp
+[start-match] graphicsMode=nographics
+[start-match] mesa=software LIBGL_ALWAYS_SOFTWARE=1 GALLIUM_DRIVER=llvmpipe MESA_LOADER_DRIVER_OVERRIDE=swrast MESA_GL_VERSION_OVERRIDE=<unset> MESA_GLSL_VERSION_OVERRIDE=<unset>
+[start-match] unityGraphicsArgs=<none>
+[start-match] glxinfo probe begin
+[start-match] glxinfo error: invalid value for MESA_GL_VERSION_OVERRIDE: 
+[start-match] glxinfo error: invalid value for MESA_GLSL_VERSION_OVERRIDE: 
+[start-match] glxinfo error: invalid value for MESA_GL_VERSION_OVERRIDE: 
+[start-match] glxinfo error: invalid value for MESA_GLSL_VERSION_OVERRIDE: 
+[start-match] glxinfo error: invalid value for MESA_GLSL_VERSION_OVERRIDE: 
+[start-match] glxinfo error: invalid value for MESA_GLSL_VERSION_OVERRIDE: 
+[start-match] glxinfo error: invalid value for MESA_GLSL_VERSION_OVERRIDE: 
+[start-match] glxinfo error: invalid value for MESA_GLSL_VERSION_OVERRIDE: 
+[start-match] glxinfo error: invalid value for MESA_GLSL_VERSION_OVERRIDE: 
+[start-match] glxinfo name of display: :108
+[start-match] glxinfo display: :108  screen: 0
+[start-match] glxinfo direct rendering: Yes
+[start-match] glxinfo Extended renderer info (GLX_MESA_query_renderer):
+[start-match] glxinfo     Vendor: Mesa (0xffffffff)
+[start-match] glxinfo     Device: llvmpipe (LLVM 19.1.7, 256 bits) (0xffffffff)
+[start-match] glxinfo     Version: 25.0.7
+[start-match] glxinfo     Accelerated: no
+[start-match] glxinfo     Video memory: 64108MB
+[start-match] glxinfo probe end
+[start-match] prewarm complete; exiting before Unity match launch
+[amp-start] prewarm complete
+[amp-start] unity prewarm skipped marker=./wineprefix32/.bapcustom-unity-prewarm-releaseLabeladmin-auth-fix-20260626_.ok
+info: BapCustomServer[0]
+      BAPCUSTOM_STARTUP release=admin-auth-fix-20260626 git=unknown branch=unknown dirty=False packageUtc=2026-06-26T07:35:08.1188572Z configuration=Release selfContained=False contentRoot=/AMP/BapCustomServer deploymentInfo=/AMP/BapCustomServer/deployment-info.json
+info: BapCustomServer[0]
+      BAPCUSTOM_CONFIG publicBaseUrl=http://ark.atomi23.de:5055 publicGameHost=ark.atomi23.de launchGameServers=True gameExecutable=./game/bapbap.exe gameLauncher=./start-match.sh gameLauncherArgs="{gameExecutable}" {gameArguments} ports ws=7778 kcp=7779 tcp=7780 http=7850 range=1 portCooldown=0s readyTimeout=300s bootstrapHttpTimeout=20s bootstrapResetPoll=1500ms managedBootstrapTimeout=90s managedBootstrapListenerOnly=0s requireKcp=False tcpTimeout=30s kcpTimeout=45s startAttempts=2 effectiveStartAttempts=2 startRetryDelay=2s stopWait=5000ms postCleanupStartDelay=3000ms startupStallGrace=45s startupStall=25s noisyStallGrace=45s noisyStall=25s wrapperOnlyStallGrace=8s wrapperOnlyStall=5s prewarm=False prewarmTimeout=180s prewarmMatchWait=35s maxMatches=1 emptyLobbyGrace=20s emptyLobbyConnectedGrace=45s
+info: BapCustomServer[0]
+      BAPCUSTOM_ARTIFACTS serverDllSha256=7CE8F68440B1786DCD07093102A8BAF5A8B58016588884081271E782CA826228 modDllSha256= modApiDllSha256= medusaDllSha256= medusaBundleSha256= gameExeSha256= startMatchSha256= packageSha256=
+info: BapCustomServer[0]
+      BAPCUSTOM_MEDUSA charId=15 rosterEnabled=True advertised=True
+info: BapCustomServer[0]
+      BAPCUSTOM_RUNTIME os=Debian GNU/Linux 13 (trixie) arch=X64 framework=.NET 10.0.5 urls=http://0.0.0.0:5055 winePath=/usr/bin/wine wineVersion=wine-10.0 (Debian 10.0~repack-6) winebootPath=/usr/bin/wineboot xvfbRunPath=/usr/bin/xvfb-run xauthPath=/usr/bin/xauth glxinfoPath=/usr/bin/glxinfo vulkanInfoPath=/usr/bin/vulkaninfo
+info: BapCustomServer[0]
+      BAPCUSTOM_GRAPHICS_PACKAGES wine=10.0~repack-6 | wine32=10.0~repack-6 | wine64=10.0~repack-6 | xvfb=2:21.1.16-1.3+deb13u2 | xauth=1:1.1.2-1.1 | libgl1=1.7.0-1+b2 | libgl1=1.7.0-1+b2 | libgl1=1.7.0-1+b2 | libgl1-mesa-dri=25.0.7-2 | libgl1-mesa-dri=25.0.7-2 | libgl1-mesa-dri=25.0.7-2 | libglx-mesa0=25.0.7-2 | libglx-mesa0=25.0.7-2 | libglx-mesa0=25.0.7-2 | libvulkan1=1.4.309.0-1 | libvulkan1=1.4.309.0-1 | libvulkan1=1.4.309.0-1 | mesa-vulkan-drivers=25.0.7-2 | mesa-vulkan-drivers:i386=<missing> | mesa-utils=9.0.0-2+b2 | x11-utils=<missing>
+info: BapCustomServer[0]
+      BAPCUSTOM_GRAPHICS_ENV LIBGL_ALWAYS_SOFTWARE= GALLIUM_DRIVER= MESA_LOADER_DRIVER_OVERRIDE= MESA_GL_VERSION_OVERRIDE= WINEPREFIX= WINEARCH=
+info: BapCustomServer[0]
+      BAPCUSTOM_RUNTIME_CHECK wine_xvfb_ready=true
+info: BapCustomServer.FriendsService[0]
+      Friends state file not found at /AMP/BapCustomServer/data/friends-state.json. Starting fresh.
+info: BapCustomServer.PlayerOverridesService[0]
+      Watching player-overrides at /AMP/BapCustomServer/data/player-overrides.json
+info: BapCustomServer.EconomyService[0]
+      Loaded economy state: 5 players.
+info: BapCustomServer.MatchHistoryService[0]
+      Loaded 119 recent matches from history log.
+info: BapCustomServer.RankedService[0]
+      Loaded ranked state: 1 players.
+info: BapCustomServer.GameServerPrewarmService[0]
+      Game-server startup prewarm skipped: GameServerPrewarmOnStartup=false
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://0.0.0.0:5055
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /AMP/BapCustomServer
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.4% rss=76MB priv=171MB gc=2MB threads=31 handles=200 | lobbies=0 matches=0 conns=0 queue=0
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+[amp-start] release=admin-auth-fix-20260626 git=97d16d4d9fce branch=main
+[amp-start] deploymentInfo=﻿{
+    "configuration":  "Release",
+    "releaseLabel":  "admin-auth-fix-20260626",
+    "selfContained":  false,
+    "packageBuildUtc":  "2026-06-26T07:35:08.1188572Z",
+    "schemaVersion":  1,
+    "serverDllSha256":  "7CE8F68440B1786DCD07093102A8BAF5A8B58016588884081271E782CA826228"
+}
+[amp-start] uname=Linux z.atomi23.de 6.8.0-117-generic #117-Ubuntu SMP PREEMPT_DYNAMIC Tue May  5 19:26:24 UTC 2026 x86_64 GNU/Linux
+[amp-start] winePath=/usr/bin/wine
+[amp-start] wineVersion=wine-10.0 (Debian 10.0~repack-6)
+[amp-start] winebootPath=/usr/bin/wineboot
+[amp-start] xvfbRunPath=/usr/bin/xvfb-run
+[amp-start] xauthPath=/usr/bin/xauth
+[amp-start] glxinfoPath=/usr/bin/glxinfo
+[amp-start] vulkanInfoPath=/usr/bin/vulkaninfo
+[amp-start] prewarm begin
+[start-match] utc=2026-06-27T12:33:51Z
+[start-match] prewarmOnly=1
+[start-match] game=./game/bapbap.exe
+[start-match] args=-batchmode -nographics
+[start-match] wrapperLog=/AMP/BapCustomServer/logs/game-servers/start-match-20260627T123351Z-40165.wrapper.log
+[start-match] deploymentInfo=/AMP/BapCustomServer/deployment-info.json
+[start-match] deployment.releaseLabel=admin-auth-fix-20260626
+[start-match] deployment.packageBuildUtc=2026-06-26T07:35:08.1188572Z
+[start-match] wrapperVersion=20260530-graphics-modes-v3
+[start-match] wine=wine-10.0 (Debian 10.0~repack-6)
+[start-match] winePath=/usr/bin/wine winebootPath=/usr/bin/wineboot
+[start-match] xvfbRunPath=/usr/bin/xvfb-run xauthPath=/usr/bin/xauth glxinfoPath=/usr/bin/glxinfo vulkanInfoPath=/usr/bin/vulkaninfo
+[start-match] wineprefix=/AMP/BapCustomServer/wineprefix32
+[start-match] xvfbServerArgs=-screen 0 1280x720x24 -ac +extension GLX +render -noreset -nolisten tcp
+[start-match] graphicsMode=nographics
+[start-match] mesa=software LIBGL_ALWAYS_SOFTWARE=1 GALLIUM_DRIVER=llvmpipe MESA_LOADER_DRIVER_OVERRIDE=swrast MESA_GL_VERSION_OVERRIDE=<unset> MESA_GLSL_VERSION_OVERRIDE=<unset>
+[start-match] unityGraphicsArgs=<none>
+[start-match] glxinfo probe begin
+[start-match] glxinfo error: invalid value for MESA_GL_VERSION_OVERRIDE: 
+[start-match] glxinfo error: invalid value for MESA_GLSL_VERSION_OVERRIDE: 
+[start-match] glxinfo error: invalid value for MESA_GL_VERSION_OVERRIDE: 
+[start-match] glxinfo error: invalid value for MESA_GLSL_VERSION_OVERRIDE: 
+[start-match] glxinfo error: invalid value for MESA_GLSL_VERSION_OVERRIDE: 
+[start-match] glxinfo error: invalid value for MESA_GLSL_VERSION_OVERRIDE: 
+[start-match] glxinfo error: invalid value for MESA_GLSL_VERSION_OVERRIDE: 
+[start-match] glxinfo error: invalid value for MESA_GLSL_VERSION_OVERRIDE: 
+[start-match] glxinfo error: invalid value for MESA_GLSL_VERSION_OVERRIDE: 
+[start-match] glxinfo name of display: :108
+[start-match] glxinfo display: :108  screen: 0
+[start-match] glxinfo direct rendering: Yes
+[start-match] glxinfo Extended renderer info (GLX_MESA_query_renderer):
+[start-match] glxinfo     Vendor: Mesa (0xffffffff)
+[start-match] glxinfo     Device: llvmpipe (LLVM 19.1.7, 256 bits) (0xffffffff)
+[start-match] glxinfo     Version: 25.0.7
+[start-match] glxinfo     Accelerated: no
+[start-match] glxinfo     Video memory: 64108MB
+[start-match] glxinfo probe end
+[start-match] prewarm complete; exiting before Unity match launch
+[amp-start] prewarm complete
+[amp-start] unity prewarm skipped marker=./wineprefix32/.bapcustom-unity-prewarm-releaseLabeladmin-auth-fix-20260626_.ok
+info: BapCustomServer[0]
+      BAPCUSTOM_STARTUP release=admin-auth-fix-20260626 git=unknown branch=unknown dirty=False packageUtc=2026-06-26T07:35:08.1188572Z configuration=Release selfContained=False contentRoot=/AMP/BapCustomServer deploymentInfo=/AMP/BapCustomServer/deployment-info.json
+info: BapCustomServer[0]
+      BAPCUSTOM_CONFIG publicBaseUrl=http://ark.atomi23.de:5055 publicGameHost=ark.atomi23.de launchGameServers=True gameExecutable=./game/bapbap.exe gameLauncher=./start-match.sh gameLauncherArgs="{gameExecutable}" {gameArguments} ports ws=7778 kcp=7779 tcp=7780 http=7850 range=1 portCooldown=0s readyTimeout=300s bootstrapHttpTimeout=20s bootstrapResetPoll=1500ms managedBootstrapTimeout=90s managedBootstrapListenerOnly=0s requireKcp=False tcpTimeout=30s kcpTimeout=45s startAttempts=2 effectiveStartAttempts=2 startRetryDelay=2s stopWait=5000ms postCleanupStartDelay=3000ms startupStallGrace=45s startupStall=25s noisyStallGrace=45s noisyStall=25s wrapperOnlyStallGrace=8s wrapperOnlyStall=5s prewarm=False prewarmTimeout=180s prewarmMatchWait=35s maxMatches=1 emptyLobbyGrace=20s emptyLobbyConnectedGrace=45s
+info: BapCustomServer[0]
+      BAPCUSTOM_ARTIFACTS serverDllSha256=7CE8F68440B1786DCD07093102A8BAF5A8B58016588884081271E782CA826228 modDllSha256= modApiDllSha256= medusaDllSha256= medusaBundleSha256= gameExeSha256= startMatchSha256= packageSha256=
+info: BapCustomServer[0]
+      BAPCUSTOM_MEDUSA charId=15 rosterEnabled=True advertised=True
+info: BapCustomServer[0]
+      BAPCUSTOM_RUNTIME os=Debian GNU/Linux 13 (trixie) arch=X64 framework=.NET 10.0.5 urls=http://0.0.0.0:5055 winePath=/usr/bin/wine wineVersion=wine-10.0 (Debian 10.0~repack-6) winebootPath=/usr/bin/wineboot xvfbRunPath=/usr/bin/xvfb-run xauthPath=/usr/bin/xauth glxinfoPath=/usr/bin/glxinfo vulkanInfoPath=/usr/bin/vulkaninfo
+info: BapCustomServer[0]
+      BAPCUSTOM_GRAPHICS_PACKAGES wine=10.0~repack-6 | wine32=10.0~repack-6 | wine64=10.0~repack-6 | xvfb=2:21.1.16-1.3+deb13u2 | xauth=1:1.1.2-1.1 | libgl1=1.7.0-1+b2 | libgl1=1.7.0-1+b2 | libgl1=1.7.0-1+b2 | libgl1-mesa-dri=25.0.7-2 | libgl1-mesa-dri=25.0.7-2 | libgl1-mesa-dri=25.0.7-2 | libglx-mesa0=25.0.7-2 | libglx-mesa0=25.0.7-2 | libglx-mesa0=25.0.7-2 | libvulkan1=1.4.309.0-1 | libvulkan1=1.4.309.0-1 | libvulkan1=1.4.309.0-1 | mesa-vulkan-drivers=25.0.7-2 | mesa-vulkan-drivers:i386=<missing> | mesa-utils=9.0.0-2+b2 | x11-utils=<missing>
+info: BapCustomServer[0]
+      BAPCUSTOM_GRAPHICS_ENV LIBGL_ALWAYS_SOFTWARE= GALLIUM_DRIVER= MESA_LOADER_DRIVER_OVERRIDE= MESA_GL_VERSION_OVERRIDE= WINEPREFIX= WINEARCH=
+info: BapCustomServer[0]
+      BAPCUSTOM_RUNTIME_CHECK wine_xvfb_ready=true
+info: BapCustomServer.FriendsService[0]
+      Friends state file not found at /AMP/BapCustomServer/data/friends-state.json. Starting fresh.
+info: BapCustomServer.PlayerOverridesService[0]
+      Watching player-overrides at /AMP/BapCustomServer/data/player-overrides.json
+info: BapCustomServer.EconomyService[0]
+      Loaded economy state: 5 players.
+info: BapCustomServer.MatchHistoryService[0]
+      Loaded 119 recent matches from history log.
+info: BapCustomServer.RankedService[0]
+      Loaded ranked state: 1 players.
+info: BapCustomServer.GameServerPrewarmService[0]
+      Game-server startup prewarm skipped: GameServerPrewarmOnStartup=false
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://0.0.0.0:5055
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /AMP/BapCustomServer
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.3% rss=77MB priv=171MB gc=2MB threads=31 handles=200 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.3% rss=93MB priv=186MB gc=6MB threads=32 handles=220 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.3% rss=95MB priv=187MB gc=6MB threads=32 handles=220 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.2% rss=101MB priv=192MB gc=6MB threads=30 handles=220 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=101MB priv=192MB gc=6MB threads=31 handles=220 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=102MB priv=193MB gc=6MB threads=31 handles=220 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=102MB priv=193MB gc=6MB threads=31 handles=220 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=102MB priv=193MB gc=7MB threads=32 handles=220 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=102MB priv=193MB gc=7MB threads=30 handles=220 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=102MB priv=193MB gc=7MB threads=29 handles=220 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=102MB priv=193MB gc=7MB threads=30 handles=220 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=102MB priv=193MB gc=7MB threads=29 handles=220 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=102MB priv=193MB gc=7MB threads=30 handles=220 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=102MB priv=193MB gc=7MB threads=29 handles=220 | lobbies=0 matches=0 conns=0 queue=0
+info: BapCustomServer.ShopService[0]
+      Loaded shop state: 4 rotation items, 1 freebie items, DropId=1.
+info: Program[0]
+      Character listing for custom-382jfI238ALO: tokens=0 owned=16 locked=0 medusaPrice=1.
+info: Program[0]
+      Character listing for custom-382jfI238ALO: tokens=0 owned=16 locked=0 medusaPrice=1.
+info: BapCustomServer.LobbyService[0]
+      Client custom-382jfI238ALO connected. admin=True
+info: BapCustomServer.LobbyService[0]
+      Client custom-382jfI238ALO connected. admin=True
+info: BapCustomServer.LobbyService[0]
+      [Analytics] Player joined: Player1 (accountId=custom-382jfI238ALO)
+info: BapCustomServer.LobbyService[0]
+      [Analytics] Player joined: Player2 (accountId=custom-382jfI238ALO)
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.9% rss=115MB priv=220MB gc=6MB threads=35 handles=232 | lobbies=0 matches=0 conns=2 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=116MB priv=220MB gc=6MB threads=35 handles=232 | lobbies=1 matches=0 conns=2 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=116MB priv=220MB gc=7MB threads=31 handles=232 | lobbies=1 matches=0 conns=2 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=117MB priv=214MB gc=7MB threads=30 handles=232 | lobbies=1 matches=0 conns=2 queue=0
+info: BapCustomServer.LobbyService[0]
+      Ready event for custom-382jfI238ALO: event=SWITCH_READY ready=True gameMode=3 customGameMode=3 customLobby=False queueWire=True.
+info: BapCustomServer.MatchmakingQueueService[0]
+      Matchmaking queue timer started. First player: custom-382jfI238ALO (Player1).
+info: BapCustomServer.MatchmakingQueueService[0]
+      Player custom-382jfI238ALO (Player1) joined queue. charId=0 points=1000 pos=1 timer=30s.
+info: BapCustomServer.LobbyService[0]
+      Ready->Queue join for custom-382jfI238ALO: ok=True charId=0 pos=1 secs=30
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=117MB priv=215MB gc=7MB threads=31 handles=232 | lobbies=1 matches=0 conns=2 queue=1
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=117MB priv=215MB gc=7MB threads=31 handles=232 | lobbies=1 matches=0 conns=2 queue=1
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=117MB priv=215MB gc=7MB threads=31 handles=232 | lobbies=1 matches=0 conns=2 queue=1
+info: BapCustomServer.MatchmakingQueueService[0]
+      Matchmaking queue taken for match start. 1 players after 30s.
+info: BapCustomServer.MatchmakingHostedService[0]
+      Matchmaking start attempt begin. players=1 accounts=custom-382jfI238ALO:char0:fail0
+info: BapCustomServer.LobbyService[0]
+      Matchmaking start normalized stale lobby memberships before creating the match lobby: removed=1 accounts=[custom-382jfI238ALO].
+info: BapCustomServer.LobbyService[0]
+      Matchmaking player seeded: lobby=MMTUJBAB account=custom-382jfI238ALO username=Player1 queueCharId=0 lobbyCharId=0 teamId=1.
+info: BapCustomServer.LobbyService[0]
+      Match bootstrap matchmaking-20260627123722-4496/MMTUJBAB players: custom-382jfI238ALO:Player1 charId=0 skinAssetId=-1 playerId=1 team=1
+info: BapCustomServer.LobbyService[0]
+      Match bootstrap matchmaking-20260627123722-4496/MMTUJBAB settings: gamemode=3 unityMode=1 mapId=1 teamSize=1 maxTeams=8 botTeams=4 botDifficulty=1.
+info: BapCustomServer.GameServerProcessManager[0]
+      Started game server matchmaking-20260627123722-4496 attempt 1/2 as PID 40345. executable=/AMP/BapCustomServer/start-match.sh ws=7778 kcp=7779 tcp=7780 http=7850
+info: BapCustomServer.GameServerProcessManager[0]
+      Game server launch details matchmaking-20260627123722-4496 attempt 1/2: cwd=/AMP/BapCustomServer/game args="/AMP/BapCustomServer/game/bapbap.exe" -batchmode -logFile "/AMP/BapCustomServer/logs/game-servers/matchmaking-20260627123722-4496.attempt1.log" -httpport=7850 -wsport=7778 -kcpport=7779 -tcpport=7780 --melonloader.agfoffline --bapcustom-use-proxy=false --bapcustom-show-ui=false --bapcustom-host=127.0.0.1 --bapcustom-server-port=5055 logFile=/AMP/BapCustomServer/logs/game-servers/matchmaking-20260627123722-4496.attempt1.log wrapperLog=/AMP/BapCustomServer/logs/game-servers/matchmaking-20260627123722-4496.attempt1.wrapper.log containsNoGraphics=False
+[start-match] utc=2026-06-27T12:37:22Z
+[start-match] prewarmOnly=0
+[start-match] game=/AMP/BapCustomServer/game/bapbap.exe
+[start-match] args=-batchmode -logFile /AMP/BapCustomServer/logs/game-servers/matchmaking-20260627123722-4496.attempt1.log -httpport=7850 -wsport=7778 -kcpport=7779 -tcpport=7780 --melonloader.agfoffline --bapcustom-use-proxy=false --bapcustom-show-ui=false --bapcustom-host=127.0.0.1 --bapcustom-server-port=5055
+[start-match] wrapperLog=/AMP/BapCustomServer/logs/game-servers/matchmaking-20260627123722-4496.attempt1.wrapper.log
+[start-match] deploymentInfo=/AMP/BapCustomServer/deployment-info.json
+info: BapCustomServer.GameServerProcessManager[0]
+      Waiting for game server bootstrap matchmaking-20260627123722-4496. baseUri=http://127.0.0.1:7850/ timeout=300s poll=500ms resetPoll=1500ms httpTimeout=20s logFile=/AMP/BapCustomServer/logs/game-servers/matchmaking-20260627123722-4496.attempt1.log wrapperLog=/AMP/BapCustomServer/logs/game-servers/matchmaking-20260627123722-4496.attempt1.wrapper.log
+[start-match] deployment.releaseLabel=admin-auth-fix-20260626
+[start-match] deployment.packageBuildUtc=2026-06-26T07:35:08.1188572Z
+[start-match] wrapperVersion=20260530-graphics-modes-v3
+[start-match] wine=wine-10.0 (Debian 10.0~repack-6)
+[start-match] winePath=/usr/bin/wine winebootPath=/usr/bin/wineboot
+[start-match] xvfbRunPath=/usr/bin/xvfb-run xauthPath=/usr/bin/xauth glxinfoPath=/usr/bin/glxinfo vulkanInfoPath=/usr/bin/vulkaninfo
+[start-match] wineprefix=/AMP/BapCustomServer/game/wineprefixes/wineprefix_matchmaking-20260627123722-4496_attempt1
+[start-match] xvfbServerArgs=-screen 0 1280x720x24 -ac +extension GLX +render -noreset -nolisten tcp
+[start-match] graphicsMode=nographics
+[start-match] mesa=software LIBGL_ALWAYS_SOFTWARE=1 GALLIUM_DRIVER=llvmpipe MESA_LOADER_DRIVER_OVERRIDE=swrast MESA_GL_VERSION_OVERRIDE=<unset> MESA_GLSL_VERSION_OVERRIDE=<unset>
+[start-match] unityGraphicsArgs=-nographics
+[start-match] glxinfo probe begin
+[start-match] glxinfo error: invalid value for MESA_GL_VERSION_OVERRIDE: 
+[start-match] glxinfo error: invalid value for MESA_GLSL_VERSION_OVERRIDE: 
+[start-match] glxinfo error: invalid value for MESA_GL_VERSION_OVERRIDE: 
+[start-match] glxinfo error: invalid value for MESA_GLSL_VERSION_OVERRIDE: 
+[start-match] glxinfo error: invalid value for MESA_GLSL_VERSION_OVERRIDE: 
+[start-match] glxinfo error: invalid value for MESA_GLSL_VERSION_OVERRIDE: 
+[start-match] glxinfo error: invalid value for MESA_GLSL_VERSION_OVERRIDE: 
+[start-match] glxinfo error: invalid value for MESA_GLSL_VERSION_OVERRIDE: 
+[start-match] glxinfo error: invalid value for MESA_GLSL_VERSION_OVERRIDE: 
+[start-match] glxinfo name of display: :108
+[start-match] glxinfo display: :108  screen: 0
+[start-match] glxinfo direct rendering: Yes
+[start-match] glxinfo Extended renderer info (GLX_MESA_query_renderer):
+[start-match] glxinfo     Vendor: Mesa (0xffffffff)
+[start-match] glxinfo     Device: llvmpipe (LLVM 19.1.7, 256 bits) (0xffffffff)
+[start-match] glxinfo     Version: 25.0.7
+[start-match] glxinfo     Accelerated: no
+[start-match] glxinfo     Video memory: 64108MB
+[start-match] glxinfo probe end
+[start-match] initializing wineprefix
+X connection to :108 broken (explicit kill or server shutdown).
+[start-match] wineprefix ready
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.3% rss=134MB priv=225MB gc=15MB threads=31 handles=242 | lobbies=1 matches=0 conns=2 queue=0
+ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5728:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2722:(snd_pcm_open_noupdate) Unknown PCM default
+ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5728:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2722:(snd_pcm_open_noupdate) Unknown PCM default
+info: BapCustomServer.GameServerProcessManager[0]
+      Game server matchmaking-20260627123722-4496 accepted /setup-game HTTP after 9.1s and 19 attempt(s). Waiting for managed setupGameApplied status timeout=90s.
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.4% rss=143MB priv=232MB gc=20MB threads=31 handles=243 | lobbies=1 matches=0 conns=2 queue=0
+info: BapCustomServer.GameServerProcessManager[0]
+      Managed bootstrap status setupGameApplied is listener-only; replayed /setup-game (1/4) after 6.0s. realtime=8.3s lastStatus=Managed match bootstrap listener is active.
+error: invalid value for MESA_GL_VERSION_OVERRIDE: 
+error: invalid value for MESA_GLSL_VERSION_OVERRIDE: 
+error: invalid value for MESA_GL_VERSION_OVERRIDE: 
+error: invalid value for MESA_GLSL_VERSION_OVERRIDE: 
+error: invalid value for MESA_GLSL_VERSION_OVERRIDE: 
+error: invalid value for MESA_GLSL_VERSION_OVERRIDE: 
+error: invalid value for MESA_GLSL_VERSION_OVERRIDE: 
+error: invalid value for MESA_GLSL_VERSION_OVERRIDE: 
+error: invalid value for MESA_GLSL_VERSION_OVERRIDE: 
+winegstreamer: failed to create decodebin, are 32-bit GStreamer "base" plugins installed?
+info: BapCustomServer.GameServerProcessManager[0]
+      Game server managed bootstrap status ready. label=setupGameApplied networkStarted=True setup=True addTeams=False queueMatched=False lastStatus=Game bootstrap HTTP listener is active.
+info: BapCustomServer.GameServerProcessManager[0]
+      Game server managed bootstrap status ready. label=addTeamsApplied networkStarted=True setup=True addTeams=True queueMatched=False lastStatus=Applied managed match bootstrap payload /add-teams via OnServerMatchAddTeams.
+info: BapCustomServer.GameServerProcessManager[0]
+      Game server managed bootstrap status ready. label=queueMatchedApplied networkStarted=True setup=True addTeams=True queueMatched=True lastStatus=Applied managed match bootstrap payload /queue-matched via OnServerQueueMatched.
+info: BapCustomServer.GameServerProcessManager[0]
+      Game server matchmaking-20260627123722-4496 managed bootstrap fully applied before GAME_STARTED. ws=7778 kcp=7779 tcp=7780
+info: BapCustomServer.GameServerProcessManager[0]
+      Game server matchmaking-20260627123722-4496 accepted bootstrap HTTP; KCP UDP 7779 listener check is diagnostic-only.
+info: BapCustomServer.GameServerProcessManager[0]
+      Bootstrapped game server matchmaking-20260627123722-4496.
+info: BapCustomServer.LobbyService[0]
+      [Analytics] Match started: matchmaking-20260627123722-4496 mapId=1 players=1
+info: BapCustomServer.LobbyService[0]
+      Game server matchmaking-20260627123722-4496 bootstrap fully applied; dispatching GAME_STARTED after setup/add-teams/queue-matched. mode=matchmaking players=1 pid=40345 http=7850 ws=7778 kcp=7779 tcp=7780 mapId=1 unityGameMode=1
+info: BapCustomServer.LobbyService[0]
+      Started matchmaking game matchmaking-20260627123722-4496 for 1 queued player(s).
+info: BapCustomServer.MatchmakingHostedService[0]
+      Matchmaking start attempt finished. started=True elapsed=23.6s players=1
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.3% rss=147MB priv=235MB gc=22MB threads=31 handles=243 | lobbies=1 matches=1 conns=2 queue=0
+info: BapCustomServer.LobbyService[0]
+      Character switch for custom-382jfI238ALO in lobby MMTUJBAB: requested=15 effective=15 updatedQueuedEntry=False.
+info: BapCustomServer.LobbyService[0]
+      Ready event for custom-382jfI238ALO: event=SWITCH_READY ready=False gameMode=1 customGameMode=3 customLobby=False queueWire=True.
+info: BapCustomServer.LobbyService[0]
+      Ready->Unready for custom-382jfI238ALO (lobby=MMTUJBAB) wasInQueue=False readyCleared=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=150MB priv=238MB gc=23MB threads=31 handles=243 | lobbies=1 matches=1 conns=2 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=148MB priv=238MB gc=23MB threads=31 handles=243 | lobbies=1 matches=1 conns=2 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=148MB priv=238MB gc=23MB threads=32 handles=244 | lobbies=1 matches=1 conns=2 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=148MB priv=238MB gc=24MB threads=34 handles=235 | lobbies=1 matches=1 conns=2 queue=0
+info: BapCustomServer.LobbyService[0]
+      Ready event for custom-382jfI238ALO: event=SWITCH_READY ready=True gameMode=1 customGameMode=3 customLobby=False queueWire=True.
+info: BapCustomServer.MatchmakingQueueService[0]
+      Matchmaking queue timer started. First player: custom-382jfI238ALO (Player1).
+info: BapCustomServer.MatchmakingQueueService[0]
+      Player custom-382jfI238ALO (Player1) joined queue. charId=15 points=1000 pos=1 timer=30s.
+info: BapCustomServer.LobbyService[0]
+      Ready->Queue join for custom-382jfI238ALO: ok=True charId=15 pos=1 secs=30
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=149MB priv=238MB gc=24MB threads=34 handles=235 | lobbies=1 matches=1 conns=2 queue=1
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=149MB priv=238MB gc=24MB threads=32 handles=235 | lobbies=1 matches=1 conns=2 queue=1
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=149MB priv=239MB gc=24MB threads=31 handles=235 | lobbies=1 matches=1 conns=2 queue=1
+info: BapCustomServer.MatchmakingQueueService[0]
+      Matchmaking queue taken for match start. 1 players after 30s.
+info: BapCustomServer.MatchmakingHostedService[0]
+      Matchmaking start attempt begin. players=1 accounts=custom-382jfI238ALO:char15:fail0
+warn: BapCustomServer.LobbyService[0]
+      Matchmaking match start skipped: server at capacity (1+0/1). Players will remain in queue.
+info: BapCustomServer.MatchmakingHostedService[0]
+      Matchmaking start attempt finished. started=False elapsed=0.0s players=1
+warn: BapCustomServer.MatchmakingQueueService[0]
+      Requeued 1 matchmaking player(s) after failed matchmaking game start (dropped 0 over failure cap). retryDelay=5s failures=custom-382jfI238ALO:1.
+info: BapCustomServer.MatchmakingQueueService[0]
+      Matchmaking queue taken for match start. 1 players after 30s.
+info: BapCustomServer.MatchmakingHostedService[0]
+      Matchmaking start attempt begin. players=1 accounts=custom-382jfI238ALO:char15:fail1
+warn: BapCustomServer.LobbyService[0]
+      Matchmaking match start skipped: server at capacity (1+0/1). Players will remain in queue.
+info: BapCustomServer.MatchmakingHostedService[0]
+      Matchmaking start attempt finished. started=False elapsed=0.0s players=1
+warn: BapCustomServer.MatchmakingQueueService[0]
+      Requeued 1 matchmaking player(s) after failed matchmaking game start (dropped 0 over failure cap). retryDelay=5s failures=custom-382jfI238ALO:2.
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=149MB priv=239MB gc=24MB threads=31 handles=235 | lobbies=1 matches=1 conns=2 queue=1
+info: BapCustomServer.MatchmakingQueueService[0]
+      Matchmaking queue taken for match start. 1 players after 30s.
+info: BapCustomServer.MatchmakingHostedService[0]
+      Matchmaking start attempt begin. players=1 accounts=custom-382jfI238ALO:char15:fail2
+warn: BapCustomServer.LobbyService[0]
+      Matchmaking match start skipped: server at capacity (1+0/1). Players will remain in queue.
+info: BapCustomServer.MatchmakingHostedService[0]
+      Matchmaking start attempt finished. started=False elapsed=0.0s players=1
+warn: BapCustomServer.MatchmakingQueueService[0]
+      Requeued 1 matchmaking player(s) after failed matchmaking game start (dropped 0 over failure cap). retryDelay=5s failures=custom-382jfI238ALO:3.
+info: BapCustomServer.MatchmakingQueueService[0]
+      Matchmaking queue taken for match start. 1 players after 30s.
+info: BapCustomServer.MatchmakingHostedService[0]
+      Matchmaking start attempt begin. players=1 accounts=custom-382jfI238ALO:char15:fail3
+warn: BapCustomServer.LobbyService[0]
+      Matchmaking match start skipped: server at capacity (1+0/1). Players will remain in queue.
+info: BapCustomServer.MatchmakingHostedService[0]
+      Matchmaking start attempt finished. started=False elapsed=0.0s players=1
+warn: BapCustomServer.MatchmakingQueueService[0]
+      Requeued 1 matchmaking player(s) after failed matchmaking game start (dropped 0 over failure cap). retryDelay=5s failures=custom-382jfI238ALO:4.
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.1% rss=150MB priv=240MB gc=24MB threads=32 handles=235 | lobbies=1 matches=1 conns=2 queue=1
+info: BapCustomServer.MatchmakingQueueService[0]
+      Matchmaking queue taken for match start. 1 players after 30s.
+info: BapCustomServer.MatchmakingHostedService[0]
+      Matchmaking start attempt begin. players=1 accounts=custom-382jfI238ALO:char15:fail4
+warn: BapCustomServer.LobbyService[0]
+      Matchmaking match start skipped: server at capacity (1+0/1). Players will remain in queue.
+info: BapCustomServer.MatchmakingHostedService[0]
+      Matchmaking start attempt finished. started=False elapsed=0.0s players=1
+warn: BapCustomServer.MatchmakingQueueService[0]
+      Requeued 0 matchmaking player(s) after failed matchmaking game start (dropped 1 over failure cap). retryDelay=5s failures=.
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=150MB priv=240MB gc=24MB threads=32 handles=235 | lobbies=1 matches=1 conns=2 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=150MB priv=240MB gc=24MB threads=32 handles=234 | lobbies=1 matches=1 conns=2 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=150MB priv=240MB gc=24MB threads=31 handles=234 | lobbies=1 matches=1 conns=2 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=150MB priv=240MB gc=25MB threads=31 handles=234 | lobbies=1 matches=1 conns=2 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=156MB priv=247MB gc=25MB threads=32 handles=234 | lobbies=1 matches=1 conns=2 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=152MB priv=239MB gc=25MB threads=31 handles=234 | lobbies=1 matches=1 conns=2 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=152MB priv=239MB gc=25MB threads=30 handles=234 | lobbies=1 matches=1 conns=2 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=152MB priv=239MB gc=25MB threads=29 handles=234 | lobbies=1 matches=1 conns=2 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=152MB priv=239MB gc=25MB threads=30 handles=234 | lobbies=1 matches=1 conns=2 queue=0
+info: BapCustomServer.ResourceMonitorService[0]
+      [Resource] cpu=0.0% rss=152MB priv=239MB gc=25MB threads=31 handles=234 | lobbies=1 matches=1 conns=2 queue=0
+```

@@ -1,0 +1,688 @@
+[
+  {
+    "DisplayName": "Match Start Policy",
+    "Description": "Controls which match-start paths are allowed. Both = matchmaking queue AND custom matches. MatchmakingOnly = only the queue (custom match lobbies are blocked). CustomOnly = only host-controlled custom matches (queue is blocked). The mod reads this on startup and adjusts the in-game UI / blocks rejected requests.",
+    "FieldName": "MatchmakingPolicy",
+    "InputType": "enum",
+    "Category": "BAPBAP Custom Server",
+    "Subcategory": "Match Policy",
+    "ParamFieldName": "CustomServer.MatchmakingPolicy",
+    "DefaultValue": "Both",
+    "EnumValues": {
+      "Both (matchmaking + custom)": "Both",
+      "Matchmaking only": "MatchmakingOnly",
+      "Custom matches only": "CustomOnly"
+    }
+  },
+  {
+    "DisplayName": "Max Concurrent Matches",
+    "Description": "Cap on simultaneously running matches. 0 = unlimited (default). When the cap is hit, START_CUSTOM_GAME returns ERR_SERVER_FULL and the matchmaking timer waits until a slot frees.",
+    "FieldName": "MaxConcurrentMatches",
+    "InputType": "number",
+    "Category": "BAPBAP Custom Server",
+    "Subcategory": "Match Policy",
+    "ParamFieldName": "CustomServer.MaxConcurrentMatches",
+    "DefaultValue": "0"
+  },
+  {
+    "DisplayName": "Public Base URL",
+    "Description": "External URL clients use for socket discovery and WebSocket lobby traffic.",
+    "FieldName": "PublicBaseUrl",
+    "InputType": "text",
+    "Category": "BAPBAP Custom Server",
+    "Subcategory": "Network",
+    "ParamFieldName": "CustomServer.PublicBaseUrl",
+    "DefaultValue": "http://{{$ApplicationIPBinding}}:{{$ApplicationPort1}}"
+  },
+  {
+    "DisplayName": "Public Game Host",
+    "Description": "Host/IP sent to clients in GAME_STARTED for match connections.",
+    "FieldName": "PublicGameHost",
+    "InputType": "text",
+    "Category": "BAPBAP Custom Server",
+    "Subcategory": "Network",
+    "ParamFieldName": "CustomServer.PublicGameHost",
+    "DefaultValue": "{{$ApplicationIPBinding}}"
+  },
+  {
+    "DisplayName": "Launch Match Processes",
+    "Description": "Start one game process per custom match. Disable only when pointing clients at an external match host.",
+    "FieldName": "LaunchGameServers",
+    "InputType": "checkbox",
+    "Category": "BAPBAP Custom Server",
+    "Subcategory": "Match Host",
+    "ParamFieldName": "CustomServer.LaunchGameServers",
+    "DefaultValue": "true",
+    "EnumValues": { "True": "true", "False": "false" }
+  },
+  {
+    "DisplayName": "Require Bootstrap",
+    "Description": "Fail match start if the launched game process does not accept setup-game/add-teams/queue-matched.",
+    "FieldName": "RequireGameServerBootstrap",
+    "InputType": "checkbox",
+    "Category": "BAPBAP Custom Server",
+    "Subcategory": "Match Host",
+    "ParamFieldName": "CustomServer.RequireGameServerBootstrap",
+    "DefaultValue": "true",
+    "EnumValues": { "True": "true", "False": "false" }
+  },
+  {
+    "DisplayName": "Game Executable Path",
+    "Description": "Path to the Windows game EXE, Linux dedicated binary, or Wine-hosted EXE relative to the server content root.",
+    "FieldName": "GameExecutablePath",
+    "InputType": "text",
+    "Category": "BAPBAP Custom Server",
+    "Subcategory": "Match Host",
+    "ParamFieldName": "CustomServer.GameExecutablePath",
+    "DefaultValue": "./game/bapbap.exe"
+  },
+  {
+    "DisplayName": "Game Working Directory",
+    "Description": "Working directory used when launching match processes.",
+    "FieldName": "GameWorkingDirectory",
+    "InputType": "text",
+    "Category": "BAPBAP Custom Server",
+    "Subcategory": "Match Host",
+    "ParamFieldName": "CustomServer.GameWorkingDirectory",
+    "DefaultValue": "./game"
+  },
+  {
+    "DisplayName": "Game Launcher Path",
+    "Description": "Optional wrapper command, for example wine on Linux when using a Windows game executable.",
+    "FieldName": "GameLauncherPath",
+    "InputType": "text",
+    "Category": "BAPBAP Custom Server",
+    "Subcategory": "Match Host",
+    "ParamFieldName": "CustomServer.GameLauncherPath",
+    "DefaultValue": ""
+  },
+  {
+    "DisplayName": "Game Launcher Arguments",
+    "Description": "Wrapper command argument template. Use {gameExecutable} and {gameArguments}.",
+    "FieldName": "GameLauncherArguments",
+    "InputType": "text",
+    "Category": "BAPBAP Custom Server",
+    "Subcategory": "Match Host",
+    "ParamFieldName": "CustomServer.GameLauncherArguments",
+    "DefaultValue": "\"{gameExecutable}\" {gameArguments}"
+  },
+  {
+    "DisplayName": "Game Log Directory",
+    "Description": "Directory where per-match Unity logs are written.",
+    "FieldName": "GameLogDirectory",
+    "InputType": "text",
+    "Category": "BAPBAP Custom Server",
+    "Subcategory": "Logs",
+    "ParamFieldName": "CustomServer.GameLogDirectory",
+    "DefaultValue": "logs/game-servers"
+  },
+  {
+    "DisplayName": "Base Bootstrap HTTP Port",
+    "FieldName": "BaseHttpPort",
+    "InputType": "number",
+    "Category": "BAPBAP Custom Server",
+    "Subcategory": "Ports",
+    "ParamFieldName": "CustomServer.BaseHttpPort",
+    "DefaultValue": "{{$ApplicationPort5}}"
+  },
+  {
+    "DisplayName": "Base Match WebSocket Port",
+    "FieldName": "BaseWsPort",
+    "InputType": "number",
+    "Category": "BAPBAP Custom Server",
+    "Subcategory": "Ports",
+    "ParamFieldName": "CustomServer.BaseWsPort",
+    "DefaultValue": "{{$ApplicationPort2}}"
+  },
+  {
+    "DisplayName": "Base Match KCP Port",
+    "FieldName": "BaseKcpPort",
+    "InputType": "number",
+    "Category": "BAPBAP Custom Server",
+    "Subcategory": "Ports",
+    "ParamFieldName": "CustomServer.BaseKcpPort",
+    "DefaultValue": "{{$ApplicationPort3}}"
+  },
+  {
+    "DisplayName": "Base Match TCP Port",
+    "FieldName": "BaseTcpPort",
+    "InputType": "number",
+    "Category": "BAPBAP Custom Server",
+    "Subcategory": "Ports",
+    "ParamFieldName": "CustomServer.BaseTcpPort",
+    "DefaultValue": "{{$ApplicationPort4}}"
+  },
+  {
+    "DisplayName": "Port Search Range",
+    "Description": "How many sequential ports can be used for concurrent match processes.",
+    "FieldName": "PortSearchRange",
+    "InputType": "number",
+    "Category": "BAPBAP Custom Server",
+    "Subcategory": "Ports",
+    "ParamFieldName": "CustomServer.PortSearchRange",
+    "DefaultValue": "200"
+  },
+  {
+    "DisplayName": "Default Map ID",
+    "Description": "Default custom lobby mapId. The in-game custom lobby can override it.",
+    "FieldName": "MapId",
+    "InputType": "number",
+    "Category": "Custom Match Settings",
+    "Subcategory": "Lobby Defaults",
+    "ParamFieldName": "CustomServer.MatchDefaults.MapId",
+    "DefaultValue": "1"
+  },
+  {
+    "DisplayName": "Default Unity Game Mode",
+    "FieldName": "UnityGameMode",
+    "InputType": "number",
+    "Category": "Custom Match Settings",
+    "Subcategory": "Lobby Defaults",
+    "ParamFieldName": "CustomServer.MatchDefaults.UnityGameMode",
+    "DefaultValue": "0"
+  },
+  {
+    "DisplayName": "Default Matchmaking Game Mode",
+    "FieldName": "MatchmakingGameMode",
+    "InputType": "number",
+    "Category": "Custom Match Settings",
+    "Subcategory": "Lobby Defaults",
+    "ParamFieldName": "CustomServer.MatchDefaults.MatchmakingGameMode",
+    "DefaultValue": "0"
+  },
+  {
+    "DisplayName": "Default Team Size",
+    "FieldName": "TeamSize",
+    "InputType": "number",
+    "Category": "Custom Match Settings",
+    "Subcategory": "Lobby Defaults",
+    "ParamFieldName": "CustomServer.MatchDefaults.TeamSize",
+    "DefaultValue": "1"
+  },
+  {
+    "DisplayName": "Default Max Teams",
+    "FieldName": "MaxTeams",
+    "InputType": "number",
+    "Category": "Custom Match Settings",
+    "Subcategory": "Lobby Defaults",
+    "ParamFieldName": "CustomServer.MatchDefaults.MaxTeams",
+    "DefaultValue": "8"
+  },
+  {
+    "DisplayName": "Default Bot Teams",
+    "FieldName": "BotTeams",
+    "InputType": "number",
+    "Category": "Custom Match Settings",
+    "Subcategory": "Bots",
+    "ParamFieldName": "CustomServer.MatchDefaults.BotTeams",
+    "DefaultValue": "0"
+  },
+  {
+    "DisplayName": "Default Bot Difficulty",
+    "FieldName": "BotDifficulty",
+    "InputType": "enum",
+    "Category": "Custom Match Settings",
+    "Subcategory": "Bots",
+    "ParamFieldName": "CustomServer.MatchDefaults.BotDifficulty",
+    "DefaultValue": "1",
+    "EnumValues": { "0": "Easy", "1": "Medium", "2": "Hard" }
+  },
+  {
+    "DisplayName": "Game Modifier IDs",
+    "Description": "Comma-separated game modifier IDs applied to new matches when the lobby does not override them.",
+    "FieldName": "GameModifierIdsCsv",
+    "InputType": "text",
+    "Category": "Custom Match Settings",
+    "Subcategory": "Advanced",
+    "ParamFieldName": "CustomServer.MatchDefaults.GameModifierIdsCsv",
+    "DefaultValue": ""
+  },
+  {
+    "DisplayName": "Dimension Data JSON",
+    "Description": "Advanced JSON array, for example [{\"dimensionId\":1,\"rounds\":[1,2]}].",
+    "FieldName": "DimensionDataJson",
+    "InputType": "textarea",
+    "Category": "Custom Match Settings",
+    "Subcategory": "Advanced",
+    "ParamFieldName": "CustomServer.MatchDefaults.DimensionDataJson",
+    "DefaultValue": ""
+  },
+  {
+    "DisplayName": "Char Select Milliseconds",
+    "FieldName": "CharSelectMillis",
+    "InputType": "number",
+    "Category": "Custom Match Settings",
+    "Subcategory": "Timers",
+    "ParamFieldName": "CustomServer.MatchDefaults.CharSelectMillis",
+    "DefaultValue": "20000"
+  },
+  {
+    "DisplayName": "Spawn Select Milliseconds",
+    "FieldName": "SpawnSelectMillis",
+    "InputType": "number",
+    "Category": "Custom Match Settings",
+    "Subcategory": "Timers",
+    "ParamFieldName": "CustomServer.MatchDefaults.SpawnSelectMillis",
+    "DefaultValue": "10000"
+  },
+  {
+    "DisplayName": "Spawn Show Milliseconds",
+    "FieldName": "SpawnShowMillis",
+    "InputType": "number",
+    "Category": "Custom Match Settings",
+    "Subcategory": "Timers",
+    "ParamFieldName": "CustomServer.MatchDefaults.SpawnShowMillis",
+    "DefaultValue": "3000"
+  },
+  {
+    "DisplayName": "Admin API Token",
+    "Description": "Token required for /admin endpoints. Leave empty only for loopback-only local testing.",
+    "FieldName": "AdminApiToken",
+    "InputType": "password",
+    "Category": "Administration",
+    "Subcategory": "Access Control",
+    "ParamFieldName": "CustomServer.Admin.ApiToken",
+    "DefaultValue": ""
+  },
+  {
+    "DisplayName": "In-Game Admin Account IDs",
+    "Description": "Comma, semicolon, or newline separated account IDs that receive isAdmin=true and may use in-match dev/admin UI.",
+    "FieldName": "AdminAccountIdsCsv",
+    "InputType": "textarea",
+    "Category": "Administration",
+    "Subcategory": "Access Control",
+    "ParamFieldName": "CustomServer.Admin.AdminAccountIdsCsv",
+    "DefaultValue": ""
+  },
+  {
+    "DisplayName": "Banned Account IDs",
+    "Description": "Comma, semicolon, or newline separated account IDs blocked from login and WebSocket lobby access.",
+    "FieldName": "BannedAccountIdsCsv",
+    "InputType": "textarea",
+    "Category": "Administration",
+    "Subcategory": "Access Control",
+    "ParamFieldName": "CustomServer.Admin.BannedAccountIdsCsv",
+    "DefaultValue": ""
+  },
+  {
+    "DisplayName": "Queue Timer Seconds",
+    "Description": "How long the matchmaking queue waits after the first player joins before starting a match. Default 30s.",
+    "FieldName": "QueueTimerSeconds",
+    "InputType": "number",
+    "Category": "Matchmaking Queue",
+    "Subcategory": "Timer",
+    "ParamFieldName": "CustomServer.MatchmakingQueue.QueueTimerSeconds",
+    "DefaultValue": "30"
+  },
+  {
+    "DisplayName": "Min Players To Start",
+    "Description": "Minimum players required for the queue to fire a match. With 1, bots fill the rest.",
+    "FieldName": "MinPlayersToStart",
+    "InputType": "number",
+    "Category": "Matchmaking Queue",
+    "Subcategory": "Timer",
+    "ParamFieldName": "CustomServer.MatchmakingQueue.MinPlayersToStart",
+    "DefaultValue": "1"
+  },
+  {
+    "DisplayName": "Default Bot Count",
+    "Description": "Number of bots to spawn in matchmaking matches when not enough humans are queued.",
+    "FieldName": "MmDefaultBotCount",
+    "InputType": "number",
+    "Category": "Matchmaking Queue",
+    "Subcategory": "Bots",
+    "ParamFieldName": "CustomServer.MatchmakingQueue.DefaultBotCount",
+    "DefaultValue": "4"
+  },
+  {
+    "DisplayName": "Default Bot Difficulty",
+    "Description": "Bot difficulty for matchmaking. 0=Easy, 1=Normal, 2=Medium, 3=Hard, 4=Expert.",
+    "FieldName": "MmDefaultBotDifficulty",
+    "InputType": "number",
+    "Category": "Matchmaking Queue",
+    "Subcategory": "Bots",
+    "ParamFieldName": "CustomServer.MatchmakingQueue.DefaultBotDifficulty",
+    "DefaultValue": "1"
+  },
+  {
+    "DisplayName": "Default Map ID",
+    "Description": "Map ID used for matchmaking matches. 1=Bazaarcity. Override via Random Maps below for variety.",
+    "FieldName": "MmDefaultMapId",
+    "InputType": "number",
+    "Category": "Matchmaking Queue",
+    "Subcategory": "Defaults",
+    "ParamFieldName": "CustomServer.MatchmakingQueue.DefaultMapId",
+    "DefaultValue": "1"
+  },
+  {
+    "DisplayName": "Default Game Mode",
+    "Description": "Unity game mode ID for matchmaking matches. 0=BR, 1=other modes per Unity assembly.",
+    "FieldName": "MmDefaultGameMode",
+    "InputType": "number",
+    "Category": "Matchmaking Queue",
+    "Subcategory": "Defaults",
+    "ParamFieldName": "CustomServer.MatchmakingQueue.DefaultGameMode",
+    "DefaultValue": "0"
+  },
+  {
+    "DisplayName": "Default Max Teams",
+    "Description": "Max teams in a matchmaking match (also caps the lobby size).",
+    "FieldName": "MmDefaultMaxTeams",
+    "InputType": "number",
+    "Category": "Matchmaking Queue",
+    "Subcategory": "Defaults",
+    "ParamFieldName": "CustomServer.MatchmakingQueue.DefaultMaxTeams",
+    "DefaultValue": "8"
+  },
+  {
+    "DisplayName": "Default Team Size",
+    "Description": "Players per team in matchmaking matches. 1=solo, 2=duo, 4=quad.",
+    "FieldName": "MmDefaultTeamSize",
+    "InputType": "number",
+    "Category": "Matchmaking Queue",
+    "Subcategory": "Defaults",
+    "ParamFieldName": "CustomServer.MatchmakingQueue.DefaultTeamSize",
+    "DefaultValue": "1"
+  },
+  {
+    "DisplayName": "Random Maps (Map Mapping JSON)",
+    "Description": "JSON array mapping unityGameModeId to a list of map IDs. Server picks one MapId at random per match. Example: [{\"UnityGameModeId\":0,\"MapIds\":[1,2,3]},{\"UnityGameModeId\":1,\"MapIds\":[1]}]",
+    "FieldName": "MapMappingJson",
+    "InputType": "textarea",
+    "Category": "Custom Match Settings",
+    "Subcategory": "Maps",
+    "ParamFieldName": "CustomServer.MatchDefaults.MapMappingJson",
+    "DefaultValue": "[{\"UnityGameModeId\":0,\"MapIds\":[1]},{\"UnityGameModeId\":1,\"MapIds\":[1]}]"
+  },
+  {
+    "DisplayName": "Enabled Game Modes (CSV)",
+    "Description": "Which game mode IDs to advertise in the lobby. Default '3' = only Solos. Available IDs: 0=Warmup, 1=MiniDuos, 2=MiniTrios, 3=Solos, 4=Duos, 5=Trios, 6=RankedDuos, 7=RankedTrios, 8=OpenBetaChallenge, 9=FreeForAll, 10=CustomGame. Example: '3,4,5' for Solos+Duos+Trios.",
+    "FieldName": "EnabledGameModeIdsCsv",
+    "InputType": "text",
+    "Category": "Custom Match Settings",
+    "Subcategory": "Maps",
+    "ParamFieldName": "CustomServer.MatchDefaults.EnabledGameModeIdsCsv",
+    "DefaultValue": "3"
+  },
+  {
+    "DisplayName": "Available Character IDs",
+    "Description": "Comma-separated character IDs allowed in matches. Default 0..14 = all 15 chars unlocked.",
+    "FieldName": "AvailableCharactersCsv",
+    "InputType": "text",
+    "Category": "Custom Match Settings",
+    "Subcategory": "Maps",
+    "ParamFieldName": "CustomServer.MatchDefaults.AvailableCharactersCsv",
+    "DefaultValue": "0,1,2,3,4,5,6,7,8,9,10,11,12,13,14"
+  },
+  {
+    "DisplayName": "Unlock Everything",
+    "Description": "Master switch. When enabled, every cosmetic asset (skin, banner, emote, mastery badge, tombstone) is reported as owned, and players get unlimited currency. Recommended for private custom servers.",
+    "FieldName": "UnlockEverything",
+    "InputType": "checkbox",
+    "Category": "Unlocks",
+    "Subcategory": "Cosmetics",
+    "ParamFieldName": "CustomServer.Unlocks.UnlockEverything",
+    "DefaultValue": "true",
+    "EnumValues": { "True": "true", "False": "false" }
+  },
+  {
+    "DisplayName": "Skin Asset ID Range Start",
+    "Description": "Inclusive start of the skin asset ID range that gets reported as owned. Skins use base 300000.",
+    "FieldName": "SkinAssetIdStart",
+    "InputType": "number",
+    "Category": "Unlocks",
+    "Subcategory": "Cosmetics",
+    "ParamFieldName": "CustomServer.Unlocks.SkinAssetIdStart",
+    "DefaultValue": "300000"
+  },
+  {
+    "DisplayName": "Skin Asset ID Range End",
+    "Description": "Inclusive end of the skin asset ID range. Set to -1 to disable skin grants.",
+    "FieldName": "SkinAssetIdEnd",
+    "InputType": "number",
+    "Category": "Unlocks",
+    "Subcategory": "Cosmetics",
+    "ParamFieldName": "CustomServer.Unlocks.SkinAssetIdEnd",
+    "DefaultValue": "300026"
+  },
+  {
+    "DisplayName": "Currency Balance",
+    "Description": "Currency amount returned for every currency asset when Unlock Everything is on.",
+    "FieldName": "CurrencyBalance",
+    "InputType": "number",
+    "Category": "Unlocks",
+    "Subcategory": "Currency",
+    "ParamFieldName": "CustomServer.Unlocks.CurrencyBalance",
+    "DefaultValue": "999999"
+  },
+  {
+    "DisplayName": "Char Token Asset ID",
+    "Description": "Asset ID that maps to charTokens in BAPBAP (default 3). Used to override its balance separately.",
+    "FieldName": "CharTokenAssetId",
+    "InputType": "number",
+    "Category": "Unlocks",
+    "Subcategory": "Currency",
+    "ParamFieldName": "CustomServer.Unlocks.CharTokenAssetId",
+    "DefaultValue": "3"
+  },
+  {
+    "DisplayName": "Char Token Balance",
+    "Description": "Balance returned for charTokens. Default 0 because with Unlock Everything all characters are already unlocked - tokens are useless. Set higher if running a 'limited unlock' server.",
+    "FieldName": "CharTokenBalance",
+    "InputType": "number",
+    "Category": "Unlocks",
+    "Subcategory": "Currency",
+    "ParamFieldName": "CustomServer.Unlocks.CharTokenBalance",
+    "DefaultValue": "0"
+  },
+  {
+    "DisplayName": "Currency Asset IDs",
+    "Description": "Comma-separated currency asset IDs that get the balance above. Default 1,2,3,4,5 covers BAPBAP gold/fractals/charTokens/etc.",
+    "FieldName": "CurrencyAssetIdsCsv",
+    "InputType": "text",
+    "Category": "Unlocks",
+    "Subcategory": "Currency",
+    "ParamFieldName": "CustomServer.Unlocks.CurrencyAssetIdsCsv",
+    "DefaultValue": "1,2,3,4,5"
+  },
+  {
+    "DisplayName": "Starting Gold",
+    "Description": "Gold balance new accounts start with.",
+    "FieldName": "EconStartingGold",
+    "InputType": "number",
+    "Category": "Economy",
+    "Subcategory": "Currency",
+    "ParamFieldName": "CustomServer.Economy.StartingGold",
+    "DefaultValue": "1000"
+  },
+  {
+    "DisplayName": "Win Gold",
+    "Description": "Gold awarded for winning (placement 1) a match.",
+    "FieldName": "EconWinGold",
+    "InputType": "number",
+    "Category": "Economy",
+    "Subcategory": "Rewards",
+    "ParamFieldName": "CustomServer.Economy.WinGold",
+    "DefaultValue": "500"
+  },
+  {
+    "DisplayName": "Kill Gold",
+    "Description": "Gold awarded per kill in a match.",
+    "FieldName": "EconKillGold",
+    "InputType": "number",
+    "Category": "Economy",
+    "Subcategory": "Rewards",
+    "ParamFieldName": "CustomServer.Economy.KillGold",
+    "DefaultValue": "50"
+  },
+  {
+    "DisplayName": "Placement Gold",
+    "Description": "Comma-separated gold rewards by placement. First value = 1st place. Example: 500,350,250,200,150,100,75,50",
+    "FieldName": "EconPlacementGoldCsv",
+    "InputType": "text",
+    "Category": "Economy",
+    "Subcategory": "Rewards",
+    "ParamFieldName": "CustomServer.Economy.PlacementGoldCsv",
+    "DefaultValue": "500,350,250,200,150,100,75,50"
+  },
+  {
+    "DisplayName": "Participation Gold",
+    "Description": "Gold awarded for finishing a match regardless of placement.",
+    "FieldName": "EconParticipationGold",
+    "InputType": "number",
+    "Category": "Economy",
+    "Subcategory": "Rewards",
+    "ParamFieldName": "CustomServer.Economy.ParticipationGold",
+    "DefaultValue": "25"
+  },
+  {
+    "DisplayName": "Starting Ranked Points",
+    "Description": "Ranked points new accounts start with. Used for matchmaking sort and leaderboard.",
+    "FieldName": "RankedStartingPoints",
+    "InputType": "number",
+    "Category": "Ranked",
+    "Subcategory": "Points",
+    "ParamFieldName": "CustomServer.Ranked.StartingPoints",
+    "DefaultValue": "1000"
+  },
+  {
+    "DisplayName": "Placement Ranked Points",
+    "Description": "Comma-separated ranked points by placement. First value = 1st place. Example: 100,70,50,40,30,20,15,10",
+    "FieldName": "RankedPlacementPointsCsv",
+    "InputType": "text",
+    "Category": "Ranked",
+    "Subcategory": "Points",
+    "ParamFieldName": "CustomServer.Ranked.PlacementPointsCsv",
+    "DefaultValue": "100,70,50,40,30,20,15,10"
+  },
+  {
+    "DisplayName": "Kill Ranked Points",
+    "Description": "Ranked points awarded per kill.",
+    "FieldName": "RankedKillPoints",
+    "InputType": "number",
+    "Category": "Ranked",
+    "Subcategory": "Points",
+    "ParamFieldName": "CustomServer.Ranked.KillPoints",
+    "DefaultValue": "15"
+  },
+  {
+    "DisplayName": "Loss Ranked Points",
+    "Description": "Ranked points deducted on a loss (negative). Example: -20",
+    "FieldName": "RankedLossPoints",
+    "InputType": "number",
+    "Category": "Ranked",
+    "Subcategory": "Points",
+    "ParamFieldName": "CustomServer.Ranked.LossPoints",
+    "DefaultValue": "-20"
+  },
+  {
+    "DisplayName": "Min Ranked Points Floor",
+    "Description": "Minimum ranked points - players never drop below this. Set 0 for no floor.",
+    "FieldName": "RankedMinPointsFloor",
+    "InputType": "number",
+    "Category": "Ranked",
+    "Subcategory": "Points",
+    "ParamFieldName": "CustomServer.Ranked.MinPointsFloor",
+    "DefaultValue": "0"
+  },
+  {
+    "DisplayName": "Max Friends Per Player",
+    "Description": "Cap on friend list size per account.",
+    "FieldName": "MaxFriendsPerPlayer",
+    "InputType": "number",
+    "Category": "Social",
+    "Subcategory": "Friends",
+    "ParamFieldName": "CustomServer.Friends.MaxFriendsPerPlayer",
+    "DefaultValue": "100"
+  },
+  {
+    "DisplayName": "Max Pending Requests",
+    "Description": "Cap on outstanding incoming + outgoing friend requests per account.",
+    "FieldName": "MaxPendingRequests",
+    "InputType": "number",
+    "Category": "Social",
+    "Subcategory": "Friends",
+    "ParamFieldName": "CustomServer.Friends.MaxPendingRequests",
+    "DefaultValue": "50"
+  },
+  {
+    "DisplayName": "Max Party Invites",
+    "Description": "Cap on outstanding party invites per account.",
+    "FieldName": "MaxPartyInvites",
+    "InputType": "number",
+    "Category": "Social",
+    "Subcategory": "Party",
+    "ParamFieldName": "CustomServer.Friends.MaxPartyInvites",
+    "DefaultValue": "10"
+  },
+  {
+    "DisplayName": "Party Invite Expiry Minutes",
+    "Description": "How long a party invite stays valid before it auto-expires.",
+    "FieldName": "PartyInviteExpiryMinutes",
+    "InputType": "number",
+    "Category": "Social",
+    "Subcategory": "Party",
+    "ParamFieldName": "CustomServer.Friends.PartyInviteExpiryMinutes",
+    "DefaultValue": "5"
+  },
+  {
+    "DisplayName": "Shop Rotation Items",
+    "Description": "Number of rotation items shown in the shop at once.",
+    "FieldName": "ShopMaxRotation",
+    "InputType": "number",
+    "Category": "Shop",
+    "Subcategory": "Slots",
+    "ParamFieldName": "CustomServer.Shop.MaxRotationItems",
+    "DefaultValue": "8"
+  },
+  {
+    "DisplayName": "Shop Free Items",
+    "Description": "Number of free / featured items shown in the shop.",
+    "FieldName": "ShopMaxFreebies",
+    "InputType": "number",
+    "Category": "Shop",
+    "Subcategory": "Slots",
+    "ParamFieldName": "CustomServer.Shop.MaxFreebieItems",
+    "DefaultValue": "2"
+  },
+  {
+    "DisplayName": "Game Server Ready Timeout (s)",
+    "Description": "Seconds to wait for a launched match process to accept setup-game/add-teams/queue-matched. Bump if the headless game takes long to load assets.",
+    "FieldName": "GameServerReadyTimeoutSeconds",
+    "InputType": "number",
+    "Category": "BAPBAP Custom Server",
+    "Subcategory": "Match Host",
+    "ParamFieldName": "CustomServer.GameServerReadyTimeoutSeconds",
+    "DefaultValue": "120"
+  },
+  {
+    "DisplayName": "Additional Game Arguments",
+    "Description": "Extra command-line arguments appended when launching match processes. Example: --melonloader.agfoffline --melonloader.captureplayerlogs",
+    "FieldName": "AdditionalGameArguments",
+    "InputType": "text",
+    "Category": "BAPBAP Custom Server",
+    "Subcategory": "Match Host",
+    "ParamFieldName": "CustomServer.AdditionalGameArguments",
+    "DefaultValue": "--melonloader.agfoffline --melonloader.captureplayerlogs"
+  },
+  {
+    "DisplayName": "Modding Overlay Title",
+    "Description": "Title text shown in the bottom-center modding overlay on all connected clients.",
+    "FieldName": "ModdingOverlayTitle",
+    "InputType": "text",
+    "Category": "BAPBAP Custom Server",
+    "Subcategory": "Branding",
+    "ParamFieldName": "CustomServer.ModdingOverlayTitle",
+    "DefaultValue": "BAPBAP Modding"
+  },
+  {
+    "DisplayName": "Modding Overlay Subtitle",
+    "Description": "Subtitle text (e.g. Discord link) shown in the bottom-center modding overlay on all connected clients.",
+    "FieldName": "ModdingOverlaySubtitle",
+    "InputType": "text",
+    "Category": "BAPBAP Custom Server",
+    "Subcategory": "Branding",
+    "ParamFieldName": "CustomServer.ModdingOverlaySubtitle",
+    "DefaultValue": "discord.gg/bapbapmods"
+  }
+]

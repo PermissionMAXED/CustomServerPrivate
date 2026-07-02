@@ -1,0 +1,295 @@
+using System;
+using System.Collections.Generic;
+using BAPBAP.Local;
+using BAPBAP.Network;
+using Mirror;
+using UnityEngine;
+
+namespace BAPBAP.Entities
+{
+	public class NpcFlameChannelAbility : Ability
+	{
+		public class CustomCastVfxSubroutine : SimulationSubroutine
+		{
+			[NonSerialized]
+			public NpcFlameChannelAbility ability;
+
+			[NonSerialized]
+			public bool setEnabled;
+
+			public CustomCastVfxSubroutine(NpcFlameChannelAbility _ability, bool _setEnabled)
+			{
+			}
+
+			public override void OnEnter(float fixedDt, Command cmd, bool isResim)
+			{
+			}
+		}
+
+		public class CustomShootSubroutine : SimulationSubroutine
+		{
+			[NonSerialized]
+			public NpcFlameChannelAbility ability;
+
+			[NonSerialized]
+			public byte finishTrigger;
+
+			[NonSerialized]
+			public byte silenceTrigger;
+
+			[NonSerialized]
+			public float shootDurationTime;
+
+			[NonSerialized]
+			public AnimLayerIndices animLayer;
+
+			[NonSerialized]
+			public float timeElapsed;
+
+			[NonSerialized]
+			public float fireRate;
+
+			[NonSerialized]
+			public float fireRateTimer;
+
+			public CustomShootSubroutine(NpcFlameChannelAbility _ability, byte _finishTrigger, byte _silenceTrigger, float _shootDurationTime, AnimLayerIndices _animLayer)
+			{
+			}
+
+			public override void OnEnter(float fixedDt, Command cmd, bool isResim)
+			{
+			}
+
+			public override byte OnTick(float fixedDt, Command cmd, bool isResim)
+			{
+				return 0;
+			}
+
+			public override void OnExit(float fixedDt, Command cmd, bool isResim)
+			{
+			}
+		}
+
+		public class CustomVisibleIndicatorSubroutine : SimulationSubroutine
+		{
+			[NonSerialized]
+			public NpcFlameChannelAbility ability;
+
+			[NonSerialized]
+			public bool setEnabled;
+
+			public CustomVisibleIndicatorSubroutine(NpcFlameChannelAbility _ability, bool _setEnabled)
+			{
+			}
+
+			public override void OnEnter(float fixedDt, Command cmd, bool isResim)
+			{
+			}
+		}
+
+		[SerializeField]
+		[Header("General")]
+		public GameObject spellPrefab;
+
+		[SerializeField]
+		public Transform firingPoint;
+
+		[SerializeField]
+		public int numProjectiles;
+
+		[SerializeField]
+		public MotionLockType motionLockType;
+
+		[SerializeField]
+		public RotationLockType rotationLockType;
+
+		[SerializeField]
+		public MotionLockType fireMotionLockType;
+
+		[SerializeField]
+		public RotationLockType fireRotationLockType;
+
+		[SerializeField]
+		public bool applyAtkSpeedMultiplier;
+
+		[SerializeField]
+		public bool applyCooldownMultiplier;
+
+		[SerializeField]
+		public float subtractiveWalkSpeed;
+
+		[Header("Hitbox-related")]
+		[SerializeField]
+		public int damage;
+
+		[SerializeField]
+		public float damageScaling;
+
+		[SerializeField]
+		public float speed;
+
+		[SerializeField]
+		public bool enableSpeedCurve;
+
+		[SerializeField]
+		public AnimationCurve speedCurve;
+
+		[SerializeField]
+		public float ttl;
+
+		[SerializeField]
+		public float expandDuration;
+
+		[SerializeField]
+		public float expandScale;
+
+		[SerializeField]
+		public List<StatusEffectInfo> statusEffects;
+
+		[Header("State-related")]
+		[SerializeField]
+		public float castingTime;
+
+		[SerializeField]
+		public float shootDurationTime;
+
+		[SerializeField]
+		public float recoveryTime;
+
+		[SerializeField]
+		public float baseCooldownTime;
+
+		[SerializeField]
+		[Header("Indicator")]
+		public GameObject visibleIndicatorPrefab;
+
+		[SerializeField]
+		public float indicatorRadius;
+
+		[SerializeField]
+		public float indicatorHalfAngle;
+
+		[SerializeField]
+		[Header("Sfx")]
+		public AudioClipData sfxCast;
+
+		[SerializeField]
+		public AudioClipData sfxLoop;
+
+		[SerializeField]
+		public AudioClipData sfxEnd;
+
+		[Header("Vfx")]
+		[SerializeField]
+		public ParticleSystem vfxRight;
+
+		[SerializeField]
+		public ParticleSystem vfxLeft;
+
+		[SerializeField]
+		public ParticleSystem castVfxRight;
+
+		[SerializeField]
+		public ParticleSystem castVfxLeft;
+
+		[SerializeField]
+		public float flameThrowerDuration;
+
+		[Header("Animation")]
+		[SerializeField]
+		public AnimLayerIndices animLayer;
+
+		[NonSerialized]
+		public GameObject currentIndicator;
+
+		public override void PreAwake(EntityManager _entityManager)
+		{
+		}
+
+		public void OnDestroy()
+		{
+		}
+
+		public void ShootProjectile(int predTickNum)
+		{
+		}
+
+		public void ClDestroyVisibleIndicator()
+		{
+		}
+
+		[ClientRpc]
+		public void RpcSpawnVisibleIndicator()
+		{
+		}
+
+		[ClientRpc]
+		public void RpcDestroyVisibleIndicator()
+		{
+		}
+
+		[ClientRpc]
+		public void RpcPlayCastVFX()
+		{
+		}
+
+		[ClientRpc]
+		public void RpcStopCastVFX()
+		{
+		}
+
+		[ClientRpc]
+		public void RpcPlayShootVFX()
+		{
+		}
+
+		public override bool Weaved()
+		{
+			return false;
+		}
+
+		public void UserCode_RpcSpawnVisibleIndicator()
+		{
+		}
+
+		public static void InvokeUserCode_RpcSpawnVisibleIndicator(NetworkBehaviour obj, NetworkReader reader, NetworkConnectionToClient senderConnection)
+		{
+		}
+
+		public void UserCode_RpcDestroyVisibleIndicator()
+		{
+		}
+
+		public static void InvokeUserCode_RpcDestroyVisibleIndicator(NetworkBehaviour obj, NetworkReader reader, NetworkConnectionToClient senderConnection)
+		{
+		}
+
+		public void UserCode_RpcPlayCastVFX()
+		{
+		}
+
+		public static void InvokeUserCode_RpcPlayCastVFX(NetworkBehaviour obj, NetworkReader reader, NetworkConnectionToClient senderConnection)
+		{
+		}
+
+		public void UserCode_RpcStopCastVFX()
+		{
+		}
+
+		public static void InvokeUserCode_RpcStopCastVFX(NetworkBehaviour obj, NetworkReader reader, NetworkConnectionToClient senderConnection)
+		{
+		}
+
+		public void UserCode_RpcPlayShootVFX()
+		{
+		}
+
+		public static void InvokeUserCode_RpcPlayShootVFX(NetworkBehaviour obj, NetworkReader reader, NetworkConnectionToClient senderConnection)
+		{
+		}
+
+		static NpcFlameChannelAbility()
+		{
+		}
+	}
+}

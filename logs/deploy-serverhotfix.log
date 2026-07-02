@@ -1,0 +1,12 @@
+[22:33:49] Using live AMP session from Edge.
+[22:33:49] AMP child instance running=True, appState=20.
+[22:33:49] Logged into child instance API.
+[22:33:49] Remote app state before deploy: 20.
+[22:33:49] Stopping application inside child instance.
+[22:33:52] Remote app state after stop: 0.
+[22:33:52] Remote root accessible, entries=442.
+[22:33:52] Uploading 0.19 MiB to bapcustomserver-server-hotfix.zip.
+[22:33:52] MD5 local=884680a30d3c5c98c72163007f34cec6 remote=884680a30d3c5c98c72163007f34cec6.
+[22:33:52] Extracting archive into remote root.
+[22:33:52] Starting application inside child instance.
+[22:33:52] Deploy complete.

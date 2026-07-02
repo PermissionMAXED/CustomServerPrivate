@@ -1,0 +1,32 @@
+[16:58:14] Before: Running=True AppState=40
+[16:58:14] Issuing ADSModule/RestartInstance (BAPBattle01).
+[16:58:30] RestartInstance result: {"Status":true,"Reason":null,"SupportURL":null,"SupportTitle":null}
+[16:58:33] poll 0: Running=True AppState=40
+[16:58:36] poll 1: Running=True AppState=40
+[16:58:40] poll 2: Running=True AppState=40
+[16:58:43] poll 3: Running=True AppState=40
+[16:58:46] poll 4: Running=True AppState=40
+[16:58:49] poll 5: Running=True AppState=40
+[16:58:52] poll 6: Running=True AppState=40
+[16:58:55] poll 7: Running=True AppState=40
+[16:58:58] poll 8: Running=True AppState=40
+[16:59:01] poll 9: Running=True AppState=40
+[16:59:04] poll 10: Running=True AppState=40
+[16:59:07] poll 11: Running=True AppState=40
+[16:59:10] poll 12: Running=True AppState=75
+[16:59:13] poll 13: Running=True AppState=75
+[16:59:16] poll 14: Running=True AppState=75
+[16:59:19] poll 15: Running=True AppState=75
+[16:59:22] poll 16: Running=True AppState=75
+[16:59:25] poll 17: Running=True AppState=75
+[16:59:28] poll 18: Running=True AppState=75
+[16:59:32] poll 19: Running=True AppState=75
+[16:59:35] poll 20: Running=True AppState=75
+[16:59:38] poll 21: Running=True AppState=75
+[16:59:41] poll 22: Running=True AppState=75
+[16:59:44] poll 23: Running=True AppState=0
+[16:59:47] poll 24: Running=True AppState=10
+[16:59:50] poll 25: Running=True AppState=10
+[16:59:53] poll 26: Running=True AppState=20
+[16:59:53] App Ready.
+[16:59:53] Done.

@@ -1,0 +1,23 @@
+﻿{
+    "stamp":  "20260608-080544",
+    "account":  "codex-live-v177-20260608-080544",
+    "username":  "CodexLiveV177",
+    "pid":  59208,
+    "runLog":  "C:\\Users\\Administrator\\Downloads\\CustomServer\\logs\\live-medusa-direct-20260608-080544.log",
+    "clientLog":  "C:\\Users\\Administrator\\Downloads\\CustomServer\\logs\\live-medusa-direct-client-20260608-080544.log",
+    "clientErr":  "C:\\Users\\Administrator\\Downloads\\CustomServer\\logs\\live-medusa-direct-client-20260608-080544.err.log",
+    "payload":  {
+                    "gameId":  "matchmaking-20260608060615-5948",
+                    "gameAuthId":  "917ad936152cd24643c9aec29bc15a8d",
+                    "gameDns":  "ark.atomi23.de",
+                    "wsPort":  7778,
+                    "kcpPort":  7779,
+                    "tcpPort":  7780,
+                    "mapId":  3,
+                    "levelId":  3,
+                    "unityGameMode":  1
+                },
+    "serverRelease":  "medusa-v1686-selection-guard",
+    "medusaServerDll":  "F4CD9813D35B269CDA9EE42D751B9BEC0FBBBD873BC355F098988C56202A2AB2",
+    "useLocalProxy":  false
+}

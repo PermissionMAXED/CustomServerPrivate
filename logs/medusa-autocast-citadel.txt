@@ -1,0 +1,84 @@
+02:04:18.272 [t+0s] Killing existing bapbap processes
+02:04:20.441 [t+2.2s] Health release=1.0.0+97d16d4d9fce130889a5b57b7ed4113b5c4dd3ea medusaDll=
+02:04:20.492 [t+2.2s] Admin grant: Admin added.
+02:04:20.577 [t+2.3s] WS -> SOCKET_READY
+02:04:20.581 [t+2.3s] JOIN_LOBBY lobby=V62696 charId=15
+02:04:20.599 [t+2.3s] WS -> GAME_MODES_UPDATED
+02:04:26.622 [t+8.4s] WS -> JOIN_LOBBY_SUCCESS
+02:04:26.625 [t+8.4s] UPDATE_CUSTOM_SETTINGS map=34 botCount=2
+02:04:26.628 [t+8.4s] WS -> GAME_MODES_UPDATED
+02:04:26.644 [t+8.4s] WS -> UPDATE_CUSTOM_SETTINGS_SUCCESS
+02:04:26.645 [t+8.4s] START_CUSTOM_GAME forceStart=true
+02:04:50.899 [t+32.6s] WS -> START_CUSTOM_GAME_SUCCESS
+02:04:50.902 [t+32.6s] WS -> QUEUE_MATCHED
+02:04:50.905 [t+32.6s] WS -> GAME_STARTED
+02:04:50.911 [t+32.6s] Game started payload={"gameId":"custom-20260619000426-9630","gameAuthId":"ae465af0baecf919e8fda3936bb0eac8","gameDns":"127.0.0.1","wsPort":7777,"kcpPort":7778,"tcpPort":7779,"mapId":34,"levelId":34,"unityGameMode":1}
+02:04:50.922 [t+32.7s] Starting visible client: --melonloader.agfoffline --melonloader.captureplayerlogs --bapcustom-use-proxy=false --bapcustom-show-ui=false --bapcustom-host=127.0.0.1 --bapcustom-server-port=5161 --bapcustom-account-id=codex-custom-vfx-20260619-020418 --bapcustom-username=CodexVfx --bapcustom-auto-select-augment --bapcustom-selected-char=15 --bapcustom-join-auth=ae465af0baecf919e8fda3936bb0eac8 --bapcustom-join-host=127.0.0.1 --bapcustom-join-ws=7777 --bapcustom-join-kcp=7778 --bapcustom-join-tcp=7779
+02:04:50.948 [t+32.7s] Visible client started pid=47004 stdout=C:\Users\Administrator\Downloads\CustomServer\logs\custom-medusa-vfx-v1708-20260619-020418\client.log stderr=C:\Users\Administrator\Downloads\CustomServer\logs\custom-medusa-vfx-v1708-20260619-020418\client.err.log
+02:04:55.786 [t+37.5s] Window handle=6295456
+02:05:08.365 [t+50.1s]   shot: Window: 1358x878
+02:05:08.927 [t+50.7s]   shot: Saved: C:\Users\Administrator\Downloads\CustomServer\logs\custom-medusa-vfx-v1708-20260619-020418\t12-loading.png (8 KB) PrintWindowOK=True
+02:05:08.951 [t+50.7s] Screenshot t12-loading path=C:\Users\Administrator\Downloads\CustomServer\logs\custom-medusa-vfx-v1708-20260619-020418\t12-loading.png size=8142
+02:05:31.698 [t+73.4s]   shot: Window: 1358x878
+02:05:31.828 [t+73.6s]   shot: Saved: C:\Users\Administrator\Downloads\CustomServer\logs\custom-medusa-vfx-v1708-20260619-020418\t34-before-augment.png (832.6 KB) PrintWindowOK=True
+02:05:31.856 [t+73.6s] Screenshot t34-before-augment path=C:\Users\Administrator\Downloads\CustomServer\logs\custom-medusa-vfx-v1708-20260619-020418\t34-before-augment.png size=852619
+02:05:31.865 [t+73.6s] Input keys='{ENTER}' name=after-enter
+02:05:33.019 [t+74.7s]   input: Sent keys: {ENTER}
+02:05:33.908 [t+75.6s]   shot: Window: 1358x878
+02:05:34.019 [t+75.7s]   shot: Saved: C:\Users\Administrator\Downloads\CustomServer\logs\custom-medusa-vfx-v1708-20260619-020418\after-enter.png (835.6 KB) PrintWindowOK=True
+02:05:34.045 [t+75.8s] Screenshot after-enter path=C:\Users\Administrator\Downloads\CustomServer\logs\custom-medusa-vfx-v1708-20260619-020418\after-enter.png size=855658
+02:05:34.047 [t+75.8s] Input keys='1' name=after-hotkey-1
+02:05:35.188 [t+76.9s]   input: Sent keys: 1
+02:05:36.061 [t+77.8s]   shot: Window: 1358x878
+02:05:36.175 [t+77.9s]   shot: Saved: C:\Users\Administrator\Downloads\CustomServer\logs\custom-medusa-vfx-v1708-20260619-020418\after-hotkey-1.png (834.6 KB) PrintWindowOK=True
+02:05:36.197 [t+77.9s] Screenshot after-hotkey-1 path=C:\Users\Administrator\Downloads\CustomServer\logs\custom-medusa-vfx-v1708-20260619-020418\after-hotkey-1.png size=854580
+02:05:36.208 [t+77.9s] Input left-click name=after-augment-click
+02:05:37.023 [t+78.8s]   input: Window @ (697, 137) - clicking (2837, 657) = relative (2140, 520)
+02:05:37.196 [t+78.9s]   input: Clicked 1 time(s)
+02:05:38.059 [t+79.8s]   shot: Window: 1358x878
+02:05:38.167 [t+79.9s]   shot: Saved: C:\Users\Administrator\Downloads\CustomServer\logs\custom-medusa-vfx-v1708-20260619-020418\after-augment-click.png (832.1 KB) PrintWindowOK=True
+02:05:38.191 [t+79.9s] Screenshot after-augment-click path=C:\Users\Administrator\Downloads\CustomServer\logs\custom-medusa-vfx-v1708-20260619-020418\after-augment-click.png size=852080
+02:06:10.806 [t+112.5s]   shot: Window: 1358x878
+02:06:10.907 [t+112.6s]   shot: Saved: C:\Users\Administrator\Downloads\CustomServer\logs\custom-medusa-vfx-v1708-20260619-020418\baseline-before-casts.png (116 KB) PrintWindowOK=True
+02:06:10.928 [t+112.7s] Screenshot baseline-before-casts path=C:\Users\Administrator\Downloads\CustomServer\logs\custom-medusa-vfx-v1708-20260619-020418\baseline-before-casts.png size=118825
+02:06:10.932 [t+112.7s] Input keys='ww' name=after-move
+02:06:12.089 [t+113.8s]   input: Sent keys: ww
+02:06:12.943 [t+114.7s]   shot: Window: 1358x878
+02:06:13.022 [t+114.8s]   shot: Saved: C:\Users\Administrator\Downloads\CustomServer\logs\custom-medusa-vfx-v1708-20260619-020418\after-move.png (116 KB) PrintWindowOK=True
+02:06:13.049 [t+114.8s] Screenshot after-move path=C:\Users\Administrator\Downloads\CustomServer\logs\custom-medusa-vfx-v1708-20260619-020418\after-move.png size=118830
+02:06:13.050 [t+114.8s] Input left-click name=slot0-left-180ms
+02:06:13.844 [t+115.6s]   input: Window @ (697, 137) - clicking (2837, 657) = relative (2140, 520)
+02:06:14.017 [t+115.7s]   input: Clicked 1 time(s)
+02:06:14.810 [t+116.5s]   shot: Window: 1358x878
+02:06:14.892 [t+116.6s]   shot: Saved: C:\Users\Administrator\Downloads\CustomServer\logs\custom-medusa-vfx-v1708-20260619-020418\slot0-left-180ms.png (116.7 KB) PrintWindowOK=True
+02:06:14.914 [t+116.6s] Screenshot slot0-left-180ms path=C:\Users\Administrator\Downloads\CustomServer\logs\custom-medusa-vfx-v1708-20260619-020418\slot0-left-180ms.png size=119461
+02:06:16.435 [t+118.2s]   shot: Window: 1358x878
+02:06:16.524 [t+118.3s]   shot: Saved: C:\Users\Administrator\Downloads\CustomServer\logs\custom-medusa-vfx-v1708-20260619-020418\slot0-left-1030ms.png (116.6 KB) PrintWindowOK=True
+02:06:16.546 [t+118.3s] Screenshot slot0-left-1030ms path=C:\Users\Administrator\Downloads\CustomServer\logs\custom-medusa-vfx-v1708-20260619-020418\slot0-left-1030ms.png size=119390
+02:06:16.548 [t+118.3s] Input right-click name=slot1-right-180ms
+02:06:17.376 [t+119.1s]   input: Right-clicked at absolute (2140, 520)
+02:06:18.180 [t+119.9s]   shot: Window: 1358x878
+02:06:18.281 [t+120s]   shot: Saved: C:\Users\Administrator\Downloads\CustomServer\logs\custom-medusa-vfx-v1708-20260619-020418\slot1-right-180ms.png (116.3 KB) PrintWindowOK=True
+02:06:18.305 [t+120s] Screenshot slot1-right-180ms path=C:\Users\Administrator\Downloads\CustomServer\logs\custom-medusa-vfx-v1708-20260619-020418\slot1-right-180ms.png size=119083
+02:06:19.782 [t+121.5s]   shot: Window: 1358x878
+02:06:19.873 [t+121.6s]   shot: Saved: C:\Users\Administrator\Downloads\CustomServer\logs\custom-medusa-vfx-v1708-20260619-020418\slot1-right-1030ms.png (116.5 KB) PrintWindowOK=True
+02:06:19.898 [t+121.6s] Screenshot slot1-right-1030ms path=C:\Users\Administrator\Downloads\CustomServer\logs\custom-medusa-vfx-v1708-20260619-020418\slot1-right-1030ms.png size=119300
+02:06:19.900 [t+121.6s] Input keys=' ' name=slot2-space-180ms
+02:06:21.002 [t+122.7s]   input: Sent keys:  
+02:06:21.802 [t+123.5s]   shot: Window: 1358x878
+02:06:21.882 [t+123.6s]   shot: Saved: C:\Users\Administrator\Downloads\CustomServer\logs\custom-medusa-vfx-v1708-20260619-020418\slot2-space-180ms.png (116.9 KB) PrintWindowOK=True
+02:06:21.905 [t+123.6s] Screenshot slot2-space-180ms path=C:\Users\Administrator\Downloads\CustomServer\logs\custom-medusa-vfx-v1708-20260619-020418\slot2-space-180ms.png size=119752
+02:06:23.353 [t+125.1s]   shot: Window: 1358x878
+02:06:23.432 [t+125.2s]   shot: Saved: C:\Users\Administrator\Downloads\CustomServer\logs\custom-medusa-vfx-v1708-20260619-020418\slot2-space-1030ms.png (116.5 KB) PrintWindowOK=True
+02:06:23.455 [t+125.2s] Screenshot slot2-space-1030ms path=C:\Users\Administrator\Downloads\CustomServer\logs\custom-medusa-vfx-v1708-20260619-020418\slot2-space-1030ms.png size=119339
+02:06:23.458 [t+125.2s] Input keys='e' name=slot3-e-180ms
+02:06:24.539 [t+126.3s]   input: Sent keys: e
+02:06:25.358 [t+127.1s]   shot: Window: 1358x878
+02:06:25.446 [t+127.2s]   shot: Saved: C:\Users\Administrator\Downloads\CustomServer\logs\custom-medusa-vfx-v1708-20260619-020418\slot3-e-180ms.png (116.5 KB) PrintWindowOK=True
+02:06:25.475 [t+127.2s] Screenshot slot3-e-180ms path=C:\Users\Administrator\Downloads\CustomServer\logs\custom-medusa-vfx-v1708-20260619-020418\slot3-e-180ms.png size=119282
+02:06:26.929 [t+128.7s]   shot: Window: 1358x878
+02:06:27.006 [t+128.7s]   shot: Saved: C:\Users\Administrator\Downloads\CustomServer\logs\custom-medusa-vfx-v1708-20260619-020418\slot3-e-1030ms.png (117 KB) PrintWindowOK=True
+02:06:27.034 [t+128.8s] Screenshot slot3-e-1030ms path=C:\Users\Administrator\Downloads\CustomServer\logs\custom-medusa-vfx-v1708-20260619-020418\slot3-e-1030ms.png size=119761
+02:06:27.048 [t+128.8s] Key Medusa lines
+02:06:27.084 [t+128.8s]   [[38;2;50;205;50m02:05:09.611[0m] [[38;2;0;255;255mNetworkedCustomChar[0m] [38;2;211;211;211m[M2] graft OK via GNM.Awake: baseRenderersDisabled=11, charAnimWired=1, footstepsWired=1, otherAnimsDisabled=2, shadedSMRs=1, fx=True, controller='Medusa'.[0m
+02:06:27.085 [t+128.8s] END custom Medusa VFX test runDir=C:\Users\Administrator\Downloads\CustomServer\logs\custom-medusa-vfx-v1708-20260619-020418

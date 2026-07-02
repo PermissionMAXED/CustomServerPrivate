@@ -1,0 +1,15 @@
+C:\Users\Administrator\Downloads\CustomServer\MapEditorVerify\bin\Release\net10.0\BapMapVerify.exe
+C:\Users\Administrator\Downloads\CustomServer\MapEditorVerify\bin\Release\net10.0\BapMapVerify.deps.json
+C:\Users\Administrator\Downloads\CustomServer\MapEditorVerify\bin\Release\net10.0\BapMapVerify.runtimeconfig.json
+C:\Users\Administrator\Downloads\CustomServer\MapEditorVerify\bin\Release\net10.0\BapMapVerify.dll
+C:\Users\Administrator\Downloads\CustomServer\MapEditorVerify\bin\Release\net10.0\BapMapVerify.pdb
+C:\Users\Administrator\Downloads\CustomServer\MapEditorVerify\obj\Release\net10.0\MapEditorVerify.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Downloads\CustomServer\MapEditorVerify\obj\Release\net10.0\MapEditorVerify.AssemblyInfoInputs.cache
+C:\Users\Administrator\Downloads\CustomServer\MapEditorVerify\obj\Release\net10.0\MapEditorVerify.AssemblyInfo.cs
+C:\Users\Administrator\Downloads\CustomServer\MapEditorVerify\obj\Release\net10.0\MapEditorVerify.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Downloads\CustomServer\MapEditorVerify\obj\Release\net10.0\MapEditorVerify.sourcelink.json
+C:\Users\Administrator\Downloads\CustomServer\MapEditorVerify\obj\Release\net10.0\BapMapVerify.dll
+C:\Users\Administrator\Downloads\CustomServer\MapEditorVerify\obj\Release\net10.0\refint\BapMapVerify.dll
+C:\Users\Administrator\Downloads\CustomServer\MapEditorVerify\obj\Release\net10.0\BapMapVerify.pdb
+C:\Users\Administrator\Downloads\CustomServer\MapEditorVerify\obj\Release\net10.0\MapEditorVerify.genruntimeconfig.cache
+C:\Users\Administrator\Downloads\CustomServer\MapEditorVerify\obj\Release\net10.0\ref\BapMapVerify.dll

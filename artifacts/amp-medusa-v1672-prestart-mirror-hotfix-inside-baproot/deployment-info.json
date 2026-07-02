@@ -1,0 +1,34 @@
+﻿{
+    "schemaVersion":  1,
+    "releaseLabel":  "medusa-v1672-prestart-mirror",
+    "packageBuildUtc":  "2026-06-08T01:33:12.6411225Z",
+    "gitCommit":  "97d16d4d9fce",
+    "gitBranch":  "main",
+    "gitDirty":  true,
+    "configuration":  "Release",
+    "selfContained":  true,
+    "publicHost":  "ark.atomi23.de",
+    "serverDllSha256":  "25DC27DC8C9C399509A04FEDC24894FF109945A663E99FEE8D5A71BBC36CF63A",
+    "modDllSha256":  "7CA70D6E169A72B109A9E644D4CC0C3BF0B6B774881DA8188A66BDB9188EE7A1",
+    "modApiDllSha256":  "0E14F39A9C47B6EBA106A0F23E76A0989B3270D7BCDD3E4BB0DD51E63BDB3CB5",
+    "medusaDllSha256":  "9B405DD498192F404CAB7520B464C20BF87D1D081EFFECDD343D2E20D9A8BDA0",
+    "medusaBundleSha256":  "C4872D6E124E76F9F4B4EC75482FFC2795D051D3CA65EB7C25E9FE68023B1D70",
+    "medusaCharId":  15,
+    "gameExeSha256":  "7CF5E8746DEDD1B2183A8C5B733B06B394B667EF8F041831C293C27097B57EF0",
+    "startMatchSha256":  "02E09C0B12716B296E275DCE50F4595ECC5FE24AD29A6406E2F318CEFF4049F3",
+    "packageSha256":  "pending-repacked-v1672",
+    "ports":  {
+                  "lobby":  5055,
+                  "ws":  7777,
+                  "kcp":  7778,
+                  "tcp":  7779,
+                  "http":  7850
+              },
+    "startLinuxWineSha256":  "94464909AD6F6E000C630794EAE10B7A5AA3C68442DBCD6D05976F0A0BD1A67E",
+    "ampWebpanelStartSha256":  "CE978D59058E96EBE1491FBE244820C9FD8C9DA2A539B624E41892B9A6431904",
+    "notes":  [
+                  "BapCustomServerMelon v1.0.5 starts Mirror before /setup-game",
+                  "Restores /add-teams map-readiness gate to avoid native NullRef",
+                  "Keeps one-shot bootstrap logs and v1669 coldstart timeouts"
+              ]
+}

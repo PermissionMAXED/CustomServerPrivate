@@ -1,0 +1,789 @@
+Cargando...
+Seleccione un proveedor de autenticación.
+Redireccionando a {0}. Complete la autenticación y regrese al juego.
+Autenticando con {0}. Espere por favor.
+Confirmando {0} autenticación. Espere por favor.
+La autenticación con {0} no se completó. Inténtalo de nuevo.
+No se pudo autenticarse con {0}. Inténtalo de nuevo.
+¡Autenticado con éxito con {0}!
+Error de inicio de sesion. Esta cuenta ya ha iniciado sesión en otro dispositivo. Por favor cierre la sesión y vuelva a intentarlo.
+JUGAR
+PASE BAP
+PERFIL
+CLASIFICACIONES
+TAQUILLA
+PERSONAJES
+LISTO
+NO LISTO
+EN COLA
+Buscando Jugadores...
+INVITAR
+CÓDIGO DE SALA
+LISTO
+NO LISTO
+CANCELAR
+Escribe...
+En línea
+Enlace copiado
+Jugador en cola
+Modo de juego
+Modos de juego
+Selecciona el modo de juego
+Invita a un amigo
+Usos restantes
+Últimos Ganadores
+¡La beta cerrada ha terminado! Consulta nuestro Discord para recibir noticias sobre el desarrollo del juego y futuras pruebas.
+ganaron con {0} eliminaciones
+La partida comienza en
+Partida Comenzando...
+¡La sala ya está llena!
+¡La sala es invalida!
+Te has unido a la sala
+se unió a la sala
+abandonó la sala
+Inicio de sesión requerido
+En cola...
+EN COLA
+EN PARTIDA
+Buscando un equipo...
+Alguien ha abandonado el equipo. Buscando un nuevo equipo...
+SELECCIONAR
+SELECCIONADO
+DESBLOQUEAR
+Desbloquear por
+Desbloquear por {0}
+Habilidades
+Maestría
+PASE BAP
+Termina en {0} días
+CERRAR SESIÓN
+Victorias
+Eliminaciones
+Muertes
+Asistencias
+KDA
+Daño infligido
+Daño recibido
+Historial de Partidas
+de
+Historial de partidas no encontrado
+Tabla de clasificaión vacía
+Nombre
+Rango
+Eliminaciones
+Victorias
+Rango {0}
+RP
+Nuevo
+PEGATINAS
+Taquilla vacía
+Pegatina equipada
+Clic izquierdo para asignar a esta ranura, click derecho para quitar
+Haz click para cancelar
+Ejecuciones
+Ejecución equipada
+Nuevo objeto obtenido
+Nuevo personaje obtenido
+Haz clic para continuar
+Reclamar
+Reclamado
+Equipar
+Equipado
+Desbloqueado en el nivel {0}
+Cerrar
+Cancelar
+Siguiente
+Salir
+PE
+PASE BAP
+Para nivel
+Ascendido
+Descendido
+Nivel {0}
+Máximo Nivel
+Victoria
+Derrota
+Inicio de sesión
+Completar inicio de sesión
+Introduce tu nombre de usuario:
+Términos y condiciones
+Política de privacidad
+Acepto los términos y condiciones y la política de privacidad
+El nombre de usuario debe tener entre 3 y 20 caracteres y contener sólo caracteres válidos
+El nombre de usuario ya está en uso.
+Debe aceptar las condiciones y la política de privacidad para continuar.
+Salir
+Estás seguro de que quieres salir del juego?
+Has sido desconectado. Por favor, recarga para reconectarte.
+Ya has iniciado sesión. Cierra esta ventana.
+se ha unido a la partida.
+¡Para con el spam! En espera por {0}
+Marcando
+{1} {0}
+Peligro
+En Camino
+Enemigo a la vista
+Necesito ayuda
+Alertada una posición
+Moviéndose a esta posición
+Enemigo a la vista
+Necesita ayuda
+Aliado
+Enemigo
+Npc Aliado
+Npc enemigo
+Neutral
+¡Habilidad {0} tiene {1} segundos restantes!
+¡Habilidad {0} está lista!
+Destruido por
+ha sido destruido
+Pulsa {0} para soltar
+o
+para expandir
+¡Pociones llenas!
+¡Oro al máximo!
+Intercambiar
+PS
+Sacrificar
+Sacrificando
+Comprar
+Comprando
+Necesidades
+En Stock
+Actual
+
+
+
+
+
+
+
+
+Mejorar
+Oro
+Daño
+Velocidad de Movimiento
+Reducción de Enfriamiento
+Probabilidad de Crítico
+Daño Crítico
+Drenaje de Salud
+Velocidad de ataque
+Espinas
+Escudo
+Salud
+Regeneración de Salud
+Porcentaje de salud
+Invulnerable
+Curando
+Golpear
+Golpeado
+Aturdir
+Aturdido
+Silenciar
+Silenciado
+Inmovilizar
+Inmovilizado
+Ralentizar
+Ralentizado
+Empujar
+Empujado
+Esprintar
+Veneno
+Envenenado
+Quemadura
+Clon
+Reactivar
+Debilitar
+Debilitado
+Expuesto
+Escudo
+Aumento de daño
+Atrapar
+Atrapado
+Confuso
+Contraataque
+Aterrorizar
+Aterrorizado
+Cegera
+Cegado
+Gigantesco
+Resbaladizo
+Congelado
+Reducción de Visión
+Visión Reducida
+Personaje
+Objeto
+Interactuable
+Mejora
+Mejorando
+¡No hay objetos para mejorar en esta ranura!
+El objeto ya está al nivel máximo.
+Mejora para
+Tienda
+Máquina expendedora
+Compra por
+La máquina expendedora está vacía.
+Comprar poción de salud para
+Vendiendo 
+Vender por
+Arenas Movedizas
+Caña de pescar
+Empezar a pescar
+¡¡¡PEZ!!!
+¿¡Pez!?
+Caña de pescar rota :(
+Roca Secreta
+Trampa de dardos venenosos
+Altar de Resurreción
+Altar de Resurreción Utilizado
+Estación de mejora
+Caja de botín
+Caja de botín rara
+Caja de botín legendaria
+Robot malvado
+Gran robot malvado
+Caja de botín cerrada
+Caja de botín cerrada
+Torreta
+Caja de botín cerrada
+Orbe de energía
+Paquete de Suministros
+Paquete de Suministros en el Aire
+Paquete de Suministros Aterrizado
+Barril explosivo
+
+Barril de escarcha
+Barril de escarcha empujable
+Barril Explosivo Empujable
+
+Plataforma de salto
+Plataforma de salto oculta
+Colmena
+Trampa para osos
+RUNA DE SANGRE
+Otorga +40% de Daño
+Subvenciones +75% de vida
+Tiene sacrificado lo suficiente.
+La Runa se cuesta la sgra.
+Sacrificio
+Sacrificio
+Máximo
+Máximo
+Cactus Puntiagudo
+Generador de Velocidad
+Generador de Salud
+Generador de Energizante
+Estación de venta
+Suelo helado
+Cristal de energía
+Planta rodadora
+Jefe gelatina
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+¡La zona se está cerrando!
+La zona se cerrará en {0} segundos
+¡Paquete de Suministros lanzado!
+¡YA!
+VICTORIA
+DERROTA
+{0} Posición
+Espectador
+Observando
+Salir a la sala
+Enviar mensaje al equipo...
+EQUIPO
+Ninguno
+Por defecto
+Ilimitado
+Bajo
+Medio
+Alto
+Ultra
+Personalizado
+Activado
+Desactivado
+Puede que algunos textos no se hayan actualizado. Reinicia el juego para aplicar cambios de idioma
+Pulsa una tecla
+Cerrar sesión
+¿Estás seguro de que quieres cerrar la sesión?
+Se perderá todo el progreso hasta ahora.
+General
+Gráficos
+Audio
+Controles
+Ajustes
+General
+Interfaz
+Juego
+Privacidad
+Mostrar
+Calidad
+Volumen
+Teclas del juego
+Teclas de menú
+Idioma
+Región
+Modo de pantalla
+Ventana
+Pantalla completa sin bordes
+Pantalla completa
+Resolución
+Escala de Interfaz
+Mostrar Marcadores
+Mostrar Fps
+Mostrar versión del juego
+Ocultar mensajes de chat
+Intensidad de la Sacudida de Pantalla
+Aparecer como anónimo
+Ocultar nombres de jugadores
+Filtro de Profanidad
+Escala de renderizado
+Límite de fotogramas por segundo
+Calidad preestablecida
+Modo Antialiasing
+Sombras en tiempo real
+Oclusión ambiental en el espacio de la pantalla
+Destello de Luz
+Profundidad de campo
+Volumen general
+Volumen de Música
+Volumen ambiental
+Volumen de Efectos
+Volumen de Marcadores
+Mover Arriba
+Mover Abajo
+Mover Izquierda
+Mover Derecha
+Habilidad Básica
+Habilidad Especial
+Habilidad de Movimiento
+Habilidad Definitiva
+Usar Poción
+Usar Consumible
+Cancelar habilidad
+Soltar objeto 1
+Soltar objeto 2
+Soltar objeto 3
+Soltar poción
+Soltar oro
+Soltar Consumible
+Bloqueo de Cámara
+Abrir/Enviar Chat
+Marcador
+Acción
+Minimapa Mantener
+Minimapa Alternar
+Interactuar
+Expandir Ventana
+Normal
+Clasificatoria
+Entrenamiento
+Calentamiento
+MINI SOLO
+MINI DÚOS
+MINI TRÍOS
+SOLO
+DÚOS
+TRÍOS
+CLASIFICATORIA DÚOS
+CLASIFICATORIA TRÍOS
+Sin clasificar
+Bronce
+Plata
+Oro
+Platino
+Diamante
+Real
+Divino
+Común
+Poco común
+Raro
+Épico
+Legendario
+Objeto
+Consumible
+Moneda
+Casco
+Torso
+Botas
+Gorra Gruesa
+Botas Gruesas
+Gorra Chrono
+Mochila Chrono
+Mochila Afilada
+Botas afiladas
+Gorra afilada
+Botas Chasquido
+Mochila Punzante
+Botas Veloces
+Mochila Vampírica
+Gorra Vampírica
+Zumo
+Bebe para recuperar un poco de salud
+Oro
+Moneda utilizada para intercambiar por bienes y servicios
+Botas Punzantes
+Gorra Punzante
+Gorra Chasquido
+Mochila Chasquido
+Mochila Gruesa
+Botas Chrono
+Gorra Veloz
+Mochila Veloz
+Botas Vampíricas
+Gorra de gelatina
+Gorra de gelatina
+Gorra de gelatina
+Gorra de gelatina
+Gorra de gelatina
+Gorra de gelatina
+Gorra de gelatina
+Gorra de gelatina
+Gorra de gelatina
+Gorra de gelatina
+Gorra de gelatina
+Polvo de escudo
+Amortiguar
+Barril explosivo
+Barril portátil
+Almohadilla
+Desplegar una almohadilla de salto
+Almohadilla de salto invisible
+Desplegar una almohadilla de salto invisible
+Trampa para osos
+Trampa de oso portátil
+Cerebro congelado
+Bebirlo para que Insta se congele
+Torreta
+Torreta portátil
+Cactus
+Cactus portátil
+Colmena
+Colmena portátil
+Barril explosivo empujable
+Barril explosivo empujable portátil
+Parachoque
+Parachoques portátil
+Telescopio
+Telescopio portátil
+Reloj de arena
+Reloj de arena portátil
+Carril de congelación
+Barril de congelación portátil
+Muñeco de nieve
+Muñeco de nieve portátil
+Muñeco de nieve portátil
+Muñeco de nieve portátil
+Muñeco de nieve portátil
+Muñeco de nieve portátil
+Muñeco de nieve portátil
+Muñeco de nieve portátil
+Muñeco de nieve portátil
+Muñeco de nieve portátil
+Muñeco de nieve portátil
+Muñeco de nieve portátil
+Muñeco de nieve portátil
+Muñeco de nieve portátil
+Muñeco de nieve portátil
+Muñeco de nieve portátil
+Muñeco de nieve portátil
+Muñeco de nieve portátil
+Común
+Poco común
+Raro
+Épico
+Legendario
+Acción
+Pegatina
+Ejecución
+Moneda
+Oro
+Moneda utilizada para intercambiar por bienes y servicios
+Fractales
+Moneda premium utilizada para intercambiar por bienes y servicios incluso mejores
+Bonus
+BAPBAP
+El logotipo BAPBAP, en su versión horizontal
+BAPBAP con Contorno
+El logotipo BAPBAP, en su versión horizontal con un contorno rojo
+Pan
+Un emoji del pan
+Corona
+Se te ha caído esto, rey
+Fantasma con pulgares arriba
+Un fantasma dando pulgares arriba
+Fantasma sorprendido
+Un fantasma sorprendido por algo
+Fantasma Riéndose
+Un fantasma partiéndose de risa
+Fantasma llorón
+Un fantasma muy triste
+Fantasma enfadado
+Un fantasma que parece cabreado
+GGEZ
+Usa esto para presumir educadamente de tus victorias en BAPBAP
+¿Cuándo código?
+¿Pero que cuándo sale el próximo código?
+Ejecución
+Una lápida normal
+Lápida con alas
+Una lápida normal con alas
+Lápida Beta
+Lápida exclusiva para jugadores de la beta
+Lápida grande
+Lápida grandota
+Básico
+Especial
+Movilidad
+Definitiva
+Corre y dispara
+Dispara 4 balas pequeñas
+Dispara 4 balas pequeñas, cada una infilgiendo {1}.
+Traga Plomo
+Dispara 3 balas grandes a la vez. Reinicia ¡CHAO! al impactar.
+Dispara 3 balas grandes a la vez, cada una infilgiendo {1}. Reinicia ¡CHAO! al impactar.
+¡CHAO!
+Propúlsate hacia una dirección rápidamente.
+Propúlsate hacia una dirección rápidamente.
+Infierno de balas
+Gira y dispara a todo lo que te rodea. Aplica ralentización al golpear.
+Gira y dispara a todo lo que te rodea, infilgiendo {1} y {2}.
+Chuck Puñetazo
+Realiza un combo de 3 puñetazos. Al impactar un rival, recibe una acumulación de Chuck Golpe
+Realiza un combo de 3 puñetazos, cada uno infilgiendo {1}. Al impactar un rival, recibe una acumulación de Chuck Golpe.
+Chuck Golpe
+Lanza un potente puñetazo. Aturde a tus rivales si las acumulaciones de Chuck Golpe están al máximo.
+Lanza un potente puñetazo que infilge {1} y {2}. Infilge {3} si las acumulaciones de Chuck Golpe están al máximo.
+Chuck Salto
+Salta a una posición. Aplica el efecto Golpeado a tus rivales.
+Salta a una posición. Infilge {1} y {2} al impactar a tus objetivos.
+¡¡¡¡CHUCK!!!!
+Conviértete en gigante y obtén un aumento de salud, daño y velocidad.
+Conviértete en gigante por {1}, obteniendo {2} y {3}. Durante la habilidad, Chuck recibe {4} menos de daño y se cura por {5} de su Salid Máxima por segundo.
+Ribbhit
+Ataca para un combo de 3 golpes.
+Realiza un combo de 3 golpes, infilgiendo {1}. Infilge {2} en el tercer golpe.
+SLURP
+Pégate a un objetivo con la lengua. Aplica ralentización al golpear.
+Pégate a un objetivo con tu lengua. Aplica {1} al impactar.
+Brinco
+Salta a una posición, inflige ralentización al aterrizar.
+Salta a una posición, infligiendo {1} y {2} al aterrizar. Golpear a un enemigo reduce el enfriamiento por {3} segundos.
+Corta y Trocea
+Impúlsate hacia delante e inflige gran daño a qualquier rival en tu camino.
+Impúlsate hacia delante, infligiendo {1} y {2} a qualquier rival en tu camino.
+Que haya Luz
+Haz arder una zona.
+Haz arder una zona que infilge {1}
+Está flama
+Convierte una zona en un fuego expansivo. Aplica quemadura y ralentización al golpear.
+Convierte una zona en un fuego expansivo. Infilge {1}, {2} y {3} a objetivos.
+Llama Incandescente
+Activa un escudo de fuego.
+Activa un escudo de fuego, obteniendo {1} y incrementando tu {2} por {3}, durante {4} segundos.
+Fuego Abrasador
+Lanza un enorme meteorito contra el suelo.
+Lanza un enorme meteorito contra el suelo, infilgiendo {1}
+Impacto Violeta
+Dispara una flecha de energía.
+Dispara una flecha de energía, infilgiendo {1}.
+Mooncall
+Haz llover flechas en un área. Aplica ralentización al golpear.
+Haz llover flechas en un área, infilgiendo {1} y {2} al impactar.
+Trote del Zorro
+Dispara al suelo para saltar. Aplica knock up al golpear.
+Dispara al suelo para saltar, infilgiendo {1} y {2} al impactar.
+Estrellas fugaces
+Dispara una flecha penetrante a través de obstáculos y enemigos. Aplica ralentización al golpear.
+Dispara una flecha perforante a través de obstáculos y enemigos. Infilge {1} y {2} al impactar.
+Chop Chop
+Realiza un combo de 3 golpes.
+Realiza un combo de 3 golpes, infilgiendo {1}. En el tercer golpe, golpea el suelo infilgiendo {2}.
+Regusto a jengibre
+Golpea a los enemigos que tengas delante. Aplica aturdimiento y debilitamiento al golpear.
+Golpea a los enemigos que tengas delante, infilgiendo {1}, {2} y {3} a enemigos.
+Rollo de sushi
+Carga un impulso, inflige daño y ralentiza a los objetivos por el camino.
+Carga un impulso, inflige {1} y {2} a los objetivos al impactar.
+Choque de Tempura
+Salta y aterriza en un área. Al golpear, derribas a los enemigos y te proteges a ti y a tus aliados.
+Salta y aterriza en un área, infilgiendo {1} a enemigos y aplicando {2} a tus aliados por {3} de tu Salud Máxima. Obtén un escudo de {4} por cada objetivo afectado.
+Cosecha
+Realiza un combo de 2 golpes
+Realiza un combo de 2 golpes, infilgiendo {1}. Si se utiliza mientras Paso Sombrío está activo, infilge {2} extra.
+Garra
+Corta el suelo. Aplica Expuesto al golpear.
+Corta el suelo, infilgiendo {1} y {2}. Si se utiliza mientras Paso Sombrío está activo, cúrate un {3} del daño realizado.
+Paso Sombrío
+Vuélvete invisible y gana velocidad.
+Vuélvete invisible durante {1}, incrementando tu {2} y {3}.
+DEP
+Avanza hacia delante y ejecuta un tajo enfrente tuya
+Impúlsate hacia delante y realiza un tajo enfrente tuya, infilgiendo {1}.
+Hello World
+Dispara una onda digital.
+Dispara una onda digital, infilgiendo {1}.
+Raycast
+Dispara un rayo. Aplica ralentización al golpear.
+Dispara un rayo, infilgiendo {1} y {2} al impactar.
+Ctrl+C y Ctrl+V
+Teletranspórtate a una posición y crea un clon en tu posición original. Vuelve a lanzar la habilidad para intercambiar posiciones con tu clon.
+Teletranspórtate a una posición y crea un clon en tu posición original, con una duración de {1}. Vuelve a lanzar la habilidad para intercambiar posiciones con tu clon.
+memcpy
+Teletranspórtate a un lugar y crea un clon en tu posición original. Vuelve a lanzar la habilidad para intercambiar posiciones con tu clon.
+Crea un clon en una posición, con una duración de {1}. Vuelve a lanzar la habilidad para intercambiar posiciones con tu clon.
+Bazooka
+Dispara un cohete que explota al impactar.
+Dispara un cohete que infilge {1} al impactar, y {2} de la explosión.
+Objetivo Fijado
+Dispara un misil teledirigido.
+Dispara un misil teledirigido que sigue a objetivos, infilgiendo {1} al impactar y {2} de la explosión.
+Que Exploto!
+Explota el suelo para lanzarte a un lugar. Aplica knock up al golpear.
+Explota el suelo para lanzarte a un lugar. Infilge {1} y {2} a objetivos.
+Mina a tu paso
+Lanza minas de proximidad al suelo. Aplica ralentización al golpear.
+Lanza minas de proximidad al suelo, cada una infilgiendo {1} y {2} al hacer contacto. Las minas duran {3} segundos.
+Tajo de Fuego
+Realiza un combo de 3 tajos.
+Realiza dos tajos rápidos infilgiendo {1}, y un poderoso tercer tajo infilgiendo {2}.
+Postura de reflejo
+Contrarresta los ataques y refleja los proyectiles.
+Vuélvete invurnerable y realiza {1} for {2}. Mientras está activo, refleja projectiles y counter ataques cuerpo a cuerpo, infilgiendo {3} a tu objetivo.
+Impulso de Fuego
+Impúlsate hacia delante, prendiendo fuego a tu katana. Se puede reactiva al golpear a un enemigo un máximo de 3 veces.
+Impúlsate hacia delante, infligiendo {1} y {2} a tus objetivos. Golpear a un enemigo reactiva el impulso, y potencia tu siguiente Tajo de Fuego con {3}. Reactiva un máximo de {4} veces.
+Ataque de Llamas
+Lanza un proyectil incendiario con tu katana. Ataque de Llamas se carga al golpear a tus rivales con Tajo de Fuego.
+Lanza un proyectil incendiario, infligiendo {1} y {2} a objetivos. Ataque de Llamas se carga al golpear a tus rivales con Tajo de Fuego.
+Pali-tadas
+Realiza un combo de dos golpes, siendo el último dos patadas rápidas.
+Realiza un combo de dos golpes infilgiendo {1} con una patada fuerte, y {2} y {3} con dos patadas rápidas.
+Explosión de Sopa
+Realiza una patada voladora cubriendo una distancia corta en qualquier dirección.
+Realiza una patada voladora, infilgiendo {1} y aplicando {2} por {3}.
+Impulso Miso
+Impúlsate hacia delante realizando un rodillazo volador
+Impúlsate hacia una dirección infilgiendo {1} a objectivos impactados
+Entrega Express
+Entrega una patada giratoria en un arco, empujando a objetivos.
+Entrega una patada giratoria en un arco, infilgiendo {1} y aplicando {2} a objetivos.
+Inscribirse
+Detalles
+{0} de {1} meta de registros
+Desafío beta
+Vidas
+Aviso
+{0} vida se consumirá si pierdes la partida.
+No hay reembolsos para errores del juego o desconexiones.
+Sin vidas
+¡No tienes más vidas!
+Intenta ganar más vidas completando tareas:
+Obtener más vidas
+Tiempo restante para registrarse
+{0} registros
+de {0} necesarios para comenzar
+Ganar vidas
+Estás inscrito
+Comparta su código de invitación
+Cada {0} registro, se añadirá $ 1 al fondo
+¡El tiempo de registro ha terminado! Estén atentos para más noticias
+Ganar vidas
+Consigue vidas completando tareas. Cuantas más vidas ganes, más posibilidades tendrás.
+Su código de invitación:
+Twitch no vinculado
+Vincular
+Twitch vinculado a {0}
+Invitaciones de amigo
+{0} Amigo invita
+¡Reclamar!
+Reclamado
+Siguiente
+Indisponible
+{0} de {1}
+Tarea no completada. Invite a más amigos a desbloquear la recompensa
+Twitch Drops (12 - 15 de Octubre)
+Día {0}
+Tarea no completada. Consigue Twitch Drops para desbloquear la recompensa
+Jugar Partidas
+{0} partidas jugadas
+Tarea no completada. Juega más partidas para desbloquear la recompensa
+Fondo de Premios
+El grupo de premios estará dividido por los 50 mejores jugadores
+{0} posición
+{0} puntos
+Participación
+cada uno
+Cómo ganar
+Sigue jugando hasta que tus vidas se agoten. ¡Aquellos con la mayor cantidad de victorias serán coronados como campeones del torneo!
+Consigue vidas adicionales
+Completa tareas para ganar más vidas. Más vidas = ¡Más oportunidades!
+Ganar partidas
+Reúne victorias al ser el último equipo de pie. Pierdes una vida si tu escuadrón es eliminado.
+Escala la tabla de clasificación
+Solo unos pocos ganarán el fondo de premios. Que el esfuerzo no se detenga.
+Formato
+Evento de 4 días del 12 de octubre al 15 de octubre.
+Los servidores están abiertos de 9 a.m. a 2 a.m. PST.
+Cada juego tendrá un HP bajo como un modificador de juego base
+Día {0}
+Modificador de oro
+Pierdes si estás en quiebra
+Máximo 3 victorias alcanzables
+Noche
+Detrás de ti... ¡BOO!
+Máximo 10 victorias alcanzables
+Lluvia de meteoros
+Se acabó una vez que te quedas quieto
+Máximo 25 victorias alcanzables
+PV Reducidos
+Buena suerte
+Normas
+Romper cualquier regla resultará en una descalificación automática + expulsión
+No abusar de errores del juego.
+No usar bots para ganar vidas adicionales.
+No usar cuentas alternativas, solo puede registrarse una vez.
+No coludir con otros equipos.
+Regístrate para tener la oportunidad de ganar {0}
+{0} Registros
+de {0} para comenzar
+Vuelve al principio
+{0} se inscribió!
+{0} ha reclamado {1} vida(s)!
+Inscribirse
+Ingresa un código de invitación
+Inscribirse
+Inscrito
+Código de invitación copiado!
+Vidas
+Condigue vidas completando tareas. Más vidas = más oportunidades
+Twitch Drops
+Consigue vidas viendo transmisiones en Twitch
+
+
+#VALUE!

@@ -1,0 +1,99 @@
+[
+  {
+    "UpdateStageName": "Sync AMP GenericModule template",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "FetchURL",
+    "UpdateSourceData": "https://raw.githubusercontent.com/Sonic0810/BAPBAP-CustomServer-AMPTemplates/main/bapcustomservergithub.kvp",
+    "UpdateSourceArgs": "GenericModule.kvp",
+    "UpdateSourceTarget": "{{$FullInstanceDir}}",
+    "OverwriteExistingFiles": true,
+    "SkipOnFailure": true
+  },
+  {
+    "UpdateStageName": "Sync AMP configuration UI manifest",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "FetchURL",
+    "UpdateSourceData": "https://raw.githubusercontent.com/Sonic0810/BAPBAP-CustomServer-AMPTemplates/main/bapcustomservergithubconfig.json",
+    "UpdateSourceArgs": "configmanifest.json",
+    "UpdateSourceTarget": "{{$FullInstanceDir}}",
+    "OverwriteExistingFiles": true,
+    "SkipOnFailure": true
+  },
+  {
+    "UpdateStageName": "Sync AMP metaconfig manifest",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "FetchURL",
+    "UpdateSourceData": "https://raw.githubusercontent.com/Sonic0810/BAPBAP-CustomServer-AMPTemplates/main/bapcustomservergithubmetaconfig.json",
+    "UpdateSourceArgs": "bapcustomservergithubmetaconfig.json",
+    "UpdateSourceTarget": "{{$FullInstanceDir}}",
+    "OverwriteExistingFiles": true,
+    "SkipOnFailure": true
+  },
+  {
+    "UpdateStageName": "Sync AMP ports manifest",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "FetchURL",
+    "UpdateSourceData": "https://raw.githubusercontent.com/Sonic0810/BAPBAP-CustomServer-AMPTemplates/main/bapcustomservergithubports.json",
+    "UpdateSourceArgs": "bapcustomservergithubports.json",
+    "UpdateSourceTarget": "{{$FullInstanceDir}}",
+    "OverwriteExistingFiles": true,
+    "SkipOnFailure": true
+  },
+  {
+    "UpdateStageName": "Sync AMP update manifest for next run",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "FetchURL",
+    "UpdateSourceData": "https://raw.githubusercontent.com/Sonic0810/BAPBAP-CustomServer-AMPTemplates/main/bapcustomservergithubupdates.json",
+    "UpdateSourceArgs": "bapcustomservergithubupdates.json",
+    "UpdateSourceTarget": "{{$FullInstanceDir}}",
+    "OverwriteExistingFiles": true,
+    "SkipOnFailure": true
+  },
+  {
+    "UpdateStageName": "Download BAPBAP Custom Server full package",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "GithubRelease",
+    "UpdateSourceArgs": "Sonic0810/BAPBAP-CustomServer-AMPTemplates",
+    "UpdateSourceData": "bapcustomserver-amp-full-linux-wine.zip",
+    "UpdateSourceTarget": "{{$FullBaseDir}}",
+    "UnzipUpdateSource": true,
+    "OverwriteExistingFiles": true,
+    "DeleteAfterExtract": true,
+    "SkipOnFailure": false
+  },
+  {
+    "UpdateStageName": "Set server executable flag",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "SetExecutableFlag",
+    "UpdateSourceArgs": "{{$FullBaseDir}}BapCustomServer",
+    "SkipOnFailure": false
+  },
+  {
+    "UpdateStageName": "Set web-panel script executable flag",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "SetExecutableFlag",
+    "UpdateSourceArgs": "{{$FullBaseDir}}amp-webpanel-start.sh",
+    "SkipOnFailure": false
+  },
+  {
+    "UpdateStageName": "Set start script executable flag",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "SetExecutableFlag",
+    "UpdateSourceArgs": "{{$FullBaseDir}}start-linux-wine.sh",
+    "SkipOnFailure": true
+  },
+  {
+    "UpdateStageName": "Set match-runner script executable flag",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "SetExecutableFlag",
+    "UpdateSourceArgs": "{{$FullBaseDir}}start-match.sh",
+    "SkipOnFailure": true
+  },
+  {
+    "UpdateStageName": "Set dump helper executable flag",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "SetExecutableFlag",
+    "UpdateSourceArgs": "{{$FullBaseDir}}createdump",
+    "SkipOnFailure": true
+  }
+]

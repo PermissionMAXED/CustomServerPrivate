@@ -1,0 +1,7 @@
+Prematch character select trigger not seen within 180 seconds.
+In C:\Users\Administrator\Downloads\CustomServer\tools\Select-MedusaOnPrematch.ps1:107 Zeichen:5
++     throw "Prematch character select trigger not seen within $Timeout ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (Prematch charac...in 180 seconds.:String) [], RuntimeException
+    + FullyQualifiedErrorId : Prematch character select trigger not seen within 180 seconds.
+ 

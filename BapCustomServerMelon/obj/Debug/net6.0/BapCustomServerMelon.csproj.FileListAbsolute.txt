@@ -1,0 +1,13 @@
+C:\Users\Administrator\Downloads\CustomServer\BapCustomServerMelon\bin\Debug\net6.0\BapCustomServerMelon.deps.json
+C:\Users\Administrator\Downloads\CustomServer\BapCustomServerMelon\bin\Debug\net6.0\BapCustomServerMelon.dll
+C:\Users\Administrator\Downloads\CustomServer\BapCustomServerMelon\bin\Debug\net6.0\BapCustomServerMelon.pdb
+C:\Users\Administrator\Downloads\CustomServer\BapCustomServerMelon\obj\Debug\net6.0\BapCustomServerMelon.csproj.AssemblyReference.cache
+C:\Users\Administrator\Downloads\CustomServer\BapCustomServerMelon\obj\Debug\net6.0\BapCustomServerMelon.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Downloads\CustomServer\BapCustomServerMelon\obj\Debug\net6.0\BapCustomServerMelon.AssemblyInfoInputs.cache
+C:\Users\Administrator\Downloads\CustomServer\BapCustomServerMelon\obj\Debug\net6.0\BapCustomServerMelon.AssemblyInfo.cs
+C:\Users\Administrator\Downloads\CustomServer\BapCustomServerMelon\obj\Debug\net6.0\BapCustomServerMelon.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Downloads\CustomServer\BapCustomServerMelon\obj\Debug\net6.0\BapCustomServerMelon.dll
+C:\Users\Administrator\Downloads\CustomServer\BapCustomServerMelon\obj\Debug\net6.0\refint\BapCustomServerMelon.dll
+C:\Users\Administrator\Downloads\CustomServer\BapCustomServerMelon\obj\Debug\net6.0\BapCustomServerMelon.pdb
+C:\Users\Administrator\Downloads\CustomServer\BapCustomServerMelon\obj\Debug\net6.0\ref\BapCustomServerMelon.dll
+C:\Users\Administrator\Downloads\CustomServer\BapCustomServerMelon\obj\Debug\net6.0\BapCustomServerMelon.sourcelink.json

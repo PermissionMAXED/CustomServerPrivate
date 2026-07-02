@@ -1,0 +1,49 @@
+{
+  "mapId": 35,
+  "name": "SampleForge",
+  "displayName": "SAMPLE FORGE (EDITOR TEST)",
+  "bundleFileName": "customflat.bundle",
+  "svPrefabName": "CustomFlat_SvData",
+  "clPrefabName": "CustomFlat_ClData",
+  "baseSvResource": "levels/maps/blank_test_bakedata/Blank_Test_SvData",
+  "baseClResource": "levels/maps/blank_test_bakedata/Blank_Test_ClData",
+  "mapSettingsDisplayName": "SAMPLE FORGE",
+  "mapType": 0,
+  "customZoneRounds": true,
+  "excludeNavMeshFloor": false,
+  "excludeWaterPerimeter": false,
+  "mapSize": [ 48, 48 ],
+  "zoneRounds": [
+    {
+      "secondsUntilZoneStart": 45,
+      "secondsZoneMoveDuration": 30,
+      "closePercentage": 35,
+      "damagePercentage": 5,
+      "untilStartPlayerFactorInfluence": 0,
+      "moveDurationPlayerFactorInfluence": 0,
+      "doAugments": false
+    }
+  ],
+  "enableTileEdits": true,
+  "useLevelDataTileMutations": true,
+  "tileEdits": [
+    { "layer": "Ground", "x": 24, "y": 24, "rotPrefabId": 242 },
+    { "layer": "Ground", "x": 23, "y": 24, "rotPrefabId": 243 },
+    { "layer": "Ground", "x": 25, "y": 24, "rotPrefabId": 244 },
+    { "layer": "Ground", "x": 24, "y": 23, "rotPrefabId": 245 },
+    { "layer": "Ground", "x": 24, "y": 25, "rotPrefabId": 246 }
+  ],
+  "enableEntities": true,
+  "entities": [
+    { "prefab": "Npc_Boss_Chad", "x": 0, "y": 0, "z": 0, "rotY": 0 },
+    { "prefab": "Npc_SlimeBoss_A", "x": 4, "y": 0, "z": 0, "rotY": 270 },
+    { "prefab": "Npc_SlimeBoss_C", "x": -4, "y": 0, "z": 0, "rotY": 90 }
+  ],
+  "spawnPoints": [
+    [ 12, 0, 12 ],
+    [ -12, 0, -12 ],
+    [ 12, 0, -12 ],
+    [ -12, 0, 12 ]
+  ],
+  "enabled": true
+}

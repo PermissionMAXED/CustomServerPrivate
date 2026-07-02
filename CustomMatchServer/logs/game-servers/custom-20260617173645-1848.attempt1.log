@@ -1,0 +1,282 @@
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+Initialize engine version: 2022.3.38f1 (c5d5a7410213)
+[Subsystems] Discovering subsystems at path C:/Users/Administrator/Downloads/CustomServer/Spiel/Battleroyalebuild/bapbap_Data/UnitySubsystems
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3060 Ti (ID=0x2486)
+    Vendor:   NVIDIA
+    VRAM:     3072 MB
+    Driver:   32.0.15.9621
+<b>[App UI]</b> Unable to find an AppUISettings instance, creating a default one...
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Unity.AppUI.Core.AppUI:InitializeInPlayer()
+
+-------------------------------------------------------------------------------------------------------
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+
+~   This Game has been MODIFIED using MelonLoader. DO NOT report any issues to the Game Developers!   ~
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+
+-------------------------------------------------------------------------------------------------------
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+
+The referenced script on this Behaviour (Game Object 'Blitz') is missing!
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+UnloadTime: 9.235900 ms
+ThreadLog initialized.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+Mirror.ThreadLog:Initialize()
+
+[PREAWAKE] ENV_PRODUCTION
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+[PREAWAKE] BACKEND_STRIP
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+[PREAWAKE] hostname= VINCENT
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+[PREAWAKE] environment= Production
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+[PREAWAKE] version = v0.1.1758-38212
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+[PREAWAKE] networkConfigEnv = Staging
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+[PREAWAKE] networkConfigsServer = ServerConfig { 
+MatchmakingHost: , 
+ListenPort: 0, 
+HeaderSecretKey: , 
+HeaderSecret: , 
+DebugPassword: , 
+DebugSquadPassword: , 
+DevGameAuthId: , 
+}
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+[PREAWAKE] networkConfigsClient = ClientConfig { 
+ApiHost: http://127.0.0.1:5055, 
+CookieDomain: .bapbap.gg, 
+CookieSessionKey: sid, 
+}
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+[PREAWAKE] logConfigEnv = Staging
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+[PREAWAKE] Args start
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\bapbap.exe
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+-batchmode
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+-logFile
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+C:\Users\Administrator\Downloads\CustomServer\CustomMatchServer\logs\game-servers\custom-20260617173645-1848.attempt1.log
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+-httpport=7850
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+-wsport=7777
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+-kcpport=7778
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+-tcpport=7779
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+--bapcustom-host=127.0.0.1
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+--bapcustom-server-port=5157
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+--bapcustom-use-proxy=false
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+--bapcustom-show-ui=false
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+[PREAWAKE] Args end | http=7850 ws=7777 kcp=7778 tcp=7779
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+[LocalSavedData] InitializeSystemResolutions - nativeSystemResolution: 3440 x 1440 @ 99.998Hz
+[LocalSavedData] InitializeSystemResolutions - res: UnityEngine.Resolution[], length: 68
+Found supported resolution: (3440, 1440)
+STEAM: Steam unavailable
+[Spatial Hash] Partial Rebuild Interval = 0,25
+1800
+[UIDropdownController] No values added to the dropdown
+[UIDropdownController] No values added to the dropdown
+UILobby platform variant not found: WindowsPlayer using default
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+BAPBAP.UI.UILobbyConfiguration:get_PrefabVariant()
+BAPBAP.UI.UILobby:Build()
+BAPBAP.UI.<Awake>d__111:MoveNext()
+System.Runtime.CompilerServices.AsyncVoidMethodBuilder:Start(TStateMachine&)
+BAPBAP.UI.UIManager:Awake()
+
+Color primaries 0 is unknown or unsupported by WindowsMediaFoundation. Falling back to default may result in color shift. C:/Users/Administrator/Downloads/CustomServer/Spiel/Battleroyalebuild/bapbap_Data/sharedassets0.resource
+[UICharactersConfiguration] No characters available in lobby.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UICharactersConfiguration:TryGetLobbyCharConfigByIndex(Int32, CharacterConfiguration&)
+BAPBAP.UI.UILobbyCharacterSelectPage:OpenCharacterSummaryPage()
+BAPBAP.UI.UILobbyCharacterSelectPage:Build(Configuration, Translator)
+BAPBAP.UI.UILobbyTabGroup:Build(Configuration, Translator)
+BAPBAP.UI.UILobby:Build()
+BAPBAP.UI.<Awake>d__111:MoveNext()
+System.Runtime.CompilerServices.AsyncVoidMethodBuilder:Start(TStateMachine&)
+BAPBAP.UI.UIManager:Awake()
+
+Opening Lobby UI :) at the time of 17.06.2026 19:37:17
+TelepathyTransport initialized!
+[LocalSavedData] Set Quick cast = False
+[NETMANAGER] Running Server Build
+[NETMANAGER] Vsync = 0 | FPS = 62
+[NETMANAGER] WS Port = 7777
+[NETMANAGER] KCP Port = 7778
+[NETMANAGER] TCP Port = 7779
+START MATCH - isDevLobbyMode=False | 1
+[GameMode] Loading GameManager (BAPBAP.Game.GameModeBattleRoyale)
+DIMENSION DATA COUNT 1
+[GameManager] Dimension data received: System.Collections.Generic.List`1[BAPBAP.Network.MatchmakingDimensionData]
+<color=cyan>[LIFECYCLE] Waiting for 'isWaitingForPlayers' to be false...</color>
+Cannot instantiate objects with a parent which is persistent. New object will be created without a parent.
+UnityEngine.Object:Instantiate(Object, Transform, Boolean)
+UnityEngine.Object:Instantiate(T, Transform)
+BAPBAP.Maps.<LoadLevelCoroutine>d__77:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+
+[ line 9364788]
+
+Cannot instantiate objects with a parent which is persistent. New object will be created without a parent.
+UnityEngine.Object:Instantiate(Object, Transform, Boolean)
+UnityEngine.Object:Instantiate(T, Transform)
+BAPBAP.Maps.<LoadLevelCoroutine>d__77:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+
+[ line 9364788]
+
+No prebaked navmesh data for level 'CustomArena' found. Baking navmesh surface now.
+Loaded Map CustomArena
+Failed to create agent because it is not close enough to the NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 9366116]
+
+Failed to create agent because it is not close enough to the NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 9366116]
+
+[GameMode] OnEnable | frameCount 17
+DIMENSION ID is 0. Ignored.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+BAPBAP.Local.DimensionManager:SpawnDimension(Int32, Vector3, Single)
+BAPBAP.Game.GameModeBattleRoyale:OnEnable()
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Game.<LoadCoroutine>d__79:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+
+spawnLocationPerTeam MTD { reqId: 3, gameId: custom-20260617173645-1848, botTeams: 1, botDifficulty: 1, players: [{ username: Player3, discriminator: 1003, accountId: custom-3, gameAuthId: 3673c288386001f464156c8da58908a3, lobbyCode: ENTFULL, points: 0, charId: 1, skinAssetId: -1, teamId: 1, }, ], spawnLocationPerTeam: [ 0, 1, 2, ], }
+<color=cyan>[PRE-MATCH] Started</color>
+<color=cyan>[PRE-MATCH] Waiting for all players to connect, max 10 seconds...</color>
+<color=cyan>[LIFECYCLE] Waiting for 'isWaitingForStart' to be false...</color>
+<color=yellow>[CHAR SELECT] Starting...</color>
+<color=yellow>[CHAR SELECT] Waiting for 20 seconds...</color>

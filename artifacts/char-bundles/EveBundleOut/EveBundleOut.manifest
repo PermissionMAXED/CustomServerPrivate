@@ -1,0 +1,10 @@
+ManifestFileVersion: 0
+CRC: 3868770502
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: medusa
+      Dependencies: {}
+    Info_1:
+      Name: eve
+      Dependencies: {}

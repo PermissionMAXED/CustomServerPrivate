@@ -1,0 +1,68 @@
+using System;
+using System.Runtime.CompilerServices;
+using Il2CppInterop.Common.Attributes;
+using Il2CppInterop.Runtime;
+using Il2CppInterop.Runtime.InteropTypes;
+using Il2CppSystem;
+
+namespace Il2CppBAPBAP.Network;
+
+[System.Serializable]
+public class ResetGameData : Il2CppSystem.Object
+{
+	private static readonly System.IntPtr NativeFieldInfoPtr_reqId;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_ToString_Public_Virtual_String_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr__ctor_Public_Void_0;
+
+	public unsafe int reqId
+	{
+		get
+		{
+			nint num = (nint)IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this) + (int)IL2CPP.il2cpp_field_get_offset(NativeFieldInfoPtr_reqId);
+			return *(int*)num;
+		}
+		set
+		{
+			*(int*)((nint)IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this) + (int)IL2CPP.il2cpp_field_get_offset(NativeFieldInfoPtr_reqId)) = num;
+		}
+	}
+
+	static ResetGameData()
+	{
+		Il2CppClassPointerStore<ResetGameData>.NativeClassPtr = IL2CPP.GetIl2CppClass("Assembly-CSharp.dll", "BAPBAP.Network", "ResetGameData");
+		IL2CPP.il2cpp_runtime_class_init(Il2CppClassPointerStore<ResetGameData>.NativeClassPtr);
+		NativeFieldInfoPtr_reqId = IL2CPP.GetIl2CppField(Il2CppClassPointerStore<ResetGameData>.NativeClassPtr, "reqId");
+		NativeMethodInfoPtr_ToString_Public_Virtual_String_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<ResetGameData>.NativeClassPtr, 100666623);
+		NativeMethodInfoPtr__ctor_Public_Void_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<ResetGameData>.NativeClassPtr, 100666624);
+	}
+
+	[CallerCount(0)]
+	[CachedScanResults(RefRangeStart = 0, RefRangeEnd = 0, XrefRangeStart = 64982, XrefRangeEnd = 64994, MetadataInitTokenRva = 0L, MetadataInitFlagRva = 0L)]
+	public unsafe override string ToString()
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = null;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_ToString_Public_Virtual_String_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+		return IL2CPP.Il2CppStringToManaged(intPtr);
+	}
+
+	[CallerCount(5410)]
+	[CachedScanResults(RefRangeStart = 11, RefRangeEnd = 5421, XrefRangeStart = 11, XrefRangeEnd = 5421, MetadataInitTokenRva = 0L, MetadataInitFlagRva = 0L)]
+	public unsafe ResetGameData()
+		: this(IL2CPP.il2cpp_object_new(Il2CppClassPointerStore<ResetGameData>.NativeClassPtr))
+	{
+		System.IntPtr* ptr = null;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(NativeMethodInfoPtr__ctor_Public_Void_0, IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	public ResetGameData(System.IntPtr pointer)
+		: base(pointer)
+	{
+	}
+}

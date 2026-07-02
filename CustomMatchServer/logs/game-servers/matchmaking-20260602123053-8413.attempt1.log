@@ -1,0 +1,530 @@
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+Initialize engine version: 2022.3.38f1 (c5d5a7410213)
+[Subsystems] Discovering subsystems at path C:/Users/Administrator/Downloads/CustomServer/Spiel/Battleroyalebuild/bapbap_Data/UnitySubsystems
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3060 Ti (ID=0x2486)
+    Vendor:   NVIDIA
+    VRAM:     3072 MB
+    Driver:   32.0.15.9621
+<b>[App UI]</b> Unable to find an AppUISettings instance, creating a default one...
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Unity.AppUI.Core.AppUI:InitializeInPlayer()
+
+-------------------------------------------------------------------------------------------------------
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+
+~   This Game has been MODIFIED using MelonLoader. DO NOT report any issues to the Game Developers!   ~
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+
+-------------------------------------------------------------------------------------------------------
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+
+The referenced script on this Behaviour (Game Object 'Blitz') is missing!
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+UnloadTime: 8.153100 ms
+ThreadLog initialized.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[PREAWAKE] ENV_PRODUCTION
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[PREAWAKE] BACKEND_STRIP
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[PREAWAKE] hostname= VINCENT
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[PREAWAKE] environment= Production
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[PREAWAKE] version = v0.1.1758-38212
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[PREAWAKE] networkConfigEnv = Staging
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[PREAWAKE] networkConfigsServer = ServerConfig { 
+MatchmakingHost: , 
+ListenPort: 0, 
+HeaderSecretKey: , 
+HeaderSecret: , 
+DebugPassword: , 
+DebugSquadPassword: , 
+DevGameAuthId: , 
+}
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[PREAWAKE] networkConfigsClient = ClientConfig { 
+ApiHost: http://127.0.0.1:5055, 
+CookieDomain: .bapbap.gg, 
+CookieSessionKey: sid, 
+}
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[PREAWAKE] logConfigEnv = Staging
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[PREAWAKE] Args start
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\bapbap.exe
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+-batchmode
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+-logFile
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+C:\Users\Administrator\Downloads\CustomServer\CustomMatchServer\logs\game-servers\matchmaking-20260602123053-8413.attempt1.log
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+-httpport=7850
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+-wsport=7777
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+-kcpport=7778
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+-tcpport=7779
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+--melonloader.agfoffline
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+--melonloader.captureplayerlogs
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+--bapcustom-host=127.0.0.1
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+--bapcustom-server-port=5198
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+--bapcustom-use-proxy=false
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[PREAWAKE] Args end | http=7850 ws=7777 kcp=7778 tcp=7779
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[LocalSavedData] InitializeSystemResolutions - nativeSystemResolution: 3440 x 1440 @ 99.998Hz
+[LocalSavedData] InitializeSystemResolutions - res: UnityEngine.Resolution[], length: 68
+Found supported resolution: (3440, 1440)
+Failed to create agent because there is no valid NavMesh
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+
+[ line 9364660]
+
+NullReferenceException: Object reference not set to an instance of an object.
+  at BAPBAP.Entities.CharHurtbox.PreAwake (BAPBAP.Entities.EntityManager e) [0x00000] in <00000000000000000000000000000000>:0 
+  at BAPBAP.Entities.EntityManager.Awake () [0x00000] in <00000000000000000000000000000000>:0 
+  at UnityEngine.Object.Internal_CloneSingle (UnityEngine.Object data) [0x00000] in <00000000000000000000000000000000>:0 
+  at UnityEngine.Object.Instantiate[T] (T original) [0x00000] in <00000000000000000000000000000000>:0 
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+
+NullReferenceException: Object reference not set to an instance of an object.
+  at BAPBAP.Entities.CharInteract.Awake () [0x00000] in <00000000000000000000000000000000>:0 
+  at UnityEngine.Object.Internal_CloneSingle (UnityEngine.Object data) [0x00000] in <00000000000000000000000000000000>:0 
+  at UnityEngine.Object.Instantiate[T] (T original) [0x00000] in <00000000000000000000000000000000>:0 
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+
+NullReferenceException: Object reference not set to an instance of an object.
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+
+NullReferenceException: Object reference not set to an instance of an object.
+UnityEngine.GameObject:SetActive(Boolean)
+
+STEAM: Steam unavailable
+[Spatial Hash] Partial Rebuild Interval = 0,25
+1800
+[UIDropdownController] No values added to the dropdown
+[UIDropdownController] No values added to the dropdown
+UILobby platform variant not found: WindowsPlayer using default
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+Color primaries 0 is unknown or unsupported by WindowsMediaFoundation. Falling back to default may result in color shift. C:/Users/Administrator/Downloads/CustomServer/Spiel/Battleroyalebuild/bapbap_Data/sharedassets0.resource
+Opening Lobby UI :) at the time of 02.06.2026 14:31:14
+TelepathyTransport initialized!
+[LocalSavedData] Set Quick cast = False
+[NETMANAGER] Running Server Build
+[NETMANAGER] Vsync = 0 | FPS = 62
+[NETMANAGER] WS Port = 7777
+[NETMANAGER] KCP Port = 7778
+[NETMANAGER] TCP Port = 7779
+START MATCH - isDevLobbyMode=False | 2
+[GameMode] Loading GameManager (BAPBAP.Game.GameModeBattleRoyale)
+DIMENSION DATA COUNT 1
+[GameManager] Dimension data received: System.Collections.Generic.List`1[BAPBAP.Network.MatchmakingDimensionData]
+<color=cyan>[LIFECYCLE] Waiting for 'isWaitingForPlayers' to be false...</color>
+Curl error 7: Failed to connect to 127.0.0.1 port 5055 after 2044 ms: Couldn't connect to server
+Prebaked navmesh data for level 'Map3_Lyceum' succesfully found. Applying now.
+Loaded Map Map3_Lyceum
+[GameMode] OnEnable | frameCount 43
+DIMENSION ID is 0. Ignored.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+HttpClient HTTP Error: Cannot connect to destination host | 
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[NETMANAGER] Client connected - 1883310210 | 1339
+[NETMANAGER] Client ready pre - 1883310210 | 1362
+[NETMANAGER] Client ready post - 1883310210 | 1362
+[NETMANAGER] OnServerClInit - 1883310210 - isDevLobbyMode=False | 1362
+[NETMANAGER] ServerMatchmakingInit - connId=1883310210 name= gameAuth=88fc3df3aa7764da19a0f5d1821b7136 | 1362
+[NETMANAGER] Invalid Game Auth - Player name= gameAuth=88fc3df3aa7764da19a0f5d1821b7136 | 1362
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[NETMANAGER] OnServerDisconnect before connection(1883310210) 1883310210
+  at BAPBAP.Network.GameNetworkManager.OnServerDisconnect (Mirror.NetworkConnectionToClient conn) <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at Mirror.NetworkServer.OnTransportDisconnected (System.Int32 connectionId) <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at Edgegap.EdgegapKcpTransport.<Awake>b__8_7 (System.Int32 connectionId) <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at kcp2k.KcpServer+<>c__DisplayClass20_0.<CreateConnection>g__OnDisconnectedCallback|4 () <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at kcp2k.KcpServerConnection.OnDisconnected () <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at kcp2k.KcpPeer.Disconnect () <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at kcp2k.KcpServer.Disconnect (System.Int32 connectionId) <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at Mirror.NetworkConnectionToClient.Disconnect () <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at BAPBAP.Network.GameNetworkManager.OnServerMatchmakingClInit (Mirror.NetworkConnectionToClient conn, BAPBAP.Network.GameNetworkManager+ClInitMsg msg) <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at BAPBAP.Network.GameNetworkManager.OnServerClInit (Mirror.NetworkConnectionToClient conn, BAPBAP.Network.GameNetworkManager+ClInitMsg msg) <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at Mirror.NetworkMessages+<>c__DisplayClass9_0`2[T,C].<WrapHandler>g__Wrapped|0 (C conn, T msg, System.Int32 _) <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at Mirror.NetworkMessages+<>c__DisplayClass8_0`2[T,C].<WrapHandler>b__0 (Mirror.NetworkConnection conn, Mirror.NetworkReader reader, System.Int32 channelId) <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at Mirror.NetworkServer.OnTransportData (System.Int32 connectionId, System.ArraySegment`1[T] data, System.Int32 channelId) <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at kcp2k.KcpTransport.<Awake>b__29_6 (System.Int32 connectionId, System.ArraySegment`1[T] message, kcp2k.KcpChannel channel) <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at kcp2k.KcpServer+<>c__DisplayClass20_0.<CreateConnection>b__0 (System.ArraySegment`1[T] message, kcp2k.KcpChannel channel) <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at kcp2k.KcpServerConnection.OnData (System.ArraySegment`1[T] message, kcp2k.KcpChannel channel) <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at kcp2k.KcpPeer.TickIncoming_Authenticated (System.UInt32 time) <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at kcp2k.KcpPeer.TickIncoming () <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at kcp2k.KcpServer.TickIncoming () <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at kcp2k.KcpTransport.ServerEarlyUpdate () <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at Mirror.NetworkServer.NetworkEarlyUpdate () <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at Mirror.NetworkLoop.NetworkEarlyUpdate () <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at UnityEngine.Application+LowMemoryCallback.Invoke () <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+[NETMANAGER] OnServerDisconnect connection(1883310210) 1883310210
+Removing player... connection(1883310210) 1883310210 | 1362
+[NETMANAGER] OnServerDisconnect after connection(1883310210) 1883310210
+[KCP] Server: RawSend invalid connectionId=1883310210
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310210
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310210
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310210
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310210
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310210
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310210
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310210
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310210
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310210
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310210
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310210
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310210
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310210
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310210
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310210
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310210
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310210
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310210
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310210
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310210
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310210
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310210
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310210
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310210
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[NETMANAGER] Client connected - 1883310213 | 1424
+[NETMANAGER] Client ready pre - 1883310213 | 1429
+[NETMANAGER] Client ready post - 1883310213 | 1429
+[NETMANAGER] OnServerClInit - 1883310213 - isDevLobbyMode=False | 1429
+[NETMANAGER] ServerMatchmakingInit - connId=1883310213 name= gameAuth=88fc3df3aa7764da19a0f5d1821b7136 | 1429
+[NETMANAGER] Invalid Game Auth - Player name= gameAuth=88fc3df3aa7764da19a0f5d1821b7136 | 1429
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[NETMANAGER] OnServerDisconnect before connection(1883310213) 1883310213
+  at BAPBAP.Network.GameNetworkManager.OnServerDisconnect (Mirror.NetworkConnectionToClient conn) <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at Mirror.NetworkServer.OnTransportDisconnected (System.Int32 connectionId) <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at Edgegap.EdgegapKcpTransport.<Awake>b__8_7 (System.Int32 connectionId) <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at kcp2k.KcpServer+<>c__DisplayClass20_0.<CreateConnection>g__OnDisconnectedCallback|4 () <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at kcp2k.KcpServerConnection.OnDisconnected () <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at kcp2k.KcpPeer.Disconnect () <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at kcp2k.KcpServer.Disconnect (System.Int32 connectionId) <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at Mirror.NetworkConnectionToClient.Disconnect () <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at BAPBAP.Network.GameNetworkManager.OnServerMatchmakingClInit (Mirror.NetworkConnectionToClient conn, BAPBAP.Network.GameNetworkManager+ClInitMsg msg) <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at BAPBAP.Network.GameNetworkManager.OnServerClInit (Mirror.NetworkConnectionToClient conn, BAPBAP.Network.GameNetworkManager+ClInitMsg msg) <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at Mirror.NetworkMessages+<>c__DisplayClass9_0`2[T,C].<WrapHandler>g__Wrapped|0 (C conn, T msg, System.Int32 _) <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at Mirror.NetworkMessages+<>c__DisplayClass8_0`2[T,C].<WrapHandler>b__0 (Mirror.NetworkConnection conn, Mirror.NetworkReader reader, System.Int32 channelId) <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at Mirror.NetworkServer.OnTransportData (System.Int32 connectionId, System.ArraySegment`1[T] data, System.Int32 channelId) <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at kcp2k.KcpTransport.<Awake>b__29_6 (System.Int32 connectionId, System.ArraySegment`1[T] message, kcp2k.KcpChannel channel) <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at kcp2k.KcpServer+<>c__DisplayClass20_0.<CreateConnection>b__0 (System.ArraySegment`1[T] message, kcp2k.KcpChannel channel) <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at kcp2k.KcpServerConnection.OnData (System.ArraySegment`1[T] message, kcp2k.KcpChannel channel) <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at kcp2k.KcpPeer.TickIncoming_Authenticated (System.UInt32 time) <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at kcp2k.KcpPeer.TickIncoming () <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at kcp2k.KcpServer.TickIncoming () <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at kcp2k.KcpTransport.ServerEarlyUpdate () <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at Mirror.NetworkServer.NetworkEarlyUpdate () <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at Mirror.NetworkLoop.NetworkEarlyUpdate () <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at UnityEngine.Application+LowMemoryCallback.Invoke () <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+[NETMANAGER] OnServerDisconnect connection(1883310213) 1883310213
+Removing player... connection(1883310213) 1883310213 | 1429
+[NETMANAGER] OnServerDisconnect after connection(1883310213) 1883310213
+[KCP] Server: RawSend invalid connectionId=1883310213
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310213
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310213
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310213
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310213
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310213
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310213
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310213
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310213
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310213
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310213
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310213
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310213
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310213
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310213
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310213
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310213
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310213
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310213
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310213
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310213
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310213
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310213
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310213
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310213
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[NETMANAGER] Client connected - 1883310212 | 1493
+[NETMANAGER] Client ready pre - 1883310212 | 1495
+[NETMANAGER] Client ready post - 1883310212 | 1495
+[NETMANAGER] OnServerClInit - 1883310212 - isDevLobbyMode=False | 1495
+[NETMANAGER] ServerMatchmakingInit - connId=1883310212 name= gameAuth=88fc3df3aa7764da19a0f5d1821b7136 | 1495
+[NETMANAGER] Invalid Game Auth - Player name= gameAuth=88fc3df3aa7764da19a0f5d1821b7136 | 1495
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[NETMANAGER] OnServerDisconnect before connection(1883310212) 1883310212
+  at BAPBAP.Network.GameNetworkManager.OnServerDisconnect (Mirror.NetworkConnectionToClient conn) <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at Mirror.NetworkServer.OnTransportDisconnected (System.Int32 connectionId) <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at Edgegap.EdgegapKcpTransport.<Awake>b__8_7 (System.Int32 connectionId) <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at kcp2k.KcpServer+<>c__DisplayClass20_0.<CreateConnection>g__OnDisconnectedCallback|4 () <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at kcp2k.KcpServerConnection.OnDisconnected () <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at kcp2k.KcpPeer.Disconnect () <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at kcp2k.KcpServer.Disconnect (System.Int32 connectionId) <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at Mirror.NetworkConnectionToClient.Disconnect () <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at BAPBAP.Network.GameNetworkManager.OnServerMatchmakingClInit (Mirror.NetworkConnectionToClient conn, BAPBAP.Network.GameNetworkManager+ClInitMsg msg) <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at BAPBAP.Network.GameNetworkManager.OnServerClInit (Mirror.NetworkConnectionToClient conn, BAPBAP.Network.GameNetworkManager+ClInitMsg msg) <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at Mirror.NetworkMessages+<>c__DisplayClass9_0`2[T,C].<WrapHandler>g__Wrapped|0 (C conn, T msg, System.Int32 _) <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at Mirror.NetworkMessages+<>c__DisplayClass8_0`2[T,C].<WrapHandler>b__0 (Mirror.NetworkConnection conn, Mirror.NetworkReader reader, System.Int32 channelId) <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at Mirror.NetworkServer.OnTransportData (System.Int32 connectionId, System.ArraySegment`1[T] data, System.Int32 channelId) <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at kcp2k.KcpTransport.<Awake>b__29_6 (System.Int32 connectionId, System.ArraySegment`1[T] message, kcp2k.KcpChannel channel) <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at kcp2k.KcpServer+<>c__DisplayClass20_0.<CreateConnection>b__0 (System.ArraySegment`1[T] message, kcp2k.KcpChannel channel) <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at kcp2k.KcpServerConnection.OnData (System.ArraySegment`1[T] message, kcp2k.KcpChannel channel) <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at kcp2k.KcpPeer.TickIncoming_Authenticated (System.UInt32 time) <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at kcp2k.KcpPeer.TickIncoming () <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at kcp2k.KcpServer.TickIncoming () <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at kcp2k.KcpTransport.ServerEarlyUpdate () <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at Mirror.NetworkServer.NetworkEarlyUpdate () <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at Mirror.NetworkLoop.NetworkEarlyUpdate () <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+  at UnityEngine.Application+LowMemoryCallback.Invoke () <0x00000 + 0xffffffff> 0 in <00000000000000000000000000000000>:0 
+[NETMANAGER] OnServerDisconnect connection(1883310212) 1883310212
+Removing player... connection(1883310212) 1883310212 | 1495
+[NETMANAGER] OnServerDisconnect after connection(1883310212) 1883310212
+[KCP] Server: RawSend invalid connectionId=1883310212
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310212
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310212
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310212
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310212
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310212
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310212
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310212
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310212
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310212
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310212
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310212
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310212
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310212
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310212
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310212
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310212
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310212
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310212
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310212
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310212
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310212
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310212
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310212
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[KCP] Server: RawSend invalid connectionId=1883310212
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+spawnLocationPerTeam MTD { reqId: 1, gameId: matchmaking-20260602123053-8413, botTeams: 4, botDifficulty: 1, players: [{ username: CodexLiveV177, discriminator: 1761, accountId: codex-live-v177-20260602-143020, gameAuthId: 88fc3df3aa7764da19a0f5d1821b7136, lobbyCode: MMVFMCGT, points: 0, charId: 15, skinAssetId: -1, teamId: 1, }, ], spawnLocationPerTeam: [ 0, 1, 2, 3, 4, 5, 6, 7, 8, ], }
+<color=cyan>[PRE-MATCH] Started</color>
+<color=cyan>[PRE-MATCH] Waiting for all players to connect, max 10 seconds...</color>
+<color=cyan>[LIFECYCLE] Waiting for 'isWaitingForStart' to be false...</color>
+<color=yellow>[CHAR SELECT] Starting...</color>
+<color=yellow>[CHAR SELECT] Waiting for 20 seconds...</color>
+<color=yellow>[CHAR SELECT] Complete!</color>
+<color=yellow>[SPAWN SELECT] Starting...</color>
+<color=yellow>[SPAWN SELECT] Waiting for 10 seconds...</color>
+<color=yellow>[SPAWN SELECT] Spawns Assigned!</color>
+<color=cyan>[PRE-MATCH] Ended</color>
+[GameNetworkManager] ERROR: teamId was out of bounds on spawnLocationPerTeam - in OnGameReadyToStart
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+<color=green>Setting isWaitingForStart to false</color>
+<color=cyan>[LIFECYCLE] Waiting for currentGameMode to load...</color>

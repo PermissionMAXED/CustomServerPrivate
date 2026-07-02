@@ -1,0 +1,142 @@
+[19:20:29.961] [UNITY] [UnityMemory] Configuration Parameters - Can be set up in boot.config
+[19:20:29.963] [UNITY]     "memorysetup-bucket-allocator-granularity=16"
+[19:20:29.963] [UNITY]     "memorysetup-bucket-allocator-bucket-count=8"
+[19:20:29.964] [UNITY]     "memorysetup-bucket-allocator-block-size=4194304"
+[19:20:29.965] [UNITY]     "memorysetup-bucket-allocator-block-count=1"
+[19:20:29.966] [UNITY]     "memorysetup-main-allocator-block-size=16777216"
+[19:20:29.966] [UNITY]     "memorysetup-thread-allocator-block-size=16777216"
+[19:20:29.967] [UNITY]     "memorysetup-gfx-main-allocator-block-size=16777216"
+[19:20:29.967] [UNITY]     "memorysetup-gfx-thread-allocator-block-size=16777216"
+[19:20:29.967] [UNITY]     "memorysetup-cache-allocator-block-size=4194304"
+[19:20:29.967] [UNITY]     "memorysetup-typetree-allocator-block-size=2097152"
+[19:20:29.967] [UNITY]     "memorysetup-profiler-bucket-allocator-granularity=16"
+[19:20:29.968] [UNITY]     "memorysetup-profiler-bucket-allocator-bucket-count=8"
+[19:20:29.968] [UNITY]     "memorysetup-profiler-bucket-allocator-block-size=4194304"
+[19:20:29.968] [UNITY]     "memorysetup-profiler-bucket-allocator-block-count=1"
+[19:20:29.968] [UNITY]     "memorysetup-profiler-allocator-block-size=16777216"
+[19:20:29.968] [UNITY]     "memorysetup-profiler-editor-allocator-block-size=1048576"
+[19:20:29.969] [UNITY]     "memorysetup-temp-allocator-size-main=4194304"
+[19:20:29.969] [UNITY]     "memorysetup-job-temp-allocator-block-size=2097152"
+[19:20:29.969] [UNITY]     "memorysetup-job-temp-allocator-block-size-background=1048576"
+[19:20:29.969] [UNITY]     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+[19:20:29.969] [UNITY]     "memorysetup-allocator-temp-initial-block-size-main=262144"
+[19:20:29.969] [UNITY]     "memorysetup-allocator-temp-initial-block-size-worker=262144"
+[19:20:29.969] [UNITY]     "memorysetup-temp-allocator-size-background-worker=32768"
+[19:20:29.970] [UNITY]     "memorysetup-temp-allocator-size-job-worker=262144"
+[19:20:29.970] [UNITY]     "memorysetup-temp-allocator-size-preload-manager=262144"
+[19:20:29.970] [UNITY]     "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+[19:20:29.970] [UNITY]     "memorysetup-temp-allocator-size-audio-worker=65536"
+[19:20:29.970] [UNITY]     "memorysetup-temp-allocator-size-cloud-worker=32768"
+[19:20:29.970] [UNITY]     "memorysetup-temp-allocator-size-gfx=262144"
+
+[19:20:31.879] ------------------------------
+[19:20:31.882] MelonLoader v0.7.2 Open-Beta
+[19:20:31.883] OS: Windows 11
+[19:20:31.883] Hash Code: 58AB98835E598BD67B7DB233734DE8603F92C9C6A6081B13CB9A5CC37C02DD13
+[19:20:31.883] ------------------------------
+[19:20:31.883] Game Type: Il2cpp
+[19:20:31.884] Game Arch: x86
+[19:20:31.884] ------------------------------
+[19:20:31.884] Command-Line: 
+[19:20:31.884] ------------------------------
+[19:20:31.885] Core::BasePath = C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild
+[19:20:31.885] Game::BasePath = C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild
+[19:20:31.885] Game::DataPath = C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\bapbap_Data
+[19:20:31.886] Game::ApplicationPath = C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\bapbap.exe
+[19:20:31.886] Runtime Type: net6
+[19:20:32.441] ------------------------------
+[19:20:32.622] Game Name: BAPBAP
+[19:20:32.646] Game Developer: gg.bapbap
+[19:20:32.664] Unity Version: 2022.3.38f1
+[19:20:32.676] Game Version: 0.1.1758-38212
+[19:20:32.691] ------------------------------
+
+[19:20:34.407] Preferences Loaded!
+
+[19:20:34.569] Loading UserLibs...
+[19:20:35.054] ------------------------------
+[19:20:35.074] Melon Assembly loaded: '.\UserLibs\BAPBAP.ModAPI.dll'
+[19:20:35.074] SHA256 Hash: '0E14F39A9C47B6EBA106A0F23E76A0989B3270D7BCDD3E4BB0DD51E63BDB3CB5'
+[19:20:35.074] ------------------------------
+[19:20:35.074] 0 UserLibs loaded.
+
+[19:20:35.075] Loading Plugins...
+[19:20:35.082] 0 Plugins loaded.
+
+[19:20:35.115] [UNITY] [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[19:20:35.131] [UNITY] Initialize engine version: 2022.3.38f1 (c5d5a7410213)
+[19:20:35.131] [UNITY] [Subsystems] Discovering subsystems at path C:/Users/Administrator/Downloads/CustomServer/Spiel/Battleroyalebuild/bapbap_Data/UnitySubsystems
+[19:20:35.132] [UNITY] GfxDevice: creating device client; threaded=1; jobified=0
+[19:20:35.417] [UNITY] Direct3D:
+[19:20:35.417] [UNITY]     Version:  Direct3D 11.0 [level 11.1]
+[19:20:35.418] [UNITY]     Renderer: NVIDIA GeForce RTX 3060 Ti (ID=0x2486)
+[19:20:35.418] [UNITY]     Vendor:   NVIDIA
+[19:20:35.418] [UNITY]     VRAM:     3072 MB
+[19:20:35.418] [UNITY]     Driver:   32.0.15.9621
+[19:20:38.041] [UNITY] <b>[App UI]</b> Unable to find an AppUISettings instance, creating a default one...
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Unity.AppUI.Core.AppUI:InitializeInPlayer()
+
+[19:20:38.097] [UNITY] <RI> Initializing input.
+[19:20:38.098] [UNITY] New input system (experimental) initialized
+[19:20:38.102] [UNITY] Using Windows.Gaming.Input
+[19:20:38.104] [UNITY] <RI> Input initialized.
+[19:20:38.150] [UNITY] <RI> Initialized touch support.
+[19:20:38.152] Loading Il2CppAssemblyGenerator...
+[19:20:38.357] [Il2CppAssemblyGenerator] Using Cpp2IL Version: 2022.1.0-pre-release.21
+[19:20:38.357] [Il2CppAssemblyGenerator] Using Il2CppInterop Version = 1.5.1+dbaf825aab891ff1e1627bea691bde0a81d1ad98
+[19:20:38.357] [Il2CppAssemblyGenerator] Using Unity Dependencies Version = 2022.3.38
+[19:20:38.358] [Il2CppAssemblyGenerator] Using Deobfuscation Regex = null
+[19:20:38.358] [Il2CppAssemblyGenerator] Cpp2IL is up to date.
+[19:20:38.359] [Il2CppAssemblyGenerator] Cpp2IL.Plugin.StrippedCodeRegSupport is up to date.
+[19:20:38.359] [Il2CppAssemblyGenerator] UnityDependencies is up to date.
+[19:20:38.359] [Il2CppAssemblyGenerator] Checking GameAssembly...
+[19:20:38.627] [Il2CppAssemblyGenerator] Assembly is up to date. No Generation Needed.
+
+[19:20:38.630] Loading Mods...
+[19:20:38.666] ------------------------------
+[19:20:38.670] Melon Assembly loaded: '.\Mods\BAPBAP.Medusa.dll'
+[19:20:38.670] SHA256 Hash: '4E87E0652DEC0B718DC84FB809877418AEE727053F94A08FEFB200773B0AF6D1'
+[19:20:38.677] Melon Assembly loaded: '.\Mods\BapCustomServerMelon.dll'
+[19:20:38.678] SHA256 Hash: 'EF5A7156745820D2C1FDDB9D1F41A0FB18449899C8BFBA397DCC4B3A604951F8'
+
+[19:20:42.603] [BAP_Custom_Server] Loaded custom server ini.
+[19:20:42.621] [BAP_Custom_Server] [Perf] Client: targetFrameRate=144, vSync=0 (reduce DWM stall stutter)
+[19:20:42.623] [BAP_Custom_Server] [BAPCustomConfig] mode=client upstream=http://ark.atomi23.de:5055 proxy=False localPort=5055 dedicatedPorts=http:- ws:- kcp:- tcp:- batchMode=False containsNoGraphicsArg=False autoJoin=ark.atomi23.de:7779
+[19:20:42.625] [BAP_Custom_Server] Primed auto-login prefs for custom server session.
+[19:20:42.634] [BAP_Custom_Server] Installed 4 NetworkConfig runtime patch(es).
+[19:20:42.642] [BAP_Custom_Server] Installed 2 PreAwakeManager network config patch(es).
+[19:20:42.649] [BAP_Custom_Server] Installed 2 HttpClient host rewrite patch(es).
+[19:20:42.652] [BAP_Custom_Server] Installed ControllerManager network runtime patch.
+[19:20:42.658] [BAP_Custom_Server] Installed 4 LobbyNetworkClient runtime network patch(es).
+[19:20:42.661] [BAP_Custom_Server] Installed lifecycle guard on 2 Application.Quit overload(s). Guard PERMANENT (custom servers).
+[19:20:42.663] [BAP_Custom_Server] Installed AnalyticsManager custom-server no-op patch.
+[19:20:42.714] [BAP_Custom_Server] Installed 36 character-select NullRef guard prefix patch(es).
+[19:20:42.721] [BAP_Custom_Server] Installed 5 PopulateCharIdsBeforeBuild prefix(es) on UILobbyCharacterSelectPage.
+[19:20:42.724] [BAP_Custom_Server] Installed 3 PopulateCharIdsBeforeBuild prefix(es) on UILobbyPlayTabPage.
+[19:20:42.766] [BAP_Custom_Server] Installed 32 LobbyController NullRef guard finalizer patch(es).
+[19:20:44.921] [BAP_Custom_Server] Installed 1 CharacterIsUnlocked force-unlock patch(es).
+[19:20:45.087] [BAP_Custom_Server] Server match policy fetched: Both (matchmaking=allowed, custom=allowed). When a path is blocked, the mod logs a clear error if the user tries to use it.
+[19:20:45.094] [BAP_Custom_Server] Local proxy ready (port 5055)
+[19:20:45.094] [BAP_Custom_Server] Direct mode compatibility proxy enabled for legacy loopback API calls: 127.0.0.1:5055 -> http://ark.atomi23.de:5055/
+[19:20:45.096] [BAP_Custom_Server] Initialized during early registration.
+[19:20:45.098] ------------------------------
+[19:20:45.098] BAP Custom Server v1.0.2
+[19:20:45.098] by Sonic0810
+[19:20:45.099] Assembly: BapCustomServerMelon.dll
+[19:20:45.099] ------------------------------
+[19:20:45.106] ------------------------------
+[19:20:45.106] BAPBAP ModAPI v2.2.1
+[19:20:45.106] by BAPBAP Modding Community
+[19:20:45.106] Assembly: BAPBAP.ModAPI.dll
+[19:20:45.107] ------------------------------
+[19:20:45.116] ------------------------------
+[19:20:45.116] Medusa v1.6.54
+[19:20:45.116] by BAPBAPCommunity
+[19:20:45.116] Assembly: BAPBAP.Medusa.dll
+[19:20:45.116] ------------------------------
+[19:20:45.117] ------------------------------
+[19:20:45.117] 3 Mods loaded.
+

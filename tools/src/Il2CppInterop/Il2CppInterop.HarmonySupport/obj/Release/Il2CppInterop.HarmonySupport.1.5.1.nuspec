@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Il2CppInterop.HarmonySupport</id>
+    <version>1.5.1</version>
+    <authors>BepInEx</authors>
+    <license type="expression">LGPL-3.0-only</license>
+    <licenseUrl>https://licenses.nuget.org/LGPL-3.0-only</licenseUrl>
+    <icon>logo_icon.png</icon>
+    <readme>README.md</readme>
+    <description>Module to allow using Harmony with Il2CppInterop assemblies</description>
+    <repository type="git" commit="dbaf825aab891ff1e1627bea691bde0a81d1ad98" />
+    <dependencies>
+      <group targetFramework="net6.0">
+        <dependency id="Il2CppInterop.Runtime" version="1.5.1" exclude="Build,Analyzers" />
+        <dependency id="HarmonyX" version="2.10.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.HarmonySupport\net6.0\Il2CppInterop.HarmonySupport.dll" target="lib\net6.0\Il2CppInterop.HarmonySupport.dll" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.HarmonySupport\net6.0\Il2CppInterop.HarmonySupport.xml" target="lib\net6.0\Il2CppInterop.HarmonySupport.xml" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\logo\logo_icon.png" target="logo_icon.png" />
+    <file src="C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\README.md" target="README.md" />
+  </files>
+</package>

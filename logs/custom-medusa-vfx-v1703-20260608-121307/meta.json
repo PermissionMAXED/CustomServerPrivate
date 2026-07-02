@@ -1,0 +1,21 @@
+﻿{
+    "stamp":  "20260608-121307",
+    "runDir":  "C:\\Users\\Administrator\\Downloads\\CustomServer\\logs\\custom-medusa-vfx-v1703-20260608-121307",
+    "account":  "codex-custom-vfx-20260608-121307",
+    "username":  "CodexVfx",
+    "lobbyId":  "V70366",
+    "pid":  58240,
+    "payload":  {
+                    "gameId":  "custom-20260608101315-2941",
+                    "gameAuthId":  "94946d0fca200547dae277772dd69353",
+                    "gameDns":  "ark.atomi23.de",
+                    "wsPort":  7778,
+                    "kcpPort":  7779,
+                    "tcpPort":  7780,
+                    "mapId":  1,
+                    "levelId":  1,
+                    "unityGameMode":  1
+                },
+    "release":  "medusa-v1703-nographics-fasthealth-hotfix",
+    "medusaDllSha256":  "7F9423B398347747A7B13F0B208DB2E34566CEDACD8B5DD1944E0C702B394D46"
+}

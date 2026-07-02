@@ -1,0 +1,14 @@
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.HarmonySupport\net6.0\Il2CppInterop.HarmonySupport.deps.json
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.HarmonySupport\net6.0\Il2CppInterop.HarmonySupport.dll
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.HarmonySupport\net6.0\Il2CppInterop.HarmonySupport.xml
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.HarmonySupport\obj\Release\net6.0\Il2CppInterop.HarmonySupport.csproj.AssemblyReference.cache
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.HarmonySupport\obj\Release\net6.0\Il2CppInterop.HarmonySupport.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.HarmonySupport\obj\Release\net6.0\Il2CppInterop.HarmonySupport.AssemblyInfoInputs.cache
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.HarmonySupport\obj\Release\net6.0\Il2CppInterop.HarmonySupport.AssemblyInfo.cs
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.HarmonySupport\obj\Release\net6.0\Il2CppInterop.HarmonySupport.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.HarmonySupport\obj\Release\net6.0\Il2CppInterop.HarmonySupport.sourcelink.json
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.HarmonySupport\obj\Release\net6.0\Il2CppIn.B78C4E69.Up2Date
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.HarmonySupport\obj\Release\net6.0\Il2CppInterop.HarmonySupport.dll
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.HarmonySupport\obj\Release\net6.0\refint\Il2CppInterop.HarmonySupport.dll
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.HarmonySupport\obj\Release\net6.0\Il2CppInterop.HarmonySupport.xml
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.HarmonySupport\obj\Release\net6.0\ref\Il2CppInterop.HarmonySupport.dll

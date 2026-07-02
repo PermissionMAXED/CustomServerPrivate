@@ -1,0 +1,830 @@
+[00:15:03.836] [UNITY] [UnityMemory] Configuration Parameters - Can be set up in boot.config
+[00:15:03.839] [UNITY]     "memorysetup-bucket-allocator-granularity=16"
+[00:15:03.840] [UNITY]     "memorysetup-bucket-allocator-bucket-count=8"
+[00:15:03.840] [UNITY]     "memorysetup-bucket-allocator-block-size=4194304"
+[00:15:03.841] [UNITY]     "memorysetup-bucket-allocator-block-count=1"
+[00:15:03.842] [UNITY]     "memorysetup-main-allocator-block-size=16777216"
+[00:15:03.843] [UNITY]     "memorysetup-thread-allocator-block-size=16777216"
+[00:15:03.843] [UNITY]     "memorysetup-gfx-main-allocator-block-size=16777216"
+[00:15:03.844] [UNITY]     "memorysetup-gfx-thread-allocator-block-size=16777216"
+[00:15:03.844] [UNITY]     "memorysetup-cache-allocator-block-size=4194304"
+[00:15:03.844] [UNITY]     "memorysetup-typetree-allocator-block-size=2097152"
+[00:15:03.844] [UNITY]     "memorysetup-profiler-bucket-allocator-granularity=16"
+[00:15:03.845] [UNITY]     "memorysetup-profiler-bucket-allocator-bucket-count=8"
+[00:15:03.845] [UNITY]     "memorysetup-profiler-bucket-allocator-block-size=4194304"
+[00:15:03.845] [UNITY]     "memorysetup-profiler-bucket-allocator-block-count=1"
+[00:15:03.845] [UNITY]     "memorysetup-profiler-allocator-block-size=16777216"
+[00:15:03.846] [UNITY]     "memorysetup-profiler-editor-allocator-block-size=1048576"
+[00:15:03.846] [UNITY]     "memorysetup-temp-allocator-size-main=4194304"
+[00:15:03.846] [UNITY]     "memorysetup-job-temp-allocator-block-size=2097152"
+[00:15:03.846] [UNITY]     "memorysetup-job-temp-allocator-block-size-background=1048576"
+[00:15:03.846] [UNITY]     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+[00:15:03.847] [UNITY]     "memorysetup-allocator-temp-initial-block-size-main=262144"
+[00:15:03.847] [UNITY]     "memorysetup-allocator-temp-initial-block-size-worker=262144"
+[00:15:03.847] [UNITY]     "memorysetup-temp-allocator-size-background-worker=32768"
+[00:15:03.847] [UNITY]     "memorysetup-temp-allocator-size-job-worker=262144"
+[00:15:03.847] [UNITY]     "memorysetup-temp-allocator-size-preload-manager=262144"
+[00:15:03.848] [UNITY]     "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+[00:15:03.848] [UNITY]     "memorysetup-temp-allocator-size-audio-worker=65536"
+[00:15:03.848] [UNITY]     "memorysetup-temp-allocator-size-cloud-worker=32768"
+[00:15:03.848] [UNITY]     "memorysetup-temp-allocator-size-gfx=262144"
+
+[00:15:04.669] ------------------------------
+[00:15:04.672] MelonLoader v0.7.2 Open-Beta
+[00:15:04.673] OS: Windows 11
+[00:15:04.673] Hash Code: 58AB98835E598BD67B7DB233734DE8603F92C9C6A6081B13CB9A5CC37C02DD13
+[00:15:04.674] ------------------------------
+[00:15:04.674] Game Type: Il2cpp
+[00:15:04.674] Game Arch: x86
+[00:15:04.674] ------------------------------
+[00:15:04.675] Command-Line: 
+[00:15:04.675] ------------------------------
+[00:15:04.675] Core::BasePath = C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild
+[00:15:04.677] Game::BasePath = C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild
+[00:15:04.677] Game::DataPath = C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\bapbap_Data
+[00:15:04.677] Game::ApplicationPath = C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\bapbap.exe
+[00:15:04.677] Runtime Type: net6
+[00:15:05.291] ------------------------------
+[00:15:05.292] Game Name: BAPBAP
+[00:15:05.292] Game Developer: gg.bapbap
+[00:15:05.295] Unity Version: 2022.3.38f1
+[00:15:05.295] Game Version: 0.1.1758-38212
+[00:15:05.295] ------------------------------
+
+[00:15:06.503] Preferences Loaded!
+
+[00:15:06.563] Loading UserLibs...
+[00:15:06.594] ------------------------------
+[00:15:06.607] Melon Assembly loaded: '.\UserLibs\BAPBAP.ModAPI.dll'
+[00:15:06.608] SHA256 Hash: '0E14F39A9C47B6EBA106A0F23E76A0989B3270D7BCDD3E4BB0DD51E63BDB3CB5'
+[00:15:06.608] ------------------------------
+[00:15:06.609] 0 UserLibs loaded.
+
+[00:15:06.609] Loading Plugins...
+[00:15:06.617] 0 Plugins loaded.
+
+[00:15:06.660] [UNITY] [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[00:15:06.674] [UNITY] Initialize engine version: 2022.3.38f1 (c5d5a7410213)
+[00:15:06.674] [UNITY] [Subsystems] Discovering subsystems at path C:/Users/Administrator/Downloads/CustomServer/Spiel/Battleroyalebuild/bapbap_Data/UnitySubsystems
+[00:15:06.675] [UNITY] GfxDevice: creating device client; threaded=1; jobified=0
+[00:15:07.589] [UNITY] Direct3D:
+[00:15:07.589] [UNITY]     Version:  Direct3D 11.0 [level 11.1]
+[00:15:07.590] [UNITY]     Renderer: NVIDIA GeForce RTX 3060 Ti (ID=0x2486)
+[00:15:07.590] [UNITY]     Vendor:   NVIDIA
+[00:15:07.590] [UNITY]     VRAM:     3072 MB
+[00:15:07.590] [UNITY]     Driver:   32.0.15.9621
+[00:15:12.375] [UNITY] <b>[App UI]</b> Unable to find an AppUISettings instance, creating a default one...
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Unity.AppUI.Core.AppUI:InitializeInPlayer()
+
+[00:15:12.402] [UNITY] <RI> Initializing input.
+[00:15:12.402] [UNITY] New input system (experimental) initialized
+[00:15:12.406] [UNITY] Using Windows.Gaming.Input
+[00:15:12.408] [UNITY] <RI> Input initialized.
+[00:15:12.429] [UNITY] <RI> Initialized touch support.
+[00:15:12.431] Loading Il2CppAssemblyGenerator...
+[00:15:12.472] [Il2CppAssemblyGenerator] Using Cpp2IL Version: 2022.1.0-pre-release.21
+[00:15:12.472] [Il2CppAssemblyGenerator] Using Il2CppInterop Version = 1.5.1+dbaf825aab891ff1e1627bea691bde0a81d1ad98
+[00:15:12.472] [Il2CppAssemblyGenerator] Using Unity Dependencies Version = 2022.3.38
+[00:15:12.472] [Il2CppAssemblyGenerator] Using Deobfuscation Regex = null
+[00:15:12.473] [Il2CppAssemblyGenerator] Cpp2IL is up to date.
+[00:15:12.473] [Il2CppAssemblyGenerator] Cpp2IL.Plugin.StrippedCodeRegSupport is up to date.
+[00:15:12.474] [Il2CppAssemblyGenerator] UnityDependencies is up to date.
+[00:15:12.474] [Il2CppAssemblyGenerator] Checking GameAssembly...
+[00:15:12.754] [Il2CppAssemblyGenerator] Assembly is up to date. No Generation Needed.
+
+[00:15:12.755] Loading Mods...
+[00:15:12.794] ------------------------------
+[00:15:12.798] Melon Assembly loaded: '.\Mods\BAPBAP.Medusa.dll'
+[00:15:12.798] SHA256 Hash: '232ABEE4D2EFBA343CF0C0ACCD2673476CE0B61DBBCCBAB19225E02F8231225A'
+[00:15:12.808] Melon Assembly loaded: '.\Mods\BapCustomServerMelon.dll'
+[00:15:12.808] SHA256 Hash: '6BE42859592828552716B6C9D1D1A045B82AB3DCD0333898F29A49D864B8C6D0'
+
+[00:15:13.302] [BAP_Custom_Server] Loaded custom server ini.
+[00:15:13.328] [BAP_Custom_Server] [Perf] Client: targetFrameRate=144, vSync=0 (reduce DWM stall stutter)
+[00:15:13.330] [BAP_Custom_Server] [BAPCustomConfig] mode=client upstream=http://ark.atomi23.de:5055 proxy=False localPort=5055 dedicatedPorts=http:- ws:- kcp:- tcp:- batchMode=False containsNoGraphicsArg=False autoJoin=ark.atomi23.de:7779
+[00:15:13.331] [BAP_Custom_Server] Primed auto-login prefs for custom server session.
+[00:15:13.343] [BAP_Custom_Server] Installed 4 NetworkConfig runtime patch(es).
+[00:15:13.352] [BAP_Custom_Server] Installed 2 PreAwakeManager network config patch(es).
+[00:15:13.361] [BAP_Custom_Server] Installed 2 HttpClient host rewrite patch(es).
+[00:15:13.365] [BAP_Custom_Server] Installed ControllerManager network runtime patch.
+[00:15:13.373] [BAP_Custom_Server] Installed 4 LobbyNetworkClient runtime network patch(es).
+[00:15:13.377] [BAP_Custom_Server] Installed lifecycle guard on 2 Application.Quit overload(s). Guard PERMANENT (custom servers).
+[00:15:13.379] [BAP_Custom_Server] Installed AnalyticsManager custom-server no-op patch.
+[00:15:13.448] [BAP_Custom_Server] Installed 40 character-select NullRef guard prefix patch(es).
+[00:15:13.455] [BAP_Custom_Server] Installed 5 PopulateCharIdsBeforeBuild prefix(es) on UILobbyCharacterSelectPage.
+[00:15:13.459] [BAP_Custom_Server] Installed 3 PopulateCharIdsBeforeBuild prefix(es) on UILobbyPlayTabPage.
+[00:15:13.511] [BAP_Custom_Server] Installed 32 LobbyController NullRef guard finalizer patch(es).
+[00:15:14.328] [BAP_Custom_Server] Installed 1 CharacterIsUnlocked force-unlock patch(es).
+[00:15:14.402] [BAP_Custom_Server] Server match policy fetched: Both (matchmaking=allowed, custom=allowed). When a path is blocked, the mod logs a clear error if the user tries to use it.
+[00:15:14.409] [BAP_Custom_Server] Local proxy ready (port 5055)
+[00:15:14.409] [BAP_Custom_Server] Direct mode compatibility proxy enabled for legacy loopback API calls: 127.0.0.1:5055 -> http://ark.atomi23.de:5055/
+[00:15:14.411] [BAP_Custom_Server] Initialized BAP Custom Server v1.0.5 during early registration. dedicated=False http=n/a ws=n/a kcp=n/a tcp=n/a
+[00:15:14.412] ------------------------------
+[00:15:14.413] BAP Custom Server v1.0.5
+[00:15:14.413] by Sonic0810
+[00:15:14.413] Assembly: BapCustomServerMelon.dll
+[00:15:14.413] ------------------------------
+[00:15:14.421] ------------------------------
+[00:15:14.421] BAPBAP ModAPI v2.2.1
+[00:15:14.421] by BAPBAP Modding Community
+[00:15:14.422] Assembly: BAPBAP.ModAPI.dll
+[00:15:14.422] ------------------------------
+[00:15:14.429] ------------------------------
+[00:15:14.429] Medusa v1.6.66
+[00:15:14.430] by BAPBAPCommunity
+[00:15:14.430] Assembly: BAPBAP.Medusa.dll
+[00:15:14.430] ------------------------------
+[00:15:14.431] ------------------------------
+[00:15:14.431] 3 Mods loaded.
+
+[00:15:16.871] [Il2CppInterop] Class::Init signatures have been exhausted, using a substitute!
+[00:15:20.483] [Il2CppInterop] Registered mono type MelonLoader.Support.MonoEnumeratorWrapper in il2cpp domain
+[00:15:20.629] Support Module Loaded: C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\MelonLoader\Dependencies\SupportModules\Il2Cpp.dll
+[00:15:20.631] [UNITY] -------------------------------------------------------------------------------------------------------
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+
+[00:15:20.632] [UNITY] ~   This Game has been MODIFIED using MelonLoader. DO NOT report any issues to the Game Developers!   ~
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+
+[00:15:20.632] [UNITY] -------------------------------------------------------------------------------------------------------
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+
+[00:15:22.854] [BAPBAP_ModAPI] BAPBAP ModAPI v2.2.1 initializing ...
+[00:15:22.855] [BAPBAP_ModAPI]   by BAPBAP Modding Community
+[00:15:22.855] [BAPBAP_ModAPI]   loaded as C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\UserLibs\BAPBAP.ModAPI.dll
+[00:15:22.856] [BAPBAP_ModAPI] [Hooks] Installing global hooks ...
+[00:15:22.857] [BAPBAP_ModAPI] [Hooks]   ✓ PlayerHooks
+[00:15:22.857] [BAPBAP_ModAPI] [Hooks]   ✓ MatchHooks
+[00:15:22.858] [BAPBAP_ModAPI] [Hooks]   ✓ CombatHooks
+[00:15:22.858] [BAPBAP_ModAPI] [Hooks]   ✓ ChatHooks
+[00:15:22.858] [BAPBAP_ModAPI] [Hooks]   ✓ NetworkHooks
+[00:15:22.859] [BAPBAP_ModAPI] [Hooks]   ✓ UIHooks
+[00:15:22.859] [BAPBAP_ModAPI] [Hooks]   ✓ AbilityHooks
+[00:15:22.860] [BAPBAP_ModAPI] [Hooks]   ✓ StatusEffectHooks
+[00:15:22.860] [BAPBAP_ModAPI] [Hooks]   ✓ ItemHooks
+[00:15:22.860] [BAPBAP_ModAPI] [Hooks]   ✓ VehicleHooks
+[00:15:22.861] [BAPBAP_ModAPI] [Hooks]   ✓ EntityHooks
+[00:15:22.861] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraAbilityHooks
+[00:15:22.861] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraItemHooks
+[00:15:22.862] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraVehicleHooks
+[00:15:22.862] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraEntityHooks
+[00:15:22.862] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraMovementHooks
+[00:15:22.862] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraPassiveHooks
+[00:15:22.863] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraInteractionHooks
+[00:15:22.863] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraKillHooks
+[00:15:22.863] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraEmoteHooks
+[00:15:22.863] [BAPBAP_ModAPI] [Hooks]   ✓ ExtraMetaHooks
+[00:15:22.864] [BAPBAP_ModAPI] [Hooks] Done. 21 hook groups installed.
+[00:15:22.868] [Il2CppInterop] Registered mono type BAPBAP.ModAPI.Lifecycle.ModUpdateRunner in il2cpp domain
+[00:15:22.868] [BAPBAP_ModAPI] [Lifecycle] ModUpdateRunner registered with Il2Cpp.
+[00:15:22.870] [Il2CppInterop] Registered mono type BAPBAP.ModAPI.API.NotificationAPI+ScheduledFader in il2cpp domain
+[00:15:22.874] [Il2CppInterop] Registered mono type BAPBAP.ModAPI.UI.ModLoaderUIRunner in il2cpp domain
+[00:15:22.874] [BAPBAP_ModAPI] [ModLoaderUI] Runner registered with Il2Cpp.
+[00:15:22.875] [BAPBAP_ModAPI] BAPBAP ModAPI ready. Mods should subclass ModBase to register.
+[00:15:22.877] [BAPBAP_ModAPI] [Registry] Mod registered: Medusa (com.bapbap.medusa)
+[00:15:22.885] [BAPBAP_ModAPI] [Keybind] registered 'medusa.register' -> F7 (ctrl=False shift=False alt=False)
+[00:15:22.886] [Medusa] [Medusa] Loaded (v1.6.67). Auto-registers at the lobby; /medusa or F7 to force, /medusa status, /medusa anim.
+[00:15:22.886] [Medusa] [Medusa] v1.6.67: cleans runtime Medusa FX on scene reset, restricts input fallback to the local Medusa entity, debounces duplicate cast drivers, and keeps the v1.6.66 native VFX isolation. Bundle: UserData\Medusa\medusa.bundle.
+[00:15:22.894] [Medusa] [Medusa] bundle file located: 'C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\UserData\Medusa\medusa.bundle' (1567424 bytes).
+[00:15:23.046] [Medusa] [Medusa] AssetBundle loaded (handle obtained).
+[00:15:23.054] [Medusa] [Medusa] bundle contains 36 asset(s). Sample: assets/animationclip/medusa_attack_01.anim | assets/animationclip/medusa_attack_02.anim | assets/animationclip/medusa_attack_03.anim | assets/animationclip/medusa_idle.anim | assets/animationclip/medusa_idle_blend.anim | assets/animationclip/medusa_idle_turn_left.anim
+[00:15:23.071] [Medusa] [Medusa] visual prefab 'Medusa_Visual' loaded from bundle.
+[00:15:23.079] [Medusa] [Medusa] cached bundle textures/material: albedo='Medusa_Tex_Albedo_1024' normal='Medusa_Tex_Normal_1024' material='Medusa_Material'.
+[00:15:23.096] [Medusa] [Medusa] native VFX prefabs loaded: 6/6 [VFX_Medusa_Poison_Escape, VFX_Medusa_Poison_Hit, VFX_Medusa_Poison_Muzzle, VFX_Medusa_Poison_Puddle, VFX_Medusa_Poison_Trail, VFX_Medusa_Poison_Wall].
+[00:15:23.112] [Medusa] [Medusa] cached animator controller via TryLoadBundle.prefab: animator='Medusa_Visual' controller='Medusa'.
+[00:15:23.160] [Medusa] [Medusa] visual diagnostics via TryLoadBundle.prefab: root='Medusa_Visual' visualActive=False layer=0 world=(0,0,0) local=(0,0,0) scale=(1,1,1) renderers=4 smrs=1 firstRenderer='Base_BlobShadow' firstRendererLayer=0 firstSmr='MedusaBase' mesh='MedusaBase' rootBone='Def-Hips' material='Medusa_Material' shader='Standard' bounds=-0.026,0.792,-0.022/2.008,2.416,2.271 screen='<no-main-camera>'.
+[00:15:23.249] [Medusa] [Medusa] Harmony rebind patches installed (CharAnimator.Awake + CharFootsteps.Awake postfixes).
+[00:15:24.939] [Medusa] [Medusa] Harmony UI/prematch patches installed: ok=51, failed=0, skipped=13.
+[00:15:24.940] [Medusa] [Medusa] Skipped known IL2CPP page-warmup prefixes; runtime UIManager, prematch, selection, spawn, and ability patches remain active.
+[00:15:24.967] [Medusa] [Medusa] Harmony status-on-hit patch installed (HitboxBase.OnHitSuccess postfix: poison + petrify).
+[00:15:29.090] [UNITY] The referenced script on this Behaviour (Game Object 'Blitz') is missing!
+[00:15:29.653] [Medusa] [Medusa] runtime scene state reset: scene unloaded -1:
+[00:15:29.654] [UNITY] [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+[00:15:29.655] [UNITY] UnloadTime: 121.904900 ms
+[00:15:29.896] [UNITY] ThreadLog initialized.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[00:15:29.910] [UNITY] [PREAWAKE] ENV_PRODUCTION
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[00:15:29.911] [UNITY] [PREAWAKE] BACKEND_STRIP
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[00:15:29.911] [UNITY] [PREAWAKE] hostname= VINCENT
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[00:15:29.911] [UNITY] [PREAWAKE] environment= Production
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[00:15:29.912] [UNITY] [PREAWAKE] version = v0.1.1758-38212
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[00:15:29.912] [UNITY] [PREAWAKE] networkConfigEnv = Staging
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[00:15:29.945] [UNITY] [PREAWAKE] networkConfigsServer = ServerConfig { 
+MatchmakingHost: , 
+ListenPort: 0, 
+HeaderSecretKey: , 
+HeaderSecret: , 
+DebugPassword: , 
+DebugSquadPassword: , 
+DevGameAuthId: , 
+}
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[00:15:29.946] [UNITY] [PREAWAKE] networkConfigsClient = ClientConfig { 
+ApiHost: http://127.0.0.1:5055, 
+CookieDomain: .bapbap.gg, 
+CookieSessionKey: sid, 
+}
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[00:15:29.946] [UNITY] [PREAWAKE] logConfigEnv = Staging
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[00:15:29.946] [UNITY] [PREAWAKE] Args start
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[00:15:29.947] [UNITY] C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\bapbap.exe
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[00:15:29.947] [UNITY] --melonloader.agfoffline
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[00:15:29.947] [UNITY] --melonloader.captureplayerlogs
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[00:15:29.947] [UNITY] --bapcustom-use-proxy=false
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[00:15:29.948] [UNITY] --bapcustom-show-ui=false
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[00:15:29.948] [UNITY] --bapcustom-host=ark.atomi23.de
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[00:15:29.948] [UNITY] --bapcustom-server-port=5055
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[00:15:29.948] [UNITY] --bapcustom-account-id=codex-live-v177-20260609-001410
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[00:15:29.949] [UNITY] --bapcustom-username=CodexLiveV177
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[00:15:29.949] [UNITY] --bapcustom-auto-select-augment
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[00:15:29.949] [UNITY] --bapcustom-selected-char=15
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[00:15:29.949] [UNITY] --bapcustom-join-auth=95c67f6c4138aab104598c50f7a879f8
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[00:15:29.950] [UNITY] --bapcustom-join-host=ark.atomi23.de
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[00:15:29.950] [UNITY] --bapcustom-join-ws=7778
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[00:15:29.950] [UNITY] --bapcustom-join-kcp=7779
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[00:15:29.951] [UNITY] --bapcustom-join-tcp=7780
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[00:15:29.951] [UNITY] [PREAWAKE] Args end | http=-1 ws=-1 kcp=-1 tcp=-1
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[00:15:29.972] [UNITY] [LocalSavedData] InitializeSystemResolutions - nativeSystemResolution: 1024 x 768 @ 99.998Hz
+[00:15:29.973] [UNITY] [LocalSavedData] InitializeSystemResolutions - res: UnityEngine.Resolution[], length: 23
+[00:15:29.973] [UNITY] Found supported resolution: (1024, 768)
+[00:15:30.088] [Medusa] [Medusa] cloning base character 'Kitsu' (charId=0).
+[00:15:30.113] [Medusa] [Medusa] graft: captured native toon template - SMR='KitsuBase', material='Kitsu_Material', shader='Custom/Toon/Toon_Character_Amplify'.
+[00:15:30.115] [Medusa] [Medusa] graft: disabled 11 base Renderer(s).
+[00:15:30.119] [Medusa] [Medusa] visual anchor via GraftMedusaVisual: root='Char_Medusa' parent Char_Medusa->Root localPos=(0,0,0) worldPos=(0,-0,-0).
+[00:15:30.121] [Medusa] [Medusa] visual fit via GraftMedusaVisual: skinnedBaseH=2.153 skinnedVisualH=2.11 scaleFactor=0.808 localScale=0.808 localPos=(-0.168,-0.647,0.86).
+[00:15:30.121] [Medusa] [Medusa] visual default transform captured via GraftMedusaVisual: localPos=(-0.168,-0.647,0.86) localScale=0.808.
+[00:15:30.126] [Medusa] [Medusa] visual layer sync via GraftMedusaVisual: layer=0 'Default' objects=59.
+[00:15:30.130] [Medusa] [Medusa] visual render enable via GraftMedusaVisual: renderers=4 newlyEnabled=0 smrsUpdateWhenOffscreen=1 active=False localPos=(-0.168,-0.647,0.86) localScale=0.808.
+[00:15:30.138] [Medusa] [Medusa] visual layer sync via GraftMedusaVisual.postCharMaterial: layer=0 'Default' objects=59.
+[00:15:30.140] [Medusa] [Medusa] visual layer sync via GraftMedusaVisual.postCharMaterial.postVisibility: layer=0 'Default' objects=59.
+[00:15:30.140] [Medusa] [Medusa] CharMaterial visibility forced via GraftMedusaVisual.postCharMaterial: alpha=1 opaque=true partialHidden=false rendererActive=true visualActive=False.
+[00:15:30.140] [Medusa] [Medusa] CharMaterial rebound via GraftMedusaVisual: primary='MedusaBase' primaryLayer=0 renderers=4 extras=3 customBounds=True.
+[00:15:30.140] [Medusa] [Medusa] cached animator controller via GraftMedusaVisual: animator='Medusa_Visual' controller='Medusa'.
+[00:15:30.145] [Medusa] [Medusa] copied bundle material props via GraftMedusaVisual: target='Medusa_Material_Native' textures=1 colors=2 floats=0 sourceMaterial='Medusa_Material'.
+[00:15:30.146] [Medusa] [Medusa] graft: shader applied to 'MedusaBase' (shader='Custom/Toon/Toon_Character_Amplify', albedo='Medusa_Tex_Albedo_1024', normal='Medusa_Tex_Normal_1024').
+[00:15:30.146] [Medusa] [Medusa] graft: applied native toon shader 'Custom/Toon/Toon_Character_Amplify' to 1 Medusa SkinnedMeshRenderer(s).
+[00:15:30.151] [Medusa] [Medusa] copied bundle material props via GraftMedusaVisual.postShader: target='Medusa_Material_Native' textures=1 colors=2 floats=0 sourceMaterial='Medusa_Material'.
+[00:15:30.152] [Medusa] [Medusa] material visibility via GraftMedusaVisual.postShader: smrs=1 shader='Custom/Toon/Toon_Character_Amplify' localPos=(-0.168,-0.647,0.86).
+[00:15:30.152] [Medusa] [Medusa] visual render enable via GraftMedusaVisual.postMaterial: renderers=4 newlyEnabled=0 smrsUpdateWhenOffscreen=1 active=False localPos=(-0.168,-0.647,0.86) localScale=0.808.
+[00:15:30.153] [Medusa] [Medusa] visual layer sync via GraftMedusaVisual.postMaterial.postVisibility: layer=0 'Default' objects=59.
+[00:15:30.153] [Medusa] [Medusa] CharMaterial visibility forced via GraftMedusaVisual.postMaterial: alpha=1 opaque=true partialHidden=false rendererActive=true visualActive=False.
+[00:15:30.154] [Medusa] [Medusa] visual diagnostics via GraftMedusaVisual.postMaterial: root='Char_Medusa' visualActive=False layer=0 world=(-0.193,0.988,0.744) local=(-0.168,-0.647,0.86) scale=(0.808,0.808,0.808) renderers=4 smrs=1 firstRenderer='Base_BlobShadow' firstRendererLayer=0 firstSmr='MedusaBase' mesh='MedusaBase' rootBone='Def-Hips' material='Medusa_Material_Native' shader='Custom/Toon/Toon_Character_Amplify' bounds=-0.217,0.968,0.008/1.866,2.11,2.245 screen='643.3,179.1,-0.9'.
+[00:15:30.155] [Medusa] [Medusa] graft: wired CharAnimator.animator -> Medusa's Animator (count=1, customAnimator=true, controller='Medusa').
+[00:15:30.155] [Medusa] [Medusa] graft: wired CharFootsteps.animator -> Medusa's Animator (count=1).
+[00:15:30.156] [Medusa] [Medusa] graft: disabled 3 non-Medusa Animator(s) on the clone.
+[00:15:30.156] [Medusa] [Medusa] graft: instantiated Medusa_Visual under clone (SkinnedMeshRenderers=1, animator=yes, controller='Medusa').
+[00:15:30.161] [Medusa] [Medusa] Mirror runtime identity sanitized via RegisterPrefab.clone: prefab='Char_Medusa' identities=1.
+[00:15:30.161] [Medusa] [Medusa] Mirror client registration delegated to NetworkManager.spawnPrefabs for assetId=0x4D454455; skipped direct NetworkClient.RegisterPrefab via RegisterPrefab.clone.
+[00:15:30.168] [Medusa] [Medusa] NetworkPrefabPool ready via RegisterPrefab.clone: prefab='Char_Medusa' libraryHad=False libraryAppended=False clientActive=False clientCreated=False serverActive=False serverCreated=False.
+[00:15:30.170] [Medusa] [Medusa] Mirror prefab ready via RegisterPrefab.clone: prefab='Char_Medusa' oldAssetId=0xD2D60B88 newAssetId=0x4D454455 oldSceneId=0 oldNetId=0 oldHasSpawned=False oldSpawnedFromInstantiate=False sceneId=0 hasSpawned=false.
+[00:15:30.176] [Medusa] [Medusa] NetworkManager.spawnPrefabs appended via RegisterPrefab.clone: prefab='Char_Medusa' count=1.
+[00:15:30.176] [Medusa] [Medusa] prefab cloned -> characterPrefabsByCharId[15] (visualGrafted=True).
+[00:15:30.191] [Medusa] [Medusa] suppressed 8 inherited Kitsu VFX prefab reference(s) via TuneCharAbilities(prefab) on 'Char_Medusa'.
+[00:15:30.192] [Medusa] [Medusa] tuned CharAbilities: damage 0->0, attackSpeed 0->0, cooldown 0->0, critChance 0->0.2, maxAttackSpeed 10->9.5.
+[00:15:30.192] [Medusa] [Medusa] prefab registration ready via TryRegisterMedusa: baseCharId=0 medusaCharId=15.
+[00:15:30.203] [Medusa] [Medusa] moved Medusa into visible match select slot via TryRegisterMedusa.appended: oldIndex=15 newIndex=7 lobbyChanged=False.
+[00:15:30.208] [Medusa] [Medusa] made 16 characters available in lobby (incl. Medusa).
+[00:15:30.224] [Medusa] [Medusa] phrases injected (added=14, updated=0, total=14). Sample MEDUSA_AB_LMB_TITLE -> 'Serpent Bolt'.
+[00:15:30.225] [Medusa] [Medusa] ✓ registered as CharId=15, name='Medusa'. Roster now 16.
+[00:15:30.234] [BAPBAP_ModAPI] [NotificationAPI] Canvas created.
+[00:15:30.245] [Medusa] [Medusa] UIManager early registration via UIManager.PreAwake: charId=15 roster=16.
+[00:15:30.316] [UNITY] STEAM: Steam unavailable
+[00:15:30.379] [Medusa] [Medusa] Mirror runtime identity sanitized via GameNetworkManager.Awake.existing: prefab='Char_Medusa' identities=1.
+[00:15:30.379] [Medusa] [Medusa] NetworkPrefabPool ready via GameNetworkManager.Awake.existing: prefab='Char_Medusa' libraryHad=False libraryAppended=False clientActive=False clientCreated=False serverActive=False serverCreated=False.
+[00:15:30.380] [Medusa] [Medusa] Mirror prefab ready via GameNetworkManager.Awake.existing: prefab='Char_Medusa' oldAssetId=0x4D454455 newAssetId=0x4D454455 oldSceneId=0 oldNetId=0 oldHasSpawned=False oldSpawnedFromInstantiate=False sceneId=0 hasSpawned=false.
+[00:15:30.386] [Medusa] [Medusa] Mirror runtime identity sanitized via GameNetworkManager.Awake.existing: prefab='Char_Medusa' identities=1.
+[00:15:30.386] [Medusa] [Medusa] NetworkPrefabPool ready via GameNetworkManager.Awake.existing: prefab='Char_Medusa' libraryHad=False libraryAppended=False clientActive=False clientCreated=False serverActive=False serverCreated=False.
+[00:15:30.387] [Medusa] [Medusa] Mirror prefab ready via GameNetworkManager.Awake.existing: prefab='Char_Medusa' oldAssetId=0x4D454455 newAssetId=0x4D454455 oldSceneId=0 oldNetId=0 oldHasSpawned=False oldSpawnedFromInstantiate=False sceneId=0 hasSpawned=false.
+[00:15:30.400] [UNITY] [Spatial Hash] Partial Rebuild Interval = 0,25
+[00:15:30.400] [UNITY] 1800
+[00:15:30.490] [UNITY] [UIDropdownController] No values added to the dropdown
+[00:15:30.491] [UNITY] [UIDropdownController] No values added to the dropdown
+[00:15:30.560] [Medusa] [Medusa] lobby page model unlocked via View_PreMatch_CharSelect.Initialize.new: ids=2,1,5,0,3,4,6,15,7,8,9,10,11,12,13,14.
+[00:15:30.561] [Medusa] [Medusa] ensured UILobbyCharacterSelectPage data before View_PreMatch_CharSelect.Initialize: pages=1.
+[00:15:30.562] [Medusa] [Medusa] Mirror runtime identity sanitized via View_PreMatch_CharSelect.Initialize.prefab.existing: prefab='Char_Medusa' identities=1.
+[00:15:30.563] [Medusa] [Medusa] NetworkPrefabPool ready via View_PreMatch_CharSelect.Initialize.prefab.existing: prefab='Char_Medusa' libraryHad=False libraryAppended=False clientActive=False clientCreated=False serverActive=False serverCreated=False.
+[00:15:30.563] [Medusa] [Medusa] Mirror prefab ready via View_PreMatch_CharSelect.Initialize.prefab.existing: prefab='Char_Medusa' oldAssetId=0x4D454455 newAssetId=0x4D454455 oldSceneId=0 oldNetId=0 oldHasSpawned=False oldSpawnedFromInstantiate=False sceneId=0 hasSpawned=false.
+[00:15:30.572] [Medusa] [Medusa] made 16 characters available in lobby (incl. Medusa).
+[00:15:30.572] [Medusa] [Medusa] Mirror runtime identity sanitized via TryRegisterMedusa.registered.existing: prefab='Char_Medusa' identities=1.
+[00:15:30.572] [Medusa] [Medusa] NetworkPrefabPool ready via TryRegisterMedusa.registered.existing: prefab='Char_Medusa' libraryHad=False libraryAppended=False clientActive=False clientCreated=False serverActive=False serverCreated=False.
+[00:15:30.572] [Medusa] [Medusa] Mirror prefab ready via TryRegisterMedusa.registered.existing: prefab='Char_Medusa' oldAssetId=0x4D454455 newAssetId=0x4D454455 oldSceneId=0 oldNetId=0 oldHasSpawned=False oldSpawnedFromInstantiate=False sceneId=0 hasSpawned=false.
+[00:15:30.586] [Medusa] [Medusa] made 16 characters available in lobby (incl. Medusa).
+[00:15:30.586] [Medusa] [Medusa] UI warmup before View_PreMatch_CharSelect.Initialize: registered=True charId=15.
+[00:15:30.587] [Medusa] [Medusa] made 16 characters available in lobby (incl. Medusa).
+[00:15:30.587] [Medusa] [Medusa] Mirror runtime identity sanitized via TryRegisterMedusa.registered.existing: prefab='Char_Medusa' identities=1.
+[00:15:30.587] [Medusa] [Medusa] NetworkPrefabPool ready via TryRegisterMedusa.registered.existing: prefab='Char_Medusa' libraryHad=False libraryAppended=False clientActive=False clientCreated=False serverActive=False serverCreated=False.
+[00:15:30.596] [Medusa] [Medusa] made 16 characters available in lobby (incl. Medusa).
+[00:15:30.612] [Medusa] [Medusa] lobby page model unlocked via View_PreMatch_CharSelect.Initialize.existing: ids=2,1,5,0,3,4,6,15,7,8,9,10,11,12,13,14.
+[00:15:30.612] [Medusa] [Medusa] ensured UILobbyCharacterSelectPage data before View_PreMatch_CharSelect.Initialize: pages=1.
+[00:15:30.612] [Medusa] [Medusa] NetworkPrefabPool ready via View_PreMatch_CharSelect.Initialize.prefab.existing: prefab='Char_Medusa' libraryHad=False libraryAppended=False clientActive=False clientCreated=False serverActive=False serverCreated=False.
+[00:15:30.621] [Medusa] [Medusa] made 16 characters available in lobby (incl. Medusa).
+[00:15:30.621] [Medusa] [Medusa] NetworkPrefabPool ready via TryRegisterMedusa.registered.existing: prefab='Char_Medusa' libraryHad=False libraryAppended=False clientActive=False clientCreated=False serverActive=False serverCreated=False.
+[00:15:30.635] [Medusa] [Medusa] made 16 characters available in lobby (incl. Medusa).
+[00:15:30.636] [Medusa] [Medusa] made 16 characters available in lobby (incl. Medusa).
+[00:15:30.636] [Medusa] [Medusa] NetworkPrefabPool ready via TryRegisterMedusa.registered.existing: prefab='Char_Medusa' libraryHad=False libraryAppended=False clientActive=False clientCreated=False serverActive=False serverCreated=False.
+[00:15:30.644] [Medusa] [Medusa] made 16 characters available in lobby (incl. Medusa).
+[00:15:30.648] [UNITY] UILobby platform variant not found: WindowsPlayer using default
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[00:15:31.008] [UNITY] Color primaries 0 is unknown or unsupported by WindowsMediaFoundation. Falling back to default may result in color shift. C:/Users/Administrator/Downloads/CustomServer/Spiel/Battleroyalebuild/bapbap_Data/sharedassets0.resource
+[00:15:32.236] [UNITY] Opening Lobby UI :) at the time of 09.06.2026 00:15:32
+[00:15:32.380] [UNITY] TelepathyTransport initialized!
+[00:15:32.419] [Il2CppInterop] Registered mono type MelonLoader.Support.SM_Component in il2cpp domain
+[00:15:32.425] [BAP_Custom_Server] [SceneLoaded] Scene 'MainScene' (index 0) loaded.
+[00:15:32.426] [BAP_Custom_Server] [StateReset] Resetting match flags on lobby/menu scene 'MainScene'
+[00:15:32.613] [Medusa] [Medusa] runtime scene state reset: scene loaded 0:MainScene
+[00:15:33.143] [UNITY] Found supported resolution: (1024, 768)
+[00:15:33.147] [UNITY] [LocalSavedData] Set Quick cast = False
+[00:15:33.190] [BAP_Custom_Server] [MapFix] 3 GameMode(s), spawnCounts=[-1,-1,-1]. Waiting for populated map...
+[00:15:33.255] [BAP_Custom_Server] [DevPanel] Patched 2 type(s) for hide on activation: UIDeveloperLobby(1), UIDevUtilities(1)
+[00:15:33.279] [BAP_Custom_Server] [ShopThrottle] Patched 1 method(s)
+[00:15:33.462] [BAP_Custom_Server] [LockerGuard] Installed exception-swallow finalizer on 9 locker method(s)
+[00:15:33.478] [BAP_Custom_Server] [KcpRuntime] timeout-guard-manager: manager=Il2CppBAPBAP.Network.GameNetworkManager ws=Il2CppMirror.SimpleWeb.SimpleWebTransport port=7778 timeout=null client=False server=False kcp=Il2Cppkcp2k.KcpTransport port=7779 timeout=60000 client=True server=True tcp=Il2CppMirror.TelepathyTransport port=7780 timeout=null client=False server=False multiplex=Il2CppMirror.MultiplexTransport port=7780 timeout=null client=False server=False patched=5.
+[00:15:33.478] [BAP_Custom_Server] [KcpTimeoutGuard] Applied KCP timeout/port guard through GameNetworkManager transport(s); patched=5.
+[00:15:33.485] [BAP_Custom_Server] [InterpFix] no NetworkTransform instances yet (attempt=1)
+[00:15:33.514] [BAP_Custom_Server] [MatchFoundDedup] Installed dedup prefix on 1 PlayMatchFoundSequence target(s).
+[00:15:33.517] [BAP_Custom_Server] [AugmentFix] no UIAugments instances loaded yet (attempt=1).
+[00:15:33.520] [BAP_Custom_Server] [AugmentFix] auto-select: no local PlayerAugments found.
+[00:15:33.520] [BAP_Custom_Server] [AugmentFix] auto-select: no UIManager instances loaded yet.
+[00:15:33.520] [BAP_Custom_Server] [AugmentFix] auto-select: no UIAugments instances loaded yet.
+[00:15:33.588] [BAP_Custom_Server] Installed 3 GameMode level-name runtime patch(es).
+[00:15:33.630] [BAP_Custom_Server] Installed AddPlayerMatchmaking runtime diagnostics and Medusa skin patch.
+[00:15:33.769] [BAP_Custom_Server] Installed 7 LoginController custom guest-login patch(es).
+[00:15:33.822] [BAP_Custom_Server] Installed 2 UnityWebRequest callback repair patch(es).
+[00:15:33.830] [BAP_Custom_Server] Custom splash guest-login scan saw 0 UILobbySplashScreen object(s).
+[00:15:33.833] [BAP_Custom_Server] [KcpRuntime] client-autojoin-before-connect: manager=Il2CppBAPBAP.Network.GameNetworkManager ws=Il2CppMirror.SimpleWeb.SimpleWebTransport port=7778 timeout=null client=False server=False kcp=Il2Cppkcp2k.KcpTransport port=7779 timeout=60000 client=True server=True tcp=Il2CppMirror.TelepathyTransport port=7780 timeout=null client=False server=False multiplex=Il2CppMirror.MultiplexTransport port=7780 timeout=null client=False server=False patched=3.
+[00:15:33.833] [UNITY] Connect MM: AuthId=95c67f6c4138aab104598c50f7a879f8 Hostname=ark.atomi23.de wsPort=7778 kcpPort=7779 tcpPort=7780 Secure=False
+[00:15:33.864] [UNITY] Running Client/Host Build - Vsync:0 - FPS:-1
+[00:15:33.865] [BAP_Custom_Server] [KcpRuntime] client-autojoin-after-connect: manager=Il2CppBAPBAP.Network.GameNetworkManager ws=Il2CppMirror.SimpleWeb.SimpleWebTransport port=7778 timeout=null client=False server=False kcp=Il2Cppkcp2k.KcpTransport port=7779 timeout=60000 client=True server=True tcp=Il2CppMirror.TelepathyTransport port=7780 timeout=null client=False server=False multiplex=Il2CppMirror.MultiplexTransport port=7780 timeout=null client=False server=False patched=3.
+[00:15:33.865] [BAP_Custom_Server] Requested matchmaking client connect. auth=95c67f6c4138aab104598c50f7a879f8 host=ark.atomi23.de ws=7778 kcp=7779 tcp=7780
+[00:15:33.992] [UNITY] GarbageCollector disposing of ComputeBuffer. Please use ComputeBuffer.Release() or .Dispose() to manually release the buffer.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[00:15:33.993] [UNITY] GarbageCollector disposing of ComputeBuffer. Please use ComputeBuffer.Release() or .Dispose() to manually release the buffer.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[00:15:34.013] [UNITY] Warming shader: Toon_Frozen_Legacy
+[00:15:34.013] [UNITY] Warming shader: Toon_Frozen_Amplify
+[00:15:34.013] [UNITY] Warming shader: InstancedIndirectGrass
+[00:15:34.014] [UNITY] Warming shader: DrownedGrass
+[00:15:34.014] [UNITY] Warming shader: InstancedIndirectTrash
+[00:15:34.055] [UNITY] Start GameAnalytics with accountId=codex-live-v177-20260609-001410
+[00:15:34.055] [UNITY] Initializing with custom id: codex-live-v177-20260609-001410
+[00:15:34.060] [UNITY] Set dimension01 = Account
+[00:15:34.060] [UNITY] Set dimension02 = Steam
+[00:15:34.060] [UNITY] Set dimension03 = 0
+[00:15:34.061] [UNITY] Finished setting up GameAnalytics
+[00:15:34.061] [UNITY] Send new user event
+[00:15:34.064] [BAP_Custom_Server] UnityWebRequest #1: [local]/api/challenge/preview
+[00:15:34.064] [BAP_Custom_Server] Custom server HTTP request #1: [local]/api/challenge/preview
+[00:15:34.065] [BAP_Custom_Server] Rewrote UnityWebRequest loopback API URL for direct custom-server mode.
+[00:15:34.067] [BAP_Custom_Server] UnityWebRequest #2: [local]/api/friends/requests
+[00:15:34.067] [BAP_Custom_Server] Custom server HTTP request #2: [local]/api/friends/requests
+[00:15:34.067] [BAP_Custom_Server] UnityWebRequest #3: [local]/api/iap/listing
+[00:15:34.067] [BAP_Custom_Server] Custom server HTTP request #3: [local]/api/iap/listing
+[00:15:34.068] [UNITY] Add Asset - assetId=300000 amount=0 balance=1
+[00:15:34.070] [UNITY] Warning/GameAnalytics: New identifier spotted compared to last one used, clearing cached configs hash!!
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[00:15:34.073] [UNITY] Add Asset - assetId=300002 amount=0 balance=1
+[00:15:34.074] [UNITY] Add Asset - assetId=300003 amount=0 balance=1
+[00:15:34.074] [UNITY] Add Asset - assetId=300005 amount=0 balance=1
+[00:15:34.075] [UNITY] Add Asset - assetId=300007 amount=0 balance=1
+[00:15:34.076] [UNITY] Add Asset - assetId=300008 amount=0 balance=1
+[00:15:34.076] [UNITY] Add Asset - assetId=300009 amount=0 balance=1
+[00:15:34.077] [UNITY] Add Asset - assetId=300010 amount=0 balance=1
+[00:15:34.077] [UNITY] Add Asset - assetId=300011 amount=0 balance=1
+[00:15:34.078] [UNITY] Add Asset - assetId=300012 amount=0 balance=1
+[00:15:34.078] [UNITY] Add Asset - assetId=300013 amount=0 balance=1
+[00:15:34.079] [UNITY] Add Asset - assetId=300014 amount=0 balance=1
+[00:15:34.081] [UNITY] Add Asset - assetId=300015 amount=0 balance=1
+[00:15:34.083] [UNITY] Add Asset - assetId=300016 amount=0 balance=1
+[00:15:34.085] [UNITY] Add Asset - assetId=300017 amount=0 balance=1
+[00:15:34.088] [UNITY] Add Asset - assetId=300018 amount=0 balance=1
+[00:15:34.089] [UNITY] Add Asset - assetId=300019 amount=0 balance=1
+[00:15:34.091] [UNITY] Add Asset - assetId=300020 amount=0 balance=1
+[00:15:34.092] [UNITY] Add Asset - assetId=300021 amount=0 balance=1
+[00:15:34.092] [UNITY] Add Asset - assetId=300022 amount=0 balance=1
+[00:15:34.094] [UNITY] Add Asset - assetId=300023 amount=0 balance=1
+[00:15:34.095] [UNITY] Add Asset - assetId=300024 amount=0 balance=1
+[00:15:34.096] [UNITY] Add Asset - assetId=300025 amount=0 balance=1
+[00:15:34.097] [UNITY] Add Asset - assetId=300026 amount=0 balance=1
+[00:15:34.097] [UNITY] Add Asset - assetId=-1 amount=0 balance=1
+[00:15:34.098] [UNITY] Add Asset - assetId=-1 amount=0 balance=1
+[00:15:34.098] [UNITY] Add Asset - assetId=-1 amount=0 balance=1
+[00:15:34.098] [UNITY] Add Asset - assetId=-1 amount=0 balance=1
+[00:15:34.098] [UNITY] Add Asset - assetId=1 amount=0 balance=999999
+[00:15:34.098] [UNITY] Add Asset - assetId=2 amount=0 balance=0
+[00:15:34.099] [UNITY] Add Asset - assetId=3 amount=0 balance=999999
+[00:15:34.099] [UNITY] Add Asset - assetId=4 amount=0 balance=999999
+[00:15:34.099] [UNITY] Add Asset - assetId=5 amount=0 balance=999999
+[00:15:34.099] [UNITY] Add Asset - assetId=0 amount=0 balance=1000
+[00:15:34.100] [BAP_Custom_Server] UnityWebRequest #4: [local]/api/shop
+[00:15:34.100] [BAP_Custom_Server] Custom server HTTP request #4: [local]/api/shop
+[00:15:34.175] [BAP_Custom_Server] UnityWebRequest #5: [remote]/v1/authentication/session-token
+[00:15:34.177] [UNITY] Warning: charTokenPass was null on UpdateCharTokenPassXp
+[00:15:34.177] [BAP_Custom_Server] UnityWebRequest #6: [local]/api/daily
+[00:15:34.177] [BAP_Custom_Server] Custom server HTTP request #5: [local]/api/daily
+[00:15:34.177] [BAP_Custom_Server] UnityWebRequest #7: [local]/api/profile/levels
+[00:15:34.178] [BAP_Custom_Server] Custom server HTTP request #6: [local]/api/profile/levels
+[00:15:34.178] [BAP_Custom_Server] UnityWebRequest #8: [local]/api/chars/pass
+[00:15:34.178] [BAP_Custom_Server] Custom server HTTP request #7: [local]/api/chars/pass
+[00:15:34.178] [BAP_Custom_Server] UnityWebRequest #9: [local]/api/chars/mastery/preview
+[00:15:34.178] [BAP_Custom_Server] Custom server HTTP request #8: [local]/api/chars/mastery/preview
+[00:15:34.179] [BAP_Custom_Server] UnityWebRequest #10: [local]/api/chars/listing
+[00:15:34.179] [BAP_Custom_Server] Custom server HTTP request #9: [local]/api/chars/listing
+[00:15:34.180] [BAP_Custom_Server] UnityWebRequest #11: [local]/api/lobby/socket
+[00:15:34.180] [BAP_Custom_Server] Custom server HTTP request #10: [local]/api/lobby/socket
+[00:15:34.180] [BAP_Custom_Server] Scheduled custom-server post-login splash fallback after lobby socket discovery.
+[00:15:34.180] [BAP_Custom_Server] UnityWebRequest #12: [local]/api/leaderboards/preview
+[00:15:34.181] [BAP_Custom_Server] Custom server HTTP request #11: [local]/api/leaderboards/preview
+[00:15:34.181] [BAP_Custom_Server] UnityWebRequest #13: [local]/api/pinger
+[00:15:34.181] [BAP_Custom_Server] Custom server HTTP request #12: [local]/api/pinger
+[00:15:34.182] [BAP_Custom_Server] Custom-server load response handled by LoginController.
+[00:15:34.188] [BAP_Custom_Server] PopulateAllUICharactersConfigurations: no instances found yet
+[00:15:34.189] [UNITY] [IapController] Handle Xsolla Listing Response
+[00:15:34.189] [UNITY] {"iapListings":[]}
+[00:15:34.189] [UNITY] [LNC] HandleFriendsRequestResponse
+[00:15:34.192] [UNITY] [TESTLOG] Client connected before
+[00:15:34.192] [UNITY] [TESTLOG] Client connected
+[00:15:34.193] [UNITY] [TESTLOG] Client registered handler
+[00:15:34.193] [UNITY] [TESTLOG] Client sent init
+[00:15:34.193] [UNITY] Send event Game Joined with 0 games played (exclusive)
+[00:15:34.199] [BAPBAP_ModAPI] [Lifecycle] ModUpdateRunner GameObject created.
+[00:15:34.201] [UNITY] ServicesInitializationException: The Analytics service has not been initialized. Please initialize Unity Services.
+  at Unity.Services.Analytics.AnalyticsService.get_Instance () [0x00000] in <00000000000000000000000000000000>:0 
+  at System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Start[TStateMachine] (TStateMachine& stateMachine) [0x00000] in <00000000000000000000000000000000>:0 
+  at BAPBAP.Local.AnalyticsManager.SetupAnalytics (System.String accountId, System.Boolean isGuest, System.Int32 totalGames) [0x00000] in <00000000000000000000000000000000>:0 
+  at BAPBAP.UI.LoginController.HandleLoadResponse (BAPBAP.Network.LoadResponse response) [0x00000] in <00000000000000000000000000000000>:0 
+--- End of stack trace from previous location where exception was thrown ---
+
+  at System.Runtime.CompilerServices.AsyncMethodBuilderCore+<>c.<ThrowAsync>b__7_0 (System.Object state) [0x00000] in <00000000000000000000000000000000>:0 
+  at UnityEngine.UnitySynchronizationContext+WorkRequest.Invoke () [0x00000] in <00000000000000000000000000000000>:0 
+  at UnityEngine.UnitySynchronizationContext.Exec () [0x00000] in <00000000000000000000000000000000>:0 
+  at UnityEngine.UnitySynchronizationContext.ExecuteTasks () [0x00000] in <00000000000000000000000000000000>:0 
+
+[00:15:34.203] [UNITY] [Thread2] GarbageCollector disposing of ComputeBuffer. Please use ComputeBuffer.Release() or .Dispose() to manually release the buffer.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[00:15:34.203] [UNITY] [Thread2] GarbageCollector disposing of ComputeBuffer. Please use ComputeBuffer.Release() or .Dispose() to manually release the buffer.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[00:15:34.203] [UNITY] [Thread6] Warning/GameAnalytics: New identifier spotted compared to last one used, clearing cached configs hash!!
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[00:15:34.226] [UNITY] [LNC] HandleAccountPassPassResponse
+[00:15:34.227] [UNITY] {"passId":1,"passLevels":[{"level":1,"xpNeeded":0,"listings":[]},{"level":2,"xpNeeded":100,"listings":[]},{"level":3,"xpNeeded":200,"listings":[]},{"level":4,"xpNeeded":300,"listings":[]},{"level":5,"xpNeeded":400,"listings":[]},{"level":6,"xpNeeded":500,"listings":[]},{"level":7,"xpNeeded":600,"listings":[]},{"level":8,"xpNeeded":700,"listings":[]},{"level":9,"xpNeeded":800,"listings":[]},{"level":10,"xpNeeded":900,"listings":[]},{"level":11,"xpNeeded":1000,"listings":[]},{"level":12,"xpNeeded":1100,"listings":[]},{"level":13,"xpNeeded":1200,"listings":[]},{"level":14,"xpNeeded":1300,"listings":[]},{"level":15,"xpNeeded":1400,"listings":[]},{"level":16,"xpNeeded":1500,"listings":[]},{"level":17,"xpNeeded":1600,"listings":[]},{"level":18,"xpNeeded":1700,"listings":[]},{"level":19,"xpNeeded":1800,"listings":[]},{"level":20,"xpNeeded":1900,"listings":[]},{"level":21,"xpNeeded":2000,"listings":[]},{"level":22,"xpNeeded":2100,"listings":[]},{"level":23,"xpNeeded":2200,"listings":[]},{"level":24,"xpNeeded":2300,"listings":[]},{"level":25,"xpNeeded":2400,"listings":[]},{"level":26,"xpNeeded":2500,"listings":[]},{"level":27,"xpNeeded":2600,"listings":[]},{"level":28,"xpNeeded":2700,"listings":[]},{"level":29,"xpNeeded":2800,"listings":[]},{"level":30,"xpNeeded":2900,"listings":[]},{"level":31,"xpNeeded":3000,"listings":[]},{"level":32,"xpNeeded":3100,"listings":[]},{"level":33,"xpNeeded":3200,"listings":[]},{"level":34,"xpNeeded":3300,"listings":[]},{"level":35,"xpNeeded":3400,"listings":[]},{"level":36,"xpNeeded":3500,"listings":[]},{"level":37,"xpNeeded":3600,"listings":[]},{"level":38,"xpNeeded":3700,"listings":[]},{"level":39,"xpNeeded":3800,"listings":[]},{"level":40,"xpNeeded":3900,"listings":[]},{"level":41,"xpNeeded":4000,"listings":[]},{"level":42,"xpNeeded":4100,"listings":[]},{"level":43,"xpNeeded":4200,"listings":[]},{"level":44,"xpNeeded":4300,"listings":[]},{"level":45,"xpNeeded":4400,"listings":[]},{"level":46,"xpNeeded":4500,"listings":[]},{"level":47,"xpNeeded":4600,"listings":[]},{"level":48,"xpNeeded":4700,"listings":[]},{"level":49,"xpNeeded":4800,"listings":[]},{"level":50,"xpNeeded":4900,"listings":[]},{"level":51,"xpNeeded":5000,"listings":[]},{"level":52,"xpNeeded":5100,"listings":[]},{"level":53,"xpNeeded":5200,"listings":[]},{"level":54,"xpNeeded":5300,"listings":[]},{"level":55,"xpNeeded":5400,"listings":[]},{"level":56,"xpNeeded":5500,"listings":[]},{"level":57,"xpNeeded":5600,"listings":[]},{"level":58,"xpNeeded":5700,"listings":[]},{"level":59,"xpNeeded":5800,"listings":[]},{"level":60,"xpNeeded":5900,"listings":[]},{"level":61,"xpNeeded":6000,"listings":[]},{"level":62,"xpNeeded":6100,"listings":[]},{"level":63,"xpNeeded":6200,"listings":[]},{"level":64,"xpNeeded":6300,"listings":[]},{"level":65,"xpNeeded":6400,"listings":[]},{"level":66,"xpNeeded":6500,"listings":[]},{"level":67,"xpNeeded":6600,"listings":[]},{"level":68,"xpNeeded":6700,"listings":[]},{"level":69,"xpNeeded":6800,"listings":[]},{"level":70,"xpNeeded":6900,"listings":[]},{"level":71,"xpNeeded":7000,"listings":[]},{"level":72,"xpNeeded":7100,"listings":[]},{"level":73,"xpNeeded":7200,"listings":[]},{"level":74,"xpNeeded":7300,"listings":[]},{"level":75,"xpNeeded":7400,"listings":[]},{"level":76,"xpNeeded":7500,"listings":[]},{"level":77,"xpNeeded":7600,"listings":[]},{"level":78,"xpNeeded":7700,"listings":[]},{"level":79,"xpNeeded":7800,"listings":[]},{"level":80,"xpNeeded":7900,"listings":[]},{"level":81,"xpNeeded":8000,"listings":[]},{"level":82,"xpNeeded":8100,"listings":[]},{"level":83,"xpNeeded":8200,"listings":[]},{"level":84,"xpNeeded":8300,"listings":[]},{"level":85,"xpNeeded":8400,"listings":[]},{"level":86,"xpNeeded":8500,"listings":[]},{"level":87,"xpNeeded":8600,"listings":[]},{"level":88,"xpNeeded":8700,"listings":[]},{"level":89,"xpNeeded":8800,"listings":[]},{"level":90,"xpNeeded":8900,"listings":[]},{"level":91,"xpNeeded":9000,"listings":[]},{"level":92,"xpNeeded":9100,"listings":[]},{"level":93,"xpNeeded":9200,"listings":[]},{"level":94,"xpNeeded":9300,"listings":[]},{"level":95,"xpNeeded":9400,"listings":[]},{"level":96,"xpNeeded":9500,"listings":[]},{"level":97,"xpNeeded":9600,"listings":[]},{"level":98,"xpNeeded":9700,"listings":[]},{"level":99,"xpNeeded":9800,"listings":[]},{"level":100,"xpNeeded":9900,"listings":[]}]}
+[00:15:34.228] [UNITY] HandleDailyRewardResponse
+[00:15:34.229] [UNITY] [SetCurrentDailyRewardUI] Invalid UNIX timestamp
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[00:15:34.229] [UNITY] [LNC] HandleCharTokensPassResponse
+[00:15:34.230] [UNITY] {"passId":1,"passLevels":[{"level":1,"xpNeeded":0,"listings":[]},{"level":2,"xpNeeded":100,"listings":[]},{"level":3,"xpNeeded":200,"listings":[]},{"level":4,"xpNeeded":300,"listings":[]},{"level":5,"xpNeeded":400,"listings":[]},{"level":6,"xpNeeded":500,"listings":[]},{"level":7,"xpNeeded":600,"listings":[]},{"level":8,"xpNeeded":700,"listings":[]},{"level":9,"xpNeeded":800,"listings":[]},{"level":10,"xpNeeded":900,"listings":[]},{"level":11,"xpNeeded":1000,"listings":[]},{"level":12,"xpNeeded":1100,"listings":[]},{"level":13,"xpNeeded":1200,"listings":[]},{"level":14,"xpNeeded":1300,"listings":[]},{"level":15,"xpNeeded":1400,"listings":[]},{"level":16,"xpNeeded":1500,"listings":[]},{"level":17,"xpNeeded":1600,"listings":[]},{"level":18,"xpNeeded":1700,"listings":[]},{"level":19,"xpNeeded":1800,"listings":[]},{"level":20,"xpNeeded":1900,"listings":[]},{"level":21,"xpNeeded":2000,"listings":[]},{"level":22,"xpNeeded":2100,"listings":[]},{"level":23,"xpNeeded":2200,"listings":[]},{"level":24,"xpNeeded":2300,"listings":[]},{"level":25,"xpNeeded":2400,"listings":[]},{"level":26,"xpNeeded":2500,"listings":[]},{"level":27,"xpNeeded":2600,"listings":[]},{"level":28,"xpNeeded":2700,"listings":[]},{"level":29,"xpNeeded":2800,"listings":[]},{"level":30,"xpNeeded":2900,"listings":[]},{"level":31,"xpNeeded":3000,"listings":[]},{"level":32,"xpNeeded":3100,"listings":[]},{"level":33,"xpNeeded":3200,"listings":[]},{"level":34,"xpNeeded":3300,"listings":[]},{"level":35,"xpNeeded":3400,"listings":[]},{"level":36,"xpNeeded":3500,"listings":[]},{"level":37,"xpNeeded":3600,"listings":[]},{"level":38,"xpNeeded":3700,"listings":[]},{"level":39,"xpNeeded":3800,"listings":[]},{"level":40,"xpNeeded":3900,"listings":[]},{"level":41,"xpNeeded":4000,"listings":[]},{"level":42,"xpNeeded":4100,"listings":[]},{"level":43,"xpNeeded":4200,"listings":[]},{"level":44,"xpNeeded":4300,"listings":[]},{"level":45,"xpNeeded":4400,"listings":[]},{"level":46,"xpNeeded":4500,"listings":[]},{"level":47,"xpNeeded":4600,"listings":[]},{"level":48,"xpNeeded":4700,"listings":[]},{"level":49,"xpNeeded":4800,"listings":[]},{"level":50,"xpNeeded":4900,"listings":[]},{"level":51,"xpNeeded":5000,"listings":[]},{"level":52,"xpNeeded":5100,"listings":[]},{"level":53,"xpNeeded":5200,"listings":[]},{"level":54,"xpNeeded":5300,"listings":[]},{"level":55,"xpNeeded":5400,"listings":[]},{"level":56,"xpNeeded":5500,"listings":[]},{"level":57,"xpNeeded":5600,"listings":[]},{"level":58,"xpNeeded":5700,"listings":[]},{"level":59,"xpNeeded":5800,"listings":[]},{"level":60,"xpNeeded":5900,"listings":[]},{"level":61,"xpNeeded":6000,"listings":[]},{"level":62,"xpNeeded":6100,"listings":[]},{"level":63,"xpNeeded":6200,"listings":[]},{"level":64,"xpNeeded":6300,"listings":[]},{"level":65,"xpNeeded":6400,"listings":[]},{"level":66,"xpNeeded":6500,"listings":[]},{"level":67,"xpNeeded":6600,"listings":[]},{"level":68,"xpNeeded":6700,"listings":[]},{"level":69,"xpNeeded":6800,"listings":[]},{"level":70,"xpNeeded":6900,"listings":[]},{"level":71,"xpNeeded":7000,"listings":[]},{"level":72,"xpNeeded":7100,"listings":[]},{"level":73,"xpNeeded":7200,"listings":[]},{"level":74,"xpNeeded":7300,"listings":[]},{"level":75,"xpNeeded":7400,"listings":[]},{"level":76,"xpNeeded":7500,"listings":[]},{"level":77,"xpNeeded":7600,"listings":[]},{"level":78,"xpNeeded":7700,"listings":[]},{"level":79,"xpNeeded":7800,"listings":[]},{"level":80,"xpNeeded":7900,"listings":[]},{"level":81,"xpNeeded":8000,"listings":[]},{"level":82,"xpNeeded":8100,"listings":[]},{"level":83,"xpNeeded":8200,"listings":[]},{"level":84,"xpNeeded":8300,"listings":[]},{"level":85,"xpNeeded":8400,"listings":[]},{"level":86,"xpNeeded":8500,"listings":[]},{"level":87,"xpNeeded":8600,"listings":[]},{"level":88,"xpNeeded":8700,"listings":[]},{"level":89,"xpNeeded":8800,"listings":[]},{"level":90,"xpNeeded":8900,"listings":[]},{"level":91,"xpNeeded":9000,"listings":[]},{"level":92,"xpNeeded":9100,"listings":[]},{"level":93,"xpNeeded":9200,"listings":[]},{"level":94,"xpNeeded":9300,"listings":[]},{"level":95,"xpNeeded":9400,"listings":[]},{"level":96,"xpNeeded":9500,"listings":[]},{"level":97,"xpNeeded":9600,"listings":[]},{"level":98,"xpNeeded":9700,"listings":[]},{"level":99,"xpNeeded":9800,"listings":[]},{"level":100,"xpNeeded":9900,"listings":[]}]}
+[00:15:34.232] [UNITY] [LNC] Handle Char Listing Response
+[00:15:34.232] [UNITY] {"charListings":[{"listingId":"custom-char-0","levelRequirement":0,"costs":[],"rewards":[],"charId":0,"purchases":1},{"listingId":"custom-char-1","levelRequirement":0,"costs":[],"rewards":[],"charId":1,"purchases":1},{"listingId":"custom-char-2","levelRequirement":0,"costs":[],"rewards":[],"charId":2,"purchases":1},{"listingId":"custom-char-3","levelRequirement":0,"costs":[],"rewards":[],"charId":3,"purchases":1},{"listingId":"custom-char-4","levelRequirement":0,"costs":[],"rewards":[],"charId":4,"purchases":1},{"listingId":"custom-char-5","levelRequirement":0,"costs":[],"rewards":[],"charId":5,"purchases":1},{"listingId":"custom-char-6","levelRequirement":0,"costs":[],"rewards":[],"charId":6,"purchases":1},{"listingId":"custom-char-7","levelRequirement":0,"costs":[],"rewards":[],"charId":7,"purchases":1},{"listingId":"custom-char-8","levelRequirement":0,"costs":[],"rewards":[],"charId":8,"purchases":1},{"listingId":"custom-char-9","levelRequirement":0,"costs":[],"rewards":[],"charId":9,"purchases":1},{"listingId":"custom-char-10","levelRequirement":0,"costs":[],"rewards":[],"charId":10,"purchases":1},{"listingId":"custom-char-11","levelRequirement":0,"costs":[],"rewards":[],"charId":11,"purchases":1},{"listingId":"custom-char-12","levelRequirement":0,"costs":[],"rewards":[],"charId":12,"purchases":1},{"listingId":"custom-char-13","levelRequirement":0,"costs":[],"rewards":[],"charId":13,"purchases":1},{"listingId":"custom-char-14","levelRequirement":0,"costs":[],"rewards":[],"charId":14,"purchases":1},{"listingId":"custom-char-15","levelRequirement":0,"costs":[],"rewards":[],"charId":15,"purchases":1}]}
+[00:15:34.235] [UNITY] [LNC] HandleCharMasteryPreviewResponse
+[00:15:34.235] [UNITY] {"passes":[]}
+[00:15:34.236] [UNITY] [LNC] HandleLeaderboardPreviewResponse
+[00:15:34.236] [UNITY] {"gameModes":[{"gameModeId":1,"showRanks":false,"showPoints":false,"showCharacters":true}]}
+[00:15:34.243] [Medusa] [Medusa] AugmentFix typed auto-select enabled for this test client.
+[00:15:34.290] [Medusa] [Medusa] AugmentFix no selectable augment UI yet via OnUpdate scan=1.
+[00:15:34.315] [UNITY] [UpdateGameModes] selectedAvailable True, selectedGameModeId 3
+[00:15:34.326] [UNITY] OnClientSvInit buildVers=0.1.1758-38212 teamId=1 pId=1 | 5
+[00:15:34.326] [UNITY] [Server Version: v0.1.1758-38212]
+[00:15:34.417] [Medusa] [Medusa] forced PlayerManager char via PlayerManager.OnCharacterChanged(0->15): old=15 new=15 skin=-1->-1 isServer=false isLocal=true.
+[00:15:34.434] [Medusa] [Medusa] forced PlayerManager char via PlayerManager.OnCharacterChanged(0->15): old=15 new=15 skin=-1->-1 isServer=false isLocal=true.
+[00:15:34.436] [UNITY] [GameMode] Loading GameManager (BAPBAP.Game.GameModeBattleRoyale)
+[00:15:34.486] [Medusa] [Medusa] lobby page model unlocked via UIPreMatch.PopulatePreMatchUI.existing: ids=2,1,5,0,3,4,6,15,7,8,9,10,11,12,13,14.
+[00:15:34.498] [Medusa] [Medusa] lobby page model unlocked via UIPreMatch.PopulatePreMatchUI.existing: ids=2,1,5,0,3,4,6,15,7,8,9,10,11,12,13,14.
+[00:15:34.502] [Medusa] [Medusa] NetworkPrefabPool ready via UIPreMatch.PopulatePreMatchUI.prefab.existing: prefab='Char_Medusa' libraryHad=False libraryAppended=False clientActive=True clientCreated=False serverActive=False serverCreated=False.
+[00:15:34.534] [Medusa] [Medusa] made 16 characters available in lobby (incl. Medusa).
+[00:15:34.547] [Medusa] [Medusa] already registered; verified prefab/pool/roster for CharId=15.
+[00:15:34.563] [Medusa] [Medusa] made 16 characters available in lobby (incl. Medusa).
+[00:15:34.602] [Medusa] [Medusa] recorded non-Medusa intent via UIPreMatch.PopulatePreMatchUI: playerId=1 account=codex-live-v177-20260609-001410 charId=1.
+[00:15:34.613] [Medusa] [Medusa] explicit local Medusa selection remembered via UIPreMatch.PopulatePreMatchUI.qmd.local.
+[00:15:34.670] [Medusa] [Medusa] forced PlayerManager char via UIPreMatch.PopulatePreMatchUI.qmd.local: old=15 new=15 skin=-1->-1 isServer=false isLocal=true.
+[00:15:34.670] [Medusa] [Medusa] qmd Medusa normalized via UIPreMatch.PopulatePreMatchUI: playerId=1 account=codex-live-v177-20260609-001410 localMatch=True old=1 new=15 skin=-1->-1.
+[00:15:34.671] [Medusa] [Medusa] qmd Medusa selection summary via UIPreMatch.PopulatePreMatchUI: forcedPlayers=1 prematchSelections=0 explicitLocal=True launch=True autoSelect=False remembered=False localPlayerId=1.
+[00:15:34.726] [Medusa] [Medusa] made 16 characters available in lobby (incl. Medusa).
+[00:15:34.768] [Medusa] [Medusa] made 16 characters available in lobby (incl. Medusa).
+[00:15:34.814] [Medusa] [Medusa] forced PlayerManager char via UIPreMatch.PopulatePreMatchUI.qmd.local: old=15 new=15 skin=-1->-1 isServer=false isLocal=true.
+[00:15:34.815] [Medusa] [Medusa] qmd Medusa normalized via UIPreMatch.PopulatePreMatchUI: playerId=1 account=codex-live-v177-20260609-001410 localMatch=True old=15 new=15 skin=-1->-1.
+[00:15:34.815] [Medusa] [Medusa] qmd Medusa selection summary via UIPreMatch.PopulatePreMatchUI: forcedPlayers=1 prematchSelections=0 explicitLocal=True launch=True autoSelect=False remembered=True localPlayerId=1.
+[00:15:35.014] [Medusa] [Medusa] made 16 characters available in lobby (incl. Medusa).
+[00:15:35.061] [Medusa] [Medusa] made 16 characters available in lobby (incl. Medusa).
+[00:15:35.083] [Medusa] [Medusa] made 16 characters available in lobby (incl. Medusa).
+[00:15:35.123] [Medusa] [Medusa] made 16 characters available in lobby (incl. Medusa).
+[00:15:35.123] [UNITY] Populating Character Buttons
+[00:15:35.124] [UNITY] Number of characters is 16
+[00:15:35.151] [Il2CppInterop] Registered mono type BAPBAP.Medusa.PrematchMedusaClickProxy in il2cpp domain
+[00:15:35.153] [UNITY] [Medusa] prematch Medusa click proxy attached via View_PreMatch_CharSelect.PopulateCharacterButtons.
+[00:15:35.153] [Medusa] [Medusa] prematch Medusa icon rebound via View_PreMatch_CharSelect.PopulateCharacterButtons: button=True charId=15.
+[00:15:35.155] [Medusa] [Medusa] prematch Medusa button repaired via View_PreMatch_CharSelect.PopulateCharacterButtons: index=7/16 beforeLocal=(0.00, 112.50, 0.00) afterLocal=(0.00, 262.50, 0.00) beforeAnchored=(0.00, 0.00) afterAnchored=(0.00, 150.00).
+[00:15:35.168] [UNITY] [Medusa] prematch Medusa click proxy attached via View_PreMatch_CharSelect.PopulateCharacterButtons.
+[00:15:35.168] [Medusa] [Medusa] prematch Medusa icon rebound via View_PreMatch_CharSelect.PopulateCharacterButtons: button=True charId=15.
+[00:15:35.168] [Medusa] [Medusa] prematch Medusa button repaired via View_PreMatch_CharSelect.PopulateCharacterButtons: index=7/16 beforeLocal=(0.00, 262.50, 0.00) afterLocal=(0.00, 262.50, 0.00) beforeAnchored=(0.00, 150.00) afterAnchored=(0.00, 150.00).
+[00:15:35.170] [Medusa] [Medusa] View_PreMatch_CharSelect displayed Medusa; charId=15 autoEnabled=False clicked=True.
+[00:15:35.171] [Medusa] [Medusa] View_PreMatch_CharSelect displayed Medusa; charId=15 autoEnabled=False clicked=True.
+[00:15:35.178] [Medusa] [Medusa] AugmentFix auto-selected first augment via OnUpdate.PlayerAPI.Local.uiAugments.ClSelectAugment(0), total=1.
+[00:15:35.183] [UNITY] Failed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 9365148]
+
+[00:15:35.184] [UNITY] Failed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 9365148]
+
+[00:15:35.185] [UNITY] Failed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 9365148]
+
+[00:15:35.185] [UNITY] Failed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 9365148]
+
+[00:15:35.186] [UNITY] Failed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 9365148]
+
+[00:15:35.187] [UNITY] Failed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 9365148]
+
+[00:15:35.187] [UNITY] Failed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 9365148]
+
+[00:15:35.188] [UNITY] Failed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 9365148]
+
+[00:15:35.188] [UNITY] Failed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 9365148]
+
+[00:15:35.189] [UNITY] Failed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 9365148]
+
+[00:15:35.191] [UNITY] [PLAYERMANAGER] [CodexLiveV177] Player On Start | 5
+[00:15:36.157] [UNITY] Prebaked navmesh data for level 'OpenBetaMap#J02_P_Boccato' succesfully found. Applying now.
+[00:15:36.159] [UNITY] Loaded Map OpenBetaMap#J02_P_Boccato
+[00:15:36.248] [UNITY] [GameMode] OnEnable | frameCount 33
+[00:15:36.288] [UNITY] [RegionController] WS for custom - Connection error - Unable to connect to the remote server
+[00:15:36.289] [UNITY] [RegionController] WS for custom - Connection closed - Abnormal
+[00:15:38.269] [BAP_Custom_Server] Loaded UI diagnostics (post-login fallback waiting): activeScene='MainScene' path='Assets/MainScene.unity' isLoaded=True
+[00:15:38.270] [BAP_Custom_Server] Loaded UI diagnostics canvases=0
+[00:15:38.271] [BAP_Custom_Server] Post-login splash fallback waiting for lobby UI. attempt=1 lobbies=0 splashes=0
+[00:15:40.283] [BAP_Custom_Server] Post-login splash fallback waiting for lobby UI. attempt=2 lobbies=0 splashes=0
+[00:15:40.392] [UNITY] Player: {"accountId":"codex-live-v177-20260609-001410","username":"Player4","discriminator":1004,"level":1,"charId":0,"bannerId":0,"skins":[300018,300000,300007,300020,300017,300026,300021,300013,300025,300023,300015,300003,300005,300016,300019,300018],"playerStatus":0,"isLeader":true,"isReady":false,"teamId":1,"spawnPosition":0}
+[00:15:40.393] [UNITY] Lobby: {"lobbyId":"FUCWM7","isInvited":false,"LocalAccountId":"codex-live-v177-20260609-001410","isOpenLobby":true,"gameModeId":1,"isAutoFill":true,"regionId":"vewr","leaderAccountId":"codex-live-v177-20260609-001410","queueSize":0,"queuePlayerCount":0,"mmIsCounting":false,"mmStartingTime":0.0,"queueIsCounting":false,"queueStartingDelay":0,"queueStartingTime":0.0,"isMatchmaking":false,"isInQueue":false,"isInGame":false,"isAdmin":false,"isGuest":false,"isCompleted":true,"gold":1000,"fractals":999999,"charTokens":0,"accountPass":{"passLevels":[{"level":1,"xpNeeded":0},{"level":2,"xpNeeded":100},{"level":3,"xpNeeded":200},{"level":4,"xpNeeded":300},{"level":5,"xpNeeded":400},{"level":6,"xpNeeded":500},{"level":7,"xpNeeded":600},{"level":8,"xpNeeded":700},{"level":9,"xpNeeded":800},{"level":10,"xpNeeded":900},{"level":11,"xpNeeded":1000},{"level":12,"xpNeeded":1100},{"level":13,"xpNeeded":1200},{"level":14,"xpNeeded":1300},{"level":15,"xpNeeded":1400},{"level":16,"xpNeeded":1500},{"level":17,"xpNeeded":1600},{"level":18,"xpNeeded":1700},{"level":19,"xpNeeded":1800},{"level":20,"xpNeeded":1900},{"level":21,"xpNeeded":2000},{"level":22,"xpNeeded":2100},{"level":23,"xpNeeded":2200},{"level":24,"xpNeeded":2300},{"level":25,"xpNeeded":2400},{"level":26,"xpNeeded":2500},{"level":27,"xpNeeded":2600},{"level":28,"xpNeeded":2700},{"level":29,"xpNeeded":2800},{"level":30,"xpNeeded":2900},{"level":31,"xpNeeded":3000},{"level":32,"xpNeeded":3100},{"level":33,"xpNeeded":3200},{"level":34,"xpNeeded":3300},{"level":35,"xpNeeded":3400},{"level":36,"xpNeeded":3500},{"level":37,"xpNeeded":3600},{"level":38,"xpNeeded":3700},{"level":39,"xpNeeded":3800},{"level":40,"xpNeeded":3900},{"level":41,"xpNeeded":4000},{"level":42,"xpNeeded":4100},{"level":43,"xpNeeded":4200},{"level":44,"xpNeeded":4300},{"level":45,"xpNeeded":4400},{"level":46,"xpNeeded":4500},{"level":47,"xpNeeded":4600},{"level":48,"xpNeeded":4700},{"level":49,"xpNeeded":4800},{"level":50,"xpNeeded":4900},{"level":51,"xpNeeded":5000},{"level":52,"xpNeeded":5100},{"level":53,"xpNeeded":5200},{"level":54,"xpNeeded":5300},{"level":55,"xpNeeded":5400},{"level":56,"xpNeeded":5500},{"level":57,"xpNeeded":5600},{"level":58,"xpNeeded":5700},{"level":59,"xpNeeded":5800},{"level":60,"xpNeeded":5900},{"level":61,"xpNeeded":6000},{"level":62,"xpNeeded":6100},{"level":63,"xpNeeded":6200},{"level":64,"xpNeeded":6300},{"level":65,"xpNeeded":6400},{"level":66,"xpNeeded":6500},{"level":67,"xpNeeded":6600},{"level":68,"xpNeeded":6700},{"level":69,"xpNeeded":6800},{"level":70,"xpNeeded":6900},{"level":71,"xpNeeded":7000},{"level":72,"xpNeeded":7100},{"level":73,"xpNeeded":7200},{"level":74,"xpNeeded":7300},{"level":75,"xpNeeded":7400},{"level":76,"xpNeeded":7500},{"level":77,"xpNeeded":7600},{"level":78,"xpNeeded":7700},{"level":79,"xpNeeded":7800},{"level":80,"xpNeeded":7900},{"level":81,"xpNeeded":8000},{"level":82,"xpNeeded":8100},{"level":83,"xpNeeded":8200},{"level":84,"xpNeeded":8300},{"level":85,"xpNeeded":8400},{"level":86,"xpNeeded":8500},{"level":87,"xpNeeded":8600},{"level":88,"xpNeeded":8700},{"level":89,"xpNeeded":8800},{"level":90,"xpNeeded":8900},{"level":91,"xpNeeded":9000},{"level":92,"xpNeeded":9100},{"level":93,"xpNeeded":9200},{"level":94,"xpNeeded":9300},{"level":95,"xpNeeded":9400},{"level":96,"xpNeeded":9500},{"level":97,"xpNeeded":9600},{"level":98,"xpNeeded":9700},{"level":99,"xpNeeded":9800},{"level":100,"xpNeeded":9900}]},"accountXp":0,"iapEnabled":false,"creatorCode":"","creatorName":""}
+[00:15:40.395] [UNITY] [UpdateGameModes] selectedAvailable False, selectedGameModeId 1
+[00:15:40.395] [UNITY] WARNING: Tried to unlock out of bounds character id 0 - at UILobbyCharacterSelectPage.SelectCharIconButton
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[00:15:40.418] [UNITY] [UpdateGameModes] selectedAvailable True, selectedGameModeId 3
+[00:15:40.438] [UNITY] [LNC] HandleGameModeUpdatedMessage - Received GAME_MODE_UPDATED
+[00:15:40.439] [UNITY] [UpdateGameModes] selectedAvailable True, selectedGameModeId 3
+[00:15:40.588] [Medusa] [Medusa] UICharactersConfiguration first seen at poll #1 (roster=16).
+[00:15:40.633] [Medusa] [WARN] [Medusa] local binding found no Medusa entity via PollOnce: candidates=0 localId=1 entities=30.
+[00:15:42.341] [BAP_Custom_Server] Post-login splash fallback waiting for lobby UI. attempt=3 lobbies=0 splashes=0
+[00:15:44.366] [BAP_Custom_Server] Post-login splash fallback waiting for lobby UI. attempt=4 lobbies=0 splashes=0
+[00:15:44.736] [Medusa] [Medusa] live local diag #1: local=True localPlayerId=1 localChar=15 localDead=false localDowned=0 localIsLocal=true localOwned=true localPrimary='<null>' localPrimaryChar=-1 localPos=<null> localScreen=<null> auth='<null>' authChar=-1 authPos=<null> authScreen=<null> worldMedusa='<null>' worldChar=-1 worldPos=<null> worldScreen=<null> spectating=false players=1 entities=30 camera=MainCamera pos=(0,0,0) rot=(70,0,0) size=1024x768.
+[00:15:44.737] [Medusa] [Medusa] live player[0]: name='[CodexLiveV177] Player' id=1 char=15 team=1 local=true owned=true dead=false primary='<null>' primaryChar=-1 pos=<null> screen=<null>.
+[00:15:44.837] [Medusa] [Medusa] anim(prefab): name='Medusa_Visual' enabled=True controller='Medusa' parameterCount=0
+[00:15:44.843] [Medusa] [Medusa] anim(prefab): parameters not enumerable on inactive prefab (n=0).
+[00:15:44.844] [Medusa] [Medusa] anim(LIVE): no Medusa instance in the active scene yet (need a match with someone selecting Medusa).
+[00:15:45.761] [Medusa] [WARN] [Medusa] local binding found no Medusa entity via PollOnce: candidates=0 localId=1 entities=30.
+[00:15:46.368] [BAP_Custom_Server] Post-login splash fallback waiting for lobby UI. attempt=5 lobbies=0 splashes=0
+[00:15:48.371] [BAP_Custom_Server] Post-login splash fallback waiting for lobby UI. attempt=6 lobbies=0 splashes=0
+[00:15:50.375] [BAP_Custom_Server] Post-login splash fallback waiting for lobby UI. attempt=7 lobbies=0 splashes=0
+[00:15:50.826] [Medusa] [WARN] [Medusa] local binding found no Medusa entity via PollOnce: candidates=0 localId=1 entities=30.
+[00:15:52.380] [BAP_Custom_Server] [FULL DIAGNOSTICS] Total GameObjects: 0
+[00:15:52.381] [BAP_Custom_Server] Post-login splash fallback could not find lobby splash UI after 8 attempts. Continuing at slower rate.
+[00:15:53.596] [Medusa] [Medusa] animator controller repaired via FindMedusaAnimator: animator='Medusa_Visual' controller='Medusa'.
+[00:15:53.596] [Medusa] [Medusa] HM postfix rebound CharAnimator on 'Char_Medusa(Clone)' -> Medusa's Animator (controller='Medusa').
+[00:15:53.597] [Medusa] [Medusa] HM postfix rebound CharAnimator on 'Char_Medusa(Clone)' -> Medusa's Animator (controller='Medusa').
+[00:15:53.634] [Medusa] [Medusa] camera target repair via EntityManager.OnStartClient.alreadyPrimary: entity='Char_Medusa(Clone)' target='Char_Medusa(Clone)' updated=0 already=1 controllers=1 localPrimary='Char_Medusa(Clone)' auth='Char_Medusa(Clone)' entityScreen=522.8,470.1,13.5 camera=MainCamera pos=(114.46,12.03,25.488) rot=(70,0,0) size=1024x768.
+[00:15:53.670] [Medusa] [Medusa] visual anchor via EntityManager.OnStartClient.existing: root='Char_Medusa(Clone)' parent Root->CharHolder localPos=(0,0,0) worldPos=(114.726,0.06,32.102).
+[00:15:53.671] [Medusa] [Medusa] visual fit via EntityManager.OnStartClient.existing: skinnedBaseH=2.153 skinnedVisualH=1.998 scaleFactor=1 localScale=1 localPos=(-0.171,0.063,0.096).
+[00:15:53.671] [Medusa] [Medusa] visual layer sync via EntityManager.OnStartClient.existing: layer=0 'Default' objects=59.
+[00:15:53.671] [Medusa] [Medusa] visual render enable via EntityManager.OnStartClient.existing: renderers=4 newlyEnabled=0 smrsUpdateWhenOffscreen=1 active=True localPos=(-0.171,0.063,0.096) localScale=1.
+[00:15:53.672] [Medusa] [Medusa] visual layer sync via EntityManager.OnStartClient.existing.postCharMaterial: layer=0 'Default' objects=59.
+[00:15:53.672] [Medusa] [Medusa] visual layer sync via EntityManager.OnStartClient.existing.postCharMaterial.postVisibility: layer=0 'Default' objects=59.
+[00:15:53.672] [Medusa] [Medusa] CharMaterial visibility forced via EntityManager.OnStartClient.existing.postCharMaterial: alpha=1 opaque=true partialHidden=false rendererActive=true visualActive=True.
+[00:15:53.672] [Medusa] [Medusa] CharMaterial rebound via EntityManager.OnStartClient.existing: primary='MedusaBase' primaryLayer=0 renderers=4 extras=3 customBounds=True.
+[00:15:53.673] [Medusa] [Medusa] copied bundle material props via EntityManager.OnStartClient.existing.postCharMaterial: target='Medusa_Material_Native' textures=1 colors=2 floats=0 sourceMaterial='Medusa_Material'.
+[00:15:53.673] [Medusa] [Medusa] material visibility via EntityManager.OnStartClient.existing.postCharMaterial: smrs=1 shader='Custom/Toon/Toon_Character_Amplify' localPos=(-0.171,0.063,0.096).
+[00:15:53.673] [Medusa] [Medusa] visual render enable via EntityManager.OnStartClient.existing.postFit: renderers=4 newlyEnabled=0 smrsUpdateWhenOffscreen=1 active=True localPos=(-0.171,0.063,0.096) localScale=1.
+[00:15:53.673] [Medusa] [Medusa] visual layer sync via EntityManager.OnStartClient.existing.postFit.postVisibility: layer=0 'Default' objects=59.
+[00:15:53.674] [Medusa] [Medusa] CharMaterial visibility forced via EntityManager.OnStartClient.existing.postFit: alpha=1 opaque=true partialHidden=false rendererActive=true visualActive=True.
+[00:15:53.674] [Medusa] [Medusa] visual diagnostics via EntityManager.OnStartClient.existing.postFit: root='Char_Medusa(Clone)' visualActive=True layer=0 world=(114.555,0.123,32.198) local=(-0.171,0.063,0.096) scale=(1,1,1) renderers=4 smrs=1 firstRenderer='Base_BlobShadow' firstRendererLayer=0 firstSmr='MedusaBase' mesh='MedusaBase' rootBone='Def-Hips' material='Medusa_Material_Native' shader='Custom/Toon/Toon_Character_Amplify' bounds=114.509,0.972,32.11/1.359,1.998,1.507 screen='514.1,489.7,12.7'.
+[00:15:54.572] [Medusa] [Medusa] dismissed 69 loading overlay object(s) after live spawn via EntityManager.OnStartClient.existing.
+[00:15:54.579] [Medusa] [Medusa] live rebind via EntityManager.OnStartClient.existing: root='Char_Medusa(Clone)' charAnim=1 footsteps=1 controller='Medusa'.
+[00:15:54.605] [Medusa] [Medusa] runtime ability UI applied via EntityManager.OnStartClient.CharAbilities: abilities=4 colors=medusa-green.
+[00:15:54.682] [Medusa] [Medusa] ability element palette applied via EntityManager.OnStartClient.CharAbilities.live: cmd=0 title='Serpent Bolt'.
+[00:15:54.726] [Medusa] [Medusa] ability element palette applied via EntityManager.OnStartClient.CharAbilities.live: cmd=2 title='Slither'.
+[00:15:54.768] [Medusa] [Medusa] ability element palette applied via EntityManager.OnStartClient.CharAbilities.live: cmd=1 title='Venom Spit'.
+[00:15:54.810] [Medusa] [Medusa] ability element palette applied via EntityManager.OnStartClient.CharAbilities.live: cmd=3 title='Petrifying Gaze'.
+[00:15:54.857] [Medusa] [Medusa] visual anchor via EntityManager.OnStartClient.existing: root='Char_Medusa(Clone)' parent CharHolder->CharHolder localPos=(0,0,0) worldPos=(114.726,0.06,32.102).
+[00:15:54.858] [Medusa] [Medusa] visual layer sync via EntityManager.OnStartClient.existing: layer=0 'Default' objects=59.
+[00:15:54.858] [Medusa] [Medusa] visual render enable via EntityManager.OnStartClient.existing: renderers=4 newlyEnabled=0 smrsUpdateWhenOffscreen=1 active=True localPos=(-0.171,0.063,0.096) localScale=1.
+[00:15:54.862] [Medusa] [Medusa] forced renderer material opacity via EntityManager.OnStartClient.existing.postCharMaterial.prepared: materials=5.
+[00:15:54.862] [Medusa] [Medusa] visual render enable via EntityManager.OnStartClient.existing.postFit: renderers=4 newlyEnabled=0 smrsUpdateWhenOffscreen=1 active=True localPos=(-0.171,0.063,0.096) localScale=1.
+[00:15:54.863] [Medusa] [Medusa] visual layer sync via EntityManager.OnStartClient.existing.postFit.postVisibility: layer=0 'Default' objects=59.
+[00:15:54.863] [Medusa] [Medusa] CharMaterial visibility forced via EntityManager.OnStartClient.existing.postFit: alpha=1 opaque=true partialHidden=false rendererActive=true visualActive=True.
+[00:15:54.885] [Medusa] [Medusa] runtime ability UI applied via EntityManager.OnStartClient.CharAbilities: abilities=4 colors=medusa-green.
+[00:15:54.957] [Medusa] [Medusa] ability element palette applied via EntityManager.OnStartClient.CharAbilities.live: cmd=0 title='Serpent Bolt'.
+[00:15:55.002] [Medusa] [Medusa] ability element palette applied via EntityManager.OnStartClient.CharAbilities.live: cmd=2 title='Slither'.
+[00:15:55.049] [Medusa] [Medusa] ability element palette applied via EntityManager.OnStartClient.CharAbilities.live: cmd=1 title='Venom Spit'.
+[00:15:55.108] [Medusa] [Medusa] ability element palette applied via EntityManager.OnStartClient.CharAbilities.live: cmd=3 title='Petrifying Gaze'.
+[00:15:55.274] [Medusa] [Medusa] visual anchor via PollOnce.primary.existing: root='Char_Medusa(Clone)' parent CharHolder->CharHolder localPos=(0,0,0) worldPos=(114.726,0.06,32.102).
+[00:15:55.274] [Medusa] [Medusa] visual fit via PollOnce.primary.existing: skinnedBaseH=2.153 skinnedVisualH=1.998 scaleFactor=1 localScale=1 localPos=(-0.171,0.063,0.096).
+[00:15:55.275] [Medusa] [Medusa] visual layer sync via PollOnce.primary.existing: layer=0 'Default' objects=59.
+[00:15:55.275] [Medusa] [Medusa] visual render enable via PollOnce.primary.existing: renderers=4 newlyEnabled=0 smrsUpdateWhenOffscreen=1 active=True localPos=(-0.171,0.063,0.096) localScale=1.
+[00:15:55.275] [Medusa] [Medusa] forced renderer material opacity via PollOnce.primary.existing.postCharMaterial.prepared: materials=8.
+[00:15:55.276] [Medusa] [Medusa] visual render enable via PollOnce.primary.existing.postFit: renderers=4 newlyEnabled=0 smrsUpdateWhenOffscreen=1 active=True localPos=(-0.171,0.063,0.096) localScale=1.
+[00:15:55.276] [Medusa] [Medusa] visual layer sync via PollOnce.primary.existing.postFit.postVisibility: layer=0 'Default' objects=59.
+[00:15:55.276] [Medusa] [Medusa] CharMaterial visibility forced via PollOnce.primary.existing.postFit: alpha=1 opaque=true partialHidden=false rendererActive=true visualActive=True.
+[00:15:55.277] [Medusa] [Medusa] visual diagnostics via PollOnce.primary.existing.postFit: root='Char_Medusa(Clone)' visualActive=True layer=0 world=(114.555,0.123,32.198) local=(-0.171,0.063,0.096) scale=(1,1,1) renderers=4 smrs=1 firstRenderer='Base_BlobShadow' firstRendererLayer=0 firstSmr='MedusaBase' mesh='MedusaBase' rootBone='Def-Hips' material='Medusa_Material_Native (Instance)' shader='Custom/Toon/Toon_Character_Amplify' bounds=114.509,0.972,32.11/1.359,1.998,1.507 screen='514.1,489.7,12.7'.
+[00:15:55.304] [Medusa] [Medusa] runtime ability UI applied via PollOnce.primary.CharAbilities: abilities=4 colors=medusa-green.
+[00:15:55.382] [Medusa] [Medusa] ability element palette applied via PollOnce.primary.CharAbilities.live: cmd=0 title='Serpent Bolt'.
+[00:15:55.433] [Medusa] [Medusa] ability element palette applied via PollOnce.primary.CharAbilities.live: cmd=2 title='Slither'.
+[00:15:55.480] [Medusa] [Medusa] ability element palette applied via PollOnce.primary.CharAbilities.live: cmd=1 title='Venom Spit'.
+[00:15:55.527] [Medusa] [Medusa] ability element palette applied via PollOnce.primary.CharAbilities.live: cmd=3 title='Petrifying Gaze'.
+[00:15:55.599] [Medusa] [Medusa] live local diag ready: localPlayerId=1 localChar=15 localPrimary='Char_Medusa(Clone)' auth='Char_Medusa(Clone)' pos=(114.726,0.06,32.102) screen=522.8,470.1,13.5 players=1 entities=31 camera=MainCamera pos=(114.46,12.03,25.488) rot=(70,0,0) size=1024x768.
+[00:15:55.737] [Medusa] [Medusa] visual anchor via EntityManager.OnStartClient+0.15s.existing: root='Char_Medusa(Clone)' parent CharHolder->CharHolder localPos=(0,0,0) worldPos=(114.726,0.06,32.102).
+[00:15:55.738] [Medusa] [Medusa] visual render enable via EntityManager.OnStartClient+0.15s.existing: renderers=4 newlyEnabled=0 smrsUpdateWhenOffscreen=1 active=True localPos=(-0.171,0.063,0.096) localScale=1.
+[00:15:55.738] [Medusa] [Medusa] forced renderer material opacity via EntityManager.OnStartClient+0.15s.existing.postCharMaterial.prepared: materials=8.
+[00:15:55.739] [Medusa] [Medusa] CharMaterial visibility forced via EntityManager.OnStartClient+0.15s.existing.postFit: alpha=1 opaque=true partialHidden=false rendererActive=true visualActive=True.
+[00:15:55.763] [Medusa] [Medusa] runtime ability UI applied via EntityManager.OnStartClient+0.15s.CharAbilities: abilities=4 colors=medusa-green.
+[00:15:55.840] [Medusa] [Medusa] ability element palette applied via EntityManager.OnStartClient+0.15s.CharAbilities.live: cmd=0 title='Serpent Bolt'.
+[00:15:55.886] [Medusa] [Medusa] ability element palette applied via EntityManager.OnStartClient+0.15s.CharAbilities.live: cmd=2 title='Slither'.
+[00:15:55.933] [Medusa] [Medusa] ability element palette applied via EntityManager.OnStartClient+0.15s.CharAbilities.live: cmd=1 title='Venom Spit'.
+[00:15:55.978] [Medusa] [Medusa] ability element palette applied via EntityManager.OnStartClient+0.15s.CharAbilities.live: cmd=3 title='Petrifying Gaze'.
+[00:15:56.417] [UNITY] Char Mastery was null on GetOwnedHighestTierCharMasteryBadge
+[00:15:56.465] [Medusa] [Medusa] visual anchor via EntityManager.Start.existing: root='[CodexLiveV177] Medusa' parent CharHolder->CharHolder localPos=(0,0,0) worldPos=(114.726,0.06,32.102).
+[00:15:56.465] [Medusa] [Medusa] visual fit via EntityManager.Start.existing: skinnedBaseH=2.153 skinnedVisualH=1.998 scaleFactor=1 localScale=1 localPos=(-0.171,0.063,0.096).
+[00:15:56.466] [Medusa] [Medusa] visual diagnostics via EntityManager.Start.existing.postFit: root='[CodexLiveV177] Medusa' visualActive=True layer=0 world=(114.555,0.123,32.198) local=(-0.171,0.063,0.096) scale=(1,1,1) renderers=4 smrs=1 firstRenderer='Base_BlobShadow' firstRendererLayer=0 firstSmr='MedusaBase' mesh='MedusaBase' rootBone='Def-Hips' material='Medusa_Material_Native (Instance)' shader='Custom/Toon/Toon_Character_Amplify' bounds=114.509,0.972,32.11/1.359,1.998,1.507 screen='514.1,489.7,12.7'.
+[00:15:56.489] [Medusa] [Medusa] runtime ability UI applied via EntityManager.Start.CharAbilities: abilities=4 colors=medusa-green.
+[00:15:56.739] [Medusa] [Medusa] visual anchor via EntityManager.Start.existing: root='[CodexLiveV177] Medusa' parent CharHolder->CharHolder localPos=(0,0,0) worldPos=(114.726,0.06,32.102).
+[00:15:56.764] [Medusa] [Medusa] runtime ability UI applied via EntityManager.Start.CharAbilities: abilities=4 colors=medusa-green.
+[00:15:57.208] [Medusa] [Medusa] ability LoadAbilityUI bridge applied via Ability.LoadAbilityUI: slot=0.
+[00:15:57.436] [Medusa] [Medusa] ability LoadAbilityUI bridge applied via Ability.LoadAbilityUI: slot=0.
+[00:15:57.673] [Medusa] [Medusa] ability LoadAbilityUI bridge applied via Ability.LoadAbilityUI: slot=1.
+[00:15:57.901] [Medusa] [Medusa] ability LoadAbilityUI bridge applied via Ability.LoadAbilityUI: slot=1.
+[00:15:58.143] [Medusa] [Medusa] ability LoadAbilityUI bridge applied via Ability.LoadAbilityUI: slot=2.
+[00:15:58.379] [Medusa] [Medusa] ability LoadAbilityUI bridge applied via Ability.LoadAbilityUI: slot=2.
+[00:15:59.031] [Medusa] [Medusa] visual anchor via PollOnce.primary.existing: root='[CodexLiveV177] Medusa' parent CharHolder->CharHolder localPos=(0,0,0) worldPos=(114.726,0.06,32.102).
+[00:16:00.035] [Medusa] [Medusa] no loading overlay candidates found after live spawn via PollOnce.primary.existing.
+[00:16:00.447] [Medusa] [Medusa] visual anchor via EntityManager.OnStartClient+0.45s.existing: root='[CodexLiveV177] Medusa' parent CharHolder->CharHolder localPos=(0,0,0) worldPos=(114.726,0.06,32.102).
+[00:16:00.966] [Medusa] [Medusa] visual anchor via EntityManager.OnStartClient+0.95s.existing: root='[CodexLiveV177] Medusa' parent CharHolder->CharHolder localPos=(0,0,0) worldPos=(114.726,0.06,32.102).
+[00:16:01.509] [Medusa] [Medusa] visual anchor via EntityManager.OnStartClient+1.80s.existing: root='[CodexLiveV177] Medusa' parent CharHolder->CharHolder localPos=(0,0,0) worldPos=(114.726,0.06,32.102).
+[00:16:02.197] [Medusa] [Medusa] visual anchor via PollOnce.primary.existing: root='[CodexLiveV177] Medusa' parent CharHolder->CharHolder localPos=(0,0,0) worldPos=(114.726,0.06,32.102).
+[00:16:17.038] [Medusa] [Medusa] native FX renderer repair: name='VFX_Medusa_Poison_Muzzle' renderers=7 enabled=6 repaired=6 shaders=[Universal Render Pipeline/Particles/Unlit].
+[00:16:17.039] [Medusa] [Medusa] native FX spawned: name='VFX_Medusa_Poison_Muzzle' particles=7 renderers=7 ttl=1.80 scale=1.10 pos=(114.58,0.81,31.68).
+[00:16:17.039] [Medusa] [Medusa] native FX renderer repair: name='VFX_Medusa_Poison_Trail' renderers=3 enabled=3 repaired=3 shaders=[Universal Render Pipeline/Particles/Unlit].
+[00:16:17.040] [Medusa] [Medusa] native FX spawned: name='VFX_Medusa_Poison_Trail' particles=3 renderers=3 ttl=1.80 scale=1.20 pos=(114.28,0.81,30.83).
+[00:16:17.041] [Medusa] [Medusa] native FX renderer repair: name='VFX_Medusa_Poison_Hit' renderers=10 enabled=10 repaired=10 shaders=[Universal Render Pipeline/Particles/Unlit].
+[00:16:17.041] [Medusa] [Medusa] native FX spawned: name='VFX_Medusa_Poison_Hit' particles=10 renderers=10 ttl=1.80 scale=1.15 pos=(113.55,0.81,28.70).
+[00:16:17.042] [Medusa] [Medusa] native cast FX emitted: slot=0 prefabCount=6.
+[00:16:17.043] [Medusa] [Medusa] authored ability driver via InputFallback: slot=0 server=False hits=0; inherited Kitsu Shoot suppressed.
+[00:16:17.043] [Medusa] [Medusa] cast FX source=InputFallback slot=0.
+[00:16:21.704] [Medusa] [Medusa] native FX renderer repair: name='VFX_Medusa_Poison_Muzzle' renderers=7 enabled=6 repaired=6 shaders=[Universal Render Pipeline/Particles/Unlit].
+[00:16:21.704] [Medusa] [Medusa] native FX spawned: name='VFX_Medusa_Poison_Muzzle' particles=7 renderers=7 ttl=1.80 scale=1.10 pos=(114.58,0.81,31.68).
+[00:16:21.705] [Medusa] [Medusa] native FX renderer repair: name='VFX_Medusa_Poison_Trail' renderers=3 enabled=3 repaired=3 shaders=[Universal Render Pipeline/Particles/Unlit].
+[00:16:21.705] [Medusa] [Medusa] native FX spawned: name='VFX_Medusa_Poison_Trail' particles=3 renderers=3 ttl=1.80 scale=1.20 pos=(114.28,0.81,30.83).
+[00:16:21.706] [Medusa] [Medusa] native FX renderer repair: name='VFX_Medusa_Poison_Hit' renderers=10 enabled=10 repaired=10 shaders=[Universal Render Pipeline/Particles/Unlit].
+[00:16:21.706] [Medusa] [Medusa] native FX spawned: name='VFX_Medusa_Poison_Hit' particles=10 renderers=10 ttl=1.80 scale=1.15 pos=(113.55,0.81,28.70).
+[00:16:21.706] [Medusa] [Medusa] native cast FX emitted: slot=0 prefabCount=6.
+[00:16:21.707] [Medusa] [Medusa] authored ability driver via InputFallback: slot=0 server=False hits=0; inherited Kitsu Shoot suppressed.
+[00:16:21.708] [Medusa] [Medusa] cast FX source=InputFallback slot=0.
+[00:16:22.649] [Medusa] [Medusa] native FX renderer repair: name='VFX_Medusa_Poison_Muzzle' renderers=7 enabled=6 repaired=6 shaders=[Universal Render Pipeline/Particles/Unlit].
+[00:16:22.650] [Medusa] [Medusa] native FX spawned: name='VFX_Medusa_Poison_Muzzle' particles=7 renderers=7 ttl=1.80 scale=1.10 pos=(115.16,0.81,32.20).
+[00:16:22.651] [Medusa] [Medusa] native FX renderer repair: name='VFX_Medusa_Poison_Trail' renderers=3 enabled=3 repaired=3 shaders=[Universal Render Pipeline/Particles/Unlit].
+[00:16:22.651] [Medusa] [Medusa] native FX spawned: name='VFX_Medusa_Poison_Trail' particles=3 renderers=3 ttl=1.80 scale=1.20 pos=(116.04,0.81,32.41).
+[00:16:22.652] [Medusa] [Medusa] native FX renderer repair: name='VFX_Medusa_Poison_Hit' renderers=10 enabled=10 repaired=10 shaders=[Universal Render Pipeline/Particles/Unlit].
+[00:16:22.652] [Medusa] [Medusa] native FX spawned: name='VFX_Medusa_Poison_Hit' particles=10 renderers=10 ttl=1.80 scale=1.15 pos=(118.23,0.81,32.91).
+[00:16:22.652] [Medusa] [Medusa] native cast FX emitted: slot=0 prefabCount=6.
+[00:16:22.653] [Medusa] [Medusa] authored ability driver via CharAbilities.SetCastAbility: slot=0 server=False hits=0; inherited Kitsu Shoot suppressed.
+[00:16:26.003] [Medusa] [Medusa] native FX renderer repair: name='VFX_Medusa_Poison_Muzzle' renderers=7 enabled=6 repaired=6 shaders=[Universal Render Pipeline/Particles/Unlit].
+[00:16:26.004] [Medusa] [Medusa] native FX spawned: name='VFX_Medusa_Poison_Muzzle' particles=7 renderers=7 ttl=1.80 scale=1.10 pos=(115.56,0.81,31.48).
+[00:16:26.005] [Medusa] [Medusa] native FX renderer repair: name='VFX_Medusa_Poison_Trail' renderers=3 enabled=3 repaired=3 shaders=[Universal Render Pipeline/Particles/Unlit].
+[00:16:26.005] [Medusa] [Medusa] native FX spawned: name='VFX_Medusa_Poison_Trail' particles=3 renderers=3 ttl=1.80 scale=1.20 pos=(116.40,0.81,31.79).
+[00:16:26.006] [Medusa] [Medusa] native FX renderer repair: name='VFX_Medusa_Poison_Hit' renderers=10 enabled=10 repaired=10 shaders=[Universal Render Pipeline/Particles/Unlit].
+[00:16:26.006] [Medusa] [Medusa] native FX spawned: name='VFX_Medusa_Poison_Hit' particles=10 renderers=10 ttl=1.80 scale=1.15 pos=(118.51,0.81,32.58).
+[00:16:26.007] [Medusa] [Medusa] native cast FX emitted: slot=0 prefabCount=6.
+[00:16:26.007] [Medusa] [Medusa] authored ability driver via CharAbilities.SetCastAbility: slot=0 server=False hits=0; inherited Kitsu Shoot suppressed.
+[00:16:27.352] [Medusa] [Medusa] native FX renderer repair: name='VFX_Medusa_Poison_Muzzle' renderers=7 enabled=6 repaired=6 shaders=[Universal Render Pipeline/Particles/Unlit].
+[00:16:27.353] [Medusa] [Medusa] native FX spawned: name='VFX_Medusa_Poison_Muzzle' particles=7 renderers=7 ttl=1.80 scale=1.10 pos=(115.56,0.81,31.48).
+[00:16:27.354] [Medusa] [Medusa] native FX renderer repair: name='VFX_Medusa_Poison_Trail' renderers=3 enabled=3 repaired=3 shaders=[Universal Render Pipeline/Particles/Unlit].
+[00:16:27.355] [Medusa] [Medusa] native FX spawned: name='VFX_Medusa_Poison_Trail' particles=3 renderers=3 ttl=1.80 scale=1.20 pos=(116.40,0.81,31.79).
+[00:16:27.356] [Medusa] [Medusa] native FX renderer repair: name='VFX_Medusa_Poison_Hit' renderers=10 enabled=10 repaired=10 shaders=[Universal Render Pipeline/Particles/Unlit].
+[00:16:27.356] [Medusa] [Medusa] native FX spawned: name='VFX_Medusa_Poison_Hit' particles=10 renderers=10 ttl=1.80 scale=1.15 pos=(118.51,0.81,32.58).
+[00:16:27.356] [Medusa] [Medusa] native cast FX emitted: slot=0 prefabCount=6.
+[00:16:27.357] [Medusa] [Medusa] authored ability driver via CharAbilities.SetCastAbility: slot=0 server=False hits=0; inherited Kitsu Shoot suppressed.
+[00:16:28.297] [UNITY] LOCAL POOLED OBJECT NULL ON DESPAWN: SFXPrefab
+[00:16:28.447] [Medusa] [WARN] [Medusa] local binding found no Medusa entity via PollOnce: candidates=0 localId=1 entities=21.
+[00:16:29.501] [Medusa] [Medusa] live local diag #2: local=True localPlayerId=1 localChar=15 localDead=true localDowned=0 localIsLocal=true localOwned=true localPrimary='<null>' localPrimaryChar=-1 localPos=<null> localScreen=<null> auth='Froggy_Bot_Medium(Clone)' authChar=7 authPos=(-96.321,0.06,-56.017) authScreen=468.9,378.7,12.7 worldMedusa='<null>' worldChar=15 worldPos=<null> worldScreen=<null> spectating=true players=1 entities=39 camera=MainCamera pos=(-95.323,12.03,-60.243) rot=(70,0,0) size=1024x768.
+[00:16:29.503] [Medusa] [Medusa] live player[0]: name='[CodexLiveV177] Player' id=1 char=15 team=1 local=true owned=true dead=true primary='<null>' primaryChar=-1 pos=<null> screen=<null>.
+[00:16:39.682] [Medusa] [Medusa] live local diag #3: local=True localPlayerId=1 localChar=15 localDead=true localDowned=0 localIsLocal=true localOwned=true localPrimary='<null>' localPrimaryChar=-1 localPos=<null> localScreen=<null> auth='Froggy_Bot_Medium(Clone)' authChar=7 authPos=(-94.648,0.06,-57.613) authScreen=466.3,367.4,12.6 worldMedusa='<null>' worldChar=15 worldPos=<null> worldScreen=<null> spectating=true players=1 entities=40 camera=MainCamera pos=(-93.597,12.03,-61.564) rot=(70,0,0) size=1024x768.
+[00:16:39.682] [Medusa] [Medusa] live player[0]: name='[CodexLiveV177] Player' id=1 char=15 team=1 local=true owned=true dead=true primary='<null>' primaryChar=-1 pos=<null> screen=<null>.
+[00:16:42.547] [BAP_Custom_Server] [EarlyLobbyUiPatchLoop] exited after 3600 frames. preloadDone=False uiPatch=False charPatch=True
+[00:16:49.781] [Medusa] [Medusa] live local diag #4: local=True localPlayerId=1 localChar=15 localDead=true localDowned=0 localIsLocal=true localOwned=true localPrimary='<null>' localPrimaryChar=-1 localPos=<null> localScreen=<null> auth='Froggy_Bot_Medium(Clone)' authChar=7 authPos=(-94.648,0.06,-57.613) authScreen=466.3,367.4,12.6 worldMedusa='<null>' worldChar=15 worldPos=<null> worldScreen=<null> spectating=true players=1 entities=40 camera=MainCamera pos=(-93.597,12.03,-61.564) rot=(70,0,0) size=1024x768.
+[00:16:59.933] [Medusa] [Medusa] live local diag #5: local=True localPlayerId=1 localChar=15 localDead=true localDowned=0 localIsLocal=true localOwned=true localPrimary='<null>' localPrimaryChar=-1 localPos=<null> localScreen=<null> auth='Froggy_Bot_Medium(Clone)' authChar=7 authPos=(-94.648,0.06,-57.613) authScreen=466.3,367.4,12.6 worldMedusa='<null>' worldChar=15 worldPos=<null> worldScreen=<null> spectating=true players=1 entities=40 camera=MainCamera pos=(-93.597,12.03,-61.564) rot=(70,0,0) size=1024x768.
+[00:17:10.057] [Medusa] [Medusa] live local diag #6: local=True localPlayerId=1 localChar=15 localDead=true localDowned=0 localIsLocal=true localOwned=true localPrimary='<null>' localPrimaryChar=-1 localPos=<null> localScreen=<null> auth='Froggy_Bot_Medium(Clone)' authChar=7 authPos=(-94.648,0.06,-57.613) authScreen=594.9,356.6,12.5 worldMedusa='<null>' worldChar=15 worldPos=<null> worldScreen=<null> spectating=true players=1 entities=40 camera=MainCamera pos=(-96.539,12.03,-61.303) rot=(70,0,0) size=1024x768.
+[00:17:20.208] [Medusa] [Medusa] live local diag #7: local=True localPlayerId=1 localChar=15 localDead=true localDowned=0 localIsLocal=true localOwned=true localPrimary='<null>' localPrimaryChar=-1 localPos=<null> localScreen=<null> auth='Froggy_Bot_Medium(Clone)' authChar=7 authPos=(-94.648,0.06,-57.613) authScreen=594.9,356.6,12.5 worldMedusa='<null>' worldChar=15 worldPos=<null> worldScreen=<null> spectating=true players=1 entities=40 camera=MainCamera pos=(-96.539,12.03,-61.303) rot=(70,0,0) size=1024x768.
+[00:17:30.320] [Medusa] [Medusa] live local diag #8: local=True localPlayerId=1 localChar=15 localDead=true localDowned=0 localIsLocal=true localOwned=true localPrimary='<null>' localPrimaryChar=-1 localPos=<null> localScreen=<null> auth='Froggy_Bot_Medium(Clone)' authChar=7 authPos=(-94.648,0.06,-57.613) authScreen=594.9,356.6,12.5 worldMedusa='<null>' worldChar=15 worldPos=<null> worldScreen=<null> spectating=true players=1 entities=40 camera=MainCamera pos=(-96.539,12.03,-61.303) rot=(70,0,0) size=1024x768.
+[00:17:35.240] [UNITY] Client Transport Error: Timeout: kcp2k.KcpClient: Connection timed out after not receiving any message for 60000ms. Disconnecting.. This is fine.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+
+[00:17:35.241] [UNITY] [TESTLOG] Client disconnected before
+[00:17:35.241] [UNITY] [TESTLOG] Client disconnected
+[00:17:35.242] [UNITY] [TESTLOG] Client unregistered handler
+[00:17:35.242] [UNITY] [GameMode] OnDisable | frameCount 9369
+[00:17:42.427] [BAP_Custom_Server] [InterpFix] no NetworkTransform instances yet (attempt=61)

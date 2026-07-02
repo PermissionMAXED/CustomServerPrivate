@@ -1,0 +1,17 @@
+{
+    "schemaVersion":  1,
+    "releaseLabel":  "hotfix-lobby-return-botfill-20260702",
+    "packageBuildUtc":  "2026-07-02T02:07:25.7518497Z",
+    "gitCommit":  "1ed67211e039",
+    "gitBranch":  "main",
+    "gitDirty":  true,
+    "configuration":  "Release",
+    "selfContained":  true,
+    "publicHost":  "ark.atomi23.de",
+    "serverDllSha256":  "5B9BECBAFA2DA65A971468D6B113A625CEA02A6DF7D1EDC387958090DE990482",
+    "modDllSha256":  "146DC24E4F06D87619F4D16448A685021BB88D843D6EB67065266F7AE68CD56F",
+    "networkedCustomCharDllSha256":  "57BB091E5E7C7D30EC75D23D8609C6E30AF9A07B30705F3A46ADD71CA2A3512E",
+    "appSettingsSha256":  "612DE3AC76719D435814E7675063BC4CC8CA471D1D1916BC5D8406DB55C5ED9B",
+    "startMatchSha256":  "13CB5AF6E0E5ACA72BFDA3C1AE0ADAB877410395250380D1D95BBF6FA8A38F0C",
+    "notes":  "Fixes post-match lobby return fallback including MainScene-based matches, removes queue/augment audit issues, raises GameMode.SpawnAllBotsFill bot cap from currentMaxBotTeams, and keeps AMP bootstrap polling alive while the match host returns 503 warmingUp."
+}

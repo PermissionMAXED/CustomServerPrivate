@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "releaseLabel": "bapcustomserver-20260607-medusa-v1653-matchmaking-lobby-fix",
+  "packageBuildUtc": "2026-06-07T16:14:00Z",
+  "configuration": "Release",
+  "selfContained": true,
+  "publicHost": "ark.atomi23.de",
+  "serverDllSha256": "DB2FCE1F4204893DA3149D9C6855014A6E0575AB718D1C4FC8ABF50F9565519D",
+  "modDllSha256": "2B82508D95601D3983B50AF1D79838C4CFDC8E2DB9BB8717B9C436FF655638AA",
+  "modApiDllSha256": "0E14F39A9C47B6EBA106A0F23E76A0989B3270D7BCDD3E4BB0DD51E63BDB3CB5",
+  "medusaDllSha256": "60132A257ABDBDB1BFAEC1B5572B00C06702B901B474E949C0F0E8F5273F3F5B",
+  "medusaBundleSha256": "C4872D6E124E76F9F4B4EC75482FFC2795D051D3CA65EB7C25E9FE68023B1D70",
+  "medusaCharId": 15,
+  "medusaVersion": "1.6.52",
+  "medusaFix": "QueueMatched uses only actual Medusa selection or explicit launch/autoselect; ability casts reassert opaque CharMaterial; native VFX material cache retained.",
+  "queueFix": "Lobby players default unready; stale duplicate lobby memberships are removed before creating matchmaking lobbies; stale client InQueue UI is repaired only after remote queue is idle.",
+  "prewarmReadiness": "managed-bootstrap-listener-v3"
+}

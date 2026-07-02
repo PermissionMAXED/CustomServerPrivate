@@ -1,0 +1,789 @@
+Yükleniyor...
+Lütfen bir kimlik doğrulama sağlayıcısı seçin.
+{0} 'a yeniden yönlendirme. Lütfen kimlik doğrulamasını tamamlayın ve oyuna geri dönün.
+{0} ile kimlik doğrulaması. Lütfen bekleyin.
+{0} kimlik doğrulamasını onaylama. Lütfen bekleyin.
+{0} ile kimlik doğrulama tamamlanmadı. Lütfen tekrar deneyin.
+{0} ile kimlik doğrulama yapamadı. Lütfen tekrar deneyin.
+{0} ile başarıyla doğrulandı!
+Giriş başarısız oldu. Bu hesap zaten başka bir cihazda oturum açmıştır. Lütfen oturum açın ve tekrar deneyin.
+OYUN
+BAP GEÇİŞİ
+PROFİL
+SIRALAMALAR
+KİLİTLİ
+KARAKTERLER
+HAZIR
+HAZIR DEĞİL
+KUYU İÇİNDE
+Oyuncular Bulma ...
+DAVETİYE
+LOBİ KODU
+HAZIR
+HAZIR DEĞİL
+İPTAL
+Tip...
+Çevrimiçi
+Bağlantı Kopyalandı!
+Sıradaki Oyuncu
+Oyun Modu
+Oyun Modu
+Oyun modunu seçin
+Bir arkadaşınızı davet edin!
+Sol kullanır
+Geçmiş Kazananlar
+Kapalı beta artık sona erdi! Oyun geliştirme ve gelecekteki testlerle ilgili haberler için Discord'umuzu kontrol edin.
+ile kazandı {0} Öldürür
+Oyun başlıyor
+OYUN BAŞLIYOR.
+Lobi zaten dolu!
+Lobi geçersizdi!
+Lobiye katıldınız
+lobiye katıldı
+lobiden ayrıldı
+
+Kuyrukta...
+KUYRUKTA
+OYUN İÇİNDE
+TAKIM ARANIYOR...
+Birisi takımdan ayrıldı. Yeni bir takım aranıyor...
+SEÇİNİZ
+SEÇİLMİŞ
+KİLİT AÇ
+için kilidi aç
+{0} için kilidi aç
+Yetenekler
+Özelleştirme
+BAP GEÇİŞİ
+{0} gün içinde sona erer
+LOGOUT
+Kazanır
+Öldürür
+Ölümler
+Asistler
+KDA
+Dağıtılan Dmg
+Alınan Dmg
+Maç Geçmişi
+dışarı
+Eşleşme geçmişi bulunamadı
+Lider tablosu boş
+İsim
+Rütbe
+Öldürür
+Kazanır
+Sıra {0}
+RP
+Yeni
+ÇIKARTMALAR
+Dolap boş
+Çıkartma donanımlı
+Bu yuvaya atamak için sol tıklayın, kaldırmak için sağ tıklayın
+İptal etmek için tıklayın
+Sonlandırıcılar
+Sonlandırıcı donanımlı
+Yeni eşya elde edildi
+Yeni karakter elde edildi
+Devam etmek için tıklayın
+İddia
+Talep Edildi
+Ekipman
+Donanımlı
+Seviye {0}'da açılır
+Kapat
+İptal
+Sonraki
+Çıkış
+XP
+BAP GEÇİŞİ
+Seviyelendirmek için
+Terfi
+Rütbesi düşürüldü
+Seviye {0}
+Maksimum Seviye
+Zafer
+Yenilgi
+Giriş
+Girişi tamamlayın
+Kullanıcı adınızı girin:
+Şartlar ve Koşullar
+Gizlilik Politikası
+Hüküm ve koşulları ve gizlilik politikasını kabul ediyorum
+Kullanıcı adı 3 ila 20 karakter arasında olmalı ve yalnızca geçerli karakterler içermelidir
+Kullanıcı adı zaten alınmış!
+Devam etmek için şartları ve gizliliği kabul etmeniz gerekiyor
+
+
+Bağlantınız kesildi. Yeniden bağlanmak için lütfen yenileyin.
+Zaten giriş yaptınız. Lütfen bu pencereyi kapatın.
+oyuna katıldı.
+Spam yapmayı kes! 0} için zaman aşımına uğradı
+Pinging
+{0} {1}
+Tehlike
+Yolumun Üstünde
+Düşman Tespit Edildi
+Yardıma İhtiyacım Var
+Bir pozisyonu uyardı
+Bu pozisyona geçmek
+Bir düşman tespit ettim.
+Yardıma ihtiyacı var
+Ally
+Düşman
+Ally Npc
+Düşman Npc
+Nötr
+Yetenek
+var
+Rekt tarafından
+rekt var
+Düşürmek için {0} tuşuna basın
+veya
+genişletmek için
+İksirler dolu!
+Altın maksimumda!
+Takas
+HP
+Fedakarlık
+Fedakârlık
+Satın alma
+Satın Alma
+İhtiyaçlar
+Stokta var
+Güncel
+Maksimum
+
+
+
+
+
+
+
+Yükseltme
+Altın
+Hasar
+Hareket Hızı
+Bekleme Süresi Azaltma
+Kritik Şans
+Kritik Dmg
+Yaşam Desteği
+Saldırı Hızı
+Dikenler
+Kalkan
+Sağlık
+Sağlık Yenileme
+Sağlık Yüzdesi
+Dokunulmaz
+İyileşme
+Knocked
+Knocked
+Sersemletme
+Sersemlemiş
+Sessizlik
+Susturulmuş
+Kök
+Köklü
+Yavaş
+Yavaşlatılmış
+İtme
+İtilmiş
+Sprint
+Zehir
+Zehirlenmiş
+Yanmak
+Klon
+Yeniden Düzenle
+Zayıflatmak
+Zayıflamış
+İfşa Edildi
+Kalkan
+Dmg Artışı
+Tuzak
+Snared
+Kafam karıştı
+Sayaç
+Korku
+Korkulan
+Kör
+Kör
+Devasa
+Kaygan
+Dondurulmuş
+NearSight
+NearSight
+Karakter
+Öğe
+Etkileşilebilir
+Yükseltme
+Yükseltme
+Bu slotta yükseltilecek eşya yok!
+Eşya zaten maksimum seviyede!
+Yükseltme için
+Mağaza
+Otomat Makinesi
+Şunun için satın alın
+Otomat boş.
+Sağlık İksiri Satın Al
+Satış
+Satmak için
+Hızlı Kum
+Olta
+Balık tutmaya başlayın
+BALIK!!!
+Balık!?
+Balıkçı çubuğu kırıldı :(
+Gizli Kaya
+Zehirli Dart Tuzağı
+Canlandırıcı Sunak
+Kullanılmış Canlandırma Sunağı
+Yükseltme İstasyonu
+Loot Crate
+Nadir Yağma Sandığı
+Efsanevi Ganimet Sandığı
+Kötü Robot
+Büyük Kötü Robot
+Kilitli Ganimet Sandığı
+Kilitli Ganimet Sandığı
+Taret
+Kilitli Ganimet Sandığı
+Güç Küresi
+Tedarik Düşüşü
+Havada Besleme Düşüşü
+İkmal Damlası İndi
+Patlayıcı Namlu
+
+Don Fıçısı
+İtilebilir Dondurucu
+İtilebilir Patlayıcı
+
+Atlama Pedi
+Gizli Atlama Pedi
+Arı Kovanı
+Ayı Kapanı
+
+
+
+
+
+
+
+
+
+Patlayıcı Kaktüs
+Hız Toplama
+Sağlık Pikapları
+Energizer Pikap
+Satış İstasyonu
+Buzlu Zemin
+Güç Kristali
+Tumbleweed
+Jelly Boss
+
+
+
+
+
+
+Kilitli Ganimet Sandığı
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Bölge kapanıyor!
+Bölge {0} saniye içinde kapanıyor
+Erzak İndirimi başlatıldı!
+GİDİN!
+ZAFER
+YENİLGİ
+{0} Yer
+Seyirci
+Seyirci
+Lobiye Çıkış
+Ekibe mesaj gönder...
+TAKIM
+Hiçbiri
+Varsayılan
+Sınırsız
+Düşük
+Orta
+Yüksek
+Ultra
+Özel
+Etkin
+Engelli
+Bazı metinler güncellenmeyebilir. Değişiklikleri tam olarak uygulamak için oyunu yeniden başlatın
+Tuşa basın
+Oturumu Kapat
+Oturumu kapatmak istediğinizden emin misiniz?
+Tüm mevcut ilerleme kaybolacaktır.
+Genel
+Grafikler
+Ses
+Kontroller
+Ayarlar
+Genel
+Arayüz
+Oyun
+Gizlilik
+Ekran
+Kalite
+Cilt
+Oynanış Tuş Bağlamaları
+Menü Tuş Bağlamaları
+Dil
+Bölge
+Ekran Modu
+Pencereli
+Kenarlıksız Tam Ekran
+Tam Ekran
+Çözünürlük
+UI Ölçeği
+Ping Göster
+Fps Göster
+Oyun Sürümünü Göster
+Sohbet Mesajlarını Gizle
+Ekran Sarsıntısı Yoğunluğu
+Anonim Olarak Görünün
+Oyuncu İsimlerini Gizle
+Küfür Filtresi
+Render Ölçeği
+Kare Hızı Sınırı
+Kalite Ön Ayarı
+Antialiasing Modu
+Gerçek Zamanlı Gölgeler
+Ekran Alanı Ortam Oklüzyonu
+Bloom
+Alan Derinliği
+Genel Hacim
+Müzik Sesi
+Ortam Hacmi
+Sfx Hacmi
+Ping Hacmi
+İlerleyin
+Aşağı Hareket Et
+Sola Hareket Et
+Sağa Dön
+Yetenek 1
+Yetenek 2
+Yetenek 3
+Nihai Yetenek
+İksir Kullan
+
+Yeteneği İptal Et
+Bırakma Öğesi 1
+Bırakma Öğesi 2
+Madde 3'ü bırakın
+Damla İksiri
+Damla Altın
+
+Kam Kilidi
+Sohbet Açma/Gönderme
+Ping
+Duygu
+Minimap Ekran Bekletme
+Mini Harita Ekranı Geçiş
+Etkileşim
+Araç İpucunu Genişlet
+Normal
+Sıralı
+Eğitim
+Isınmak
+MİNİ SOLO
+MİNİ DUOS
+MİNİ ÜÇLÜLER
+SOLO
+DUOS
+TRIOS
+SIRALANAN ÇİFTLER
+SIRALANAN ÜÇLÜLER
+Rütbesiz
+Bronz
+Gümüş
+Altın
+Platin
+Elmas
+Kraliyet
+İlahi
+Ortak
+Yaygın olmayan
+Nadir
+Destansı
+Efsanevi
+Öğe
+Sarf Malzemesi
+Para Birimi
+Kask
+Gövde
+Botlar
+Hacimli Şapka
+Hacimli Botlar
+Chrono Cap
+Chrono Çanta
+Keskin Çanta
+Keskin Çizmeler
+Keskin Kapak
+Çıtçıtlı Botlar
+Dikenli Çanta
+Aceleci Botlar
+Vamp Çanta
+Vampir Şapkası
+Meyve Suyu
+Biraz HP iyileştirmek için iç
+Altın
+Mal ve hizmetler karşılığında kullanılan para birimi
+Dikenli Botlar
+Dikenli Şapka
+Çıtçıtlı Kapak
+Çıtçıtlı Çanta
+Hacimli Çanta
+Chrono Botlar
+Aceleci Şapka
+Aceleci Çanta
+Vampir Çizmeler
+Jöle Kapağı
+
+
+
+
+
+
+
+
+
+
+Kalkan tozu
+Park etmek
+Patlayıcı varil
+Portatif varil
+Atlama yastığı
+Bir Jump Ped Dağıtım
+Görünmez Jump Pedi
+Görünmez bir atlama pedi dağıtın
+Ayı tuzağı
+Taşınabilir Ayı Tuzağı
+Beyin donması
+Insta dondurulması için iç
+Küçük kule
+Taşınabilir taret
+Kaktüs
+Portatif kaktüs
+Arı kovanı
+Taşınabilir arı kovanı
+İtilebilir patlayıcı varil
+Taşınabilir itilebilir patlayıcı namlu
+Tampon
+Taşınabilir tampon
+Teleskop
+Portatif teleskop
+Kum saati
+Portatif kum saati
+Dondurucu varil
+Taşınabilir donma namlu
+Kardan adam
+Portatif kardan adam
+Portatif kardan adam
+Portatif kardan adam
+Portatif kardan adam
+Portatif kardan adam
+Portatif kardan adam
+Portatif kardan adam
+Portatif kardan adam
+Portatif kardan adam
+Portatif kardan adam
+Portatif kardan adam
+Portatif kardan adam
+Portatif kardan adam
+Portatif kardan adam
+Portatif kardan adam
+Portatif kardan adam
+Portatif kardan adam
+Ortak
+Yaygın olmayan
+Nadir
+Destansı
+Efsanevi
+Duygu
+Çıkartma
+Sonlandırıcı
+Para Birimi
+Altın
+Mal ve hizmetler karşılığında kullanılan para birimi
+Fraktallar
+Daha da iyi mal ve hizmetlerle takas etmek için kullanılan premium para birimi
+
+BAPBAP
+BAPBAP logosu, yatay versiyonu üzerinde
+BAPBAP Ana Hatlarıyla
+BAPBAP logosunun kırmızı çerçeveli yatay versiyonu
+Ekmek
+Bir ekmek emojisi çıkartması
+Taç
+Bunu sen düşürdün, kral.
+Hayalet Başparmaklar Yukarı
+Bir hayalet başparmaklarını kaldırıyor
+Şaşırmış Hayalet
+Bir şey tarafından şok edilen bir hayalet
+Gülen Hayalet
+Kıçıyla gülen bir hayalet
+Ağlayan Hayalet
+Çok üzgün bir hayalet
+Kızgın Hayalet
+Kızgın görünen bir hayalet
+GGEZ
+Bunu BAPBAP galibiyetlerinizi kibarca göstermek için kullanın
+Kod ne zaman?
+Yeni kod ne zaman çıkacak?
+Mezar Taşı
+Normal bir mezar taşı
+Kanat Mezar Taşı
+Bazı kanatları olan normal bir mezar taşı
+Beta Mezar Taşı
+Beta oyuncuları için özel mezar taşı
+Büyük Mezar Taşı
+Big boi mezar taşı
+
+
+
+
+Run N' Gun
+4 küçük mermi ateşle.
+
+Kurşun Ye
+Bir kerede 3 büyük mermi ateş. CYA'yı sıfırla! Hit.
+
+CYA!
+Hızlı bir atılma gerçekleştirin.
+Hızlı bir atılma gerçekleştirin.
+Kurşun Cehennemi
+Etrafınızdaki her şeyi döndürün ve vurun. Vuruşta yavaş uygulayın.
+
+Chuck Yumruğu
+3 vuruşluk bir kombo için yumruk atın. Bir rakibe vurmak size bir Vuruş yığını kazandıracaktır.
+
+Chuck Knock
+Güçlü bir yumruk at. Tam Knock yükünüz varsa sersemletir.
+
+Chuck Jump
+Bir yere atlayın. Karada knock up uygulayın.
+
+CHUCK!!!!
+Devleşin ve bir hp, hasar ve hız güçlendirmesi alın.
+
+Ribbhit
+3 vuruşluk kombo için kesik at.
+
+MLEM
+Dilinizle bir hedefe yapışınız. Vuruşta yavaş uygulayın.
+
+Hip Hop
+Bir yere sıçrayın, inerken yavaşlatın.
+
+Dilim ve Zar
+İleri atılın ve yol boyunca rakiplere yüksek hasar verin.
+
+Yak onu
+Bir alanı aydınlatın.
+
+Aydınlık
+Bir alanı genişleyen bir ateşe dönüştürün. İsabet halinde yanma ve yavaşlama uygulayın.
+
+Alev üzerinde
+Bir ateş kalkanını etkinleştir.
+
+Alevlendir
+Yere çarpan devasa bir göktaşı gönderin.
+
+Menekşe Saldırısı
+Bir enerji oku fırlatın.
+
+Ay Çağrısı
+Bir alana ok yağdır. İsabet ettiğinde yavaşlat.
+
+Foxtrot
+Zıplamak için yere ateş edin. Vurulduğunda nakavt uygulayın.
+
+Kayan Yıldızlar
+Engellerin ve düşmanların arasından delici bir ok fırlatın. İsabet ettiğinde yavaşlat.
+
+Kes Kes
+3 vuruşluk bir kombo için yumruk.
+
+Zencefil Tadı
+Önünüzdeki düşmanları alkışlayın. Vuruşta sersemletme ve zayıflatma uygular.
+
+Suşi Rulosu
+Bir hamle yapın, hasar verin ve yol boyunca hedefleri yavaşlatın.
+
+Tempura Şoku
+Zıplayın ve bir alana çarpın. İsabet ettiğinde düşmanları devir ve kendini ve müttefiklerini koru.
+
+Reap
+2 vuruşluk kombo için kesik at.
+
+Pençe
+Zemini dilimleyin. İsabet halinde Maruz Kalma uygulayın.
+
+Gölge Yürüyüşü
+Görünmez ol ve hız kazan. Bir sonraki LMB'niz için ekstra hasar verin veya Q ile can kazanın.
+
+RIP
+İleri atıl ve önünü kes
+
+Merhaba Dünya
+Dijital bir dalga yayınlayın.
+
+Raycast
+Bir ışın fırlat. Vuruşta yavaş uygulayın.
+
+Ctrl+C & Ctrl+V
+Bir konuma ışınlanın ve orijinal konumunuzda bir klon oluşturun. Klonunuzla konum değiştirmek için yeniden yayınlayın.
+
+memcpy
+Bir konumda bir klon oluşturun. Klonunuzla konum değiştirmek için yeniden ayarlayın.
+
+Bazuka
+İsabet ettiğinde patlayan bir roket ateşleyin.
+
+Kilitli
+Bir güdümlü füze ateşleyin.
+
+Gotta Blast
+Kendinizi bir yere fırlatmak için zemini patlatın. Vuruşta vuruş uygulayın.
+
+Adımını mayınla
+Yere yakınlık mayınları atın. İsabet ettiğinde yavaşlatır.
+
+Ateş Darbesi
+3 vuruşluk bir kombo için kesik at.
+
+Yansıtma Duruşu
+Saldırılara karşı koyar ve mermileri yansıtır.
+
+Ateşli Sıçrayış
+Katananı ateşe vererek ileri atıl. Bir düşmana en fazla 3 kez vurulduğunda yeniden ateşlenir.
+
+Alevli Saldırı
+Katananızla ateşli bir mermi fırlatın. Flamestrike, rakiplere yakın dövüş saldırıları ile vurularak şarj edilir.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Üye olmak
+Detaylar
+{0} {1} kayıt hedefi
+Beta Mücadelesi
+Hayatları
+Feragatname
+{0} Bir oyun kaybediyorsanız hayat tüketilecektir.
+Oyun kazaları veya bağlantısı için geri ödeme yoktur.
+Hayatta
+Hayatın dışındasın!
+Görevleri tamamlayarak daha fazla hayat kazanmaya çalışın:
+Daha Fazla Hayat Alın
+Kaydolmak için kalan süre
+{0} kayıt
+başlamak için {0}
+Hayat kazanmak
+Kaydoldun
+Davet Kodunuzu Paylaşın
+Her {0} kaydolma, havuza 1 $ eklenecek
+Kayıt zamanı bitti! Daha fazla haber için bizi izlemeye devam edin
+Hayat kazanmak
+Görevleri tamamlayarak hayat kazanın. Ne kadar çok hayat kazanırsanız o kadar şansınız vardır.
+Davet Kodunuz:
+Twitch Bağlanmamış
+Şimdi bağlantı
+{0} ile bağlantılı seğirme
+Arkadaş Davetliyor
+{0} arkadaş davet ediyor
+İddia!
+İddia edilen
+Bir sonraki
+Kullanım dışı
+{0} {1}
+Görev tamamlanmadı. Ödülün kilidini açmak için daha fazla arkadaşınızı davet edin
+Twitch Drops (12 - 15 Ekim)
+Gün {0}
+Görev tamamlanmadı. Ödülün kilidini açmak için seğirme damlaları alın
+Oyun oynamak
+{0} oyunlar oynandı
+Görev tamamlanmadı. Ödülün kilidini açmak için daha fazla oyun oynayın
+Ödül havuzu
+Ödül havuzu ilk 50 oyuncuya bölünecek
+{0} yer
+{0} puan
+Katılım
+her biri
+Nasıl kazanılır
+Hayatlarınız bitene kadar oynamaya devam edin. En çok galibiyeti olanlar turnuva şampiyonları taçlandırılacak!
+Ekstra Hayat Kazanın
+Daha fazla hayat kazanmak için görevleri tamamlayın. Daha fazla hayat = daha fazla şans!
+Maçlar Kazanın
+Ayakta kalan takım olarak kazanç toplayın. Takımınız ortadan kaldırılırsa bir hayat kaybedersiniz.
+Lider tabloyu tırmanın
+Sadece bir avuç ödül havuzunu kazanacak. Grind durmuyor.
+Biçim
+12 Ekim-15 Ekim arası 4 günlük etkinlik.
+Sunucular 09: 00-22: 00 saatleri arasında açıktır.
+Her oyunda temel oyun değiştirici olarak düşük HP'ye sahip olacak
+Gün {0}
+Altın değiştirici
+Kırılmışsan kaybedersin
+Maksimum 3 galibiyet elde edilebilir
+Gece saati
+Arkana bak. Boo!
+Maksimum 10 galibiyet elde edilebilir
+Meteor yağmuru
+Hareketsiz kaldıktan sonra
+Maksimum 25 galibiyet elde edilebilir
+Düşük HP
+İyi şanslar
+Tüzük
+Herhangi bir kuralın kırılması otomatik diskalifiye + yasağa neden olur
+Böcek kötüye kullanma yok.
+Ekstra hayatlar için botlama yok.
+Alt hesabı yok, yalnızca bir kez kaydolabilirsiniz.
+Diğer takımlarla gizlice yok.
+{0} kazanma şansı için şimdi kaydolun
+{0} kayıt
+başlamak için {0}
+Zirveye kaydırın
+{0} kaydoldu!
+{0} kullanılmış {1} canlı (lar)!
+Üye olmak
+Davet Kodu girin
+Girmek
+Kaydoldu
+Kopyalanmış Kodu Davet!
+Hayatları
+Görevleri tamamlayarak hayat kazanın. Daha fazla hayat = daha fazla şans
+Twitch Drops
+Twitch akışlarını izleyerek hayat kazanın
+
+
+#VALUE!

@@ -1,0 +1,30 @@
+=== Build-CharBundle ===
+Char       : Blitz
+Bundle     : blitz
+Project    : C:\Users\Administrator\Downloads\neueBapbap\GameCode\ExportedProject
+Build out  : C:\Users\Administrator\Downloads\CustomServer\artifacts\char-bundles\BlitzBundleOut
+Unity log  : C:\Users\Administrator\Downloads\CustomServer\tools\logs\char-bundle-blitz-20260611141933.log
+
+Running Unity headless...
+Unity exit code: 0
+
+=== Result ===
+Bundle: C:\Users\Administrator\Downloads\CustomServer\artifacts\char-bundles\BlitzBundleOut\blitz
+Size  : 3662146 bytes (3,492 MB)
+
+=== CharBundleBuilder log highlights ===
+[CharBundleBuilder] visual-only: animators=1 skinnedMeshRenderers=1
+[CharBundleBuilder] visual-only: saved Assets/GameObject/Blitz_Visual.prefab
+[CharBundleBuilder] Tagged 17 asset(s).
+[CharBundleBuilder] controller params=7 layers=3
+[CharBundleBuilder]   param: Forward (Float)
+[CharBundleBuilder]   param: Strafe (Float)
+[CharBundleBuilder]   param: Turn (Float)
+[CharBundleBuilder]   param: IsMoving (Bool)
+[CharBundleBuilder]   param: AttackSpeed (Float)
+[CharBundleBuilder]   param: MoveSpeed (Float)
+[CharBundleBuilder]   param: FootstepCurve (Float)
+[CharBundleBuilder] Built bundle: blitz
+[CharBundleBuilder] Built bundle: eve
+[CharBundleBuilder] Built bundle: medusa
+[CharBundleBuilder] SUCCESS: C:\Users\Administrator\Downloads\CustomServer\artifacts\char-bundles\BlitzBundleOut\blitz (3662146 bytes)

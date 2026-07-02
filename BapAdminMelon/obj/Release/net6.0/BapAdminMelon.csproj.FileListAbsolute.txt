@@ -1,0 +1,13 @@
+C:\Users\Administrator\Downloads\CustomServer\BapAdminMelon\bin\Release\net6.0\BapAdminMelon.deps.json
+C:\Users\Administrator\Downloads\CustomServer\BapAdminMelon\bin\Release\net6.0\BapAdminMelon.dll
+C:\Users\Administrator\Downloads\CustomServer\BapAdminMelon\bin\Release\net6.0\BapAdminMelon.pdb
+C:\Users\Administrator\Downloads\CustomServer\BapAdminMelon\obj\Release\net6.0\BapAdminMelon.csproj.AssemblyReference.cache
+C:\Users\Administrator\Downloads\CustomServer\BapAdminMelon\obj\Release\net6.0\BapAdminMelon.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Downloads\CustomServer\BapAdminMelon\obj\Release\net6.0\BapAdminMelon.AssemblyInfoInputs.cache
+C:\Users\Administrator\Downloads\CustomServer\BapAdminMelon\obj\Release\net6.0\BapAdminMelon.AssemblyInfo.cs
+C:\Users\Administrator\Downloads\CustomServer\BapAdminMelon\obj\Release\net6.0\BapAdminMelon.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Downloads\CustomServer\BapAdminMelon\obj\Release\net6.0\BapAdminMelon.sourcelink.json
+C:\Users\Administrator\Downloads\CustomServer\BapAdminMelon\obj\Release\net6.0\BapAdminMelon.dll
+C:\Users\Administrator\Downloads\CustomServer\BapAdminMelon\obj\Release\net6.0\refint\BapAdminMelon.dll
+C:\Users\Administrator\Downloads\CustomServer\BapAdminMelon\obj\Release\net6.0\BapAdminMelon.pdb
+C:\Users\Administrator\Downloads\CustomServer\BapAdminMelon\obj\Release\net6.0\ref\BapAdminMelon.dll

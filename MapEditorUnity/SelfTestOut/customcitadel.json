@@ -1,0 +1,53 @@
+{
+  "mapId": 34,
+  "name": "CustomCitadel",
+  "displayName": "CUSTOM CITADEL (ADVANCED)",
+  "bundleFileName": "customflat.bundle",
+  "svPrefabName": "CustomFlat_SvData",
+  "clPrefabName": "CustomFlat_ClData",
+  "baseSvResource": "levels/maps/blank_test_bakedata/Blank_Test_SvData",
+  "baseClResource": "levels/maps/blank_test_bakedata/Blank_Test_ClData",
+  "mapSettingsDisplayName": "CUSTOM CITADEL",
+  "mapType": 0,
+  "customZoneRounds": false,
+  "excludeNavMeshFloor": false,
+  "excludeWaterPerimeter": false,
+  "mapSize": null,
+  "zoneRounds": [],
+  "enableTileEdits": false,
+  "useLevelDataTileMutations": false,
+  "tileEdits": [
+    { "layer": "Ground", "x": 24, "y": 24, "rotPrefabId": 242 },
+    { "layer": "Ground", "x": 25, "y": 24, "rotPrefabId": 243 },
+    { "layer": "Ground", "x": 23, "y": 24, "rotPrefabId": 244 },
+    { "layer": "Ground", "x": 24, "y": 25, "rotPrefabId": 245 },
+    { "layer": "Ground", "x": 24, "y": 23, "rotPrefabId": 246 },
+    { "layer": "Ground", "x": 26, "y": 24, "rotPrefabId": 247 },
+    { "layer": "Ground", "x": 22, "y": 24, "rotPrefabId": 248 },
+    { "layer": "Ground", "x": 24, "y": 26, "rotPrefabId": 249 },
+    { "layer": "Ground", "x": 24, "y": 22, "rotPrefabId": 242 },
+    { "layer": "Ground", "x": 27, "y": 24, "rotPrefabId": 243 },
+    { "layer": "Ground", "x": 21, "y": 24, "rotPrefabId": 244 },
+    { "layer": "Ground", "x": 24, "y": 27, "rotPrefabId": 245 },
+    { "layer": "Ground", "x": 24, "y": 21, "rotPrefabId": 246 }
+  ],
+  "enableEntities": true,
+  "entities": [
+    { "prefab": "Npc_Boss_Chad", "x": 0, "y": 0, "z": 0, "rotY": 0 },
+    { "prefab": "Npc_Roaming_Wolf", "x": 3.182, "y": 0, "z": 3.182, "rotY": 225 },
+    { "prefab": "Npc_Roaming_Wolf", "x": -3.182, "y": 0, "z": 3.182, "rotY": 315 },
+    { "prefab": "Npc_Roaming_Wolf", "x": -3.182, "y": 0, "z": -3.182, "rotY": 45 },
+    { "prefab": "Npc_Roaming_Wolf", "x": 3.182, "y": 0, "z": -3.182, "rotY": 135 },
+    { "prefab": "Npc_SlimeBoss_A", "x": 3, "y": 0, "z": 0, "rotY": 180 },
+    { "prefab": "Npc_SlimeBoss_Ba", "x": -3, "y": 0, "z": 0, "rotY": 0 },
+    { "prefab": "Npc_SlimeBoss_Bb", "x": 0, "y": 0, "z": -3, "rotY": 90 },
+    { "prefab": "Npc_SlimeBoss_C", "x": 0, "y": 0, "z": 3, "rotY": 270 }
+  ],
+  "spawnPoints": [
+    [ 14, 0, 14 ],
+    [ -14, 0, -14 ],
+    [ 14, 0, -14 ],
+    [ -14, 0, 14 ]
+  ],
+  "enabled": true
+}

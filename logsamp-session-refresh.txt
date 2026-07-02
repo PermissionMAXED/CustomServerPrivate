@@ -1,0 +1,6 @@
+Das Argument "toolsGet-AmpSessionFromEdge.ps1" fÅr den -File-Parameter ist nicht vorhanden. Geben Sie als Argument fÅr den -File-Parameter den Pfad zu einer vorhandenen .ps1-Datei an.
+Windows PowerShell
+Copyright (C) Microsoft Corporation. Alle Rechte vorbehalten.
+
+Installieren Sie die neueste PowerShell fÅr neue Funktionen und Verbesserungen! https://aka.ms/PSWindows
+

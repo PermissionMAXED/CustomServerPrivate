@@ -1,0 +1,789 @@
+Loading...
+Please select an authentication provider.
+Redirecting to {0}. Please complete authentication and return to the game.
+Authenticating with {0}. Please wait.
+Confirming {0} authentication. Please wait.
+Authentication with {0} was not completed. Please try again.
+Failed to authenticate with {0}. Please try again.
+Successfully authenticated with {0}!
+Login Failed. This account is already logged in on another device. Please logout and try again.
+PLAY
+BAP PASS
+PROFILE
+RANKINGS
+LOCKER
+CHARACTERS
+READY
+NOT READY
+IN QUEUE
+Finding Players...
+INVITE
+LOBBY CODE
+READY
+UNREADY
+CANCEL
+Type...
+Online
+Link Copied!
+Player in queue
+Game Mode
+Game Modes
+Select game mode
+Invite a friend!
+Uses left
+Latest Winners
+Closed beta is now over! Check our Discord for news on the game development and future tests.
+won with {0} kills
+Game starting in
+Game Starting...
+Lobby is already full!
+Lobby was invalid!
+You joined the lobby
+joined the lobby
+left the lobby
+Login required
+Queuing...
+IN QUEUE
+IN GAME
+SEARCHING FOR TEAM...
+Someone left the team. Searching for a new team...
+SELECT
+SELECTED
+UNLOCK
+Unlock for
+Unlock for {0}
+Abilities
+Mastery
+BAP PASS
+Ends in {0} days
+LOGOUT
+Wins
+Kills
+Deaths
+Assists
+KDA
+Dmg Dealt
+Dmg Taken
+Match History
+out of
+No match history found
+Leaderboard is empty
+Name
+Rank
+Kills
+Wins
+Rank {0}
+RP
+New
+STICKERS
+Locker is empty
+Sticker equipped
+Left click to assign to this slot, right click to remove
+Click to cancel
+Finishers
+Finisher equipped
+Obtained new item
+Obtained new character
+Click to continue
+Claim
+Claimed
+Equip
+Equipped
+Unlocked at level {0}
+Close
+Cancel
+Next
+Exit
+XP
+BAP PASS
+To level
+Promoted
+Demoted
+Level {0}
+Max Level
+Victory
+Defeat
+Login
+Complete login
+Enter your username:
+Terms and Conditions
+Privacy Policy
+I agree to the terms and conditions and the privacy policy
+Username needs to be between 3 and 20 characters and only contain valid characters
+Username is already taken!
+You need to agree to the terms and privacy in order to continue
+Quit
+Are you sure you want to close the game?
+You have been disconnected. Please refresh to reconnect.
+You are already logged in. Please close this window.
+has joined the game.
+Stop spamming! Timed for {0}
+Pinging
+{0} {1}
+Danger
+On My Way
+Enemy Spotted
+Need Help
+Alerted a position
+Moving to this position
+Spotted an enemy
+Needs help
+Ally
+Enemy
+Ally Npc
+Enemy Npc
+Neutral
+{0} ability has {1} seconds remaining!
+{0} ability is ready!
+Rekt by
+got rekt
+Press {0} to drop
+or
+to expand
+Potions are full!
+Gold at Max!
+Swap
+HP
+Sacrifice
+Sacrificing
+Purchase
+Purchasing
+Needs
+In Stock
+Current
+Max
+Paying
+Offer
+tribute
+Revive
+Reviving
+Execute
+Executing
+Upgrade
+Gold
+Damage
+Movement Speed
+Cooldown Reduction
+Crit Chance
+Crit Dmg
+Lifesteal
+Attack Speed
+Thorns
+Shield
+Health
+Health Regen
+Health Percent
+Invulnerable
+Healing
+Knocked
+Knocked
+Stun
+Stunned
+Silence
+Silenced
+Root
+Rooted
+Slow
+Slowed
+Push
+Pushed
+Sprint
+Poison
+Poisoned
+Burn
+Clone
+Recast
+Weaken
+Weakened
+Exposed
+Shield
+Dmg Boost
+Snare
+Snared
+Confused
+Counter
+Fear
+Feared
+Blind
+Blinded
+Gigantic
+Slippery
+Frozen
+NearSight
+NearSight
+Character
+Item
+Interactable
+Upgrade
+Upgrading
+No items to upgrade in this slot!
+Item is already max tier!
+Upgrade for
+Shop
+Vending Machine
+Purchase for
+Vending machine is empty.
+Buy Health Potion for
+Selling
+Sell for
+Quick Sand
+Fishing Rod
+Start Fishing
+FISH!!!
+Fish!?
+Fishing Rod Broken :(
+Secret Rock
+Poison Dart Trap
+Revive Altar
+Used Revive Altar
+Upgrade Station
+Loot Crate
+Rare Loot Crate
+Legendary Loot Crate
+Evil Robot
+Big Evil Robot
+Small Skull Blob
+Big Skull Blob
+Turret
+Giga Turret
+Power Orb
+Supply Drop
+Supply Drop in Air
+Supply Drop Landed
+Explosive Barrel
+Explosive Nuke Barrel
+Frost Barrel
+Pushable Freezer
+Pushable Explosive
+Pushable Nuke Explosive
+Jump Pad
+Hidden Jump Pad
+Beehive
+Bear Trap
+Blood Rune
+Grants +40% Damage
+Grants +75% Lifesteal
+You have sacrificed enough.
+The rune hungers for blood.
+Sacrifice
+Sacrificing
+Tree of Life
+Tree has already granted it's blessing
+Spiky Cactus
+Speed Pickup
+Health Pickup
+Energizer Pickup
+Sell Station
+Icy Floor
+Power Crystal
+Tumbleweed
+Royal Slime
+Shake
+Drink Me
+Drinking
+Pizza
+Eat Me
+Eating
+Lockbox
+Unlocking
+Lockbox is empty.
+Lockbox needs a key.
+Use Key?
+To gain vision
+Looking
+Weight Lifting Crane
+Use Crane
+Drop Weight
+On Cooldown!
+Crane already in use
+Penguin
+Vine Wall
+Fresh Cement Container
+Fresh Cement
+Loot Vase
+Gold Rock
+Metal Pipes
+Pressure Plate
+Poison Dart Trap
+Zone is closing!
+Zone is closing in {0} seconds
+Supply Drop launched!
+GO!
+VICTORY
+DEFEAT
+{0} Place
+Spectate
+Spectating
+Exit to Lobby
+Send message to team...
+TEAM
+None
+Default
+Unlimited
+Low
+Medium
+High
+Ultra
+Custom
+Enabled
+Disabled
+Some text might not be updated. Restart the game to fully apply changes
+Press key
+Logout
+Are you sure you want to log out?
+All current progress will be lost.
+General
+Graphics
+Audio
+Controls
+Settings
+General
+Interface
+Game
+Privacy
+Display
+Quality
+Volume
+Gameplay Keybinds
+Menu Keybinds
+Language
+Region
+Display Mode
+Windowed
+Borderless Fullscreen
+Fullscreen
+Resolution
+UI Scale
+Show Ping
+Show Fps
+Show Game Version
+Hide Chat Messages
+Screenshake Intensity
+Appear As Anonymous
+Hide Player Names
+Profanity Filter
+Render Scale
+Frame Rate Limit
+Quality Preset
+Antialiasing Mode
+Realtime Shadows
+Screen Space Ambient Occlusion
+Bloom
+Depth of Field
+General Volume
+Music Volume
+Ambient Volume
+Sfx Volume
+Ping Volume
+Move Up
+Move Down
+Move Left
+Move Right
+Basic Ability
+Special Ability
+Movement Ability
+Ultimate Ability
+Use Potion
+Use Consumable
+Cancel Ability
+Drop Item 1
+Drop Item 2
+Drop Item 3
+Drop Potion
+Drop Gold
+Drop Consumable
+Cam Lock
+Chat Open/Send
+Ping
+Emote
+Minimap Display Hold
+Minimap Display Toggle
+Interact
+Expand Tooltip
+Normal
+Ranked
+Training
+Warmup
+MINI SOLO
+MINI DUOS
+MINI TRIOS
+SOLO
+DUOS
+TRIOS
+RANKED DUOS
+RANKED TRIOS
+Unranked
+Bronze
+Silver
+Gold
+Platinum
+Diamond
+Royal
+Divine
+Common
+Uncommon
+Rare
+Epic
+Legendary
+Item
+Consumable
+Currency
+Helmet
+Torso
+Boots
+Bulky Cap
+Bulky Boots
+Chrono Cap
+Chrono Bag
+Sharp Bag
+Sharp Boots
+Sharp Cap
+Snap Boots
+Spiky Bag
+Hasty Boots
+Vamp Bag
+Vamp Cap
+Juice
+Drink to heal some HP
+Gold
+Currency used to exchange for goods and services
+Spiky Boots
+Spiky Cap
+Snap Cap
+Snap Bag
+Bulky Bag
+Chrono Boots
+Hasty Cap
+Hasty Bag
+Vamp Boots
+Jelly Cap
+Rez Boots
+BapCoin
+Crit Glasses
+Explosion Cap
+Fishing Cap
+Metal Boots
+Reset Boots
+Shield Bag
+Snow Cap
+Sprint Boots
+Shield Powder
+Get Buffed
+Explosive Barrel
+Portable Barrel
+Jump Pad
+Deploy a Jump Pad
+Invisible Jump Pad
+Deploy an Invisible Jump Pad
+Bear Trap
+Portable Bear Trap
+Brain Freeze
+Drink it to get insta frozen
+Turret
+Portable Turret
+Cactus
+Portable Cactus
+Beehive
+Portable Beehive
+Pushable Explosive Barrel
+Portable Pushable Explosive Barrel
+Bumper
+Portable Bumper
+Telescope
+Portable Telescope
+Hourglass
+Portable Hourglass
+Freeze Barrel
+Portable Freeze Barrel
+Snowman
+Portable Snowman
+Banana Peel
+A slippery banana peel
+C4 Explosive
+A sticky explosive to be detonated at a later time
+Fools Gold
+Disguised Gold!
+Key
+It's a key, what do you think it does?
+Deployable Pizza
+Deploy a Pizza to heal from
+Revive
+Revives all teammates
+Rock
+Throw a rock
+Ward
+Gain vision in an area
+Common
+Uncommon
+Rare
+Epic
+Legendary
+Emote
+Sticker
+Finisher
+Currency
+Gold
+Currency used to exchange for goods and services
+Fractals
+Premium currency used to exchange for even better goods and services
+Bonus
+BAPBAP
+The BAPBAP logo, on its horizontal version
+BAPBAP Outlined
+The BAPBAP logo, on its horizontal version with a red outline
+Bread
+A bread emoji sticker
+Crown
+You dropped this, king
+Ghost Thumbs Up
+A ghost giving some thumbs up
+Surprised Ghost
+A ghost shocked by something
+Laughing Ghost
+A ghost laughing his ass off
+Crying Ghost
+A ghost being very sad
+Angry Ghost
+A ghost appearing pissed off
+GGEZ
+Use this to politely show off your BAPBAP wins
+When code?
+When is the new code dropping tho
+Finisher
+A normal tombstone
+Wing Tombstone
+A normal tombstone with some wings
+Beta Tombstone
+Exclusive tombstone for beta players
+Large Tombstone
+Big boi tombstone
+Basic
+Special
+Movement
+Ultimate
+Run N' Gun
+Fire 4 small bullets.
+Fire 4 small bullets, each dealing {1}.
+Eat Lead
+Fire 3 big bullets at once. Reset CYA! on hit.
+Fire 3 big bullets at once, each dealing {1}. Reset CYA! on hit.
+CYA!
+Perform a quick dash.
+Perform a quick dash.
+Bullet Hell
+Spin and shoot everything around you. Apply slow on hit.
+Spin and shoot everything around you, dealing {1}. Apply {2} on hit.
+Chuck Punch
+Punch for a 3-hit combo. Hitting an opponent will grant you a Knock stack.
+Punch for a 3-hit combo dealing {1} each. Hitting a player will grant you a knock stack and lower your Chuck Knock cooldown.
+Chuck Knock
+Throw a powerful punch. Inflict stun if you have full Knock stacks.
+Throw a powerful punch that deals {1} and inflicts {2}. Inflict {3} if fully stacked.
+Chuck Jump
+Jump to a location. Apply knock up on land.
+Jump to a location. Apply {1} on land dealing {2}.
+CHUCK!!!!
+Become gigantic and get an hp, damage and speed buff.
+Become gigantic for {1}, which grants {2} and {3}. During the ultimate, Chuck takes {4} less damage and heals {5} of his Max HP per second.
+Ribbhit
+Slash for a 3-hit combo.
+Slash for a 3-hit combo, dealing {1}. Deals {2} on the third slash.
+MLEM
+Stick to a target with your tongue. Apply slow on hit.
+Stick to a target with your tongue. Apply {1} on enemies hit.
+Hip Hop
+Leap to a location, inflict slow when landing.
+Leap to a location, inflicting {1} and {2} when landing. Hitting an enemy reduces cooldown by {3} seconds.
+Slice N' Dice
+Dash forward and deal high damage to opponents along the way.
+Dash forward, dealing {1} and applying {2} to opponents along the way.
+Light it up
+Light up an area.
+Light up an area that deals {1}.
+It's Lit
+Turn an area into an expanding fire. Apply burn and slow on hit.
+Turn an area into an expanding fire. Deals {1}, and applies {2} and {3} to enemies.
+Flame on
+Activate a fire shield.
+Activate a fire shield, giving yourself {1} and increasing your movespeed by {2} for {3} seconds.
+Blaze it
+Send a huge meteorite crashing into the ground.
+Send a huge meteorite crashing into the ground dealing {1}.
+Violet Strike
+Shoot an energy arrow.
+Shoot an energy arrow, dealing {1}.
+Mooncall
+Rain down arrows in an area. Apply slow on hit.
+Rain down arrows in an area, dealing {1} and applying {2} on hit.
+Foxtrot
+Shoot the ground to jump away. Apply knock up on hit.
+Shoot the ground to jump away, dealing {1} and applying {2} up on hit.
+Shooting Stars
+Shoot a piercing arrow through obstacles and enemies. Apply root on hit.
+Shoot a piercing arrow through obstacles and enemies. Deals {1} and applies {2} on hit.
+Chop Chop
+Punch for a 3-hit combo.
+Punch for a 3-hit combo, dealing {1}. On the third hit, smash the ground dealing {2}.
+Ginger Aftertaste
+Clap enemies in front of you. Apply stun and weaken on hit.
+Clap enemies in front of you, dealing {1} and inflicting {2} and {3}.
+Sushi Roll
+Charge a dash, deal damage and slow targets along the way.
+Charge a dash, dealing {1} and applying {2} to targets along the way.
+Tempura Shock
+Jump and slam into an area. On hit, knock up enemies and shield yourself and allies.
+Jump and slam into an area, dealing {1} to opponents and applying {2}. While applying {3} to allies for {4} of your max hp, and to yourself by {5} for each target affected by the ability.
+Reap
+Slash for a 2-hit combo.
+Slash multiple targets, dealing {1}. If used while Shadow Walk is active, deal {2} extra.
+Claw
+Slice the ground. Apply Exposed on hit.
+Slice the ground, dealing {1} and inflicting {2}. If used while Shadow Walk is active, heal for {3} of the damage dealt.
+Shadow Walk
+Become invisible and gain speed.
+Become invisible for {1}, increasing {2} and {3}.
+RIP
+Dash forward and slash in front of you.
+Dash forward and slash in front of you, dealing {1}.
+Hello World
+Shoot out a digital wave.
+Shoot out a digital wave, dealing {1}.
+Raycast
+Shoot out a beam. Apply slow on hit.
+Shoot out a beam, dealing {1} and applying {2} on hit.
+Ctrl+C & Ctrl+V
+Teleport to a location and create a clone at your original position. Recast to swap positions with your clone.
+Teleport to a location and create a clone at your original position, lasting for {1}. Recast to swap positions with your clone.
+memcpy
+Create a clone at a location. Recast to swap positions with your clone.
+Create a clone at a location, lasting for {1}. Recast to swap positions with your clone.
+Bazooka
+Fire a rocket that explodes on hit.
+Fire a rocket that deals {1} on impact, and {2} from its explosion.
+Locked On
+Fire a homing missile that tracks targets.
+Fire a homing missile that tracks targets, dealing {1} on impact and {2} from its explosion
+Gotta Blast
+Blast the ground to launch yourself to a location. Apply knock up on hit.
+Blast the ground to launch yourself to a location. Deals {1} and applies {2} on hit.
+Mine your step
+Throw proximity mines on the ground. Apply slow on hit.
+Throw proximity mines on the ground, each dealing {1} and applying {2} on hit. Mines last for {3} seconds.
+Fire Slash
+Slash for a 3-hit combo.
+Performs two quick slashes dealing {1}, and a third powerful strike dealing {2}.
+Reflect Stance
+Counters attacks and reflects projectiles.
+Becomes invulnerable and perform {1} for {2}. While countering, reflect incoming projectiles and counterstrike melee attacks, inflicting {3} to the attacker.
+Fiery Dash
+Dash forward, setting your katana on fire. Recast upon hitting an enemy up to 3 times.
+Dash forward, dealing {1} and inflicting {2} to targets. Hitting a target recharges the dash and empowers your next Fire Slash attack with {3}. Recast up to {4} times.
+Flamestrike
+Hurl a fiery projectile with your katana. Flamestrike is charged by hitting targets with Fire Slash.
+Hurl a fiery projectile, dealing {1} and inflicting {2} to targets. Flamestrike is charged by hitting opponents with Fire Slash.
+Chop-Kicks
+Perform a two hit combo, the last one being two fast kicks.
+Kick targets dealing {1} with a powerful kick. Then deal {2} and {3} with two fast kicks.
+Broth Blast
+Jump Kick a short distance in any direction.
+Perform a jump kick, dealing {1} and inflicting {2} for {3}.
+Miso Dash
+Dash forward with a flying knee strike.
+Dash in a direction dealing {1} to targets hit.
+Express Delivery
+Deliver a spinning kick in a cone, pushing targets away.
+Deliver a spinning kick in a cone, dealing {1} and applying {2} to targets.
+Sign Up
+Details
+{0} of {1} sign ups goal
+Beta Challenge
+Lives
+Disclaimer
+{0} life will be consumed if losing a game.
+There are no refunds for game crashes or disconnects.
+Out of lives
+You're out of lives!
+Try to earn more lives by completing tasks:
+Get More Lives
+Remaining time to sign up
+{0} sign ups
+of {0} needed to start
+Earn Lives
+You are signed up
+Share your invite code
+Every {0} sign ups, $1 will be added to the pool
+Sign up time is over! Stay tuned for more news
+Earn Lives
+Earn lives by completing tasks. The more lives you earn, the more chances you have.
+Your invite code:
+Twitch unlinked
+Link Now
+Twitch linked to {0}
+Friend Invites
+{0} Friend Invites
+Claim!
+Claimed
+Up Next
+Unavailable
+{0} of {1}
+Task is not completed. Invite more friends to unlock the reward
+Twitch Drops (Oct 12 - 15)
+Day {0}
+Task is not completed. Get twitch drops to unlock the reward
+Play Games
+{0} Games Played
+Task is not completed. Play more games to unlock the reward
+Prize Pool
+The prize pool will be divided by the top 50 players
+{0} Place
+{0} Points
+Participation
+each
+How to Win
+Keep playing until your lives run out. Those with the most wins will be crowned the tournament champions!
+Earn Extra Lives
+Complete tasks to earn more lives. More lives = more chances!
+Win Matches
+Collect wins by being the last team standing. You lose a life if your squad gets eliminated.
+Climb the Leaderboard
+Only a top handful will win the prize pool. The grind don't stop.
+Format
+4-day event from October 12th to October 15th.
+Servers are open from 9AM to 2AM PST.
+Every game will have Low HP as a base game modifier
+Day {0}
+Gold Modifier
+You lose if you're broke
+Maximum 3 wins attainable
+Night Time
+Look behind you. BOO!
+Maximum 10 wins attainable
+Meteor Shower
+It's joever once you stay still
+Maximum 25 wins attainable
+Low HP
+Best of luck
+Rules
+Breaking any rules will result in Automatic Disqualification + Ban
+No bug abusing.
+No botting for extra lives.
+No alt accounts, you can only sign up once.
+No colluding with other teams.
+Sign up now for a chance to win {0}
+{0} sign ups
+of {0} to start
+Scroll to top
+{0} signed up!
+{0} redeemed {1} live(s)!
+Sign Up
+Enter an invite code
+Enter
+Signed Up
+Invite Code Copied!
+Lives
+Earn lives by completing tasks. More lives = More chances
+Twitch Drops
+Earn lives by watching Twitch streams
+
+
+

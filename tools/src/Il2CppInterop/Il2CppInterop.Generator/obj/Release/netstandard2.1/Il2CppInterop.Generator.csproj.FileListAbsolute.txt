@@ -1,0 +1,12 @@
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.Generator\netstandard2.1\Il2CppInterop.Generator.deps.json
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.Generator\netstandard2.1\Il2CppInterop.Generator.dll
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\bin\Il2CppInterop.Generator\netstandard2.1\Il2CppInterop.Generator.xml
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.Generator\obj\Release\netstandard2.1\Il2CppInterop.Generator.csproj.AssemblyReference.cache
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.Generator\obj\Release\netstandard2.1\Il2CppInterop.Generator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.Generator\obj\Release\netstandard2.1\Il2CppInterop.Generator.AssemblyInfoInputs.cache
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.Generator\obj\Release\netstandard2.1\Il2CppInterop.Generator.AssemblyInfo.cs
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.Generator\obj\Release\netstandard2.1\Il2CppInterop.Generator.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.Generator\obj\Release\netstandard2.1\Il2CppInterop.Generator.sourcelink.json
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.Generator\obj\Release\netstandard2.1\Il2CppIn.2F7C00C7.Up2Date
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.Generator\obj\Release\netstandard2.1\Il2CppInterop.Generator.dll
+C:\Users\Administrator\Downloads\CustomServer\tools\src\Il2CppInterop\Il2CppInterop.Generator\obj\Release\netstandard2.1\Il2CppInterop.Generator.xml

@@ -1,0 +1,23 @@
+[14:12:31] Starting AMP child instance BAPBattle01.
+[14:13:32] Child instance running= appState=.
+ManageInstance returned no token: {"Title":"Unauthorized Access","Message":"You do not have permission to use this 
+method (ADSModule.ManageInstance) at this time. This method requires the Session.Exists permission.","StackTrace":"   
+at GSMyAdmin.WebServer.MethodInvocation.InvokeMethod(String MethodName, JObject Data, HttpContext context, IWebSession 
+Session, WebMethodsBase MethodsClass, IPAddress RealIP)\n   at GSMyAdmin.WebServer.ApiService.InvokeAPI(HttpContext 
+context, IWebSession session, JObject data, String requestModule, String requestMethod)\n   at 
+GSMyAdmin.WebServer.MethodInvocation.InvokeMethod(String MethodName, JObject Data, HttpContext context, IWebSession 
+Session, WebMethodsBase MethodsClass, IPAddress RealIP)\n   at GSMyAdmin.WebServer.ApiService.InvokeAPI(HttpContext 
+context, IWebSession session, JObject data, String requestModule, String requestMethod)"}
+In C:\Users\Administrator\Downloads\CustomServer\tools\Deploy-NetCustomChar.ps1:50 Zeichen:51
++ ... teToken)) { throw "ManageInstance returned no token: $($manage | Conv ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (ManageInstance ...equestMethod)"}:String) [], RuntimeException
+    + FullyQualifiedErrorId : ManageInstance returned no token: {"Title":"Unauthorized Access","Message":"You do not h 
+   ave permission to use this method (ADSModule.ManageInstance) at this time. This method requires the Session.Exists  
+   permission.","StackTrace":"   at GSMyAdmin.WebServer.MethodInvocation.InvokeMethod(String MethodName, JObject Dat   
+ a, HttpContext context, IWebSession Session, WebMethodsBase MethodsClass, IPAddress RealIP)\n   at GSMyAdmin.WebSe    
+rver.ApiService.InvokeAPI(HttpContext context, IWebSession session, JObject data, String requestModule, String req    
+uestMethod)\n   at GSMyAdmin.WebServer.MethodInvocation.InvokeMethod(String MethodName, JObject Data, HttpContext     
+context, IWebSession Session, WebMethodsBase MethodsClass, IPAddress RealIP)\n   at GSMyAdmin.WebServer.ApiService    
+.InvokeAPI(HttpContext context, IWebSession session, JObject data, String requestModule, String requestMethod)"}
+ 

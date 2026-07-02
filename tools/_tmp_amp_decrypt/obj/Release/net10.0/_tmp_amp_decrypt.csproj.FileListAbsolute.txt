@@ -1,0 +1,15 @@
+C:\Users\Administrator\Downloads\CustomServer\tools\_tmp_amp_decrypt\obj\Release\net10.0\_tmp_amp_decrypt.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Downloads\CustomServer\tools\_tmp_amp_decrypt\bin\Release\net10.0\_tmp_amp_decrypt.exe
+C:\Users\Administrator\Downloads\CustomServer\tools\_tmp_amp_decrypt\bin\Release\net10.0\_tmp_amp_decrypt.deps.json
+C:\Users\Administrator\Downloads\CustomServer\tools\_tmp_amp_decrypt\bin\Release\net10.0\_tmp_amp_decrypt.runtimeconfig.json
+C:\Users\Administrator\Downloads\CustomServer\tools\_tmp_amp_decrypt\bin\Release\net10.0\_tmp_amp_decrypt.dll
+C:\Users\Administrator\Downloads\CustomServer\tools\_tmp_amp_decrypt\bin\Release\net10.0\_tmp_amp_decrypt.pdb
+C:\Users\Administrator\Downloads\CustomServer\tools\_tmp_amp_decrypt\obj\Release\net10.0\_tmp_amp_decrypt.AssemblyInfoInputs.cache
+C:\Users\Administrator\Downloads\CustomServer\tools\_tmp_amp_decrypt\obj\Release\net10.0\_tmp_amp_decrypt.AssemblyInfo.cs
+C:\Users\Administrator\Downloads\CustomServer\tools\_tmp_amp_decrypt\obj\Release\net10.0\_tmp_amp_decrypt.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Downloads\CustomServer\tools\_tmp_amp_decrypt\obj\Release\net10.0\_tmp_amp_decrypt.sourcelink.json
+C:\Users\Administrator\Downloads\CustomServer\tools\_tmp_amp_decrypt\obj\Release\net10.0\_tmp_amp_decrypt.dll
+C:\Users\Administrator\Downloads\CustomServer\tools\_tmp_amp_decrypt\obj\Release\net10.0\refint\_tmp_amp_decrypt.dll
+C:\Users\Administrator\Downloads\CustomServer\tools\_tmp_amp_decrypt\obj\Release\net10.0\_tmp_amp_decrypt.pdb
+C:\Users\Administrator\Downloads\CustomServer\tools\_tmp_amp_decrypt\obj\Release\net10.0\_tmp_amp_decrypt.genruntimeconfig.cache
+C:\Users\Administrator\Downloads\CustomServer\tools\_tmp_amp_decrypt\obj\Release\net10.0\ref\_tmp_amp_decrypt.dll

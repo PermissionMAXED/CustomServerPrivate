@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="BapCustomServer.Tests" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="publish\**" />
+    <Content Remove="logs\**" />
+    <Content Remove="data\**" />
+    <None Remove="publish\**" />
+    <None Remove="logs\**" />
+    <None Remove="data\**" />
+  </ItemGroup>
+
+</Project>

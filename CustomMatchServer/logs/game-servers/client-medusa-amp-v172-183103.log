@@ -1,0 +1,951 @@
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+Initialize engine version: 2022.3.38f1 (c5d5a7410213)
+[Subsystems] Discovering subsystems at path C:/Users/Administrator/Downloads/CustomServer/Spiel/Battleroyalebuild/bapbap_Data/UnitySubsystems
+GfxDevice: creating device client; threaded=1; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3060 Ti (ID=0x2486)
+    Vendor:   NVIDIA
+    VRAM:     3072 MB
+    Driver:   32.0.15.9621
+<b>[App UI]</b> Unable to find an AppUISettings instance, creating a default one...
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Unity.AppUI.Core.AppUI:InitializeInPlayer()
+
+<RI> Initializing input.
+New input system (experimental) initialized
+Using Windows.Gaming.Input
+<RI> Input initialized.
+<RI> Initialized touch support.
+-------------------------------------------------------------------------------------------------------
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+
+~   This Game has been MODIFIED using MelonLoader. DO NOT report any issues to the Game Developers!   ~
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+
+-------------------------------------------------------------------------------------------------------
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+
+The referenced script on this Behaviour (Game Object 'Blitz') is missing!
+[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+UnloadTime: 5.453900 ms
+ThreadLog initialized.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+Mirror.ThreadLog:Initialize()
+
+[PREAWAKE] ENV_PRODUCTION
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+[PREAWAKE] BACKEND_STRIP
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+[PREAWAKE] hostname= VINCENT
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+[PREAWAKE] environment= Production
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+[PREAWAKE] version = v0.1.1758-38212
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+[PREAWAKE] networkConfigEnv = Staging
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+[PREAWAKE] networkConfigsServer = ServerConfig { 
+MatchmakingHost: , 
+ListenPort: 0, 
+HeaderSecretKey: , 
+HeaderSecret: , 
+DebugPassword: , 
+DebugSquadPassword: , 
+DevGameAuthId: , 
+}
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+[PREAWAKE] networkConfigsClient = ClientConfig { 
+ApiHost: http://127.0.0.1:5055, 
+CookieDomain: .bapbap.gg, 
+CookieSessionKey: sid, 
+}
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+[PREAWAKE] logConfigEnv = Staging
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+[PREAWAKE] Args start
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+C:\Users\Administrator\Downloads\CustomServer\Spiel\Battleroyalebuild\bapbap.exe
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+-logFile
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+C:\Users\Administrator\Downloads\CustomServer\CustomMatchServer\logs\game-servers\client-medusa-amp-v172-183103.log
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+--melonloader.debug
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+--melonloader.captureplayerlogs
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+--melonloader.agfoffline
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+--bapcustom-use-proxy=false
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+--bapcustom-show-ui=false
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+--bapcustom-host=ark.atomi23.de
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+--bapcustom-server-port=5055
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+--bapcustom-account-id=codex-medusa-amp-v172-183103
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+--bapcustom-username=CodexMedusaAmp172
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+--bapcustom-join-auth=6baddf90db7d3ea0afc86369c06a178d
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+--bapcustom-join-host=ark.atomi23.de
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+--bapcustom-join-ws=7778
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+--bapcustom-join-kcp=7779
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+--bapcustom-join-tcp=7780
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+[PREAWAKE] Args end | http=-1 ws=-1 kcp=-1 tcp=-1
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+BAPBAP.Local.PreAwakeManager:Awake()
+
+[LocalSavedData] InitializeSystemResolutions - nativeSystemResolution: 1920 x 1080 @ 60Hz
+[LocalSavedData] InitializeSystemResolutions - res: UnityEngine.Resolution[], length: 1
+Found supported resolution: (1920, 1080)
+Failed to create agent because there is no valid NavMesh
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+
+[ line 16311556]
+
+NullReferenceException: Object reference not set to an instance of an object.
+  at BAPBAP.Entities.CharHurtbox.PreAwake (BAPBAP.Entities.EntityManager e) [0x00000] in <00000000000000000000000000000000>:0 
+  at BAPBAP.Entities.EntityManager.Awake () [0x00000] in <00000000000000000000000000000000>:0 
+  at UnityEngine.Object.Internal_CloneSingle (UnityEngine.Object data) [0x00000] in <00000000000000000000000000000000>:0 
+  at UnityEngine.Object.Instantiate[T] (T original) [0x00000] in <00000000000000000000000000000000>:0 
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+
+NullReferenceException: Object reference not set to an instance of an object.
+  at BAPBAP.Entities.CharInteract.Awake () [0x00000] in <00000000000000000000000000000000>:0 
+  at UnityEngine.Object.Internal_CloneSingle (UnityEngine.Object data) [0x00000] in <00000000000000000000000000000000>:0 
+  at UnityEngine.Object.Instantiate[T] (T original) [0x00000] in <00000000000000000000000000000000>:0 
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+
+NullReferenceException: Object reference not set to an instance of an object.
+UnityEngine.Object:Internal_CloneSingle(Object)
+UnityEngine.Object:Instantiate(T)
+
+NullReferenceException: Object reference not set to an instance of an object.
+UnityEngine.GameObject:SetActive(Boolean)
+
+STEAM: Steam unavailable
+Replacing existing prefab with assetId '1296385109'. Old prefab 'Char_Medusa', New prefab 'Char_Medusa'
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+
+Replacing existing prefab with assetId '1296385109'. Old prefab 'Char_Medusa', New prefab 'Char_Medusa'
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+
+[Spatial Hash] Partial Rebuild Interval = 0,25
+1800
+[UIDropdownController] No values added to the dropdown
+[UIDropdownController] No values added to the dropdown
+Replacing existing prefab with assetId '1296385109'. Old prefab 'Char_Medusa', New prefab 'Char_Medusa'
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+
+Replacing existing prefab with assetId '1296385109'. Old prefab 'Char_Medusa', New prefab 'Char_Medusa'
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+
+Replacing existing prefab with assetId '1296385109'. Old prefab 'Char_Medusa', New prefab 'Char_Medusa'
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+
+Replacing existing prefab with assetId '1296385109'. Old prefab 'Char_Medusa', New prefab 'Char_Medusa'
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+
+Replacing existing prefab with assetId '1296385109'. Old prefab 'Char_Medusa', New prefab 'Char_Medusa'
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+
+Replacing existing prefab with assetId '1296385109'. Old prefab 'Char_Medusa', New prefab 'Char_Medusa'
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+
+UILobby platform variant not found: WindowsPlayer using default
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+BAPBAP.UI.UILobbyConfiguration:get_PrefabVariant()
+BAPBAP.UI.UILobby:Build()
+BAPBAP.UI.<Awake>d__111:MoveNext()
+System.Runtime.CompilerServices.AsyncVoidMethodBuilder:Start(TStateMachine&)
+BAPBAP.UI.UIManager:Awake()
+
+Color primaries 0 is unknown or unsupported by WindowsMediaFoundation. Falling back to default may result in color shift. C:/Users/Administrator/Downloads/CustomServer/Spiel/Battleroyalebuild/bapbap_Data/sharedassets0.resource
+Opening Lobby UI :) at the time of 31.05.2026 18:32:01
+TelepathyTransport initialized!
+[LocalSavedData] Set Quick cast = False
+Connect MM: AuthId=6baddf90db7d3ea0afc86369c06a178d Hostname=ark.atomi23.de wsPort=7778 kcpPort=7779 tcpPort=7780 Secure=False
+Replacing existing prefab with assetId '1296385109'. Old prefab 'Char_Medusa', New prefab 'Char_Medusa'
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject)
+Mirror.NetworkManager:RegisterClientMessages()
+Mirror.NetworkManager:StartClient()
+BAPBAP.Network.GameNetworkManager:ConnectMatchmaking(String, String, Int32, Int32, Int32)
+
+assetId '1296385109' is already used by prefab 'Char_Medusa', unregister the prefab first before trying to add handler
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+Mirror.NetworkClient:RegisterPrefab(GameObject, SpawnHandlerDelegate, UnSpawnDelegate)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+BAPBAP.Network.GameNetworkManager:OnStartClient()
+Mirror.NetworkManager:StartClient()
+BAPBAP.Network.GameNetworkManager:ConnectMatchmaking(String, String, Int32, Int32, Int32)
+
+Running Client/Host Build - Vsync:0 - FPS:-1
+Warming shader: Toon_Frozen_Legacy
+Warming shader: Toon_Frozen_Amplify
+Warming shader: InstancedIndirectGrass
+Warming shader: DrownedGrass
+Warming shader: InstancedIndirectTrash
+[TESTLOG] Client connected before
+[TESTLOG] Client connected
+[TESTLOG] Client registered handler
+[TESTLOG] Client sent init
+Send event Game Joined with 0 games played (exclusive)
+OnClientSvInit buildVers=0.1.1758-38212 teamId=1 pId=1 | 18
+[Server Version: v0.1.1758-38212]
+Replacing existing prefab with assetId '1296385109'. Old prefab 'Char_Medusa', New prefab 'Char_Medusa'
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+
+Adding prefab 'Char_Medusa' with assetId '1296385109' when spawnHandlers with same assetId already exists. If you want to use custom spawn handling, then remove the prefab from NetworkManager's registered prefabs first.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+
+Replacing existing spawnHandlers for prefab 'Char_Medusa' with assetId '1296385109'
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefab(GameObject, SpawnHandlerDelegate, UnSpawnDelegate)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+
+assetId '1296385109' is already used by prefab 'Char_Medusa', unregister the prefab first before trying to add handler
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+Mirror.NetworkClient:RegisterPrefab(GameObject, SpawnHandlerDelegate, UnSpawnDelegate)
+BAPBAP.Pooling.NetworkPrefabPool:Create(Config, Boolean)
+BAPBAP.Pooling.NetworkPrefabPool:ClientCreate(Config)
+
+Replacing existing prefab with assetId '1296385109'. Old prefab 'Char_Medusa', New prefab 'Char_Medusa'
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+
+Adding prefab 'Char_Medusa' with assetId '1296385109' when spawnHandlers with same assetId already exists. If you want to use custom spawn handling, then remove the prefab from NetworkManager's registered prefabs first.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+
+[GameMode] Loading GameManager (BAPBAP.Game.GameModeBattleRoyale)
+Replacing existing prefab with assetId '1296385109'. Old prefab 'Char_Medusa', New prefab 'Char_Medusa'
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+
+Adding prefab 'Char_Medusa' with assetId '1296385109' when spawnHandlers with same assetId already exists. If you want to use custom spawn handling, then remove the prefab from NetworkManager's registered prefabs first.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+
+GarbageCollector disposing of ComputeBuffer. Please use ComputeBuffer.Release() or .Dispose() to manually release the buffer.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+UnityEngine.ComputeBuffer:Finalize()
+
+GarbageCollector disposing of ComputeBuffer. Please use ComputeBuffer.Release() or .Dispose() to manually release the buffer.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+UnityEngine.ComputeBuffer:Finalize()
+
+Replacing existing prefab with assetId '1296385109'. Old prefab 'Char_Medusa', New prefab 'Char_Medusa'
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+
+Adding prefab 'Char_Medusa' with assetId '1296385109' when spawnHandlers with same assetId already exists. If you want to use custom spawn handling, then remove the prefab from NetworkManager's registered prefabs first.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+
+Replacing existing prefab with assetId '1296385109'. Old prefab 'Char_Medusa', New prefab 'Char_Medusa'
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+
+Adding prefab 'Char_Medusa' with assetId '1296385109' when spawnHandlers with same assetId already exists. If you want to use custom spawn handling, then remove the prefab from NetworkManager's registered prefabs first.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+
+Replacing existing prefab with assetId '1296385109'. Old prefab 'Char_Medusa', New prefab 'Char_Medusa'
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+
+Adding prefab 'Char_Medusa' with assetId '1296385109' when spawnHandlers with same assetId already exists. If you want to use custom spawn handling, then remove the prefab from NetworkManager's registered prefabs first.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+
+Replacing existing prefab with assetId '1296385109'. Old prefab 'Char_Medusa', New prefab 'Char_Medusa'
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+
+Adding prefab 'Char_Medusa' with assetId '1296385109' when spawnHandlers with same assetId already exists. If you want to use custom spawn handling, then remove the prefab from NetworkManager's registered prefabs first.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+
+Replacing existing prefab with assetId '1296385109'. Old prefab 'Char_Medusa', New prefab 'Char_Medusa'
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+
+Adding prefab 'Char_Medusa' with assetId '1296385109' when spawnHandlers with same assetId already exists. If you want to use custom spawn handling, then remove the prefab from NetworkManager's registered prefabs first.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+
+Replacing existing prefab with assetId '1296385109'. Old prefab 'Char_Medusa', New prefab 'Char_Medusa'
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+
+Adding prefab 'Char_Medusa' with assetId '1296385109' when spawnHandlers with same assetId already exists. If you want to use custom spawn handling, then remove the prefab from NetworkManager's registered prefabs first.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+
+Replacing existing prefab with assetId '1296385109'. Old prefab 'Char_Medusa', New prefab 'Char_Medusa'
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+
+Adding prefab 'Char_Medusa' with assetId '1296385109' when spawnHandlers with same assetId already exists. If you want to use custom spawn handling, then remove the prefab from NetworkManager's registered prefabs first.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+
+Populating Character Buttons
+Number of characters is 16
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlocked()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsUnlocked(Int32)
+BAPBAP.UI.View_PreMatch_CharSelect:PopulateCharacterButtons()
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlockedInRotation()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsInRotation(Int32)
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlocked()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsUnlocked(Int32)
+BAPBAP.UI.View_PreMatch_CharSelect:PopulateCharacterButtons()
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlockedInRotation()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsInRotation(Int32)
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlocked()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsUnlocked(Int32)
+BAPBAP.UI.View_PreMatch_CharSelect:PopulateCharacterButtons()
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlockedInRotation()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsInRotation(Int32)
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlocked()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsUnlocked(Int32)
+BAPBAP.UI.View_PreMatch_CharSelect:PopulateCharacterButtons()
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlockedInRotation()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsInRotation(Int32)
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlocked()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsUnlocked(Int32)
+BAPBAP.UI.View_PreMatch_CharSelect:PopulateCharacterButtons()
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlockedInRotation()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsInRotation(Int32)
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlocked()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsUnlocked(Int32)
+BAPBAP.UI.View_PreMatch_CharSelect:PopulateCharacterButtons()
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlockedInRotation()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsInRotation(Int32)
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlocked()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsUnlocked(Int32)
+BAPBAP.UI.View_PreMatch_CharSelect:PopulateCharacterButtons()
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlockedInRotation()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsInRotation(Int32)
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlocked()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsUnlocked(Int32)
+BAPBAP.UI.View_PreMatch_CharSelect:PopulateCharacterButtons()
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlockedInRotation()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsInRotation(Int32)
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlocked()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsUnlocked(Int32)
+BAPBAP.UI.View_PreMatch_CharSelect:PopulateCharacterButtons()
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlockedInRotation()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsInRotation(Int32)
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlocked()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsUnlocked(Int32)
+BAPBAP.UI.View_PreMatch_CharSelect:PopulateCharacterButtons()
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlockedInRotation()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsInRotation(Int32)
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlocked()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsUnlocked(Int32)
+BAPBAP.UI.View_PreMatch_CharSelect:PopulateCharacterButtons()
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlockedInRotation()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsInRotation(Int32)
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlocked()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsUnlocked(Int32)
+BAPBAP.UI.View_PreMatch_CharSelect:PopulateCharacterButtons()
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlockedInRotation()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsInRotation(Int32)
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlocked()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsUnlocked(Int32)
+BAPBAP.UI.View_PreMatch_CharSelect:PopulateCharacterButtons()
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlockedInRotation()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsInRotation(Int32)
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlocked()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsUnlocked(Int32)
+BAPBAP.UI.View_PreMatch_CharSelect:PopulateCharacterButtons()
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlockedInRotation()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsInRotation(Int32)
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlocked()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsUnlocked(Int32)
+BAPBAP.UI.View_PreMatch_CharSelect:PopulateCharacterButtons()
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlockedInRotation()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsInRotation(Int32)
+
+ERROR: data was null on CharacterSelectPage.CharacterIsUnlocked()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.UI.UILobbyCharacterSelectPage:CharacterIsUnlocked(Int32)
+BAPBAP.UI.View_PreMatch_CharSelect:PopulateCharacterButtons()
+
+Replacing existing prefab with assetId '1296385109'. Old prefab 'Char_Medusa', New prefab 'Char_Medusa'
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+
+Adding prefab 'Char_Medusa' with assetId '1296385109' when spawnHandlers with same assetId already exists. If you want to use custom spawn handling, then remove the prefab from NetworkManager's registered prefabs first.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+
+Replacing existing prefab with assetId '1296385109'. Old prefab 'Char_Medusa', New prefab 'Char_Medusa'
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+
+Adding prefab 'Char_Medusa' with assetId '1296385109' when spawnHandlers with same assetId already exists. If you want to use custom spawn handling, then remove the prefab from NetworkManager's registered prefabs first.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+
+Failed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 16313004]
+
+Failed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 16313004]
+
+Failed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 16313004]
+
+Failed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 16313004]
+
+Failed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 16313004]
+
+Failed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 16313004]
+
+Failed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 16313004]
+
+Failed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 16313004]
+
+Failed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 16313004]
+
+Failed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 16313004]
+
+Failed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 16313004]
+
+Failed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 16313004]
+
+Failed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 16313004]
+
+Failed to create agent because there is no valid NavMesh
+UnityEngine.Behaviour:set_enabled(Boolean)
+BAPBAP.Entities.EntityMovement:Start()
+
+[ line 16313004]
+
+[PLAYERMANAGER] [CodexMedusaAmp172] Player On Start | 18
+[Thread2] GarbageCollector disposing of ComputeBuffer. Please use ComputeBuffer.Release() or .Dispose() to manually release the buffer.
+UnityEngine.ComputeBuffer:Finalize()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.ThreadLog:OnLateUpdate()
+Mirror.NetworkLoop:NetworkLateUpdate()
+UnityEngine.LowMemoryCallback:Invoke()
+
+[Thread2] GarbageCollector disposing of ComputeBuffer. Please use ComputeBuffer.Release() or .Dispose() to manually release the buffer.
+UnityEngine.ComputeBuffer:Finalize()
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.ThreadLog:OnLateUpdate()
+Mirror.NetworkLoop:NetworkLateUpdate()
+UnityEngine.LowMemoryCallback:Invoke()
+
+Curl error 7: Failed to connect to 127.0.0.1 port 5055 after 2037 ms: Couldn't connect to server
+Replacing existing prefab with assetId '1296385109'. Old prefab 'Char_Medusa', New prefab 'Char_Medusa'
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+
+Adding prefab 'Char_Medusa' with assetId '1296385109' when spawnHandlers with same assetId already exists. If you want to use custom spawn handling, then remove the prefab from NetworkManager's registered prefabs first.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+
+Replacing existing prefab with assetId '1296385109'. Old prefab 'Char_Medusa', New prefab 'Char_Medusa'
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+
+Adding prefab 'Char_Medusa' with assetId '1296385109' when spawnHandlers with same assetId already exists. If you want to use custom spawn handling, then remove the prefab from NetworkManager's registered prefabs first.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+
+HttpClient HTTP Error: Cannot connect to destination host | 
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+BAPBAP.Network.<SendGetRoutine>d__11`1:MoveNext()
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr)
+
+Prebaked navmesh data for level 'Map2_BazaarCity 3' succesfully found. Applying now.
+Loaded Map Map2_BazaarCity 3
+Replacing existing prefab with assetId '1296385109'. Old prefab 'Char_Medusa', New prefab 'Char_Medusa'
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+
+Adding prefab 'Char_Medusa' with assetId '1296385109' when spawnHandlers with same assetId already exists. If you want to use custom spawn handling, then remove the prefab from NetworkManager's registered prefabs first.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+
+Replacing existing prefab with assetId '1296385109'. Old prefab 'Char_Medusa', New prefab 'Char_Medusa'
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+
+Adding prefab 'Char_Medusa' with assetId '1296385109' when spawnHandlers with same assetId already exists. If you want to use custom spawn handling, then remove the prefab from NetworkManager's registered prefabs first.
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogWarning(Object)
+Mirror.NetworkClient:RegisterPrefabIdentity(NetworkIdentity)
+Mirror.NetworkClient:RegisterPrefab(GameObject, UInt32)
+
+[GameMode] OnEnable | frameCount 35
+Cannot combine mesh that does not allow access: PD_OOB_Floor_01
+UnityEngine.Mesh:CombineMeshes(CombineInstance[], Boolean)
+BAPBAP.Maps.LevelRuntimeManager:CombineMeshes(CombineMeshesMat[], ShadowCastingMode)
+BAPBAP.Maps.LevelRuntimeManager:BakeChunkMeshes(MapChunk, Transform)
+BAPBAP.Maps.LevelRuntimeManager:LoadChunk(Int32, Vector2Int, Boolean)
+BAPBAP.Maps.LevelDynamicLoadProcess:LoadDynamicChunkImmediate(Int32, Vector2Int)
+BAPBAP.Maps.DynamicLoadTrigger:TryLoad(LevelDynamicLoadProcess, Boolean)
+BAPBAP.Maps.LevelDynamicLoadProcess:TryLoadChunk(Int32, Int32, Int32, Boolean)
+BAPBAP.Local.DynamicChunkLoader:UpdateChunkLoad(Boolean)
+BAPBAP.Local.DynamicChunkLoader:Update()
+
+[ line 16312972]
+
+Data was null on GetOwnedHighestTierCharMasteryBadge

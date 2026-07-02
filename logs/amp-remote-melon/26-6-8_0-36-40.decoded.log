@@ -1,0 +1,47 @@
+﻿[00:36:41.011] [UNITY] [UnityMemory] Configuration Parameters - Can be set up in boot.config
+[00:36:41.011] [UNITY]     "memorysetup-bucket-allocator-granularity=16"
+[00:36:41.012] [UNITY]     "memorysetup-bucket-allocator-bucket-count=8"
+[00:36:41.012] [UNITY]     "memorysetup-bucket-allocator-block-size=4194304"
+[00:36:41.013] [UNITY]     "memorysetup-bucket-allocator-block-count=1"
+[00:36:41.013] [UNITY]     "memorysetup-main-allocator-block-size=16777216"
+[00:36:41.014] [UNITY]     "memorysetup-thread-allocator-block-size=16777216"
+[00:36:41.014] [UNITY]     "memorysetup-gfx-main-allocator-block-size=16777216"
+[00:36:41.015] [UNITY]     "memorysetup-gfx-thread-allocator-block-size=16777216"
+[00:36:41.015] [UNITY]     "memorysetup-cache-allocator-block-size=4194304"
+[00:36:41.016] [UNITY]     "memorysetup-typetree-allocator-block-size=2097152"
+[00:36:41.016] [UNITY]     "memorysetup-profiler-bucket-allocator-granularity=16"
+[00:36:41.017] [UNITY]     "memorysetup-profiler-bucket-allocator-bucket-count=8"
+[00:36:41.017] [UNITY]     "memorysetup-profiler-bucket-allocator-block-size=4194304"
+[00:36:41.018] [UNITY]     "memorysetup-profiler-bucket-allocator-block-count=1"
+[00:36:41.018] [UNITY]     "memorysetup-profiler-allocator-block-size=16777216"
+[00:36:41.019] [UNITY]     "memorysetup-profiler-editor-allocator-block-size=1048576"
+[00:36:41.019] [UNITY]     "memorysetup-temp-allocator-size-main=4194304"
+[00:36:41.020] [UNITY]     "memorysetup-job-temp-allocator-block-size=2097152"
+[00:36:41.020] [UNITY]     "memorysetup-job-temp-allocator-block-size-background=1048576"
+[00:36:41.021] [UNITY]     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+[00:36:41.021] [UNITY]     "memorysetup-allocator-temp-initial-block-size-main=262144"
+[00:36:41.021] [UNITY]     "memorysetup-allocator-temp-initial-block-size-worker=262144"
+[00:36:41.022] [UNITY]     "memorysetup-temp-allocator-size-background-worker=32768"
+[00:36:41.022] [UNITY]     "memorysetup-temp-allocator-size-job-worker=262144"
+[00:36:41.023] [UNITY]     "memorysetup-temp-allocator-size-preload-manager=262144"
+[00:36:41.023] [UNITY]     "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+[00:36:41.024] [UNITY]     "memorysetup-temp-allocator-size-audio-worker=65536"
+[00:36:41.025] [UNITY]     "memorysetup-temp-allocator-size-cloud-worker=32768"
+[00:36:41.025] [UNITY]     "memorysetup-temp-allocator-size-gfx=262144"
+
+[00:36:41.573] ------------------------------
+[00:36:41.574] MelonLoader v0.7.2 Open-Beta
+[00:36:41.575] OS: Wine/Proton 10.0
+[00:36:41.576] Hash Code: 58AB98835E598BD67B7DB233734DE8603F92C9C6A6081B13CB9A5CC37C02DD13
+[00:36:41.576] ------------------------------
+[00:36:41.576] Game Type: Il2cpp
+[00:36:41.577] Game Arch: x86
+[00:36:41.577] ------------------------------
+[00:36:41.578] Command-Line: 
+[00:36:41.578] ------------------------------
+[00:36:41.578] Core::BasePath = Z:\AMP\BapCustomServer\game
+[00:36:41.582] Game::BasePath = Z:\AMP\BapCustomServer\game
+[00:36:41.582] Game::DataPath = Z:\AMP\BapCustomServer\game\bapbap_Data
+[00:36:41.583] Game::ApplicationPath = Z:\AMP\BapCustomServer\game\bapbap.exe
+[00:36:41.583] Runtime Type: net6
+

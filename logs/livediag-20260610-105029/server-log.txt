@@ -1,0 +1,7 @@
+﻿
+tail entries                                                                                         
+---- -------                                                                                         
+ 500 {@{utc=2026-06-10T07:27:15.6859469+00:00; level=Information; category=BapCustomServer.Resourc...
+
+
+

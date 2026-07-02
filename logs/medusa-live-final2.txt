@@ -1,0 +1,21 @@
+03:01:21.882 [t+0s] Killing existing bapbap processes
+03:01:24.044 [t+2.2s] Health release=medusa-v1740-multimap medusaDll=6923D2F932E717D73C90CF95391178AF1C91D06106EEC7BBB6BAC47D312055A1
+03:01:24.140 [t+2.3s] Admin grant: Admin added.
+03:01:24.232 [t+2.4s] WS -> SOCKET_READY
+03:01:24.236 [t+2.4s] JOIN_LOBBY lobby=V54882 charId=15
+03:01:24.251 [t+2.4s] WS -> GAME_MODES_UPDATED
+03:01:30.267 [t+8.4s] WS -> JOIN_LOBBY_SUCCESS
+03:01:30.271 [t+8.4s] UPDATE_CUSTOM_SETTINGS map=34 botCount=2
+03:01:30.273 [t+8.4s] WS -> GAME_MODES_UPDATED
+03:01:30.292 [t+8.4s] WS -> UPDATE_CUSTOM_SETTINGS_SUCCESS
+03:01:30.293 [t+8.4s] START_CUSTOM_GAME forceStart=true
+03:01:32.316 [t+10.4s] WS -> START_CUSTOM_GAME_FAIL
+START_CUSTOM_GAME_FAIL payload={"warningMessage":"The game server could not be started or did not accept match 
+bootstrap data.","errorCode":"ERR_GAME_SERVER_BOOTSTRAP","showForceStartModal":false}
+In C:\Users\Administrator\Downloads\CustomServer\tools\Test-LiveCustomMedusaVfx.ps1:217 Zeichen:9
++         throw "START_CUSTOM_GAME_FAIL payload=$($started.payload | Co ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (START_CUSTOM_GA...rtModal":false}:String) [], RuntimeException
+    + FullyQualifiedErrorId : START_CUSTOM_GAME_FAIL payload={"warningMessage":"The game server could not be started o 
+   r did not accept match bootstrap data.","errorCode":"ERR_GAME_SERVER_BOOTSTRAP","showForceStartModal":false}
+ 
