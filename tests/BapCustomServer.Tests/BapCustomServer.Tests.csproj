@@ -27,6 +27,11 @@
   <!-- Frozen route+method manifest for RouteManifestContractTests (Phase 0 protocol lock). -->
   <ItemGroup>
     <Content Include="Fixtures\routes.contract.json" CopyToOutputDirectory="PreserveNewest" />
+    <!-- The REAL AMP config (not a snapshot) is link-copied so CatalogSyncTests fails the build's
+         tests the moment the deployed toggles drift from CharacterCatalog/MapCatalog (HC5). -->
+    <Content Include="..\..\deployment\amp-github-autoinstall\bapcustomservergithubconfig.json"
+             Link="Fixtures\bapcustomservergithubconfig.json"
+             CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
   <!-- The Melon mod targets net6/x86 with Unity refs, so we can't ProjectReference it.

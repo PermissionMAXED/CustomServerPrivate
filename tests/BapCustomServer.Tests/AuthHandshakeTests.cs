@@ -31,21 +31,20 @@ public sealed class AuthHandshakeTests : IClassFixture<AuthHandshakeTests.AuthAp
         protected override IHost CreateHost(IHostBuilder builder)
         {
             Directory.CreateDirectory(DataDir);
+            // Full redirect set + neutral overrides doc: this fixture previously redirected only
+            // Admin/Economy/PlayerStorage, so PlayerOverridesService regenerated its
+            // unlockEverything:true default into the shared test-bin data/ dir on every run.
+            Svc.WriteNeutralPlayerOverrides(DataDir);
             builder.UseEnvironment("Testing");
             builder.ConfigureHostConfiguration(cfg =>
             {
-                cfg.AddInMemoryCollection(new Dictionary<string, string?>
-                {
-                    ["CustomServer:LaunchGameServers"] = "false",
-                    ["CustomServer:GameServerPrewarmOnStartup"] = "false",
-                    ["CustomServer:Admin:ApiToken"] = AdminToken,
-                    ["CustomServer:Admin:AttestationSecret"] = TestAttestationSecret,
-                    ["CustomServer:Admin:AdminAccountIds:0"] = AdminAccountId,
-                    ["CustomServer:Admin:StateFile"] = Path.Combine(DataDir, "admin.json"),
-                    ["CustomServer:Admin:AuditLogFile"] = Path.Combine(DataDir, "audit.jsonl"),
-                    ["CustomServer:Economy:StateFile"] = Path.Combine(DataDir, "economy.json"),
-                    ["CustomServer:PlayerStorage:PlayersDirectory"] = Path.Combine(DataDir, "players"),
-                });
+                var settings = Svc.StateFileRedirects(DataDir);
+                settings["CustomServer:LaunchGameServers"] = "false";
+                settings["CustomServer:GameServerPrewarmOnStartup"] = "false";
+                settings["CustomServer:Admin:ApiToken"] = AdminToken;
+                settings["CustomServer:Admin:AttestationSecret"] = TestAttestationSecret;
+                settings["CustomServer:Admin:AdminAccountIds:0"] = AdminAccountId;
+                cfg.AddInMemoryCollection(settings);
             });
             return base.CreateHost(builder);
         }
@@ -200,6 +199,7 @@ public sealed class AuthHandshakeTests : IClassFixture<AuthHandshakeTests.AuthAp
         await SendJsonAsync(socket, new { @event = "MOD_HELLO" }, cts.Token);
         JsonElement challenge = await ReceiveJsonAsync(socket, cts.Token);
         string? nonce = GetString(challenge, "payload", "nonce");
+        Assert.NotNull(nonce);
         string signature = ComputeHmac(AuthAppFactory.TestAttestationSecret, nonce, AuthAppFactory.AdminAccountId);
         await SendJsonAsync(socket, new { @event = "MOD_AUTH", payload = new { nonce, signature } }, cts.Token);
         await ReceiveJsonAsync(socket, cts.Token); // MOD_AUTH_OK
@@ -225,6 +225,7 @@ public sealed class AuthHandshakeTests : IClassFixture<AuthHandshakeTests.AuthAp
         await SendJsonAsync(socket, new { @event = "MOD_HELLO" }, cts.Token);
         JsonElement challenge = await ReceiveJsonAsync(socket, cts.Token);
         string? nonce = GetString(challenge, "payload", "nonce");
+        Assert.NotNull(nonce);
         string signature = ComputeHmac(AuthAppFactory.TestAttestationSecret, nonce, AuthAppFactory.NonAdminAccountId);
         await SendJsonAsync(socket, new { @event = "MOD_AUTH", payload = new { nonce, signature } }, cts.Token);
         await ReceiveJsonAsync(socket, cts.Token); // MOD_AUTH_OK

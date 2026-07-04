@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.Net.WebSockets;
 using System.Text;
 using System.Text.Json;
@@ -29,28 +30,15 @@ public sealed class JoinLobbyContractTests : IClassFixture<JoinLobbyContractTest
         protected override IHost CreateHost(IHostBuilder builder)
         {
             Directory.CreateDirectory(DataDir);
-            // PlayerOverridesService regenerates an unlockEverything:true default document at any
-            // missing StateFile path; pre-seed a NEUTRAL document so state stays deterministic.
-            File.WriteAllText(
-                Path.Combine(DataDir, "player-overrides.json"),
-                """{ "defaults": {}, "players": {} }""");
+            // Neutral player-overrides doc + full state-file redirects (see TestSupport.cs).
+            Svc.WriteNeutralPlayerOverrides(DataDir);
             builder.UseEnvironment("Testing");
             builder.ConfigureHostConfiguration(cfg =>
             {
-                cfg.AddInMemoryCollection(new Dictionary<string, string?>
-                {
-                    ["CustomServer:LaunchGameServers"] = "false",
-                    ["CustomServer:GameServerPrewarmOnStartup"] = "false",
-                    ["CustomServer:Economy:StateFile"] = Path.Combine(DataDir, "economy.json"),
-                    ["CustomServer:Friends:StateFile"] = Path.Combine(DataDir, "friends.json"),
-                    ["CustomServer:Ranked:StateFile"] = Path.Combine(DataDir, "ranked.json"),
-                    ["CustomServer:MatchHistory:LogFile"] = Path.Combine(DataDir, "history.jsonl"),
-                    ["CustomServer:Admin:StateFile"] = Path.Combine(DataDir, "admin.json"),
-                    ["CustomServer:Admin:AuditLogFile"] = Path.Combine(DataDir, "audit.jsonl"),
-                    ["CustomServer:PlayerStorage:PlayersDirectory"] = Path.Combine(DataDir, "players"),
-                    ["CustomServer:PlayerOverrides:StateFile"] = Path.Combine(DataDir, "player-overrides.json"),
-                    ["CustomServer:Shop:StateFile"] = Path.Combine(DataDir, "shop-state.json"),
-                });
+                var settings = Svc.StateFileRedirects(DataDir);
+                settings["CustomServer:LaunchGameServers"] = "false";
+                settings["CustomServer:GameServerPrewarmOnStartup"] = "false";
+                cfg.AddInMemoryCollection(settings);
             });
             return base.CreateHost(builder);
         }
@@ -162,6 +150,51 @@ public sealed class JoinLobbyContractTests : IClassFixture<JoinLobbyContractTest
         // Server sets lobby=null; JsonContract's WhenWritingNull omits the key entirely.
         Assert.True(!payload.TryGetProperty("lobby", out var lobby) || lobby.ValueKind == JsonValueKind.Null,
             "invalid-code join must carry an absent-or-null lobby");
+
+        await socket.CloseAsync(WebSocketCloseStatus.NormalClosure, "done", ct);
+    }
+
+    [Fact] // the deliberate 6s pre-response delay (LobbyService.JoinLobbyAsync ~1150-1155) is a frozen contract
+    public async Task JoinLobby_ResponseIsDelayedByAtLeastFiveSeconds()
+    {
+        var ct = new CancellationTokenSource(TimeSpan.FromSeconds(30)).Token;
+        using var socket = await ConnectAndDrainGreetingAsync(ct);
+
+        // Invalid-code path: exactly ONE response frame follows the delay (no lobby broadcasts),
+        // so the elapsed time measures the JOIN_LOBBY handler and nothing else.
+        var stopwatch = Stopwatch.StartNew();
+        await SendEnvelope(socket, "JOIN_LOBBY", new { charId = 1, lobbyId = "ZZZZZZ" }, ct);
+        var (evt, _) = await ReceiveEnvelope(socket, ct);
+        stopwatch.Stop();
+
+        Assert.Equal("JOIN_LOBBY_SUCCESS", evt);
+        // Lower bound only: the server-side Task.Delay is a fixed 6000ms, so >=5s can never be
+        // flaky on the low side; an upper bound WOULD be flaky under load, so none is asserted.
+        Assert.True(stopwatch.Elapsed >= TimeSpan.FromSeconds(5),
+            $"JOIN_LOBBY answered in {stopwatch.Elapsed.TotalMilliseconds:F0}ms — the deliberate 6s " +
+            "delay before ANY join response was removed or shortened. The shipped client needs it " +
+            "to finish processing its initial HTTP responses before JOIN_LOBBY_SUCCESS arrives.");
+
+        await socket.CloseAsync(WebSocketCloseStatus.NormalClosure, "done", ct);
+    }
+
+    [Fact] // the frame immediately after JOIN_LOBBY_SUCCESS must be the GAME_MODES_UPDATED re-send
+    public async Task JoinLobby_Success_IsImmediatelyFollowedByGameModesUpdated()
+    {
+        var ct = new CancellationTokenSource(TimeSpan.FromSeconds(30)).Token;
+        using var socket = await ConnectAndDrainGreetingAsync(ct);
+
+        await SendEnvelope(socket, "JOIN_LOBBY", new { charId = 1 }, ct);
+        var (first, _) = await ReceiveEnvelope(socket, ct);
+        Assert.Equal("JOIN_LOBBY_SUCCESS", first);
+
+        // Load-bearing re-send (LobbyService ~1286-1287): the client resets gameModeId to -1 while
+        // joining and only this frame moves it back to a valid mode. Per-connection sends are
+        // strictly ordered, so on the joiner's socket it must be the VERY NEXT frame (the
+        // LOBBY_JOINED broadcast excludes the joiner and cannot interleave here).
+        var (second, payload) = await ReceiveEnvelope(socket, ct);
+        Assert.Equal("GAME_MODES_UPDATED", second);
+        Assert.Equal(JsonValueKind.Array, payload.ValueKind);
 
         await socket.CloseAsync(WebSocketCloseStatus.NormalClosure, "done", ct);
     }

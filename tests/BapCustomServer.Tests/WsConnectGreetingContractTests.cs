@@ -30,28 +30,15 @@ public sealed class WsConnectGreetingContractTests : IClassFixture<WsConnectGree
         protected override IHost CreateHost(IHostBuilder builder)
         {
             Directory.CreateDirectory(DataDir);
-            // PlayerOverridesService regenerates an unlockEverything:true default document at any
-            // missing StateFile path; pre-seed a NEUTRAL document so state stays deterministic.
-            File.WriteAllText(
-                Path.Combine(DataDir, "player-overrides.json"),
-                """{ "defaults": {}, "players": {} }""");
+            // Neutral player-overrides doc + full state-file redirects (see TestSupport.cs).
+            Svc.WriteNeutralPlayerOverrides(DataDir);
             builder.UseEnvironment("Testing");
             builder.ConfigureHostConfiguration(cfg =>
             {
-                cfg.AddInMemoryCollection(new Dictionary<string, string?>
-                {
-                    ["CustomServer:LaunchGameServers"] = "false",
-                    ["CustomServer:GameServerPrewarmOnStartup"] = "false",
-                    ["CustomServer:Economy:StateFile"] = Path.Combine(DataDir, "economy.json"),
-                    ["CustomServer:Friends:StateFile"] = Path.Combine(DataDir, "friends.json"),
-                    ["CustomServer:Ranked:StateFile"] = Path.Combine(DataDir, "ranked.json"),
-                    ["CustomServer:MatchHistory:LogFile"] = Path.Combine(DataDir, "history.jsonl"),
-                    ["CustomServer:Admin:StateFile"] = Path.Combine(DataDir, "admin.json"),
-                    ["CustomServer:Admin:AuditLogFile"] = Path.Combine(DataDir, "audit.jsonl"),
-                    ["CustomServer:PlayerStorage:PlayersDirectory"] = Path.Combine(DataDir, "players"),
-                    ["CustomServer:PlayerOverrides:StateFile"] = Path.Combine(DataDir, "player-overrides.json"),
-                    ["CustomServer:Shop:StateFile"] = Path.Combine(DataDir, "shop-state.json"),
-                });
+                var settings = Svc.StateFileRedirects(DataDir);
+                settings["CustomServer:LaunchGameServers"] = "false";
+                settings["CustomServer:GameServerPrewarmOnStartup"] = "false";
+                cfg.AddInMemoryCollection(settings);
             });
             return base.CreateHost(builder);
         }

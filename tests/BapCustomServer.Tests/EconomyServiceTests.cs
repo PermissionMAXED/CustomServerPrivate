@@ -62,7 +62,7 @@ public class EconomyServiceTests
 
         Assert.False(result.Ok);
         Assert.Equal(1, result.NewCharTokenBalance);
-        Assert.False(grants.Any(assetId => e.HasAsset("a", assetId)));
+        Assert.DoesNotContain(grants, assetId => e.HasAsset("a", assetId));
     }
 
     [Fact] // F081
