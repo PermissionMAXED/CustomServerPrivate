@@ -33,6 +33,14 @@ public sealed class EndpointIntegrationTests : IClassFixture<EndpointIntegration
         protected override IHost CreateHost(IHostBuilder builder)
         {
             Directory.CreateDirectory(DataDir);
+            // PlayerOverridesService auto-writes an unlockEverything:true default document at any
+            // missing StateFile path (PlayerOverrides.cs WriteDefaultDocumentFile), which would make
+            // every character owned and defeat the UnlockAllCharacters=false setups below. Pre-seed
+            // a NEUTRAL document (empty defaults) so the redirected file already exists at boot and
+            // is loaded verbatim instead of being regenerated.
+            File.WriteAllText(
+                Path.Combine(DataDir, "player-overrides.json"),
+                """{ "defaults": {}, "players": {} }""");
             // Override config BEFORE the app's WebApplication.CreateBuilder binds CustomServerOptions.
             // CustomServer__* env-var style maps onto the CustomServer config section.
             builder.UseEnvironment("Testing");
@@ -51,6 +59,8 @@ public sealed class EndpointIntegrationTests : IClassFixture<EndpointIntegration
                     ["CustomServer:Admin:StateFile"] = Path.Combine(DataDir, "admin.json"),
                     ["CustomServer:Admin:AuditLogFile"] = Path.Combine(DataDir, "audit.jsonl"),
                     ["CustomServer:PlayerStorage:PlayersDirectory"] = Path.Combine(DataDir, "players"),
+                    ["CustomServer:PlayerOverrides:StateFile"] = Path.Combine(DataDir, "player-overrides.json"),
+                    ["CustomServer:Shop:StateFile"] = Path.Combine(DataDir, "shop-state.json"),
                 });
             });
             return base.CreateHost(builder);
