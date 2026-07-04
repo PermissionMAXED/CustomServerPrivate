@@ -150,3 +150,42 @@ relevant integration doc is `docs/MEDUSA_SERVER_INTEGRATION.md`.
   `CONTEXT.md` (dated, "authoritative snapshot") and `README.md` are the best living overviews.
 - Default API port is **5055**; some docs/log captures reference other ports (5157/5163) from specific
   test runs.
+
+## Cursor Cloud specific instructions
+
+- **.NET SDK 10** lives in `~/.dotnet` (PATH is set in `~/.bashrc`; non-login shells need
+  `export PATH="$HOME/.dotnet:$PATH"`). `Microsoft.AspNetCore.App` / `Microsoft.NETCore.App` 10.x
+  runtimes are present.
+- **Linux dev scope** (what actually builds/runs on this VM): `CustomMatchServer` (the server),
+  `CustomClientProxy`, and `tests/BapCustomServer.Tests` (xUnit). The Melon mod projects
+  (`BapCustomServerMelon`, `BapAdminMelon`) reference Unity DLLs under the gitignored `AssetRip/`
+  and target net6/x86 — treat them as Windows/Unity-only. `tools/Test-MatchStart*` PowerShell smoke
+  scripts need the Windows game binary + Wine/Xvfb and are out of scope for Linux dev smoke.
+- **Run the server:** `dotnet run --project CustomMatchServer/BapCustomServer.csproj` →
+  `http://127.0.0.1:5055`. Plain startup spawns no game process (`GameServerPrewarmOnStartup`
+  defaults false); `LaunchGameServers=true` only matters when a match actually starts, and no
+  DB/redis is needed (state is JSON under gitignored `data/` dirs).
+- **Tests:** `dotnet test tests/BapCustomServer.Tests/BapCustomServer.Tests.csproj` (self-contained:
+  temp dirs + ephemeral ports, safe to run alongside a live server). There is no lint config
+  (no `.editorconfig`/analyzers/solution), so `dotnet build` warnings are the lint signal; the tests
+  project has 3 known pre-existing build warnings. Two `EndpointIntegrationTests` cases
+  (`CharacterPurchase_DebitsTokensAndLoadShowsUnlockAsset`, `CharacterListing_ShowsConfiguredPriceForLockedCharacter`)
+  currently FAIL — pre-existing product/test-logic issue (the test `AppFactory` doesn't redirect
+  `CustomServer:PlayerOverrides:StateFile`, so the default `unlockEverything` override wins), not an
+  environment problem.
+- **GOTCHA — Git LFS pointers in committed `bin/`/`obj/`:** stale build outputs under `**/bin`/`**/obj`
+  are git-TRACKED (committed before the `.gitignore` rule) and `.gitattributes` routes `*.dll` through
+  Git LFS, so a fresh checkout leaves ~131-byte pointer files. Symptom: `dotnet test` reports
+  "No test is available" (the pointer is `xunit.runner.visualstudio.testadapter.dll`). Fix: delete the
+  `bin/` and `obj/` dirs under `CustomMatchServer`, `CustomClientProxy`, `tests/BapCustomServer.Tests`
+  (and `MapEditorVerify`) and rebuild — incremental builds do NOT overwrite the pointers. Do NOT
+  `git lfs pull` (downloads gigabytes of game assets). NEVER stage/commit `bin/` or `obj/` paths; they
+  are marked `git update-index --skip-worktree` locally (undo with `--no-skip-worktree` if a pull
+  conflicts).
+- **Hello-world / WS smoke:** `GET /health` → `{"ok":true,...}`. `GET /api/lobby/socket` returns
+  `ws://ark.atomi23.de:5055/ws` because `PublicBaseUrl` is set in `appsettings.json` — expected;
+  connect to `ws://127.0.0.1:5055/ws` locally. Connect with `?accountId=X&username=Y`, send
+  `{"event":"JOIN_LOBBY","payload":{}}`; expect `SOCKET_READY`, `GAME_MODES_UPDATED`, then
+  `JOIN_LOBBY_SUCCESS` after a deliberate ~6-second server delay (use ≥20s client timeouts). A lobby
+  exists only while its WebSocket stays open. `node` + the `ws` module (in `/workspace/node_modules`)
+  are available for WS scripting.
