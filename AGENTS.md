@@ -47,8 +47,11 @@ Helper scripts (all PowerShell, in `tools/`):
 
 ## Tests / smoke
 
-There is **no xUnit/NUnit suite**. Verification is done with PowerShell smoke scripts under `tools/`
-that drive a live server + WebSocket clients end-to-end. Run a single scenario by invoking its script:
+There **is** an xUnit suite at `tests/BapCustomServer.Tests/` (run with
+`dotnet test tests/BapCustomServer.Tests/BapCustomServer.Tests.csproj`; see the
+`## Cursor Cloud specific instructions` section below). In addition, end-to-end verification is done
+with PowerShell smoke scripts under `tools/` that drive a live server + WebSocket clients. Run a
+single scenario by invoking its script:
 
 ```powershell
 tools/Test-CustomServerSmoke.ps1          # health, socket discovery, WS connect, lobby join
@@ -164,7 +167,10 @@ relevant integration doc is `docs/MEDUSA_SERVER_INTEGRATION.md`.
 - **Run the server:** `dotnet run --project CustomMatchServer/BapCustomServer.csproj` →
   `http://127.0.0.1:5055`. Plain startup spawns no game process (`GameServerPrewarmOnStartup`
   defaults false); `LaunchGameServers=true` only matters when a match actually starts, and no
-  DB/redis is needed (state is JSON under gitignored `data/` dirs).
+  DB/redis is needed (state is JSON files under `data/` dirs). NOTE: some of those state files
+  (e.g. `CustomMatchServer/data/*.json`) are git-TRACKED despite the `data/` gitignore pattern, so a
+  server run can rewrite them and dirty `git status` — `git checkout -- <file>` to discard that churn;
+  never `git add -A` it.
 - **Tests:** `dotnet test tests/BapCustomServer.Tests/BapCustomServer.Tests.csproj` (self-contained:
   temp dirs + ephemeral ports, safe to run alongside a live server). There is no lint config
   (no `.editorconfig`/analyzers/solution), so `dotnet build` warnings are the lint signal; the tests
