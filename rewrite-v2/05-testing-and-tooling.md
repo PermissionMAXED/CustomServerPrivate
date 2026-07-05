@@ -33,10 +33,14 @@ graph BT
   family; the dump is authoritative, never a hand-count). The same test asserts route+method
   **uniqueness** — a duplicate registration doesn't fail at startup, it becomes an
   ambiguous-match 500 at request time (see `Program.cs:1271`).
+  (exists: `RouteManifestContractTests` + `Fixtures/routes.contract.json`, incl. the uniqueness
+  assertion.)
 - WS sequence scripts for the connect-time greeting (`SOCKET_READY` → `GAME_MODES_UPDATED` →
   friends state — `03` §1.3), the lobby happy path, every error code, the normalization table,
   the 3-step admin handshake, the banned-at-connect close, and `GAME_STARTED`
   multicast-to-all-connections semantics.
+  (exists: `WsConnectGreetingContractTests` + `JoinLobbyContractTests` cover the connect greeting
+  and `JOIN_LOBBY`; the remaining scenarios/error codes are still open.)
 - Bootstrap fixtures shared by server tests and mod `Pure/` tests (full 8-field
   `ManagedBootstrapStatus` shapes — `03` §1.5).
 - Stub permissiveness: each HC4 stub returns its frozen 2xx body for empty/garbage/valid input.
@@ -51,7 +55,8 @@ graph BT
 
 ### 1.3 The catalog-sync invariant test (HC5), concretely
 
-One test class, `CatalogSyncTests`, asserting from three real sources in the repo:
+One test class, `CatalogSyncTests`, asserting from three real sources in the repo
+(exists: `CatalogSyncTests`, green — the AMP JSON is link-copied into `Fixtures/` by the test csproj):
 
 ```csharp
 [Fact]
@@ -90,7 +95,7 @@ were committed.
   `IGameServerLauncher`: join → settings → start → `QUEUE_MATCHED`/`GAME_STARTED` over a real WS
   client; queue join → timer fire → same tail. (Seeds: `EndpointIntegrationTests`,
   `MatchLifecycleTests`, `ProxyIntegrationTests`, `LocalReverseProxyIntegrationTests`.)
-- **Isolation fix (do this in Phase 0) — with the correct diagnosis:** 2 of 375 tests fail
+- **Isolation fix (DONE in Phase 0) — with the correct diagnosis:** 2 of 375 tests fail
   (`CharacterPurchase_DebitsTokensAndLoadShowsUnlockAsset` — `Expected: 1, Actual: 3`;
   `CharacterListing_ShowsConfiguredPriceForLockedCharacter` — `Expected: 0, Actual: 1`; both
   reproduced on this VM). This is NOT general `data/` leakage: `EndpointIntegrationTests.AppFactory`
@@ -105,6 +110,9 @@ were committed.
   locked-down overrides document, or add a test knob) — merely relocating the file changes
   nothing because the service regenerates the unlock-everything default at any path.
   `ShopService` (`data/shop-state.json`) is likewise unredirected; redirect it in the same PR.
+  Shipped: all host factories now merge `Svc.StateFileRedirects(dataDir)` and pre-seed a neutral
+  `{ "defaults": {}, "players": {} }` overrides doc via `Svc.WriteNeutralPlayerOverrides(dataDir)`
+  (shared TestSupport helpers); both tests pass.
 - Differential replay harness (migration only): tee HTTP to old+new, replay recorded WS sessions,
   diff normalized outputs.
 
