@@ -16,6 +16,41 @@ internal static class Svc
         return dir;
     }
 
+    // ---- WebApplicationFactory host-fixture helpers -----------------------------------------
+
+    /// <summary>
+    /// EVERY persisted-state config key the server writes, redirected into the fixture's
+    /// throwaway <paramref name="dataDir"/>. Host factories must merge the FULL set: any service
+    /// left at its default path resolves against AppContext.BaseDirectory and re-contaminates the
+    /// shared test-bin data/ dir. PlayerOverridesService is the worst offender — it regenerates an
+    /// unlockEverything:true default document at any missing StateFile path. Layer test-specific
+    /// keys on top of the returned dictionary before AddInMemoryCollection.
+    /// </summary>
+    public static Dictionary<string, string?> StateFileRedirects(string dataDir) => new()
+    {
+        ["CustomServer:Economy:StateFile"] = Path.Combine(dataDir, "economy.json"),
+        ["CustomServer:Friends:StateFile"] = Path.Combine(dataDir, "friends.json"),
+        ["CustomServer:Ranked:StateFile"] = Path.Combine(dataDir, "ranked.json"),
+        ["CustomServer:MatchHistory:LogFile"] = Path.Combine(dataDir, "history.jsonl"),
+        ["CustomServer:Admin:StateFile"] = Path.Combine(dataDir, "admin.json"),
+        ["CustomServer:Admin:AuditLogFile"] = Path.Combine(dataDir, "audit.jsonl"),
+        ["CustomServer:PlayerStorage:PlayersDirectory"] = Path.Combine(dataDir, "players"),
+        ["CustomServer:PlayerOverrides:StateFile"] = Path.Combine(dataDir, "player-overrides.json"),
+        ["CustomServer:Shop:StateFile"] = Path.Combine(dataDir, "shop-state.json"),
+    };
+
+    /// <summary>
+    /// Pre-seeds a NEUTRAL player-overrides document (empty defaults) at the path
+    /// <see cref="StateFileRedirects"/> points PlayerOverrides:StateFile at, so
+    /// PlayerOverridesService loads it verbatim at boot instead of regenerating its
+    /// unlockEverything:true default (which would make every character owned in the fixture).
+    /// Call after Directory.CreateDirectory(DataDir), before the host boots.
+    /// </summary>
+    public static void WriteNeutralPlayerOverrides(string dataDir) =>
+        File.WriteAllText(
+            Path.Combine(dataDir, "player-overrides.json"),
+            """{ "defaults": {}, "players": {} }""");
+
     public static EconomyService Economy(string dir, int startingGold = 1000, int startingCharTokens = 10)
     {
         var opts = new EconomyOptions { StateFile = Path.Combine(dir, "economy.json"), StartingGold = startingGold, StartingCharTokens = startingCharTokens };

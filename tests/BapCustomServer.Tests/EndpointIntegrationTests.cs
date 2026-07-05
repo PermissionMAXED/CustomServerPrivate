@@ -33,25 +33,21 @@ public sealed class EndpointIntegrationTests : IClassFixture<EndpointIntegration
         protected override IHost CreateHost(IHostBuilder builder)
         {
             Directory.CreateDirectory(DataDir);
+            // Neutral (empty-defaults) player-overrides doc, so PlayerOverridesService doesn't
+            // regenerate its unlockEverything:true default and defeat the UnlockAllCharacters=false
+            // setups below. See Svc.WriteNeutralPlayerOverrides.
+            Svc.WriteNeutralPlayerOverrides(DataDir);
             // Override config BEFORE the app's WebApplication.CreateBuilder binds CustomServerOptions.
             // CustomServer__* env-var style maps onto the CustomServer config section.
             builder.UseEnvironment("Testing");
             builder.ConfigureHostConfiguration(cfg =>
             {
-                cfg.AddInMemoryCollection(new Dictionary<string, string?>
-                {
-                    ["CustomServer:LaunchGameServers"] = "false",
-                    ["CustomServer:GameServerPrewarmOnStartup"] = "false",
-                    ["CustomServer:Admin:ApiToken"] = AdminToken,
-                    ["CustomServer:Admin:BannedAccountIds:0"] = BannedAccountId,
-                    ["CustomServer:Economy:StateFile"] = Path.Combine(DataDir, "economy.json"),
-                    ["CustomServer:Friends:StateFile"] = Path.Combine(DataDir, "friends.json"),
-                    ["CustomServer:Ranked:StateFile"] = Path.Combine(DataDir, "ranked.json"),
-                    ["CustomServer:MatchHistory:LogFile"] = Path.Combine(DataDir, "history.jsonl"),
-                    ["CustomServer:Admin:StateFile"] = Path.Combine(DataDir, "admin.json"),
-                    ["CustomServer:Admin:AuditLogFile"] = Path.Combine(DataDir, "audit.jsonl"),
-                    ["CustomServer:PlayerStorage:PlayersDirectory"] = Path.Combine(DataDir, "players"),
-                });
+                var settings = Svc.StateFileRedirects(DataDir);
+                settings["CustomServer:LaunchGameServers"] = "false";
+                settings["CustomServer:GameServerPrewarmOnStartup"] = "false";
+                settings["CustomServer:Admin:ApiToken"] = AdminToken;
+                settings["CustomServer:Admin:BannedAccountIds:0"] = BannedAccountId;
+                cfg.AddInMemoryCollection(settings);
             });
             return base.CreateHost(builder);
         }

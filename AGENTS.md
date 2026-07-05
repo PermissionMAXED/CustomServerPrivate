@@ -173,12 +173,19 @@ relevant integration doc is `docs/MEDUSA_SERVER_INTEGRATION.md`.
   never `git add -A` it.
 - **Tests:** `dotnet test tests/BapCustomServer.Tests/BapCustomServer.Tests.csproj` (self-contained:
   temp dirs + ephemeral ports, safe to run alongside a live server). There is no lint config
-  (no `.editorconfig`/analyzers/solution), so `dotnet build` warnings are the lint signal; the tests
-  project has 3 known pre-existing build warnings. Two `EndpointIntegrationTests` cases
-  (`CharacterPurchase_DebitsTokensAndLoadShowsUnlockAsset`, `CharacterListing_ShowsConfiguredPriceForLockedCharacter`)
-  currently FAIL — pre-existing product/test-logic issue (the test `AppFactory` doesn't redirect
-  `CustomServer:PlayerOverrides:StateFile`, so the default `unlockEverything` override wins), not an
-  environment problem.
+  (no `.editorconfig`/analyzers/solution), so `dotnet build` warnings are the lint signal; the build
+  is warning-free. All tests pass (390 after the Phase-0 contract lock, which added
+  `RouteManifestContractTests`, `WsConnectGreetingContractTests`, `JoinLobbyContractTests`, and
+  `CatalogSyncTests`).
+- **GOTCHA for authors of NEW tests:** any new `WebApplicationFactory` test must redirect
+  `CustomServer:PlayerOverrides:StateFile` (and `Shop:StateFile`) AND pre-seed a neutral
+  `{ "defaults": {}, "players": {} }` overrides document — use the shared TestSupport helpers
+  `Svc.StateFileRedirects(dataDir)` / `Svc.WriteNeutralPlayerOverrides(dataDir)`.
+  `PlayerOverridesService` regenerates an `unlockEverything:true` default at any missing path, which
+  silently defeats `UnlockAllCharacters=false`. If `RouteManifest_MatchesCheckedInContract` fails
+  after an intentional route change, regenerate
+  `tests/BapCustomServer.Tests/Fixtures/routes.contract.json` from the `routes.actual.json` dump the
+  failure writes to the temp dir.
 - **GOTCHA — Git LFS pointers in committed `bin/`/`obj/`:** stale build outputs under `**/bin`/`**/obj`
   are git-TRACKED (committed before the `.gitignore` rule) and `.gitattributes` routes `*.dll` through
   Git LFS, so a fresh checkout leaves ~131-byte pointer files. Symptom: `dotnet test` reports
