@@ -21,6 +21,15 @@ mod runtime is not).
 
 ## Phase 0 — Contract lock (no production code changes) — Medium effort, zero risk
 
+> **STATUS (July 2026): partially DONE.** Landed: the 2-test isolation fix (defaults-override via
+> `PlayerOverrides:StateFile`/`Shop:StateFile` redirect + neutral `{ "defaults": {}, "players": {} }`
+> pre-seed, shared via the TestSupport helpers), plus green `RouteManifestContractTests` (route+method
+> manifest against `Fixtures/routes.contract.json` + uniqueness assertion),
+> `WsConnectGreetingContractTests`, `JoinLobbyContractTests` (incl. the 6s-delay lower-bound and the
+> post-join `GAME_MODES_UPDATED` re-send), and `CatalogSyncTests` (HC5 server↔mod↔AMP-JSON). Suite is
+> 390/390. Still open: DTO wire goldens, bootstrap fixtures, the remaining WS scenario/error-code
+> tests, the differential harness, the `git ls-files` audit script, the `.sln`, and CI.
+
 **Ships:** `Bap.Protocol.Tests` goldens, `Bap.Server.ContractTests` route manifest + shape
 snapshots, bootstrap fixtures, WS scenario tests, differential proxy harness
 (`03-protocol-compatibility.md` layers 1–4), CI pipeline running all of it plus the existing 375

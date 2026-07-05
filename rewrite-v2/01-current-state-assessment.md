@@ -52,7 +52,8 @@ but it maps where complexity concentrates and what a rewrite must untangle.
   CustomClientProxy, CustomMatchServer/BapCustomServer, and the test project): a small
   verification console for map-editor output.
 - `tests/BapCustomServer.Tests/` (5,371 lines, 42 `.cs` files): **375 xUnit tests**. Verified run
-  on this Linux workspace: `Failed: 2, Passed: 373`. The two `EndpointIntegrationTests` failures
+  on this Linux workspace: `Failed: 2, Passed: 373` (since fixed in Phase 0 — suite now green,
+  incl. the new contract tests). The two `EndpointIntegrationTests` failures
   (`CharacterPurchase_DebitsTokensAndLoadShowsUnlockAsset` — `Expected: 1, Actual: 3`;
   `CharacterListing_ShowsConfiguredPriceForLockedCharacter` — `Expected: 0, Actual: 1`) are NOT
   caused by the repo `data/` dir leaking: `EndpointIntegrationTests.AppFactory`
@@ -142,9 +143,9 @@ Seven services (`ServerAdminService`, `EconomyService`, `ShopService`, `FriendsS
 `RankedService`, `MatchHistoryService`, `PlayerStorageService`, plus `PlayerOverridesService`) each
 implement their own load/save/locking over files in `data/`. No shared store interface, no
 transactionality across services (e.g. a character purchase touches economy + unlock state), and —
-as the 2 failing tests show for `PlayerOverridesService` specifically — an incomplete test-time
-isolation seam. Note the persistence shapes are NOT uniform (this matters for the `IStateStore<T>`
-design in `02` A.5): most services are single-file snapshot stores (tmp-write + `File.Move`), but
+as the 2 failing tests showed (fixed in Phase 0) for `PlayerOverridesService` specifically — an
+incomplete test-time isolation seam. Note the persistence shapes are NOT uniform (this matters
+for the `IStateStore<T>` design in `02` A.5): most services are single-file snapshot stores (tmp-write + `File.Move`), but
 `PlayerStorageService` is a *directory* of per-player files plus an index
 (`players/{accountId}/player.json` + `index.json`, `PlayerStorageService.cs:713–730, 732+`), and
 `MatchHistoryService` is a JSONL append log.
@@ -181,7 +182,7 @@ machine, which makes the many timeout knobs in `CustomServerOptions` hard to rea
 | Thing | Linux (this VM / CI) | Windows + game build |
 | --- | --- | --- |
 | Server build + run (`dotnet run`, port 5055) | ✅ | ✅ |
-| xUnit suite (375 tests, incl. WS + proxy integration tests via TestServer/sockets) | ✅ (2 fail from the unredirected `PlayerOverrides` default — see §1) | ✅ |
+| xUnit suite (375 tests, incl. WS + proxy integration tests via TestServer/sockets) | ✅ (2 failed from the unredirected `PlayerOverrides` default — see §1; fixed in Phase 0) | ✅ |
 | Melon mod **build** | ⚠️ conditional: the 7 `UnityEngine*` reference DLLs under `AssetRip/AuxiliaryFiles/GameAssemblies/` are **Git-LFS pointers** on a plain checkout (build fails with CS0246); after `git lfs pull --include="AssetRip/AuxiliaryFiles/GameAssemblies/*"` (114 DLLs, ~17 MB) the build succeeds — verified both ways on this VM. NOTE: `AssetRip/` is gitignored (`.gitignore:8`) so these files are legacy-tracked; nothing new under `AssetRip/` can be committed, and `ARTIFACT_MANIFEST.md:11` describes the folder as a 2.27 GB local-only export — the 114 GameAssemblies DLLs are the only committed slice. See `05-testing-and-tooling.md` §3 for the CI consequence. | ✅ |
 | Melon mod **execution** (MelonLoader + IL2CPP game) | ❌ | ✅ |
 | `tools/Test-*Smoke.ps1` (need pwsh; `Test-MatchStart*` need `bapbap.exe`) | ❌ (no pwsh installed; no game build — `Spiel/` gitignored) | ✅ |

@@ -71,7 +71,9 @@ if work pauses, any completed phase is a stable stopping point (each phase ships
 e.g. Phase 2 alone makes `Program.cs` maintainable).
 
 ### R7. Test-isolation and environment drift — Severity: low/medium
-Already observed: 2/375 tests fail on a clean Linux checkout. Verified root cause (NOT general
+Already observed: 2/375 tests fail on a clean Linux checkout (fixed in Phase 0 — redirect +
+neutral pre-seed via the shared TestSupport helpers; the other drift risks below remain).
+Verified root cause (NOT general
 `data/` leakage — the integration factory already redirects six services to a temp dir):
 `PlayerOverridesService` auto-writes its `unlockEverything: true` default document to the
 unredirected `CustomServer:PlayerOverrides:StateFile` path under `AppContext.BaseDirectory`, which
@@ -128,7 +130,7 @@ with defaults; and treat "two people have run the full smoke set" as a Phase 4 e
 | Q5 | **Scope of `BapAdminMelon` and `CustomClientProxy`**: fold their duplicated DTOs onto `Bap.Protocol` (net6-compatible multi-target?) or leave them untouched? | Phase 2 | `Bap.Protocol` would need `net6.0;net10.0` multi-targeting for the mods to reference it. Cheap, but confirm MelonLoader tolerates the extra dependency DLL — otherwise link-compile the source files (as the tests do). |
 | Q6 | **Windows gate logistics**: who owns the game-build machine used for smoke gates, and is the AMP staging instance (`ark.atomi23.de` per `CONTEXT.md`) available for cold-start checks per phase? | before Phase 2 exit | The whole plan's High-risk gating assumes this machine exists and is usable per phase. |
 | Q7 | **Repo hygiene**: relocate the ~150 scratch artifacts at repo root (`tmp-*.png`, `amp-*.png`, `*_dump.cs`, handoff MDs) into `analysis/`+`artifacts/` (gitignored) as part of Phase 7? | Phase 7 | Not architectural, but the noise raises onboarding cost and hides the real docs (`CONTEXT.md`, `README.md`). Out of scope for this plan's file-creation step (no existing files touched). |
-| Q8 | **Two currently-failing tests**: RESOLVED diagnosis — not `data/` leakage and not an economy regression. `PlayerOverridesService` regenerates an `unlockEverything:true` default at the unredirected `PlayerOverrides:StateFile` path (`PlayerOverrides.cs:198–216, 253–274`), making the locked test character owned via `CharacterUnlockService.cs:84`; signatures `Expected: 1/Actual: 3` and `Expected: 0/Actual: 1` reproduced and explained (`05` §1.4). Remaining decision: fix via config-seeded locked-down defaults vs a test-only knob on the service. | Phase 0 | The fix must OVERRIDE the defaults; relocating the file alone regenerates the same unlock-everything document at the new path. |
+| Q8 | **Two currently-failing tests**: FIXED in Phase 0. Diagnosis (confirmed): `PlayerOverridesService` regenerates an `unlockEverything:true` default at the unredirected `PlayerOverrides:StateFile` path (`PlayerOverrides.cs:198–216, 253–274`), making the locked test character owned via `CharacterUnlockService.cs:84` (`05` §1.4). Fix chosen: config-seeded redirect (`Svc.StateFileRedirects`) + neutral `{ "defaults": {}, "players": {} }` pre-seed (`Svc.WriteNeutralPlayerOverrides`) — no service knob added. Suite is 390/390. | Phase 0 (done) | Keep the pre-seed pattern for any new `WebApplicationFactory` fixture; relocating the file alone regenerates the same unlock-everything document at the new path. |
 
 ## Decision log seeds (recommendations already embedded in this plan)
 
