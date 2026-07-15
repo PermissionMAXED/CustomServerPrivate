@@ -1,3 +1,4 @@
+import Foundation
 import GoobyCore
 import RealityKit
 import SwiftUI
@@ -316,7 +317,7 @@ struct GoobyRealityView: View {
                     state: state,
                     events: events,
                     eventRevision: eventRevision,
-                    reduceMotion: reduceMotion,
+                    reduceMotion: shouldReduceMotion,
                     coordinator: coordinator,
                     onPet: onPet
                 )
@@ -331,14 +332,14 @@ struct GoobyRealityView: View {
     @available(iOS 18.0, *)
     private var modernRealityView: some View {
         RealityView { content in
-            coordinator.prepare(room: state.currentRoom, reduceMotion: reduceMotion)
+            coordinator.prepare(room: state.currentRoom, reduceMotion: shouldReduceMotion)
             content.add(coordinator.stage)
         } update: { _ in
             coordinator.apply(
                 state: state,
                 events: events,
                 eventRevision: eventRevision,
-                reduceMotion: reduceMotion
+                reduceMotion: shouldReduceMotion
             )
         }
         .gesture(
@@ -346,6 +347,10 @@ struct GoobyRealityView: View {
                 .targetedToAnyEntity()
                 .onEnded { _ in onPet() }
         )
+    }
+
+    private var shouldReduceMotion: Bool {
+        reduceMotion || ProcessInfo.processInfo.arguments.contains("--reduce-motion")
     }
 }
 

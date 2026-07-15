@@ -521,10 +521,6 @@ private struct NeedMeter: View {
         }
         .padding(12)
         .background(Color.white.opacity(0.52), in: RoundedRectangle(cornerRadius: 16))
-        .accessibilityElement(children: .contain)
-        .accessibilityLabel(name)
-        .accessibilityValue("\(percent) percent, \(levelCue)")
-        .accessibilityIdentifier(identifier)
     }
 
     private var levelCue: String {

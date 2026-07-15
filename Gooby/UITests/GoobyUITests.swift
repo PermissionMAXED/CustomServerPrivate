@@ -12,6 +12,7 @@ final class GoobyUITests: XCTestCase {
             "--ui-testing",
             "--reset-save",
             "--skip-welcome",
+            "--reduce-motion",
             "--fixed-time",
             "1728000000",
         ]
@@ -23,22 +24,22 @@ final class GoobyUITests: XCTestCase {
         attachHomeScreenshot(named: "Gooby Home — Playroom")
 
         tap(app.buttons["room.kitchen"], in: app)
-        waitForLabel("Kitchen", on: app.staticTexts["room.current"])
+        waitForLabel("Kitchen", identifier: "room.current", in: app)
         tap(app.buttons["care.primary"], in: app)
-        waitForLabel("100%", on: app.staticTexts["need.fullness.value"])
+        waitForLabel("100%", identifier: "need.fullness.value", in: app)
 
         tap(app.buttons["room.washroom"], in: app)
-        waitForLabel("Washroom", on: app.staticTexts["room.current"])
+        waitForLabel("Washroom", identifier: "room.current", in: app)
         tap(app.buttons["care.primary"], in: app)
-        waitForLabel("100%", on: app.staticTexts["need.cleanliness.value"])
+        waitForLabel("100%", identifier: "need.cleanliness.value", in: app)
 
         tap(app.buttons["care.pet"], in: app)
-        waitForLabel("95%", on: app.staticTexts["need.fun.value"])
+        waitForLabel("95%", identifier: "need.fun.value", in: app)
 
         tap(app.buttons["room.bedroom"], in: app)
-        waitForLabel("Bedroom", on: app.staticTexts["room.current"])
+        waitForLabel("Bedroom", identifier: "room.current", in: app)
         tap(app.buttons["care.primary"], in: app)
-        waitForLabel("Sleeping softly", on: app.staticTexts["gooby.activity"])
+        waitForLabel("Sleeping softly", identifier: "gooby.activity", in: app)
         XCTAssertTrue(app.buttons["care.pet"].isEnabled == false)
     }
 
@@ -57,12 +58,19 @@ final class GoobyUITests: XCTestCase {
     @MainActor
     private func waitForLabel(
         _ label: String,
-        on element: XCUIElement,
+        identifier: String,
+        in app: XCUIApplication,
         timeout: TimeInterval = 8
     ) {
         let predicate = NSPredicate(format: "label == %@", label)
-        expectation(for: predicate, evaluatedWith: element)
-        waitForExpectations(timeout: timeout)
+        let element = app.staticTexts
+            .matching(identifier: identifier)
+            .matching(predicate)
+            .firstMatch
+        XCTAssertTrue(
+            element.waitForExistence(timeout: timeout),
+            "Expected \(identifier) to show \(label)"
+        )
     }
 
     @MainActor
