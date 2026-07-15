@@ -118,10 +118,12 @@ final class GoobyAppTests: XCTestCase {
 
         let torso = try XCTUnwrap(gooby.findEntity(named: GoobyRealityNames.torso))
         let head = try XCTUnwrap(gooby.findEntity(named: GoobyRealityNames.head))
-        XCTAssertNotNil(torso.components[InputTargetComponent.self])
         XCTAssertNotNil(torso.components[CollisionComponent.self])
-        XCTAssertNotNil(head.components[InputTargetComponent.self])
         XCTAssertNotNil(head.components[CollisionComponent.self])
+        if #available(iOS 18.0, *) {
+            XCTAssertNotNil(torso.components[InputTargetComponent.self])
+            XCTAssertNotNil(head.components[InputTargetComponent.self])
+        }
     }
 
     @MainActor

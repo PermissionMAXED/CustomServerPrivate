@@ -65,7 +65,9 @@ enum GoobyFactory {
             position: [0, 0.83, 0],
             material: cream
         )
-        torso.components.set(InputTargetComponent())
+        if #available(iOS 18.0, *) {
+            torso.components.set(InputTargetComponent())
+        }
         torso.components.set(
             CollisionComponent(shapes: [.generateSphere(radius: 0.54)])
         )
@@ -86,7 +88,9 @@ enum GoobyFactory {
             position: [0, 1.72, 0.04],
             material: apricot
         )
-        head.components.set(InputTargetComponent())
+        if #available(iOS 18.0, *) {
+            head.components.set(InputTargetComponent())
+        }
         head.components.set(
             CollisionComponent(shapes: [.generateSphere(radius: 0.52)])
         )
@@ -328,8 +332,17 @@ enum GoobyFactory {
         position: SIMD3<Float>,
         material: SimpleMaterial
     ) -> ModelEntity {
+        let mesh: MeshResource
+        if #available(iOS 18.0, *) {
+            mesh = .generateCylinder(height: height, radius: radius)
+        } else {
+            mesh = .generateBox(
+                size: [radius * 2, height, radius * 2],
+                cornerRadius: min(radius * 0.45, height * 0.45)
+            )
+        }
         let entity = ModelEntity(
-            mesh: .generateCylinder(height: height, radius: radius),
+            mesh: mesh,
             materials: [material]
         )
         entity.name = name
