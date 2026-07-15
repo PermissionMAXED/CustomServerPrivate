@@ -368,7 +368,6 @@ private struct GoobyLegacyRealityView: UIViewRepresentable {
             automaticallyConfigureSession: false
         )
         view.environment.background = .color(.clear)
-        view.cameraTransform = Transform(translation: [0, 1.65, 4.35])
         coordinator.prepare(room: state.currentRoom, reduceMotion: reduceMotion)
 
         let anchor = AnchorEntity(world: .zero)
