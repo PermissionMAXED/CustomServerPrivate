@@ -1,0 +1,44 @@
+{
+  "savedAt": {
+    "secondsSinceEpoch": 1000
+  },
+  "schemaVersion": 1,
+  "state": {
+    "activeMinigame": null,
+    "bondPoints": 0,
+    "careStatistics": {
+      "baths": 0,
+      "meals": 0,
+      "playSessions": 0
+    },
+    "carrots": 30,
+    "createdAt": {
+      "secondsSinceEpoch": 1000
+    },
+    "currentRoom": "playroom",
+    "dailyReward": {
+      "lastClaimedDay": null,
+      "streakStep": 0
+    },
+    "equippedCosmetics": {
+      "head": null,
+      "neck": null,
+      "paws": null
+    },
+    "isSleeping": false,
+    "lastSimulatedAt": {
+      "secondsSinceEpoch": 1000
+    },
+    "needs": {
+      "cleanliness": 800,
+      "energy": 800,
+      "fullness": 800,
+      "fun": 800
+    },
+    "ownedItems": [],
+    "petID": "gooby",
+    "randomState": 5138412846238880581,
+    "rewardedMinigameRuns": [],
+    "unlockedAchievements": []
+  }
+}

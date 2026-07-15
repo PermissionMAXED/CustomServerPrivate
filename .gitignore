@@ -127,3 +127,11 @@ MapEditorVerify/out/
 
 # Kiro IDE settings
 .kiro/
+
+# Gooby generated outputs (project.yml is the Xcode source of truth)
+Gooby/.build/
+Gooby/.swiftpm/
+Gooby/Gooby.xcodeproj/
+Gooby/DerivedData/
+Gooby/TestResults/
+Gooby/App/Generated/

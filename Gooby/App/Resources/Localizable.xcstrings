@@ -1,0 +1,36 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "A little world for a big-hearted bunny." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A little world for a big-hearted bunny."
+          }
+        }
+      }
+    },
+    "Gooby" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gooby"
+          }
+        }
+      }
+    },
+    "Made for quiet, offline moments" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Made for quiet, offline moments"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
