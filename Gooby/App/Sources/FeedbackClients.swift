@@ -89,8 +89,14 @@ final class ProceduralAudioClient: AudioFeedbackClient {
 
 @MainActor
 final class SystemHapticClient: HapticFeedbackClient {
+    private var isEnabled = true
+
+    func setEnabled(_ enabled: Bool) {
+        isEnabled = enabled
+    }
+
     func impact(_ cue: FeedbackCue) {
-        guard UIDevice.current.userInterfaceIdiom == .phone else { return }
+        guard isEnabled, UIDevice.current.userInterfaceIdiom == .phone else { return }
         switch cue {
         case .reward:
             UINotificationFeedbackGenerator().notificationOccurred(.success)

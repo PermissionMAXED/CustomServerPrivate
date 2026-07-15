@@ -142,6 +142,95 @@ final class GoobyAppTests: XCTestCase {
     }
 
     @MainActor
+    func testStorePurchasesClaimsEquipsAndRestoresOnRelaunch() async {
+        let repository = InMemoryGameRepository()
+        let clock = TestClock()
+        let feedback = FeedbackSpy()
+        let first = GameStore(
+            repository: repository,
+            clock: clock,
+            audio: feedback,
+            haptics: feedback,
+            skipsWelcome: true
+        )
+        await first.start()
+
+        let claimed = await first.dispatch(.claimDailyReward)
+        let purchased = await first.dispatch(.purchase(itemID: GoobyCatalog.sunshineBow))
+        let equipped = await first.dispatch(.equip(itemID: GoobyCatalog.sunshineBow))
+        XCTAssertTrue(claimed)
+        XCTAssertTrue(purchased)
+        XCTAssertTrue(equipped)
+        XCTAssertEqual(first.state?.equippedCosmetics.neck, GoobyCatalog.sunshineBow)
+        XCTAssertEqual(first.state?.carrots, 15)
+
+        let second = GameStore(
+            repository: repository,
+            clock: clock,
+            audio: feedback,
+            haptics: feedback,
+            skipsWelcome: true
+        )
+        await second.start()
+
+        XCTAssertTrue(second.state?.ownedItems.contains(GoobyCatalog.sunshineBow) == true)
+        XCTAssertEqual(second.state?.equippedCosmetics.neck, GoobyCatalog.sunshineBow)
+        XCTAssertEqual(second.state?.dailyReward.lastClaimedDay, 20_000)
+    }
+
+    @MainActor
+    func testSettingsPersistAndFeedbackClientsFollowToggles() async {
+        let repository = InMemoryGameRepository()
+        let feedback = FeedbackSpy()
+        let first = makeStore(repository: repository, feedback: feedback)
+        await first.start()
+
+        let renamed = await first.dispatch(.renamePet("  Clover  "))
+        let soundDisabled = await first.dispatch(.setSoundEnabled(false))
+        let hapticsDisabled = await first.dispatch(.setHapticsEnabled(false))
+        let reducedMotion = await first.dispatch(.setReduceMotionEnabled(true))
+        XCTAssertTrue(renamed)
+        XCTAssertTrue(soundDisabled)
+        XCTAssertTrue(hapticsDisabled)
+        XCTAssertTrue(reducedMotion)
+        _ = await first.dispatch(.pet)
+
+        XCTAssertEqual(first.state?.preferences.petName, "Clover")
+        XCTAssertEqual(feedback.audioEnabled.last, false)
+        XCTAssertEqual(feedback.hapticsEnabled.last, false)
+
+        let second = makeStore(repository: repository, feedback: feedback)
+        await second.start()
+        XCTAssertEqual(second.state?.preferences.petName, "Clover")
+        XCTAssertTrue(second.state?.preferences.reduceMotionEnabled == true)
+    }
+
+    @MainActor
+    func testAllPlannedCosmeticsBuildNamedPrimitiveEntities() throws {
+        let coordinator = GoobySceneCoordinator()
+        coordinator.prepare(room: .playroom, reduceMotion: true)
+        var state = GameState.new(now: GameInstant(secondsSinceEpoch: 1_728_000_000))
+
+        for item in GoobyCatalog.cosmetics {
+            guard case let .cosmetic(slot) = item.kind else {
+                return XCTFail("\(item.name) must be a cosmetic")
+            }
+            state.equippedCosmetics = EquippedCosmetics()
+            state.equippedCosmetics[slot] = item.id
+            coordinator.apply(
+                state: state,
+                events: [],
+                eventRevision: 0,
+                reduceMotion: true
+            )
+            XCTAssertNotNil(
+                coordinator.gooby.findEntity(named: "cosmetic.\(item.id.rawValue)"),
+                "Missing procedural entity for \(item.name)"
+            )
+        }
+    }
+
+    @MainActor
     private func makeStore(
         repository: InMemoryGameRepository,
         feedback: FeedbackSpy
@@ -181,6 +270,14 @@ private actor InMemoryGameRepository: GameStateRepository {
         snapshot = state
         saveCount += 1
     }
+
+    func reset(now: GameInstant) async throws -> GameState {
+        if failure == .save { throw RepositoryFailure.save }
+        let state = GameState.new(now: now)
+        snapshot = state
+        saveCount += 1
+        return state
+    }
 }
 
 @MainActor
@@ -196,12 +293,20 @@ private final class TestClock: GameClock {
 private final class FeedbackSpy: AudioFeedbackClient, HapticFeedbackClient {
     private(set) var audioCues: [FeedbackCue] = []
     private(set) var hapticCues: [FeedbackCue] = []
+    private(set) var audioEnabled: [Bool] = []
+    private(set) var hapticsEnabled: [Bool] = []
 
     func play(_ cue: FeedbackCue) {
         audioCues.append(cue)
     }
 
-    func setAmbientEnabled(_: Bool) {}
+    func setAmbientEnabled(_ enabled: Bool) {
+        audioEnabled.append(enabled)
+    }
+
+    func setEnabled(_ enabled: Bool) {
+        hapticsEnabled.append(enabled)
+    }
 
     func impact(_ cue: FeedbackCue) {
         hapticCues.append(cue)

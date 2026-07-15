@@ -35,6 +35,21 @@ protocol AudioFeedbackClient: AnyObject {
 @MainActor
 protocol HapticFeedbackClient: AnyObject {
     func impact(_ cue: FeedbackCue)
+    func setEnabled(_ enabled: Bool)
+}
+
+struct RewardNotice: Identifiable, Equatable {
+    enum Kind: Equatable {
+        case reward
+        case achievement
+        case level
+        case unlock
+    }
+
+    let id = UUID()
+    let kind: Kind
+    let title: String
+    let detail: String
 }
 
 enum GameStorePhase: Equatable {
@@ -52,6 +67,7 @@ final class GameStore {
     private(set) var latestEvents: [GameEvent] = []
     private(set) var eventRevision = 0
     private(set) var errorMessage: String?
+    private(set) var rewardNotices: [RewardNotice] = []
     var showsWelcome = false
 
     @ObservationIgnored private let repository: any GameStateRepository
@@ -85,13 +101,16 @@ final class GameStore {
         do {
             let instant = clock.now()
             var loaded = try await repository.load(now: instant)
-            let events = GameSimulation.advance(&loaded, to: instant)
+            var events = GameSimulation.advance(&loaded, to: instant)
+            events.append(
+                contentsOf: GameEngine.reconcileProgression(&loaded, at: instant)
+            )
             try await repository.save(loaded, at: instant)
             state = loaded
             publish(events)
             showsWelcome = freshSaveHint && !skipsWelcome
             phase = .ready
-            audio.setAmbientEnabled(true)
+            applyFeedbackPreferences(loaded.preferences)
         } catch {
             phase = .failed
             errorMessage = Self.message(for: error)
@@ -123,6 +142,7 @@ final class GameStore {
             try await repository.save(candidate, at: instant)
             state = candidate
             publish(events)
+            applyFeedbackPreferences(candidate.preferences)
             playFeedback(for: events)
             errorMessage = nil
             return true
@@ -149,6 +169,37 @@ final class GameStore {
         errorMessage = nil
     }
 
+    func dismissFirstRewardNotice() {
+        guard !rewardNotices.isEmpty else { return }
+        rewardNotices.removeFirst()
+    }
+
+    func resetProgress() async -> Bool {
+        guard phase == .ready else { return false }
+        do {
+            let reset = try await repository.reset(now: clock.now())
+            state = reset
+            latestEvents = []
+            rewardNotices = []
+            eventRevision += 1
+            applyFeedbackPreferences(reset.preferences)
+            errorMessage = nil
+            return true
+        } catch {
+            errorMessage = Self.message(for: error)
+            return false
+        }
+    }
+
+    var dailyEligibility: DailyRewardEligibility? {
+        guard let state else { return nil }
+        return DailyRewardSchedule.eligibility(
+            for: state.dailyReward,
+            at: clock.now(),
+            cycleCount: GameEngine.dailyCarrotRewards.count
+        )
+    }
+
     var mood: String {
         guard let state else { return "Settling in" }
         if state.isSleeping { return "Dreamy" }
@@ -171,6 +222,7 @@ final class GameStore {
         if !events.isEmpty {
             eventRevision += 1
         }
+        rewardNotices.append(contentsOf: events.compactMap(Self.notice(for:)))
     }
 
     private func playFeedback(for events: [GameEvent]) {
@@ -178,6 +230,11 @@ final class GameStore {
         guard let cue else { return }
         audio.play(cue)
         haptics.impact(cue)
+    }
+
+    private func applyFeedbackPreferences(_ preferences: GamePreferences) {
+        audio.setAmbientEnabled(preferences.soundEnabled)
+        haptics.setEnabled(preferences.hapticsEnabled)
     }
 
     private static func cue(for event: GameEvent) -> FeedbackCue? {
@@ -188,8 +245,52 @@ final class GameStore {
         case .played: .play
         case let .sleepChanged(sleeping): sleeping ? .sleep : .wake
         case .moved: .room
-        case .achievementUnlocked, .dailyRewardClaimed, .purchased: .reward
+        case .achievementUnlocked, .dailyRewardClaimed, .itemUnlocked,
+             .duplicateItemConverted, .purchased, .bondLevelChanged: .reward
         default: nil
+        }
+    }
+
+    private static func notice(for event: GameEvent) -> RewardNotice? {
+        switch event {
+        case let .dailyRewardClaimed(step, carrots):
+            return RewardNotice(
+                kind: .reward,
+                title: "Day \(step) gift claimed",
+                detail: "+\(carrots) carrots"
+            )
+        case let .achievementUnlocked(id, carrots):
+            return RewardNotice(
+                kind: .achievement,
+                title: GoobyAchievements.definition(id: id)?.title ?? "Achievement unlocked",
+                detail: "+\(carrots) carrots"
+            )
+        case let .bondLevelChanged(level):
+            return RewardNotice(
+                kind: .level,
+                title: "Bond level \(level)",
+                detail: "Your friendship grew."
+            )
+        case let .itemUnlocked(id):
+            return RewardNotice(
+                kind: .unlock,
+                title: GoobyCatalog.item(id: id)?.name ?? "Keepsake unlocked",
+                detail: "Added to the wardrobe."
+            )
+        case let .duplicateItemConverted(id, carrots):
+            return RewardNotice(
+                kind: .reward,
+                title: "\(GoobyCatalog.item(id: id)?.name ?? "Keepsake") already owned",
+                detail: "Converted to +\(carrots) carrots"
+            )
+        case let .purchased(id):
+            return RewardNotice(
+                kind: .reward,
+                title: "\(GoobyCatalog.item(id: id)?.name ?? "Item") is yours",
+                detail: "Saved offline."
+            )
+        default:
+            return nil
         }
     }
 
@@ -215,8 +316,14 @@ final class GameStore {
             return "Finish the current arcade game first."
         case .noActiveMinigame, .invalidMinigameRun, .invalidMinigameSubmission, .minigameExpired:
             return "That arcade run is no longer available."
-        case .unknownItem, .itemNotOwned, .itemNotEquippable:
+        case .unknownItem, .itemNotOwned, .itemNotEquippable, .itemNotPurchasable:
             return "That item is not available."
+        case .foodNotOwned:
+            return "That snack is out of stock. Visit the shop for more."
+        case .invalidPetName:
+            return "Enter a name that is not blank."
+        case let .petNameTooLong(maximum):
+            return "Keep Gooby’s name to \(maximum) characters or fewer."
         case .itemLocked, .featureLocked:
             return "Grow your bond with Gooby to unlock that."
         }

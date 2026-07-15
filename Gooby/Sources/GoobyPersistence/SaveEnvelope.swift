@@ -2,7 +2,7 @@ import Foundation
 import GoobyCore
 
 public struct SaveEnvelope: Codable, Equatable, Sendable {
-    public static let currentSchemaVersion = 1
+    public static let currentSchemaVersion = 2
 
     public let schemaVersion: Int
     public let savedAt: GameInstant
@@ -50,12 +50,16 @@ public struct SaveMigrator: SaveMigrating {
         guard version <= SaveEnvelope.currentSchemaVersion else {
             throw SaveMigrationError.unsupportedFutureSchema(version)
         }
-        guard version == SaveEnvelope.currentSchemaVersion else {
+        guard version >= 1 else {
             throw SaveMigrationError.unsupportedPastSchema(version)
         }
 
         do {
-            return try JSONDecoder().decode(SaveEnvelope.self, from: data)
+            let decoded = try JSONDecoder().decode(SaveEnvelope.self, from: data)
+            if decoded.schemaVersion == SaveEnvelope.currentSchemaVersion {
+                return decoded
+            }
+            return SaveEnvelope(savedAt: decoded.savedAt, state: decoded.state)
         } catch {
             throw SaveMigrationError.malformedEnvelope
         }

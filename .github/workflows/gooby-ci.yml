@@ -124,3 +124,20 @@ jobs:
           path: Gooby/TestResults/Gooby.xcresult
           if-no-files-found: warn
           retention-days: 7
+
+      - name: Export UI test attachments
+        if: always()
+        continue-on-error: true
+        run: >-
+          xcrun xcresulttool export attachments
+          --path Gooby/TestResults/Gooby.xcresult
+          --output-path Gooby/TestResults/Attachments
+
+      - name: Upload UI test screenshots
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: gooby-ui-screenshots
+          path: Gooby/TestResults/Attachments
+          if-no-files-found: warn
+          retention-days: 7

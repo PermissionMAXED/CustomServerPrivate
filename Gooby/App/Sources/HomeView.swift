@@ -44,6 +44,9 @@ struct AppRootView: View {
         .fullScreenCover(isPresented: $store.showsWelcome) {
             WelcomeView(onContinue: store.dismissWelcome)
         }
+        .overlay(alignment: .top) {
+            RewardToastHost(store: store)
+        }
         .alert(
             "A little snag",
             isPresented: Binding(
@@ -164,12 +167,13 @@ private struct HomeView: View {
 
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     @State private var presentedDestination: HomeDestination?
-    @State private var selectedFood = "Garden Carrot"
+    @State private var selectedFood = GoobyCatalog.gardenCarrot
 
-    private let columns = [
-        GridItem(.flexible(), spacing: 10),
-        GridItem(.flexible(), spacing: 10),
-    ]
+    private var columns: [GridItem] {
+        dynamicTypeSize.isAccessibilitySize
+            ? [GridItem(.flexible(), spacing: 10)]
+            : [GridItem(.flexible(), spacing: 10), GridItem(.flexible(), spacing: 10)]
+    }
 
     var body: some View {
         ZStack {
@@ -194,17 +198,42 @@ private struct HomeView: View {
         .sheet(item: $presentedDestination) { destination in
             destinationView(destination)
         }
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
+                    presentedDestination = .settings
+                } label: {
+                    Label("Settings", systemImage: "gearshape.fill")
+                }
+                .accessibilityIdentifier("home.settings")
+            }
+        }
     }
 
     private var header: some View {
         HStack(alignment: .center, spacing: 12) {
             VStack(alignment: .leading, spacing: 3) {
-                Text(store.mood)
+                Text("\(state.preferences.petName) is \(store.mood.lowercased())")
                     .font(.system(.title2, design: .rounded, weight: .black))
                     .foregroundStyle(GoobyPalette.ink)
-                Text("Bond level \(state.bondLevel) • \(state.bondPoints) points")
+                Text("Bond level \(state.bondLevel) of \(BondProgress.maximumLevel)")
                     .font(.system(.subheadline, design: .rounded, weight: .semibold))
                     .foregroundStyle(.secondary)
+                if let required = BondProgress.progress(for: state.bondPoints).required {
+                    ProgressView(
+                        value: Double(BondProgress.progress(for: state.bondPoints).current),
+                        total: Double(required)
+                    )
+                    .tint(GoobyPalette.coral)
+                    .accessibilityLabel("Bond progress")
+                    .accessibilityValue(
+                        "\(BondProgress.progress(for: state.bondPoints).current) of \(required) points"
+                    )
+                } else {
+                    Text("Best-bunny bond reached")
+                        .font(.caption.weight(.bold))
+                        .foregroundStyle(GoobyPalette.mint)
+                }
                 Text(statusSummary)
                     .font(.caption)
                     .foregroundStyle(.secondary)
@@ -346,8 +375,10 @@ private struct HomeView: View {
 
             if state.currentRoom == .kitchen {
                 Picker("Owned food", selection: $selectedFood) {
-                    Label("Garden Carrot • 2", systemImage: "carrot.fill")
-                        .tag("Garden Carrot")
+                    ForEach(GoobyCatalog.foods.filter { state.foodQuantity($0.id) > 0 }) { food in
+                        Text("\(food.name) • \(state.foodQuantity(food.id))")
+                            .tag(food.id)
+                    }
                 }
                 .pickerStyle(.menu)
                 .frame(minHeight: 44)
@@ -392,17 +423,20 @@ private struct HomeView: View {
 
     private var destinations: some View {
         LazyVGrid(columns: columns, spacing: 10) {
-            DestinationButton(title: "Daily", symbol: "gift.fill", tint: GoobyPalette.gold) {
-                Task { await store.dispatch(.claimDailyReward) }
-            }
-            DestinationButton(title: "Arcade", symbol: "gamecontroller.fill", tint: GoobyPalette.sky) {
-                presentedDestination = .arcade
+            DestinationButton(title: "Daily Gift", symbol: "gift.fill", tint: GoobyPalette.gold) {
+                presentedDestination = .daily
             }
             DestinationButton(title: "Shop", symbol: "bag.fill", tint: GoobyPalette.coral) {
                 presentedDestination = .shop
             }
+            DestinationButton(title: "Wardrobe", symbol: "tshirt.fill", tint: GoobyPalette.sky) {
+                presentedDestination = .wardrobe
+            }
             DestinationButton(title: "Journal", symbol: "book.closed.fill", tint: GoobyPalette.mint) {
                 onOpenJournal()
+            }
+            DestinationButton(title: "Arcade", symbol: "gamecontroller.fill", tint: GoobyPalette.sky) {
+                presentedDestination = .arcade
             }
         }
     }
@@ -410,10 +444,16 @@ private struct HomeView: View {
     @ViewBuilder
     private func destinationView(_ destination: HomeDestination) -> some View {
         switch destination {
+        case .daily:
+            NavigationStack { DailyGiftView(store: store) }
         case .arcade:
             NavigationStack { ArcadeView(state: state) }
         case .shop:
             NavigationStack { ShopView(store: store, state: state) }
+        case .wardrobe:
+            NavigationStack { WardrobeView(store: store, state: state) }
+        case .settings:
+            NavigationStack { SettingsView(store: store, state: state) }
         }
     }
 
@@ -437,7 +477,7 @@ private struct HomeView: View {
 
     private var primaryCommand: GameCommand {
         switch state.currentRoom {
-        case .kitchen: .feed
+        case .kitchen: .feedFood(itemID: selectedFood)
         case .washroom: .wash
         case .bedroom: state.isSleeping ? .endSleep : .beginSleep
         case .playroom: .play
@@ -446,7 +486,7 @@ private struct HomeView: View {
 
     private var primaryDisabled: Bool {
         switch state.currentRoom {
-        case .kitchen: state.carrots < 2 || state.isSleeping
+        case .kitchen: state.foodQuantity(selectedFood) < 1 || state.isSleeping
         case .washroom: state.isSleeping
         case .bedroom: false
         case .playroom: state.needs.energy.value < 100 || state.isSleeping
@@ -457,8 +497,8 @@ private struct HomeView: View {
         if state.isSleeping, state.currentRoom != .bedroom {
             return "Gooby is sleeping. Move rooms to wake up."
         }
-        if state.currentRoom == .kitchen, state.carrots < 2 {
-            return "Gooby needs 2 carrots for a snack."
+        if state.currentRoom == .kitchen, state.foodQuantity(selectedFood) < 1 {
+            return "This snack is out of stock. The shop has more."
         }
         if state.currentRoom == .playroom, state.needs.energy.value < 100 {
             return "Gooby needs at least 10% energy to play."
@@ -556,6 +596,9 @@ private struct DestinationButton: View {
             .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 17))
         }
         .buttonStyle(.plain)
+        .accessibilityIdentifier(
+            "home.destination.\(title.lowercased().replacingOccurrences(of: " ", with: "-"))"
+        )
         .accessibilityHint("Opens \(title.lowercased())")
     }
 }
@@ -567,7 +610,7 @@ private struct JournalView: View {
         ZStack {
             GoobyBackground()
             List {
-                Section("Today with Gooby") {
+                Section("Care journal") {
                     JournalRow(
                         symbol: "fork.knife",
                         title: "Meals shared",
@@ -584,17 +627,47 @@ private struct JournalView: View {
                         value: "\(state.careStatistics.playSessions)"
                     )
                 }
-                Section("Treasures") {
-                    JournalRow(
-                        symbol: "medal.fill",
-                        title: "Achievements",
-                        value: "\(state.unlockedAchievements.count)"
-                    )
-                    JournalRow(
-                        symbol: "bag.fill",
-                        title: "Owned keepsakes",
-                        value: "\(state.ownedItems.count)"
-                    )
+                Section("Achievements") {
+                    ForEach(GoobyAchievements.definitions) { achievement in
+                        let progress = min(achievement.progress(in: state), achievement.target)
+                        let isUnlocked = state.unlockedAchievements.contains(achievement.id)
+                        VStack(alignment: .leading, spacing: 7) {
+                            HStack {
+                                Label(
+                                    achievement.title,
+                                    systemImage: isUnlocked ? "medal.fill" : "medal"
+                                )
+                                .font(.headline)
+                                Spacer()
+                                Text(isUnlocked ? "Unlocked" : "\(progress)/\(achievement.target)")
+                                    .font(.subheadline.weight(.bold))
+                                    .foregroundStyle(isUnlocked ? GoobyPalette.mint : .secondary)
+                            }
+                            Text(achievement.detail)
+                                .font(.subheadline)
+                                .foregroundStyle(.secondary)
+                            if let unlockedAt = state.achievementDate(achievement.id) {
+                                Text(
+                                    "Earned \(Date(timeIntervalSince1970: Double(unlockedAt.secondsSinceEpoch)), style: .date) • +\(achievement.carrotReward) carrots"
+                                )
+                                .font(.caption.weight(.semibold))
+                            } else {
+                                ProgressView(value: Double(progress), total: Double(achievement.target))
+                                    .tint(GoobyPalette.coral)
+                                Text("Reward: \(achievement.carrotReward) carrots")
+                                    .font(.caption)
+                                    .foregroundStyle(.secondary)
+                            }
+                        }
+                        .padding(.vertical, 5)
+                        .accessibilityElement(children: .combine)
+                        .accessibilityLabel(achievement.title)
+                        .accessibilityValue(
+                            isUnlocked
+                                ? "Unlocked, reward \(achievement.carrotReward) carrots"
+                                : "\(progress) of \(achievement.target), reward \(achievement.carrotReward) carrots"
+                        )
+                    }
                 }
             }
             .scrollContentBackground(.hidden)
@@ -629,10 +702,10 @@ private struct ArcadeView: View {
         List {
             Label("Carrot Catch", systemImage: "carrot.fill")
             Label(
-                state.bondLevel >= 1 ? "Garden Echo" : "Garden Echo • Bond level 1",
+                state.bondLevel >= 2 ? "Garden Echo" : "Garden Echo • Bond level 2",
                 systemImage: "music.note.list"
             )
-            .foregroundStyle(state.bondLevel >= 1 ? .primary : .secondary)
+            .foregroundStyle(state.bondLevel >= 2 ? .primary : .secondary)
         }
         .navigationTitle("Pocket Arcade")
         .toolbar {
@@ -646,30 +719,46 @@ private struct ArcadeView: View {
 private struct ShopView: View {
     @Bindable var store: GameStore
     let state: GameState
+    @State private var selectedItem: CatalogItem?
 
     var body: some View {
-        List(GoobyCatalog.items) { item in
-            HStack {
-                VStack(alignment: .leading) {
-                    Text(item.name).fontWeight(.bold)
-                    Text("Bond level \(item.requiredBondLevel)")
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
-                }
-                Spacer()
-                if state.ownedItems.contains(item.id) {
-                    Text("Owned")
-                        .foregroundStyle(GoobyPalette.mint)
-                        .fontWeight(.bold)
-                } else {
-                    Button("\(item.price) 🥕") {
-                        Task { await store.dispatch(.purchase(itemID: item.id)) }
+        List {
+            Section("Foods") {
+                ForEach(GoobyCatalog.foods) { item in
+                    Button {
+                        selectedItem = item
+                    } label: {
+                        ShopItemRow(item: item, state: state)
                     }
-                    .frame(minHeight: 44)
+                    .accessibilityIdentifier("shop.item.\(item.id.rawValue)")
+                }
+            }
+            Section("Permanent cosmetics") {
+                ForEach(GoobyCatalog.cosmetics) { item in
+                    Button {
+                        selectedItem = item
+                    } label: {
+                        ShopItemRow(item: item, state: state)
+                    }
+                    .accessibilityIdentifier("shop.item.\(item.id.rawValue)")
                 }
             }
         }
         .navigationTitle("Cozy Shop")
+        .safeAreaInset(edge: .bottom) {
+            Label("\(state.carrots) carrots", systemImage: "carrot.fill")
+                .font(.headline)
+                .padding(.horizontal, 18)
+                .frame(minHeight: 46)
+                .background(.regularMaterial, in: Capsule())
+                .padding(.bottom, 6)
+                .accessibilityIdentifier("shop.balance")
+        }
+        .sheet(item: $selectedItem) { item in
+            NavigationStack {
+                ShopItemDetailView(store: store, state: state, item: item)
+            }
+        }
         .toolbar {
             ToolbarItem(placement: .confirmationAction) {
                 DismissButton()
@@ -687,8 +776,11 @@ private struct DismissButton: View {
 }
 
 private enum HomeDestination: String, Identifiable {
+    case daily
     case arcade
     case shop
+    case wardrobe
+    case settings
 
     var id: String { rawValue }
 }

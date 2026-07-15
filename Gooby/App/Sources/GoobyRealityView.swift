@@ -89,14 +89,69 @@ final class GoobySceneCoordinator {
     private func applyCosmetics(_ cosmetics: EquippedCosmetics) {
         let head = gooby.findEntity(named: GoobyRealityNames.headAnchor)
         let neck = gooby.findEntity(named: GoobyRealityNames.neckAnchor)
+        let face = gooby.findEntity(named: GoobyRealityNames.faceAnchor)
+        let body = gooby.findEntity(named: GoobyRealityNames.bodyAnchor)
         let paws = gooby.findEntity(named: GoobyRealityNames.pawsAnchor)
-        [head, neck, paws].compactMap { $0 }.forEach { anchor in
+        [head, neck, face, body, paws].compactMap { $0 }.forEach { anchor in
             for child in anchor.children {
                 child.removeFromParent()
             }
         }
 
-        if cosmetics.head == GoobyCatalog.cozyBow, let head {
+        if cosmetics.head == GoobyCatalog.cloudCap, let head {
+            let cap = Entity()
+            cap.name = "cosmetic.cloud-cap"
+            cap.addChild(
+                GoobyFactory.ellipsoid(
+                    "cosmetic.cloud-cap.crown",
+                    scale: [0.52, 0.22, 0.44],
+                    position: [0, 0.20, 0],
+                    material: GoobyFactory.clay(red: 0.48, green: 0.72, blue: 0.86)
+                )
+            )
+            cap.addChild(
+                GoobyFactory.ellipsoid(
+                    "cosmetic.cloud-cap.puff",
+                    scale: [0.16, 0.13, 0.13],
+                    position: [0.28, 0.34, 0.02],
+                    material: GoobyFactory.clay(red: 0.95, green: 0.96, blue: 0.92)
+                )
+            )
+            head.addChild(cap)
+        } else if cosmetics.head == GoobyCatalog.moonCrown, let head {
+            let crown = Entity()
+            crown.name = "cosmetic.moon-crown"
+            let silver = GoobyFactory.clay(red: 0.82, green: 0.86, blue: 0.93)
+            crown.addChild(
+                GoobyFactory.cylinder(
+                    "cosmetic.moon-crown.band",
+                    height: 0.12,
+                    radius: 0.38,
+                    position: [0, 0.28, 0],
+                    material: silver
+                )
+            )
+            for (index, x) in [-0.25, 0.0, 0.25].enumerated() {
+                crown.addChild(
+                    GoobyFactory.box(
+                        "cosmetic.moon-crown.point.\(index)",
+                        size: [0.14, index == 1 ? 0.38 : 0.29, 0.12],
+                        position: [Float(x), index == 1 ? 0.51 : 0.47, 0.05],
+                        material: silver,
+                        cornerRadius: 0.035
+                    )
+                )
+            }
+            crown.addChild(
+                GoobyFactory.ellipsoid(
+                    "cosmetic.moon-crown.gem",
+                    scale: [0.09, 0.09, 0.06],
+                    position: [0, 0.56, 0.11],
+                    material: GoobyFactory.clay(red: 0.98, green: 0.76, blue: 0.25)
+                )
+            )
+            head.addChild(crown)
+        } else if cosmetics.head == GoobyCatalog.cozyBow, let head {
             let bow = Entity()
             bow.name = "cosmetic.cozy-bow"
             let material = GoobyFactory.clay(red: 0.72, green: 0.27, blue: 0.31)
@@ -135,7 +190,38 @@ final class GoobySceneCoordinator {
             head.addChild(cap)
         }
 
-        if cosmetics.neck == GoobyCatalog.sunnyScarf, let neck {
+        if cosmetics.neck == GoobyCatalog.sunshineBow, let neck {
+            neck.addChild(
+                makeBow(
+                    name: "cosmetic.sunshine-bow",
+                    color: (0.97, 0.70, 0.20)
+                )
+            )
+        } else if cosmetics.neck == GoobyCatalog.friendshipRibbon, let neck {
+            let ribbon = makeBow(
+                name: "cosmetic.friendship-ribbon",
+                color: (0.88, 0.34, 0.48)
+            )
+            ribbon.addChild(
+                GoobyFactory.box(
+                    "cosmetic.friendship-ribbon.tail.left",
+                    size: [0.12, 0.34, 0.06],
+                    position: [-0.10, -0.22, 0],
+                    material: GoobyFactory.clay(red: 0.88, green: 0.34, blue: 0.48),
+                    cornerRadius: 0.03
+                )
+            )
+            ribbon.addChild(
+                GoobyFactory.box(
+                    "cosmetic.friendship-ribbon.tail.right",
+                    size: [0.12, 0.34, 0.06],
+                    position: [0.10, -0.22, 0],
+                    material: GoobyFactory.clay(red: 0.88, green: 0.34, blue: 0.48),
+                    cornerRadius: 0.03
+                )
+            )
+            neck.addChild(ribbon)
+        } else if cosmetics.neck == GoobyCatalog.sunnyScarf, let neck {
             neck.addChild(
                 GoobyFactory.cylinder(
                     "cosmetic.sunny-scarf",
@@ -145,6 +231,65 @@ final class GoobySceneCoordinator {
                     material: GoobyFactory.clay(red: 0.95, green: 0.68, blue: 0.24)
                 )
             )
+        }
+
+        if cosmetics.face == GoobyCatalog.roundSpecs, let face {
+            let specs = Entity()
+            specs.name = "cosmetic.round-specs"
+            let frame = GoobyFactory.clay(red: 0.36, green: 0.25, blue: 0.19)
+            let lens = GoobyFactory.clay(red: 0.72, green: 0.88, blue: 0.92)
+            for (index, x) in [Float(-0.28), Float(0.28)].enumerated() {
+                specs.addChild(
+                    GoobyFactory.ellipsoid(
+                        "cosmetic.round-specs.frame.\(index)",
+                        scale: [0.22, 0.22, 0.045],
+                        position: [x, 0, 0],
+                        material: frame
+                    )
+                )
+                specs.addChild(
+                    GoobyFactory.ellipsoid(
+                        "cosmetic.round-specs.lens.\(index)",
+                        scale: [0.17, 0.17, 0.052],
+                        position: [x, 0, 0.03],
+                        material: lens
+                    )
+                )
+            }
+            specs.addChild(
+                GoobyFactory.box(
+                    "cosmetic.round-specs.bridge",
+                    size: [0.18, 0.055, 0.055],
+                    position: [0, 0, 0],
+                    material: frame,
+                    cornerRadius: 0.02
+                )
+            )
+            face.addChild(specs)
+        }
+
+        if cosmetics.body == GoobyCatalog.starCape, let body {
+            let cape = Entity()
+            cape.name = "cosmetic.star-cape"
+            cape.addChild(
+                GoobyFactory.box(
+                    "cosmetic.star-cape.cloth",
+                    size: [1.22, 1.20, 0.12],
+                    position: [0, -0.12, 0],
+                    material: GoobyFactory.clay(red: 0.20, green: 0.25, blue: 0.52),
+                    cornerRadius: 0.14
+                )
+            )
+            let star = GoobyFactory.clay(red: 0.98, green: 0.76, blue: 0.24)
+            cape.addChild(
+                GoobyFactory.ellipsoid(
+                    "cosmetic.star-cape.star",
+                    scale: [0.17, 0.17, 0.08],
+                    position: [0, 0.22, 0.10],
+                    material: star
+                )
+            )
+            body.addChild(cape)
         }
 
         if cosmetics.paws == GoobyCatalog.cloudSlippers, let paws {
@@ -166,6 +311,40 @@ final class GoobySceneCoordinator {
                 )
             )
         }
+    }
+
+    private func makeBow(
+        name: String,
+        color: (CGFloat, CGFloat, CGFloat)
+    ) -> Entity {
+        let bow = Entity()
+        bow.name = name
+        let material = GoobyFactory.clay(red: color.0, green: color.1, blue: color.2)
+        bow.addChild(
+            GoobyFactory.ellipsoid(
+                "\(name).left",
+                scale: [0.25, 0.18, 0.09],
+                position: [-0.21, 0, 0],
+                material: material
+            )
+        )
+        bow.addChild(
+            GoobyFactory.ellipsoid(
+                "\(name).right",
+                scale: [0.25, 0.18, 0.09],
+                position: [0.21, 0, 0],
+                material: material
+            )
+        )
+        bow.addChild(
+            GoobyFactory.ellipsoid(
+                "\(name).knot",
+                scale: [0.14, 0.14, 0.10],
+                position: [0, 0, 0.04],
+                material: material
+            )
+        )
+        return bow
     }
 
     private func startIdleLoop() {
@@ -350,7 +529,9 @@ struct GoobyRealityView: View {
     }
 
     private var shouldReduceMotion: Bool {
-        reduceMotion || ProcessInfo.processInfo.arguments.contains("--reduce-motion")
+        reduceMotion
+            || state.preferences.reduceMotionEnabled
+            || ProcessInfo.processInfo.arguments.contains("--reduce-motion")
     }
 }
 

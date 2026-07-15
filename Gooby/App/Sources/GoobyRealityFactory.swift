@@ -31,6 +31,8 @@ enum GoobyRealityNames {
     static let tooth = "gooby.tooth"
     static let headAnchor = "gooby.anchor.head"
     static let neckAnchor = "gooby.anchor.neck"
+    static let faceAnchor = "gooby.anchor.face"
+    static let bodyAnchor = "gooby.anchor.body"
     static let pawsAnchor = "gooby.anchor.paws"
 
     static let requiredHierarchy = [
@@ -38,7 +40,7 @@ enum GoobyRealityNames {
         earLeft, earRight, innerEarLeft, innerEarRight, pawLeft, pawRight,
         footLeft, footRight, tail, eyeLeft, eyeRight, pupilLeft, pupilRight,
         catchlightLeft, catchlightRight, nose, tooth, headAnchor, neckAnchor,
-        pawsAnchor,
+        faceAnchor, bodyAnchor, pawsAnchor,
     ]
 }
 
@@ -278,6 +280,16 @@ enum GoobyFactory {
         neck.name = GoobyRealityNames.neckAnchor
         neck.position = [0, 1.28, 0.52]
         rig.addChild(neck)
+
+        let face = Entity()
+        face.name = GoobyRealityNames.faceAnchor
+        face.position = [0, 1.82, 0.70]
+        rig.addChild(face)
+
+        let body = Entity()
+        body.name = GoobyRealityNames.bodyAnchor
+        body.position = [0, 1.02, -0.35]
+        rig.addChild(body)
 
         let paws = Entity()
         paws.name = GoobyRealityNames.pawsAnchor

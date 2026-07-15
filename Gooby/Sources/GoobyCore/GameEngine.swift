@@ -43,7 +43,21 @@ public enum GameSimulation {
 
 public enum GameEngine {
     public static let dailyCarrotRewards = [5, 7, 9, 12, 15, 20, 30]
+    public static let duplicateMoonCrownCarrots = 25
     public static let minigameDurationSeconds: Int64 = 5 * 60
+
+    @discardableResult
+    public static func reconcileProgression(
+        _ state: inout GameState,
+        at now: GameInstant
+    ) -> [GameEvent] {
+        var candidate = state
+        var events: [GameEvent] = []
+        unlockBondEntitlements(state: &candidate, events: &events)
+        unlockAchievements(state: &candidate, at: now, events: &events)
+        state = candidate
+        return events
+    }
 
     @discardableResult
     public static func apply(
@@ -51,85 +65,131 @@ public enum GameEngine {
         to state: inout GameState,
         at now: GameInstant
     ) throws -> [GameEvent] {
-        var events = GameSimulation.advance(&state, to: now)
+        var candidate = state
+        var events = GameSimulation.advance(&candidate, to: now)
 
         switch command {
         case let .move(room):
-            state.currentRoom = room
-            state.isSleeping = false
+            candidate.currentRoom = room
+            candidate.isSleeping = false
             events.append(.moved(room))
 
         case .feed:
-            try requireRoom(.kitchen, state: state)
-            try spendCarrots(2, state: &state, events: &events)
-            state.isSleeping = false
-            state.needs.fullness.adjust(by: 250)
-            state.careStatistics.meals += 1
-            events.append(.fed)
-            addBond(5, state: &state, events: &events)
+            try feed(GoobyCatalog.gardenCarrot, state: &candidate, events: &events)
+
+        case let .feedFood(itemID):
+            try feed(itemID, state: &candidate, events: &events)
 
         case .wash:
-            try requireRoom(.washroom, state: state)
-            state.isSleeping = false
-            state.needs.cleanliness.adjust(by: 350)
-            state.careStatistics.baths += 1
+            try requireRoom(.washroom, state: candidate)
+            candidate.isSleeping = false
+            candidate.needs.cleanliness.adjust(by: 350)
+            candidate.careStatistics.baths += 1
             events.append(.washed)
-            addBond(5, state: &state, events: &events)
+            addBond(5, state: &candidate, events: &events)
 
         case .pet:
-            guard !state.isSleeping else {
+            guard !candidate.isSleeping else {
                 throw GameRuleError.petIsSleeping
             }
-            state.needs.fun.adjust(by: 150)
+            candidate.needs.fun.adjust(by: 150)
             events.append(.petted)
-            addBond(3, state: &state, events: &events)
+            addBond(3, state: &candidate, events: &events)
 
         case .play:
-            try requireRoom(.playroom, state: state)
-            let energy = state.needs.energy.value
+            try requireRoom(.playroom, state: candidate)
+            let energy = candidate.needs.energy.value
             guard energy >= 100 else {
                 throw GameRuleError.insufficientEnergy(required: 100, available: energy)
             }
-            state.isSleeping = false
-            state.needs.energy.adjust(by: -80)
-            state.needs.fun.adjust(by: 300)
-            state.careStatistics.playSessions += 1
+            candidate.isSleeping = false
+            candidate.needs.energy.adjust(by: -80)
+            candidate.needs.fun.adjust(by: 300)
+            candidate.careStatistics.playSessions += 1
             events.append(.played)
-            addBond(8, state: &state, events: &events)
+            addBond(8, state: &candidate, events: &events)
 
         case .beginSleep:
-            try requireRoom(.bedroom, state: state)
-            state.isSleeping = true
+            try requireRoom(.bedroom, state: candidate)
+            candidate.isSleeping = true
             events.append(.sleepChanged(true))
 
         case .endSleep:
-            state.isSleeping = false
+            candidate.isSleeping = false
             events.append(.sleepChanged(false))
 
         case .claimDailyReward:
-            try claimDailyReward(state: &state, at: now, events: &events)
+            try claimDailyReward(state: &candidate, at: now, events: &events)
 
         case let .purchase(itemID):
-            try purchase(itemID, state: &state, events: &events)
+            try purchase(itemID, state: &candidate, events: &events)
 
         case let .equip(itemID):
-            try equip(itemID, state: &state, events: &events)
+            try equip(itemID, state: &candidate, events: &events)
+
+        case let .unequip(slot):
+            candidate.equippedCosmetics[slot] = nil
+            events.append(.unequipped(slot: slot))
+
+        case let .renamePet(name):
+            let validated = try GamePreferences.validatedPetName(name)
+            candidate.preferences.petName = validated
+            events.append(.petRenamed(validated))
+
+        case let .setSoundEnabled(enabled):
+            candidate.preferences.soundEnabled = enabled
+            events.append(.preferencesChanged)
+
+        case let .setHapticsEnabled(enabled):
+            candidate.preferences.hapticsEnabled = enabled
+            events.append(.preferencesChanged)
+
+        case let .setReduceMotionEnabled(enabled):
+            candidate.preferences.reduceMotionEnabled = enabled
+            events.append(.preferencesChanged)
 
         case let .startMinigame(kind):
-            try startMinigame(kind, state: &state, at: now, events: &events)
+            try startMinigame(kind, state: &candidate, at: now, events: &events)
 
         case let .finishMinigame(runID, submission):
             try finishMinigame(
                 runID: runID,
                 submission: submission,
-                state: &state,
+                state: &candidate,
                 at: now,
                 events: &events
             )
         }
 
-        unlockAchievements(state: &state, events: &events)
+        unlockBondEntitlements(state: &candidate, events: &events)
+        unlockAchievements(state: &candidate, at: now, events: &events)
+        state = candidate
         return events
+    }
+
+    private static func feed(
+        _ itemID: ItemID,
+        state: inout GameState,
+        events: inout [GameEvent]
+    ) throws {
+        try requireRoom(.kitchen, state: state)
+        guard let item = GoobyCatalog.item(id: itemID),
+              case let .food(fullness) = item.kind
+        else {
+            throw GameRuleError.unknownItem(itemID)
+        }
+        let quantity = state.foodQuantity(itemID)
+        guard quantity > 0 else {
+            throw GameRuleError.foodNotOwned(itemID)
+        }
+        state.foodInventory[itemID] = quantity - 1
+        state.isSleeping = false
+        state.needs.fullness.adjust(by: fullness)
+        state.careStatistics.meals += 1
+        events.append(.inventoryChanged(itemID: itemID, quantity: quantity - 1))
+        events.append(.foodConsumed(itemID: itemID, quantity: quantity - 1))
+        events.append(.fed)
+        addBond(5, state: &state, events: &events)
     }
 
     private static func requireRoom(_ room: RoomID, state: GameState) throws {
@@ -182,35 +242,54 @@ public enum GameEngine {
         }
     }
 
+    private static func unlockBondEntitlements(
+        state: inout GameState,
+        events: inout [GameEvent]
+    ) {
+        if state.bondLevel >= 3 {
+            unlockItem(
+                GoobyCatalog.friendshipRibbon,
+                duplicateCarrots: 0,
+                state: &state,
+                events: &events
+            )
+        }
+    }
+
     private static func claimDailyReward(
         state: inout GameState,
         at now: GameInstant,
         events: inout [GameEvent]
     ) throws {
-        let day = now.secondsSinceEpoch / 86_400
-        let lastDay = state.dailyReward.lastClaimedDay
-
-        if let lastDay {
-            guard day >= lastDay else {
-                throw GameRuleError.clockRollback
-            }
-            guard day != lastDay else {
-                throw GameRuleError.dailyRewardAlreadyClaimed
-            }
-        }
-
+        let day = now.secondsSinceEpoch / DailyRewardSchedule.secondsPerDay
+        let eligibility = DailyRewardSchedule.eligibility(
+            for: state.dailyReward,
+            at: now,
+            cycleCount: dailyCarrotRewards.count
+        )
         let step: Int
-        if let lastDay, day == lastDay + 1 {
-            step = state.dailyReward.streakStep % dailyCarrotRewards.count
-        } else {
-            step = 0
+        switch eligibility {
+        case let .eligible(eligibleStep):
+            step = eligibleStep
+        case .alreadyClaimed:
+            throw GameRuleError.dailyRewardAlreadyClaimed
+        case .clockRollback:
+            throw GameRuleError.clockRollback
         }
 
-        let reward = dailyCarrotRewards[step]
+        let reward = dailyCarrotRewards[step - 1]
         state.dailyReward.lastClaimedDay = day
-        state.dailyReward.streakStep = step + 1
+        state.dailyReward.streakStep = step
         addCarrots(reward, state: &state, events: &events)
-        events.append(.dailyRewardClaimed(step: step + 1, carrots: reward))
+        events.append(.dailyRewardClaimed(step: step, carrots: reward))
+        if step == dailyCarrotRewards.count {
+            unlockItem(
+                GoobyCatalog.moonCrown,
+                duplicateCarrots: duplicateMoonCrownCarrots,
+                state: &state,
+                events: &events
+            )
+        }
     }
 
     private static func purchase(
@@ -221,17 +300,31 @@ public enum GameEngine {
         guard let item = GoobyCatalog.item(id: itemID) else {
             throw GameRuleError.unknownItem(itemID)
         }
-        if state.ownedItems.contains(itemID) {
-            events.append(.purchaseAlreadyOwned(itemID))
-            return
+        guard item.acquisition == .shop || item.acquisition == .legacy else {
+            throw GameRuleError.itemNotPurchasable(itemID)
         }
         guard state.bondLevel >= item.requiredBondLevel else {
             throw GameRuleError.itemLocked(requiredBondLevel: item.requiredBondLevel)
         }
-        try spendCarrots(item.price, state: &state, events: &events)
-        state.ownedItems.append(itemID)
-        state.ownedItems.sort()
-        events.append(.purchased(itemID))
+
+        switch item.kind {
+        case .food:
+            try spendCarrots(item.price, state: &state, events: &events)
+            let quantity = state.foodQuantity(itemID) + 1
+            state.foodInventory[itemID] = quantity
+            events.append(.inventoryChanged(itemID: itemID, quantity: quantity))
+            events.append(.purchased(itemID))
+
+        case .cosmetic, .roomDecoration:
+            if state.ownedItems.contains(itemID) {
+                events.append(.purchaseAlreadyOwned(itemID))
+                return
+            }
+            try spendCarrots(item.price, state: &state, events: &events)
+            state.ownedItems.append(itemID)
+            state.ownedItems.sort()
+            events.append(.purchased(itemID))
+        }
     }
 
     private static func equip(
@@ -252,6 +345,24 @@ public enum GameEngine {
         events.append(.equipped(itemID, slot: slot))
     }
 
+    private static func unlockItem(
+        _ itemID: ItemID,
+        duplicateCarrots: Int,
+        state: inout GameState,
+        events: inout [GameEvent]
+    ) {
+        if state.ownedItems.contains(itemID) {
+            if duplicateCarrots > 0 {
+                addCarrots(duplicateCarrots, state: &state, events: &events)
+                events.append(.duplicateItemConverted(itemID, carrots: duplicateCarrots))
+            }
+            return
+        }
+        state.ownedItems.append(itemID)
+        state.ownedItems.sort()
+        events.append(.itemUnlocked(itemID))
+    }
+
     private static func startMinigame(
         _ kind: MinigameKind,
         state: inout GameState,
@@ -261,8 +372,8 @@ public enum GameEngine {
         guard state.activeMinigame == nil else {
             throw GameRuleError.minigameAlreadyActive
         }
-        if kind == .gardenEcho, state.bondLevel < 1 {
-            throw GameRuleError.featureLocked(requiredBondLevel: 1)
+        if kind == .gardenEcho, state.bondLevel < 2 {
+            throw GameRuleError.featureLocked(requiredBondLevel: 2)
         }
 
         var random = SplitMix64(seed: state.randomState)
@@ -333,21 +444,19 @@ public enum GameEngine {
 
     private static func unlockAchievements(
         state: inout GameState,
+        at now: GameInstant,
         events: inout [GameEvent]
     ) {
-        let candidates: [(AchievementID, Bool)] = [
-            (.firstMeal, state.careStatistics.meals >= 1),
-            (.squeakyClean, state.careStatistics.baths >= 1),
-            (.playtime, state.careStatistics.playSessions >= 1),
-            (.carrotCollector, state.carrots >= 100),
-            (.bestBunny, state.bondLevel >= 4),
-        ]
-
-        for (achievement, earned) in candidates
-        where earned && !state.unlockedAchievements.contains(achievement) {
-            state.unlockedAchievements.append(achievement)
+        for definition in GoobyAchievements.definitions
+        where definition.progress(in: state) >= definition.target
+            && !state.unlockedAchievements.contains(definition.id) {
+            state.unlockedAchievements.append(definition.id)
             state.unlockedAchievements.sort()
-            events.append(.achievementUnlocked(achievement))
+            state.achievementUnlockDates[definition.id] = now
+            addCarrots(definition.carrotReward, state: &state, events: &events)
+            events.append(
+                .achievementUnlocked(definition.id, carrots: definition.carrotReward)
+            )
         }
     }
 }

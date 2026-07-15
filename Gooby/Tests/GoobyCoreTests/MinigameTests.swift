@@ -127,7 +127,7 @@ final class MinigameTests: XCTestCase {
         XCTAssertThrowsError(
             try GameEngine.apply(.startMinigame(kind: .gardenEcho), to: &state, at: now)
         ) { error in
-            XCTAssertEqual(error as? GameRuleError, .featureLocked(requiredBondLevel: 1))
+            XCTAssertEqual(error as? GameRuleError, .featureLocked(requiredBondLevel: 2))
         }
 
         state.bondPoints = BondProgress.thresholds[1]

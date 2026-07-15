@@ -4,6 +4,7 @@ import GoobyCore
 public protocol GameStateRepository: Sendable {
     func load(now: GameInstant) async throws -> GameState
     func save(_ state: GameState, at now: GameInstant) async throws
+    func reset(now: GameInstant) async throws -> GameState
 }
 
 public actor JSONSaveStore: GameStateRepository {
@@ -52,6 +53,18 @@ public actor JSONSaveStore: GameStateRepository {
             try newData.write(to: backupURL, options: .atomic)
         }
         try newData.write(to: primaryURL, options: .atomic)
+    }
+
+    public func reset(now: GameInstant) async throws -> GameState {
+        if fileManager.fileExists(atPath: primaryURL.path) {
+            try fileManager.removeItem(at: primaryURL)
+        }
+        if fileManager.fileExists(atPath: backupURL.path) {
+            try fileManager.removeItem(at: backupURL)
+        }
+        let state = GameState.new(now: now)
+        try await save(state, at: now)
+        return state
     }
 
     private func loadCandidate(at url: URL) throws -> GameState? {

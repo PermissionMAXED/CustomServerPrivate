@@ -44,6 +44,56 @@ final class GoobyUITests: XCTestCase {
     }
 
     @MainActor
+    func testDailyShopWardrobePurchaseEquipAndRelaunch() {
+        let app = XCUIApplication()
+        app.launchArguments = [
+            "--ui-testing",
+            "--reset-save",
+            "--skip-welcome",
+            "--reduce-motion",
+            "--fixed-time",
+            "1728000000",
+        ]
+        app.launch()
+        XCTAssertTrue(app.staticTexts["gooby.status"].waitForExistence(timeout: 12))
+
+        tap(app.buttons["home.destination.daily-gift"], in: app)
+        tap(app.buttons["daily.claim"], in: app)
+        XCTAssertTrue(app.buttons["Claimed Today"].waitForExistence(timeout: 8))
+        tap(app.buttons["Done"], in: app)
+
+        tap(app.buttons["home.destination.shop"], in: app)
+        tap(app.buttons["shop.item.sunshine-bow"], in: app)
+        XCTAssertTrue(app.staticTexts["shop.preview"].waitForExistence(timeout: 8))
+        tap(app.buttons["shop.buy.sunshine-bow"], in: app)
+        XCTAssertTrue(app.staticTexts["Owned permanently"].waitForExistence(timeout: 8))
+        XCTAssertTrue(app.staticTexts["shop.detail.balance"].label.contains("15"))
+        tap(app.buttons["Done"], in: app)
+        tap(app.buttons["Done"], in: app)
+
+        tap(app.buttons["home.destination.wardrobe"], in: app)
+        tap(app.buttons["wardrobe.item.sunshine-bow"], in: app)
+        tap(app.buttons["wardrobe.equip"], in: app)
+        XCTAssertTrue(app.buttons["wardrobe.unequip"].waitForExistence(timeout: 8))
+        attachHomeScreenshot(named: "Gooby Gate 3 — Equipped Sunshine Bow")
+
+        tap(app.buttons["Done"], in: app)
+        app.terminate()
+        app.launchArguments = [
+            "--ui-testing",
+            "--skip-welcome",
+            "--reduce-motion",
+            "--fixed-time",
+            "1728000000",
+        ]
+        app.launch()
+        XCTAssertTrue(app.staticTexts["gooby.status"].waitForExistence(timeout: 12))
+        tap(app.buttons["home.destination.wardrobe"], in: app)
+        tap(app.buttons["wardrobe.item.sunshine-bow"], in: app)
+        XCTAssertTrue(app.buttons["wardrobe.unequip"].waitForExistence(timeout: 8))
+    }
+
+    @MainActor
     private func tap(_ element: XCUIElement, in app: XCUIApplication) {
         XCTAssertTrue(element.waitForExistence(timeout: 8))
         var attempts = 0

@@ -30,7 +30,7 @@ final class JSONSaveStoreTests: XCTestCase, @unchecked Sendable {
         let fixtureData = try Data(contentsOf: fixtureURL)
         let envelope = try SaveMigrator().decodeAndMigrate(fixtureData)
 
-        XCTAssertEqual(envelope.schemaVersion, 1)
+        XCTAssertEqual(envelope.schemaVersion, SaveEnvelope.currentSchemaVersion)
         XCTAssertEqual(envelope.savedAt, GameInstant(secondsSinceEpoch: 1_000))
         XCTAssertEqual(envelope.state, GameState.new(now: GameInstant(secondsSinceEpoch: 1_000)))
     }
@@ -44,9 +44,9 @@ final class JSONSaveStoreTests: XCTestCase, @unchecked Sendable {
             XCTAssertEqual(error as? SaveMigrationError, .unsupportedPastSchema(0))
         }
         XCTAssertThrowsError(
-            try migrator.decodeAndMigrate(Data(#"{"schemaVersion":2}"#.utf8))
+            try migrator.decodeAndMigrate(Data(#"{"schemaVersion":3}"#.utf8))
         ) { error in
-            XCTAssertEqual(error as? SaveMigrationError, .unsupportedFutureSchema(2))
+            XCTAssertEqual(error as? SaveMigrationError, .unsupportedFutureSchema(3))
         }
     }
 
@@ -173,6 +173,48 @@ final class JSONSaveStoreTests: XCTestCase, @unchecked Sendable {
         XCTAssertNoThrow(
             try SaveMigrator().decodeAndMigrate(Data(contentsOf: store.backupURL))
         )
+    }
+
+    func testVersionOneMigrationPreservesCarrotsAndOwnedItemsWithNewDefaults() throws {
+        let fixtureURL = try XCTUnwrap(
+            Bundle.module.url(
+                forResource: "save-v1",
+                withExtension: "json",
+                subdirectory: "Fixtures"
+            )
+        )
+        var fixture = try String(contentsOf: fixtureURL, encoding: .utf8)
+        fixture = fixture.replacingOccurrences(of: #""carrots": 30"#, with: #""carrots": 247"#)
+        fixture = fixture.replacingOccurrences(
+            of: #""ownedItems": []"#,
+            with: #""ownedItems": ["cozy-bow"]"#
+        )
+
+        let migrated = try SaveMigrator().decodeAndMigrate(Data(fixture.utf8))
+
+        XCTAssertEqual(migrated.schemaVersion, SaveEnvelope.currentSchemaVersion)
+        XCTAssertEqual(migrated.state.carrots, 247)
+        XCTAssertEqual(migrated.state.ownedItems, [GoobyCatalog.cozyBow])
+        XCTAssertEqual(migrated.state.foodQuantity(GoobyCatalog.gardenCarrot), 3)
+        XCTAssertEqual(migrated.state.preferences, GamePreferences())
+    }
+
+    func testResetDeletesPreviousProgressAndPersistsFreshState() async throws {
+        let directory = try makeTemporaryDirectory()
+        defer { try? FileManager.default.removeItem(at: directory) }
+        let store = JSONSaveStore(directoryURL: directory)
+        var state = GameState.new(now: now)
+        state.carrots = 999
+        state.ownedItems = [GoobyCatalog.sunshineBow]
+        try await store.save(state, at: now)
+
+        let reset = try await store.reset(now: now.adding(seconds: 10))
+        let reloaded = try await store.load(now: now.adding(seconds: 10))
+
+        XCTAssertEqual(reset, GameState.new(now: now.adding(seconds: 10)))
+        XCTAssertEqual(reloaded, reset)
+        XCTAssertTrue(FileManager.default.fileExists(atPath: store.primaryURL.path))
+        XCTAssertTrue(FileManager.default.fileExists(atPath: store.backupURL.path))
     }
 
     private func makeTemporaryDirectory() throws -> URL {
