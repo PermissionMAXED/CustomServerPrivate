@@ -39,7 +39,9 @@ targets:
         product: GoobyCore
       - package: GoobyKit
         product: GoobyPersistence
+      - sdk: AVFoundation.framework
       - sdk: RealityKit.framework
+      - sdk: UIKit.framework
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.goobygame.app
@@ -79,6 +81,7 @@ targets:
       - path: AppTests
     dependencies:
       - target: Gooby
+      - sdk: RealityKit.framework
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.goobygame.app.tests

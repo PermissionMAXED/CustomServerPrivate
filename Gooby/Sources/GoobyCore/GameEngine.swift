@@ -76,6 +76,14 @@ public enum GameEngine {
             events.append(.washed)
             addBond(5, state: &state, events: &events)
 
+        case .pet:
+            guard !state.isSleeping else {
+                throw GameRuleError.petIsSleeping
+            }
+            state.needs.fun.adjust(by: 150)
+            events.append(.petted)
+            addBond(3, state: &state, events: &events)
+
         case .play:
             try requireRoom(.playroom, state: state)
             let energy = state.needs.energy.value

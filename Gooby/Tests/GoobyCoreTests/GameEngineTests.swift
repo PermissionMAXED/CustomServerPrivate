@@ -62,6 +62,23 @@ final class GameEngineTests: XCTestCase {
         XCTAssertFalse(state.isSleeping)
     }
 
+    func testPetImprovesFunAndCannotWakeSleepingGooby() throws {
+        var state = GameState.new(now: now)
+        state.needs.fun = NeedValue(500)
+
+        let events = try GameEngine.apply(.pet, to: &state, at: now)
+
+        XCTAssertEqual(state.needs.fun.value, 650)
+        XCTAssertEqual(state.bondPoints, 3)
+        XCTAssertTrue(events.contains(.petted))
+
+        state.currentRoom = .bedroom
+        _ = try GameEngine.apply(.beginSleep, to: &state, at: now)
+        XCTAssertThrowsError(try GameEngine.apply(.pet, to: &state, at: now)) { error in
+            XCTAssertEqual(error as? GameRuleError, .petIsSleeping)
+        }
+    }
+
     func testPurchaseIsIdempotentAndNeverDoubleCharges() throws {
         var state = GameState.new(now: now)
 

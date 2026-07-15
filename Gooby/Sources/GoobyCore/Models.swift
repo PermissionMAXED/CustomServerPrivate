@@ -128,7 +128,7 @@ public struct Needs: Codable, Equatable, Sendable {
     )
 }
 
-public enum RoomID: String, Codable, CaseIterable, Sendable {
+public enum RoomID: String, Codable, CaseIterable, Hashable, Sendable {
     case kitchen
     case washroom
     case bedroom
@@ -336,6 +336,7 @@ public enum GameCommand: Codable, Equatable, Sendable {
     case move(to: RoomID)
     case feed
     case wash
+    case pet
     case play
     case beginSleep
     case endSleep
@@ -351,6 +352,7 @@ public enum GameEvent: Codable, Equatable, Sendable {
     case moved(RoomID)
     case fed
     case washed
+    case petted
     case played
     case sleepChanged(Bool)
     case carrotsChanged(delta: Int, balance: Int)
@@ -368,6 +370,7 @@ public enum GameEvent: Codable, Equatable, Sendable {
 
 public enum GameRuleError: Error, Equatable, Sendable {
     case wrongRoom(required: RoomID)
+    case petIsSleeping
     case insufficientCarrots(required: Int, available: Int)
     case insufficientEnergy(required: Int, available: Int)
     case unknownItem(ItemID)
