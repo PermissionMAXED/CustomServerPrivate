@@ -471,7 +471,7 @@ private struct HomeView: View {
 
     private var primaryHint: String {
         if let disabledReason { return disabledReason }
-        switch state.currentRoom {
+        return switch state.currentRoom {
         case .kitchen: "Uses the selected owned food and improves fullness"
         case .washroom: "Improves cleanliness"
         case .bedroom: state.isSleeping ? "Wakes Gooby" : "Starts restoring energy over time"

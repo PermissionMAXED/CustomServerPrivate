@@ -1,6 +1,7 @@
 import GoobyCore
 import RealityKit
 import SwiftUI
+import UIKit
 
 @MainActor
 final class GoobySceneCoordinator {
@@ -55,10 +56,10 @@ final class GoobySceneCoordinator {
 
     private func switchRoom(to room: RoomID) {
         roomRoot?.removeFromParent()
-        let room = GoobyRoomFactory.makeRoom(room)
-        roomRoot = room
+        let builtRoom = GoobyRoomFactory.makeRoom(room)
+        roomRoot = builtRoom
         currentRoom = room
-        stage.addChild(room)
+        stage.addChild(builtRoom)
     }
 
     private func applyPose(_ state: GameState) {
@@ -307,6 +308,28 @@ struct GoobyRealityView: View {
     @State private var coordinator = GoobySceneCoordinator()
 
     var body: some View {
+        Group {
+            if #available(iOS 18.0, *) {
+                modernRealityView
+            } else {
+                GoobyLegacyRealityView(
+                    state: state,
+                    events: events,
+                    eventRevision: eventRevision,
+                    reduceMotion: reduceMotion,
+                    coordinator: coordinator,
+                    onPet: onPet
+                )
+            }
+        }
+        .onDisappear {
+            coordinator.stop()
+        }
+        .accessibilityHidden(true)
+    }
+
+    @available(iOS 18.0, *)
+    private var modernRealityView: some View {
         RealityView { content in
             coordinator.prepare(room: state.currentRoom, reduceMotion: reduceMotion)
             content.add(coordinator.stage)
@@ -323,9 +346,63 @@ struct GoobyRealityView: View {
                 .targetedToAnyEntity()
                 .onEnded { _ in onPet() }
         )
-        .onDisappear {
-            coordinator.stop()
+    }
+}
+
+private struct GoobyLegacyRealityView: UIViewRepresentable {
+    let state: GameState
+    let events: [GameEvent]
+    let eventRevision: Int
+    let reduceMotion: Bool
+    let coordinator: GoobySceneCoordinator
+    let onPet: () -> Void
+
+    func makeCoordinator() -> TapCoordinator {
+        TapCoordinator(onPet: onPet)
+    }
+
+    func makeUIView(context: Context) -> ARView {
+        let view = ARView(
+            frame: .zero,
+            cameraMode: .nonAR,
+            automaticallyConfigureSession: false
+        )
+        view.environment.background = .color(.clear)
+        view.cameraTransform = Transform(translation: [0, 1.65, 4.35])
+        coordinator.prepare(room: state.currentRoom, reduceMotion: reduceMotion)
+
+        let anchor = AnchorEntity(world: .zero)
+        anchor.name = "gooby.legacy-anchor"
+        anchor.addChild(coordinator.stage)
+        view.scene.addAnchor(anchor)
+
+        let tap = UITapGestureRecognizer(
+            target: context.coordinator,
+            action: #selector(TapCoordinator.didTap)
+        )
+        view.addGestureRecognizer(tap)
+        return view
+    }
+
+    func updateUIView(_: ARView, context: Context) {
+        context.coordinator.onPet = onPet
+        coordinator.apply(
+            state: state,
+            events: events,
+            eventRevision: eventRevision,
+            reduceMotion: reduceMotion
+        )
+    }
+
+    final class TapCoordinator: NSObject {
+        var onPet: () -> Void
+
+        init(onPet: @escaping () -> Void) {
+            self.onPet = onPet
         }
-        .accessibilityHidden(true)
+
+        @objc func didTap() {
+            onPet()
+        }
     }
 }
