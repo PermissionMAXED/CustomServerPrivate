@@ -5,6 +5,7 @@ final class GoobyUITests: XCTestCase {
         continueAfterFailure = false
     }
 
+    @MainActor
     func testDeterministicCareJourneyPersistsVisibleState() {
         let app = XCUIApplication()
         app.launchArguments = [
@@ -41,6 +42,7 @@ final class GoobyUITests: XCTestCase {
         XCTAssertTrue(app.buttons["care.pet"].isEnabled == false)
     }
 
+    @MainActor
     private func tap(_ element: XCUIElement, in app: XCUIApplication) {
         XCTAssertTrue(element.waitForExistence(timeout: 8))
         var attempts = 0
@@ -52,6 +54,7 @@ final class GoobyUITests: XCTestCase {
         element.tap()
     }
 
+    @MainActor
     private func waitForLabel(
         _ label: String,
         on element: XCUIElement,
@@ -62,6 +65,7 @@ final class GoobyUITests: XCTestCase {
         waitForExpectations(timeout: timeout)
     }
 
+    @MainActor
     private func attachHomeScreenshot(named name: String) {
         let attachment = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
         attachment.name = name
