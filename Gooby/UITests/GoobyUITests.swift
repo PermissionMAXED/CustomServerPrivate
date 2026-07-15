@@ -95,8 +95,13 @@ final class GoobyUITests: XCTestCase {
 
     @MainActor
     private func tap(_ element: XCUIElement, in app: XCUIApplication) {
-        XCTAssertTrue(element.waitForExistence(timeout: 8))
         var attempts = 0
+        while !element.exists, attempts < 8 {
+            app.swipeUp()
+            attempts += 1
+        }
+        XCTAssertTrue(element.waitForExistence(timeout: 3))
+        attempts = 0
         while !element.isHittable, attempts < 6 {
             app.swipeUp()
             attempts += 1
