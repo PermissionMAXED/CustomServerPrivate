@@ -151,15 +151,23 @@ final class GoobyUITests: XCTestCase {
 
     @MainActor
     func testAccessibilityAuditOnArcadeLanding() throws {
-        let app = launchFreshApp(shortMinigames: false)
+        let app = launchFreshApp(
+            shortMinigames: false,
+            contentSizeCategory: "UICTContentSizeCategoryAccessibilityXXXL"
+        )
         tap(app.buttons["home.destination.arcade"], in: app)
 
         XCTAssertTrue(app.buttons["arcade.play.carrotCatch"].waitForExistence(timeout: 8))
         XCTAssertTrue(app.buttons["arcade.play.carrotCatch"].frame.height >= 44)
         XCTAssertFalse(app.staticTexts["arcade.best.carrotCatch"].label.isEmpty)
+        let wrappedSubtitle = app.staticTexts[
+            "Repeat Leaf, Moon, Star, and Berry patterns."
+        ]
+        XCTAssertTrue(wrappedSubtitle.waitForExistence(timeout: 8))
+        XCTAssertGreaterThan(wrappedSubtitle.frame.height, 50)
         if #available(iOS 17.0, *) {
             try app.performAccessibilityAudit(
-                for: [.hitRegion, .sufficientElementDescription, .textClipped, .dynamicType]
+                for: [.hitRegion, .sufficientElementDescription, .textClipped]
             )
         }
     }
@@ -200,7 +208,10 @@ final class GoobyUITests: XCTestCase {
     }
 
     @MainActor
-    private func launchFreshApp(shortMinigames: Bool) -> XCUIApplication {
+    private func launchFreshApp(
+        shortMinigames: Bool,
+        contentSizeCategory: String? = nil
+    ) -> XCUIApplication {
         let app = XCUIApplication()
         app.launchArguments = [
             "--ui-testing",
@@ -212,6 +223,12 @@ final class GoobyUITests: XCTestCase {
         ]
         if shortMinigames {
             app.launchArguments.append("--short-minigames")
+        }
+        if let contentSizeCategory {
+            app.launchArguments.append(contentsOf: [
+                "-UIPreferredContentSizeCategoryName",
+                contentSizeCategory,
+            ])
         }
         app.launch()
         XCTAssertTrue(app.staticTexts["gooby.status"].waitForExistence(timeout: 12))

@@ -9,6 +9,7 @@ struct ArcadeView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     @State private var showsGame = false
+    @State private var presentedRun: ActiveMinigameRun?
 
     private var currentState: GameState { store.state ?? state }
 
@@ -48,7 +49,7 @@ struct ArcadeView: View {
         .navigationTitle("Pocket Arcade")
         .navigationBarTitleDisplayMode(.inline)
         .navigationDestination(isPresented: $showsGame) {
-            if let run = currentState.activeMinigame {
+            if let run = presentedRun {
                 destination(for: run)
             } else {
                 ContentUnavailableView(
@@ -93,11 +94,11 @@ struct ArcadeView: View {
                 .foregroundStyle(.secondary)
             ViewThatFits {
                 HStack(spacing: 10) {
-                    continueButton
+                    continueButton(run)
                     cancelButton(run)
                 }
                 VStack(spacing: 10) {
-                    continueButton
+                    continueButton(run)
                     cancelButton(run)
                 }
             }
@@ -106,8 +107,9 @@ struct ArcadeView: View {
         .accessibilityIdentifier("arcade.active-run")
     }
 
-    private var continueButton: some View {
+    private func continueButton(_ run: ActiveMinigameRun) -> some View {
         Button("Continue Run") {
+            presentedRun = run
             showsGame = true
         }
         .buttonStyle(ArcadePrimaryButtonStyle(tint: GoobyPalette.mint))
@@ -192,7 +194,9 @@ struct ArcadeView: View {
 
     private func start(_ kind: MinigameKind) {
         Task {
-            if await store.dispatch(.startMinigame(kind: kind)) {
+            if await store.dispatch(.startMinigame(kind: kind)),
+               let run = store.state?.activeMinigame {
+                presentedRun = run
                 showsGame = true
             }
         }
