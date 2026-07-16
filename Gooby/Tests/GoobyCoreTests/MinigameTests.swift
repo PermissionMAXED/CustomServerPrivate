@@ -49,7 +49,9 @@ final class MinigameTests: XCTestCase {
         game.resume()
         XCTAssertTrue(game.catchCarrot(in: firstTarget))
         XCTAssertTrue(game.missCarrot())
-        game.finishRemainingAsMisses()
+        while !game.isFinished {
+            XCTAssertTrue(game.missCarrot())
+        }
         let terminal = game
         let result = try XCTUnwrap(game.result)
 
@@ -134,219 +136,206 @@ final class MinigameTests: XCTestCase {
         XCTAssertEqual(game.result?.score, 0)
     }
 
-    func testActiveRunValidatesAndRewardsExactlyOnce() throws {
+    func testPartialCarrotCompletionIsRejected() throws {
         var state = GameState.new(now: now)
-        _ = try GameEngine.apply(.startMinigame(kind: .carrotCatch), to: &state, at: now)
-        let run = try XCTUnwrap(state.activeMinigame)
-        let moves = CarrotCatch.carrotLanes(seed: run.seed, count: 20)
-            .map(CarrotCatchMove.init(lane:))
-        let submission = MinigameSubmission.carrotCatch(moves: moves)
+        let run = try startPlayingCarrot(in: &state)
+        _ = try GameEngine.apply(
+            .carrotCatchInput(runID: run.id, lane: 0),
+            to: &state,
+            at: now
+        )
+        let snapshot = state
+
+        XCTAssertThrowsError(
+            try GameEngine.apply(.finishMinigame(runID: run.id), to: &state, at: now)
+        ) { error in
+            XCTAssertEqual(error as? GameRuleError, .invalidMinigameSubmission)
+        }
+        XCTAssertEqual(state, snapshot)
+    }
+
+    func testCarrotProgressCompletesRewardsAndReplaysExactlyOnce() throws {
+        var state = GameState.new(now: now)
+        let run = try startPlayingCarrot(in: &state)
+        let lanes = CarrotCatch.carrotLanes(seed: run.seed, count: CarrotCatch.maximumMoves)
+        for lane in lanes {
+            _ = try GameEngine.apply(
+                .carrotCatchInput(runID: run.id, lane: lane),
+                to: &state,
+                at: now
+            )
+        }
+        guard case let .carrotCatch(progress)? = state.activeMinigame?.progress else {
+            return XCTFail("Expected persisted Carrot Catch progress")
+        }
+        XCTAssertEqual(progress.game.moves.count, CarrotCatch.maximumMoves)
+        XCTAssertEqual(progress.stage, .terminal)
+
         let startingCarrots = state.carrots
+        let first = try GameEngine.apply(.finishMinigame(runID: run.id), to: &state, at: now)
+        let rewarded = state
+        let second = try GameEngine.apply(.finishMinigame(runID: run.id), to: &state, at: now)
 
-        let first = try GameEngine.apply(
-            .finishMinigame(runID: run.id, submission: submission),
-            to: &state,
-            at: now.adding(seconds: 30)
-        )
-        let afterFirstReward = state.carrots
-        let second = try GameEngine.apply(
-            .finishMinigame(runID: run.id, submission: submission),
-            to: &state,
-            at: now.adding(seconds: 30)
-        )
-
-        XCTAssertEqual(afterFirstReward, startingCarrots + 20)
-        XCTAssertEqual(state.carrots, afterFirstReward)
-        XCTAssertNil(state.activeMinigame)
+        XCTAssertEqual(state.carrots, startingCarrots + 20)
+        XCTAssertEqual(state, rewarded)
         XCTAssertEqual(state.rewardedMinigameRuns, [run.id])
         XCTAssertEqual(state.bestMinigameScores[.carrotCatch], 200)
-        XCTAssertTrue(
-            first.contains(.minigameFinished(runID: run.id, score: 200, carrots: 20))
-        )
+        XCTAssertTrue(first.contains(.minigameFinished(runID: run.id, score: 200, carrots: 20)))
         XCTAssertEqual(second.last, .minigameRewardAlreadyGranted(run.id))
     }
 
-    func testBestScoreOnlyImprovesAcrossSeededRuns() throws {
+    func testStandardCarrotTimeoutRequiresThirtyActiveSeconds() throws {
         var state = GameState.new(now: now)
-        _ = try GameEngine.apply(.startMinigame(kind: .carrotCatch), to: &state, at: now)
-        let first = try XCTUnwrap(state.activeMinigame)
-        let perfect = CarrotCatch.carrotLanes(seed: first.seed, count: 20)
-            .map(CarrotCatchMove.init(lane:))
-        _ = try GameEngine.apply(
-            .finishMinigame(runID: first.id, submission: .carrotCatch(moves: perfect)),
-            to: &state,
-            at: now.adding(seconds: 30)
-        )
-
-        _ = try GameEngine.apply(
-            .startMinigame(kind: .carrotCatch),
-            to: &state,
-            at: now.adding(seconds: 31)
-        )
-        let second = try XCTUnwrap(state.activeMinigame)
-        XCTAssertNotEqual(first.seed, second.seed)
-        _ = try GameEngine.apply(
-            .finishMinigame(
-                runID: second.id,
-                submission: .carrotCatch(moves: [CarrotCatchMove()])
-            ),
-            to: &state,
-            at: now.adding(seconds: 32)
-        )
-
-        XCTAssertEqual(state.bestMinigameScores[.carrotCatch], 200)
-        XCTAssertEqual(state.rewardedMinigameRuns, [first.id, second.id])
-    }
-
-    func testPauseResumeExcludesBackgroundTimeFromExpiry() throws {
-        var state = GameState.new(now: now)
-        _ = try GameEngine.apply(.startMinigame(kind: .carrotCatch), to: &state, at: now)
-        let run = try XCTUnwrap(state.activeMinigame)
-
-        let paused = try GameEngine.apply(
-            .pauseMinigame(runID: run.id),
-            to: &state,
-            at: now.adding(seconds: 10)
-        )
-        XCTAssertTrue(paused.contains(.minigamePauseChanged(runID: run.id, paused: true)))
-        XCTAssertTrue(state.activeMinigame?.isPaused == true)
-
-        _ = try GameEngine.apply(
-            .resumeMinigame(runID: run.id),
-            to: &state,
-            at: now.adding(seconds: 10_000)
-        )
-        let events = try GameEngine.apply(
-            .finishMinigame(
-                runID: run.id,
-                submission: .carrotCatch(moves: [CarrotCatchMove(lane: 0)])
-            ),
-            to: &state,
-            at: now.adding(seconds: 10_010)
-        )
-        XCTAssertTrue(
-            events.contains { event in
-                if case .minigameFinished = event { return true }
-                return false
-            }
-        )
-    }
-
-    func testCancelRejectsWrongIDAndCannotRewardCancelledRun() throws {
-        var state = GameState.new(now: now)
-        _ = try GameEngine.apply(.startMinigame(kind: .carrotCatch), to: &state, at: now)
-        let run = try XCTUnwrap(state.activeMinigame)
-        let unchanged = state
+        let run = try startPlayingCarrot(in: &state)
 
         XCTAssertThrowsError(
             try GameEngine.apply(
-                .cancelMinigame(runID: MinigameRunID(rawValue: "wrong")),
+                .carrotCatchTimeout(runID: run.id),
                 to: &state,
-                at: now
-            )
-        ) { error in
-            XCTAssertEqual(error as? GameRuleError, .invalidMinigameRun)
-        }
-        XCTAssertEqual(state, unchanged)
-
-        let events = try GameEngine.apply(
-            .cancelMinigame(runID: run.id),
-            to: &state,
-            at: now
-        )
-        XCTAssertEqual(events.last, .minigameCancelled(run.id))
-        XCTAssertNil(state.activeMinigame)
-        XCTAssertEqual(state.carrots, unchanged.carrots)
-        XCTAssertFalse(state.rewardedMinigameRuns.contains(run.id))
-
-        XCTAssertThrowsError(
-            try GameEngine.apply(
-                .finishMinigame(
-                    runID: run.id,
-                    submission: .carrotCatch(moves: [CarrotCatchMove(lane: 0)])
-                ),
-                to: &state,
-                at: now
-            )
-        ) { error in
-            XCTAssertEqual(error as? GameRuleError, .noActiveMinigame)
-        }
-    }
-
-    func testRunRejectsWrongIdentifierSubmissionTypeAndExpiry() throws {
-        var wrongIDState = GameState.new(now: now)
-        _ = try GameEngine.apply(
-            .startMinigame(kind: .carrotCatch),
-            to: &wrongIDState,
-            at: now
-        )
-        let run = try XCTUnwrap(wrongIDState.activeMinigame)
-        let validMoves = [CarrotCatchMove(lane: 0)]
-
-        XCTAssertThrowsError(
-            try GameEngine.apply(
-                .finishMinigame(
-                    runID: MinigameRunID(rawValue: "other"),
-                    submission: .carrotCatch(moves: validMoves)
-                ),
-                to: &wrongIDState,
-                at: now
-            )
-        ) { error in
-            XCTAssertEqual(error as? GameRuleError, .invalidMinigameRun)
-        }
-
-        XCTAssertThrowsError(
-            try GameEngine.apply(
-                .finishMinigame(
-                    runID: run.id,
-                    submission: .gardenEcho(rounds: [GardenEchoRound(symbols: [0, 1, 2])])
-                ),
-                to: &wrongIDState,
-                at: now
+                at: now.adding(seconds: 29)
             )
         ) { error in
             XCTAssertEqual(error as? GameRuleError, .invalidMinigameSubmission)
         }
-
-        XCTAssertThrowsError(
+        _ = try GameEngine.apply(
+            .carrotCatchTimeout(runID: run.id),
+            to: &state,
+            at: now.adding(seconds: 30)
+        )
+        XCTAssertNoThrow(
             try GameEngine.apply(
-                .finishMinigame(
-                    runID: run.id,
-                    submission: .carrotCatch(moves: validMoves)
-                ),
-                to: &wrongIDState,
-                at: now.adding(seconds: GameEngine.minigameDurationSeconds + 1)
+                .finishMinigame(runID: run.id),
+                to: &state,
+                at: now.adding(seconds: 30)
             )
-        ) { error in
-            XCTAssertEqual(error as? GameRuleError, .minigameExpired)
-        }
+        )
     }
 
-    func testExtremePersistedRunTimesExpireWithoutOverflowing() {
-        var state = GameState.new(now: now)
-        let run = ActiveMinigameRun(
-            id: MinigameRunID(rawValue: "extreme"),
-            kind: .carrotCatch,
-            seed: 1,
-            startedAt: GameInstant(secondsSinceEpoch: .min),
-            accumulatedActiveSeconds: .max - 1,
-            lastResumedAt: GameInstant(secondsSinceEpoch: .min)
-        )
-        state.activeMinigame = run
-
-        XCTAssertThrowsError(
-            try GameEngine.apply(
-                .finishMinigame(
-                    runID: run.id,
-                    submission: .carrotCatch(moves: [])
-                ),
-                to: &state,
-                at: GameInstant(secondsSinceEpoch: .max)
+    func testRelaxedCarrotAndGardenRemainValidBeyondFiveMinutes() throws {
+        var carrotState = GameState.new(now: now)
+        let carrot = try startPlayingCarrot(in: &carrotState, mode: .relaxed)
+        let late = now.adding(seconds: 10 * 60)
+        let lanes = CarrotCatch.carrotLanes(seed: carrot.seed, count: CarrotCatch.maximumMoves)
+        for lane in lanes {
+            _ = try GameEngine.apply(
+                .carrotCatchInput(runID: carrot.id, lane: lane),
+                to: &carrotState,
+                at: late
             )
-        ) { error in
-            XCTAssertEqual(error as? GameRuleError, .minigameExpired)
         }
+        XCTAssertNoThrow(
+            try GameEngine.apply(.finishMinigame(runID: carrot.id), to: &carrotState, at: late)
+        )
+
+        var gardenState = GameState.new(now: now)
+        gardenState.bondPoints = BondProgress.thresholds[1]
+        _ = try GameEngine.apply(.startMinigame(kind: .gardenEcho), to: &gardenState, at: now)
+        let garden = try XCTUnwrap(gardenState.activeMinigame)
+        for _ in 1 ... GardenEcho.maximumRounds {
+            _ = try GameEngine.apply(
+                .gardenEchoBeginInput(runID: garden.id),
+                to: &gardenState,
+                at: late
+            )
+            guard case let .gardenEcho(progress)? = gardenState.activeMinigame?.progress else {
+                return XCTFail("Expected Garden Echo progress")
+            }
+            XCTAssertEqual(progress.currentSequence, progress.game.sequence)
+            for symbol in progress.game.sequence {
+                _ = try GameEngine.apply(
+                    .gardenEchoInput(runID: garden.id, symbol: symbol),
+                    to: &gardenState,
+                    at: late
+                )
+            }
+        }
+        XCTAssertNoThrow(
+            try GameEngine.apply(.finishMinigame(runID: garden.id), to: &gardenState, at: late)
+        )
+    }
+
+    func testGardenRequiresFiveRoundsOrThreeRecordedMistakes() throws {
+        var state = GameState.new(now: now)
+        state.bondPoints = BondProgress.thresholds[1]
+        _ = try GameEngine.apply(.startMinigame(kind: .gardenEcho), to: &state, at: now)
+        let run = try XCTUnwrap(state.activeMinigame)
+
+        _ = try GameEngine.apply(.gardenEchoBeginInput(runID: run.id), to: &state, at: now)
+        XCTAssertThrowsError(
+            try GameEngine.apply(.finishMinigame(runID: run.id), to: &state, at: now)
+        )
+        for _ in 1 ... GardenEcho.maximumMistakes {
+            guard case let .gardenEcho(progress)? = state.activeMinigame?.progress else {
+                return XCTFail("Expected Garden Echo progress")
+            }
+            if progress.game.phase != .input {
+                _ = try GameEngine.apply(
+                    .gardenEchoBeginInput(runID: run.id),
+                    to: &state,
+                    at: now
+                )
+            }
+            guard case let .gardenEcho(inputProgress)? = state.activeMinigame?.progress else {
+                return XCTFail("Expected Garden Echo progress")
+            }
+            let wrong = (inputProgress.game.sequence[0] + 1) % GardenEcho.symbolRange.count
+            _ = try GameEngine.apply(
+                .gardenEchoInput(runID: run.id, symbol: wrong),
+                to: &state,
+                at: now
+            )
+        }
+        XCTAssertNoThrow(
+            try GameEngine.apply(.finishMinigame(runID: run.id), to: &state, at: now)
+        )
+    }
+
+    func testPausePreservesExactProgressAndCancelAloneDestroysIt() throws {
+        var state = GameState.new(now: now)
+        let run = try startPlayingCarrot(in: &state, mode: .relaxed)
+        _ = try GameEngine.apply(
+            .carrotCatchInput(runID: run.id, lane: 1),
+            to: &state,
+            at: now.adding(seconds: 1)
+        )
+        _ = try GameEngine.apply(
+            .pauseMinigame(runID: run.id),
+            to: &state,
+            at: now.adding(seconds: 2)
+        )
+        let encoded = try JSONEncoder().encode(state)
+        let resumed = try JSONDecoder().decode(GameState.self, from: encoded)
+        XCTAssertEqual(resumed, state)
+        XCTAssertEqual(resumed.activeMinigame?.isPaused, true)
+
+        let beforeCancel = state.carrots
+        _ = try GameEngine.apply(.cancelMinigame(runID: run.id), to: &state, at: now)
+        XCTAssertNil(state.activeMinigame)
+        XCTAssertEqual(state.carrots, beforeCancel)
+        XCTAssertFalse(state.rewardedMinigameRuns.contains(run.id))
+    }
+
+    private func startPlayingCarrot(
+        in state: inout GameState,
+        mode: CarrotCatchTimingMode = .standard
+    ) throws -> ActiveMinigameRun {
+        _ = try GameEngine.apply(.startMinigame(kind: .carrotCatch), to: &state, at: now)
+        let run = try XCTUnwrap(state.activeMinigame)
+        if mode != .standard {
+            _ = try GameEngine.apply(
+                .setCarrotCatchTiming(runID: run.id, mode: mode),
+                to: &state,
+                at: now
+            )
+        }
+        for _ in 0 ..< 3 {
+            _ = try GameEngine.apply(
+                .advanceCarrotCatchCountdown(runID: run.id),
+                to: &state,
+                at: now
+            )
+        }
+        return try XCTUnwrap(state.activeMinigame)
     }
 
     func testGardenEchoRequiresBondLevelOne() throws {

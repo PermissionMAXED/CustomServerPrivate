@@ -2,7 +2,31 @@ public enum GameSimulation {
     public static let tickSeconds: Int64 = 60
     public static let offlineCapSeconds: Int64 = 8 * 60 * 60
 
+    /// Compatibility entry point for launch/return simulation.
     public static func advance(_ state: inout GameState, to now: GameInstant) -> [GameEvent] {
+        advanceAfterAbsence(&state, to: now)
+    }
+
+    public static func advanceAfterAbsence(
+        _ state: inout GameState,
+        to now: GameInstant
+    ) -> [GameEvent] {
+        advance(&state, to: now, capSeconds: offlineCapSeconds, consumeExcess: true)
+    }
+
+    public static func advanceForeground(
+        _ state: inout GameState,
+        to now: GameInstant
+    ) -> [GameEvent] {
+        advance(&state, to: now, capSeconds: nil, consumeExcess: false)
+    }
+
+    private static func advance(
+        _ state: inout GameState,
+        to now: GameInstant,
+        capSeconds: Int64?,
+        consumeExcess: Bool
+    ) -> [GameEvent] {
         guard now >= state.lastSimulatedAt else { return [] }
         let (difference, overflowed) = now.secondsSinceEpoch.subtractingReportingOverflow(
             state.lastSimulatedAt.secondsSinceEpoch
@@ -12,15 +36,14 @@ public enum GameSimulation {
             return []
         }
 
-        let simulatedSeconds = min(elapsed, offlineCapSeconds)
-        let minutes = Int(simulatedSeconds / tickSeconds)
+        let simulatedSeconds = capSeconds.map { min(elapsed, $0) } ?? elapsed
+        let minuteCount = simulatedSeconds / tickSeconds
+        let minutes = minuteCount > Int64(Int.max) ? Int.max : Int(minuteCount)
         guard minutes > 0 else { return [] }
 
-        for _ in 0 ..< minutes {
-            applyTick(to: &state)
-        }
+        applyTicks(minutes, to: &state)
 
-        if elapsed > offlineCapSeconds {
+        if consumeExcess, let capSeconds, elapsed > capSeconds {
             state.lastSimulatedAt = now
         } else {
             state.lastSimulatedAt = state.lastSimulatedAt.adding(
@@ -30,26 +53,28 @@ public enum GameSimulation {
         return [.simulated(minutes: minutes)]
     }
 
-    private static func applyTick(to state: inout GameState) {
+    private static func applyTicks(_ minutes: Int, to state: inout GameState) {
         if state.isSleeping {
-            state.needs.fullness.adjust(by: -1, floor: 200)
-            state.needs.cleanliness.adjust(by: -1, floor: 150)
-            state.needs.energy.adjust(by: 4, floor: 100)
-            state.needs.fun.adjust(by: 0, floor: 100)
+            state.needs.fullness.adjust(by: multipliedClamped(-1, minutes))
+            state.needs.cleanliness.adjust(by: multipliedClamped(-1, minutes))
+            state.needs.energy.adjust(by: multipliedClamped(4, minutes))
         } else {
-            state.needs.fullness.adjust(by: -2, floor: 200)
-            state.needs.cleanliness.adjust(by: -1, floor: 150)
-            state.needs.energy.adjust(by: -1, floor: 100)
-            state.needs.fun.adjust(by: -1, floor: 100)
+            state.needs.fullness.adjust(by: multipliedClamped(-2, minutes))
+            state.needs.cleanliness.adjust(by: multipliedClamped(-1, minutes))
+            state.needs.energy.adjust(by: multipliedClamped(-1, minutes))
+            state.needs.fun.adjust(by: multipliedClamped(-1, minutes))
         }
+    }
+
+    private static func multipliedClamped(_ value: Int, _ count: Int) -> Int {
+        let (result, overflowed) = value.multipliedReportingOverflow(by: count)
+        return overflowed ? (value >= 0 ? Int.max : Int.min) : result
     }
 }
 
 public enum GameEngine {
     public static let dailyCarrotRewards = [5, 7, 9, 12, 15, 20, 30]
     public static let duplicateMoonCrownCarrots = 25
-    public static let minigameDurationSeconds: Int64 = 5 * 60
-
     @discardableResult
     public static func reconcileProgression(
         _ state: inout GameState,
@@ -67,15 +92,19 @@ public enum GameEngine {
     public static func apply(
         _ command: GameCommand,
         to state: inout GameState,
-        at now: GameInstant
+        at now: GameInstant,
+        localDay: LocalDayKey? = nil
     ) throws -> [GameEvent] {
         var candidate = state
-        var events = GameSimulation.advance(&candidate, to: now)
+        var events = GameSimulation.advanceForeground(&candidate, to: now)
 
         switch command {
         case let .move(room):
+            if candidate.isSleeping {
+                candidate.isSleeping = false
+                events.append(.sleepChanged(false))
+            }
             candidate.currentRoom = room
-            candidate.isSleeping = false
             events.append(.moved(room))
 
         case .feed:
@@ -117,15 +146,26 @@ public enum GameEngine {
 
         case .beginSleep:
             try requireRoom(.bedroom, state: candidate)
+            guard !candidate.isSleeping else {
+                throw GameRuleError.invalidSleepTransition
+            }
             candidate.isSleeping = true
             events.append(.sleepChanged(true))
 
         case .endSleep:
+            guard candidate.isSleeping else {
+                throw GameRuleError.invalidSleepTransition
+            }
             candidate.isSleeping = false
             events.append(.sleepChanged(false))
 
         case .claimDailyReward:
-            try claimDailyReward(state: &candidate, at: now, events: &events)
+            try claimDailyReward(
+                state: &candidate,
+                at: now,
+                localDay: localDay,
+                events: &events
+            )
 
         case let .purchase(itemID):
             try purchase(itemID, state: &candidate, events: &events)
@@ -178,12 +218,65 @@ public enum GameEngine {
         case let .cancelMinigame(runID):
             try cancelMinigame(runID: runID, state: &candidate, events: &events)
 
-        case let .finishMinigame(runID, submission):
-            try finishMinigame(
+        case let .setCarrotCatchTiming(runID, mode):
+            try setCarrotCatchTiming(
                 runID: runID,
-                submission: submission,
+                mode: mode,
+                state: &candidate,
+                events: &events
+            )
+
+        case let .advanceCarrotCatchCountdown(runID):
+            try advanceCarrotCatchCountdown(
+                runID: runID,
                 state: &candidate,
                 at: now,
+                events: &events
+            )
+
+        case let .carrotCatchInput(runID, lane):
+            try recordCarrotCatchInput(
+                runID: runID,
+                lane: lane,
+                state: &candidate,
+                at: now,
+                events: &events
+            )
+
+        case let .carrotCatchTimeout(runID):
+            try timeoutCarrotCatch(
+                runID: runID,
+                state: &candidate,
+                at: now,
+                events: &events
+            )
+
+        case let .gardenEchoBeginInput(runID):
+            try beginGardenEchoInput(
+                runID: runID,
+                state: &candidate,
+                events: &events
+            )
+
+        case let .gardenEchoInput(runID, symbol):
+            try recordGardenEchoInput(
+                runID: runID,
+                symbol: symbol,
+                state: &candidate,
+                events: &events
+            )
+
+        case let .gardenEchoReplay(runID):
+            try replayGardenEcho(
+                runID: runID,
+                state: &candidate,
+                events: &events
+            )
+
+        case let .finishMinigame(runID):
+            try finishMinigame(
+                runID: runID,
+                state: &candidate,
                 events: &events
             )
         }
@@ -245,9 +338,13 @@ public enum GameEngine {
     ) {
         guard amount > 0 else { return }
         state.carrots = max(0, state.carrots)
+        let oldBalance = state.carrots
         let (newBalance, overflowed) = state.carrots.addingReportingOverflow(amount)
         state.carrots = overflowed ? Int.max : newBalance
-        events.append(.carrotsChanged(delta: amount, balance: state.carrots))
+        let applied = state.carrots - oldBalance
+        if applied > 0 {
+            events.append(.carrotsChanged(delta: applied, balance: state.carrots))
+        }
     }
 
     private static func addBond(
@@ -287,12 +384,14 @@ public enum GameEngine {
     private static func claimDailyReward(
         state: inout GameState,
         at now: GameInstant,
+        localDay: LocalDayKey?,
         events: inout [GameEvent]
     ) throws {
-        let day = now.secondsSinceEpoch / DailyRewardSchedule.secondsPerDay
+        let dayKey = localDay ?? DailyRewardSchedule.utcDayKey(for: now)
         let eligibility = DailyRewardSchedule.eligibility(
             for: state.dailyReward,
             at: now,
+            localDay: dayKey,
             cycleCount: dailyCarrotRewards.count
         )
         let step: Int
@@ -306,8 +405,10 @@ public enum GameEngine {
         }
 
         let reward = dailyCarrotRewards[step - 1]
-        state.dailyReward.lastClaimedDay = day
-        state.dailyReward.streakStep = step
+        state.dailyReward.lastClaimedDay = now.secondsSinceEpoch
+            / DailyRewardSchedule.secondsPerDay
+        state.dailyReward.visitStep = step
+        state.dailyReward.claimedLocalDays.append(dayKey)
         addCarrots(reward, state: &state, events: &events)
         events.append(.dailyRewardClaimed(step: step, carrots: reward))
         if step == dailyCarrotRewards.count {
@@ -337,8 +438,12 @@ public enum GameEngine {
 
         switch item.kind {
         case .food:
+            let currentQuantity = state.foodQuantity(itemID)
+            guard currentQuantity < Int.max else {
+                throw GameRuleError.inventoryFull(itemID)
+            }
             try spendCarrots(item.price, state: &state, events: &events)
-            let quantity = incremented(state.foodQuantity(itemID))
+            let quantity = currentQuantity + 1
             state.foodInventory[itemID] = quantity
             events.append(.inventoryChanged(itemID: itemID, quantity: quantity))
             events.append(.purchased(itemID))
@@ -440,12 +545,203 @@ public enum GameEngine {
                 elapsed
             )
             run.lastResumedAt = nil
+            switch run.progress {
+            case var .carrotCatch(progress):
+                if progress.stage == .playing, let playingAt = progress.lastPlayingAt {
+                    progress.accumulatedPlayingSeconds = addingClamped(
+                        progress.accumulatedPlayingSeconds,
+                        try elapsedSeconds(from: playingAt, to: now)
+                    )
+                    progress.lastPlayingAt = nil
+                }
+                progress.game.pause()
+                run.progress = .carrotCatch(progress)
+            case var .gardenEcho(progress):
+                progress.game.pause()
+                run.progress = .gardenEcho(progress)
+            }
         } else {
             guard run.lastResumedAt == nil else { return }
             run.lastResumedAt = now
+            switch run.progress {
+            case var .carrotCatch(progress):
+                progress.game.resume()
+                if progress.stage == .playing {
+                    progress.lastPlayingAt = now
+                }
+                run.progress = .carrotCatch(progress)
+            case var .gardenEcho(progress):
+                progress.game.resume()
+                run.progress = .gardenEcho(progress)
+            }
         }
         state.activeMinigame = run
         events.append(.minigamePauseChanged(runID: runID, paused: paused))
+    }
+
+    private static func setCarrotCatchTiming(
+        runID: MinigameRunID,
+        mode: CarrotCatchTimingMode,
+        state: inout GameState,
+        events: inout [GameEvent]
+    ) throws {
+        var run = try activeRun(runID, in: state)
+        guard case var .carrotCatch(progress) = run.progress,
+              progress.stage == .instructions || progress.stage == .countdown
+        else {
+            throw GameRuleError.invalidMinigameSubmission
+        }
+        progress.timingMode = mode
+        run.progress = .carrotCatch(progress)
+        state.activeMinigame = run
+        events.append(.minigameProgressed(runID: runID))
+    }
+
+    private static func advanceCarrotCatchCountdown(
+        runID: MinigameRunID,
+        state: inout GameState,
+        at now: GameInstant,
+        events: inout [GameEvent]
+    ) throws {
+        var run = try activeRun(runID, in: state)
+        guard !run.isPaused, case var .carrotCatch(progress) = run.progress else {
+            throw GameRuleError.invalidMinigameSubmission
+        }
+        guard progress.stage == .instructions || progress.stage == .countdown else {
+            throw GameRuleError.invalidMinigameSubmission
+        }
+        progress.stage = .countdown
+        progress.countdownRemaining = max(0, progress.countdownRemaining - 1)
+        if progress.countdownRemaining == 0 {
+            progress.stage = .playing
+            progress.lastPlayingAt = now
+        }
+        run.progress = .carrotCatch(progress)
+        state.activeMinigame = run
+        events.append(.minigameProgressed(runID: runID))
+    }
+
+    private static func recordCarrotCatchInput(
+        runID: MinigameRunID,
+        lane: Int?,
+        state: inout GameState,
+        at now: GameInstant,
+        events: inout [GameEvent]
+    ) throws {
+        var run = try activeRun(runID, in: state)
+        guard !run.isPaused, case var .carrotCatch(progress) = run.progress,
+              progress.stage == .playing
+        else {
+            throw GameRuleError.invalidMinigameSubmission
+        }
+        try updateCarrotPlayingTime(&progress, at: now)
+        if progress.timingMode == .standard,
+           progress.accumulatedPlayingSeconds >= Int64(CarrotCatch.standardDurationSeconds) {
+            throw GameRuleError.minigameExpired
+        }
+        let accepted: Bool
+        if let lane {
+            accepted = progress.game.catchCarrot(in: lane)
+        } else {
+            accepted = progress.game.missCarrot()
+        }
+        guard accepted else {
+            throw GameRuleError.invalidMinigameSubmission
+        }
+        if progress.game.isFinished {
+            progress.stage = .terminal
+            progress.lastPlayingAt = nil
+        } else {
+            progress.lastPlayingAt = now
+        }
+        run.progress = .carrotCatch(progress)
+        state.activeMinigame = run
+        events.append(.minigameProgressed(runID: runID))
+    }
+
+    private static func timeoutCarrotCatch(
+        runID: MinigameRunID,
+        state: inout GameState,
+        at now: GameInstant,
+        events: inout [GameEvent]
+    ) throws {
+        var run = try activeRun(runID, in: state)
+        guard !run.isPaused, case var .carrotCatch(progress) = run.progress,
+              progress.stage == .playing,
+              progress.timingMode == .standard
+        else {
+            throw GameRuleError.invalidMinigameSubmission
+        }
+        try updateCarrotPlayingTime(&progress, at: now)
+        guard progress.accumulatedPlayingSeconds >= Int64(CarrotCatch.standardDurationSeconds) else {
+            throw GameRuleError.invalidMinigameSubmission
+        }
+        progress.game.finishRemainingAsMisses()
+        progress.stage = .terminal
+        progress.lastPlayingAt = nil
+        run.progress = .carrotCatch(progress)
+        state.activeMinigame = run
+        events.append(.minigameProgressed(runID: runID))
+    }
+
+    private static func beginGardenEchoInput(
+        runID: MinigameRunID,
+        state: inout GameState,
+        events: inout [GameEvent]
+    ) throws {
+        var run = try activeRun(runID, in: state)
+        guard !run.isPaused, case var .gardenEcho(progress) = run.progress,
+              progress.game.beginInput()
+        else {
+            throw GameRuleError.invalidMinigameSubmission
+        }
+        progress.playbackIndex = progress.game.sequence.count
+        run.progress = .gardenEcho(progress)
+        state.activeMinigame = run
+        events.append(.minigameProgressed(runID: runID))
+    }
+
+    private static func recordGardenEchoInput(
+        runID: MinigameRunID,
+        symbol: Int,
+        state: inout GameState,
+        events: inout [GameEvent]
+    ) throws {
+        var run = try activeRun(runID, in: state)
+        guard !run.isPaused, case var .gardenEcho(progress) = run.progress else {
+            throw GameRuleError.invalidMinigameSubmission
+        }
+        let result = progress.game.submit(symbol: symbol)
+        guard result != .ignored else {
+            throw GameRuleError.invalidMinigameSubmission
+        }
+        if progress.game.phase == .sequence {
+            progress.playbackIndex = 0
+        }
+        progress.currentSequence = progress.game.sequence
+        run.progress = .gardenEcho(progress)
+        state.activeMinigame = run
+        events.append(.minigameProgressed(runID: runID))
+    }
+
+    private static func replayGardenEcho(
+        runID: MinigameRunID,
+        state: inout GameState,
+        events: inout [GameEvent]
+    ) throws {
+        var run = try activeRun(runID, in: state)
+        guard !run.isPaused, case var .gardenEcho(progress) = run.progress,
+              progress.game.phase != .finished
+        else {
+            throw GameRuleError.invalidMinigameSubmission
+        }
+        progress.game.replaySequence()
+        progress.currentSequence = progress.game.sequence
+        progress.replayCount = incremented(progress.replayCount)
+        progress.playbackIndex = 0
+        run.progress = .gardenEcho(progress)
+        state.activeMinigame = run
+        events.append(.minigameProgressed(runID: runID))
     }
 
     private static func cancelMinigame(
@@ -465,9 +761,7 @@ public enum GameEngine {
 
     private static func finishMinigame(
         runID: MinigameRunID,
-        submission: MinigameSubmission,
         state: inout GameState,
-        at now: GameInstant,
         events: inout [GameEvent]
     ) throws {
         if state.rewardedMinigameRuns.contains(runID) {
@@ -481,31 +775,26 @@ public enum GameEngine {
             throw GameRuleError.invalidMinigameRun
         }
 
-        var activeSeconds = run.accumulatedActiveSeconds
-        if let resumedAt = run.lastResumedAt {
-            let elapsed = try elapsedSeconds(from: resumedAt, to: now)
-            activeSeconds = addingClamped(activeSeconds, elapsed)
-        }
-        guard activeSeconds <= minigameDurationSeconds else {
-            throw GameRuleError.minigameExpired
-        }
-
         let score: Int
-        switch (run.kind, submission) {
-        case let (.carrotCatch, .carrotCatch(moves)):
-            guard let result = CarrotCatch.play(seed: run.seed, moves: moves) else {
+        switch run.progress {
+        case let .carrotCatch(progress):
+            guard progress.stage == .terminal,
+                  progress.game.moves.count == CarrotCatch.maximumMoves,
+                  let result = progress.game.result
+            else {
                 throw GameRuleError.invalidMinigameSubmission
             }
             score = result.score
 
-        case let (.gardenEcho, .gardenEcho(rounds)):
-            guard let result = GardenEcho.play(seed: run.seed, rounds: rounds) else {
+        case let .gardenEcho(progress):
+            guard progress.game.phase == .finished,
+                  progress.game.completedRounds == GardenEcho.maximumRounds
+                    || progress.game.mistakes == GardenEcho.maximumMistakes,
+                  let result = progress.game.result
+            else {
                 throw GameRuleError.invalidMinigameSubmission
             }
             score = result.score
-
-        default:
-            throw GameRuleError.invalidMinigameSubmission
         }
 
         let reward = score / 10
@@ -520,22 +809,53 @@ public enum GameEngine {
         events.append(.minigameFinished(runID: runID, score: score, carrots: reward))
     }
 
+    private static func activeRun(
+        _ runID: MinigameRunID,
+        in state: GameState
+    ) throws -> ActiveMinigameRun {
+        guard let run = state.activeMinigame else {
+            throw GameRuleError.noActiveMinigame
+        }
+        guard run.id == runID else {
+            throw GameRuleError.invalidMinigameRun
+        }
+        return run
+    }
+
+    private static func updateCarrotPlayingTime(
+        _ progress: inout CarrotCatchProgress,
+        at now: GameInstant
+    ) throws {
+        guard let startedAt = progress.lastPlayingAt else {
+            throw GameRuleError.invalidMinigameSubmission
+        }
+        progress.accumulatedPlayingSeconds = addingClamped(
+            progress.accumulatedPlayingSeconds,
+            try elapsedSeconds(from: startedAt, to: now)
+        )
+    }
+
     private static func unlockAchievements(
         state: inout GameState,
         at now: GameInstant,
         events: inout [GameEvent]
     ) {
-        for definition in GoobyAchievements.definitions
-        where definition.progress(in: state) >= definition.target
-            && !state.unlockedAchievements.contains(definition.id) {
-            state.unlockedAchievements.append(definition.id)
-            state.unlockedAchievements.sort()
-            state.achievementUnlockDates[definition.id] = now
-            addCarrots(definition.carrotReward, state: &state, events: &events)
-            events.append(
-                .achievementUnlocked(definition.id, carrots: definition.carrotReward)
-            )
-        }
+        var unlockedInPass: Bool
+        repeat {
+            unlockedInPass = false
+            for definition in GoobyAchievements.definitions
+            where definition.progress(in: state) >= definition.target
+                && !state.unlockedAchievements.contains(definition.id) {
+                state.unlockedAchievements.append(definition.id)
+                state.unlockedAchievements.sort()
+                state.achievementUnlockDates[definition.id] = now
+                addCarrots(definition.carrotReward, state: &state, events: &events)
+                events.append(
+                    .achievementUnlocked(definition.id, carrots: definition.carrotReward)
+                )
+                unlockedInPass = true
+            }
+        } while unlockedInPass
     }
 
     private static func incremented(_ value: Int) -> Int {

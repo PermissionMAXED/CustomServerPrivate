@@ -15,7 +15,6 @@ final class GoobyDemoUITests: XCTestCase {
             "--fixed-time",
             "1728000000",
             "--short-minigames",
-            "--recorded-demo",
         ]
         app.launch()
         defer { app.terminate() }
@@ -65,7 +64,7 @@ final class GoobyDemoUITests: XCTestCase {
         for lane in DemoSequence.carrotLanes {
             pressCarrotLane(lane, in: app)
         }
-        waitForLabel("30 points", identifier: "carrot.result.score", in: app)
+        waitForLabel("200 points", identifier: "carrot.result.score", in: app)
         attachScreenshot(named: "Gooby Demo — Carrot Catch Result")
         tap(app.buttons["carrot.done"], in: app)
 
@@ -81,7 +80,7 @@ final class GoobyDemoUITests: XCTestCase {
                 pressEchoPad(pad, in: app)
             }
         }
-        waitForLabel("25 points", identifier: "echo.result.score", in: app)
+        waitForLabel("125 points", identifier: "echo.result.score", in: app)
         attachScreenshot(named: "Gooby Demo — Garden Echo Result")
         tap(app.buttons["echo.done"], in: app)
         tap(app.buttons["arcade.home"], in: app)
@@ -153,9 +152,18 @@ final class GoobyDemoUITests: XCTestCase {
 }
 
 private enum DemoSequence {
-    static let carrotLanes = ["left", "center", "center"]
+    static let carrotLanes = [
+        "left", "center", "center", "right", "center",
+        "right", "right", "right", "center", "right",
+        "left", "right", "right", "left", "right",
+        "left", "center", "left", "right", "right",
+    ]
 
     static let echoRounds = [
         ["leaf", "star", "leaf"],
+        ["leaf", "star", "leaf", "leaf"],
+        ["leaf", "star", "leaf", "leaf", "berry"],
+        ["leaf", "star", "leaf", "leaf", "berry", "berry"],
+        ["leaf", "star", "leaf", "leaf", "berry", "berry", "leaf"],
     ]
 }

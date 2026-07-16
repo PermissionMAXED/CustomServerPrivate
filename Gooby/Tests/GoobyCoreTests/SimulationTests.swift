@@ -1,3 +1,4 @@
+import Foundation
 import GoobyCore
 import XCTest
 
@@ -56,7 +57,7 @@ final class SimulationTests: XCTestCase {
         XCTAssertTrue(GameSimulation.advance(&state, to: returnTime).isEmpty)
     }
 
-    func testOfflineNeedsStopAtSafetyFloors() {
+    func testOfflineNeedsDecayNaturallyWithoutSafetyFloorHealing() {
         var state = GameState.new(now: start)
         state.needs = Needs(
             fullness: NeedValue(201),
@@ -70,10 +71,10 @@ final class SimulationTests: XCTestCase {
             to: start.adding(seconds: GameSimulation.offlineCapSeconds)
         )
 
-        XCTAssertEqual(state.needs.fullness.value, 200)
-        XCTAssertEqual(state.needs.cleanliness.value, 150)
-        XCTAssertEqual(state.needs.energy.value, 100)
-        XCTAssertEqual(state.needs.fun.value, 100)
+        XCTAssertEqual(state.needs.fullness.value, 0)
+        XCTAssertEqual(state.needs.cleanliness.value, 0)
+        XCTAssertEqual(state.needs.energy.value, 0)
+        XCTAssertEqual(state.needs.fun.value, 0)
     }
 
     func testClockRollbackDoesNotRewindOrSimulate() {
@@ -122,6 +123,55 @@ final class SimulationTests: XCTestCase {
         )
     }
 
+    func testLocalDayKeyHandlesDSTRepeatedHourAsOneVisitDate() throws {
+        let newYork = try XCTUnwrap(TimeZone(identifier: "America/New_York"))
+        let firstHour = GameInstant(secondsSinceEpoch: 1_730_611_800)
+        let repeatedHour = GameInstant(secondsSinceEpoch: 1_730_615_400)
+
+        XCTAssertEqual(
+            DailyRewardSchedule.localDayKey(for: firstHour, timeZone: newYork),
+            DailyRewardSchedule.localDayKey(for: repeatedHour, timeZone: newYork)
+        )
+    }
+
+    func testTimezoneAndClockForwardBackUseLedgerWithoutPermanentLock() throws {
+        let utc = try XCTUnwrap(TimeZone(secondsFromGMT: 0))
+        let pacific = try XCTUnwrap(TimeZone(identifier: "Pacific/Kiritimati"))
+        let instant = GameInstant(secondsSinceEpoch: 1_728_043_200)
+        let utcDay = DailyRewardSchedule.localDayKey(for: instant, timeZone: utc)
+        let forwardDay = DailyRewardSchedule.localDayKey(for: instant, timeZone: pacific)
+        var reward = DailyRewardState(
+            streakStep: 1,
+            claimedLocalDays: [forwardDay]
+        )
+
+        XCTAssertEqual(
+            DailyRewardSchedule.eligibility(
+                for: reward,
+                at: instant,
+                localDay: forwardDay
+            ),
+            .alreadyClaimed(step: 1)
+        )
+        XCTAssertEqual(
+            DailyRewardSchedule.eligibility(
+                for: reward,
+                at: instant,
+                localDay: utcDay
+            ),
+            .eligible(step: 2)
+        )
+        reward.claimedLocalDays.append(utcDay)
+        XCTAssertEqual(
+            DailyRewardSchedule.eligibility(
+                for: reward,
+                at: instant,
+                localDay: forwardDay
+            ),
+            .alreadyClaimed(step: 1)
+        )
+    }
+
     func testSleepRestoresEnergyUsingTheSameFixedTicks() {
         var state = GameState.new(now: start)
         state.currentRoom = .bedroom
@@ -133,5 +183,44 @@ final class SimulationTests: XCTestCase {
         XCTAssertEqual(state.needs.energy.value, 540)
         XCTAssertEqual(state.needs.fullness.value, 790)
         XCTAssertTrue(state.isSleeping)
+    }
+
+    func testPositiveSleepRecoveryAddsExactlyRequestedAmountBelowOldFloor() {
+        var state = GameState.new(now: start)
+        state.currentRoom = .bedroom
+        state.needs.energy = NeedValue(0)
+        _ = try? GameEngine.apply(.beginSleep, to: &state, at: start)
+
+        _ = GameSimulation.advanceForeground(
+            &state,
+            to: start.adding(seconds: GameSimulation.tickSeconds)
+        )
+
+        XCTAssertEqual(state.needs.energy.value, 4)
+    }
+
+    func testForegroundProgressIsUncappedAndPartitionInvariantAfterOneAbsence() {
+        let returnTime = start.adding(seconds: 12 * 60 * 60)
+        var whole = GameState.new(now: start)
+        var partitioned = whole
+
+        _ = GameSimulation.advanceAfterAbsence(&whole, to: returnTime)
+        _ = GameSimulation.advanceAfterAbsence(&partitioned, to: returnTime)
+        for minute in 1 ... 20 {
+            _ = GameSimulation.advanceForeground(
+                &whole,
+                to: returnTime.adding(seconds: Int64(minute * 60))
+            )
+        }
+        _ = GameSimulation.advanceForeground(
+            &partitioned,
+            to: returnTime.adding(seconds: 20 * 60)
+        )
+
+        XCTAssertEqual(whole, partitioned)
+        XCTAssertEqual(
+            whole.lastSimulatedAt,
+            returnTime.adding(seconds: 20 * 60)
+        )
     }
 }

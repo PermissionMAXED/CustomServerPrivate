@@ -3,6 +3,70 @@ public enum MinigameKind: String, Codable, CaseIterable, Hashable, Sendable {
     case gardenEcho
 }
 
+public enum CarrotCatchTimingMode: String, Codable, Equatable, Sendable {
+    case standard
+    case relaxed
+}
+
+public enum CarrotCatchRunStage: String, Codable, Equatable, Sendable {
+    case instructions
+    case countdown
+    case playing
+    case terminal
+}
+
+public struct CarrotCatchProgress: Codable, Equatable, Sendable {
+    public var game: CarrotCatchGame
+    public var stage: CarrotCatchRunStage
+    public var timingMode: CarrotCatchTimingMode
+    public var countdownRemaining: Int
+    public var accumulatedPlayingSeconds: Int64
+    public var lastPlayingAt: GameInstant?
+
+    public init(
+        seed: UInt64,
+        game: CarrotCatchGame? = nil,
+        stage: CarrotCatchRunStage = .instructions,
+        timingMode: CarrotCatchTimingMode = .standard,
+        countdownRemaining: Int = 3,
+        accumulatedPlayingSeconds: Int64 = 0,
+        lastPlayingAt: GameInstant? = nil
+    ) {
+        self.game = game ?? CarrotCatchGame(seed: seed)
+        self.stage = stage
+        self.timingMode = timingMode
+        self.countdownRemaining = countdownRemaining
+        self.accumulatedPlayingSeconds = accumulatedPlayingSeconds
+        self.lastPlayingAt = lastPlayingAt
+    }
+}
+
+public struct GardenEchoProgress: Codable, Equatable, Sendable {
+    public var game: GardenEchoGame
+    public var currentSequence: [Int]
+    public var replayCount: Int
+    public var playbackIndex: Int
+
+    public init(
+        seed: UInt64,
+        game: GardenEchoGame? = nil,
+        currentSequence: [Int]? = nil,
+        replayCount: Int = 0,
+        playbackIndex: Int = 0
+    ) {
+        let initialGame = game ?? GardenEchoGame(seed: seed)
+        self.game = initialGame
+        self.currentSequence = currentSequence ?? initialGame.sequence
+        self.replayCount = replayCount
+        self.playbackIndex = playbackIndex
+    }
+}
+
+public enum MinigameProgress: Codable, Equatable, Sendable {
+    case carrotCatch(CarrotCatchProgress)
+    case gardenEcho(GardenEchoProgress)
+}
+
 public struct ActiveMinigameRun: Codable, Equatable, Sendable {
     public let id: MinigameRunID
     public let kind: MinigameKind
@@ -10,6 +74,7 @@ public struct ActiveMinigameRun: Codable, Equatable, Sendable {
     public let startedAt: GameInstant
     public var accumulatedActiveSeconds: Int64
     public var lastResumedAt: GameInstant?
+    public var progress: MinigameProgress
 
     public init(
         id: MinigameRunID,
@@ -17,7 +82,8 @@ public struct ActiveMinigameRun: Codable, Equatable, Sendable {
         seed: UInt64,
         startedAt: GameInstant,
         accumulatedActiveSeconds: Int64 = 0,
-        lastResumedAt: GameInstant? = nil
+        lastResumedAt: GameInstant? = nil,
+        progress: MinigameProgress? = nil
     ) {
         self.id = id
         self.kind = kind
@@ -25,6 +91,7 @@ public struct ActiveMinigameRun: Codable, Equatable, Sendable {
         self.startedAt = startedAt
         self.accumulatedActiveSeconds = accumulatedActiveSeconds
         self.lastResumedAt = lastResumedAt ?? startedAt
+        self.progress = progress ?? Self.initialProgress(kind: kind, seed: seed)
     }
 
     public var isPaused: Bool { lastResumedAt == nil }
@@ -36,6 +103,7 @@ public struct ActiveMinigameRun: Codable, Equatable, Sendable {
         case startedAt
         case accumulatedActiveSeconds
         case lastResumedAt
+        case progress
     }
 
     public init(from decoder: Decoder) throws {
@@ -55,6 +123,34 @@ public struct ActiveMinigameRun: Codable, Equatable, Sendable {
             )
         } else {
             lastResumedAt = startedAt
+        }
+        progress = try container.decodeIfPresent(
+            MinigameProgress.self,
+            forKey: .progress
+        ) ?? Self.initialProgress(kind: kind, seed: seed)
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(id, forKey: .id)
+        try container.encode(kind, forKey: .kind)
+        try container.encode(seed, forKey: .seed)
+        try container.encode(startedAt, forKey: .startedAt)
+        try container.encode(accumulatedActiveSeconds, forKey: .accumulatedActiveSeconds)
+        if let lastResumedAt {
+            try container.encode(lastResumedAt, forKey: .lastResumedAt)
+        } else {
+            try container.encodeNil(forKey: .lastResumedAt)
+        }
+        try container.encode(progress, forKey: .progress)
+    }
+
+    private static func initialProgress(kind: MinigameKind, seed: UInt64) -> MinigameProgress {
+        switch kind {
+        case .carrotCatch:
+            .carrotCatch(CarrotCatchProgress(seed: seed))
+        case .gardenEcho:
+            .gardenEcho(GardenEchoProgress(seed: seed))
         }
     }
 }
@@ -140,7 +236,7 @@ public enum CarrotCatch {
     }
 }
 
-public struct CarrotCatchGame: Equatable, Sendable {
+public struct CarrotCatchGame: Codable, Equatable, Sendable {
     public let seed: UInt64
     public private(set) var moves: [CarrotCatchMove]
     public private(set) var isPaused: Bool
@@ -181,7 +277,7 @@ public struct CarrotCatchGame: Equatable, Sendable {
         return true
     }
 
-    public mutating func finishRemainingAsMisses() {
+    mutating func finishRemainingAsMisses() {
         guard !isFinished else { return }
         while moves.count < CarrotCatch.maximumMoves {
             moves.append(CarrotCatchMove())
@@ -263,13 +359,13 @@ public enum GardenEcho {
     }
 }
 
-public enum GardenEchoPhase: Equatable, Sendable {
+public enum GardenEchoPhase: String, Codable, Equatable, Sendable {
     case sequence
     case input
     case finished
 }
 
-public enum GardenEchoInputResult: Equatable, Sendable {
+public enum GardenEchoInputResult: Codable, Equatable, Sendable {
     case ignored
     case correct(nextIndex: Int)
     case roundCompleted(Int)
@@ -278,7 +374,7 @@ public enum GardenEchoInputResult: Equatable, Sendable {
     case gameOver
 }
 
-public struct GardenEchoGame: Equatable, Sendable {
+public struct GardenEchoGame: Codable, Equatable, Sendable {
     public let seed: UInt64
     public private(set) var round: Int
     public private(set) var phase: GardenEchoPhase
@@ -376,9 +472,4 @@ public struct GardenEchoGame: Equatable, Sendable {
         guard phase != .finished else { return }
         isPaused = false
     }
-}
-
-public enum MinigameSubmission: Codable, Equatable, Sendable {
-    case carrotCatch(moves: [CarrotCatchMove])
-    case gardenEcho(rounds: [GardenEchoRound])
 }

@@ -1,0 +1,35 @@
+{
+  "savedAt": {"secondsSinceEpoch": 1728000000},
+  "schemaVersion": 3,
+  "state": {
+    "activeMinigame": null,
+    "achievementUnlockDates": [],
+    "bestMinigameScores": ["gardenEcho", 75],
+    "bondPoints": 25,
+    "careStatistics": {"baths": 1, "meals": 2, "playSessions": 1},
+    "carrots": 91,
+    "createdAt": {"secondsSinceEpoch": 1727000000},
+    "currentRoom": "playroom",
+    "dailyReward": {
+      "claimedLocalDays": ["2024-10-03", "2024-10-05"],
+      "lastClaimedDay": 20001,
+      "visitStep": 2
+    },
+    "equippedCosmetics": {"head": null, "neck": "sunshine-bow", "face": null, "body": null, "paws": null},
+    "foodInventory": ["garden-carrot", 5],
+    "isSleeping": false,
+    "lastSimulatedAt": {"secondsSinceEpoch": 1728000000},
+    "needs": {"cleanliness": 700, "energy": 710, "fullness": 720, "fun": 730},
+    "ownedItems": ["sunshine-bow"],
+    "petID": "gooby",
+    "preferences": {
+      "petName": "Gooby",
+      "soundEnabled": true,
+      "hapticsEnabled": true,
+      "reduceMotionEnabled": false
+    },
+    "randomState": 123,
+    "rewardedMinigameRuns": [],
+    "unlockedAchievements": []
+  }
+}

@@ -241,15 +241,23 @@ private struct CarrotCatchView: View {
     init(store: GameStore, initialRun: ActiveMinigameRun) {
         self.store = store
         _run = State(initialValue: initialRun)
-        var initialGame = CarrotCatchGame(seed: initialRun.seed)
-        if initialRun.isPaused {
-            initialGame.pause()
+        let progress: CarrotCatchProgress
+        if case let .carrotCatch(savedProgress) = initialRun.progress {
+            progress = savedProgress
+        } else {
+            progress = CarrotCatchProgress(seed: initialRun.seed)
         }
-        _game = State(initialValue: initialGame)
+        _game = State(initialValue: progress.game)
+        _countdown = State(initialValue: progress.countdownRemaining)
+        _relaxedTiming = State(initialValue: progress.timingMode == .relaxed)
+        let initialStage: CarrotCatchStage = switch progress.stage {
+        case .instructions: .instructions
+        case .countdown: .countdown
+        case .playing, .terminal: .playing
+        }
+        _stage = State(initialValue: initialStage)
         _remainingSeconds = State(
-            initialValue: store.usesShortMinigameCountdown
-                ? 5
-                : CarrotCatch.standardDurationSeconds
+            initialValue: store.remainingCarrotCatchSeconds(for: initialRun)
         )
     }
 
@@ -274,8 +282,12 @@ private struct CarrotCatchView: View {
                     case .countdown:
                         countdownView
                     case .playing:
-                        gardenBoard
-                        laneControls
+                        if game.isFinished {
+                            carrotCommitPending
+                        } else {
+                            gardenBoard
+                            laneControls
+                        }
                     case .result:
                         resultView
                     }
@@ -297,6 +309,10 @@ private struct CarrotCatchView: View {
             }
         }
         .task(id: stage) {
+            if stage == .countdown {
+                await continueCountdown()
+                return
+            }
             guard stage == .playing else { return }
             while stage == .playing, remainingSeconds > 0, !Task.isCancelled {
                 try? await Task.sleep(for: .seconds(1))
@@ -306,8 +322,10 @@ private struct CarrotCatchView: View {
                 }
             }
             if stage == .playing, remainingSeconds == 0 {
-                game.finishRemainingAsMisses()
-                await finish()
+                if await store.dispatch(.carrotCatchTimeout(runID: run.id)) {
+                    syncCarrotProgress()
+                    await finish()
+                }
             }
         }
         .onChange(of: scenePhase) { _, phase in
@@ -316,8 +334,10 @@ private struct CarrotCatchView: View {
         .onDisappear {
             guard stage != .result else { return }
             Task {
-                if store.state?.activeMinigame?.id == run.id {
-                    _ = await store.dispatch(.cancelMinigame(runID: run.id))
+                if let active = store.state?.activeMinigame,
+                   active.id == run.id,
+                   !active.isPaused {
+                    _ = await store.dispatch(.pauseMinigame(runID: run.id))
                 }
             }
         }
@@ -547,6 +567,32 @@ private struct CarrotCatchView: View {
         .accessibilityElement(children: .contain)
     }
 
+    private var carrotCommitPending: some View {
+        VStack(spacing: 14) {
+            ProgressView()
+            Text("Run complete — save the result")
+                .font(.headline)
+            Text("No reward is granted until the final save succeeds.")
+                .font(.subheadline)
+                .foregroundStyle(.secondary)
+            Button("Retry Saving Result") {
+                Task { await finish() }
+            }
+            .buttonStyle(ArcadePrimaryButtonStyle(tint: GoobyPalette.coral))
+            .disabled(isSubmitting)
+            .accessibilityIdentifier("carrot.retry-save")
+            Button("Cancel Run", role: .destructive) {
+                Task {
+                    if await store.dispatch(.cancelMinigame(runID: run.id)) {
+                        dismiss()
+                    }
+                }
+            }
+            .buttonStyle(ArcadeSecondaryButtonStyle())
+        }
+        .arcadeCard()
+    }
+
     private var timeDescription: String {
         relaxedTiming ? "Relaxed" : "\(remainingSeconds) seconds"
     }
@@ -557,41 +603,54 @@ private struct CarrotCatchView: View {
     }
 
     private func beginCountdown() {
-        stage = .countdown
         Task {
-            let start = store.usesShortMinigameCountdown ? 1 : 3
-            countdown = start
-            for value in stride(from: start, through: 1, by: -1) {
-                countdown = value
-                try? await Task.sleep(for: .seconds(1))
-                guard !Task.isCancelled, stage == .countdown else { return }
-            }
             if run.isPaused {
-                _ = await store.dispatch(.resumeMinigame(runID: run.id))
-                game.resume()
+                guard await store.dispatch(.resumeMinigame(runID: run.id)) else { return }
+                syncCarrotProgress()
             }
-            stage = .playing
-            UIAccessibility.post(
-                notification: .announcement,
-                argument: "Carrot Catch started. \(boardStatus)"
-            )
+            let mode: CarrotCatchTimingMode = relaxedTiming ? .relaxed : .standard
+            guard await store.dispatch(.setCarrotCatchTiming(runID: run.id, mode: mode))
+            else { return }
+            stage = .countdown
         }
+    }
+
+    private func continueCountdown() async {
+        if run.isPaused {
+            guard await store.dispatch(.resumeMinigame(runID: run.id)) else { return }
+            syncCarrotProgress()
+        }
+        while countdown > 0, stage == .countdown, !Task.isCancelled {
+            try? await Task.sleep(
+                for: .seconds(store.usesShortMinigameCountdown ? 0.08 : 1)
+            )
+            guard !Task.isCancelled, stage == .countdown else { return }
+            guard await store.dispatch(.advanceCarrotCatchCountdown(runID: run.id))
+            else { return }
+            syncCarrotProgress()
+        }
+        stage = .playing
+        UIAccessibility.post(
+            notification: .announcement,
+            argument: "Carrot Catch started. \(boardStatus)"
+        )
     }
 
     private func choose(_ lane: Int) {
         guard let target = game.currentLane else { return }
         let caught = target == lane
-        guard game.catchCarrot(in: lane) else { return }
-        store.playMinigameFeedback(.carrotCatch(caught: caught))
-        UIAccessibility.post(
-            notification: .announcement,
-            argument: caught ? "Caught! \(boardStatus)" : "Missed. \(boardStatus)"
-        )
-        if store.usesCondensedDemoMinigames, game.moves.count == 3 {
-            game.finishRemainingAsMisses()
-        }
-        if game.isFinished {
-            Task { await finish() }
+        Task {
+            guard await store.dispatch(.carrotCatchInput(runID: run.id, lane: lane))
+            else { return }
+            syncCarrotProgress()
+            store.playMinigameFeedback(.carrotCatch(caught: caught))
+            UIAccessibility.post(
+                notification: .announcement,
+                argument: caught ? "Caught! \(boardStatus)" : "Missed. \(boardStatus)"
+            )
+            if game.isFinished {
+                await finish()
+            }
         }
     }
 
@@ -599,10 +658,10 @@ private struct CarrotCatchView: View {
         Task {
             if game.isPaused {
                 if await store.dispatch(.resumeMinigame(runID: run.id)) {
-                    game.resume()
+                    syncCarrotProgress()
                 }
             } else if await store.dispatch(.pauseMinigame(runID: run.id)) {
-                game.pause()
+                syncCarrotProgress()
             }
         }
     }
@@ -610,9 +669,7 @@ private struct CarrotCatchView: View {
     private func finish() async {
         guard !isSubmitting, let result = game.result else { return }
         isSubmitting = true
-        if await store.dispatch(
-            .finishMinigame(runID: run.id, submission: .carrotCatch(moves: game.moves))
-        ) {
+        if await store.dispatch(.finishMinigame(runID: run.id)) {
             finalResult = result
             stage = .result
             UIAccessibility.post(
@@ -629,10 +686,8 @@ private struct CarrotCatchView: View {
                   let next = store.state?.activeMinigame
             else { return }
             run = next
-            game = CarrotCatchGame(seed: next.seed)
-            remainingSeconds = store.usesShortMinigameCountdown
-                ? 5
-                : CarrotCatch.standardDurationSeconds
+            syncCarrotProgress()
+            remainingSeconds = CarrotCatch.standardDurationSeconds
             finalResult = nil
             stage = .instructions
         }
@@ -649,12 +704,24 @@ private struct CarrotCatchView: View {
             pausedByScene = false
             Task {
                 if await store.resumeActiveMinigame() {
-                    game.resume()
+                    syncCarrotProgress()
                 }
             }
         default:
             break
         }
+    }
+
+    private func syncCarrotProgress() {
+        guard let active = store.state?.activeMinigame,
+              active.id == run.id,
+              case let .carrotCatch(progress) = active.progress
+        else { return }
+        run = active
+        game = progress.game
+        countdown = progress.countdownRemaining
+        relaxedTiming = progress.timingMode == .relaxed
+        remainingSeconds = store.remainingCarrotCatchSeconds(for: active)
     }
 
     private func laneName(_ lane: Int) -> String {
@@ -722,11 +789,19 @@ private struct GardenEchoView: View {
     init(store: GameStore, initialRun: ActiveMinigameRun) {
         self.store = store
         _run = State(initialValue: initialRun)
-        var initialGame = GardenEchoGame(seed: initialRun.seed)
-        if initialRun.isPaused {
-            initialGame.pause()
+        let progress: GardenEchoProgress
+        if case let .gardenEcho(savedProgress) = initialRun.progress {
+            progress = savedProgress
+        } else {
+            progress = GardenEchoProgress(seed: initialRun.seed)
         }
-        _game = State(initialValue: initialGame)
+        _game = State(initialValue: progress.game)
+        _showsInstructions = State(
+            initialValue: progress.replayCount == 0
+                && progress.game.input.isEmpty
+                && progress.game.submittedRounds.isEmpty
+                && progress.game.mistakes == 0
+        )
     }
 
     private var reduceMotion: Bool {
@@ -747,8 +822,10 @@ private struct GardenEchoView: View {
                     echoProgress
                     if showsInstructions {
                         instructions
-                    } else if game.phase == .finished || finalResult != nil {
+                    } else if finalResult != nil {
                         resultView
+                    } else if game.phase == .finished {
+                        gardenCommitPending
                     } else {
                         echoGarden
                         padGrid
@@ -768,8 +845,10 @@ private struct GardenEchoView: View {
             playbackGeneration += 1
             guard game.phase != .finished, finalResult == nil else { return }
             Task {
-                if store.state?.activeMinigame?.id == run.id {
-                    _ = await store.dispatch(.cancelMinigame(runID: run.id))
+                if let active = store.state?.activeMinigame,
+                   active.id == run.id,
+                   !active.isPaused {
+                    _ = await store.dispatch(.pauseMinigame(runID: run.id))
                 }
             }
         }
@@ -967,6 +1046,32 @@ private struct GardenEchoView: View {
         .arcadeCard()
     }
 
+    private var gardenCommitPending: some View {
+        VStack(spacing: 14) {
+            ProgressView()
+            Text("Run complete — save the result")
+                .font(.headline)
+            Text("No reward is granted until the final save succeeds.")
+                .font(.subheadline)
+                .foregroundStyle(.secondary)
+            Button("Retry Saving Result") {
+                Task { await finish() }
+            }
+            .buttonStyle(ArcadePrimaryButtonStyle(tint: GoobyPalette.sky))
+            .disabled(isSubmitting)
+            .accessibilityIdentifier("echo.retry-save")
+            Button("Cancel Run", role: .destructive) {
+                Task {
+                    if await store.dispatch(.cancelMinigame(runID: run.id)) {
+                        dismiss()
+                    }
+                }
+            }
+            .buttonStyle(ArcadeSecondaryButtonStyle())
+        }
+        .arcadeCard()
+    }
+
     private var accessibleSequenceStatus: String {
         let names = game.sequence.map { padDescription($0) }.joined(separator: ", ")
         return switch game.phase {
@@ -978,17 +1083,24 @@ private struct GardenEchoView: View {
 
     private func startPlayback() {
         guard !game.isPaused, game.phase != .finished else { return }
-        playbackGeneration += 1
-        let generation = playbackGeneration
-        game.replaySequence()
-        highlightedSymbol = nil
-        status = "Listen to \(game.sequence.count) garden notes."
-        let spoken = game.sequence.map { padDescription($0) }.joined(separator: ", ")
-        UIAccessibility.post(
-            notification: .announcement,
-            argument: "Round \(game.round) sequence: \(spoken)"
-        )
-        Task { await playSequence(generation: generation) }
+        Task {
+            if run.isPaused {
+                guard await store.dispatch(.resumeMinigame(runID: run.id)) else { return }
+                syncGardenProgress()
+            }
+            guard await store.dispatch(.gardenEchoReplay(runID: run.id)) else { return }
+            syncGardenProgress()
+            playbackGeneration += 1
+            let generation = playbackGeneration
+            highlightedSymbol = nil
+            status = "Listen to \(game.sequence.count) garden notes."
+            let spoken = game.sequence.map { padDescription($0) }.joined(separator: ", ")
+            UIAccessibility.post(
+                notification: .announcement,
+                argument: "Round \(game.round) sequence: \(spoken)"
+            )
+            await playSequence(generation: generation)
+        }
     }
 
     private func playSequence(generation: Int) async {
@@ -1002,14 +1114,28 @@ private struct GardenEchoView: View {
             highlightedSymbol = nil
             try? await Task.sleep(for: .seconds(delay / 2))
         }
-        guard generation == playbackGeneration, game.beginInput() else { return }
+        guard generation == playbackGeneration,
+              await store.dispatch(.gardenEchoBeginInput(runID: run.id))
+        else { return }
+        syncGardenProgress()
         status = "Your turn • input 1 of \(game.sequence.count)"
         UIAccessibility.post(notification: .announcement, argument: "Your turn")
     }
 
     private func press(_ pad: EchoPad) {
-        store.playMinigameFeedback(.gardenEcho(symbol: pad.id))
-        let outcome = game.submit(symbol: pad.id)
+        var projected = game
+        let outcome = projected.submit(symbol: pad.id)
+        guard outcome != .ignored else { return }
+        Task {
+            guard await store.dispatch(.gardenEchoInput(runID: run.id, symbol: pad.id))
+            else { return }
+            syncGardenProgress()
+            store.playMinigameFeedback(.gardenEcho(symbol: pad.id))
+            handleGardenOutcome(outcome)
+        }
+    }
+
+    private func handleGardenOutcome(_ outcome: GardenEchoInputResult) {
         switch outcome {
         case .ignored:
             return
@@ -1018,15 +1144,11 @@ private struct GardenEchoView: View {
         case let .roundCompleted(round):
             status = "Round \(round) complete!"
             UIAccessibility.post(notification: .announcement, argument: status)
-            if store.usesCondensedDemoMinigames {
-                Task { await finish() }
-            } else {
-                Task {
-                    try? await Task.sleep(
-                        for: .seconds(store.usesShortMinigameCountdown ? 0.08 : 0.65)
-                    )
-                    startPlayback()
-                }
+            Task {
+                try? await Task.sleep(
+                    for: .seconds(store.usesShortMinigameCountdown ? 0.08 : 0.65)
+                )
+                startPlayback()
             }
         case .gameCompleted, .gameOver:
             Task { await finish() }
@@ -1045,11 +1167,11 @@ private struct GardenEchoView: View {
         Task {
             if game.isPaused {
                 if await store.dispatch(.resumeMinigame(runID: run.id)) {
-                    game.resume()
+                    syncGardenProgress()
                     startPlayback()
                 }
             } else if await store.dispatch(.pauseMinigame(runID: run.id)) {
-                game.pause()
+                syncGardenProgress()
                 highlightedSymbol = nil
                 status = "Paused safely"
             }
@@ -1058,17 +1180,9 @@ private struct GardenEchoView: View {
 
     private func finish() async {
         let result = game.result
-            ?? (store.usesCondensedDemoMinigames
-                ? GardenEcho.play(seed: run.seed, rounds: game.submittedRounds)
-                : nil)
         guard !isSubmitting, let result else { return }
         isSubmitting = true
-        if await store.dispatch(
-            .finishMinigame(
-                runID: run.id,
-                submission: .gardenEcho(rounds: game.submittedRounds)
-            )
-        ) {
+        if await store.dispatch(.finishMinigame(runID: run.id)) {
             finalResult = result
             UIAccessibility.post(
                 notification: .screenChanged,
@@ -1084,7 +1198,7 @@ private struct GardenEchoView: View {
                   let next = store.state?.activeMinigame
             else { return }
             run = next
-            game = GardenEchoGame(seed: next.seed)
+            syncGardenProgress()
             finalResult = nil
             showsInstructions = true
             status = "Listen to the garden, then echo it."
@@ -1103,7 +1217,7 @@ private struct GardenEchoView: View {
             pausedByScene = false
             Task {
                 if await store.resumeActiveMinigame() {
-                    game.resume()
+                    syncGardenProgress()
                     if !showsInstructions {
                         startPlayback()
                     }
@@ -1112,6 +1226,15 @@ private struct GardenEchoView: View {
         default:
             break
         }
+    }
+
+    private func syncGardenProgress() {
+        guard let active = store.state?.activeMinigame,
+              active.id == run.id,
+              case let .gardenEcho(progress) = active.progress
+        else { return }
+        run = active
+        game = progress.game
     }
 
     private func padDescription(_ symbol: Int) -> String {

@@ -1,0 +1,31 @@
+{
+  "savedAt": {"secondsSinceEpoch": 1728000000},
+  "schemaVersion": 2,
+  "state": {
+    "activeMinigame": null,
+    "achievementUnlockDates": ["first-meal", {"secondsSinceEpoch": 1727990000}],
+    "bestMinigameScores": ["carrotCatch", 140],
+    "bondPoints": 88,
+    "careStatistics": {"baths": 2, "meals": 4, "playSessions": 3},
+    "carrots": 247,
+    "createdAt": {"secondsSinceEpoch": 1727000000},
+    "currentRoom": "bedroom",
+    "dailyReward": {"lastClaimedDay": 20000, "streakStep": 4},
+    "equippedCosmetics": {"head": "cloud-cap", "neck": null, "face": null, "body": null, "paws": null},
+    "foodInventory": ["garden-carrot", 9, "legacy-snack", 2],
+    "isSleeping": true,
+    "lastSimulatedAt": {"secondsSinceEpoch": 1728000000},
+    "needs": {"cleanliness": 610, "energy": 720, "fullness": 530, "fun": 640},
+    "ownedItems": ["cloud-cap", "unknown-safe-owned-item"],
+    "petID": "gooby",
+    "preferences": {
+      "petName": "Mochi",
+      "soundEnabled": false,
+      "hapticsEnabled": true,
+      "reduceMotionEnabled": true
+    },
+    "randomState": 99,
+    "rewardedMinigameRuns": ["old-run"],
+    "unlockedAchievements": ["first-meal"]
+  }
+}

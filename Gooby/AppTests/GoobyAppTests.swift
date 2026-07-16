@@ -28,8 +28,7 @@ final class GoobyAppTests: XCTestCase {
                 resetsSave: false,
                 skipsWelcome: false,
                 fixedTime: nil,
-                usesShortMinigameCountdown: false,
-                usesCondensedDemoMinigames: false
+                usesShortMinigameCountdown: false
             )
         )
 
@@ -50,8 +49,7 @@ final class GoobyAppTests: XCTestCase {
                     resetsSave: true,
                     skipsWelcome: true,
                     fixedTime: GameInstant(secondsSinceEpoch: 1_728_000_000),
-                    usesShortMinigameCountdown: true,
-                    usesCondensedDemoMinigames: true
+                    usesShortMinigameCountdown: true
                 )
             )
         #endif
@@ -395,12 +393,17 @@ final class GoobyAppTests: XCTestCase {
         let started = await store.dispatch(.startMinigame(kind: .carrotCatch))
         XCTAssertTrue(started)
         let run = try XCTUnwrap(store.state?.activeMinigame)
-        let moves = CarrotCatch.carrotLanes(seed: run.seed, count: CarrotCatch.maximumMoves)
-            .map(CarrotCatchMove.init(lane:))
-        let command = GameCommand.finishMinigame(
-            runID: run.id,
-            submission: .carrotCatch(moves: moves)
-        )
+        for _ in 0 ..< 3 {
+            XCTAssertTrue(
+                await store.dispatch(.advanceCarrotCatchCountdown(runID: run.id))
+            )
+        }
+        for lane in CarrotCatch.carrotLanes(seed: run.seed, count: CarrotCatch.maximumMoves) {
+            XCTAssertTrue(
+                await store.dispatch(.carrotCatchInput(runID: run.id, lane: lane))
+            )
+        }
+        let command = GameCommand.finishMinigame(runID: run.id)
 
         let finished = await store.dispatch(command)
         XCTAssertTrue(finished)
@@ -428,6 +431,165 @@ final class GoobyAppTests: XCTestCase {
         await relaunched.start()
         XCTAssertEqual(relaunched.state?.bestMinigameScores[.carrotCatch], 200)
         XCTAssertEqual(relaunched.state?.carrots, 50)
+    }
+
+    @MainActor
+    func testFIFOCommandsFlushAndResetCannotOverwriteNewerState() async throws {
+        let repository = SuspendingGameRepository()
+        let clock = TestClock()
+        let store = GameStore(
+            repository: repository,
+            clock: clock,
+            audio: FeedbackSpy(),
+            haptics: FeedbackSpy(),
+            skipsWelcome: true
+        )
+        await store.start()
+        await repository.suspendNextSave()
+
+        let move = Task { await store.dispatch(.move(to: .kitchen)) }
+        await repository.waitUntilSaveSuspended()
+        let feed = Task { await store.dispatch(.feed) }
+        let flush = Task { await store.flush() }
+        let reset = Task { await store.resetProgress() }
+        await repository.resumeSuspendedSave()
+
+        let moved = await move.value
+        let fed = await feed.value
+        await flush.value
+        let didReset = await reset.value
+        XCTAssertTrue(moved)
+        XCTAssertTrue(fed)
+        XCTAssertTrue(didReset)
+        let persisted = await repository.snapshot
+        XCTAssertEqual(persisted, GameState.new(now: clock.instant))
+        XCTAssertEqual(store.state, persisted)
+    }
+
+    @MainActor
+    func testRapidCommandsPublishMonotonicLosslessEventBatches() async {
+        let repository = SuspendingGameRepository()
+        let store = GameStore(
+            repository: repository,
+            clock: TestClock(),
+            audio: FeedbackSpy(),
+            haptics: FeedbackSpy(),
+            skipsWelcome: true
+        )
+        await store.start()
+        await repository.suspendNextSave()
+
+        let kitchen = Task { await store.dispatch(.move(to: .kitchen)) }
+        await repository.waitUntilSaveSuspended()
+        let bedroom = Task { await store.dispatch(.move(to: .bedroom)) }
+        await repository.resumeSuspendedSave()
+
+        let movedToKitchen = await kitchen.value
+        let movedToBedroom = await bedroom.value
+        XCTAssertTrue(movedToKitchen)
+        XCTAssertTrue(movedToBedroom)
+        XCTAssertEqual(store.eventBatches.map(\.id), [1, 2])
+        XCTAssertEqual(store.eventBatches.flatMap(\.events), [
+            .moved(.kitchen),
+            .moved(.bedroom),
+        ])
+    }
+
+    @MainActor
+    func testFailedFinalSaveRetriesOnceWithoutPrematureReward() async throws {
+        let repository = InMemoryGameRepository()
+        let store = makeStore(repository: repository, feedback: FeedbackSpy())
+        await store.start()
+        let started = await store.dispatch(.startMinigame(kind: .carrotCatch))
+        XCTAssertTrue(started)
+        let run = try XCTUnwrap(store.state?.activeMinigame)
+        for _ in 0 ..< 3 {
+            let advanced = await store.dispatch(.advanceCarrotCatchCountdown(runID: run.id))
+            XCTAssertTrue(advanced)
+        }
+        for lane in CarrotCatch.carrotLanes(seed: run.seed, count: CarrotCatch.maximumMoves) {
+            let recorded = await store.dispatch(.carrotCatchInput(runID: run.id, lane: lane))
+            XCTAssertTrue(recorded)
+        }
+        let beforeFinish = try XCTUnwrap(store.state)
+        await repository.setFailure(.save)
+
+        let failedFinish = await store.dispatch(.finishMinigame(runID: run.id))
+        XCTAssertFalse(failedFinish)
+        XCTAssertEqual(store.state, beforeFinish)
+        XCTAssertFalse(store.state?.rewardedMinigameRuns.contains(run.id) == true)
+
+        await repository.setFailure(nil)
+        let finished = await store.dispatch(.finishMinigame(runID: run.id))
+        XCTAssertTrue(finished)
+        let rewarded = try XCTUnwrap(store.state)
+        XCTAssertEqual(rewarded.rewardedMinigameRuns.filter { $0 == run.id }.count, 1)
+        let replayed = await store.dispatch(.finishMinigame(runID: run.id))
+        XCTAssertTrue(replayed)
+        XCTAssertEqual(store.state, rewarded)
+    }
+
+    @MainActor
+    func testInflightFinishThenCancelKeepsCommittedRewardInFIFOOrder() async throws {
+        let repository = SuspendingGameRepository()
+        let store = GameStore(
+            repository: repository,
+            clock: TestClock(),
+            audio: FeedbackSpy(),
+            haptics: FeedbackSpy(),
+            skipsWelcome: true
+        )
+        await store.start()
+        let started = await store.dispatch(.startMinigame(kind: .carrotCatch))
+        XCTAssertTrue(started)
+        let run = try XCTUnwrap(store.state?.activeMinigame)
+        for _ in 0 ..< 3 {
+            let advanced = await store.dispatch(.advanceCarrotCatchCountdown(runID: run.id))
+            XCTAssertTrue(advanced)
+        }
+        for lane in CarrotCatch.carrotLanes(seed: run.seed, count: CarrotCatch.maximumMoves) {
+            let recorded = await store.dispatch(.carrotCatchInput(runID: run.id, lane: lane))
+            XCTAssertTrue(recorded)
+        }
+
+        await repository.suspendNextSave()
+        let finish = Task { await store.dispatch(.finishMinigame(runID: run.id)) }
+        await repository.waitUntilSaveSuspended()
+        let cancel = Task { await store.dispatch(.cancelMinigame(runID: run.id)) }
+        await repository.resumeSuspendedSave()
+
+        let didFinish = await finish.value
+        let didCancel = await cancel.value
+        XCTAssertTrue(didFinish)
+        XCTAssertFalse(didCancel)
+        XCTAssertEqual(store.state?.rewardedMinigameRuns.filter { $0 == run.id }.count, 1)
+        XCTAssertNil(store.state?.activeMinigame)
+        let persisted = await repository.snapshot
+        XCTAssertEqual(persisted, store.state)
+    }
+
+    @MainActor
+    func testForegroundMinuteTickerUpdatesVisibleNeedsAndStopsInBackground() async throws {
+        let repository = InMemoryGameRepository()
+        let clock = TestClock()
+        let store = GameStore(
+            repository: repository,
+            clock: clock,
+            audio: FeedbackSpy(),
+            haptics: FeedbackSpy(),
+            skipsWelcome: true,
+            minuteTickDuration: .milliseconds(10)
+        )
+        await store.start()
+        clock.instant = clock.instant.adding(seconds: 60)
+        try await Task.sleep(for: .milliseconds(40))
+
+        XCTAssertEqual(store.state?.needs.fullness.value, 798)
+        await store.handleLifecycleTransition(.background)
+        let backgroundNeeds = store.state?.needs
+        clock.instant = clock.instant.adding(seconds: 60)
+        try await Task.sleep(for: .milliseconds(30))
+        XCTAssertEqual(store.state?.needs, backgroundNeeds)
     }
 
     @MainActor
@@ -487,9 +649,12 @@ private actor InMemoryGameRepository: GameStateRepository {
         self.failure = failure
     }
 
-    func load(now: GameInstant) async throws -> GameState {
+    func load(now: GameInstant) async throws -> GameStateLoadResult {
         if failure == .load { throw RepositoryFailure.load }
-        return snapshot ?? GameState.new(now: now)
+        return GameStateLoadResult(
+            state: snapshot ?? GameState.new(now: now),
+            source: snapshot == nil ? .missing : .primary
+        )
     }
 
     func save(_ state: GameState, at _: GameInstant) async throws {
@@ -498,12 +663,70 @@ private actor InMemoryGameRepository: GameStateRepository {
         saveCount += 1
     }
 
-    func reset(now: GameInstant) async throws -> GameState {
+    func reset(
+        now: GameInstant,
+        discardingDamagedSave _: Bool
+    ) async throws -> GameState {
         if failure == .save { throw RepositoryFailure.save }
         let state = GameState.new(now: now)
         snapshot = state
         saveCount += 1
         return state
+    }
+}
+
+private actor SuspendingGameRepository: GameStateRepository {
+    private(set) var snapshot: GameState?
+    private var shouldSuspendNextSave = false
+    private var isSaveSuspended = false
+    private var saveContinuation: CheckedContinuation<Void, Never>?
+    private var waiters: [CheckedContinuation<Void, Never>] = []
+
+    func suspendNextSave() {
+        shouldSuspendNextSave = true
+    }
+
+    func waitUntilSaveSuspended() async {
+        if isSaveSuspended { return }
+        await withCheckedContinuation { continuation in
+            waiters.append(continuation)
+        }
+    }
+
+    func resumeSuspendedSave() {
+        saveContinuation?.resume()
+        saveContinuation = nil
+    }
+
+    func load(now: GameInstant) async throws -> GameStateLoadResult {
+        GameStateLoadResult(
+            state: snapshot ?? GameState.new(now: now),
+            source: snapshot == nil ? .missing : .primary
+        )
+    }
+
+    func save(_ state: GameState, at _: GameInstant) async throws {
+        if shouldSuspendNextSave {
+            shouldSuspendNextSave = false
+            isSaveSuspended = true
+            await withCheckedContinuation { continuation in
+                saveContinuation = continuation
+                let pendingWaiters = waiters
+                waiters = []
+                pendingWaiters.forEach { $0.resume() }
+            }
+            isSaveSuspended = false
+        }
+        snapshot = state
+    }
+
+    func reset(
+        now: GameInstant,
+        discardingDamagedSave _: Bool
+    ) async throws -> GameState {
+        let fresh = GameState.new(now: now)
+        snapshot = fresh
+        return fresh
     }
 }
 

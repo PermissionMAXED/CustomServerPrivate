@@ -256,31 +256,37 @@ final class GameEngineTests: XCTestCase {
         XCTAssertTrue(state.unlockedAchievements.contains(.carrotCollector))
     }
 
-    func testDailyRewardRejectsSameDayAndRollback() throws {
+    func testDailyRewardRejectsDuplicateLocalDateAcrossClockChanges() throws {
         var state = GameState.new(now: now)
-        _ = try GameEngine.apply(.claimDailyReward, to: &state, at: now)
+        let claimedDay = LocalDayKey(rawValue: "2024-11-03")
+        _ = try GameEngine.apply(
+            .claimDailyReward,
+            to: &state,
+            at: now,
+            localDay: claimedDay
+        )
 
         XCTAssertThrowsError(
             try GameEngine.apply(
                 .claimDailyReward,
                 to: &state,
-                at: now.adding(seconds: 60)
+                at: now.adding(seconds: 60),
+                localDay: claimedDay
             )
         ) { error in
             XCTAssertEqual(error as? GameRuleError, .dailyRewardAlreadyClaimed)
         }
-        XCTAssertThrowsError(
+        XCTAssertNoThrow(
             try GameEngine.apply(
                 .claimDailyReward,
                 to: &state,
-                at: now.adding(seconds: -86_400)
+                at: now.adding(seconds: -86_400),
+                localDay: LocalDayKey(rawValue: "2024-11-02")
             )
-        ) { error in
-            XCTAssertEqual(error as? GameRuleError, .clockRollback)
-        }
+        )
     }
 
-    func testDailyRewardGapResetsToStepOne() throws {
+    func testDailyRewardMissedDatesContinueVisitCycle() throws {
         var state = GameState.new(now: now)
         _ = try GameEngine.apply(.claimDailyReward, to: &state, at: now)
         let events = try GameEngine.apply(
@@ -289,7 +295,7 @@ final class GameEngineTests: XCTestCase {
             at: now.adding(seconds: 3 * 86_400)
         )
 
-        XCTAssertTrue(events.contains(.dailyRewardClaimed(step: 1, carrots: 5)))
+        XCTAssertTrue(events.contains(.dailyRewardClaimed(step: 2, carrots: 7)))
     }
 
     func testFoodPurchaseIncrementsQuantityAndSelectedFoodIsConsumed() throws {
@@ -476,6 +482,51 @@ final class GameEngineTests: XCTestCase {
         XCTAssertEqual(state.achievementDate(.squeakyClean), now)
     }
 
+    func testAchievementReconciliationRunsToFixedPoint() {
+        var state = GameState.new(now: now)
+        state.carrots = 80
+        state.bondPoints = BondProgress.thresholds[3]
+
+        let events = GameEngine.reconcileProgression(&state, at: now)
+
+        XCTAssertTrue(state.unlockedAchievements.contains(.bestBunny))
+        XCTAssertTrue(state.unlockedAchievements.contains(.carrotCollector))
+        let bestIndex = events.firstIndex {
+            $0 == .achievementUnlocked(.bestBunny, carrots: 30)
+        }
+        let collectorIndex = events.firstIndex {
+            $0 == .achievementUnlocked(.carrotCollector, carrots: 15)
+        }
+        XCTAssertNotNil(bestIndex)
+        XCTAssertNotNil(collectorIndex)
+        XCTAssertLessThan(try! XCTUnwrap(bestIndex), try! XCTUnwrap(collectorIndex))
+    }
+
+    func testSaturatedCarrotEventReportsAppliedRatherThanRequestedDelta() throws {
+        var state = GameState.new(now: now)
+        state.carrots = Int.max - 2
+
+        let events = try GameEngine.apply(.claimDailyReward, to: &state, at: now)
+
+        XCTAssertEqual(state.carrots, Int.max)
+        XCTAssertTrue(events.contains(.carrotsChanged(delta: 2, balance: Int.max)))
+        XCTAssertFalse(events.contains(.carrotsChanged(delta: 5, balance: Int.max)))
+    }
+
+    func testSleepTransitionsRejectAlreadySleepingAndAlreadyAwake() throws {
+        var state = GameState.new(now: now)
+        state.currentRoom = .bedroom
+        XCTAssertThrowsError(try GameEngine.apply(.endSleep, to: &state, at: now)) {
+            XCTAssertEqual($0 as? GameRuleError, .invalidSleepTransition)
+        }
+        _ = try GameEngine.apply(.beginSleep, to: &state, at: now)
+        let sleeping = state
+        XCTAssertThrowsError(try GameEngine.apply(.beginSleep, to: &state, at: now)) {
+            XCTAssertEqual($0 as? GameRuleError, .invalidSleepTransition)
+        }
+        XCTAssertEqual(state, sleeping)
+    }
+
     func testRenameAndFeedbackSettingsValidateAndPersistInState() throws {
         var state = GameState.new(now: now)
         _ = try GameEngine.apply(.renamePet("  Mochi  "), to: &state, at: now)
@@ -508,14 +559,20 @@ final class GameEngineTests: XCTestCase {
             to: &state,
             at: now
         )
-        _ = try GameEngine.apply(
-            .purchase(itemID: GoobyCatalog.berryBun),
-            to: &state,
-            at: now
-        )
+        let beforeFullPurchase = state
+        XCTAssertThrowsError(
+            try GameEngine.apply(
+                .purchase(itemID: GoobyCatalog.berryBun),
+                to: &state,
+                at: now
+            )
+        ) {
+            XCTAssertEqual($0 as? GameRuleError, .inventoryFull(GoobyCatalog.berryBun))
+        }
 
         XCTAssertEqual(state.careStatistics.meals, .max)
         XCTAssertEqual(state.bondPoints, .max)
         XCTAssertEqual(state.foodQuantity(GoobyCatalog.berryBun), .max)
+        XCTAssertEqual(state, beforeFullPurchase)
     }
 }

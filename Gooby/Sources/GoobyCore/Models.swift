@@ -397,13 +397,64 @@ public struct EquippedCosmetics: Codable, Equatable, Sendable {
     }
 }
 
-public struct DailyRewardState: Codable, Equatable, Sendable {
-    public var lastClaimedDay: Int64?
-    public var streakStep: Int
+public struct LocalDayKey: RawRepresentable, Codable, Hashable, Sendable, Comparable {
+    public let rawValue: String
 
-    public init(lastClaimedDay: Int64? = nil, streakStep: Int = 0) {
+    public init(rawValue: String) {
+        self.rawValue = rawValue
+    }
+
+    public static func < (lhs: LocalDayKey, rhs: LocalDayKey) -> Bool {
+        lhs.rawValue < rhs.rawValue
+    }
+}
+
+public struct DailyRewardState: Codable, Equatable, Sendable {
+    /// Retained for schema 1/2 compatibility. New claims use `claimedLocalDays`.
+    public var lastClaimedDay: Int64?
+    /// The next reward is based on completed visits, not consecutive-day streaks.
+    public var visitStep: Int
+    public var claimedLocalDays: [LocalDayKey]
+
+    public init(
+        lastClaimedDay: Int64? = nil,
+        streakStep: Int = 0,
+        claimedLocalDays: [LocalDayKey] = []
+    ) {
         self.lastClaimedDay = lastClaimedDay
-        self.streakStep = streakStep
+        visitStep = streakStep
+        self.claimedLocalDays = claimedLocalDays
+    }
+
+    public var streakStep: Int {
+        get { visitStep }
+        set { visitStep = newValue }
+    }
+
+    private enum CodingKeys: String, CodingKey {
+        case lastClaimedDay
+        case visitStep
+        case streakStep
+        case claimedLocalDays
+    }
+
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        lastClaimedDay = try container.decodeIfPresent(Int64.self, forKey: .lastClaimedDay)
+        visitStep = try container.decodeIfPresent(Int.self, forKey: .visitStep)
+            ?? container.decodeIfPresent(Int.self, forKey: .streakStep)
+            ?? 0
+        claimedLocalDays = try container.decodeIfPresent(
+            [LocalDayKey].self,
+            forKey: .claimedLocalDays
+        ) ?? []
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encodeIfPresent(lastClaimedDay, forKey: .lastClaimedDay)
+        try container.encode(visitStep, forKey: .visitStep)
+        try container.encode(claimedLocalDays, forKey: .claimedLocalDays)
     }
 }
 
@@ -419,23 +470,87 @@ public enum DailyRewardSchedule {
     public static func eligibility(
         for reward: DailyRewardState,
         at now: GameInstant,
+        localDay: LocalDayKey? = nil,
         cycleCount: Int = 7
     ) -> DailyRewardEligibility {
         let boundedCycleCount = max(1, cycleCount)
-        let day = now.secondsSinceEpoch / secondsPerDay
-        guard let lastDay = reward.lastClaimedDay else {
-            return .eligible(step: 1)
+        let dayKey = localDay ?? utcDayKey(for: now)
+        if reward.claimedLocalDays.contains(dayKey) {
+            return .alreadyClaimed(step: max(1, min(reward.visitStep, boundedCycleCount)))
         }
-        guard day >= lastDay else {
-            return .clockRollback
+
+        // Schema 1/2 saves only knew an integer UTC day. Preserve same-day
+        // duplicate protection until migration materializes a local-day ledger.
+        let utcDay = floorDividing(now.secondsSinceEpoch, by: secondsPerDay)
+        if reward.claimedLocalDays.isEmpty, reward.lastClaimedDay == utcDay {
+            return .alreadyClaimed(step: max(1, min(reward.visitStep, boundedCycleCount)))
         }
-        if day == lastDay {
-            return .alreadyClaimed(step: max(1, reward.streakStep))
+
+        let normalizedStep = max(0, reward.visitStep)
+        return .eligible(step: (normalizedStep % boundedCycleCount) + 1)
+    }
+
+    public static func localDayKey(
+        for instant: GameInstant,
+        timeZone: TimeZone,
+        calendar: Calendar = Calendar(identifier: .gregorian)
+    ) -> LocalDayKey {
+        var localCalendar = calendar
+        localCalendar.timeZone = timeZone
+        let date = Date(timeIntervalSince1970: TimeInterval(instant.secondsSinceEpoch))
+        let components = localCalendar.dateComponents([.year, .month, .day], from: date)
+        let year = components.year ?? 1970
+        let month = components.month ?? 1
+        let day = components.day ?? 1
+        return LocalDayKey(
+            rawValue: String(format: "%04d-%02d-%02d", year, month, day)
+        )
+    }
+
+    public static func isValid(_ day: LocalDayKey) -> Bool {
+        let parts = day.rawValue.split(separator: "-", omittingEmptySubsequences: false)
+        guard parts.count == 3,
+              parts[0].count == 4,
+              parts[1].count == 2,
+              parts[2].count == 2,
+              let year = Int(parts[0]),
+              let month = Int(parts[1]),
+              let dayValue = Int(parts[2])
+        else {
+            return false
         }
-        if lastDay < Int64.max, day == lastDay + 1 {
-            return .eligible(step: (reward.streakStep % boundedCycleCount) + 1)
-        }
-        return .eligible(step: 1)
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.timeZone = TimeZone(secondsFromGMT: 0) ?? .gmt
+        let components = DateComponents(
+            calendar: calendar,
+            timeZone: calendar.timeZone,
+            year: year,
+            month: month,
+            day: dayValue
+        )
+        guard let date = calendar.date(from: components) else { return false }
+        let roundTrip = calendar.dateComponents([.year, .month, .day], from: date)
+        return roundTrip.year == year && roundTrip.month == month && roundTrip.day == dayValue
+    }
+
+    public static func utcDayKey(for instant: GameInstant) -> LocalDayKey {
+        localDayKey(
+            for: instant,
+            timeZone: TimeZone(secondsFromGMT: 0) ?? .gmt
+        )
+    }
+
+    public static func legacyUTCKey(day: Int64) -> LocalDayKey {
+        let (seconds, overflowed) = day.multipliedReportingOverflow(by: secondsPerDay)
+        return utcDayKey(
+            for: GameInstant(secondsSinceEpoch: overflowed ? (day >= 0 ? .max : .min) : seconds)
+        )
+    }
+
+    private static func floorDividing(_ value: Int64, by divisor: Int64) -> Int64 {
+        let quotient = value / divisor
+        let remainder = value % divisor
+        return remainder < 0 ? quotient - 1 : quotient
     }
 }
 
@@ -809,7 +924,14 @@ public enum GameCommand: Codable, Equatable, Sendable {
     case pauseMinigame(runID: MinigameRunID)
     case resumeMinigame(runID: MinigameRunID)
     case cancelMinigame(runID: MinigameRunID)
-    case finishMinigame(runID: MinigameRunID, submission: MinigameSubmission)
+    case setCarrotCatchTiming(runID: MinigameRunID, mode: CarrotCatchTimingMode)
+    case advanceCarrotCatchCountdown(runID: MinigameRunID)
+    case carrotCatchInput(runID: MinigameRunID, lane: Int?)
+    case carrotCatchTimeout(runID: MinigameRunID)
+    case gardenEchoBeginInput(runID: MinigameRunID)
+    case gardenEchoInput(runID: MinigameRunID, symbol: Int)
+    case gardenEchoReplay(runID: MinigameRunID)
+    case finishMinigame(runID: MinigameRunID)
 }
 
 public enum GameEvent: Codable, Equatable, Sendable {
@@ -837,6 +959,7 @@ public enum GameEvent: Codable, Equatable, Sendable {
     case preferencesChanged
     case minigameStarted(ActiveMinigameRun)
     case minigamePauseChanged(runID: MinigameRunID, paused: Bool)
+    case minigameProgressed(runID: MinigameRunID)
     case minigameCancelled(MinigameRunID)
     case minigameFinished(runID: MinigameRunID, score: Int, carrots: Int)
     case minigameRewardAlreadyGranted(MinigameRunID)
@@ -863,6 +986,8 @@ public enum GameRuleError: Error, Equatable, Sendable {
     case invalidMinigameRun
     case invalidMinigameSubmission
     case minigameExpired
+    case invalidSleepTransition
+    case inventoryFull(ItemID)
 }
 
 extension Comparable {

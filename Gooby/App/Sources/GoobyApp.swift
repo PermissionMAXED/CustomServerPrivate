@@ -41,8 +41,7 @@ struct GoobyApp: SwiftUI.App {
                 haptics: SystemHapticClient(),
                 freshSaveHint: isFresh,
                 skipsWelcome: launch.skipsWelcome,
-                usesShortMinigameCountdown: launch.usesShortMinigameCountdown,
-                usesCondensedDemoMinigames: launch.usesCondensedDemoMinigames
+                usesShortMinigameCountdown: launch.usesShortMinigameCountdown
             )
         )
     }
@@ -57,12 +56,13 @@ struct GoobyApp: SwiftUI.App {
                     Task {
                         switch phase {
                         case .active:
-                            await store.advance()
-                        case .inactive, .background:
-                            await store.pauseActiveMinigame()
-                            await store.flush()
+                            await store.handleLifecycleTransition(.active)
+                        case .inactive:
+                            await store.handleLifecycleTransition(.inactive)
+                        case .background:
+                            await store.handleLifecycleTransition(.background)
                         @unknown default:
-                            await store.flush()
+                            await store.handleLifecycleTransition(.background)
                         }
                     }
                 }
@@ -89,7 +89,6 @@ struct GoobyLaunchSettings: Equatable {
     let skipsWelcome: Bool
     let fixedTime: GameInstant?
     let usesShortMinigameCountdown: Bool
-    let usesCondensedDemoMinigames: Bool
 
     static var current: GoobyLaunchSettings {
         parse(arguments: ProcessInfo.processInfo.arguments)
@@ -116,8 +115,7 @@ struct GoobyLaunchSettings: Equatable {
             resetsSave: arguments.contains("--reset-save"),
             skipsWelcome: arguments.contains("--skip-welcome"),
             fixedTime: fixedTime,
-            usesShortMinigameCountdown: arguments.contains("--short-minigames"),
-            usesCondensedDemoMinigames: arguments.contains("--recorded-demo")
+            usesShortMinigameCountdown: arguments.contains("--short-minigames")
         )
         #else
         _ = arguments
@@ -130,7 +128,6 @@ struct GoobyLaunchSettings: Equatable {
         resetsSave: false,
         skipsWelcome: false,
         fixedTime: nil,
-        usesShortMinigameCountdown: false,
-        usesCondensedDemoMinigames: false
+        usesShortMinigameCountdown: false
     )
 }

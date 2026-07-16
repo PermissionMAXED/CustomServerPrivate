@@ -29,6 +29,11 @@ struct AppRootView: View {
                 LoadErrorView(message: store.errorMessage ?? "Gooby could not wake up.") {
                     Task { await store.start() }
                 }
+            case .recoveryRequired:
+                SaveRecoveryView(
+                    message: store.errorMessage ?? "Gooby’s save needs recovery.",
+                    onReset: { Task { await store.resetDamagedSave() } }
+                )
             case .ready:
                 if let state = store.state {
                     MainShellView(
@@ -59,6 +64,44 @@ struct AppRootView: View {
             Button("OK", role: .cancel) { store.clearError() }
         } message: {
             Text(store.errorMessage ?? "")
+        }
+    }
+}
+
+private struct SaveRecoveryView: View {
+    let message: String
+    let onReset: () -> Void
+    @State private var confirmsReset = false
+
+    var body: some View {
+        ZStack {
+            GoobyBackground()
+            VStack(spacing: 18) {
+                Image(systemName: "externaldrive.badge.exclamationmark")
+                    .font(.system(size: 46, weight: .semibold))
+                    .foregroundStyle(GoobyPalette.coral)
+                Text("Save recovery required")
+                    .font(.system(.title2, design: .rounded, weight: .bold))
+                Text(message)
+                    .multilineTextAlignment(.center)
+                    .foregroundStyle(.secondary)
+                Button("Reset damaged save", role: .destructive) {
+                    confirmsReset = true
+                }
+                .buttonStyle(.borderedProminent)
+                .accessibilityIdentifier("recovery.reset")
+            }
+            .padding(28)
+        }
+        .confirmationDialog(
+            "Discard the unreadable save?",
+            isPresented: $confirmsReset,
+            titleVisibility: .visible
+        ) {
+            Button("Discard Save and Start Fresh", role: .destructive, action: onReset)
+            Button("Keep Save", role: .cancel) {}
+        } message: {
+            Text("This cannot be undone. Gooby will preserve the files unless you confirm.")
         }
     }
 }
@@ -283,7 +326,7 @@ private struct HomeView: View {
                 }
             GoobyRealityView(
                 state: state,
-                events: store.latestEvents,
+                events: store.eventBatches.flatMap(\.events),
                 eventRevision: store.eventRevision
             ) {
                 Task { await store.dispatch(.pet) }

@@ -118,7 +118,7 @@ struct DailyGiftView: View {
                             let step = entry.offset + 1
                             let reward = entry.element
                             VStack(spacing: 6) {
-                                Text("Day \(step)")
+                                Text("Visit \(step)")
                                     .font(.caption.weight(.bold))
                                 Image(systemName: step == 7 ? "crown.fill" : "carrot.fill")
                                     .foregroundStyle(step == 7 ? GoobyPalette.gold : GoobyPalette.coral)
@@ -152,13 +152,13 @@ struct DailyGiftView: View {
                                     )
                             }
                             .accessibilityElement(children: .combine)
-                            .accessibilityLabel("Day \(step), \(reward) carrots")
+                            .accessibilityLabel("Visit \(step), \(reward) carrots")
                             .accessibilityValue(stepState(step))
                         }
                     }
 
                     Label(
-                        "Day seven includes the Moon Crown. If it is already owned, it becomes \(GameEngine.duplicateMoonCrownCarrots) carrots.",
+                        "Visit seven includes the Moon Crown. If it is already owned, it becomes \(GameEngine.duplicateMoonCrownCarrots) carrots.",
                         systemImage: "moon.stars.fill"
                     )
                     .font(.subheadline)
@@ -187,7 +187,7 @@ struct DailyGiftView: View {
 
     private var claimTitle: String {
         switch eligibility {
-        case let .eligible(step): "Claim Day \(step)"
+        case let .eligible(step): "Claim Visit \(step)"
         case .alreadyClaimed: "Claimed Today"
         case .clockRollback: "Date Check Needed"
         }
@@ -197,8 +197,8 @@ struct DailyGiftView: View {
         switch eligibility {
         case let .eligible(step):
             step == 1
-                ? "A fresh seven-day gift path begins today."
-                : "Day \(step) is ready whenever you are."
+                ? "A fresh seven-visit gift path begins today."
+                : "Visit \(step) is ready whenever you are."
         case .alreadyClaimed:
             "Today’s gift is already tucked away."
         case .clockRollback:
@@ -273,7 +273,7 @@ struct ShopItemRow: View {
         if state.ownedItems.contains(item.id) { return "Owned" }
         switch item.acquisition {
         case let .bond(level): return "Locked • bond level \(level)"
-        case let .daily(step): return "Locked • daily day \(step)"
+        case let .daily(step): return "Locked • daily visit \(step)"
         case .shop, .legacy:
             if state.bondLevel < item.requiredBondLevel {
                 return "Locked • bond level \(item.requiredBondLevel)"
@@ -402,7 +402,7 @@ struct ShopItemDetailView: View {
     private var unlockDescription: String {
         switch item.acquisition {
         case let .bond(level): "Reach bond level \(level) to unlock this keepsake."
-        case let .daily(step): "Claim day \(step) of the daily gift cycle."
+        case let .daily(step): "Claim visit \(step) of the daily gift cycle."
         case .shop, .legacy: ""
         }
     }
@@ -521,7 +521,7 @@ struct WardrobeView: View {
         guard currentState.ownedItems.contains(item.id) else {
             switch item.acquisition {
             case let .bond(level): return "Locked until bond level \(level)"
-            case let .daily(step): return "Locked until daily day \(step)"
+            case let .daily(step): return "Locked until daily visit \(step)"
             case .shop, .legacy: return "Locked • available in the shop"
             }
         }

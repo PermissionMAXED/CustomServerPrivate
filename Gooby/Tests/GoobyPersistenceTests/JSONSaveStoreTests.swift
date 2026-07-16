@@ -44,9 +44,9 @@ final class JSONSaveStoreTests: XCTestCase, @unchecked Sendable {
             XCTAssertEqual(error as? SaveMigrationError, .unsupportedPastSchema(0))
         }
         XCTAssertThrowsError(
-            try migrator.decodeAndMigrate(Data(#"{"schemaVersion":3}"#.utf8))
+            try migrator.decodeAndMigrate(Data(#"{"schemaVersion":4}"#.utf8))
         ) { error in
-            XCTAssertEqual(error as? SaveMigrationError, .unsupportedFutureSchema(3))
+            XCTAssertEqual(error as? SaveMigrationError, .unsupportedFutureSchema(4))
         }
     }
 
@@ -57,7 +57,8 @@ final class JSONSaveStoreTests: XCTestCase, @unchecked Sendable {
 
         let loaded = try await store.load(now: now)
 
-        XCTAssertEqual(loaded, GameState.new(now: now))
+        XCTAssertEqual(loaded.state, GameState.new(now: now))
+        XCTAssertEqual(loaded.source, .missing)
         XCTAssertFalse(FileManager.default.fileExists(atPath: store.primaryURL.path))
         XCTAssertFalse(FileManager.default.fileExists(atPath: store.backupURL.path))
     }
@@ -73,7 +74,8 @@ final class JSONSaveStoreTests: XCTestCase, @unchecked Sendable {
         let loaded = try await store.load(now: now.adding(seconds: 100))
         let primaryText = try String(contentsOf: store.primaryURL, encoding: .utf8)
 
-        XCTAssertEqual(loaded, state)
+        XCTAssertEqual(loaded.state, state)
+        XCTAssertEqual(loaded.source, .primary)
         XCTAssertTrue(primaryText.hasPrefix(#"{"savedAt":"#))
         XCTAssertTrue(FileManager.default.fileExists(atPath: store.backupURL.path))
     }
@@ -92,23 +94,31 @@ final class JSONSaveStoreTests: XCTestCase, @unchecked Sendable {
 
         let recovered = try await store.load(now: now)
 
-        XCTAssertEqual(recovered, first)
+        XCTAssertEqual(recovered.state, first)
+        XCTAssertEqual(recovered.source, .recoveredBackup)
     }
 
-    func testCorruptionWithoutBackupReturnsDefaultsAndPreservesCorruptFile() async throws {
+    func testCorruptionWithoutBackupRequiresRecoveryAndPreservesCorruptFile() async throws {
         let directory = try makeTemporaryDirectory()
         defer { try? FileManager.default.removeItem(at: directory) }
         let store = JSONSaveStore(directoryURL: directory)
         let corruption = Data("broken".utf8)
         try corruption.write(to: store.primaryURL)
 
-        let loaded = try await store.load(now: now)
-
-        XCTAssertEqual(loaded, GameState.new(now: now))
+        do {
+            _ = try await store.load(now: now)
+            XCTFail("Existing corruption must fail closed")
+        } catch {
+            XCTAssertEqual(
+                error as? SaveRecoveryRequired,
+                SaveRecoveryRequired(primary: .corrupt, backup: .missing)
+            )
+        }
         XCTAssertEqual(try Data(contentsOf: store.primaryURL), corruption)
+        XCTAssertFalse(FileManager.default.fileExists(atPath: store.backupURL.path))
     }
 
-    func testSaveRepairsCorruptPrimaryAndBackupBeforeWritingFreshState() async throws {
+    func testSaveNeverRepairsUnconfirmedCorruptPrimaryAndBackup() async throws {
         let directory = try makeTemporaryDirectory()
         defer { try? FileManager.default.removeItem(at: directory) }
         let store = JSONSaveStore(directoryURL: directory)
@@ -117,16 +127,17 @@ final class JSONSaveStoreTests: XCTestCase, @unchecked Sendable {
         var state = GameState.new(now: now)
         state.carrots = 64
 
-        try await store.save(state, at: now)
-
-        let primary = try SaveMigrator().decodeAndMigrate(
-            Data(contentsOf: store.primaryURL)
-        )
-        let backup = try SaveMigrator().decodeAndMigrate(
-            Data(contentsOf: store.backupURL)
-        )
-        XCTAssertEqual(primary.state, state)
-        XCTAssertEqual(backup.state, state)
+        do {
+            try await store.save(state, at: now)
+            XCTFail("Unusable files must not be overwritten")
+        } catch {
+            XCTAssertEqual(
+                error as? SaveRecoveryRequired,
+                SaveRecoveryRequired(primary: .corrupt, backup: .corrupt)
+            )
+        }
+        XCTAssertEqual(try Data(contentsOf: store.primaryURL), Data("bad-primary".utf8))
+        XCTAssertEqual(try Data(contentsOf: store.backupURL), Data("bad-backup".utf8))
     }
 
     func testFutureSchemaIsNeverDestroyedByLoadOrSave() async throws {
@@ -140,7 +151,10 @@ final class JSONSaveStoreTests: XCTestCase, @unchecked Sendable {
             _ = try await store.load(now: now)
             XCTFail("A future schema must be surfaced to the caller")
         } catch {
-            XCTAssertEqual(error as? SaveMigrationError, .unsupportedFutureSchema(999))
+            XCTAssertEqual(
+                error as? SaveRecoveryRequired,
+                SaveRecoveryRequired(primary: .futureSchema(999), backup: .missing)
+            )
         }
         XCTAssertEqual(try Data(contentsOf: store.primaryURL), future)
 
@@ -148,7 +162,10 @@ final class JSONSaveStoreTests: XCTestCase, @unchecked Sendable {
             try await store.save(GameState.new(now: now), at: now)
             XCTFail("Saving over a future schema must fail")
         } catch {
-            XCTAssertEqual(error as? SaveMigrationError, .unsupportedFutureSchema(999))
+            XCTAssertEqual(
+                error as? SaveRecoveryRequired,
+                SaveRecoveryRequired(primary: .futureSchema(999), backup: .missing)
+            )
         }
         XCTAssertEqual(try Data(contentsOf: store.primaryURL), future)
     }
@@ -157,17 +174,45 @@ final class JSONSaveStoreTests: XCTestCase, @unchecked Sendable {
         let directory = try makeTemporaryDirectory()
         defer { try? FileManager.default.removeItem(at: directory) }
         let store = JSONSaveStore(directoryURL: directory)
-        let future = Data(#"{"schemaVersion":3}"#.utf8)
+        let future = Data(#"{"schemaVersion":999}"#.utf8)
         try future.write(to: store.backupURL, options: .atomic)
 
         do {
             try await store.save(GameState.new(now: now), at: now)
             XCTFail("A future backup must be retained")
         } catch {
-            XCTAssertEqual(error as? SaveMigrationError, .unsupportedFutureSchema(3))
+            XCTAssertEqual(
+                error as? SaveRecoveryRequired,
+                SaveRecoveryRequired(primary: .missing, backup: .futureSchema(999))
+            )
         }
         XCTAssertEqual(try Data(contentsOf: store.backupURL), future)
         XCTAssertFalse(FileManager.default.fileExists(atPath: store.primaryURL.path))
+    }
+
+    func testFutureBackupIsPreservedEvenWhenPrimaryIsUsable() async throws {
+        let directory = try makeTemporaryDirectory()
+        defer { try? FileManager.default.removeItem(at: directory) }
+        let store = JSONSaveStore(directoryURL: directory)
+        let current = GameState.new(now: now)
+        try await store.save(current, at: now)
+        let future = Data(#"{"schemaVersion":999,"future":true}"#.utf8)
+        try future.write(to: store.backupURL, options: .atomic)
+        var candidate = current
+        candidate.carrots = 88
+
+        do {
+            try await store.save(candidate, at: now)
+            XCTFail("A future backup must be preserved")
+        } catch {
+            XCTAssertEqual(
+                error as? SaveRecoveryRequired,
+                SaveRecoveryRequired(primary: .valid, backup: .futureSchema(999))
+            )
+        }
+        XCTAssertEqual(try Data(contentsOf: store.backupURL), future)
+        let loaded = try await store.load(now: now)
+        XCTAssertEqual(loaded.state, current)
     }
 
     func testActorSerializesConcurrentSavesIntoAValidEnvelope() async throws {
@@ -220,6 +265,146 @@ final class JSONSaveStoreTests: XCTestCase, @unchecked Sendable {
         XCTAssertEqual(migrated.state.preferences, GamePreferences())
     }
 
+    func testVersionTwoMigrationPreservesProgressAndCreatesLegacyDayLedger() throws {
+        let data = try fixture(named: "save-v2")
+        let migrated = try SaveMigrator().decodeAndMigrate(data)
+
+        XCTAssertEqual(migrated.schemaVersion, 3)
+        XCTAssertEqual(migrated.state.carrots, 247)
+        XCTAssertEqual(migrated.state.bondPoints, 88)
+        XCTAssertEqual(migrated.state.needs.fullness.value, 530)
+        XCTAssertEqual(migrated.state.foodQuantity(GoobyCatalog.gardenCarrot), 9)
+        XCTAssertEqual(migrated.state.foodQuantity(ItemID(rawValue: "legacy-snack")), 2)
+        XCTAssertTrue(migrated.state.ownedItems.contains(ItemID(rawValue: "unknown-safe-owned-item")))
+        XCTAssertEqual(migrated.state.preferences.petName, "Mochi")
+        XCTAssertEqual(migrated.state.bestMinigameScores[.carrotCatch], 140)
+        XCTAssertEqual(
+            migrated.state.dailyReward.claimedLocalDays,
+            [DailyRewardSchedule.legacyUTCKey(day: 20_000)]
+        )
+    }
+
+    func testCheckedInVersionThreeFixtureDecodesWithoutLoss() throws {
+        let migrated = try SaveMigrator().decodeAndMigrate(try fixture(named: "save-v3"))
+
+        XCTAssertEqual(migrated.state.carrots, 91)
+        XCTAssertEqual(migrated.state.dailyReward.visitStep, 2)
+        XCTAssertEqual(
+            migrated.state.dailyReward.claimedLocalDays.map(\.rawValue),
+            ["2024-10-03", "2024-10-05"]
+        )
+        XCTAssertEqual(migrated.state.equippedCosmetics.neck, GoobyCatalog.sunshineBow)
+    }
+
+    func testSemanticMalformedStateNormalizesWithoutDroppingSafeUnknownOwnership() throws {
+        var state = GameState.new(now: now)
+        let unknown = ItemID(rawValue: "future-cosmetic")
+        state.carrots = -100
+        state.bondPoints = -4
+        state.ownedItems = [unknown, unknown, GoobyCatalog.sunshineBow]
+        state.foodInventory = [GoobyCatalog.gardenCarrot: -9]
+        state.equippedCosmetics.head = GoobyCatalog.sunshineBow
+        state.unlockedAchievements = [.firstMeal, .firstMeal]
+        state.rewardedMinigameRuns = [
+            MinigameRunID(rawValue: "same"),
+            MinigameRunID(rawValue: "same"),
+        ]
+        state.bestMinigameScores[.carrotCatch] = -1
+        state.dailyReward.visitStep = -7
+        state.dailyReward.claimedLocalDays = [
+            LocalDayKey(rawValue: "not-a-day"),
+            LocalDayKey(rawValue: "2024-11-03"),
+            LocalDayKey(rawValue: "2024-11-03"),
+        ]
+        let data = try JSONEncoder().encode(SaveEnvelope(savedAt: now, state: state))
+
+        let normalized = try SaveMigrator().decodeAndMigrate(data).state
+
+        XCTAssertEqual(normalized.carrots, 0)
+        XCTAssertEqual(normalized.bondPoints, 0)
+        XCTAssertTrue(normalized.ownedItems.contains(unknown))
+        XCTAssertEqual(normalized.ownedItems.filter { $0 == unknown }.count, 1)
+        XCTAssertEqual(normalized.foodInventory, [:])
+        XCTAssertNil(normalized.equippedCosmetics.head)
+        XCTAssertEqual(normalized.unlockedAchievements, [.firstMeal])
+        XCTAssertEqual(normalized.rewardedMinigameRuns, [MinigameRunID(rawValue: "same")])
+        XCTAssertEqual(normalized.bestMinigameScores[.carrotCatch], 0)
+        XCTAssertEqual(normalized.dailyReward.visitStep, 0)
+        XCTAssertEqual(
+            normalized.dailyReward.claimedLocalDays,
+            [LocalDayKey(rawValue: "2024-11-03")]
+        )
+    }
+
+    func testUnsafeSemanticIdentityIsClassifiedInvalidAndNeverWrittenOver() async throws {
+        let directory = try makeTemporaryDirectory()
+        defer { try? FileManager.default.removeItem(at: directory) }
+        let store = JSONSaveStore(directoryURL: directory)
+        var invalid = String(decoding: try fixture(named: "save-v3"), as: UTF8.self)
+        invalid = invalid.replacingOccurrences(
+            of: #""petID": "gooby""#,
+            with: #""petID": "other-pet""#
+        )
+        let bytes = Data(invalid.utf8)
+        try bytes.write(to: store.primaryURL)
+
+        do {
+            _ = try await store.load(now: now)
+            XCTFail("Unsafe semantic identity must require recovery")
+        } catch {
+            XCTAssertEqual(
+                error as? SaveRecoveryRequired,
+                SaveRecoveryRequired(primary: .invalid(["petID"]), backup: .missing)
+            )
+        }
+        XCTAssertEqual(try Data(contentsOf: store.primaryURL), bytes)
+    }
+
+    func testConfirmedDamagedResetReplacesBothFiles() async throws {
+        let directory = try makeTemporaryDirectory()
+        defer { try? FileManager.default.removeItem(at: directory) }
+        let store = JSONSaveStore(directoryURL: directory)
+        try Data("primary-damage".utf8).write(to: store.primaryURL)
+        try Data("backup-damage".utf8).write(to: store.backupURL)
+
+        let fresh = try await store.reset(now: now, discardingDamagedSave: true)
+        let loaded = try await store.load(now: now)
+
+        XCTAssertEqual(fresh, GameState.new(now: now))
+        XCTAssertEqual(loaded.state, fresh)
+        XCTAssertEqual(loaded.source, .primary)
+    }
+
+    func testResetFailuresLeaveOldPrimaryEffectiveAtEveryWritePoint() async throws {
+        for point in [SaveWritePoint.resetBackup, .resetPrimary] {
+            let directory = try makeTemporaryDirectory()
+            defer { try? FileManager.default.removeItem(at: directory) }
+            let setup = JSONSaveStore(directoryURL: directory)
+            var old = GameState.new(now: now)
+            old.carrots = 333
+            try await setup.save(old, at: now)
+
+            let failing = JSONSaveStore(
+                directoryURL: directory,
+                beforeWrite: { candidate in
+                    if candidate == point { throw InjectedFailure.write }
+                }
+            )
+            do {
+                _ = try await failing.reset(
+                    now: self.now.adding(seconds: 1),
+                    discardingDamagedSave: false
+                )
+                XCTFail("Expected injected failure at \(point)")
+            } catch {
+                XCTAssertEqual(error as? InjectedFailure, .write)
+            }
+            let loaded = try await setup.load(now: now)
+            XCTAssertEqual(loaded.state, old)
+            XCTAssertEqual(loaded.source, .primary)
+        }
+    }
+
     func testResetDeletesPreviousProgressAndPersistsFreshState() async throws {
         let directory = try makeTemporaryDirectory()
         defer { try? FileManager.default.removeItem(at: directory) }
@@ -233,7 +418,7 @@ final class JSONSaveStoreTests: XCTestCase, @unchecked Sendable {
         let reloaded = try await store.load(now: now.adding(seconds: 10))
 
         XCTAssertEqual(reset, GameState.new(now: now.adding(seconds: 10)))
-        XCTAssertEqual(reloaded, reset)
+        XCTAssertEqual(reloaded.state, reset)
         XCTAssertTrue(FileManager.default.fileExists(atPath: store.primaryURL.path))
         XCTAssertTrue(FileManager.default.fileExists(atPath: store.backupURL.path))
     }
@@ -244,4 +429,19 @@ final class JSONSaveStoreTests: XCTestCase, @unchecked Sendable {
         try FileManager.default.createDirectory(at: url, withIntermediateDirectories: true)
         return url
     }
+
+    private func fixture(named name: String) throws -> Data {
+        let url = try XCTUnwrap(
+            Bundle.module.url(
+                forResource: name,
+                withExtension: "json",
+                subdirectory: "Fixtures"
+            )
+        )
+        return try Data(contentsOf: url)
+    }
+}
+
+private enum InjectedFailure: Error, Equatable {
+    case write
 }

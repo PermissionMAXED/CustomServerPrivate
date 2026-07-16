@@ -15,6 +15,8 @@ final class GoobySceneCoordinator {
     private var idleTask: Task<Void, Never>?
     private var reactionTask: Task<Void, Never>?
     private var lastEventRevision = -1
+    private var consumedEventCount = 0
+    private var reactionQueue: [GameEvent] = []
     private var reduceMotion = false
     private var idleStep = 0
 
@@ -46,10 +48,14 @@ final class GoobySceneCoordinator {
 
         guard eventRevision != lastEventRevision else { return }
         lastEventRevision = eventRevision
-        guard !reduceMotion, let reaction = events.reversed().first(where: Self.isReaction) else {
-            return
+        if events.count < consumedEventCount {
+            consumedEventCount = 0
         }
-        runReaction(reaction)
+        let newEvents = events.dropFirst(consumedEventCount)
+        consumedEventCount = events.count
+        guard !reduceMotion else { return }
+        reactionQueue.append(contentsOf: newEvents.filter(Self.isReaction))
+        startNextReactionIfNeeded()
     }
 
     func stop() {
@@ -57,6 +63,7 @@ final class GoobySceneCoordinator {
         reactionTask?.cancel()
         idleTask = nil
         reactionTask = nil
+        reactionQueue = []
     }
 
     private func switchRoom(to room: RoomID) {
@@ -431,9 +438,10 @@ final class GoobySceneCoordinator {
         }
     }
 
-    private func runReaction(_ event: GameEvent) {
+    private func startNextReactionIfNeeded() {
+        guard reactionTask == nil, !reactionQueue.isEmpty else { return }
+        let event = reactionQueue.removeFirst()
         guard let rig = gooby.findEntity(named: GoobyRealityNames.rig) else { return }
-        reactionTask?.cancel()
         let original = rig.transform
         var target = original
         let duration: Double
@@ -462,7 +470,7 @@ final class GoobySceneCoordinator {
         }
 
         rig.move(to: target, relativeTo: rig.parent, duration: duration, timingFunction: .easeInOut)
-        reactionTask = Task { @MainActor [weak rig] in
+        reactionTask = Task { @MainActor [weak self, weak rig] in
             try? await Task.sleep(for: .seconds(duration + 0.04))
             guard !Task.isCancelled else { return }
             rig?.move(
@@ -471,6 +479,10 @@ final class GoobySceneCoordinator {
                 duration: duration,
                 timingFunction: .easeInOut
             )
+            try? await Task.sleep(for: .seconds(duration))
+            guard !Task.isCancelled else { return }
+            self?.reactionTask = nil
+            self?.startNextReactionIfNeeded()
         }
     }
 
