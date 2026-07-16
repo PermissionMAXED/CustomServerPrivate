@@ -267,6 +267,7 @@ private struct HomeView: View {
             .padding(.horizontal, 12)
             .frame(minHeight: 44)
             .background(.thinMaterial, in: Capsule())
+            .accessibilityElement(children: .ignore)
             .accessibilityLabel("Carrots")
             .accessibilityValue("\(state.carrots)")
             .accessibilityIdentifier("home.carrots")

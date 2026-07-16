@@ -31,9 +31,11 @@ final class GoobyDemoUITests: XCTestCase {
         waitForLabel("Kitchen", identifier: "room.current", in: app)
         tap(app.buttons["care.primary"], in: app)
         waitForLabel("100%", identifier: "need.fullness.value", in: app)
-        for _ in 0 ..< 7 {
-            tap(app.buttons["care.pet"], in: app)
+        let pet = app.buttons["care.pet"]
+        tap(pet, in: app)
+        for _ in 1 ..< 7 {
             usleep(200_000)
+            pet.tap()
         }
         waitForLabel("Bond level 2 of 10", identifier: "bond.level", in: app)
 

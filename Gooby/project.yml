@@ -22,7 +22,7 @@ settings:
     SWIFT_TREAT_WARNINGS_AS_ERRORS: YES
     GCC_TREAT_WARNINGS_AS_ERRORS: YES
     CLANG_WARN_DOCUMENTATION_COMMENTS: YES
-    OTHER_SWIFT_FLAGS: "$(inherited) -Xfrontend -disable-autolink-framework -Xfrontend AppIntents"
+    ENABLE_APP_INTENTS_METADATA_GENERATION: NO
     CODE_SIGNING_ALLOWED: NO
     CODE_SIGNING_REQUIRED: NO
 
@@ -73,6 +73,8 @@ targets:
         UISupportedInterfaceOrientations~ipad:
           - UIInterfaceOrientationPortrait
           - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
 
   GoobyAppTests:
     type: bundle.unit-test

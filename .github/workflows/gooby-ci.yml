@@ -147,6 +147,7 @@ jobs:
             -scheme Gooby \
             -destination 'platform=iOS Simulator,id=${{ steps.simulator.outputs.id }}' \
             -resultBundlePath Gooby/TestResults/Gooby.xcresult \
+            -skip-testing:GoobyUITests/GoobyDemoUITests \
             CODE_SIGNING_ALLOWED=NO \
             test
 

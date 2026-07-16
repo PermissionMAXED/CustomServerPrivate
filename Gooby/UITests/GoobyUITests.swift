@@ -181,10 +181,13 @@ final class GoobyUITests: XCTestCase {
         )
         let window = app.windows.firstMatch
         let status = app.staticTexts["gooby.status"]
-        let balance = app.descendants(matching: .any)["home.carrots"]
+        let balanceMatches = app.descendants(matching: .any)
+            .matching(identifier: "home.carrots")
+        let balance = balanceMatches.firstMatch
 
         XCTAssertTrue(status.waitForExistence(timeout: 8))
         XCTAssertTrue(balance.waitForExistence(timeout: 8))
+        XCTAssertEqual(balanceMatches.count, 1)
         XCTAssertTrue(window.frame.contains(status.frame))
         XCTAssertTrue(window.frame.contains(balance.frame))
         XCTAssertGreaterThanOrEqual(balance.frame.height, 44)
