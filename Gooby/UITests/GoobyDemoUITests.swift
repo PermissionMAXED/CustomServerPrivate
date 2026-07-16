@@ -57,7 +57,7 @@ final class GoobyDemoUITests: XCTestCase {
         tap(app.buttons["carrot.start"], in: app)
         for (index, lane) in DemoSequence.carrotLanes.enumerated() {
             waitForCarrot(index + 1, in: app)
-            tap(app.buttons["carrot.lane.\(lane)"], in: app)
+            pressCarrotLane(lane, in: app)
         }
         XCTAssertTrue(app.staticTexts["carrot.result.score"].waitForExistence(timeout: 10))
         XCTAssertEqual(app.staticTexts["carrot.result.score"].label, "200 points")
@@ -69,7 +69,7 @@ final class GoobyDemoUITests: XCTestCase {
         for sequence in DemoSequence.echoRounds {
             waitForEchoInput(in: app)
             for pad in sequence {
-                tap(app.buttons["echo.pad.\(pad)"], in: app)
+                pressEchoPad(pad, in: app)
             }
         }
         XCTAssertTrue(app.staticTexts["echo.result.score"].waitForExistence(timeout: 10))
@@ -138,6 +138,16 @@ final class GoobyDemoUITests: XCTestCase {
         XCTAssertTrue(
             app.staticTexts.matching(predicate).firstMatch.waitForExistence(timeout: 10)
         )
+    }
+
+    @MainActor
+    private func pressCarrotLane(_ lane: String, in app: XCUIApplication) {
+        app.buttons["carrot.lane.\(lane)"].tap()
+    }
+
+    @MainActor
+    private func pressEchoPad(_ pad: String, in app: XCUIApplication) {
+        app.buttons["echo.pad.\(pad)"].tap()
     }
 
     @MainActor
