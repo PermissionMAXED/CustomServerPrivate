@@ -145,7 +145,7 @@ jobs:
           xcodebuild \
             -project Gooby/Gooby.xcodeproj \
             -scheme Gooby \
-            -destination 'platform=iOS Simulator,id=${{ steps.simulator.outputs.id }}' \
+            -destination 'platform=iOS Simulator,id=${{ steps.simulator.outputs.id }},arch=arm64' \
             -resultBundlePath Gooby/TestResults/Gooby.xcresult \
             -skip-testing:GoobyUITests/GoobyDemoUITests \
             CODE_SIGNING_ALLOWED=NO \
@@ -157,6 +157,11 @@ jobs:
           simulator_id='${{ steps.simulator.outputs.id }}'
           video_path='Gooby/TestResults/gooby_full_demo.mp4'
           demo_result='Gooby/TestResults/GoobyDemo.xcresult'
+
+          xcrun simctl shutdown "$simulator_id" 2>/dev/null || true
+          xcrun simctl boot "$simulator_id"
+          xcrun simctl bootstatus "$simulator_id" -b
+          xcrun simctl terminate "$simulator_id" com.goobygame.app 2>/dev/null || true
 
           stop_recording() {
             if kill -0 "$video_pid" 2>/dev/null; then
@@ -176,7 +181,7 @@ jobs:
           xcodebuild \
             -project Gooby/Gooby.xcodeproj \
             -scheme Gooby \
-            -destination "platform=iOS Simulator,id=$simulator_id" \
+            -destination "platform=iOS Simulator,id=$simulator_id,arch=arm64" \
             -resultBundlePath "$demo_result" \
             -only-testing:GoobyUITests/GoobyDemoUITests/testRecordedDemoJourney \
             CODE_SIGNING_ALLOWED=NO \
