@@ -1205,7 +1205,7 @@ private struct GardenEchoView: View {
 
     private var phaseTitle: String {
         if game.isPaused { return "Paused" }
-        switch game.phase {
+        return switch game.phase {
         case .sequence: "Watch the sequence"
         case .input: "Your turn"
         case .finished: "Sequence complete"
