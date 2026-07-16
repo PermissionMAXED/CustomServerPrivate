@@ -236,6 +236,12 @@ jobs:
           if not candidates:
               raise SystemExit("No available iPhone simulator found")
 
+          preferred = [
+              candidate
+              for candidate in candidates
+              if candidate[1] == "iPhone SE (3rd generation)"
+          ]
+          candidates = preferred or candidates
           newest_runtime = max(candidate[0] for candidate in candidates)
           choices = sorted(
               candidate for candidate in candidates if candidate[0] == newest_runtime
