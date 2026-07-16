@@ -93,6 +93,10 @@ final class GoobyUITests: XCTestCase {
         XCTAssertTrue(app.buttons["wardrobe.unequip"].waitForExistence(timeout: 8))
         tap(app.buttons["sheet.done"], in: app)
         XCTAssertTrue(app.staticTexts["gooby.status"].waitForExistence(timeout: 8))
+        for _ in 0 ..< 4 {
+            app.swipeDown()
+        }
+        XCTAssertTrue(app.staticTexts["room.current"].waitForExistence(timeout: 8))
         attachHomeScreenshot(named: "Gooby Gate 4 — Home with Equipped Bow")
     }
 
