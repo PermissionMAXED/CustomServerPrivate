@@ -231,6 +231,125 @@ final class GoobyAppTests: XCTestCase {
     }
 
     @MainActor
+    func testStoreStartsPausesRelaunchesAndCancelsMinigameWithoutReward() async throws {
+        let repository = InMemoryGameRepository()
+        let clock = TestClock()
+        let feedback = FeedbackSpy()
+        let first = GameStore(
+            repository: repository,
+            clock: clock,
+            audio: feedback,
+            haptics: feedback,
+            skipsWelcome: true
+        )
+        await first.start()
+
+        let started = await first.dispatch(.startMinigame(kind: .carrotCatch))
+        XCTAssertTrue(started)
+        let run = try XCTUnwrap(first.state?.activeMinigame)
+        await first.pauseActiveMinigame()
+        XCTAssertTrue(first.state?.activeMinigame?.isPaused == true)
+
+        let relaunched = GameStore(
+            repository: repository,
+            clock: clock,
+            audio: feedback,
+            haptics: feedback,
+            skipsWelcome: true
+        )
+        await relaunched.start()
+        XCTAssertEqual(relaunched.state?.activeMinigame?.id, run.id)
+        XCTAssertTrue(relaunched.state?.activeMinigame?.isPaused == true)
+        let carrots = relaunched.state?.carrots
+
+        let cancelled = await relaunched.dispatch(.cancelMinigame(runID: run.id))
+        XCTAssertTrue(cancelled)
+        XCTAssertNil(relaunched.state?.activeMinigame)
+        XCTAssertEqual(relaunched.state?.carrots, carrots)
+        XCTAssertFalse(relaunched.state?.rewardedMinigameRuns.contains(run.id) == true)
+        XCTAssertEqual(feedback.audioCues.filter { $0 == .play }.count, 1)
+        XCTAssertFalse(feedback.audioCues.contains(.reward))
+    }
+
+    @MainActor
+    func testStoreFinishesValidatedMinigameOnceAndPersistsBestScore() async throws {
+        let repository = InMemoryGameRepository()
+        let clock = TestClock()
+        let feedback = FeedbackSpy()
+        let store = GameStore(
+            repository: repository,
+            clock: clock,
+            audio: feedback,
+            haptics: feedback,
+            skipsWelcome: true
+        )
+        await store.start()
+        let started = await store.dispatch(.startMinigame(kind: .carrotCatch))
+        XCTAssertTrue(started)
+        let run = try XCTUnwrap(store.state?.activeMinigame)
+        let moves = CarrotCatch.carrotLanes(seed: run.seed, count: CarrotCatch.maximumMoves)
+            .map(CarrotCatchMove.init(lane:))
+        let command = GameCommand.finishMinigame(
+            runID: run.id,
+            submission: .carrotCatch(moves: moves)
+        )
+
+        let finished = await store.dispatch(command)
+        XCTAssertTrue(finished)
+        let rewarded = store.state
+        XCTAssertEqual(rewarded?.bestMinigameScores[.carrotCatch], 200)
+        XCTAssertEqual(rewarded?.carrots, 50)
+        XCTAssertEqual(store.rewardNotices.last?.detail, "200 points • +20 carrots")
+        XCTAssertEqual(feedback.audioCues.last, .reward)
+
+        let replayed = await store.dispatch(command)
+        XCTAssertTrue(replayed)
+        XCTAssertEqual(store.state, rewarded)
+        XCTAssertEqual(
+            store.latestEvents.last,
+            .minigameRewardAlreadyGranted(run.id)
+        )
+
+        let relaunched = GameStore(
+            repository: repository,
+            clock: clock,
+            audio: feedback,
+            haptics: feedback,
+            skipsWelcome: true
+        )
+        await relaunched.start()
+        XCTAssertEqual(relaunched.state?.bestMinigameScores[.carrotCatch], 200)
+        XCTAssertEqual(relaunched.state?.carrots, 50)
+    }
+
+    @MainActor
+    func testMinigameInputFeedbackUsesDistinctProceduralCues() async {
+        let repository = InMemoryGameRepository()
+        let feedback = FeedbackSpy()
+        let store = makeStore(repository: repository, feedback: feedback)
+        await store.start()
+
+        store.playMinigameFeedback(.carrotCatch(caught: true))
+        store.playMinigameFeedback(.carrotCatch(caught: false))
+        for symbol in GardenEcho.symbolRange {
+            store.playMinigameFeedback(.gardenEcho(symbol: symbol))
+        }
+
+        XCTAssertEqual(Array(feedback.audioCues.suffix(6)), [
+            .carrotCatch(caught: true),
+            .carrotCatch(caught: false),
+            .gardenEcho(symbol: 0),
+            .gardenEcho(symbol: 1),
+            .gardenEcho(symbol: 2),
+            .gardenEcho(symbol: 3),
+        ])
+        XCTAssertEqual(
+            Array(feedback.hapticCues.suffix(6)),
+            Array(feedback.audioCues.suffix(6))
+        )
+    }
+
+    @MainActor
     private func makeStore(
         repository: InMemoryGameRepository,
         feedback: FeedbackSpy

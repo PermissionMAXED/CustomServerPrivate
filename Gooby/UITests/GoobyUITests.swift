@@ -91,6 +91,77 @@ final class GoobyUITests: XCTestCase {
         tap(app.buttons["home.destination.wardrobe"], in: app)
         tap(app.buttons["wardrobe.item.sunshine-bow"], in: app)
         XCTAssertTrue(app.buttons["wardrobe.unequip"].waitForExistence(timeout: 8))
+        tap(app.buttons["sheet.done"], in: app)
+        XCTAssertTrue(app.staticTexts["gooby.status"].waitForExistence(timeout: 8))
+        attachHomeScreenshot(named: "Gooby Gate 4 — Home with Equipped Bow")
+    }
+
+    @MainActor
+    func testCarrotCatchCompletesDeterministicShortRunAndShowsReward() {
+        let app = launchFreshApp(shortMinigames: true)
+
+        tap(app.buttons["home.destination.arcade"], in: app)
+        tap(app.buttons["arcade.play.carrotCatch"], in: app)
+        tap(app.buttons["carrot.start"], in: app)
+        let target = app.descendants(matching: .any)["carrot.target"]
+        XCTAssertTrue(target.waitForExistence(timeout: 10))
+
+        for carrot in 1 ... CarrotCatchUITest.maximumMoves {
+            waitForCarrotTarget(carrot, in: app)
+            let lane = CarrotCatchUITest.lanes[carrot - 1]
+            tap(app.buttons["carrot.lane.\(lane)"], in: app)
+        }
+
+        XCTAssertTrue(app.staticTexts["carrot.result.score"].waitForExistence(timeout: 10))
+        XCTAssertEqual(app.staticTexts["carrot.result.score"].label, "200 points")
+        XCTAssertTrue(app.staticTexts["carrot.result.reward"].label.contains("+20 carrots"))
+        XCTAssertEqual(app.staticTexts["carrot.result.best"].label, "Best score: 200")
+        attachHomeScreenshot(named: "Gooby Gate 4 — Carrot Catch Result")
+    }
+
+    @MainActor
+    func testGardenEchoCompletesDeterministicShortRunAndShowsReward() {
+        let app = launchFreshApp(shortMinigames: true)
+        let pet = app.buttons["care.pet"]
+        tap(pet, in: app)
+        for _ in 1 ..< 9 {
+            usleep(180_000)
+            pet.tap()
+        }
+        waitForLabel("Bond level 2 of 10", identifier: "bond.level", in: app, timeout: 10)
+
+        tap(app.buttons["home.destination.arcade"], in: app)
+        XCTAssertTrue(app.buttons["arcade.play.gardenEcho"].isEnabled)
+        tap(app.buttons["arcade.play.gardenEcho"], in: app)
+        tap(app.buttons["echo.start"], in: app)
+
+        for (roundIndex, sequence) in GardenEchoUITest.rounds.enumerated() {
+            waitForEchoInput(round: roundIndex + 1, in: app)
+            for pad in sequence {
+                tap(app.buttons["echo.pad.\(pad)"], in: app)
+            }
+        }
+
+        XCTAssertTrue(app.staticTexts["echo.result.score"].waitForExistence(timeout: 10))
+        XCTAssertEqual(app.staticTexts["echo.result.score"].label, "125 points")
+        XCTAssertTrue(app.staticTexts["echo.result.reward"].label.contains("+12 carrots"))
+        XCTAssertEqual(app.staticTexts["echo.result.best"].label, "Best score: 125")
+        attachHomeScreenshot(named: "Gooby Gate 4 — Garden Echo Result")
+    }
+
+    @MainActor
+    func testAccessibilityAuditOnArcadeLanding() throws {
+        let app = launchFreshApp(shortMinigames: false)
+        tap(app.buttons["home.destination.arcade"], in: app)
+
+        XCTAssertTrue(app.buttons["arcade.play.carrotCatch"].waitForExistence(timeout: 8))
+        XCTAssertTrue(app.buttons["arcade.play.carrotCatch"].frame.height >= 44)
+        XCTAssertFalse(app.staticTexts["arcade.best.carrotCatch"].label.isEmpty)
+        if #available(iOS 17.0, *) {
+            try app.performAccessibilityAudit(
+                for: [.hitRegion, .sufficientElementDescription, .textClipped, .dynamicType]
+            )
+        }
     }
 
     @MainActor
@@ -129,10 +200,79 @@ final class GoobyUITests: XCTestCase {
     }
 
     @MainActor
+    private func launchFreshApp(shortMinigames: Bool) -> XCUIApplication {
+        let app = XCUIApplication()
+        app.launchArguments = [
+            "--ui-testing",
+            "--reset-save",
+            "--skip-welcome",
+            "--reduce-motion",
+            "--fixed-time",
+            "1728000000",
+        ]
+        if shortMinigames {
+            app.launchArguments.append("--short-minigames")
+        }
+        app.launch()
+        XCTAssertTrue(app.staticTexts["gooby.status"].waitForExistence(timeout: 12))
+        return app
+    }
+
+    @MainActor
+    private func waitForEchoInput(round: Int, in app: XCUIApplication) {
+        let predicate = NSPredicate(
+            format: "identifier == %@ AND label CONTAINS %@",
+            "echo.status",
+            "Your turn"
+        )
+        XCTAssertTrue(
+            app.staticTexts.matching(predicate).firstMatch.waitForExistence(timeout: 10),
+            "Garden Echo round \(round) never entered input"
+        )
+    }
+
+    @MainActor
+    private func waitForCarrotTarget(_ carrot: Int, in app: XCUIApplication) {
+        let expected = "Carrot \(carrot) of \(CarrotCatchUITest.maximumMoves)"
+        let predicate = NSPredicate(
+            format: "identifier == %@ AND value CONTAINS %@",
+            "carrot.target",
+            expected
+        )
+        XCTAssertTrue(
+            app.descendants(matching: .any)
+                .matching(predicate)
+                .firstMatch
+                .waitForExistence(timeout: 5),
+            "Expected \(expected)"
+        )
+    }
+
+    @MainActor
     private func attachHomeScreenshot(named name: String) {
         let attachment = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
         attachment.name = name
         attachment.lifetime = .keepAlways
         add(attachment)
     }
+}
+
+private enum CarrotCatchUITest {
+    static let maximumMoves = 20
+    static let lanes = [
+        "left", "center", "center", "right", "center",
+        "right", "right", "right", "center", "right",
+        "left", "right", "right", "left", "right",
+        "left", "center", "left", "right", "right",
+    ]
+}
+
+private enum GardenEchoUITest {
+    static let rounds = [
+        ["berry", "star", "berry"],
+        ["berry", "star", "berry", "star"],
+        ["berry", "star", "berry", "star", "moon"],
+        ["berry", "star", "berry", "star", "moon", "moon"],
+        ["berry", "star", "berry", "star", "moon", "moon", "berry"],
+    ]
 }

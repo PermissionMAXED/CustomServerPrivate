@@ -3,12 +3,26 @@ import Foundation
 import UIKit
 
 @MainActor
-final class ProceduralAudioClient: AudioFeedbackClient {
+final class ProceduralAudioClient: NSObject, AudioFeedbackClient {
     private let engine = AVAudioEngine()
     private let player = AVAudioPlayerNode()
     private let sampleRate = 44_100.0
     private var isEnabled = true
     private var isConfigured = false
+
+    override init() {
+        super.init()
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(handleInterruption(_:)),
+            name: AVAudioSession.interruptionNotification,
+            object: nil
+        )
+    }
+
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
 
     func setAmbientEnabled(_ enabled: Bool) {
         isEnabled = enabled
@@ -29,7 +43,12 @@ final class ProceduralAudioClient: AudioFeedbackClient {
     }
 
     private func configureIfNeeded() {
-        guard !isConfigured else { return }
+        if isConfigured {
+            if !engine.isRunning {
+                try? engine.start()
+            }
+            return
+        }
         do {
             let session = AVAudioSession.sharedInstance()
             try session.setCategory(.ambient, mode: .default, options: [.mixWithOthers])
@@ -58,6 +77,13 @@ final class ProceduralAudioClient: AudioFeedbackClient {
         case .wake: notes = [(392, 0.08, 0.11), (523, 0.12, 0.12)]
         case .room: notes = [(466, 0.08, 0.08)]
         case .reward: notes = [(523, 0.07, 0.12), (659, 0.07, 0.12), (784, 0.12, 0.12)]
+        case let .carrotCatch(caught):
+            notes = caught
+                ? [(659, 0.06, 0.12), (880, 0.09, 0.11)]
+                : [(220, 0.11, 0.08)]
+        case let .gardenEcho(symbol):
+            let frequencies = [392.0, 523.0, 659.0, 784.0]
+            notes = [(frequencies[symbol.clamped(to: 0 ... 3)], 0.16, 0.12)]
         }
 
         let duration = notes.reduce(0) { $0 + $1.1 }
@@ -85,6 +111,28 @@ final class ProceduralAudioClient: AudioFeedbackClient {
         }
         return buffer
     }
+
+    @objc private func handleInterruption(_ notification: Notification) {
+        guard let rawType = notification.userInfo?[AVAudioSessionInterruptionTypeKey] as? UInt,
+              let type = AVAudioSession.InterruptionType(rawValue: rawType)
+        else {
+            return
+        }
+        switch type {
+        case .began:
+            player.pause()
+        case .ended:
+            let rawOptions = notification.userInfo?[
+                AVAudioSessionInterruptionOptionKey
+            ] as? UInt ?? 0
+            let options = AVAudioSession.InterruptionOptions(rawValue: rawOptions)
+            if isEnabled, options.contains(.shouldResume) {
+                configureIfNeeded()
+            }
+        @unknown default:
+            player.pause()
+        }
+    }
 }
 
 @MainActor
@@ -100,10 +148,24 @@ final class SystemHapticClient: HapticFeedbackClient {
         switch cue {
         case .reward:
             UINotificationFeedbackGenerator().notificationOccurred(.success)
+        case let .carrotCatch(caught):
+            if caught {
+                UINotificationFeedbackGenerator().notificationOccurred(.success)
+            } else {
+                UINotificationFeedbackGenerator().notificationOccurred(.warning)
+            }
+        case .gardenEcho:
+            UISelectionFeedbackGenerator().selectionChanged()
         case .wash, .play:
             UIImpactFeedbackGenerator(style: .medium).impactOccurred()
         default:
             UIImpactFeedbackGenerator(style: .soft).impactOccurred()
         }
+    }
+}
+
+private extension Comparable {
+    func clamped(to range: ClosedRange<Self>) -> Self {
+        min(max(self, range.lowerBound), range.upperBound)
     }
 }

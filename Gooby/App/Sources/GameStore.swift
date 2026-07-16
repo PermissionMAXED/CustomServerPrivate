@@ -24,6 +24,8 @@ enum FeedbackCue: Equatable {
     case wake
     case room
     case reward
+    case carrotCatch(caught: Bool)
+    case gardenEcho(symbol: Int)
 }
 
 @MainActor
@@ -69,6 +71,7 @@ final class GameStore {
     private(set) var errorMessage: String?
     private(set) var rewardNotices: [RewardNotice] = []
     var showsWelcome = false
+    let usesShortMinigameCountdown: Bool
 
     @ObservationIgnored private let repository: any GameStateRepository
     @ObservationIgnored private let clock: any GameClock
@@ -83,7 +86,8 @@ final class GameStore {
         audio: any AudioFeedbackClient,
         haptics: any HapticFeedbackClient,
         freshSaveHint: Bool = false,
-        skipsWelcome: Bool = false
+        skipsWelcome: Bool = false,
+        usesShortMinigameCountdown: Bool = false
     ) {
         self.repository = repository
         self.clock = clock
@@ -91,6 +95,7 @@ final class GameStore {
         self.haptics = haptics
         self.freshSaveHint = freshSaveHint
         self.skipsWelcome = skipsWelcome
+        self.usesShortMinigameCountdown = usesShortMinigameCountdown
     }
 
     func start() async {
@@ -174,6 +179,21 @@ final class GameStore {
         rewardNotices.removeFirst()
     }
 
+    func playMinigameFeedback(_ cue: FeedbackCue) {
+        audio.play(cue)
+        haptics.impact(cue)
+    }
+
+    func pauseActiveMinigame() async {
+        guard let run = state?.activeMinigame, !run.isPaused else { return }
+        _ = await dispatch(.pauseMinigame(runID: run.id))
+    }
+
+    func resumeActiveMinigame() async {
+        guard let run = state?.activeMinigame, run.isPaused else { return }
+        _ = await dispatch(.resumeMinigame(runID: run.id))
+    }
+
     func resetProgress() async -> Bool {
         guard phase == .ready else { return false }
         do {
@@ -246,7 +266,8 @@ final class GameStore {
         case let .sleepChanged(sleeping): sleeping ? .sleep : .wake
         case .moved: .room
         case .achievementUnlocked, .dailyRewardClaimed, .itemUnlocked,
-             .duplicateItemConverted, .purchased, .bondLevelChanged: .reward
+             .duplicateItemConverted, .purchased, .bondLevelChanged, .minigameFinished: .reward
+        case .minigameStarted: .play
         default: nil
         }
     }
@@ -288,6 +309,12 @@ final class GameStore {
                 kind: .reward,
                 title: "\(GoobyCatalog.item(id: id)?.name ?? "Item") is yours",
                 detail: "Saved offline."
+            )
+        case let .minigameFinished(_, score, carrots):
+            return RewardNotice(
+                kind: .reward,
+                title: "Arcade run complete",
+                detail: "\(score) points • +\(carrots) carrots"
             )
         default:
             return nil

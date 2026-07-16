@@ -40,7 +40,8 @@ struct GoobyApp: SwiftUI.App {
                 audio: ProceduralAudioClient(),
                 haptics: SystemHapticClient(),
                 freshSaveHint: isFresh,
-                skipsWelcome: launch.skipsWelcome
+                skipsWelcome: launch.skipsWelcome,
+                usesShortMinigameCountdown: launch.usesShortMinigameCountdown
             )
         )
     }
@@ -57,6 +58,7 @@ struct GoobyApp: SwiftUI.App {
                         case .active:
                             await store.advance()
                         case .inactive, .background:
+                            await store.pauseActiveMinigame()
                             await store.flush()
                         @unknown default:
                             await store.flush()
@@ -85,6 +87,7 @@ private struct GoobyLaunchSettings {
     let resetsSave: Bool
     let skipsWelcome: Bool
     let fixedTime: GameInstant?
+    let usesShortMinigameCountdown: Bool
 
     static var current: GoobyLaunchSettings {
         let arguments = ProcessInfo.processInfo.arguments
@@ -94,7 +97,8 @@ private struct GoobyLaunchSettings {
                 isUITesting: false,
                 resetsSave: false,
                 skipsWelcome: false,
-                fixedTime: nil
+                fixedTime: nil,
+                usesShortMinigameCountdown: false
             )
         }
 
@@ -111,7 +115,14 @@ private struct GoobyLaunchSettings {
             isUITesting: true,
             resetsSave: arguments.contains("--reset-save"),
             skipsWelcome: arguments.contains("--skip-welcome"),
-            fixedTime: fixedTime
+            fixedTime: fixedTime,
+            usesShortMinigameCountdown: {
+                #if DEBUG
+                arguments.contains("--short-minigames")
+                #else
+                false
+                #endif
+            }()
         )
     }
 }

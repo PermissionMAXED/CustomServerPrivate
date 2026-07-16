@@ -590,6 +590,7 @@ public struct GameState: Codable, Equatable, Sendable {
     public var randomState: UInt64
     public var activeMinigame: ActiveMinigameRun?
     public var rewardedMinigameRuns: [MinigameRunID]
+    public var bestMinigameScores: [MinigameKind: Int]
 
     public init(
         petID: PetID,
@@ -610,7 +611,8 @@ public struct GameState: Codable, Equatable, Sendable {
         preferences: GamePreferences,
         randomState: UInt64,
         activeMinigame: ActiveMinigameRun?,
-        rewardedMinigameRuns: [MinigameRunID]
+        rewardedMinigameRuns: [MinigameRunID],
+        bestMinigameScores: [MinigameKind: Int]
     ) {
         self.petID = petID
         self.createdAt = createdAt
@@ -631,6 +633,7 @@ public struct GameState: Codable, Equatable, Sendable {
         self.randomState = randomState
         self.activeMinigame = activeMinigame
         self.rewardedMinigameRuns = rewardedMinigameRuns
+        self.bestMinigameScores = bestMinigameScores
     }
 
     public static func new(now: GameInstant) -> GameState {
@@ -653,7 +656,8 @@ public struct GameState: Codable, Equatable, Sendable {
             preferences: GamePreferences(),
             randomState: 0x474F_4F42_595F_5345,
             activeMinigame: nil,
-            rewardedMinigameRuns: []
+            rewardedMinigameRuns: [],
+            bestMinigameScores: [:]
         )
     }
 
@@ -689,6 +693,7 @@ public struct GameState: Codable, Equatable, Sendable {
         case randomState
         case activeMinigame
         case rewardedMinigameRuns
+        case bestMinigameScores
     }
 
     public init(from decoder: Decoder) throws {
@@ -733,10 +738,14 @@ public struct GameState: Codable, Equatable, Sendable {
             ActiveMinigameRun.self,
             forKey: .activeMinigame
         )
-        rewardedMinigameRuns = try container.decode(
+        rewardedMinigameRuns = try container.decodeIfPresent(
             [MinigameRunID].self,
             forKey: .rewardedMinigameRuns
-        )
+        ) ?? []
+        bestMinigameScores = try container.decodeIfPresent(
+            [MinigameKind: Int].self,
+            forKey: .bestMinigameScores
+        ) ?? [:]
     }
 }
 
@@ -792,6 +801,9 @@ public enum GameCommand: Codable, Equatable, Sendable {
     case setHapticsEnabled(Bool)
     case setReduceMotionEnabled(Bool)
     case startMinigame(kind: MinigameKind)
+    case pauseMinigame(runID: MinigameRunID)
+    case resumeMinigame(runID: MinigameRunID)
+    case cancelMinigame(runID: MinigameRunID)
     case finishMinigame(runID: MinigameRunID, submission: MinigameSubmission)
 }
 
@@ -819,6 +831,8 @@ public enum GameEvent: Codable, Equatable, Sendable {
     case petRenamed(String)
     case preferencesChanged
     case minigameStarted(ActiveMinigameRun)
+    case minigamePauseChanged(runID: MinigameRunID, paused: Bool)
+    case minigameCancelled(MinigameRunID)
     case minigameFinished(runID: MinigameRunID, score: Int, carrots: Int)
     case minigameRewardAlreadyGranted(MinigameRunID)
 }

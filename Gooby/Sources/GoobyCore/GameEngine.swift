@@ -151,6 +151,27 @@ public enum GameEngine {
         case let .startMinigame(kind):
             try startMinigame(kind, state: &candidate, at: now, events: &events)
 
+        case let .pauseMinigame(runID):
+            try setMinigamePaused(
+                true,
+                runID: runID,
+                state: &candidate,
+                at: now,
+                events: &events
+            )
+
+        case let .resumeMinigame(runID):
+            try setMinigamePaused(
+                false,
+                runID: runID,
+                state: &candidate,
+                at: now,
+                events: &events
+            )
+
+        case let .cancelMinigame(runID):
+            try cancelMinigame(runID: runID, state: &candidate, events: &events)
+
         case let .finishMinigame(runID, submission):
             try finishMinigame(
                 runID: runID,
@@ -390,6 +411,49 @@ public enum GameEngine {
         events.append(.minigameStarted(run))
     }
 
+    private static func setMinigamePaused(
+        _ paused: Bool,
+        runID: MinigameRunID,
+        state: inout GameState,
+        at now: GameInstant,
+        events: inout [GameEvent]
+    ) throws {
+        guard var run = state.activeMinigame else {
+            throw GameRuleError.noActiveMinigame
+        }
+        guard run.id == runID else {
+            throw GameRuleError.invalidMinigameRun
+        }
+
+        if paused {
+            guard let resumedAt = run.lastResumedAt else { return }
+            let elapsed = now.secondsSinceEpoch - resumedAt.secondsSinceEpoch
+            guard elapsed >= 0 else { throw GameRuleError.clockRollback }
+            run.accumulatedActiveSeconds += elapsed
+            run.lastResumedAt = nil
+        } else {
+            guard run.lastResumedAt == nil else { return }
+            run.lastResumedAt = now
+        }
+        state.activeMinigame = run
+        events.append(.minigamePauseChanged(runID: runID, paused: paused))
+    }
+
+    private static func cancelMinigame(
+        runID: MinigameRunID,
+        state: inout GameState,
+        events: inout [GameEvent]
+    ) throws {
+        guard let run = state.activeMinigame else {
+            throw GameRuleError.noActiveMinigame
+        }
+        guard run.id == runID else {
+            throw GameRuleError.invalidMinigameRun
+        }
+        state.activeMinigame = nil
+        events.append(.minigameCancelled(runID))
+    }
+
     private static func finishMinigame(
         runID: MinigameRunID,
         submission: MinigameSubmission,
@@ -408,11 +472,15 @@ public enum GameEngine {
             throw GameRuleError.invalidMinigameRun
         }
 
-        let elapsed = now.secondsSinceEpoch - run.startedAt.secondsSinceEpoch
-        guard elapsed >= 0 else {
-            throw GameRuleError.clockRollback
+        var activeSeconds = run.accumulatedActiveSeconds
+        if let resumedAt = run.lastResumedAt {
+            let elapsed = now.secondsSinceEpoch - resumedAt.secondsSinceEpoch
+            guard elapsed >= 0 else {
+                throw GameRuleError.clockRollback
+            }
+            activeSeconds += elapsed
         }
-        guard elapsed <= minigameDurationSeconds else {
+        guard activeSeconds <= minigameDurationSeconds else {
             throw GameRuleError.minigameExpired
         }
 
@@ -437,6 +505,10 @@ public enum GameEngine {
         let reward = score / 10
         state.activeMinigame = nil
         state.rewardedMinigameRuns.append(runID)
+        state.bestMinigameScores[run.kind] = max(
+            score,
+            state.bestMinigameScores[run.kind] ?? 0
+        )
         addCarrots(reward, state: &state, events: &events)
         addBond(min(score / 20, 10), state: &state, events: &events)
         events.append(.minigameFinished(runID: runID, score: score, carrots: reward))

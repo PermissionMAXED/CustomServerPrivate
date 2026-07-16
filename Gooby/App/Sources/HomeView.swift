@@ -108,28 +108,29 @@ private struct WelcomeView: View {
     var body: some View {
         ZStack {
             GoobyBackground()
-            VStack(spacing: 24) {
-                Spacer()
-                Image(systemName: "hare.fill")
-                    .font(.system(size: 88, weight: .bold))
-                    .foregroundStyle(GoobyPalette.apricot)
-                    .padding(28)
-                    .background(.thinMaterial, in: Circle())
-                    .accessibilityHidden(true)
-                VStack(spacing: 10) {
-                    Text("Meet Gooby")
-                        .font(.system(.largeTitle, design: .rounded, weight: .black))
-                    Text("A soft-hearted rabbit who loves snacks, splashes, naps, and time with you.")
-                        .font(.system(.body, design: .rounded, weight: .medium))
-                        .multilineTextAlignment(.center)
-                        .foregroundStyle(.secondary)
+            ScrollView {
+                VStack(spacing: 24) {
+                    Image(systemName: "hare.fill")
+                        .font(.system(size: 88, weight: .bold))
+                        .foregroundStyle(GoobyPalette.apricot)
+                        .padding(28)
+                        .background(.thinMaterial, in: Circle())
+                        .accessibilityHidden(true)
+                    VStack(spacing: 10) {
+                        Text("Meet Gooby")
+                            .font(.system(.largeTitle, design: .rounded, weight: .black))
+                        Text("A soft-hearted rabbit who loves snacks, splashes, naps, and time with you.")
+                            .font(.system(.body, design: .rounded, weight: .medium))
+                            .multilineTextAlignment(.center)
+                            .foregroundStyle(.secondary)
+                    }
+                    Button("Start caring", action: onContinue)
+                        .buttonStyle(GoobyPrimaryButtonStyle())
+                        .accessibilityHint("Opens Gooby’s home")
                 }
-                Spacer()
-                Button("Start caring", action: onContinue)
-                    .buttonStyle(GoobyPrimaryButtonStyle())
-                    .accessibilityHint("Opens Gooby’s home")
+                .frame(maxWidth: .infinity, minHeight: 620)
+                .padding(30)
             }
-            .padding(30)
         }
         .interactiveDismissDisabled()
     }
@@ -219,6 +220,7 @@ private struct HomeView: View {
                 Text("Bond level \(state.bondLevel) of \(BondProgress.maximumLevel)")
                     .font(.system(.subheadline, design: .rounded, weight: .semibold))
                     .foregroundStyle(.secondary)
+                    .accessibilityIdentifier("bond.level")
                 if let required = BondProgress.progress(for: state.bondPoints).required {
                     ProgressView(
                         value: Double(BondProgress.progress(for: state.bondPoints).current),
@@ -386,29 +388,13 @@ private struct HomeView: View {
                 .accessibilityHint("Selects an owned food to feed Gooby")
             }
 
-            HStack(spacing: 10) {
-                Button(primaryTitle) {
-                    Task { await store.dispatch(primaryCommand) }
+            ViewThatFits {
+                HStack(spacing: 10) {
+                    careButtons
                 }
-                .buttonStyle(GoobyPrimaryButtonStyle())
-                .disabled(primaryDisabled)
-                .accessibilityIdentifier("care.primary")
-                .accessibilityHint(primaryHint)
-
-                Button {
-                    Task { await store.dispatch(.pet) }
-                } label: {
-                    Label("Pet", systemImage: "hand.raised.fill")
-                        .frame(maxWidth: .infinity)
+                VStack(spacing: 10) {
+                    careButtons
                 }
-                .buttonStyle(GoobySecondaryButtonStyle())
-                .disabled(state.isSleeping)
-                .accessibilityIdentifier("care.pet")
-                .accessibilityHint(
-                    state.isSleeping
-                        ? "Wake Gooby before petting"
-                        : "Pets Gooby in any room"
-                )
             }
 
             if let disabledReason {
@@ -419,6 +405,32 @@ private struct HomeView: View {
             }
         }
         .goobyCard()
+    }
+
+    @ViewBuilder
+    private var careButtons: some View {
+        Button(primaryTitle) {
+            Task { await store.dispatch(primaryCommand) }
+        }
+        .buttonStyle(GoobyPrimaryButtonStyle())
+        .disabled(primaryDisabled)
+        .accessibilityIdentifier("care.primary")
+        .accessibilityHint(primaryHint)
+
+        Button {
+            Task { await store.dispatch(.pet) }
+        } label: {
+            Label("Pet", systemImage: "hand.raised.fill")
+                .frame(maxWidth: .infinity)
+        }
+        .buttonStyle(GoobySecondaryButtonStyle())
+        .disabled(state.isSleeping)
+        .accessibilityIdentifier("care.pet")
+        .accessibilityHint(
+            state.isSleeping
+                ? "Wake Gooby before petting"
+                : "Pets Gooby in any room"
+        )
     }
 
     private var destinations: some View {
@@ -447,7 +459,7 @@ private struct HomeView: View {
         case .daily:
             NavigationStack { DailyGiftView(store: store) }
         case .arcade:
-            NavigationStack { ArcadeView(state: state) }
+            NavigationStack { ArcadeView(store: store, state: state) }
         case .shop:
             NavigationStack { ShopView(store: store, state: state) }
         case .wardrobe:
@@ -692,27 +704,6 @@ private struct JournalRow: View {
             Image(systemName: symbol).foregroundStyle(GoobyPalette.coral)
         }
         .frame(minHeight: 44)
-    }
-}
-
-private struct ArcadeView: View {
-    let state: GameState
-
-    var body: some View {
-        List {
-            Label("Carrot Catch", systemImage: "carrot.fill")
-            Label(
-                state.bondLevel >= 2 ? "Garden Echo" : "Garden Echo • Bond level 2",
-                systemImage: "music.note.list"
-            )
-            .foregroundStyle(state.bondLevel >= 2 ? .primary : .secondary)
-        }
-        .navigationTitle("Pocket Arcade")
-        .toolbar {
-            ToolbarItem(placement: .confirmationAction) {
-                DismissButton()
-            }
-        }
     }
 }
 

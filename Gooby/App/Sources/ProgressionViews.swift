@@ -48,8 +48,7 @@ struct RewardToastHost: View {
                         ? .opacity
                         : .move(edge: .top).combined(with: .opacity)
                 )
-                .accessibilityElement(children: .combine)
-                .accessibilityAddTraits(.isStaticText)
+                .accessibilityElement(children: .contain)
             }
         }
         .animation(reduceMotion ? .easeOut : .spring, value: notice?.id)
@@ -79,6 +78,7 @@ struct RewardToastHost: View {
 
 struct DailyGiftView: View {
     @Bindable var store: GameStore
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
 
     private var eligibility: DailyRewardEligibility {
         store.dailyEligibility ?? .eligible(step: 1)
@@ -101,7 +101,14 @@ struct DailyGiftView: View {
                         .foregroundStyle(GoobyPalette.ink)
 
                     LazyVGrid(
-                        columns: [GridItem(.adaptive(minimum: 78), spacing: 10)],
+                        columns: [
+                            GridItem(
+                                .adaptive(
+                                    minimum: dynamicTypeSize.isAccessibilitySize ? 150 : 78
+                                ),
+                                spacing: 10
+                            ),
+                        ],
                         spacing: 10
                     ) {
                         ForEach(
@@ -405,6 +412,7 @@ struct WardrobeView: View {
     @Bindable var store: GameStore
     let state: GameState
     @State private var selectedID = GoobyCatalog.sunshineBow
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
 
     private var currentState: GameState { store.state ?? state }
     private var selected: CatalogItem {
@@ -440,9 +448,12 @@ struct WardrobeView: View {
                                         )
                                         Text(item.name)
                                             .font(.caption.weight(.bold))
-                                            .lineLimit(2)
+                                            .multilineTextAlignment(.center)
                                     }
-                                    .frame(width: 94, height: 70)
+                                    .frame(
+                                        width: dynamicTypeSize.isAccessibilitySize ? 180 : 94,
+                                        height: dynamicTypeSize.isAccessibilitySize ? 112 : 70
+                                    )
                                     .background(
                                         item.id == selectedID
                                             ? GoobyPalette.sky.opacity(0.25)
