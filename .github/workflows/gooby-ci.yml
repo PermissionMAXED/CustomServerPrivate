@@ -74,26 +74,30 @@ jobs:
           xcodebuild -project Gooby/Gooby.xcodeproj -list
 
       - name: Build app for generic iOS Simulator
-        run: >-
-          xcodebuild
-          -project Gooby/Gooby.xcodeproj
-          -scheme Gooby
-          -sdk iphonesimulator
-          -destination 'generic/platform=iOS Simulator'
-          CODE_SIGNING_ALLOWED=NO
-          build
+        shell: bash
+        run: |
+          xcodebuild \
+            -project Gooby/Gooby.xcodeproj \
+            -scheme Gooby \
+            -sdk iphonesimulator \
+            -destination 'generic/platform=iOS Simulator' \
+            CODE_SIGNING_ALLOWED=NO \
+            build 2>&1 |
+            sed '/warning: Metadata extraction skipped\. No AppIntents\.framework dependency found\./d'
 
       - name: Build unsigned Release app for generic iOS device
-        run: >-
-          xcodebuild
-          -project Gooby/Gooby.xcodeproj
-          -scheme Gooby
-          -configuration Release
-          -sdk iphoneos
-          -destination 'generic/platform=iOS'
-          CODE_SIGNING_ALLOWED=NO
-          CODE_SIGNING_REQUIRED=NO
-          build
+        shell: bash
+        run: |
+          xcodebuild \
+            -project Gooby/Gooby.xcodeproj \
+            -scheme Gooby \
+            -configuration Release \
+            -sdk iphoneos \
+            -destination 'generic/platform=iOS' \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            build 2>&1 |
+            sed '/warning: Metadata extraction skipped\. No AppIntents\.framework dependency found\./d'
 
       - name: Select deterministic available iPhone simulator
         id: simulator
@@ -149,7 +153,8 @@ jobs:
             -resultBundlePath Gooby/TestResults/Gooby.xcresult \
             -skip-testing:GoobyUITests/GoobyDemoUITests \
             CODE_SIGNING_ALLOWED=NO \
-            test
+            test 2>&1 |
+            sed '/warning: Metadata extraction skipped\. No AppIntents\.framework dependency found\./d'
 
       - name: Record dedicated demo journey
         shell: bash
@@ -185,8 +190,9 @@ jobs:
             -resultBundlePath "$demo_result" \
             -only-testing:GoobyUITests/GoobyDemoUITests/testRecordedDemoJourney \
             CODE_SIGNING_ALLOWED=NO \
-            test-without-building
-          test_status=$?
+            test-without-building 2>&1 |
+            sed '/warning: Metadata extraction skipped\. No AppIntents\.framework dependency found\./d'
+          test_status=${PIPESTATUS[0]}
           set -e
 
           stop_recording

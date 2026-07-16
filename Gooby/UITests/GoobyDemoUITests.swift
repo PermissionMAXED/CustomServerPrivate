@@ -34,7 +34,7 @@ final class GoobyDemoUITests: XCTestCase {
         waitForLabel("100%", identifier: "need.fullness.value", in: app)
         let pet = app.buttons["care.pet"]
         tap(pet, in: app)
-        for _ in 1 ..< 7 {
+        for _ in 1 ..< 9 {
             usleep(200_000)
             pet.tap()
         }
