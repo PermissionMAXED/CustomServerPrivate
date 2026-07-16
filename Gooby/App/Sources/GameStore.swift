@@ -327,7 +327,7 @@ final class GameStore {
         }
     }
 
-    private func enqueue<T>(
+    private func enqueue<T: Sendable>(
         _ operation: @escaping @MainActor () async -> T
     ) async -> T {
         let predecessor = operationTail
