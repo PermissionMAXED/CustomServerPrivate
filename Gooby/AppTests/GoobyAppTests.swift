@@ -846,6 +846,7 @@ final class GoobyAppTests: XCTestCase {
             : pow((component + 0.055) / 1.055, 2.4)
     }
 
+    @MainActor
     private func entityCount(_ root: Entity) -> Int {
         1 + root.children.reduce(0) { $0 + entityCount($1) }
     }
