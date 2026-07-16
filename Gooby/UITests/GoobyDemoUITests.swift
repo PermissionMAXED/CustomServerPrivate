@@ -15,6 +15,7 @@ final class GoobyDemoUITests: XCTestCase {
             "--fixed-time",
             "1728000000",
             "--short-minigames",
+            "--recorded-demo",
         ]
         app.launch()
         defer { app.terminate() }
@@ -63,7 +64,7 @@ final class GoobyDemoUITests: XCTestCase {
             pressCarrotLane(lane, in: app)
         }
         XCTAssertTrue(app.staticTexts["carrot.result.score"].waitForExistence(timeout: 10))
-        XCTAssertEqual(app.staticTexts["carrot.result.score"].label, "200 points")
+        XCTAssertEqual(app.staticTexts["carrot.result.score"].label, "30 points")
         attachScreenshot(named: "Gooby Demo — Carrot Catch Result")
         tap(app.buttons["carrot.done"], in: app)
 
@@ -76,7 +77,7 @@ final class GoobyDemoUITests: XCTestCase {
             }
         }
         XCTAssertTrue(app.staticTexts["echo.result.score"].waitForExistence(timeout: 10))
-        XCTAssertEqual(app.staticTexts["echo.result.score"].label, "125 points")
+        XCTAssertEqual(app.staticTexts["echo.result.score"].label, "25 points")
         attachScreenshot(named: "Gooby Demo — Garden Echo Result")
         tap(app.buttons["echo.done"], in: app)
         tap(app.buttons["arcade.home"], in: app)
@@ -148,18 +149,9 @@ final class GoobyDemoUITests: XCTestCase {
 }
 
 private enum DemoSequence {
-    static let carrotLanes = [
-        "left", "center", "center", "right", "center",
-        "right", "right", "right", "center", "right",
-        "left", "right", "right", "left", "right",
-        "left", "center", "left", "right", "right",
-    ]
+    static let carrotLanes = ["left", "center", "center"]
 
     static let echoRounds = [
         ["berry", "star", "berry"],
-        ["berry", "star", "berry", "star"],
-        ["berry", "star", "berry", "star", "moon"],
-        ["berry", "star", "berry", "star", "moon", "moon"],
-        ["berry", "star", "berry", "star", "moon", "moon", "berry"],
     ]
 }

@@ -41,7 +41,8 @@ struct GoobyApp: SwiftUI.App {
                 haptics: SystemHapticClient(),
                 freshSaveHint: isFresh,
                 skipsWelcome: launch.skipsWelcome,
-                usesShortMinigameCountdown: launch.usesShortMinigameCountdown
+                usesShortMinigameCountdown: launch.usesShortMinigameCountdown,
+                usesCondensedDemoMinigames: launch.usesCondensedDemoMinigames
             )
         )
     }
@@ -88,6 +89,7 @@ struct GoobyLaunchSettings: Equatable {
     let skipsWelcome: Bool
     let fixedTime: GameInstant?
     let usesShortMinigameCountdown: Bool
+    let usesCondensedDemoMinigames: Bool
 
     static var current: GoobyLaunchSettings {
         parse(arguments: ProcessInfo.processInfo.arguments)
@@ -114,7 +116,8 @@ struct GoobyLaunchSettings: Equatable {
             resetsSave: arguments.contains("--reset-save"),
             skipsWelcome: arguments.contains("--skip-welcome"),
             fixedTime: fixedTime,
-            usesShortMinigameCountdown: arguments.contains("--short-minigames")
+            usesShortMinigameCountdown: arguments.contains("--short-minigames"),
+            usesCondensedDemoMinigames: arguments.contains("--recorded-demo")
         )
         #else
         _ = arguments
@@ -127,6 +130,7 @@ struct GoobyLaunchSettings: Equatable {
         resetsSave: false,
         skipsWelcome: false,
         fixedTime: nil,
-        usesShortMinigameCountdown: false
+        usesShortMinigameCountdown: false,
+        usesCondensedDemoMinigames: false
     )
 }

@@ -72,6 +72,7 @@ final class GameStore {
     private(set) var rewardNotices: [RewardNotice] = []
     var showsWelcome = false
     let usesShortMinigameCountdown: Bool
+    let usesCondensedDemoMinigames: Bool
 
     @ObservationIgnored private let repository: any GameStateRepository
     @ObservationIgnored private let clock: any GameClock
@@ -87,7 +88,8 @@ final class GameStore {
         haptics: any HapticFeedbackClient,
         freshSaveHint: Bool = false,
         skipsWelcome: Bool = false,
-        usesShortMinigameCountdown: Bool = false
+        usesShortMinigameCountdown: Bool = false,
+        usesCondensedDemoMinigames: Bool = false
     ) {
         self.repository = repository
         self.clock = clock
@@ -96,6 +98,7 @@ final class GameStore {
         self.freshSaveHint = freshSaveHint
         self.skipsWelcome = skipsWelcome
         self.usesShortMinigameCountdown = usesShortMinigameCountdown
+        self.usesCondensedDemoMinigames = usesCondensedDemoMinigames
     }
 
     func start() async {

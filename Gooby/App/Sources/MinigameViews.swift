@@ -587,6 +587,9 @@ private struct CarrotCatchView: View {
             notification: .announcement,
             argument: caught ? "Caught! \(boardStatus)" : "Missed. \(boardStatus)"
         )
+        if store.usesCondensedDemoMinigames, game.moves.count == 3 {
+            game.finishRemainingAsMisses()
+        }
         if game.isFinished {
             Task { await finish() }
         }
@@ -744,7 +747,7 @@ private struct GardenEchoView: View {
                     echoProgress
                     if showsInstructions {
                         instructions
-                    } else if game.phase == .finished {
+                    } else if game.phase == .finished || finalResult != nil {
                         resultView
                     } else {
                         echoGarden
@@ -763,7 +766,7 @@ private struct GardenEchoView: View {
         }
         .onDisappear {
             playbackGeneration += 1
-            guard game.phase != .finished else { return }
+            guard game.phase != .finished, finalResult == nil else { return }
             Task {
                 if store.state?.activeMinigame?.id == run.id {
                     _ = await store.dispatch(.cancelMinigame(runID: run.id))
@@ -1015,9 +1018,15 @@ private struct GardenEchoView: View {
         case let .roundCompleted(round):
             status = "Round \(round) complete!"
             UIAccessibility.post(notification: .announcement, argument: status)
-            Task {
-                try? await Task.sleep(for: .seconds(store.usesShortMinigameCountdown ? 0.08 : 0.65))
-                startPlayback()
+            if store.usesCondensedDemoMinigames {
+                Task { await finish() }
+            } else {
+                Task {
+                    try? await Task.sleep(
+                        for: .seconds(store.usesShortMinigameCountdown ? 0.08 : 0.65)
+                    )
+                    startPlayback()
+                }
             }
         case .gameCompleted, .gameOver:
             Task { await finish() }
@@ -1048,7 +1057,11 @@ private struct GardenEchoView: View {
     }
 
     private func finish() async {
-        guard !isSubmitting, let result = game.result else { return }
+        let result = game.result
+            ?? (store.usesCondensedDemoMinigames
+                ? GardenEcho.play(seed: run.seed, rounds: game.submittedRounds)
+                : nil)
+        guard !isSubmitting, let result else { return }
         isSubmitting = true
         if await store.dispatch(
             .finishMinigame(

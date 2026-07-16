@@ -21,13 +21,15 @@ final class GoobyAppTests: XCTestCase {
                 "--fixed-time",
                 "1728000000",
                 "--short-minigames",
+                "--recorded-demo",
             ]),
             GoobyLaunchSettings(
                 isUITesting: false,
                 resetsSave: false,
                 skipsWelcome: false,
                 fixedTime: nil,
-                usesShortMinigameCountdown: false
+                usesShortMinigameCountdown: false,
+                usesCondensedDemoMinigames: false
             )
         )
 
@@ -41,13 +43,15 @@ final class GoobyAppTests: XCTestCase {
                     "--fixed-time",
                     "1728000000",
                     "--short-minigames",
+                    "--recorded-demo",
                 ]),
                 GoobyLaunchSettings(
                     isUITesting: true,
                     resetsSave: true,
                     skipsWelcome: true,
                     fixedTime: GameInstant(secondsSinceEpoch: 1_728_000_000),
-                    usesShortMinigameCountdown: true
+                    usesShortMinigameCountdown: true,
+                    usesCondensedDemoMinigames: true
                 )
             )
         #endif
