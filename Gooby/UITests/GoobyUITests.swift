@@ -97,15 +97,10 @@ final class GoobyUITests: XCTestCase {
     }
 
     @MainActor
-    func testCarrotCatchCompletesDeterministicShortRunAndShowsReward() throws {
+    func testCarrotCatchCompletesDeterministicShortRunAndShowsReward() {
         let app = launchFreshApp(shortMinigames: true)
 
         tap(app.buttons["home.destination.arcade"], in: app)
-        if #available(iOS 17.0, *) {
-            try app.performAccessibilityAudit(
-                for: [.hitRegion, .sufficientElementDescription, .textClipped]
-            )
-        }
         tap(app.buttons["arcade.play.carrotCatch"], in: app)
         tap(app.buttons["carrot.start"], in: app)
         let target = app.descendants(matching: .any)["carrot.target"]
@@ -170,6 +165,19 @@ final class GoobyUITests: XCTestCase {
         ]
         XCTAssertTrue(wrappedSubtitle.waitForExistence(timeout: 8))
         XCTAssertGreaterThan(wrappedSubtitle.frame.height, 50)
+    }
+
+    @MainActor
+    func testZAccessibilityAuditOnArcadeLanding() throws {
+        let app = launchFreshApp(shortMinigames: false)
+        tap(app.buttons["home.destination.arcade"], in: app)
+        XCTAssertTrue(app.buttons["arcade.play.carrotCatch"].waitForExistence(timeout: 8))
+
+        if #available(iOS 17.0, *) {
+            try app.performAccessibilityAudit(
+                for: [.hitRegion, .sufficientElementDescription, .textClipped]
+            )
+        }
     }
 
     @MainActor
