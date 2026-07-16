@@ -60,7 +60,7 @@ final class GoobyUITests: XCTestCase {
         tap(app.buttons["home.destination.daily-gift"], in: app)
         tap(app.buttons["daily.claim"], in: app)
         XCTAssertTrue(app.buttons["Claimed Today"].waitForExistence(timeout: 8))
-        tap(app.buttons["Done"], in: app)
+        tap(app.buttons["sheet.done"], in: app)
 
         tap(app.buttons["home.destination.shop"], in: app)
         tap(app.buttons["shop.item.sunshine-bow"], in: app)
@@ -68,8 +68,8 @@ final class GoobyUITests: XCTestCase {
         tap(app.buttons["shop.buy.sunshine-bow"], in: app)
         XCTAssertTrue(app.staticTexts["Owned permanently"].waitForExistence(timeout: 8))
         XCTAssertTrue(app.staticTexts["shop.detail.balance"].label.contains("15"))
-        tap(app.buttons["Done"], in: app)
-        tap(app.buttons["Done"], in: app)
+        tap(app.buttons["item-detail.done"], in: app)
+        tap(app.buttons["sheet.done"], in: app)
 
         tap(app.buttons["home.destination.wardrobe"], in: app)
         tap(app.buttons["wardrobe.item.sunshine-bow"], in: app)
@@ -77,7 +77,7 @@ final class GoobyUITests: XCTestCase {
         XCTAssertTrue(app.buttons["wardrobe.unequip"].waitForExistence(timeout: 8))
         attachHomeScreenshot(named: "Gooby Gate 3 — Equipped Sunshine Bow")
 
-        tap(app.buttons["Done"], in: app)
+        tap(app.buttons["sheet.done"], in: app)
         app.terminate()
         app.launchArguments = [
             "--ui-testing",

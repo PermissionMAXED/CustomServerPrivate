@@ -772,6 +772,7 @@ private struct DismissButton: View {
 
     var body: some View {
         Button("Done") { dismiss() }
+            .accessibilityIdentifier("sheet.done")
     }
 }
 

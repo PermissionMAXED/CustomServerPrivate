@@ -345,7 +345,7 @@ struct ShopItemDetailView: View {
         }
         .navigationTitle("Item Details")
         .navigationBarTitleDisplayMode(.inline)
-        .toolbar { SheetDoneToolbar() }
+        .toolbar { SheetDoneToolbar(identifier: "item-detail.done") }
     }
 
     private var previewState: GameState {
@@ -631,10 +631,16 @@ struct SettingsView: View {
 
 private struct SheetDoneToolbar: ToolbarContent {
     @Environment(\.dismiss) private var dismiss
+    let identifier: String
+
+    init(identifier: String = "sheet.done") {
+        self.identifier = identifier
+    }
 
     var body: some ToolbarContent {
         ToolbarItem(placement: .confirmationAction) {
             Button("Done") { dismiss() }
+                .accessibilityIdentifier(identifier)
         }
     }
 }
