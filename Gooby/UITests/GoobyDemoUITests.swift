@@ -28,8 +28,10 @@ final class GoobyDemoUITests: XCTestCase {
         waitForLabel("Playroom", identifier: "room.current", in: app)
         attachScreenshot(named: "Gooby Demo — 3D Home")
 
+        app.swipeUp()
         tap(app.buttons["room.kitchen"], in: app)
         waitForLabel("Kitchen", identifier: "room.current", in: app)
+        app.swipeUp()
         tap(app.buttons["care.primary"], in: app)
         waitForLabel("100%", identifier: "need.fullness.value", in: app)
         let pet = app.buttons["care.pet"]

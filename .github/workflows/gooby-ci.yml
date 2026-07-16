@@ -156,16 +156,115 @@ jobs:
             test 2>&1 |
             sed '/warning: Metadata extraction skipped\. No AppIntents\.framework dependency found\./d'
 
+      - name: Upload Xcode test result
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: gooby-xcresult
+          path: Gooby/TestResults/Gooby.xcresult
+          if-no-files-found: warn
+          retention-days: 7
+
+      - name: Export UI test attachments
+        if: always()
+        continue-on-error: true
+        run: >-
+          xcrun xcresulttool export attachments
+          --path Gooby/TestResults/Gooby.xcresult
+          --output-path Gooby/TestResults/Attachments
+
+      - name: Upload UI test screenshots
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: gooby-ui-screenshots
+          path: Gooby/TestResults/Attachments
+          if-no-files-found: warn
+          retention-days: 7
+
+  record-demo:
+    runs-on: macos-15
+    timeout-minutes: 45
+
+    steps:
+      - name: Check out sources without LFS assets
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 1
+          lfs: false
+          persist-credentials: false
+
+      - name: Select Xcode
+        run: sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
+
+      - name: Install XcodeGen
+        run: brew install xcodegen
+
+      - name: Generate Xcode project
+        working-directory: Gooby
+        run: xcodegen generate
+
+      - name: Select deterministic available iPhone simulator
+        id: simulator
+        shell: bash
+        run: |
+          simulator_id="$(
+            python3 - <<'PY'
+          import json
+          import re
+          import subprocess
+
+          payload = json.loads(
+              subprocess.check_output(
+                  ["xcrun", "simctl", "list", "devices", "available", "--json"],
+                  text=True,
+              )
+          )
+
+          def runtime_version(identifier):
+              match = re.search(r"iOS-(\d+)-(\d+)", identifier)
+              return tuple(map(int, match.groups())) if match else (0, 0)
+
+          candidates = []
+          for runtime, devices in payload["devices"].items():
+              for device in devices:
+                  if device.get("isAvailable") and device["name"].startswith("iPhone"):
+                      candidates.append(
+                          (runtime_version(runtime), device["name"], device["udid"])
+                      )
+
+          if not candidates:
+              raise SystemExit("No available iPhone simulator found")
+
+          newest_runtime = max(candidate[0] for candidate in candidates)
+          choices = sorted(
+              candidate for candidate in candidates if candidate[0] == newest_runtime
+          )
+          print(choices[0][2])
+          PY
+          )"
+          echo "id=$simulator_id" >> "$GITHUB_OUTPUT"
+          xcrun simctl boot "$simulator_id" 2>/dev/null || true
+          xcrun simctl bootstatus "$simulator_id" -b
+
+      - name: Build app and UI tests for recording
+        shell: bash
+        run: |
+          xcodebuild \
+            -project Gooby/Gooby.xcodeproj \
+            -scheme Gooby \
+            -destination 'platform=iOS Simulator,id=${{ steps.simulator.outputs.id }},arch=arm64' \
+            CODE_SIGNING_ALLOWED=NO \
+            build-for-testing 2>&1 |
+            sed '/warning: Metadata extraction skipped\. No AppIntents\.framework dependency found\./d'
+
       - name: Record dedicated demo journey
         shell: bash
         run: |
           simulator_id='${{ steps.simulator.outputs.id }}'
           video_path='Gooby/TestResults/gooby_full_demo.mp4'
           demo_result='Gooby/TestResults/GoobyDemo.xcresult'
-
-          xcrun simctl shutdown "$simulator_id" 2>/dev/null || true
-          xcrun simctl boot "$simulator_id"
-          xcrun simctl bootstatus "$simulator_id" -b
+          mkdir -p Gooby/TestResults
           xcrun simctl terminate "$simulator_id" com.goobygame.app 2>/dev/null || true
 
           stop_recording() {
@@ -200,15 +299,6 @@ jobs:
           test -s "$video_path"
           exit "$test_status"
 
-      - name: Upload Xcode test result
-        if: always()
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
-        with:
-          name: gooby-xcresult
-          path: Gooby/TestResults/Gooby.xcresult
-          if-no-files-found: warn
-          retention-days: 7
-
       - name: Export demo screenshots
         if: always()
         continue-on-error: true
@@ -226,22 +316,5 @@ jobs:
             Gooby/TestResults/gooby_full_demo.mp4
             Gooby/TestResults/GoobyDemo.xcresult
             Gooby/TestResults/DemoAttachments
-          if-no-files-found: warn
-          retention-days: 7
-
-      - name: Export UI test attachments
-        if: always()
-        continue-on-error: true
-        run: >-
-          xcrun xcresulttool export attachments
-          --path Gooby/TestResults/Gooby.xcresult
-          --output-path Gooby/TestResults/Attachments
-
-      - name: Upload UI test screenshots
-        if: always()
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
-        with:
-          name: gooby-ui-screenshots
-          path: Gooby/TestResults/Attachments
           if-no-files-found: warn
           retention-days: 7
