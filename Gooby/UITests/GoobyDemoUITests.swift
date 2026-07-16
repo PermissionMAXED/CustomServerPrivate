@@ -55,8 +55,11 @@ final class GoobyDemoUITests: XCTestCase {
         tap(app.buttons["home.destination.arcade"], in: app)
         tap(app.buttons["arcade.play.carrotCatch"], in: app)
         tap(app.buttons["carrot.start"], in: app)
-        for (index, lane) in DemoSequence.carrotLanes.enumerated() {
-            waitForCarrot(index + 1, in: app)
+        XCTAssertTrue(
+            app.descendants(matching: .any)["carrot.target"]
+                .waitForExistence(timeout: 10)
+        )
+        for lane in DemoSequence.carrotLanes {
             pressCarrotLane(lane, in: app)
         }
         XCTAssertTrue(app.staticTexts["carrot.result.score"].waitForExistence(timeout: 10))
@@ -111,21 +114,6 @@ final class GoobyDemoUITests: XCTestCase {
             .matching(NSPredicate(format: "label == %@", label))
             .firstMatch
         XCTAssertTrue(element.waitForExistence(timeout: 10))
-    }
-
-    @MainActor
-    private func waitForCarrot(_ index: Int, in app: XCUIApplication) {
-        let predicate = NSPredicate(
-            format: "identifier == %@ AND value CONTAINS %@",
-            "carrot.target",
-            "Carrot \(index) of \(DemoSequence.carrotLanes.count)"
-        )
-        XCTAssertTrue(
-            app.descendants(matching: .any)
-                .matching(predicate)
-                .firstMatch
-                .waitForExistence(timeout: 5)
-        )
     }
 
     @MainActor

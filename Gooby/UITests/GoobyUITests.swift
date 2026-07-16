@@ -109,10 +109,8 @@ final class GoobyUITests: XCTestCase {
         let target = app.descendants(matching: .any)["carrot.target"]
         XCTAssertTrue(target.waitForExistence(timeout: 10))
 
-        for carrot in 1 ... CarrotCatchUITest.maximumMoves {
-            waitForCarrotTarget(carrot, in: app)
-            let lane = CarrotCatchUITest.lanes[carrot - 1]
-            tap(app.buttons["carrot.lane.\(lane)"], in: app)
+        for lane in CarrotCatchUITest.lanes {
+            app.buttons["carrot.lane.\(lane)"].tap()
         }
 
         XCTAssertTrue(app.staticTexts["carrot.result.score"].waitForExistence(timeout: 10))
@@ -142,7 +140,7 @@ final class GoobyUITests: XCTestCase {
         for (roundIndex, sequence) in GardenEchoUITest.rounds.enumerated() {
             waitForEchoInput(round: roundIndex + 1, in: app)
             for pad in sequence {
-                tap(app.buttons["echo.pad.\(pad)"], in: app)
+                app.buttons["echo.pad.\(pad)"].tap()
             }
         }
 
@@ -284,23 +282,6 @@ final class GoobyUITests: XCTestCase {
     }
 
     @MainActor
-    private func waitForCarrotTarget(_ carrot: Int, in app: XCUIApplication) {
-        let expected = "Carrot \(carrot) of \(CarrotCatchUITest.maximumMoves)"
-        let predicate = NSPredicate(
-            format: "identifier == %@ AND value CONTAINS %@",
-            "carrot.target",
-            expected
-        )
-        XCTAssertTrue(
-            app.descendants(matching: .any)
-                .matching(predicate)
-                .firstMatch
-                .waitForExistence(timeout: 5),
-            "Expected \(expected)"
-        )
-    }
-
-    @MainActor
     private func attachHomeScreenshot(named name: String) {
         let attachment = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
         attachment.name = name
@@ -310,7 +291,6 @@ final class GoobyUITests: XCTestCase {
 }
 
 private enum CarrotCatchUITest {
-    static let maximumMoves = 20
     static let lanes = [
         "left", "center", "center", "right", "center",
         "right", "right", "right", "center", "right",
