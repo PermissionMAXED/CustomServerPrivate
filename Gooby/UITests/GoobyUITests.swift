@@ -161,7 +161,7 @@ final class GoobyUITests: XCTestCase {
         XCTAssertTrue(app.buttons["arcade.play.carrotCatch"].frame.height >= 44)
         XCTAssertFalse(app.staticTexts["arcade.best.carrotCatch"].label.isEmpty)
         let wrappedSubtitle = app.staticTexts[
-            "Repeat Leaf, Moon, Star, and Berry patterns."
+            "Catch a seeded garden parade in three clear lanes."
         ]
         XCTAssertTrue(wrappedSubtitle.waitForExistence(timeout: 8))
         XCTAssertGreaterThan(wrappedSubtitle.frame.height, 50)
