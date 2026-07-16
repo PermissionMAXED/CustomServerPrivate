@@ -41,6 +41,7 @@ final class GoobyUITests: XCTestCase {
         tap(app.buttons["care.primary"], in: app)
         waitForLabel("Sleeping softly", identifier: "gooby.activity", in: app)
         XCTAssertTrue(app.buttons["care.pet"].isEnabled == false)
+        app.terminate()
     }
 
     @MainActor
@@ -98,6 +99,7 @@ final class GoobyUITests: XCTestCase {
         }
         XCTAssertTrue(app.staticTexts["room.current"].waitForExistence(timeout: 8))
         attachHomeScreenshot(named: "Gooby Gate 4 — Home with Equipped Bow")
+        app.terminate()
     }
 
     @MainActor
@@ -121,6 +123,7 @@ final class GoobyUITests: XCTestCase {
         XCTAssertTrue(app.staticTexts["carrot.result.reward"].label.contains("+20 carrots"))
         XCTAssertEqual(app.staticTexts["carrot.result.best"].label, "Best score: 200")
         attachHomeScreenshot(named: "Gooby Gate 4 — Carrot Catch Result")
+        app.terminate()
     }
 
     @MainActor
@@ -151,6 +154,7 @@ final class GoobyUITests: XCTestCase {
         XCTAssertTrue(app.staticTexts["echo.result.reward"].label.contains("+12 carrots"))
         XCTAssertEqual(app.staticTexts["echo.result.best"].label, "Best score: 125")
         attachHomeScreenshot(named: "Gooby Gate 4 — Garden Echo Result")
+        app.terminate()
     }
 
     @MainActor
@@ -169,6 +173,7 @@ final class GoobyUITests: XCTestCase {
         ]
         XCTAssertTrue(wrappedSubtitle.waitForExistence(timeout: 8))
         XCTAssertGreaterThan(wrappedSubtitle.frame.height, 50)
+        app.terminate()
     }
 
     @MainActor
@@ -182,6 +187,7 @@ final class GoobyUITests: XCTestCase {
                 for: [.hitRegion, .sufficientElementDescription, .textClipped]
             )
         }
+        app.terminate()
     }
 
     @MainActor
