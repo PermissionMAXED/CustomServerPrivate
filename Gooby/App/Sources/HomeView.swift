@@ -717,7 +717,7 @@ private struct HomeView: View {
 
     private var primaryConfirmation: String {
         let current = store.state ?? state
-        switch state.currentRoom {
+        return switch state.currentRoom {
         case .kitchen: "Meal complete • fullness is now \(current.needs.fullness.value / 10)%."
         case .washroom:
             "Wash complete • cleanliness is now \(current.needs.cleanliness.value / 10)%."

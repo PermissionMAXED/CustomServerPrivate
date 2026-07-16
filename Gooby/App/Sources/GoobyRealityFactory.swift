@@ -297,9 +297,14 @@ enum GoobyFactory {
         rig.addChild(paws)
     }
 
-    static func clay(red: CGFloat, green: CGFloat, blue: CGFloat) -> SimpleMaterial {
+    static func clay(
+        red: CGFloat,
+        green: CGFloat,
+        blue: CGFloat,
+        alpha: CGFloat = 1
+    ) -> SimpleMaterial {
         SimpleMaterial(
-            color: UIColor(red: red, green: green, blue: blue, alpha: 1),
+            color: UIColor(red: red, green: green, blue: blue, alpha: alpha),
             roughness: 0.72,
             isMetallic: false
         )
@@ -474,9 +479,13 @@ enum GoobyRoomFactory {
             "room.contact-shadow",
             scale: [1.05, 0.035, 0.54],
             position: [0, 0.03, 0.18],
-            material: GoobyFactory.clay(red: 0.22, green: 0.16, blue: 0.18)
+            material: GoobyFactory.clay(
+                red: 0.22,
+                green: 0.16,
+                blue: 0.18,
+                alpha: 0.16
+            )
         )
-        contact.components.set(OpacityComponent(opacity: 0.16))
         root.addChild(contact)
     }
 
@@ -683,7 +692,7 @@ enum GoobyRoomFactory {
                 "bedroom.moon-lamp.cutout",
                 scale: [0.68, 0.68, 0.50],
                 position: [0.18, 0.08, 0.40],
-                material: wall
+                material: material(visualSpec(for: .bedroom).wallRGB)
             )
         )
         root.addChild(lamp)
