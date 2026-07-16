@@ -1,5 +1,6 @@
 import GoobyCore
 import SwiftUI
+import UIKit
 
 enum GoobyBrand {
     static let name = "Gooby"
@@ -7,13 +8,45 @@ enum GoobyBrand {
 }
 
 enum GoobyPalette {
-    static let ink = Color(red: 0.24, green: 0.14, blue: 0.15)
-    static let cream = Color(red: 0.99, green: 0.93, blue: 0.80)
-    static let apricot = Color(red: 0.91, green: 0.65, blue: 0.43)
-    static let coral = Color(red: 0.88, green: 0.39, blue: 0.36)
-    static let mint = Color(red: 0.38, green: 0.66, blue: 0.56)
-    static let sky = Color(red: 0.39, green: 0.58, blue: 0.76)
-    static let gold = Color(red: 0.92, green: 0.66, blue: 0.24)
+    static let inkUIColor = adaptive(light: 0x38_21_26, dark: 0xFF_F5_E8)
+    static let creamUIColor = adaptive(light: 0xFF_F3_D5, dark: 0x1B_18_21)
+    static let surfaceUIColor = adaptive(light: 0xFF_F8_EA, dark: 0x2A_25_31)
+    static let strongSurfaceUIColor = adaptive(light: 0xFF_FF_FF, dark: 0x33_2E_3B)
+    static let borderUIColor = adaptive(light: 0x7A_57_51, dark: 0xCD_AF_A4)
+    static let actionUIColor = adaptive(light: 0x8B_27_30, dark: 0x70_20_2B)
+    static let coralUIColor = adaptive(light: 0xB8_3E_3B, dark: 0xFF_90_88)
+    static let mintUIColor = adaptive(light: 0x28_70_53, dark: 0x82_D7_B6)
+    static let skyUIColor = adaptive(light: 0x31_5F_93, dark: 0x91_C5_F5)
+    static let goldUIColor = adaptive(light: 0x85_58_07, dark: 0xF5_C4_51)
+
+    static let ink = Color(inkUIColor)
+    static let cream = Color(creamUIColor)
+    static let surface = Color(surfaceUIColor)
+    static let strongSurface = Color(strongSurfaceUIColor)
+    static let border = Color(borderUIColor)
+    static let action = Color(actionUIColor)
+    static let apricot = Color(
+        adaptive(light: 0xD8_80_42, dark: 0xF2_AB_73)
+    )
+    static let coral = Color(coralUIColor)
+    static let mint = Color(mintUIColor)
+    static let sky = Color(skyUIColor)
+    static let gold = Color(goldUIColor)
+
+    private static func adaptive(light: Int, dark: Int) -> UIColor {
+        UIColor { traits in
+            color(traits.userInterfaceStyle == .dark ? dark : light)
+        }
+    }
+
+    private static func color(_ rgb: Int) -> UIColor {
+        UIColor(
+            red: CGFloat((rgb >> 16) & 0xFF) / 255,
+            green: CGFloat((rgb >> 8) & 0xFF) / 255,
+            blue: CGFloat(rgb & 0xFF) / 255,
+            alpha: 1
+        )
+    }
 }
 
 struct AppRootView: View {
@@ -157,7 +190,7 @@ private struct WelcomeView: View {
                         .font(.system(size: 88, weight: .bold))
                         .foregroundStyle(GoobyPalette.apricot)
                         .padding(28)
-                        .background(.thinMaterial, in: Circle())
+                        .goobySurface(in: Circle())
                         .accessibilityHidden(true)
                     VStack(spacing: 10) {
                         Text("Meet Gooby")
@@ -212,6 +245,7 @@ private struct HomeView: View {
     @Environment(\.dynamicTypeSize) private var dynamicTypeSize
     @State private var presentedDestination: HomeDestination?
     @State private var selectedFood = GoobyCatalog.gardenCarrot
+    @State private var careConfirmation: String?
 
     private var columns: [GridItem] {
         dynamicTypeSize.isAccessibilitySize
@@ -225,10 +259,10 @@ private struct HomeView: View {
             ScrollView {
                 LazyVStack(spacing: 16) {
                     header
-                    hero
-                    needs
                     roomPicker
                     actionCard
+                    hero
+                    compactNeeds
                     destinations
                 }
                 .padding(.horizontal, 16)
@@ -309,7 +343,7 @@ private struct HomeView: View {
             .foregroundStyle(GoobyPalette.ink)
             .padding(.horizontal, 12)
             .frame(minHeight: 44)
-            .background(.thinMaterial, in: Capsule())
+            .goobySurface(in: Capsule(), strong: true)
             .accessibilityElement(children: .ignore)
             .accessibilityLabel("Carrots")
             .accessibilityValue("\(state.carrots)")
@@ -319,10 +353,10 @@ private struct HomeView: View {
     private var hero: some View {
         ZStack(alignment: .bottomLeading) {
             RoundedRectangle(cornerRadius: 30, style: .continuous)
-                .fill(.ultraThinMaterial)
+                .fill(GoobyPalette.strongSurface)
                 .overlay {
                     RoundedRectangle(cornerRadius: 30, style: .continuous)
-                        .stroke(.white.opacity(0.55), lineWidth: 1)
+                        .stroke(GoobyPalette.border.opacity(0.55), lineWidth: 1)
                 }
             GoobyRealityView(
                 state: state,
@@ -342,43 +376,71 @@ private struct HomeView: View {
             }
             .padding(.horizontal, 14)
             .padding(.vertical, 10)
-            .background(.regularMaterial, in: Capsule())
+            .goobySurface(in: Capsule(), strong: true)
             .padding(14)
         }
-        .frame(height: dynamicTypeSize.isAccessibilitySize ? 360 : 340)
+        .frame(height: dynamicTypeSize.isAccessibilitySize ? 310 : 220)
         .shadow(color: GoobyPalette.ink.opacity(0.10), radius: 18, y: 9)
         .accessibilityElement(children: .contain)
         .accessibilityIdentifier("home.gooby-hero")
         .accessibilityLabel("3D Gooby in the \(state.currentRoom.displayName)")
     }
 
-    private var needs: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            Text("How Gooby feels")
-                .font(.system(.headline, design: .rounded, weight: .bold))
-            LazyVGrid(columns: columns, spacing: 10) {
-                NeedMeter(
+    private var compactNeeds: some View {
+        ViewThatFits {
+            HStack(spacing: 8) {
+                compactNeed(
                     name: "Fullness",
                     symbol: "fork.knife",
                     value: state.needs.fullness.value,
                     tint: GoobyPalette.coral,
                     identifier: "need.fullness"
                 )
-                NeedMeter(
+                compactNeed(
                     name: "Cleanliness",
                     symbol: "sparkles",
                     value: state.needs.cleanliness.value,
                     tint: GoobyPalette.sky,
                     identifier: "need.cleanliness"
                 )
-                NeedMeter(
+                compactNeed(
                     name: "Energy",
                     symbol: "bolt.fill",
                     value: state.needs.energy.value,
                     tint: GoobyPalette.gold,
                     identifier: "need.energy"
                 )
-                NeedMeter(
+                compactNeed(
+                    name: "Fun",
+                    symbol: "party.popper.fill",
+                    value: state.needs.fun.value,
+                    tint: GoobyPalette.mint,
+                    identifier: "need.fun"
+                )
+            }
+            LazyVGrid(columns: columns, spacing: 8) {
+                compactNeed(
+                    name: "Fullness",
+                    symbol: "fork.knife",
+                    value: state.needs.fullness.value,
+                    tint: GoobyPalette.coral,
+                    identifier: "need.fullness"
+                )
+                compactNeed(
+                    name: "Cleanliness",
+                    symbol: "sparkles",
+                    value: state.needs.cleanliness.value,
+                    tint: GoobyPalette.sky,
+                    identifier: "need.cleanliness"
+                )
+                compactNeed(
+                    name: "Energy",
+                    symbol: "bolt.fill",
+                    value: state.needs.energy.value,
+                    tint: GoobyPalette.gold,
+                    identifier: "need.energy"
+                )
+                compactNeed(
                     name: "Fun",
                     symbol: "party.popper.fill",
                     value: state.needs.fun.value,
@@ -387,45 +449,87 @@ private struct HomeView: View {
                 )
             }
         }
-        .goobyCard()
+        .padding(10)
+        .goobySurface(in: RoundedRectangle(cornerRadius: 20, style: .continuous))
+        .accessibilityIdentifier("needs.compact-summary")
+    }
+
+    private func compactNeed(
+        name: String,
+        symbol: String,
+        value: Int,
+        tint: Color,
+        identifier: String
+    ) -> some View {
+        VStack(spacing: 2) {
+            Image(systemName: symbol)
+                .foregroundStyle(tint)
+                .accessibilityHidden(true)
+            Text("\(value / 10)%")
+                .font(.system(.caption, design: .rounded, weight: .black))
+                .accessibilityIdentifier("\(identifier).value")
+        }
+        .frame(maxWidth: .infinity, minHeight: 44)
+        .accessibilityElement(children: .contain)
+        .accessibilityLabel(name)
+        .accessibilityValue("\(value / 10) percent")
     }
 
     private var roomPicker: some View {
         VStack(alignment: .leading, spacing: 10) {
             Text("Choose a room")
                 .font(.system(.headline, design: .rounded, weight: .bold))
-            ScrollView(.horizontal) {
-                HStack(spacing: 9) {
-                    ForEach(RoomID.allCases, id: \.self) { room in
-                        Button {
-                            Task { await store.dispatch(.move(to: room)) }
-                        } label: {
-                            Label(room.displayName, systemImage: room.symbolName)
-                                .font(.system(.subheadline, design: .rounded, weight: .bold))
-                                .padding(.horizontal, 13)
-                                .frame(minHeight: 48)
-                                .background(
+            LazyVGrid(columns: columns, spacing: 9) {
+                ForEach(RoomID.allCases, id: \.self) { room in
+                    Button {
+                        careConfirmation = nil
+                        Task { await store.dispatch(.move(to: room)) }
+                    } label: {
+                        HStack(spacing: 7) {
+                            Image(systemName: room.symbolName)
+                            Text(room.displayName)
+                            Spacer(minLength: 2)
+                            if room == state.currentRoom {
+                                Image(systemName: "checkmark.circle.fill")
+                                    .accessibilityHidden(true)
+                            }
+                        }
+                        .font(.system(.subheadline, design: .rounded, weight: .bold))
+                        .padding(.horizontal, 13)
+                        .frame(maxWidth: .infinity, minHeight: 48)
+                        .background(
+                            room == state.currentRoom
+                                ? GoobyPalette.action
+                                : GoobyPalette.strongSurface,
+                            in: RoundedRectangle(cornerRadius: 15)
+                        )
+                        .foregroundStyle(
+                            room == state.currentRoom ? Color.white : GoobyPalette.ink
+                        )
+                        .overlay {
+                            RoundedRectangle(cornerRadius: 15)
+                                .stroke(
                                     room == state.currentRoom
-                                        ? GoobyPalette.ink
-                                        : Color.white.opacity(0.60),
-                                    in: Capsule()
-                                )
-                                .foregroundStyle(
-                                    room == state.currentRoom ? Color.white : GoobyPalette.ink
+                                        ? GoobyPalette.gold
+                                        : GoobyPalette.border.opacity(0.42),
+                                    lineWidth: room == state.currentRoom ? 3 : 1
                                 )
                         }
-                        .buttonStyle(.plain)
-                        .accessibilityIdentifier("room.\(room.rawValue)")
-                        .accessibilityHint(
-                            room == state.currentRoom
-                                ? "Current room"
-                                : "Moves Gooby to the \(room.displayName.lowercased())"
-                        )
                     }
+                    .buttonStyle(.plain)
+                    .accessibilityAddTraits(
+                        room == state.currentRoom ? .isSelected : []
+                    )
+                    .accessibilityIdentifier("room.\(room.rawValue)")
+                    .accessibilityHint(
+                        room == state.currentRoom
+                            ? "Current room"
+                            : "Moves Gooby to the \(room.displayName.lowercased())"
+                    )
                 }
             }
-            .scrollIndicators(.hidden)
         }
+        .accessibilityIdentifier("room.picker")
     }
 
     private var actionCard: some View {
@@ -467,6 +571,13 @@ private struct HomeView: View {
                     .foregroundStyle(.secondary)
                     .accessibilityIdentifier("care.disabled-reason")
             }
+            if let careConfirmation {
+                Label(careConfirmation, systemImage: "checkmark.circle.fill")
+                    .font(.subheadline.weight(.bold))
+                    .foregroundStyle(GoobyPalette.mint)
+                    .accessibilityIdentifier("care.confirmation")
+                    .accessibilityAddTraits(.updatesFrequently)
+            }
         }
         .goobyCard()
     }
@@ -474,7 +585,11 @@ private struct HomeView: View {
     @ViewBuilder
     private var careButtons: some View {
         Button(primaryTitle) {
-            Task { await store.dispatch(primaryCommand) }
+            Task {
+                if await store.dispatch(primaryCommand) {
+                    careConfirmation = primaryConfirmation
+                }
+            }
         }
         .buttonStyle(GoobyPrimaryButtonStyle())
         .disabled(primaryDisabled)
@@ -482,7 +597,12 @@ private struct HomeView: View {
         .accessibilityHint(primaryHint)
 
         Button {
-            Task { await store.dispatch(.pet) }
+            Task {
+                if await store.dispatch(.pet) {
+                    let fun = (store.state ?? state).needs.fun.value / 10
+                    careConfirmation = "Pet complete • fun is now \(fun)%."
+                }
+            }
         } label: {
             Label("Pet", systemImage: "hand.raised.fill")
                 .frame(maxWidth: .infinity)
@@ -595,57 +715,21 @@ private struct HomeView: View {
         }
     }
 
+    private var primaryConfirmation: String {
+        let current = store.state ?? state
+        switch state.currentRoom {
+        case .kitchen: "Meal complete • fullness is now \(current.needs.fullness.value / 10)%."
+        case .washroom:
+            "Wash complete • cleanliness is now \(current.needs.cleanliness.value / 10)%."
+        case .bedroom:
+            state.isSleeping ? "Gooby is awake and ready." : "Gooby is tucked in and resting."
+        case .playroom: "Play complete • fun is now \(current.needs.fun.value / 10)%."
+        }
+    }
+
     private var statusSummary: String {
         "\(store.mood), \(state.currentRoom.displayName), "
             + (state.isSleeping ? "sleeping" : "awake")
-    }
-}
-
-private struct NeedMeter: View {
-    let name: String
-    let symbol: String
-    let value: Int
-    let tint: Color
-    let identifier: String
-
-    @Environment(\.accessibilityDifferentiateWithoutColor) private var differentiatesWithoutColor
-
-    private var percent: Int { value / 10 }
-
-    var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            HStack {
-                Image(systemName: symbol)
-                    .foregroundStyle(tint)
-                    .accessibilityHidden(true)
-                Text(name)
-                    .font(.system(.subheadline, design: .rounded, weight: .bold))
-                Spacer()
-                Text("\(percent)%")
-                    .font(.system(.subheadline, design: .rounded, weight: .black))
-                    .accessibilityIdentifier("\(identifier).value")
-            }
-            ProgressView(value: Double(value), total: 1_000)
-                .tint(tint)
-                .scaleEffect(y: 1.5)
-                .accessibilityHidden(true)
-            if differentiatesWithoutColor {
-                Text(levelCue)
-                    .font(.caption2.weight(.bold))
-                    .foregroundStyle(.secondary)
-            }
-        }
-        .padding(12)
-        .background(Color.white.opacity(0.52), in: RoundedRectangle(cornerRadius: 16))
-    }
-
-    private var levelCue: String {
-        switch percent {
-        case 75 ... 100: "Doing great"
-        case 50 ..< 75: "Comfortable"
-        case 25 ..< 50: "Needs care soon"
-        default: "Needs care now"
-        }
     }
 }
 
@@ -669,7 +753,7 @@ private struct DestinationButton: View {
             }
             .padding(13)
             .frame(minHeight: 54)
-            .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 17))
+            .goobySurface(in: RoundedRectangle(cornerRadius: 17))
         }
         .buttonStyle(.plain)
         .accessibilityIdentifier(
@@ -774,14 +858,14 @@ private struct JournalRow: View {
 private struct ShopView: View {
     @Bindable var store: GameStore
     let state: GameState
-    @State private var selectedItem: CatalogItem?
+    @State private var selectedItemID: ItemID?
 
     var body: some View {
         List {
             Section("Foods") {
                 ForEach(GoobyCatalog.foods) { item in
                     Button {
-                        selectedItem = item
+                        selectedItemID = item.id
                     } label: {
                         ShopItemRow(item: item, state: state)
                     }
@@ -791,7 +875,7 @@ private struct ShopView: View {
             Section("Permanent cosmetics") {
                 ForEach(GoobyCatalog.cosmetics) { item in
                     Button {
-                        selectedItem = item
+                        selectedItemID = item.id
                     } label: {
                         ShopItemRow(item: item, state: state)
                     }
@@ -801,16 +885,23 @@ private struct ShopView: View {
         }
         .navigationTitle("Cozy Shop")
         .safeAreaInset(edge: .bottom) {
-            Label("\(state.carrots) carrots", systemImage: "carrot.fill")
-                .font(.headline)
-                .padding(.horizontal, 18)
-                .frame(minHeight: 46)
-                .background(.regularMaterial, in: Capsule())
-                .padding(.bottom, 6)
-                .accessibilityIdentifier("shop.balance")
+            HStack {
+                Label("\((store.state ?? state).carrots) carrots", systemImage: "carrot.fill")
+                    .font(.headline)
+                Spacer()
+                Text("Available balance")
+                    .font(.caption.weight(.semibold))
+                    .foregroundStyle(.secondary)
+            }
+            .padding(.horizontal, 18)
+            .frame(maxWidth: .infinity, minHeight: 58)
+            .goobySurface(in: Rectangle(), strong: true)
+            .overlay(alignment: .top) { Divider() }
+            .accessibilityElement(children: .combine)
+            .accessibilityIdentifier("shop.balance")
         }
-        .sheet(item: $selectedItem) { item in
-            NavigationStack {
+        .navigationDestination(item: $selectedItemID) { itemID in
+            if let item = GoobyCatalog.item(id: itemID) {
                 ShopItemDetailView(store: store, state: state, item: item)
             }
         }
@@ -826,8 +917,8 @@ private struct DismissButton: View {
     @Environment(\.dismiss) private var dismiss
 
     var body: some View {
-        Button("Done") { dismiss() }
-            .accessibilityIdentifier("sheet.done")
+        Button("Close") { dismiss() }
+            .accessibilityIdentifier("sheet.close")
     }
 }
 
@@ -864,7 +955,7 @@ private struct GoobyPrimaryButtonStyle: ButtonStyle {
             .padding(.horizontal, 16)
             .frame(maxWidth: .infinity, minHeight: 50)
             .background(
-                GoobyPalette.coral.opacity(configuration.isPressed ? 0.72 : 1),
+                GoobyPalette.action.opacity(configuration.isPressed ? 0.78 : 1),
                 in: RoundedRectangle(cornerRadius: 16)
             )
             .scaleEffect(configuration.isPressed ? 0.98 : 1)
@@ -872,6 +963,8 @@ private struct GoobyPrimaryButtonStyle: ButtonStyle {
 }
 
 private struct GoobySecondaryButtonStyle: ButtonStyle {
+    @Environment(\.accessibilityReduceTransparency) private var reduceTransparency
+
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .font(.system(.headline, design: .rounded, weight: .bold))
@@ -879,19 +972,49 @@ private struct GoobySecondaryButtonStyle: ButtonStyle {
             .padding(.horizontal, 16)
             .frame(maxWidth: .infinity, minHeight: 50)
             .background(
-                Color.white.opacity(configuration.isPressed ? 0.45 : 0.70),
+                reduceTransparency
+                    ? GoobyPalette.strongSurface
+                    : GoobyPalette.surface.opacity(configuration.isPressed ? 0.78 : 0.94),
                 in: RoundedRectangle(cornerRadius: 16)
             )
+            .overlay {
+                RoundedRectangle(cornerRadius: 16)
+                    .stroke(GoobyPalette.border.opacity(0.45), lineWidth: 1)
+            }
     }
 }
 
-private extension View {
+struct GoobyAdaptiveSurfaceModifier<S: Shape>: ViewModifier {
+    let shape: S
+    let strong: Bool
+    @Environment(\.accessibilityReduceTransparency) private var reduceTransparency
+
+    func body(content: Content) -> some View {
+        content.background {
+            if reduceTransparency {
+                shape.fill(strong ? GoobyPalette.strongSurface : GoobyPalette.surface)
+            } else {
+                shape.fill(
+                    strong
+                        ? GoobyPalette.strongSurface.opacity(0.92)
+                        : GoobyPalette.surface.opacity(0.82)
+                )
+            }
+        }
+    }
+}
+
+extension View {
+    func goobySurface<S: Shape>(in shape: S, strong: Bool = false) -> some View {
+        modifier(GoobyAdaptiveSurfaceModifier(shape: shape, strong: strong))
+    }
+
     func goobyCard() -> some View {
         padding(16)
-            .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 23))
+            .goobySurface(in: RoundedRectangle(cornerRadius: 23))
             .overlay {
                 RoundedRectangle(cornerRadius: 23)
-                    .stroke(.white.opacity(0.45), lineWidth: 1)
+                    .stroke(GoobyPalette.border.opacity(0.38), lineWidth: 1)
             }
     }
 }

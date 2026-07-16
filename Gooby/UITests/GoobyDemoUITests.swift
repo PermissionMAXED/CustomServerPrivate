@@ -14,45 +14,94 @@ final class GoobyDemoUITests: XCTestCase {
             "--skip-welcome",
             "--fixed-time",
             "1728000000",
-            "--short-minigames",
         ]
         app.launch()
         defer { app.terminate() }
 
         XCTAssertTrue(app.staticTexts["gooby.status"].waitForExistence(timeout: 12))
-        XCTAssertTrue(
-            app.descendants(matching: .any)["home.gooby-hero"]
-                .waitForExistence(timeout: 8)
-        )
+        let hero = app.descendants(matching: .any)["home.gooby-hero"]
+        XCTAssertTrue(hero.waitForExistence(timeout: 8))
+        XCTAssertTrue(app.buttons["room.playroom"].isHittable)
+        XCTAssertTrue(app.buttons["care.primary"].isHittable)
         waitForLabel("Playroom", identifier: "room.current", in: app)
-        attachScreenshot(named: "Gooby Demo — 3D Home")
-
+        sleep(2)
         app.swipeUp()
-        tap(app.buttons["room.kitchen"], in: app)
-        waitForLabel("Kitchen", identifier: "room.current", in: app)
-        app.swipeUp()
+        attachScreenshot(named: "Gooby Wave 2 — Playroom")
+        scrollHomeToTop(in: app)
         tap(app.buttons["care.primary"], in: app)
-        waitForLabel("100%", identifier: "need.fullness.value", in: app)
+        usleep(320_000)
+        attachScreenshot(named: "Gooby Wave 2 — Play Animation")
+
+        showRoom(.kitchen, in: app)
+        tap(app.buttons["care.primary"], in: app)
+        usleep(320_000)
+        attachScreenshot(named: "Gooby Wave 2 — Feed Animation")
+        XCTAssertTrue(app.staticTexts["care.confirmation"].waitForExistence(timeout: 5))
+
+        showRoom(.washroom, in: app)
+        tap(app.buttons["care.primary"], in: app)
+        usleep(320_000)
+        attachScreenshot(named: "Gooby Wave 2 — Wash Animation")
+
         let pet = app.buttons["care.pet"]
         tap(pet, in: app)
-        for _ in 1 ..< 9 {
-            usleep(200_000)
-            pet.tap()
+        usleep(320_000)
+        attachScreenshot(named: "Gooby Wave 2 — Nuzzle Animation")
+        for _ in 1 ..< 10 {
+            usleep(240_000)
+            tap(pet, in: app)
         }
         waitForLabel("Bond level 2 of 10", identifier: "bond.level", in: app)
 
+        showRoom(.bedroom, in: app)
+        tap(app.buttons["care.primary"], in: app)
+        usleep(380_000)
+        attachScreenshot(named: "Gooby Wave 2 — Sleep Animation")
+        waitForLabel("Sleeping softly", identifier: "gooby.activity", in: app)
+        tap(app.buttons["care.primary"], in: app)
+        waitForLabel("Tap Gooby to pet", identifier: "gooby.activity", in: app)
+
+        showRoom(.playroom, in: app)
         tap(app.buttons["home.destination.shop"], in: app)
         tap(app.buttons["shop.item.sunshine-bow"], in: app)
+        XCTAssertTrue(
+            app.descendants(matching: .any)["shop.preview.scene"]
+                .waitForExistence(timeout: 8)
+        )
+        sleep(4)
+        attachScreenshot(named: "Gooby Wave 2 — Shop Preview")
         tap(app.buttons["shop.buy.sunshine-bow"], in: app)
         XCTAssertTrue(app.staticTexts["Owned permanently"].waitForExistence(timeout: 8))
-        tap(app.buttons["item-detail.done"], in: app)
-        tap(app.buttons["sheet.done"], in: app)
+        tap(app.buttons["item-detail.back"], in: app)
+        tap(app.buttons["sheet.close"], in: app)
         tap(app.buttons["home.destination.wardrobe"], in: app)
         tap(app.buttons["wardrobe.item.sunshine-bow"], in: app)
+        XCTAssertTrue(
+            app.descendants(matching: .any)["wardrobe.preview"]
+                .waitForExistence(timeout: 8)
+        )
+        sleep(4)
+        attachScreenshot(named: "Gooby Wave 2 — Wardrobe Preview")
         tap(app.buttons["wardrobe.equip"], in: app)
         XCTAssertTrue(app.buttons["wardrobe.unequip"].waitForExistence(timeout: 8))
-        attachScreenshot(named: "Gooby Demo — Sunshine Bow Equipped")
-        tap(app.buttons["sheet.done"], in: app)
+        sleep(3)
+        attachScreenshot(named: "Gooby Wave 2 — Sunshine Bow Equipped")
+        tap(app.buttons["sheet.close"], in: app)
+        scrollHomeToTop(in: app)
+        sleep(3)
+        attachScreenshot(named: "Gooby Wave 2 — Equipped Home")
+
+        app.terminate()
+        app.launchArguments = [
+            "--ui-testing",
+            "--skip-welcome",
+            "--fixed-time",
+            "1728000000",
+        ]
+        app.launch()
+        XCTAssertTrue(app.staticTexts["gooby.status"].waitForExistence(timeout: 12))
+        sleep(3)
+        attachScreenshot(named: "Gooby Wave 2 — Equipped Home Relaunch")
 
         tap(app.buttons["home.destination.arcade"], in: app)
         tap(app.buttons["arcade.play.carrotCatch"], in: app)
@@ -65,14 +114,23 @@ final class GoobyDemoUITests: XCTestCase {
             pressCarrotLane(lane, in: app)
         }
         waitForLabel("200 points", identifier: "carrot.result.score", in: app)
-        attachScreenshot(named: "Gooby Demo — Carrot Catch Result")
+        sleep(3)
+        attachScreenshot(named: "Gooby Wave 2 — Carrot Catch Result")
         tap(app.buttons["carrot.done"], in: app)
 
         tap(app.buttons["arcade.play.gardenEcho"], in: app)
         tap(app.buttons["echo.start"], in: app)
-        for sequence in DemoSequence.echoRounds {
+        waitForLabelContaining(
+            "Note 2 of 3",
+            identifier: "echo.sequence-progress",
+            in: app,
+            timeout: 12
+        )
+        attachScreenshot(named: "Gooby Wave 2 — Garden Playback")
+        for (roundIndex, sequence) in DemoSequence.echoRounds.enumerated() {
             for (inputIndex, pad) in sequence.enumerated() {
                 waitForEchoInput(
+                    round: roundIndex + 1,
                     input: inputIndex + 1,
                     count: sequence.count,
                     in: app
@@ -81,13 +139,16 @@ final class GoobyDemoUITests: XCTestCase {
             }
         }
         waitForLabel("125 points", identifier: "echo.result.score", in: app)
-        attachScreenshot(named: "Gooby Demo — Garden Echo Result")
+        sleep(3)
+        attachScreenshot(named: "Gooby Wave 2 — Garden Echo Result")
         tap(app.buttons["echo.done"], in: app)
-        tap(app.buttons["arcade.home"], in: app)
+        tap(app.buttons["arcade.close"], in: app)
 
         XCTAssertTrue(app.staticTexts["gooby.status"].waitForExistence(timeout: 8))
-        waitForLabel("Kitchen", identifier: "room.current", in: app)
-        attachScreenshot(named: "Gooby Demo — Returned Home")
+        scrollHomeToTop(in: app)
+        waitForLabel("Playroom", identifier: "room.current", in: app)
+        sleep(3)
+        attachScreenshot(named: "Gooby Wave 2 — Natural Journey Complete")
     }
 
     @MainActor
@@ -104,6 +165,25 @@ final class GoobyDemoUITests: XCTestCase {
     }
 
     @MainActor
+    private func showRoom(_ room: DemoRoom, in app: XCUIApplication) {
+        scrollHomeToTop(in: app)
+        tap(app.buttons["room.\(room.rawValue)"], in: app)
+        waitForLabel(room.displayName, identifier: "room.current", in: app)
+        sleep(2)
+        app.swipeUp()
+        attachScreenshot(named: "Gooby Wave 2 — \(room.displayName)")
+        scrollHomeToTop(in: app)
+    }
+
+    @MainActor
+    private func scrollHomeToTop(in app: XCUIApplication) {
+        for _ in 0 ..< 5 {
+            app.swipeDown()
+        }
+        XCTAssertTrue(app.buttons["room.playroom"].waitForExistence(timeout: 5))
+    }
+
+    @MainActor
     private func waitForLabel(
         _ label: String,
         identifier: String,
@@ -117,7 +197,25 @@ final class GoobyDemoUITests: XCTestCase {
     }
 
     @MainActor
+    private func waitForLabelContaining(
+        _ fragment: String,
+        identifier: String,
+        in app: XCUIApplication,
+        timeout: TimeInterval
+    ) {
+        let predicate = NSPredicate(
+            format: "identifier == %@ AND label CONTAINS %@",
+            identifier,
+            fragment
+        )
+        XCTAssertTrue(
+            app.staticTexts.matching(predicate).firstMatch.waitForExistence(timeout: timeout)
+        )
+    }
+
+    @MainActor
     private func waitForEchoInput(
+        round: Int,
         input: Int,
         count: Int,
         in app: XCUIApplication
@@ -128,18 +226,29 @@ final class GoobyDemoUITests: XCTestCase {
             "input \(input) of \(count)"
         )
         XCTAssertTrue(
-            app.staticTexts.matching(predicate).firstMatch.waitForExistence(timeout: 10)
+            app.staticTexts.matching(predicate).firstMatch.waitForExistence(timeout: 16),
+            "Garden Echo round \(round) never reached input \(input) of \(count)"
         )
     }
 
     @MainActor
     private func pressCarrotLane(_ lane: String, in app: XCUIApplication) {
-        app.buttons["carrot.lane.\(lane)"].tap()
+        let button = app.buttons["carrot.lane.\(lane)"]
+        for _ in 0 ..< 4 where !button.isHittable {
+            app.swipeUp()
+        }
+        XCTAssertTrue(button.isHittable)
+        button.tap()
     }
 
     @MainActor
     private func pressEchoPad(_ pad: String, in app: XCUIApplication) {
-        app.buttons["echo.pad.\(pad)"].tap()
+        let button = app.buttons["echo.pad.\(pad)"]
+        for _ in 0 ..< 4 where !button.isHittable {
+            app.swipeUp()
+        }
+        XCTAssertTrue(button.isHittable)
+        button.tap()
     }
 
     @MainActor
@@ -148,6 +257,17 @@ final class GoobyDemoUITests: XCTestCase {
         attachment.name = name
         attachment.lifetime = .keepAlways
         add(attachment)
+    }
+}
+
+private enum DemoRoom: String {
+    case kitchen
+    case washroom
+    case bedroom
+    case playroom
+
+    var displayName: String {
+        rawValue.prefix(1).uppercased() + String(rawValue.dropFirst())
     }
 }
 

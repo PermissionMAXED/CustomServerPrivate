@@ -198,7 +198,179 @@ final class GoobyAppTests: XCTestCase {
             XCTAssertNotNil(root.findEntity(named: "room.camera"))
             XCTAssertNotNil(root.findEntity(named: "room.floor"))
             XCTAssertNotNil(root.findEntity(named: "room.light.key"))
+            XCTAssertNotNil(root.findEntity(named: "room.light.soft-fill"))
+            XCTAssertNotNil(root.findEntity(named: "room.contact-shadow"))
         }
+
+        let specs = RoomID.allCases.map(GoobyRoomFactory.visualSpec)
+        XCTAssertEqual(Set(specs.map(\.heroName)).count, RoomID.allCases.count)
+        XCTAssertEqual(Set(specs.map(\.backdropName)).count, RoomID.allCases.count)
+        XCTAssertEqual(Set(specs.map(\.floorRGB)).count, RoomID.allCases.count)
+        XCTAssertEqual(Set(specs.map(\.wallRGB)).count, RoomID.allCases.count)
+        XCTAssertEqual(Set(specs.map(\.accentRGB)).count, RoomID.allCases.count)
+
+        for (room, root) in zip(RoomID.allCases, roots) {
+            let spec = GoobyRoomFactory.visualSpec(for: room)
+            let hero = root.findEntity(named: spec.heroName)
+            let backdrop = root.findEntity(named: spec.backdropName)
+            XCTAssertNotNil(hero, "Missing foreground hero for \(room)")
+            XCTAssertNotNil(backdrop, "Missing palette backdrop for \(room)")
+            if let hero {
+                let extents = hero.visualBounds(relativeTo: root).extents
+                XCTAssertGreaterThan(extents.x, 0.45)
+                XCTAssertGreaterThan(extents.y, 0.45)
+                XCTAssertGreaterThan(extents.z, 0.10)
+                XCTAssertGreaterThan(hero.position(relativeTo: root).z, 0.25)
+            }
+            XCTAssertLessThanOrEqual(
+                entityCount(root),
+                40,
+                "\(room) exceeded the procedural room entity budget"
+            )
+        }
+    }
+
+    @MainActor
+    func testSunshineBowHasVisibleBoundsContrastAndNeckDepth() throws {
+        let coordinator = GoobySceneCoordinator()
+        coordinator.prepare(room: .playroom, reduceMotion: true, allowsAnimation: false)
+        var state = GameState.new(now: GameInstant(secondsSinceEpoch: 1_728_000_000))
+        state.equippedCosmetics.neck = GoobyCatalog.sunshineBow
+
+        coordinator.apply(
+            state: state,
+            events: [],
+            eventRevision: 1,
+            reduceMotion: true
+        )
+
+        let neck = try XCTUnwrap(
+            coordinator.gooby.findEntity(named: GoobyRealityNames.neckAnchor)
+        )
+        let bow = try XCTUnwrap(
+            coordinator.gooby.findEntity(named: "cosmetic.sunshine-bow")
+        )
+        let backing = try XCTUnwrap(
+            coordinator.gooby.findEntity(named: "cosmetic.sunshine-bow.backing")
+        )
+        let extents = bow.visualBounds(relativeTo: neck).extents
+
+        XCTAssertTrue(bow.parent === neck)
+        XCTAssertGreaterThan(extents.x, 0.55)
+        XCTAssertGreaterThan(extents.y, 0.24)
+        XCTAssertGreaterThan(extents.z, 0.12)
+        XCTAssertGreaterThan(bow.position.z, 0.12)
+        XCTAssertNotNil(backing.components[ModelComponent.self])
+    }
+
+    @MainActor
+    func testPreviewDisablesIdleAndStaleCareReactions() {
+        let coordinator = GoobySceneCoordinator()
+        coordinator.prepare(room: .kitchen, reduceMotion: false, allowsAnimation: false)
+        let state = GameState.new(now: GameInstant(secondsSinceEpoch: 1_728_000_000))
+
+        coordinator.apply(
+            state: state,
+            events: [.fed, .petted],
+            eventRevision: 1,
+            reduceMotion: false
+        )
+
+        XCTAssertFalse(coordinator.hasActiveReaction)
+        XCTAssertEqual(coordinator.currentRoom, .playroom)
+    }
+
+    @MainActor
+    func testCareReactionMovesOneAttachedRigAndCancelsCleanly() throws {
+        let coordinator = GoobySceneCoordinator()
+        coordinator.prepare(room: .playroom, reduceMotion: false)
+        let state = GameState.new(now: GameInstant(secondsSinceEpoch: 1_728_000_000))
+        let rig = try XCTUnwrap(
+            coordinator.gooby.findEntity(named: GoobyRealityNames.rig)
+        )
+
+        for name in [
+            GoobyRealityNames.head,
+            GoobyRealityNames.earLeft,
+            GoobyRealityNames.earRight,
+            GoobyRealityNames.pawLeft,
+            GoobyRealityNames.pawRight,
+        ] {
+            XCTAssertTrue(
+                coordinator.gooby.findEntity(named: name)?.parent === rig,
+                "\(name) must remain attached to the shared rig"
+            )
+        }
+
+        coordinator.apply(
+            state: state,
+            events: [.played],
+            eventRevision: 1,
+            reduceMotion: false
+        )
+        XCTAssertTrue(coordinator.hasActiveReaction)
+        coordinator.stop()
+        XCTAssertFalse(coordinator.hasActiveReaction)
+    }
+
+    @MainActor
+    func testSemanticThemeContrastPassesLightAndDarkThresholds() {
+        for style in [UIUserInterfaceStyle.light, .dark] {
+            let traits = UITraitCollection(userInterfaceStyle: style)
+            let ink = GoobyPalette.inkUIColor.resolvedColor(with: traits)
+            let surface = GoobyPalette.surfaceUIColor.resolvedColor(with: traits)
+            let action = GoobyPalette.actionUIColor.resolvedColor(with: traits)
+            let border = GoobyPalette.borderUIColor.resolvedColor(with: traits)
+            let white = UIColor.white
+
+            XCTAssertGreaterThanOrEqual(contrast(ink, surface), 4.5)
+            XCTAssertGreaterThanOrEqual(contrast(white, action), 4.5)
+            XCTAssertGreaterThanOrEqual(contrast(border, surface), 3.0)
+            for accent in [
+                GoobyPalette.coralUIColor,
+                GoobyPalette.mintUIColor,
+                GoobyPalette.skyUIColor,
+                GoobyPalette.goldUIColor,
+            ] {
+                XCTAssertGreaterThanOrEqual(
+                    contrast(accent.resolvedColor(with: traits), surface),
+                    3.0
+                )
+            }
+        }
+    }
+
+    @MainActor
+    func testVoiceOverChangeMidGameEnablesAndPersistsRelaxedTimingImmediately() {
+        let decision = CarrotAccessibilityTimingPolicy.decision(
+            voiceOverEnabled: true,
+            persistedPreference: false,
+            stage: .playing,
+            gameFinished: false
+        )
+
+        XCTAssertTrue(decision.usesRelaxedTiming)
+        XCTAssertTrue(decision.persistsPreference)
+        XCTAssertTrue(decision.holdsCorePaused)
+
+        let relaunched = CarrotAccessibilityTimingPolicy.decision(
+            voiceOverEnabled: false,
+            persistedPreference: decision.persistsPreference,
+            stage: .instructions,
+            gameFinished: false
+        )
+        XCTAssertTrue(relaunched.usesRelaxedTiming)
+        XCTAssertFalse(relaunched.holdsCorePaused)
+    }
+
+    @MainActor
+    func testRewardToastDoesNotTimeDismissWhileVoiceOverIsActive() {
+        XCTAssertFalse(
+            RewardToastDismissalPolicy.shouldAutoDismiss(voiceOverEnabled: true)
+        )
+        XCTAssertTrue(
+            RewardToastDismissalPolicy.shouldAutoDismiss(voiceOverEnabled: false)
+        )
     }
 
     @MainActor
@@ -305,10 +477,16 @@ final class GoobyAppTests: XCTestCase {
                 eventRevision: 0,
                 reduceMotion: true
             )
-            XCTAssertNotNil(
-                coordinator.gooby.findEntity(named: "cosmetic.\(item.id.rawValue)"),
-                "Missing procedural entity for \(item.name)"
+            let cosmetic = coordinator.gooby.findEntity(
+                named: "cosmetic.\(item.id.rawValue)"
             )
+            XCTAssertNotNil(cosmetic, "Missing procedural entity for \(item.name)")
+            if let cosmetic {
+                let extents = cosmetic.visualBounds(relativeTo: coordinator.gooby).extents
+                XCTAssertGreaterThan(extents.x, 0.05, "\(item.name) preview has no width")
+                XCTAssertGreaterThan(extents.y, 0.05, "\(item.name) preview has no height")
+                XCTAssertGreaterThan(extents.z, 0.02, "\(item.name) preview has no depth")
+            }
         }
     }
 
@@ -641,6 +819,35 @@ final class GoobyAppTests: XCTestCase {
             freshSaveHint: true,
             skipsWelcome: true
         )
+    }
+
+    private func contrast(_ first: UIColor, _ second: UIColor) -> Double {
+        let firstLuminance = relativeLuminance(first)
+        let secondLuminance = relativeLuminance(second)
+        let lighter = max(firstLuminance, secondLuminance)
+        let darker = min(firstLuminance, secondLuminance)
+        return (lighter + 0.05) / (darker + 0.05)
+    }
+
+    private func relativeLuminance(_ color: UIColor) -> Double {
+        var red: CGFloat = 0
+        var green: CGFloat = 0
+        var blue: CGFloat = 0
+        var alpha: CGFloat = 0
+        XCTAssertTrue(color.getRed(&red, green: &green, blue: &blue, alpha: &alpha))
+        return 0.2126 * linearized(Double(red))
+            + 0.7152 * linearized(Double(green))
+            + 0.0722 * linearized(Double(blue))
+    }
+
+    private func linearized(_ component: Double) -> Double {
+        component <= 0.04045
+            ? component / 12.92
+            : pow((component + 0.055) / 1.055, 2.4)
+    }
+
+    private func entityCount(_ root: Entity) -> Int {
+        1 + root.children.reduce(0) { $0 + entityCount($1) }
     }
 }
 

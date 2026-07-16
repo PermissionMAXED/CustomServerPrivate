@@ -61,8 +61,8 @@ struct ArcadeView: View {
         }
         .toolbar {
             ToolbarItem(placement: .confirmationAction) {
-                Button("Home") { dismiss() }
-                    .accessibilityIdentifier("arcade.home")
+                Button("Close") { dismiss() }
+                    .accessibilityIdentifier("arcade.close")
                     .accessibilityHint("Returns to Gooby’s home")
             }
         }
@@ -213,11 +213,38 @@ struct ArcadeView: View {
     }
 }
 
-private enum CarrotCatchStage: Hashable {
+enum CarrotCatchStage: Hashable {
     case instructions
     case countdown
     case playing
     case result
+}
+
+struct CarrotAccessibilityTimingDecision: Equatable {
+    let usesRelaxedTiming: Bool
+    let persistsPreference: Bool
+    let holdsCorePaused: Bool
+}
+
+enum CarrotAccessibilityTimingPolicy {
+    static func decision(
+        voiceOverEnabled: Bool,
+        persistedPreference: Bool,
+        stage: CarrotCatchStage,
+        gameFinished: Bool
+    ) -> CarrotAccessibilityTimingDecision {
+        let relaxed = voiceOverEnabled || persistedPreference
+        return CarrotAccessibilityTimingDecision(
+            usesRelaxedTiming: relaxed,
+            persistsPreference: voiceOverEnabled || persistedPreference,
+            holdsCorePaused: relaxed && stage == .playing && !gameFinished
+        )
+    }
+}
+
+private struct CarrotCatchVisualFeedback: Equatable {
+    let caught: Bool
+    let laneName: String
 }
 
 private struct CarrotCatchView: View {
@@ -231,6 +258,11 @@ private struct CarrotCatchView: View {
     @State private var isSubmitting = false
     @State private var finalResult: CarrotCatchResult?
     @State private var pausedByScene = false
+    @State private var visualFeedback: CarrotCatchVisualFeedback?
+    @State private var holdsCorePausedForAccessibility = false
+    @AppStorage("gooby.carrot.accessibility-relaxed-timing")
+    private var accessibilityRelaxedTiming = false
+    @AccessibilityFocusState private var resultFocused: Bool
 
     @Environment(\.scenePhase) private var scenePhase
     @Environment(\.dismiss) private var dismiss
@@ -298,7 +330,24 @@ private struct CarrotCatchView: View {
         }
         .navigationTitle("Carrot Catch")
         .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden()
+        .safeAreaInset(edge: .bottom) {
+            if stage == .instructions {
+                carrotStartButton
+                    .padding(.horizontal, 18)
+                    .padding(.vertical, 10)
+                    .goobySurface(in: Rectangle(), strong: true)
+            }
+        }
         .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Button {
+                    dismiss()
+                } label: {
+                    Label("Back to Arcade", systemImage: "chevron.left")
+                }
+                .accessibilityIdentifier("carrot.back")
+            }
             if stage == .playing {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button(game.isPaused ? "Resume" : "Pause") {
@@ -330,6 +379,11 @@ private struct CarrotCatchView: View {
         }
         .onChange(of: scenePhase) { _, phase in
             handleScenePhase(phase)
+        }
+        .onChange(of: voiceOverEnabled) { _, enabled in
+            if enabled {
+                enableAccessibilityRelaxedTiming()
+            }
         }
         .onDisappear {
             guard stage != .result else { return }
@@ -398,18 +452,32 @@ private struct CarrotCatchView: View {
                 .font(.caption)
                 .foregroundStyle(.secondary)
 
-            Button("Start Carrot Catch") {
-                beginCountdown()
-            }
-            .buttonStyle(ArcadePrimaryButtonStyle(tint: GoobyPalette.coral))
-            .accessibilityIdentifier("carrot.start")
         }
         .arcadeCard()
         .onAppear {
-            if voiceOverEnabled || store.usesShortMinigameCountdown {
+            let decision = CarrotAccessibilityTimingPolicy.decision(
+                voiceOverEnabled: voiceOverEnabled,
+                persistedPreference: accessibilityRelaxedTiming,
+                stage: stage,
+                gameFinished: game.isFinished
+            )
+            if decision.usesRelaxedTiming || store.usesShortMinigameCountdown {
                 relaxedTiming = true
             }
+            if decision.holdsCorePaused, run.isPaused {
+                holdsCorePausedForAccessibility = true
+                game.resume()
+            }
         }
+    }
+
+    private var carrotStartButton: some View {
+        Button("Start Carrot Catch") {
+            beginCountdown()
+        }
+        .buttonStyle(ArcadePrimaryButtonStyle(tint: GoobyPalette.coral))
+        .accessibilityIdentifier("carrot.start")
+        .accessibilityHint("Starts the three-count countdown")
     }
 
     private var countdownView: some View {
@@ -430,6 +498,40 @@ private struct CarrotCatchView: View {
         VStack(spacing: 14) {
             Text(game.isPaused ? "Garden paused" : "Carrot \(game.moves.count + 1) of 20")
                 .font(.headline)
+            if let visualFeedback {
+                Label(
+                    visualFeedback.caught
+                        ? "Caught in \(visualFeedback.laneName)!"
+                        : "Missed in \(visualFeedback.laneName)",
+                    systemImage: visualFeedback.caught
+                        ? "checkmark.circle.fill"
+                        : "xmark.octagon.fill"
+                )
+                .font(.headline)
+                .foregroundStyle(
+                    visualFeedback.caught ? GoobyPalette.mint : GoobyPalette.coral
+                )
+                .frame(maxWidth: .infinity, minHeight: 44)
+                .goobySurface(
+                    in: RoundedRectangle(cornerRadius: 14),
+                    strong: true
+                )
+                .overlay {
+                    RoundedRectangle(cornerRadius: 14)
+                        .stroke(
+                            visualFeedback.caught ? GoobyPalette.mint : GoobyPalette.coral,
+                            lineWidth: 2
+                        )
+                }
+                .accessibilityIdentifier("carrot.feedback")
+                .accessibilityValue(visualFeedback.caught ? "Caught" : "Missed")
+                .accessibilityAddTraits(.updatesFrequently)
+            } else {
+                Label("Match the lane name and number", systemImage: "basket.fill")
+                    .font(.subheadline.weight(.semibold))
+                    .frame(minHeight: 44)
+                    .accessibilityIdentifier("carrot.feedback")
+            }
             ZStack(alignment: .bottom) {
                 RoundedRectangle(cornerRadius: 28)
                     .fill(
@@ -449,10 +551,10 @@ private struct CarrotCatchView: View {
                     Label("Paused", systemImage: "pause.fill")
                         .font(.title2.bold())
                         .padding(18)
-                        .background(.regularMaterial, in: Capsule())
+                        .goobySurface(in: Capsule(), strong: true)
                 }
             }
-            .frame(height: dynamicTypeSize.isAccessibilitySize ? 260 : 310)
+            .frame(height: dynamicTypeSize.isAccessibilitySize ? 260 : 240)
             .shadow(color: GoobyPalette.ink.opacity(0.14), radius: 14, y: 8)
             .accessibilityElement(children: .ignore)
             .accessibilityLabel("Carrot garden")
@@ -493,7 +595,7 @@ private struct CarrotCatchView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
         .background(
-            lane == game.currentLane ? Color.white.opacity(0.30) : Color.clear,
+            lane == game.currentLane ? GoobyPalette.strongSurface.opacity(0.68) : Color.clear,
             in: RoundedRectangle(cornerRadius: 18)
         )
     }
@@ -565,6 +667,7 @@ private struct CarrotCatchView: View {
         }
         .arcadeCard()
         .accessibilityElement(children: .contain)
+        .accessibilityFocused($resultFocused)
     }
 
     private var carrotCommitPending: some View {
@@ -639,7 +742,15 @@ private struct CarrotCatchView: View {
     private func choose(_ lane: Int) {
         guard let target = game.currentLane else { return }
         let caught = target == lane
+        visualFeedback = CarrotCatchVisualFeedback(
+            caught: caught,
+            laneName: laneName(lane)
+        )
         Task {
+            if holdsCorePausedForAccessibility {
+                guard await store.dispatch(.resumeMinigame(runID: run.id)) else { return }
+                syncCarrotProgress()
+            }
             guard await store.dispatch(.carrotCatchInput(runID: run.id, lane: lane))
             else { return }
             syncCarrotProgress()
@@ -649,12 +760,25 @@ private struct CarrotCatchView: View {
                 argument: caught ? "Caught! \(boardStatus)" : "Missed. \(boardStatus)"
             )
             if game.isFinished {
+                try? await Task.sleep(for: .milliseconds(850))
                 await finish()
+            } else if holdsCorePausedForAccessibility {
+                guard await store.dispatch(.pauseMinigame(runID: run.id)) else { return }
+                syncCarrotProgress()
+                game.resume()
             }
         }
     }
 
     private func togglePause() {
+        if holdsCorePausedForAccessibility {
+            if game.isPaused {
+                game.resume()
+            } else {
+                game.pause()
+            }
+            return
+        }
         Task {
             if game.isPaused {
                 if await store.dispatch(.resumeMinigame(runID: run.id)) {
@@ -672,6 +796,8 @@ private struct CarrotCatchView: View {
         if await store.dispatch(.finishMinigame(runID: run.id)) {
             finalResult = result
             stage = .result
+            await Task.yield()
+            resultFocused = true
             UIAccessibility.post(
                 notification: .screenChanged,
                 argument: "Carrot Catch complete, \(result.score) points"
@@ -689,6 +815,8 @@ private struct CarrotCatchView: View {
             syncCarrotProgress()
             remainingSeconds = CarrotCatch.standardDurationSeconds
             finalResult = nil
+            visualFeedback = nil
+            holdsCorePausedForAccessibility = false
             stage = .instructions
         }
     }
@@ -721,7 +849,47 @@ private struct CarrotCatchView: View {
         game = progress.game
         countdown = progress.countdownRemaining
         relaxedTiming = progress.timingMode == .relaxed
+            || accessibilityRelaxedTiming
+            || voiceOverEnabled
         remainingSeconds = store.remainingCarrotCatchSeconds(for: active)
+    }
+
+    private func enableAccessibilityRelaxedTiming() {
+        let decision = CarrotAccessibilityTimingPolicy.decision(
+            voiceOverEnabled: true,
+            persistedPreference: accessibilityRelaxedTiming,
+            stage: stage,
+            gameFinished: game.isFinished
+        )
+        accessibilityRelaxedTiming = decision.persistsPreference
+        relaxedTiming = decision.usesRelaxedTiming
+        UIAccessibility.post(
+            notification: .announcement,
+            argument: "Relaxed timing enabled. The countdown is paused."
+        )
+        Task {
+            switch stage {
+            case .instructions, .countdown:
+                if await store.dispatch(
+                    .setCarrotCatchTiming(runID: run.id, mode: .relaxed)
+                ) {
+                    syncCarrotProgress()
+                }
+            case .playing:
+                guard decision.holdsCorePaused, !holdsCorePausedForAccessibility else { return }
+                guard let active = store.state?.activeMinigame else { return }
+                if active.isPaused {
+                    holdsCorePausedForAccessibility = true
+                    game.resume()
+                } else if await store.dispatch(.pauseMinigame(runID: run.id)) {
+                    holdsCorePausedForAccessibility = true
+                    syncCarrotProgress()
+                    game.resume()
+                }
+            case .result:
+                break
+            }
+        }
     }
 
     private func laneName(_ lane: Int) -> String {
@@ -780,6 +948,9 @@ private struct GardenEchoView: View {
     @State private var finalResult: GardenEchoResult?
     @State private var status = "Listen to the garden, then echo it."
     @State private var pausedByScene = false
+    @State private var playbackPosition = 0
+    @State private var lastPlaybackSymbol: Int?
+    @AccessibilityFocusState private var resultFocused: Bool
 
     @Environment(\.scenePhase) private var scenePhase
     @Environment(\.dismiss) private var dismiss
@@ -838,6 +1009,17 @@ private struct GardenEchoView: View {
         }
         .navigationTitle("Garden Echo")
         .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden()
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Button {
+                    dismiss()
+                } label: {
+                    Label("Back to Arcade", systemImage: "chevron.left")
+                }
+                .accessibilityIdentifier("echo.back")
+            }
+        }
         .onChange(of: scenePhase) { _, phase in
             handleScenePhase(phase)
         }
@@ -920,6 +1102,8 @@ private struct GardenEchoView: View {
             .accessibilityIdentifier("echo.status")
             .accessibilityAddTraits(.updatesFrequently)
 
+            sequenceAffordance
+
             ZStack {
                 RoundedRectangle(cornerRadius: 28)
                     .fill(
@@ -934,18 +1118,108 @@ private struct GardenEchoView: View {
                         .font(.system(size: 60))
                         .foregroundStyle(GoobyPalette.apricot)
                         .shadow(color: .black.opacity(0.18), radius: 7, y: 5)
-                    Image(systemName: highlightedSymbol.map { EchoPad.all[$0].symbol } ?? "sparkles")
-                        .font(.system(size: 68))
-                        .foregroundStyle(
-                            highlightedSymbol.map { EchoPad.all[$0].tint } ?? GoobyPalette.gold
+                    VStack(spacing: 8) {
+                        let visibleSymbol = highlightedSymbol ?? lastPlaybackSymbol
+                        Image(
+                            systemName: visibleSymbol.map { EchoPad.all[$0].symbol }
+                                ?? "sparkles"
                         )
-                        .scaleEffect(highlightedSymbol == nil || reduceMotion ? 1 : 1.12)
+                        .font(.system(size: 62))
+                        .foregroundStyle(
+                            visibleSymbol.map { EchoPad.all[$0].tint } ?? GoobyPalette.gold
+                        )
+                        .scaleEffect(highlightedSymbol == nil || reduceMotion ? 1 : 1.14)
+                        Text(
+                            visibleSymbol.map {
+                                "\(EchoPad.all[$0].number) • \(EchoPad.all[$0].name)"
+                            } ?? phaseTitle
+                        )
+                        .font(.headline)
+                        .foregroundStyle(GoobyPalette.ink)
+                    }
                 }
             }
             .frame(height: dynamicTypeSize.isAccessibilitySize ? 180 : 220)
             .accessibilityElement(children: .ignore)
             .accessibilityLabel("Gooby’s echo garden")
             .accessibilityValue(accessibleSequenceStatus)
+        }
+    }
+
+    private var sequenceAffordance: some View {
+        VStack(spacing: 8) {
+            HStack {
+                Label(phaseTitle, systemImage: game.phase == .input ? "hand.tap.fill" : "ear.fill")
+                    .font(.subheadline.weight(.black))
+                    .accessibilityIdentifier("echo.phase")
+                Spacer()
+                Text(sequencePositionText)
+                    .font(.caption.weight(.bold))
+                    .foregroundStyle(.secondary)
+                    .accessibilityIdentifier("echo.sequence-progress")
+            }
+            ScrollView(.horizontal) {
+                HStack(spacing: 8) {
+                    ForEach(game.sequence.indices, id: \.self) { index in
+                        let isCurrent = game.phase == .sequence
+                            && playbackPosition == index + 1
+                        let isComplete = game.phase == .input
+                            ? index < game.input.count
+                            : index + 1 < playbackPosition
+                        ZStack {
+                            Circle()
+                                .fill(
+                                    isCurrent
+                                        ? GoobyPalette.action
+                                        : GoobyPalette.strongSurface
+                                )
+                            if isComplete {
+                                Image(systemName: "checkmark")
+                                    .font(.caption.weight(.black))
+                                    .foregroundStyle(GoobyPalette.mint)
+                            } else {
+                                Text("\(index + 1)")
+                                    .font(.caption.weight(.black))
+                                    .foregroundStyle(isCurrent ? Color.white : GoobyPalette.ink)
+                            }
+                        }
+                        .frame(width: 34, height: 34)
+                        .overlay {
+                            Circle()
+                                .stroke(
+                                    isCurrent ? GoobyPalette.gold : GoobyPalette.border,
+                                    lineWidth: isCurrent ? 3 : 1
+                                )
+                        }
+                        .accessibilityHidden(true)
+                    }
+                }
+            }
+            .scrollIndicators(.hidden)
+        }
+        .padding(12)
+        .goobySurface(in: RoundedRectangle(cornerRadius: 16), strong: true)
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("\(phaseTitle), \(sequencePositionText)")
+    }
+
+    private var phaseTitle: String {
+        if game.isPaused { return "Paused" }
+        switch game.phase {
+        case .sequence: "Watch the sequence"
+        case .input: "Your turn"
+        case .finished: "Sequence complete"
+        }
+    }
+
+    private var sequencePositionText: String {
+        switch game.phase {
+        case .sequence:
+            playbackPosition == 0
+                ? "\(game.sequence.count) notes ready"
+                : "Note \(playbackPosition) of \(game.sequence.count)"
+        case .input: "Input \(game.input.count) of \(game.sequence.count)"
+        case .finished: "All rounds complete"
         }
     }
 
@@ -1044,6 +1318,7 @@ private struct GardenEchoView: View {
                 .accessibilityIdentifier("echo.done")
         }
         .arcadeCard()
+        .accessibilityFocused($resultFocused)
     }
 
     private var gardenCommitPending: some View {
@@ -1093,6 +1368,8 @@ private struct GardenEchoView: View {
             playbackGeneration += 1
             let generation = playbackGeneration
             highlightedSymbol = nil
+            lastPlaybackSymbol = nil
+            playbackPosition = 0
             status = "Listen to \(game.sequence.count) garden notes."
             let spoken = game.sequence.map { padDescription($0) }.joined(separator: ", ")
             UIAccessibility.post(
@@ -1104,20 +1381,25 @@ private struct GardenEchoView: View {
     }
 
     private func playSequence(generation: Int) async {
-        let delay = store.usesShortMinigameCountdown ? 0.08 : 0.55
-        for symbol in game.sequence {
+        let highlightDelay = store.usesShortMinigameCountdown ? 0.08 : 0.82
+        let gapDelay = store.usesShortMinigameCountdown ? 0.04 : 0.30
+        for (index, symbol) in game.sequence.enumerated() {
             guard generation == playbackGeneration, !game.isPaused else { return }
+            playbackPosition = index + 1
             highlightedSymbol = symbol
+            lastPlaybackSymbol = symbol
+            status = "Watch note \(index + 1) of \(game.sequence.count): \(padDescription(symbol))."
             store.playMinigameFeedback(.gardenEcho(symbol: symbol))
-            try? await Task.sleep(for: .seconds(delay))
+            try? await Task.sleep(for: .seconds(highlightDelay))
             guard generation == playbackGeneration else { return }
             highlightedSymbol = nil
-            try? await Task.sleep(for: .seconds(delay / 2))
+            try? await Task.sleep(for: .seconds(gapDelay))
         }
         guard generation == playbackGeneration,
               await store.dispatch(.gardenEchoBeginInput(runID: run.id))
         else { return }
         syncGardenProgress()
+        lastPlaybackSymbol = nil
         status = "Your turn • input 1 of \(game.sequence.count)"
         UIAccessibility.post(notification: .announcement, argument: "Your turn")
     }
@@ -1130,8 +1412,15 @@ private struct GardenEchoView: View {
             guard await store.dispatch(.gardenEchoInput(runID: run.id, symbol: pad.id))
             else { return }
             syncGardenProgress()
+            highlightedSymbol = pad.id
+            lastPlaybackSymbol = pad.id
             store.playMinigameFeedback(.gardenEcho(symbol: pad.id))
             handleGardenOutcome(outcome)
+            try? await Task.sleep(for: .milliseconds(360))
+            if game.phase == .input {
+                highlightedSymbol = nil
+                lastPlaybackSymbol = nil
+            }
         }
     }
 
@@ -1146,12 +1435,26 @@ private struct GardenEchoView: View {
             UIAccessibility.post(notification: .announcement, argument: status)
             Task {
                 try? await Task.sleep(
-                    for: .seconds(store.usesShortMinigameCountdown ? 0.08 : 0.65)
+                    for: .seconds(store.usesShortMinigameCountdown ? 0.08 : 1.0)
                 )
                 startPlayback()
             }
-        case .gameCompleted, .gameOver:
-            Task { await finish() }
+        case .gameCompleted:
+            status = "All five rounds complete!"
+            Task {
+                try? await Task.sleep(
+                    for: .seconds(store.usesShortMinigameCountdown ? 0.08 : 0.9)
+                )
+                await finish()
+            }
+        case .gameOver:
+            status = "Three mistakes • showing results"
+            Task {
+                try? await Task.sleep(
+                    for: .seconds(store.usesShortMinigameCountdown ? 0.08 : 0.7)
+                )
+                await finish()
+            }
         case let .retry(mistakes):
             status = "Try that round again • mistake \(mistakes) of 3"
             UIAccessibility.post(notification: .announcement, argument: status)
@@ -1184,6 +1487,8 @@ private struct GardenEchoView: View {
         isSubmitting = true
         if await store.dispatch(.finishMinigame(runID: run.id)) {
             finalResult = result
+            await Task.yield()
+            resultFocused = true
             UIAccessibility.post(
                 notification: .screenChanged,
                 argument: "Garden Echo complete, \(result.score) points"
@@ -1202,6 +1507,8 @@ private struct GardenEchoView: View {
             finalResult = nil
             showsInstructions = true
             status = "Listen to the garden, then echo it."
+            playbackPosition = 0
+            lastPlaybackSymbol = nil
         }
     }
 
@@ -1275,7 +1582,9 @@ private struct ArcadeCardModifier: ViewModifier {
             .padding(16)
             .frame(maxWidth: .infinity)
             .background(
-                reduceTransparency ? GoobyPalette.cream : Color.white.opacity(0.72),
+                reduceTransparency
+                    ? GoobyPalette.strongSurface
+                    : GoobyPalette.surface.opacity(0.90),
                 in: RoundedRectangle(cornerRadius: 22)
             )
             .overlay {
@@ -1296,9 +1605,13 @@ private struct ArcadePrimaryButtonStyle: ButtonStyle {
             .padding(.horizontal, 14)
             .frame(maxWidth: .infinity, minHeight: 54)
             .background(
-                tint.opacity(configuration.isPressed ? 0.72 : 1),
+                GoobyPalette.action.opacity(configuration.isPressed ? 0.78 : 1),
                 in: RoundedRectangle(cornerRadius: 17)
             )
+            .overlay {
+                RoundedRectangle(cornerRadius: 17)
+                    .stroke(tint, lineWidth: 3)
+            }
             .scaleEffect(configuration.isPressed && !reduceMotion ? 0.98 : 1)
     }
 }
@@ -1314,8 +1627,8 @@ private struct ArcadeSecondaryButtonStyle: ButtonStyle {
             .frame(maxWidth: .infinity, minHeight: 54)
             .background(
                 reduceTransparency
-                    ? GoobyPalette.cream
-                    : Color.white.opacity(configuration.isPressed ? 0.50 : 0.82),
+                    ? GoobyPalette.strongSurface
+                    : GoobyPalette.surface.opacity(configuration.isPressed ? 0.76 : 0.94),
                 in: RoundedRectangle(cornerRadius: 17)
             )
             .overlay {

@@ -184,7 +184,7 @@ jobs:
 
   record-demo:
     runs-on: macos-15
-    timeout-minutes: 45
+    timeout-minutes: 60
 
     steps:
       - name: Check out sources without LFS assets
@@ -268,7 +268,7 @@ jobs:
         shell: bash
         run: |
           simulator_id='${{ steps.simulator.outputs.id }}'
-          video_path='Gooby/TestResults/gooby_full_demo.mp4'
+          video_path='Gooby/TestResults/gooby_wave2_natural_demo.mp4'
           demo_result='Gooby/TestResults/GoobyDemo.xcresult'
           mkdir -p Gooby/TestResults
           xcrun simctl terminate "$simulator_id" com.goobygame.app 2>/dev/null || true
@@ -294,6 +294,8 @@ jobs:
             -destination "platform=iOS Simulator,id=$simulator_id,arch=arm64" \
             -resultBundlePath "$demo_result" \
             -only-testing:GoobyUITests/GoobyDemoUITests/testRecordedDemoJourney \
+            -test-timeouts-enabled YES \
+            -maximum-test-execution-time-allowance 1800 \
             CODE_SIGNING_ALLOWED=NO \
             test-without-building 2>&1 |
             sed '/warning: Metadata extraction skipped\. No AppIntents\.framework dependency found\./d'
@@ -319,7 +321,7 @@ jobs:
         with:
           name: gooby-recorded-demo
           path: |
-            Gooby/TestResults/gooby_full_demo.mp4
+            Gooby/TestResults/gooby_wave2_natural_demo.mp4
             Gooby/TestResults/GoobyDemo.xcresult
             Gooby/TestResults/DemoAttachments
           if-no-files-found: warn

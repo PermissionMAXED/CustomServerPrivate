@@ -365,8 +365,6 @@ enum GoobyFactory {
 
 @MainActor
 enum GoobyRoomFactory {
-    private static let floor = GoobyFactory.clay(red: 0.76, green: 0.62, blue: 0.50)
-    private static let wall = GoobyFactory.clay(red: 0.97, green: 0.85, blue: 0.70)
     private static let cocoa = GoobyFactory.clay(red: 0.37, green: 0.22, blue: 0.18)
     private static let coral = GoobyFactory.clay(red: 0.91, green: 0.48, blue: 0.39)
     private static let mint = GoobyFactory.clay(red: 0.47, green: 0.72, blue: 0.63)
@@ -374,11 +372,56 @@ enum GoobyRoomFactory {
     private static let yellow = GoobyFactory.clay(red: 0.94, green: 0.72, blue: 0.32)
     private static let cream = GoobyFactory.clay(red: 0.98, green: 0.91, blue: 0.76)
 
+    struct VisualSpec: Equatable {
+        let heroName: String
+        let backdropName: String
+        let floorRGB: SIMD3<Float>
+        let wallRGB: SIMD3<Float>
+        let accentRGB: SIMD3<Float>
+    }
+
+    static func visualSpec(for room: RoomID) -> VisualSpec {
+        switch room {
+        case .kitchen:
+            VisualSpec(
+                heroName: "kitchen.hero.carrot-basket",
+                backdropName: "kitchen.backdrop.sunrise",
+                floorRGB: [0.74, 0.50, 0.33],
+                wallRGB: [0.99, 0.82, 0.55],
+                accentRGB: [0.88, 0.31, 0.20]
+            )
+        case .washroom:
+            VisualSpec(
+                heroName: "washroom.hero.rubber-duck",
+                backdropName: "washroom.backdrop.ripple",
+                floorRGB: [0.34, 0.66, 0.70],
+                wallRGB: [0.73, 0.91, 0.91],
+                accentRGB: [0.18, 0.47, 0.67]
+            )
+        case .bedroom:
+            VisualSpec(
+                heroName: "bedroom.hero.moon-lamp",
+                backdropName: "bedroom.backdrop.night-sky",
+                floorRGB: [0.31, 0.30, 0.50],
+                wallRGB: [0.53, 0.52, 0.72],
+                accentRGB: [0.24, 0.24, 0.47]
+            )
+        case .playroom:
+            VisualSpec(
+                heroName: "playroom.hero.star-drum",
+                backdropName: "playroom.backdrop.confetti",
+                floorRGB: [0.62, 0.47, 0.35],
+                wallRGB: [0.91, 0.75, 0.52],
+                accentRGB: [0.32, 0.63, 0.52]
+            )
+        }
+    }
+
     static func makeRoom(_ room: RoomID) -> Entity {
         let root = Entity()
         root.name = "room.\(room.rawValue)"
-        addShell(to: root)
-        addCameraAndLights(to: root)
+        addShell(to: root, room: room)
+        addCameraAndLights(to: root, room: room)
 
         switch room {
         case .kitchen: addKitchen(to: root)
@@ -389,7 +432,11 @@ enum GoobyRoomFactory {
         return root
     }
 
-    private static func addShell(to root: Entity) {
+    private static func addShell(to root: Entity, room: RoomID) {
+        let spec = visualSpec(for: room)
+        let floor = material(spec.floorRGB)
+        let wall = material(spec.wallRGB)
+        let accent = material(spec.accentRGB)
         root.addChild(
             GoobyFactory.box(
                 "room.floor",
@@ -414,32 +461,59 @@ enum GoobyRoomFactory {
                 material: wall
             )
         )
+        root.addChild(
+            GoobyFactory.box(
+                spec.backdropName,
+                size: [3.15, 2.35, 0.08],
+                position: [0.30, 1.42, -1.47],
+                material: accent,
+                cornerRadius: 0.20
+            )
+        )
+        let contact = GoobyFactory.ellipsoid(
+            "room.contact-shadow",
+            scale: [1.05, 0.035, 0.54],
+            position: [0, 0.03, 0.18],
+            material: GoobyFactory.clay(red: 0.22, green: 0.16, blue: 0.18)
+        )
+        contact.components.set(OpacityComponent(opacity: 0.16))
+        root.addChild(contact)
     }
 
-    private static func addCameraAndLights(to root: Entity) {
+    private static func addCameraAndLights(to root: Entity, room: RoomID) {
+        let spec = visualSpec(for: room)
         let camera = PerspectiveCamera()
         camera.name = "room.camera"
-        camera.camera.fieldOfViewInDegrees = 42
+        camera.camera.fieldOfViewInDegrees = 44
         camera.look(
-            at: [0, 1.10, 0],
-            from: [0, 1.65, 4.35],
+            at: [0, 1.08, 0],
+            from: [0, 1.62, 4.55],
             relativeTo: root
         )
         root.addChild(camera)
 
         let key = DirectionalLight()
         key.name = "room.light.key"
-        key.light.intensity = 1_400
-        key.shadow = DirectionalLightComponent.Shadow(maximumDistance: 6, depthBias: 2)
+        key.light.intensity = 850
+        key.light.color = tint(spec.wallRGB, lift: 0.18)
         key.look(at: [0, 0.7, 0], from: [2.5, 4.0, 3.0], relativeTo: root)
         root.addChild(key)
 
         let fill = PointLight()
         fill.name = "room.light.fill"
-        fill.light.intensity = 900
+        fill.light.intensity = 720
+        fill.light.color = tint(spec.accentRGB, lift: 0.28)
         fill.light.attenuationRadius = 6
         fill.position = [-1.4, 2.4, 2.0]
         root.addChild(fill)
+
+        let softFill = PointLight()
+        softFill.name = "room.light.soft-fill"
+        softFill.light.intensity = 460
+        softFill.light.color = UIColor(red: 0.94, green: 0.89, blue: 0.82, alpha: 1)
+        softFill.light.attenuationRadius = 5
+        softFill.position = [1.7, 1.5, 2.2]
+        root.addChild(softFill)
     }
 
     private static func addKitchen(to root: Entity) {
@@ -477,6 +551,42 @@ enum GoobyRoomFactory {
             )
         )
         root.addChild(carrot)
+
+        let basket = Entity()
+        basket.name = visualSpec(for: .kitchen).heroName
+        basket.addChild(
+            GoobyFactory.cylinder(
+                "kitchen.hero.basket",
+                height: 0.42,
+                radius: 0.48,
+                position: [0, 0.20, 0],
+                material: cocoa
+            )
+        )
+        for (index, x) in [Float(-0.22), 0, 0.22].enumerated() {
+            let heroCarrot = GoobyFactory.cylinder(
+                "kitchen.hero.carrot.\(index)",
+                height: 0.72 - Float(index) * 0.08,
+                radius: 0.11,
+                position: [x, 0.68 - Float(index) * 0.04, 0],
+                material: coral
+            )
+            heroCarrot.orientation = simd_quatf(
+                angle: Float(index - 1) * 0.12,
+                axis: [0, 0, 1]
+            )
+            heroCarrot.addChild(
+                GoobyFactory.box(
+                    "kitchen.hero.leaves.\(index)",
+                    size: [0.25, 0.20, 0.12],
+                    position: [0, 0.43, 0],
+                    material: mint
+                )
+            )
+            basket.addChild(heroCarrot)
+        }
+        basket.position = [1.38, 0.02, 0.55]
+        root.addChild(basket)
     }
 
     private static func addWashroom(to root: Entity) {
@@ -512,6 +622,36 @@ enum GoobyRoomFactory {
                 cornerRadius: 0.08
             )
         )
+
+        let duck = Entity()
+        duck.name = visualSpec(for: .washroom).heroName
+        duck.addChild(
+            GoobyFactory.ellipsoid(
+                "washroom.hero.duck.body",
+                scale: [0.52, 0.40, 0.44],
+                position: [0, 0.38, 0],
+                material: yellow
+            )
+        )
+        duck.addChild(
+            GoobyFactory.ellipsoid(
+                "washroom.hero.duck.head",
+                scale: [0.34, 0.34, 0.32],
+                position: [0.26, 0.78, 0.02],
+                material: yellow
+            )
+        )
+        duck.addChild(
+            GoobyFactory.box(
+                "washroom.hero.duck.beak",
+                size: [0.30, 0.13, 0.22],
+                position: [0.56, 0.72, 0.08],
+                material: coral,
+                cornerRadius: 0.06
+            )
+        )
+        duck.position = [1.23, 0.02, 0.58]
+        root.addChild(duck)
     }
 
     private static func addBedroom(to root: Entity) {
@@ -547,6 +687,45 @@ enum GoobyRoomFactory {
             )
         )
         root.addChild(lamp)
+
+        let heroLamp = Entity()
+        heroLamp.name = visualSpec(for: .bedroom).heroName
+        heroLamp.addChild(
+            GoobyFactory.cylinder(
+                "bedroom.hero.lamp.stand",
+                height: 1.15,
+                radius: 0.08,
+                position: [0, 0.58, 0],
+                material: cocoa
+            )
+        )
+        heroLamp.addChild(
+            GoobyFactory.ellipsoid(
+                "bedroom.hero.lamp.moon",
+                scale: [0.48, 0.48, 0.18],
+                position: [0, 1.18, 0],
+                material: yellow
+            )
+        )
+        heroLamp.addChild(
+            GoobyFactory.ellipsoid(
+                "bedroom.hero.lamp.cutout",
+                scale: [0.37, 0.37, 0.20],
+                position: [0.20, 1.27, 0.11],
+                material: blue
+            )
+        )
+        heroLamp.addChild(
+            GoobyFactory.cylinder(
+                "bedroom.hero.lamp.base",
+                height: 0.12,
+                radius: 0.38,
+                position: [0, 0.06, 0],
+                material: cocoa
+            )
+        )
+        heroLamp.position = [1.42, 0, 0.50]
+        root.addChild(heroLamp)
     }
 
     private static func addPlayroom(to root: Entity) {
@@ -581,5 +760,59 @@ enum GoobyRoomFactory {
                 )
             )
         }
+
+        let drum = Entity()
+        drum.name = visualSpec(for: .playroom).heroName
+        drum.addChild(
+            GoobyFactory.cylinder(
+                "playroom.hero.drum.body",
+                height: 0.70,
+                radius: 0.46,
+                position: [0, 0.40, 0],
+                material: coral
+            )
+        )
+        drum.addChild(
+            GoobyFactory.cylinder(
+                "playroom.hero.drum.top",
+                height: 0.10,
+                radius: 0.50,
+                position: [0, 0.80, 0],
+                material: cream
+            )
+        )
+        for (index, x) in [Float(-0.23), 0.23].enumerated() {
+            let stick = GoobyFactory.cylinder(
+                "playroom.hero.drumstick.\(index)",
+                height: 0.82,
+                radius: 0.045,
+                position: [x, 1.10, 0.02],
+                material: cocoa
+            )
+            stick.orientation = simd_quatf(
+                angle: index == 0 ? -0.40 : 0.40,
+                axis: [0, 0, 1]
+            )
+            drum.addChild(stick)
+        }
+        drum.position = [1.35, 0, 0.54]
+        root.addChild(drum)
+    }
+
+    private static func material(_ rgb: SIMD3<Float>) -> SimpleMaterial {
+        GoobyFactory.clay(
+            red: CGFloat(rgb.x),
+            green: CGFloat(rgb.y),
+            blue: CGFloat(rgb.z)
+        )
+    }
+
+    private static func tint(_ rgb: SIMD3<Float>, lift: Float) -> UIColor {
+        UIColor(
+            red: CGFloat(min(1, rgb.x + lift)),
+            green: CGFloat(min(1, rgb.y + lift)),
+            blue: CGFloat(min(1, rgb.z + lift)),
+            alpha: 1
+        )
     }
 }

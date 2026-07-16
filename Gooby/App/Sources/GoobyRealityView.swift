@@ -10,18 +10,24 @@ final class GoobySceneCoordinator {
     let stage = Entity()
 
     private(set) var gooby = Entity()
-    private var roomRoot: Entity?
-    private var currentRoom: RoomID?
+    private(set) var roomRoot: Entity?
+    private(set) var currentRoom: RoomID?
+    private(set) var hasActiveReaction = false
     private var idleTask: Task<Void, Never>?
     private var reactionTask: Task<Void, Never>?
+    private var transientTasks: [Task<Void, Never>] = []
     private var lastEventRevision = -1
     private var consumedEventCount = 0
     private var reactionQueue: [GameEvent] = []
     private var reduceMotion = false
+    private var allowsAnimation = true
     private var idleStep = 0
+    private var lastAppliedCosmetics: EquippedCosmetics?
+    private var reactionOriginals: [(Entity, Transform)] = []
 
-    func prepare(room: RoomID, reduceMotion: Bool) {
+    func prepare(room: RoomID, reduceMotion: Bool, allowsAnimation: Bool = true) {
         self.reduceMotion = reduceMotion
+        self.allowsAnimation = allowsAnimation
         guard gooby.parent == nil else {
             startIdleLoop()
             return
@@ -39,6 +45,10 @@ final class GoobySceneCoordinator {
         eventRevision: Int,
         reduceMotion: Bool
     ) {
+        if reduceMotion, !self.reduceMotion {
+            cancelReactionAndRestore()
+            cancelTransientTasks()
+        }
         self.reduceMotion = reduceMotion
         if currentRoom != state.currentRoom {
             switchRoom(to: state.currentRoom)
@@ -53,7 +63,7 @@ final class GoobySceneCoordinator {
         }
         let newEvents = events.dropFirst(consumedEventCount)
         consumedEventCount = events.count
-        guard !reduceMotion else { return }
+        guard allowsAnimation, !reduceMotion else { return }
         reactionQueue.append(contentsOf: newEvents.filter(Self.isReaction))
         startNextReactionIfNeeded()
     }
@@ -63,7 +73,10 @@ final class GoobySceneCoordinator {
         reactionTask?.cancel()
         idleTask = nil
         reactionTask = nil
+        cancelTransientTasks()
+        restoreReactionOriginals()
         reactionQueue = []
+        hasActiveReaction = false
     }
 
     private func switchRoom(to room: RoomID) {
@@ -98,6 +111,8 @@ final class GoobySceneCoordinator {
     }
 
     private func applyCosmetics(_ cosmetics: EquippedCosmetics) {
+        guard cosmetics != lastAppliedCosmetics else { return }
+        lastAppliedCosmetics = cosmetics
         let head = gooby.findEntity(named: GoobyRealityNames.headAnchor)
         let neck = gooby.findEntity(named: GoobyRealityNames.neckAnchor)
         let face = gooby.findEntity(named: GoobyRealityNames.faceAnchor)
@@ -202,16 +217,19 @@ final class GoobySceneCoordinator {
         }
 
         if cosmetics.neck == GoobyCatalog.sunshineBow, let neck {
-            neck.addChild(
-                makeBow(
-                    name: "cosmetic.sunshine-bow",
-                    color: (0.97, 0.70, 0.20)
-                )
+            let bow = makeBow(
+                name: "cosmetic.sunshine-bow",
+                color: (0.98, 0.60, 0.06),
+                backingColor: (0.43, 0.12, 0.16)
             )
+            bow.position = [0, 0.04, 0.19]
+            bow.scale = [1.18, 1.18, 1.18]
+            neck.addChild(bow)
         } else if cosmetics.neck == GoobyCatalog.friendshipRibbon, let neck {
             let ribbon = makeBow(
                 name: "cosmetic.friendship-ribbon",
-                color: (0.88, 0.34, 0.48)
+                color: (0.88, 0.34, 0.48),
+                backingColor: (0.35, 0.08, 0.15)
             )
             ribbon.addChild(
                 GoobyFactory.box(
@@ -326,40 +344,54 @@ final class GoobySceneCoordinator {
 
     private func makeBow(
         name: String,
-        color: (CGFloat, CGFloat, CGFloat)
+        color: (CGFloat, CGFloat, CGFloat),
+        backingColor: (CGFloat, CGFloat, CGFloat)
     ) -> Entity {
         let bow = Entity()
         bow.name = name
         let material = GoobyFactory.clay(red: color.0, green: color.1, blue: color.2)
+        let backing = GoobyFactory.clay(
+            red: backingColor.0,
+            green: backingColor.1,
+            blue: backingColor.2
+        )
+        bow.addChild(
+            GoobyFactory.ellipsoid(
+                "\(name).backing",
+                scale: [0.62, 0.30, 0.11],
+                position: [0, 0, -0.04],
+                material: backing
+            )
+        )
         bow.addChild(
             GoobyFactory.ellipsoid(
                 "\(name).left",
-                scale: [0.25, 0.18, 0.09],
-                position: [-0.21, 0, 0],
+                scale: [0.31, 0.22, 0.13],
+                position: [-0.25, 0, 0.04],
                 material: material
             )
         )
         bow.addChild(
             GoobyFactory.ellipsoid(
                 "\(name).right",
-                scale: [0.25, 0.18, 0.09],
-                position: [0.21, 0, 0],
+                scale: [0.31, 0.22, 0.13],
+                position: [0.25, 0, 0.04],
                 material: material
             )
         )
         bow.addChild(
             GoobyFactory.ellipsoid(
                 "\(name).knot",
-                scale: [0.14, 0.14, 0.10],
-                position: [0, 0, 0.04],
-                material: material
+                scale: [0.16, 0.16, 0.14],
+                position: [0, 0, 0.12],
+                material: backing
             )
         )
         return bow
     }
 
     private func startIdleLoop() {
-        guard idleTask == nil else { return }
+        guard allowsAnimation, idleTask == nil else { return }
         idleTask = Task { [weak self] in
             while !Task.isCancelled {
                 try? await Task.sleep(for: .seconds(3.2))
@@ -370,7 +402,7 @@ final class GoobySceneCoordinator {
     }
 
     private func runIdleBeat() {
-        guard !reduceMotion else { return }
+        guard allowsAnimation, !reduceMotion, reactionTask == nil else { return }
         idleStep = (idleStep + 1) % 4
         switch idleStep {
         case 0: breathe()
@@ -381,20 +413,26 @@ final class GoobySceneCoordinator {
     }
 
     private func breathe() {
-        guard let torso = gooby.findEntity(named: GoobyRealityNames.torso) else { return }
-        let original = torso.transform
+        guard let rig = gooby.findEntity(named: GoobyRealityNames.rig) else { return }
+        let original = rig.transform
         var expanded = original
-        expanded.scale *= [1.025, 1.018, 1.025]
-        torso.move(to: expanded, relativeTo: torso.parent, duration: 0.55, timingFunction: .easeInOut)
-        Task { @MainActor [weak torso] in
-            try? await Task.sleep(for: .milliseconds(560))
-            torso?.move(
+        expanded.scale *= [1.018, 1.025, 1.018]
+        expanded.translation.y += 0.01
+        rig.move(to: expanded, relativeTo: rig.parent, duration: 0.55, timingFunction: .easeInOut)
+        trackTransientTask(Task { @MainActor [weak rig] in
+            do {
+                try await Task.sleep(for: .milliseconds(560))
+            } catch {
+                rig?.transform = original
+                return
+            }
+            rig?.move(
                 to: original,
-                relativeTo: torso?.parent,
+                relativeTo: rig?.parent,
                 duration: 0.55,
                 timingFunction: .easeInOut
             )
-        }
+        })
     }
 
     private func blink() {
@@ -408,8 +446,15 @@ final class GoobySceneCoordinator {
             closed.scale.y = max(0.02, original.scale.y * 0.08)
             eye.move(to: closed, relativeTo: eye.parent, duration: 0.08, timingFunction: .easeInOut)
         }
-        Task { @MainActor in
-            try? await Task.sleep(for: .milliseconds(100))
+        trackTransientTask(Task { @MainActor in
+            do {
+                try await Task.sleep(for: .milliseconds(100))
+            } catch {
+                for (eye, original) in zip(eyes, originals) {
+                    eye.transform = original
+                }
+                return
+            }
             for (eye, original) in zip(eyes, originals) {
                 eye.move(
                     to: original,
@@ -418,7 +463,7 @@ final class GoobySceneCoordinator {
                     timingFunction: .easeInOut
                 )
             }
-        }
+        })
     }
 
     private func earFlick() {
@@ -427,63 +472,189 @@ final class GoobySceneCoordinator {
         var flicked = original
         flicked.rotation *= simd_quatf(angle: -0.11, axis: [0, 0, 1])
         ear.move(to: flicked, relativeTo: ear.parent, duration: 0.16, timingFunction: .easeInOut)
-        Task { @MainActor [weak ear] in
-            try? await Task.sleep(for: .milliseconds(180))
+        trackTransientTask(Task { @MainActor [weak ear] in
+            do {
+                try await Task.sleep(for: .milliseconds(180))
+            } catch {
+                ear?.transform = original
+                return
+            }
             ear?.move(
                 to: original,
                 relativeTo: ear?.parent,
                 duration: 0.20,
                 timingFunction: .easeInOut
             )
-        }
+        })
     }
 
     private func startNextReactionIfNeeded() {
         guard reactionTask == nil, !reactionQueue.isEmpty else { return }
         let event = reactionQueue.removeFirst()
         guard let rig = gooby.findEntity(named: GoobyRealityNames.rig) else { return }
-        let original = rig.transform
-        var target = original
-        let duration: Double
+        cancelTransientTasks()
+        let head = gooby.findEntity(named: GoobyRealityNames.head)
+        let leftPaw = gooby.findEntity(named: GoobyRealityNames.pawLeft)
+        let rightPaw = gooby.findEntity(named: GoobyRealityNames.pawRight)
+        let leftEar = gooby.findEntity(named: GoobyRealityNames.earLeft)
+        let rightEar = gooby.findEntity(named: GoobyRealityNames.earRight)
+        let parts = [rig, head, leftPaw, rightPaw, leftEar, rightEar].compactMap { $0 }
+        reactionOriginals = parts.map { ($0, $0.transform) }
+        hasActiveReaction = true
+
+        var anticipation = reactionOriginals.map { $0.1 }
+        anticipation[0].scale *= [1.04, 0.91, 1.04]
+        anticipation[0].translation.y -= 0.06
+        if anticipation.indices.contains(1) {
+            anticipation[1].rotation *= simd_quatf(angle: -0.08, axis: [1, 0, 0])
+        }
+        move(parts, to: anticipation, duration: 0.18)
+
+        reactionTask = Task { @MainActor [weak self] in
+            guard let self else { return }
+            do {
+                try await Task.sleep(for: .milliseconds(210))
+                let target = self.reactionTransforms(for: event)
+                self.move(parts, to: target, duration: self.actionDuration(for: event))
+                try await Task.sleep(
+                    for: .seconds(self.actionDuration(for: event) + 0.14)
+                )
+                self.restoreReactionOriginals(animated: true)
+                try await Task.sleep(for: .milliseconds(360))
+            } catch {
+                self.restoreReactionOriginals()
+                self.reactionTask = nil
+                self.hasActiveReaction = false
+                return
+            }
+            self.reactionOriginals = []
+            self.reactionTask = nil
+            self.hasActiveReaction = false
+            self.startNextReactionIfNeeded()
+        }
+    }
+
+    private func reactionTransforms(for event: GameEvent) -> [Transform] {
+        var transforms = reactionOriginals.map { $0.1 }
+        guard !transforms.isEmpty else { return transforms }
 
         switch event {
         case .fed:
-            target.rotation *= simd_quatf(angle: 0.13, axis: [1, 0, 0])
-            target.translation.z += 0.10
-            duration = 0.22
+            transforms[0].translation.z += 0.12
+            transforms[0].scale *= [1.02, 0.96, 1.02]
+            rotate(&transforms, index: 1, angle: 0.20, axis: [1, 0, 0])
+            movePawsInward(&transforms, amount: 0.14, lift: 0.08)
         case .washed:
-            target.rotation *= simd_quatf(angle: 0.20, axis: [0, 1, 0])
-            duration = 0.12
+            transforms[0].rotation *= simd_quatf(angle: 0.18, axis: [0, 1, 0])
+            transforms[0].scale *= [0.97, 1.04, 0.97]
+            rotate(&transforms, index: 1, angle: -0.13, axis: [0, 0, 1])
+            movePawsInward(&transforms, amount: 0.08, lift: 0.18)
+            rotate(&transforms, index: 4, angle: -0.12, axis: [0, 0, 1])
+            rotate(&transforms, index: 5, angle: 0.12, axis: [0, 0, 1])
         case .petted:
-            target.rotation *= simd_quatf(angle: 0.14, axis: [0, 0, 1])
-            target.translation.x += 0.07
-            duration = 0.25
+            transforms[0].translation.x += 0.10
+            transforms[0].translation.y += 0.03
+            rotate(&transforms, index: 1, angle: 0.20, axis: [0, 0, 1])
+            rotate(&transforms, index: 4, angle: 0.10, axis: [0, 0, 1])
+            rotate(&transforms, index: 5, angle: 0.10, axis: [0, 0, 1])
         case .played:
-            target.translation.y += 0.32
-            target.scale = [0.96, 1.05, 0.96]
-            duration = 0.24
+            transforms[0].translation.y += 0.38
+            transforms[0].scale *= [0.95, 1.08, 0.95]
+            transforms[0].rotation *= simd_quatf(angle: -0.06, axis: [0, 0, 1])
+            movePawsInward(&transforms, amount: 0.05, lift: 0.15)
+            if transforms.indices.contains(1) {
+                transforms[1].translation.y += 0.06
+            }
         case .sleepChanged:
-            target.scale *= [1.02, 0.96, 1.02]
-            duration = 0.30
+            transforms[0].translation.y -= 0.14
+            transforms[0].scale *= [1.05, 0.91, 1.05]
+            transforms[0].rotation *= simd_quatf(angle: -0.13, axis: [0, 0, 1])
+            rotate(&transforms, index: 1, angle: 0.12, axis: [1, 0, 0])
+            movePawsInward(&transforms, amount: 0.12, lift: -0.04)
         default:
-            return
+            break
         }
+        return transforms
+    }
 
-        rig.move(to: target, relativeTo: rig.parent, duration: duration, timingFunction: .easeInOut)
-        reactionTask = Task { @MainActor [weak self, weak rig] in
-            try? await Task.sleep(for: .seconds(duration + 0.04))
-            guard !Task.isCancelled else { return }
-            rig?.move(
-                to: original,
-                relativeTo: rig?.parent,
+    private func actionDuration(for event: GameEvent) -> Double {
+        switch event {
+        case .washed: 0.34
+        case .played: 0.42
+        case .sleepChanged: 0.48
+        default: 0.38
+        }
+    }
+
+    private func move(_ entities: [Entity], to transforms: [Transform], duration: Double) {
+        for (entity, transform) in zip(entities, transforms) {
+            entity.move(
+                to: transform,
+                relativeTo: entity.parent,
                 duration: duration,
                 timingFunction: .easeInOut
             )
-            try? await Task.sleep(for: .seconds(duration))
-            guard !Task.isCancelled else { return }
-            self?.reactionTask = nil
-            self?.startNextReactionIfNeeded()
         }
+    }
+
+    private func rotate(
+        _ transforms: inout [Transform],
+        index: Int,
+        angle: Float,
+        axis: SIMD3<Float>
+    ) {
+        guard transforms.indices.contains(index) else { return }
+        transforms[index].rotation *= simd_quatf(angle: angle, axis: axis)
+    }
+
+    private func movePawsInward(
+        _ transforms: inout [Transform],
+        amount: Float,
+        lift: Float
+    ) {
+        guard transforms.indices.contains(3) else { return }
+        transforms[2].translation.x += amount
+        transforms[3].translation.x -= amount
+        transforms[2].translation.y += lift
+        transforms[3].translation.y += lift
+    }
+
+    private func restoreReactionOriginals(animated: Bool = false) {
+        for (entity, original) in reactionOriginals {
+            if animated {
+                entity.move(
+                    to: original,
+                    relativeTo: entity.parent,
+                    duration: 0.28,
+                    timingFunction: .easeInOut
+                )
+            } else {
+                entity.transform = original
+            }
+        }
+        if !animated {
+            reactionOriginals = []
+        }
+    }
+
+    private func cancelReactionAndRestore() {
+        reactionTask?.cancel()
+        reactionTask = nil
+        reactionQueue = []
+        restoreReactionOriginals()
+        hasActiveReaction = false
+    }
+
+    private func trackTransientTask(_ task: Task<Void, Never>) {
+        transientTasks.append(task)
+        if transientTasks.count > 10 {
+            transientTasks.removeFirst(transientTasks.count - 10)
+        }
+    }
+
+    private func cancelTransientTasks() {
+        transientTasks.forEach { $0.cancel() }
+        transientTasks = []
     }
 
     private static func isReaction(_ event: GameEvent) -> Bool {
@@ -498,6 +669,7 @@ struct GoobyRealityView: View {
     let state: GameState
     let events: [GameEvent]
     let eventRevision: Int
+    var isPreview = false
     let onPet: () -> Void
 
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
@@ -514,6 +686,7 @@ struct GoobyRealityView: View {
                     events: events,
                     eventRevision: eventRevision,
                     reduceMotion: shouldReduceMotion,
+                    allowsAnimation: !isPreview,
                     coordinator: coordinator,
                     onPet: onPet
                 )
@@ -535,7 +708,11 @@ struct GoobyRealityView: View {
     @available(iOS 18.0, *)
     private var modernRealityView: some View {
         RealityView { content in
-            coordinator.prepare(room: state.currentRoom, reduceMotion: shouldReduceMotion)
+            coordinator.prepare(
+                room: state.currentRoom,
+                reduceMotion: shouldReduceMotion,
+                allowsAnimation: !isPreview
+            )
             content.add(coordinator.stage)
         } update: { _ in
             coordinator.apply(
@@ -564,6 +741,7 @@ private struct GoobyLegacyRealityView: UIViewRepresentable {
     let events: [GameEvent]
     let eventRevision: Int
     let reduceMotion: Bool
+    let allowsAnimation: Bool
     let coordinator: GoobySceneCoordinator
     let onPet: () -> Void
 
@@ -578,7 +756,11 @@ private struct GoobyLegacyRealityView: UIViewRepresentable {
             automaticallyConfigureSession: false
         )
         view.environment.background = .color(.clear)
-        coordinator.prepare(room: state.currentRoom, reduceMotion: reduceMotion)
+        coordinator.prepare(
+            room: state.currentRoom,
+            reduceMotion: reduceMotion,
+            allowsAnimation: allowsAnimation
+        )
 
         let anchor = AnchorEntity(world: .zero)
         anchor.name = "gooby.legacy-anchor"

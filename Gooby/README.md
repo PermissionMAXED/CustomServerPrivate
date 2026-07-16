@@ -73,13 +73,15 @@ delays/countdowns while preserving every seeded target, score, and reward. The c
 covers kitchen feed, washroom clean, universal pet, and bedroom sleep. The collection
 journey claims a daily gift, previews and buys the Sunshine Bow, equips it, and verifies it
 after relaunch. Arcade journeys finish both games and attach their result screens. These
-arguments are ignored by Release builds.
+arguments are ignored by Release builds. The dedicated recorded demo deliberately does not
+use `--short-minigames`: it keeps the production three-count start, 30-second Carrot Catch
+rules, every one of the 20 targets, and all five Garden Echo visual-playback rounds.
 
 ## Feature matrix
 
 | Area | Release behavior |
 | --- | --- |
-| Care | Four persistent needs, room-aware care, selectable owned foods, sleep, and offline fixed-step simulation |
+| Care | Four persistent needs, room-aware care, selectable owned foods, sleep, cohesive rabbit reactions, and four distinct primitive-only 3D rooms |
 | Daily Gift | Ethical seven-day offline cycle, date rollback protection, atomic claims, and Day 7 Moon Crown |
 | Shop | Repeatable food inventory purchases plus permanent, idempotent cosmetic purchases and previews |
 | Wardrobe | Owned/locked previews and persisted equip/unequip for head, neck, face, body, and legacy paws slots |
@@ -94,9 +96,11 @@ arguments are ignored by Release builds.
 GitHub Actions regenerates the project, validates plists/JSON/resources, builds the generic
 simulator app, runs package/app/UI tests, builds an unsigned Release app for a generic iOS
 device, and records only `GoobyDemoUITests.testRecordedDemoJourney`. The
-`gooby-recorded-demo` artifact contains the focused MP4, demo result bundle, and milestone
-screenshots; the journey covers home, care, shop/equip, both completed minigames, and return
-home.
+`gooby-recorded-demo` artifact contains `gooby_wave2_natural_demo.mp4`, the demo result
+bundle, and named milestone screenshots. The natural-speed journey holds all four room
+scenes, each care reaction, both Sunshine Bow previews, equipped home before and after
+relaunch, every Carrot Catch target, every Garden Echo playback/input round, both result
+screens, and the final equipped home.
 
 Linux can validate and test only `GoobyCore` and `GoobyPersistence` through Swift Package
 Manager. RealityKit, the iOS app, app tests, UI tests, and demo recording require macOS with
@@ -105,7 +109,8 @@ Xcode and an iOS Simulator.
 ## Controls
 
 - Tap Gooby to pet; use the room chips and primary care button to feed, wash, play,
-  tuck in, or wake.
+  tuck in, or wake. The two-by-two room picker, primary care action, compact needs summary,
+  and persistent care confirmation remain together at the top of Home.
 - In the kitchen, use **Owned food** to choose a pantry item before feeding.
 - Home links directly to **Daily Gift**, **Shop**, **Wardrobe**, **Journal**, and
   **Arcade**; the gear opens Settings.
@@ -113,9 +118,12 @@ Xcode and an iOS Simulator.
   the displayed lane. Pause at any time or enable Relaxed Timing; both keep the same
   targets and rewards.
 - **Garden Echo:** listen to the numbered **Leaf**, **Moon**, **Star**, and **Berry**
-  pads, then repeat them. Use **Replay Sequence** as often as needed; input has no timer.
+  pads, then repeat them. The persistent phase strip, numbered playback progress, large
+  symbol/name cue, and highlighted pad provide a complete visual-only sequence. Use
+  **Replay Sequence** as often as needed; input has no timer.
 - Shop rows open item details and cosmetic previews. Wardrobe rows preview even locked
-  items, while Equip is available only for owned cosmetics.
+  items, while Equip is available only for owned cosmetics. Sheet roots use **Close**,
+  Shop detail uses **Back**, and game screens use **Back to Arcade**.
 
 ## Accessibility
 
@@ -124,11 +132,17 @@ Xcode and an iOS Simulator.
   remain available.
 - VoiceOver receives labels, values, hints, ordered status announcements, and a spoken
   Garden Echo sequence with manual replay. Carrot Catch automatically offers relaxed
-  timing under VoiceOver without reducing score or rewards.
+  timing under VoiceOver without reducing score or rewards, observes VoiceOver changes
+  during a run, and persists the accessibility timing choice.
 - Symbols, names, lane positions, numbers, pitches, visible status, and haptics make
   gameplay independent of color and audio. Sound and haptics respect persisted toggles.
 - Scrollable layouts, adaptive grids, and stacked controls support accessibility Dynamic
   Type. The app honors Differentiate Without Color, Reduce Motion, Reduce Transparency,
-  and Button Shapes while avoiding mandatory input timers.
+  and Button Shapes while avoiding mandatory input timers. Selected rooms and wardrobe
+  items always combine a checkmark, border, and selected trait; reward notices provide a
+  44-point close target and do not auto-dismiss while VoiceOver is active.
+- Adaptive semantic light/dark tokens keep body text at 4.5:1 or better and meaningful
+  borders/icons at 3:1 or better in app-level contrast tests. Custom surfaces become fully
+  opaque under Reduce Transparency.
 - UI coverage runs targeted hit-region, element-description, text-clipping, and Dynamic
   Type accessibility audits on supported iOS/Xcode versions; tests avoid pixel matching.

@@ -1,9 +1,18 @@
 import GoobyCore
 import SwiftUI
+import UIKit
+
+enum RewardToastDismissalPolicy {
+    static func shouldAutoDismiss(voiceOverEnabled: Bool) -> Bool {
+        !voiceOverEnabled
+    }
+}
 
 struct RewardToastHost: View {
     @Bindable var store: GameStore
     @Environment(\.accessibilityReduceMotion) private var systemReduceMotion
+    @Environment(\.accessibilityVoiceOverEnabled) private var voiceOverEnabled
+    @AccessibilityFocusState private var toastFocused: Bool
 
     private var notice: RewardNotice? {
         store.rewardNotices.first
@@ -31,14 +40,17 @@ struct RewardToastHost: View {
                         }
                     } label: {
                         Image(systemName: "xmark")
+                            .frame(width: 44, height: 44)
+                            .contentShape(Rectangle())
                     }
                     .accessibilityLabel("Dismiss reward")
+                    .accessibilityIdentifier("reward.close")
                 }
                 .padding(14)
-                .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 20))
+                .goobySurface(in: RoundedRectangle(cornerRadius: 20), strong: true)
                 .overlay {
                     RoundedRectangle(cornerRadius: 20)
-                        .stroke(.white.opacity(0.6), lineWidth: 1)
+                        .stroke(GoobyPalette.border.opacity(0.55), lineWidth: 1)
                 }
                 .shadow(color: .black.opacity(0.14), radius: 14, y: 6)
                 .padding(.horizontal, 16)
@@ -49,11 +61,21 @@ struct RewardToastHost: View {
                         : .move(edge: .top).combined(with: .opacity)
                 )
                 .accessibilityElement(children: .contain)
+                .accessibilityFocused($toastFocused)
+                .accessibilityIdentifier("reward.toast")
             }
         }
         .animation(reduceMotion ? .easeOut : .spring, value: notice?.id)
-        .task(id: notice?.id) {
-            guard notice != nil else { return }
+        .task(id: "\(notice?.id.uuidString ?? "none")-\(voiceOverEnabled)") {
+            guard let notice else { return }
+            UIAccessibility.post(
+                notification: .announcement,
+                argument: "\(notice.title). \(notice.detail)"
+            )
+            toastFocused = true
+            guard RewardToastDismissalPolicy.shouldAutoDismiss(
+                voiceOverEnabled: voiceOverEnabled
+            ) else { return }
             try? await Task.sleep(for: .seconds(2.6))
             guard !Task.isCancelled else { return }
             withAnimation(reduceMotion ? .easeOut : .spring) {
@@ -93,7 +115,7 @@ struct DailyGiftView: View {
                         .font(.system(size: 52, weight: .bold))
                         .foregroundStyle(GoobyPalette.gold)
                         .padding(20)
-                        .background(.thinMaterial, in: Circle())
+                        .goobySurface(in: Circle())
                         .accessibilityHidden(true)
                     Text(message)
                         .font(.system(.headline, design: .rounded, weight: .semibold))
@@ -139,7 +161,7 @@ struct DailyGiftView: View {
                             .background(
                                 stepState(step) == "Today"
                                     ? GoobyPalette.gold.opacity(0.22)
-                                    : Color.white.opacity(0.54),
+                                    : GoobyPalette.surface,
                                 in: RoundedRectangle(cornerRadius: 17)
                             )
                             .overlay {
@@ -177,7 +199,7 @@ struct DailyGiftView: View {
             }
         }
         .navigationTitle("Daily Gift")
-        .toolbar { SheetDoneToolbar() }
+        .toolbar { SheetCloseToolbar() }
     }
 
     private var canClaim: Bool {
@@ -291,6 +313,7 @@ struct ShopItemDetailView: View {
     @Bindable var store: GameStore
     let state: GameState
     let item: CatalogItem
+    @Environment(\.dismiss) private var dismiss
 
     private var currentState: GameState { store.state ?? state }
 
@@ -304,10 +327,19 @@ struct ShopItemDetailView: View {
                             state: previewState,
                             events: [],
                             eventRevision: 0,
+                            isPreview: true,
                             onPet: {}
                         )
                         .frame(height: 290)
-                        .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 25))
+                        .goobySurface(
+                            in: RoundedRectangle(cornerRadius: 25),
+                            strong: true
+                        )
+                        .overlay {
+                            RoundedRectangle(cornerRadius: 25)
+                                .stroke(GoobyPalette.border.opacity(0.55), lineWidth: 2)
+                        }
+                        .accessibilityIdentifier("shop.preview.scene")
                         Text("Previewing \(item.name)")
                             .font(.caption.weight(.semibold))
                             .foregroundStyle(.secondary)
@@ -317,7 +349,7 @@ struct ShopItemDetailView: View {
                             .font(.system(size: 64))
                             .foregroundStyle(GoobyPalette.coral)
                             .padding(32)
-                            .background(.thinMaterial, in: Circle())
+                            .goobySurface(in: Circle())
                     }
                     VStack(spacing: 8) {
                         Text(item.name)
@@ -341,6 +373,16 @@ struct ShopItemDetailView: View {
                         .disabled(!canBuy)
                         .accessibilityIdentifier("shop.buy.\(item.id.rawValue)")
                         .accessibilityHint(detailStatus)
+                        if isOwnedCosmetic {
+                            Label(
+                                "\(item.name) is saved permanently.",
+                                systemImage: "checkmark.seal.fill"
+                            )
+                            .font(.subheadline.weight(.bold))
+                            .foregroundStyle(GoobyPalette.mint)
+                            .accessibilityIdentifier("shop.purchase.confirmation")
+                            .accessibilityAddTraits(.updatesFrequently)
+                        }
                     } else {
                         Label(unlockDescription, systemImage: "lock.fill")
                             .font(.subheadline.weight(.semibold))
@@ -352,7 +394,17 @@ struct ShopItemDetailView: View {
         }
         .navigationTitle("Item Details")
         .navigationBarTitleDisplayMode(.inline)
-        .toolbar { SheetDoneToolbar(identifier: "item-detail.done") }
+        .navigationBarBackButtonHidden()
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Button {
+                    dismiss()
+                } label: {
+                    Label("Back", systemImage: "chevron.left")
+                }
+                .accessibilityIdentifier("item-detail.back")
+            }
+        }
     }
 
     private var previewState: GameState {
@@ -426,12 +478,20 @@ struct WardrobeView: View {
                 VStack(spacing: 16) {
                     GoobyRealityView(
                         state: previewState,
-                        events: store.latestEvents,
-                        eventRevision: store.eventRevision,
+                        events: [],
+                        eventRevision: 0,
+                        isPreview: true,
                         onPet: {}
                     )
                     .frame(height: 300)
-                    .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 25))
+                    .goobySurface(
+                        in: RoundedRectangle(cornerRadius: 25),
+                        strong: true
+                    )
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 25)
+                            .stroke(GoobyPalette.border.opacity(0.55), lineWidth: 2)
+                    }
                     .accessibilityIdentifier("wardrobe.preview")
 
                     ScrollView(.horizontal) {
@@ -442,9 +502,11 @@ struct WardrobeView: View {
                                 } label: {
                                     VStack(spacing: 5) {
                                         Image(
-                                            systemName: currentState.ownedItems.contains(item.id)
-                                                ? "sparkles"
-                                                : "lock.fill"
+                                            systemName: item.id == selectedID
+                                                ? "checkmark.circle.fill"
+                                                : currentState.ownedItems.contains(item.id)
+                                                    ? "sparkles"
+                                                    : "lock.fill"
                                         )
                                         Text(item.name)
                                             .font(.caption.weight(.bold))
@@ -457,11 +519,23 @@ struct WardrobeView: View {
                                     .background(
                                         item.id == selectedID
                                             ? GoobyPalette.sky.opacity(0.25)
-                                            : Color.white.opacity(0.55),
+                                            : GoobyPalette.surface,
                                         in: RoundedRectangle(cornerRadius: 15)
                                     )
+                                    .overlay {
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .stroke(
+                                                item.id == selectedID
+                                                    ? GoobyPalette.sky
+                                                    : GoobyPalette.border.opacity(0.35),
+                                                lineWidth: item.id == selectedID ? 3 : 1
+                                            )
+                                    }
                                 }
                                 .buttonStyle(.plain)
+                                .accessibilityAddTraits(
+                                    item.id == selectedID ? .isSelected : []
+                                )
                                 .accessibilityIdentifier("wardrobe.item.\(item.id.rawValue)")
                                 .accessibilityLabel(item.name)
                                 .accessibilityValue(itemState(item))
@@ -496,12 +570,22 @@ struct WardrobeView: View {
                         .accessibilityIdentifier("wardrobe.equip")
                         .accessibilityHint(itemState(selected))
                     }
+                    if isSelectedEquipped {
+                        Label(
+                            "\(selected.name) is equipped and saved.",
+                            systemImage: "checkmark.seal.fill"
+                        )
+                        .font(.subheadline.weight(.bold))
+                        .foregroundStyle(GoobyPalette.mint)
+                        .accessibilityIdentifier("wardrobe.confirmation")
+                        .accessibilityAddTraits(.updatesFrequently)
+                    }
                 }
                 .padding(18)
             }
         }
         .navigationTitle("Wardrobe")
-        .toolbar { SheetDoneToolbar() }
+        .toolbar { SheetCloseToolbar() }
     }
 
     private var previewState: GameState {
@@ -621,7 +705,7 @@ struct SettingsView: View {
             }
         }
         .navigationTitle("Settings")
-        .toolbar { SheetDoneToolbar() }
+        .toolbar { SheetCloseToolbar() }
         .onAppear {
             petName = currentState.preferences.petName
         }
@@ -640,17 +724,17 @@ struct SettingsView: View {
     }
 }
 
-private struct SheetDoneToolbar: ToolbarContent {
+private struct SheetCloseToolbar: ToolbarContent {
     @Environment(\.dismiss) private var dismiss
     let identifier: String
 
-    init(identifier: String = "sheet.done") {
+    init(identifier: String = "sheet.close") {
         self.identifier = identifier
     }
 
     var body: some ToolbarContent {
         ToolbarItem(placement: .confirmationAction) {
-            Button("Done") { dismiss() }
+            Button("Close") { dismiss() }
                 .accessibilityIdentifier(identifier)
         }
     }
@@ -679,20 +763,31 @@ private struct ProgressionPrimaryButtonStyle: ButtonStyle {
             .padding(.horizontal, 16)
             .frame(maxWidth: .infinity, minHeight: 52)
             .background(
-                GoobyPalette.coral.opacity(configuration.isPressed ? 0.72 : 1),
+                GoobyPalette.action.opacity(configuration.isPressed ? 0.78 : 1),
                 in: RoundedRectangle(cornerRadius: 17)
             )
     }
 }
 
 private struct ProgressionSecondaryButtonStyle: ButtonStyle {
+    @Environment(\.accessibilityReduceTransparency) private var reduceTransparency
+
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .font(.system(.headline, design: .rounded, weight: .bold))
             .foregroundStyle(GoobyPalette.ink)
             .padding(.horizontal, 16)
             .frame(maxWidth: .infinity, minHeight: 52)
-            .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 17))
+            .background(
+                reduceTransparency
+                    ? GoobyPalette.strongSurface
+                    : GoobyPalette.surface.opacity(configuration.isPressed ? 0.76 : 0.92),
+                in: RoundedRectangle(cornerRadius: 17)
+            )
+            .overlay {
+                RoundedRectangle(cornerRadius: 17)
+                    .stroke(GoobyPalette.border.opacity(0.45), lineWidth: 1)
+            }
     }
 }
 
@@ -700,6 +795,6 @@ private extension View {
     func progressionCard() -> some View {
         padding(15)
             .frame(maxWidth: .infinity)
-            .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 20))
+            .goobySurface(in: RoundedRectangle(cornerRadius: 20))
     }
 }

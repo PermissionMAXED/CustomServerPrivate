@@ -21,12 +21,16 @@ final class GoobyUITests: XCTestCase {
         XCTAssertTrue(app.staticTexts["gooby.status"].waitForExistence(timeout: 12))
         XCTAssertEqual(app.staticTexts["room.current"].label, "Playroom")
         XCTAssertEqual(app.staticTexts["need.fullness.value"].label, "80%")
+        XCTAssertTrue(app.buttons["room.playroom"].isHittable)
+        XCTAssertTrue(app.buttons["room.playroom"].isSelected)
+        XCTAssertTrue(app.buttons["care.primary"].isHittable)
         attachHomeScreenshot(named: "Gooby Home — Playroom")
 
         tap(app.buttons["room.kitchen"], in: app)
         waitForLabel("Kitchen", identifier: "room.current", in: app)
         tap(app.buttons["care.primary"], in: app)
         waitForLabel("100%", identifier: "need.fullness.value", in: app)
+        XCTAssertTrue(app.staticTexts["care.confirmation"].waitForExistence(timeout: 5))
 
         tap(app.buttons["room.washroom"], in: app)
         waitForLabel("Washroom", identifier: "room.current", in: app)
@@ -60,24 +64,36 @@ final class GoobyUITests: XCTestCase {
         tap(app.buttons["home.destination.daily-gift"], in: app)
         tap(app.buttons["daily.claim"], in: app)
         XCTAssertTrue(app.buttons["Claimed Today"].waitForExistence(timeout: 8))
-        tap(app.buttons["sheet.done"], in: app)
+        let rewardClose = app.buttons["reward.close"]
+        XCTAssertTrue(rewardClose.waitForExistence(timeout: 2))
+        XCTAssertGreaterThanOrEqual(rewardClose.frame.height, 44)
+        tap(app.buttons["sheet.close"], in: app)
 
         tap(app.buttons["home.destination.shop"], in: app)
         tap(app.buttons["shop.item.sunshine-bow"], in: app)
         XCTAssertTrue(app.staticTexts["shop.preview"].waitForExistence(timeout: 8))
+        XCTAssertTrue(app.descendants(matching: .any)["shop.preview.scene"].exists)
+        sleep(2)
+        attachHomeScreenshot(named: "Gooby Wave 2 — Shop Sunshine Bow Preview")
         tap(app.buttons["shop.buy.sunshine-bow"], in: app)
         XCTAssertTrue(app.staticTexts["Owned permanently"].waitForExistence(timeout: 8))
         XCTAssertTrue(app.staticTexts["shop.detail.balance"].label.contains("15"))
-        tap(app.buttons["item-detail.done"], in: app)
-        tap(app.buttons["sheet.done"], in: app)
+        XCTAssertTrue(
+            app.staticTexts["shop.purchase.confirmation"].waitForExistence(timeout: 5)
+        )
+        tap(app.buttons["item-detail.back"], in: app)
+        tap(app.buttons["sheet.close"], in: app)
 
         tap(app.buttons["home.destination.wardrobe"], in: app)
         tap(app.buttons["wardrobe.item.sunshine-bow"], in: app)
+        XCTAssertTrue(app.buttons["wardrobe.item.sunshine-bow"].isSelected)
         tap(app.buttons["wardrobe.equip"], in: app)
         XCTAssertTrue(app.buttons["wardrobe.unequip"].waitForExistence(timeout: 8))
+        XCTAssertTrue(app.staticTexts["wardrobe.confirmation"].waitForExistence(timeout: 5))
+        sleep(2)
         attachHomeScreenshot(named: "Gooby Gate 3 — Equipped Sunshine Bow")
 
-        tap(app.buttons["sheet.done"], in: app)
+        tap(app.buttons["sheet.close"], in: app)
         app.terminate()
         app.launchArguments = [
             "--ui-testing",
@@ -90,7 +106,9 @@ final class GoobyUITests: XCTestCase {
         tap(app.buttons["home.destination.wardrobe"], in: app)
         tap(app.buttons["wardrobe.item.sunshine-bow"], in: app)
         XCTAssertTrue(app.buttons["wardrobe.unequip"].waitForExistence(timeout: 8))
-        tap(app.buttons["sheet.done"], in: app)
+        sleep(2)
+        attachHomeScreenshot(named: "Gooby Wave 2 — Wardrobe Sunshine Bow Preview")
+        tap(app.buttons["sheet.close"], in: app)
         XCTAssertTrue(app.staticTexts["gooby.status"].waitForExistence(timeout: 8))
         for _ in 0 ..< 4 {
             app.swipeDown()
@@ -196,15 +214,105 @@ final class GoobyUITests: XCTestCase {
     }
 
     @MainActor
-    func testZAccessibilityAuditOnArcadeLanding() throws {
+    func testShopFinalRowRemainsAboveReservedBalance() {
         let app = launchFreshApp(shortMinigames: false)
-        tap(app.buttons["home.destination.arcade"], in: app)
-        XCTAssertTrue(app.buttons["arcade.play.carrotCatch"].waitForExistence(timeout: 8))
+        defer { app.terminate() }
 
-        if #available(iOS 17.0, *) {
-            try app.performAccessibilityAudit(
-                for: [.hitRegion, .sufficientElementDescription, .textClipped]
+        tap(app.buttons["home.destination.shop"], in: app)
+        let finalRow = app.buttons["shop.item.moon-crown"]
+        for _ in 0 ..< 8 where !finalRow.isHittable {
+            app.swipeUp()
+        }
+        XCTAssertTrue(finalRow.isHittable)
+        let balance = app.descendants(matching: .any)["shop.balance"]
+        XCTAssertTrue(balance.exists)
+        XCTAssertFalse(finalRow.frame.intersects(balance.frame))
+        XCTAssertLessThanOrEqual(finalRow.frame.maxY, balance.frame.minY)
+    }
+
+    @MainActor
+    func testCarrotStartIsPinnedAndDiscoverableAtAccessibilityXXXL() {
+        let app = launchFreshApp(
+            shortMinigames: false,
+            contentSizeCategory: "UICTContentSizeCategoryAccessibilityXXXL"
+        )
+        defer { app.terminate() }
+
+        tap(app.buttons["home.destination.arcade"], in: app)
+        tap(app.buttons["arcade.play.carrotCatch"], in: app)
+        let start = app.buttons["carrot.start"]
+        XCTAssertTrue(start.waitForExistence(timeout: 8))
+        XCTAssertTrue(start.isHittable)
+        XCTAssertGreaterThanOrEqual(start.frame.height, 44)
+        XCTAssertTrue(app.windows.firstMatch.frame.contains(start.frame))
+    }
+
+    @MainActor
+    func testConsistentModalLabelsAndSelectedNoncolorTraits() {
+        let app = launchFreshApp(shortMinigames: false)
+        defer { app.terminate() }
+
+        XCTAssertTrue(app.buttons["room.playroom"].isSelected)
+        tap(app.buttons["home.destination.shop"], in: app)
+        XCTAssertEqual(app.buttons["sheet.close"].label, "Close")
+        tap(app.buttons["shop.item.sunshine-bow"], in: app)
+        XCTAssertEqual(app.buttons["item-detail.back"].label, "Back")
+        tap(app.buttons["item-detail.back"], in: app)
+        tap(app.buttons["sheet.close"], in: app)
+
+        tap(app.buttons["home.destination.wardrobe"], in: app)
+        let bow = app.buttons["wardrobe.item.sunshine-bow"]
+        XCTAssertTrue(bow.waitForExistence(timeout: 5))
+        XCTAssertTrue(bow.isSelected)
+        XCTAssertTrue(bow.label.contains("Sunshine Bow"))
+        tap(app.buttons["sheet.close"], in: app)
+
+        tap(app.buttons["home.destination.arcade"], in: app)
+        XCTAssertEqual(app.buttons["arcade.close"].label, "Close")
+        tap(app.buttons["arcade.play.carrotCatch"], in: app)
+        XCTAssertEqual(app.buttons["carrot.back"].label, "Back to Arcade")
+    }
+
+    @MainActor
+    func testReduceTransparencyKeepsCustomSurfacesUsable() {
+        let app = launchFreshApp(
+            shortMinigames: false,
+            extraArguments: ["-UIAccessibilityReduceTransparencyEnabled", "YES"]
+        )
+        defer { app.terminate() }
+
+        XCTAssertTrue(app.descendants(matching: .any)["needs.compact-summary"].exists)
+        XCTAssertTrue(app.buttons["care.primary"].isHittable)
+        tap(app.buttons["home.destination.wardrobe"], in: app)
+        XCTAssertTrue(
+            app.descendants(matching: .any)["wardrobe.preview"]
+                .waitForExistence(timeout: 8)
+        )
+        XCTAssertTrue(app.buttons["wardrobe.item.sunshine-bow"].isSelected)
+    }
+
+    @MainActor
+    func testZAccessibilityAuditOnArcadeLandingInLightAndDark() throws {
+        for style in ["Light", "Dark"] {
+            let app = launchFreshApp(
+                shortMinigames: false,
+                extraArguments: ["-AppleInterfaceStyle", style]
             )
+            tap(app.buttons["home.destination.arcade"], in: app)
+            XCTAssertTrue(app.buttons["arcade.play.carrotCatch"].waitForExistence(timeout: 8))
+
+            if #available(iOS 17.0, *) {
+                try app.performAccessibilityAudit(
+                    for: [
+                        .contrast,
+                        .hitRegion,
+                        .sufficientElementDescription,
+                        .textClipped,
+                    ]
+                )
+            }
+            attachHomeScreenshot(named: "Gooby Wave 2 — \(style) Theme")
+            app.terminate()
         }
     }
 
@@ -264,7 +372,8 @@ final class GoobyUITests: XCTestCase {
     @MainActor
     private func launchFreshApp(
         shortMinigames: Bool,
-        contentSizeCategory: String? = nil
+        contentSizeCategory: String? = nil,
+        extraArguments: [String] = []
     ) -> XCUIApplication {
         let app = XCUIApplication()
         app.launchArguments = [
@@ -283,6 +392,7 @@ final class GoobyUITests: XCTestCase {
                 contentSizeCategory,
             ])
         }
+        app.launchArguments.append(contentsOf: extraArguments)
         app.launch()
         XCTAssertTrue(app.staticTexts["gooby.status"].waitForExistence(timeout: 12))
         return app
