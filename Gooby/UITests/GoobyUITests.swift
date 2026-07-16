@@ -198,7 +198,6 @@ final class GoobyUITests: XCTestCase {
     @MainActor
     func testZAccessibilityAuditOnArcadeLanding() throws {
         let app = launchFreshApp(shortMinigames: false)
-        defer { app.terminate() }
         tap(app.buttons["home.destination.arcade"], in: app)
         XCTAssertTrue(app.buttons["arcade.play.carrotCatch"].waitForExistence(timeout: 8))
 
