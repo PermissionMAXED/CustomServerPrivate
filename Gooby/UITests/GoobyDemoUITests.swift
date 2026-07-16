@@ -25,7 +25,7 @@ final class GoobyDemoUITests: XCTestCase {
             app.descendants(matching: .any)["home.gooby-hero"]
                 .waitForExistence(timeout: 8)
         )
-        XCTAssertEqual(app.staticTexts["room.current"].label, "Playroom")
+        waitForLabel("Playroom", identifier: "room.current", in: app)
         attachScreenshot(named: "Gooby Demo — 3D Home")
 
         tap(app.buttons["room.kitchen"], in: app)
@@ -63,8 +63,7 @@ final class GoobyDemoUITests: XCTestCase {
         for lane in DemoSequence.carrotLanes {
             pressCarrotLane(lane, in: app)
         }
-        XCTAssertTrue(app.staticTexts["carrot.result.score"].waitForExistence(timeout: 10))
-        XCTAssertEqual(app.staticTexts["carrot.result.score"].label, "30 points")
+        waitForLabel("30 points", identifier: "carrot.result.score", in: app)
         attachScreenshot(named: "Gooby Demo — Carrot Catch Result")
         tap(app.buttons["carrot.done"], in: app)
 
@@ -76,32 +75,27 @@ final class GoobyDemoUITests: XCTestCase {
                 pressEchoPad(pad, in: app)
             }
         }
-        XCTAssertTrue(app.staticTexts["echo.result.score"].waitForExistence(timeout: 10))
-        XCTAssertEqual(app.staticTexts["echo.result.score"].label, "25 points")
+        waitForLabel("25 points", identifier: "echo.result.score", in: app)
         attachScreenshot(named: "Gooby Demo — Garden Echo Result")
         tap(app.buttons["echo.done"], in: app)
         tap(app.buttons["arcade.home"], in: app)
 
         XCTAssertTrue(app.staticTexts["gooby.status"].waitForExistence(timeout: 8))
-        XCTAssertEqual(app.staticTexts["room.current"].label, "Kitchen")
+        waitForLabel("Kitchen", identifier: "room.current", in: app)
         attachScreenshot(named: "Gooby Demo — Returned Home")
     }
 
     @MainActor
     private func tap(_ element: XCUIElement, in app: XCUIApplication) {
-        var attempts = 0
-        while !element.exists, attempts < 8 {
+        XCTAssertTrue(element.waitForExistence(timeout: 5))
+        for _ in 0 ..< 6 {
+            if element.isHittable {
+                element.tap()
+                return
+            }
             app.swipeUp()
-            attempts += 1
         }
-        XCTAssertTrue(element.waitForExistence(timeout: 3))
-        attempts = 0
-        while !element.isHittable, attempts < 6 {
-            app.swipeUp()
-            attempts += 1
-        }
-        XCTAssertTrue(element.isHittable)
-        element.tap()
+        XCTFail("Element \(element) never became hittable")
     }
 
     @MainActor
@@ -152,6 +146,6 @@ private enum DemoSequence {
     static let carrotLanes = ["left", "center", "center"]
 
     static let echoRounds = [
-        ["berry", "star", "berry"],
+        ["leaf", "star", "leaf"],
     ]
 }
