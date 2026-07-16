@@ -584,13 +584,20 @@ final class GoobyAppTests: XCTestCase {
         )
         await store.start()
         clock.instant = clock.instant.adding(seconds: 60)
-        try await Task.sleep(for: .milliseconds(40))
+        let tickerPersistedAdvance = await repository.waitForSaveCount(2)
 
+        XCTAssertTrue(tickerPersistedAdvance)
         XCTAssertEqual(store.state?.needs.fullness.value, 798)
         await store.handleLifecycleTransition(.background)
         let backgroundNeeds = store.state?.needs
+        let backgroundSaveCount = await repository.saveCount
         clock.instant = clock.instant.adding(seconds: 60)
-        try await Task.sleep(for: .milliseconds(30))
+        let tickerPersistedInBackground = await repository.waitForSaveCount(
+            backgroundSaveCount + 1,
+            attempts: 20
+        )
+
+        XCTAssertFalse(tickerPersistedInBackground)
         XCTAssertEqual(store.state?.needs, backgroundNeeds)
     }
 
@@ -649,6 +656,14 @@ private actor InMemoryGameRepository: GameStateRepository {
 
     func setFailure(_ failure: RepositoryFailure?) {
         self.failure = failure
+    }
+
+    func waitForSaveCount(_ target: Int, attempts: Int = 200) async -> Bool {
+        for _ in 0 ..< attempts {
+            if saveCount >= target { return true }
+            try? await Task.sleep(for: .milliseconds(10))
+        }
+        return saveCount >= target
     }
 
     func load(now: GameInstant) async throws -> GameStateLoadResult {
