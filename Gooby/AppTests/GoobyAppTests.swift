@@ -394,14 +394,16 @@ final class GoobyAppTests: XCTestCase {
         XCTAssertTrue(started)
         let run = try XCTUnwrap(store.state?.activeMinigame)
         for _ in 0 ..< 3 {
-            XCTAssertTrue(
-                await store.dispatch(.advanceCarrotCatchCountdown(runID: run.id))
+            let advanced = await store.dispatch(
+                .advanceCarrotCatchCountdown(runID: run.id)
             )
+            XCTAssertTrue(advanced)
         }
         for lane in CarrotCatch.carrotLanes(seed: run.seed, count: CarrotCatch.maximumMoves) {
-            XCTAssertTrue(
-                await store.dispatch(.carrotCatchInput(runID: run.id, lane: lane))
+            let recorded = await store.dispatch(
+                .carrotCatchInput(runID: run.id, lane: lane)
             )
+            XCTAssertTrue(recorded)
         }
         let command = GameCommand.finishMinigame(runID: run.id)
 
