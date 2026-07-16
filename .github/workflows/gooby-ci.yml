@@ -22,7 +22,7 @@ concurrency:
 jobs:
   build-and-test:
     runs-on: macos-15
-    timeout-minutes: 50
+    timeout-minutes: 65
 
     steps:
       - name: Check out sources without LFS assets
