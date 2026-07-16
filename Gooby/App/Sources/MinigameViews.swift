@@ -961,7 +961,7 @@ private struct GardenEchoView: View {
 
     private var accessibleSequenceStatus: String {
         let names = game.sequence.map { padDescription($0) }.joined(separator: ", ")
-        switch game.phase {
+        return switch game.phase {
         case .sequence: "Sequence playing: \(names)"
         case .input: "Input \(game.input.count + 1) of \(game.sequence.count)"
         case .finished: "Run complete"
