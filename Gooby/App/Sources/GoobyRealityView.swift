@@ -1,3 +1,4 @@
+import Combine
 import Foundation
 import GoobyCore
 import RealityKit
@@ -18,10 +19,13 @@ final class GoobySceneCoordinator {
     private var idleStep = 0
 
     func prepare(room: RoomID, reduceMotion: Bool) {
-        guard gooby.parent == nil else { return }
+        self.reduceMotion = reduceMotion
+        guard gooby.parent == nil else {
+            startIdleLoop()
+            return
+        }
         stage.name = "gooby.stage"
         gooby = GoobyFactory.makeGooby()
-        self.reduceMotion = reduceMotion
         switchRoom(to: room)
         stage.addChild(gooby)
         startIdleLoop()
@@ -486,6 +490,7 @@ struct GoobyRealityView: View {
 
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @State private var coordinator = GoobySceneCoordinator()
+    @State private var isLowPowerModeEnabled = ProcessInfo.processInfo.isLowPowerModeEnabled
 
     var body: some View {
         Group {
@@ -504,6 +509,13 @@ struct GoobyRealityView: View {
         }
         .onDisappear {
             coordinator.stop()
+        }
+        .onReceive(
+            NotificationCenter.default.publisher(
+                for: .NSProcessInfoPowerStateDidChange
+            )
+        ) { _ in
+            isLowPowerModeEnabled = ProcessInfo.processInfo.isLowPowerModeEnabled
         }
         .accessibilityHidden(true)
     }
@@ -531,7 +543,7 @@ struct GoobyRealityView: View {
     private var shouldReduceMotion: Bool {
         reduceMotion
             || state.preferences.reduceMotionEnabled
-            || ProcessInfo.processInfo.arguments.contains("--reduce-motion")
+            || isLowPowerModeEnabled
     }
 }
 

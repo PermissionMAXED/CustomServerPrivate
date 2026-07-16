@@ -51,6 +51,28 @@ jobs:
         working-directory: Gooby
         run: xcodegen generate
 
+      - name: Validate generated project and resources
+        shell: bash
+        run: |
+          test -f Gooby/Gooby.xcodeproj/project.pbxproj
+          test -z "$(git ls-files 'Gooby/Gooby.xcodeproj/**')"
+          git check-ignore -q Gooby/Gooby.xcodeproj/project.pbxproj
+          plutil -lint \
+            Gooby/App/Generated/Info.plist \
+            Gooby/App/Resources/PrivacyInfo.xcprivacy
+          python3 -m json.tool \
+            Gooby/App/Resources/Localizable.xcstrings \
+            >/dev/null
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          for path in Path("Gooby/App/Resources/Assets.xcassets").rglob("Contents.json"):
+              with path.open(encoding="utf-8") as stream:
+                  json.load(stream)
+          PY
+          xcodebuild -project Gooby/Gooby.xcodeproj -list
+
       - name: Build app for generic iOS Simulator
         run: >-
           xcodebuild
@@ -59,6 +81,18 @@ jobs:
           -sdk iphonesimulator
           -destination 'generic/platform=iOS Simulator'
           CODE_SIGNING_ALLOWED=NO
+          build
+
+      - name: Build unsigned Release app for generic iOS device
+        run: >-
+          xcodebuild
+          -project Gooby/Gooby.xcodeproj
+          -scheme Gooby
+          -configuration Release
+          -sdk iphoneos
+          -destination 'generic/platform=iOS'
+          CODE_SIGNING_ALLOWED=NO
+          CODE_SIGNING_REQUIRED=NO
           build
 
       - name: Select deterministic available iPhone simulator
@@ -116,6 +150,44 @@ jobs:
             CODE_SIGNING_ALLOWED=NO \
             test
 
+      - name: Record dedicated demo journey
+        shell: bash
+        run: |
+          simulator_id='${{ steps.simulator.outputs.id }}'
+          video_path='Gooby/TestResults/gooby_full_demo.mp4'
+          demo_result='Gooby/TestResults/GoobyDemo.xcresult'
+
+          stop_recording() {
+            if kill -0 "$video_pid" 2>/dev/null; then
+              kill -INT "$video_pid"
+              wait "$video_pid" || true
+            fi
+          }
+
+          xcrun simctl io "$simulator_id" recordVideo \
+            --codec=h264 \
+            --force \
+            "$video_path" &
+          video_pid=$!
+          trap stop_recording EXIT
+
+          set +e
+          xcodebuild \
+            -project Gooby/Gooby.xcodeproj \
+            -scheme Gooby \
+            -destination "platform=iOS Simulator,id=$simulator_id" \
+            -resultBundlePath "$demo_result" \
+            -only-testing:GoobyUITests/GoobyDemoUITests/testRecordedDemoJourney \
+            CODE_SIGNING_ALLOWED=NO \
+            test-without-building
+          test_status=$?
+          set -e
+
+          stop_recording
+          trap - EXIT
+          test -s "$video_path"
+          exit "$test_status"
+
       - name: Upload Xcode test result
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
@@ -123,6 +195,26 @@ jobs:
           name: gooby-xcresult
           path: Gooby/TestResults/Gooby.xcresult
           if-no-files-found: warn
+          retention-days: 7
+
+      - name: Export demo screenshots
+        if: always()
+        continue-on-error: true
+        run: >-
+          xcrun xcresulttool export attachments
+          --path Gooby/TestResults/GoobyDemo.xcresult
+          --output-path Gooby/TestResults/DemoAttachments
+
+      - name: Upload recorded demo
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: gooby-recorded-demo
+          path: |
+            Gooby/TestResults/gooby_full_demo.mp4
+            Gooby/TestResults/GoobyDemo.xcresult
+            Gooby/TestResults/DemoAttachments
+          if-no-files-found: error
           retention-days: 7
 
       - name: Export UI test attachments

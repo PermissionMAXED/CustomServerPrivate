@@ -14,7 +14,7 @@ public struct SplitMix64: RandomNumberGenerator, Codable, Equatable, Sendable {
     }
 
     public mutating func next(upperBound: Int) -> Int {
-        precondition(upperBound > 0)
+        guard upperBound > 0 else { return 0 }
         return Int(next() % UInt64(upperBound))
     }
 }

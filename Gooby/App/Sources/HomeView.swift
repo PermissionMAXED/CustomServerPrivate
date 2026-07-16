@@ -212,46 +212,64 @@ private struct HomeView: View {
     }
 
     private var header: some View {
-        HStack(alignment: .center, spacing: 12) {
-            VStack(alignment: .leading, spacing: 3) {
-                Text("\(state.preferences.petName) is \(store.mood.lowercased())")
-                    .font(.system(.title2, design: .rounded, weight: .black))
-                    .foregroundStyle(GoobyPalette.ink)
-                Text("Bond level \(state.bondLevel) of \(BondProgress.maximumLevel)")
-                    .font(.system(.subheadline, design: .rounded, weight: .semibold))
-                    .foregroundStyle(.secondary)
-                    .accessibilityIdentifier("bond.level")
-                if let required = BondProgress.progress(for: state.bondPoints).required {
-                    ProgressView(
-                        value: Double(BondProgress.progress(for: state.bondPoints).current),
-                        total: Double(required)
-                    )
-                    .tint(GoobyPalette.coral)
-                    .accessibilityLabel("Bond progress")
-                    .accessibilityValue(
-                        "\(BondProgress.progress(for: state.bondPoints).current) of \(required) points"
-                    )
-                } else {
-                    Text("Best-bunny bond reached")
-                        .font(.caption.weight(.bold))
-                        .foregroundStyle(GoobyPalette.mint)
+        Group {
+            if dynamicTypeSize.isAccessibilitySize {
+                VStack(alignment: .leading, spacing: 10) {
+                    identitySummary
+                    carrotBalance
                 }
-                Text(statusSummary)
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-                    .accessibilityIdentifier("gooby.status")
+            } else {
+                HStack(alignment: .center, spacing: 12) {
+                    identitySummary
+                    Spacer()
+                    carrotBalance
+                }
             }
-            Spacer()
-            Label("\(state.carrots)", systemImage: "carrot.fill")
-                .font(.system(.headline, design: .rounded, weight: .bold))
-                .foregroundStyle(GoobyPalette.ink)
-                .padding(.horizontal, 12)
-                .frame(minHeight: 44)
-                .background(.thinMaterial, in: Capsule())
-                .accessibilityLabel("Carrots")
-                .accessibilityValue("\(state.carrots)")
         }
         .padding(.top, 4)
+    }
+
+    private var identitySummary: some View {
+        VStack(alignment: .leading, spacing: 3) {
+            Text("\(state.preferences.petName) is \(store.mood.lowercased())")
+                .font(.system(.title2, design: .rounded, weight: .black))
+                .foregroundStyle(GoobyPalette.ink)
+            Text("Bond level \(state.bondLevel) of \(BondProgress.maximumLevel)")
+                .font(.system(.subheadline, design: .rounded, weight: .semibold))
+                .foregroundStyle(.secondary)
+                .accessibilityIdentifier("bond.level")
+            if let required = BondProgress.progress(for: state.bondPoints).required {
+                ProgressView(
+                    value: Double(BondProgress.progress(for: state.bondPoints).current),
+                    total: Double(required)
+                )
+                .tint(GoobyPalette.coral)
+                .accessibilityLabel("Bond progress")
+                .accessibilityValue(
+                    "\(BondProgress.progress(for: state.bondPoints).current) of \(required) points"
+                )
+            } else {
+                Text("Best-bunny bond reached")
+                    .font(.caption.weight(.bold))
+                    .foregroundStyle(GoobyPalette.mint)
+            }
+            Text(statusSummary)
+                .font(.caption)
+                .foregroundStyle(.secondary)
+                .accessibilityIdentifier("gooby.status")
+        }
+    }
+
+    private var carrotBalance: some View {
+        Label("\(state.carrots)", systemImage: "carrot.fill")
+            .font(.system(.headline, design: .rounded, weight: .bold))
+            .foregroundStyle(GoobyPalette.ink)
+            .padding(.horizontal, 12)
+            .frame(minHeight: 44)
+            .background(.thinMaterial, in: Capsule())
+            .accessibilityLabel("Carrots")
+            .accessibilityValue("\(state.carrots)")
+            .accessibilityIdentifier("home.carrots")
     }
 
     private var hero: some View {
@@ -283,9 +301,11 @@ private struct HomeView: View {
             .background(.regularMaterial, in: Capsule())
             .padding(14)
         }
-        .frame(height: dynamicTypeSize.isAccessibilitySize ? 300 : 340)
+        .frame(height: dynamicTypeSize.isAccessibilitySize ? 360 : 340)
         .shadow(color: GoobyPalette.ink.opacity(0.10), radius: 18, y: 9)
         .accessibilityElement(children: .contain)
+        .accessibilityIdentifier("home.gooby-hero")
+        .accessibilityLabel("3D Gooby in the \(state.currentRoom.displayName)")
     }
 
     private var needs: some View {

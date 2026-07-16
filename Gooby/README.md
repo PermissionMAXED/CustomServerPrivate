@@ -26,7 +26,7 @@ collected.
 The pure libraries and their tests run on Linux through Swift Package Manager. XcodeGen
 and iOS app builds run on macOS in CI.
 
-## Commands
+## Testing and validation
 
 ```sh
 swift package --package-path Gooby dump-package
@@ -45,10 +45,21 @@ xcodebuild -project Gooby.xcodeproj -scheme Gooby \
   -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' \
   CODE_SIGNING_ALLOWED=NO build
 
+# Unsigned Release build for a generic iOS device
+xcodebuild -project Gooby.xcodeproj -scheme Gooby -configuration Release \
+  -sdk iphoneos -destination 'generic/platform=iOS' \
+  CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO build
+
 # Unit + UI tests on an available iPhone simulator
 xcodebuild -project Gooby.xcodeproj -scheme Gooby \
   -destination 'platform=iOS Simulator,id=<simulator-udid>' \
   -resultBundlePath TestResults/Gooby.xcresult \
+  CODE_SIGNING_ALLOWED=NO test
+
+# Dedicated deterministic release demo
+xcodebuild -project Gooby.xcodeproj -scheme Gooby \
+  -destination 'platform=iOS Simulator,id=<simulator-udid>' \
+  -only-testing:GoobyUITests/GoobyDemoUITests/testRecordedDemoJourney \
   CODE_SIGNING_ALLOWED=NO test
 ```
 
@@ -66,7 +77,7 @@ arguments are ignored by Release builds.
 
 ## Feature matrix
 
-| Area | Gate 4 behavior |
+| Area | Release behavior |
 | --- | --- |
 | Care | Four persistent needs, room-aware care, selectable owned foods, sleep, and offline fixed-step simulation |
 | Daily Gift | Ethical seven-day offline cycle, date rollback protection, atomic claims, and Day 7 Moon Crown |
@@ -79,6 +90,17 @@ arguments are ignored by Release builds.
 | Garden Echo | Seeded four-pad sequence through five capped rounds, distinct symbols/numbers/pitches/haptics, replay, three-mistake retry model, no input timer, results, and exactly-once rewards |
 | Arcade | Rules and best scores for both games, validated start/finish/cancel commands, persisted active runs, restart, Playroom link, and procedural feedback |
 | Privacy | Fully offline; no accounts, networking, analytics, ads, or in-app purchases |
+
+GitHub Actions regenerates the project, validates plists/JSON/resources, builds the generic
+simulator app, runs package/app/UI tests, builds an unsigned Release app for a generic iOS
+device, and records only `GoobyDemoUITests.testRecordedDemoJourney`. The
+`gooby-recorded-demo` artifact contains the focused MP4, demo result bundle, and milestone
+screenshots; the journey covers home, care, shop/equip, both completed minigames, and return
+home.
+
+Linux can validate and test only `GoobyCore` and `GoobyPersistence` through Swift Package
+Manager. RealityKit, the iOS app, app tests, UI tests, and demo recording require macOS with
+Xcode and an iOS Simulator.
 
 ## Controls
 

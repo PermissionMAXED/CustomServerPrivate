@@ -11,6 +11,15 @@ final class MinigameTests: XCTestCase {
         XCTAssertEqual(random.next(), 0x6E78_9E6A_A1B9_65F4)
     }
 
+    func testSplitMix64InvalidBoundDoesNotTrapOrAdvanceState() {
+        var random = SplitMix64(seed: 42)
+        let initial = random
+
+        XCTAssertEqual(random.next(upperBound: 0), 0)
+        XCTAssertEqual(random.next(upperBound: -1), 0)
+        XCTAssertEqual(random, initial)
+    }
+
     func testCarrotCatchIsDeterministicAndScoresValidatedMoves() throws {
         let lanes = CarrotCatch.carrotLanes(seed: 42, count: 20)
         let repeated = CarrotCatch.carrotLanes(seed: 42, count: 20)
@@ -308,6 +317,32 @@ final class MinigameTests: XCTestCase {
                 ),
                 to: &wrongIDState,
                 at: now.adding(seconds: GameEngine.minigameDurationSeconds + 1)
+            )
+        ) { error in
+            XCTAssertEqual(error as? GameRuleError, .minigameExpired)
+        }
+    }
+
+    func testExtremePersistedRunTimesExpireWithoutOverflowing() {
+        var state = GameState.new(now: now)
+        let run = ActiveMinigameRun(
+            id: MinigameRunID(rawValue: "extreme"),
+            kind: .carrotCatch,
+            seed: 1,
+            startedAt: GameInstant(secondsSinceEpoch: .min),
+            accumulatedActiveSeconds: .max - 1,
+            lastResumedAt: GameInstant(secondsSinceEpoch: .min)
+        )
+        state.activeMinigame = run
+
+        XCTAssertThrowsError(
+            try GameEngine.apply(
+                .finishMinigame(
+                    runID: run.id,
+                    submission: .carrotCatch(moves: [])
+                ),
+                to: &state,
+                at: GameInstant(secondsSinceEpoch: .max)
             )
         ) { error in
             XCTAssertEqual(error as? GameRuleError, .minigameExpired)

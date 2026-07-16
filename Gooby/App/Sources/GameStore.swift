@@ -189,9 +189,9 @@ final class GameStore {
         _ = await dispatch(.pauseMinigame(runID: run.id))
     }
 
-    func resumeActiveMinigame() async {
-        guard let run = state?.activeMinigame, run.isPaused else { return }
-        _ = await dispatch(.resumeMinigame(runID: run.id))
+    func resumeActiveMinigame() async -> Bool {
+        guard let run = state?.activeMinigame, run.isPaused else { return false }
+        return await dispatch(.resumeMinigame(runID: run.id))
     }
 
     func resetProgress() async -> Bool {

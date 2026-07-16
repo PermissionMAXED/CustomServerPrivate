@@ -388,8 +388,9 @@ final class GameEngineTests: XCTestCase {
     }
 
     func testBondLevelsSpanOneThroughTenAndRibbonUnlocksOnce() throws {
+        let maximumThreshold = try XCTUnwrap(BondProgress.thresholds.last)
         XCTAssertEqual(BondProgress.level(for: 0), 1)
-        XCTAssertEqual(BondProgress.level(for: BondProgress.thresholds.last!), 10)
+        XCTAssertEqual(BondProgress.level(for: maximumThreshold), 10)
 
         var state = GameState.new(now: now)
         state.currentRoom = .kitchen
@@ -492,5 +493,29 @@ final class GameEngineTests: XCTestCase {
             XCTAssertEqual($0 as? GameRuleError, .invalidPetName)
         }
         XCTAssertEqual(state, snapshot)
+    }
+
+    func testExtremePersistedCountersSaturateWithoutTrapping() throws {
+        var state = GameState.new(now: now)
+        state.currentRoom = .kitchen
+        state.careStatistics.meals = .max
+        state.bondPoints = .max
+        state.foodInventory[GoobyCatalog.berryBun] = .max
+        state.carrots = .max
+
+        _ = try GameEngine.apply(
+            .feedFood(itemID: GoobyCatalog.gardenCarrot),
+            to: &state,
+            at: now
+        )
+        _ = try GameEngine.apply(
+            .purchase(itemID: GoobyCatalog.berryBun),
+            to: &state,
+            at: now
+        )
+
+        XCTAssertEqual(state.careStatistics.meals, .max)
+        XCTAssertEqual(state.bondPoints, .max)
+        XCTAssertEqual(state.foodQuantity(GoobyCatalog.berryBun), .max)
     }
 }

@@ -64,7 +64,11 @@ public struct GameInstant: Codable, Hashable, Sendable, Comparable {
     }
 
     public func adding(seconds: Int64) -> GameInstant {
-        GameInstant(secondsSinceEpoch: secondsSinceEpoch + seconds)
+        let (value, overflowed) = secondsSinceEpoch.addingReportingOverflow(seconds)
+        guard overflowed else {
+            return GameInstant(secondsSinceEpoch: value)
+        }
+        return GameInstant(secondsSinceEpoch: seconds >= 0 ? .max : .min)
     }
 }
 
@@ -417,6 +421,7 @@ public enum DailyRewardSchedule {
         at now: GameInstant,
         cycleCount: Int = 7
     ) -> DailyRewardEligibility {
+        let boundedCycleCount = max(1, cycleCount)
         let day = now.secondsSinceEpoch / secondsPerDay
         guard let lastDay = reward.lastClaimedDay else {
             return .eligible(step: 1)
@@ -427,8 +432,8 @@ public enum DailyRewardSchedule {
         if day == lastDay {
             return .alreadyClaimed(step: max(1, reward.streakStep))
         }
-        if day == lastDay + 1 {
-            return .eligible(step: (reward.streakStep % cycleCount) + 1)
+        if lastDay < Int64.max, day == lastDay + 1 {
+            return .eligible(step: (reward.streakStep % boundedCycleCount) + 1)
         }
         return .eligible(step: 1)
     }

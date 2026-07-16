@@ -12,6 +12,48 @@ final class GoobyAppTests: XCTestCase {
     }
 
     @MainActor
+    func testDebugUITestLaunchSettingsRequireExplicitTestingMode() {
+        XCTAssertEqual(
+            GoobyLaunchSettings.parse(arguments: [
+                "Gooby",
+                "--reset-save",
+                "--skip-welcome",
+                "--fixed-time",
+                "1728000000",
+                "--short-minigames",
+            ]),
+            GoobyLaunchSettings(
+                isUITesting: false,
+                resetsSave: false,
+                skipsWelcome: false,
+                fixedTime: nil,
+                usesShortMinigameCountdown: false
+            )
+        )
+
+        #if DEBUG
+            XCTAssertEqual(
+                GoobyLaunchSettings.parse(arguments: [
+                    "Gooby",
+                    "--ui-testing",
+                    "--reset-save",
+                    "--skip-welcome",
+                    "--fixed-time",
+                    "1728000000",
+                    "--short-minigames",
+                ]),
+                GoobyLaunchSettings(
+                    isUITesting: true,
+                    resetsSave: true,
+                    skipsWelcome: true,
+                    fixedTime: GameInstant(secondsSinceEpoch: 1_728_000_000),
+                    usesShortMinigameCountdown: true
+                )
+            )
+        #endif
+    }
+
+    @MainActor
     func testLaunchPersistsAndRelaunchRestoresState() async {
         let repository = InMemoryGameRepository()
         let feedback = FeedbackSpy()
@@ -49,6 +91,22 @@ final class GoobyAppTests: XCTestCase {
         XCTAssertEqual(feedback.audioCues, [.pet])
         XCTAssertEqual(feedback.hapticCues, [.pet])
         XCTAssertEqual(persisted, store.state)
+    }
+
+    @MainActor
+    func testMoodTracksNeedsAndSleepingState() async {
+        let repository = InMemoryGameRepository()
+        let store = makeStore(repository: repository, feedback: FeedbackSpy())
+        await store.start()
+        XCTAssertEqual(store.mood, "Bouncy")
+
+        _ = await store.dispatch(.move(to: .playroom))
+        _ = await store.dispatch(.play)
+        XCTAssertEqual(store.mood, "Cozy")
+
+        _ = await store.dispatch(.move(to: .bedroom))
+        _ = await store.dispatch(.beginSleep)
+        XCTAssertEqual(store.mood, "Dreamy")
     }
 
     @MainActor
@@ -206,6 +264,28 @@ final class GoobyAppTests: XCTestCase {
     }
 
     @MainActor
+    func testResetProgressRestoresFreshStateAndFeedbackDefaults() async {
+        let repository = InMemoryGameRepository()
+        let feedback = FeedbackSpy()
+        let store = makeStore(repository: repository, feedback: feedback)
+        await store.start()
+        _ = await store.dispatch(.renamePet("Clover"))
+        _ = await store.dispatch(.setSoundEnabled(false))
+        _ = await store.dispatch(.setHapticsEnabled(false))
+        _ = await store.dispatch(.purchase(itemID: GoobyCatalog.sunshineBow))
+
+        let reset = await store.resetProgress()
+
+        XCTAssertTrue(reset)
+        XCTAssertEqual(
+            store.state,
+            GameState.new(now: GameInstant(secondsSinceEpoch: 1_728_000_000))
+        )
+        XCTAssertEqual(feedback.audioEnabled.last, true)
+        XCTAssertEqual(feedback.hapticsEnabled.last, true)
+    }
+
+    @MainActor
     func testAllPlannedCosmeticsBuildNamedPrimitiveEntities() throws {
         let coordinator = GoobySceneCoordinator()
         coordinator.prepare(room: .playroom, reduceMotion: true)
@@ -269,6 +349,30 @@ final class GoobyAppTests: XCTestCase {
         XCTAssertFalse(relaunched.state?.rewardedMinigameRuns.contains(run.id) == true)
         XCTAssertEqual(feedback.audioCues.filter { $0 == .play }.count, 1)
         XCTAssertFalse(feedback.audioCues.contains(.reward))
+    }
+
+    @MainActor
+    func testFailedMinigameResumeKeepsPersistedRunPaused() async throws {
+        let repository = InMemoryGameRepository()
+        let clock = TestClock()
+        let store = GameStore(
+            repository: repository,
+            clock: clock,
+            audio: FeedbackSpy(),
+            haptics: FeedbackSpy(),
+            skipsWelcome: true
+        )
+        await store.start()
+        let started = await store.dispatch(.startMinigame(kind: .carrotCatch))
+        XCTAssertTrue(started)
+        await store.pauseActiveMinigame()
+        let paused = try XCTUnwrap(store.state?.activeMinigame)
+        XCTAssertTrue(paused.isPaused)
+        await repository.setFailure(.save)
+
+        let resumed = await store.resumeActiveMinigame()
+        XCTAssertFalse(resumed)
+        XCTAssertEqual(store.state?.activeMinigame, paused)
     }
 
     @MainActor

@@ -108,6 +108,27 @@ final class JSONSaveStoreTests: XCTestCase, @unchecked Sendable {
         XCTAssertEqual(try Data(contentsOf: store.primaryURL), corruption)
     }
 
+    func testSaveRepairsCorruptPrimaryAndBackupBeforeWritingFreshState() async throws {
+        let directory = try makeTemporaryDirectory()
+        defer { try? FileManager.default.removeItem(at: directory) }
+        let store = JSONSaveStore(directoryURL: directory)
+        try Data("bad-primary".utf8).write(to: store.primaryURL, options: .atomic)
+        try Data("bad-backup".utf8).write(to: store.backupURL, options: .atomic)
+        var state = GameState.new(now: now)
+        state.carrots = 64
+
+        try await store.save(state, at: now)
+
+        let primary = try SaveMigrator().decodeAndMigrate(
+            Data(contentsOf: store.primaryURL)
+        )
+        let backup = try SaveMigrator().decodeAndMigrate(
+            Data(contentsOf: store.backupURL)
+        )
+        XCTAssertEqual(primary.state, state)
+        XCTAssertEqual(backup.state, state)
+    }
+
     func testFutureSchemaIsNeverDestroyedByLoadOrSave() async throws {
         let directory = try makeTemporaryDirectory()
         defer { try? FileManager.default.removeItem(at: directory) }

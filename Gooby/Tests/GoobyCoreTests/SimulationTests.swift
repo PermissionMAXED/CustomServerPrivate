@@ -86,6 +86,42 @@ final class SimulationTests: XCTestCase {
         XCTAssertEqual(state, snapshot)
     }
 
+    func testExtremeInstantsClampAndSimulateWithoutOverflowing() {
+        XCTAssertEqual(
+            GameInstant(secondsSinceEpoch: .max).adding(seconds: 1),
+            GameInstant(secondsSinceEpoch: .max)
+        )
+        XCTAssertEqual(
+            GameInstant(secondsSinceEpoch: .min).adding(seconds: -1),
+            GameInstant(secondsSinceEpoch: .min)
+        )
+
+        var state = GameState.new(now: GameInstant(secondsSinceEpoch: .min))
+        XCTAssertEqual(
+            GameSimulation.advance(
+                &state,
+                to: GameInstant(secondsSinceEpoch: .max)
+            ),
+            [.simulated(minutes: 480)]
+        )
+        XCTAssertEqual(state.lastSimulatedAt, GameInstant(secondsSinceEpoch: .max))
+    }
+
+    func testDailyRewardScheduleHandlesInvalidCycleCountWithoutTrapping() {
+        let reward = DailyRewardState(lastClaimedDay: 10, streakStep: 7)
+
+        XCTAssertEqual(
+            DailyRewardSchedule.eligibility(
+                for: reward,
+                at: GameInstant(
+                    secondsSinceEpoch: 11 * DailyRewardSchedule.secondsPerDay
+                ),
+                cycleCount: 0
+            ),
+            .eligible(step: 1)
+        )
+    }
+
     func testSleepRestoresEnergyUsingTheSameFixedTicks() {
         var state = GameState.new(now: start)
         state.currentRoom = .bedroom

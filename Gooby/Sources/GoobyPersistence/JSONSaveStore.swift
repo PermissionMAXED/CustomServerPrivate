@@ -49,7 +49,7 @@ public actor JSONSaveStore: GameStateRepository {
         if let primaryData = try? Data(contentsOf: primaryURL),
            (try? migrator.decodeAndMigrate(primaryData)) != nil {
             try primaryData.write(to: backupURL, options: .atomic)
-        } else if !fileManager.fileExists(atPath: backupURL.path) {
+        } else if !isValidSave(at: backupURL) {
             try newData.write(to: backupURL, options: .atomic)
         }
         try newData.write(to: primaryURL, options: .atomic)
@@ -94,6 +94,11 @@ public actor JSONSaveStore: GameStateRepository {
         guard version <= SaveEnvelope.currentSchemaVersion else {
             throw SaveMigrationError.unsupportedFutureSchema(version)
         }
+    }
+
+    private func isValidSave(at url: URL) -> Bool {
+        guard let data = try? Data(contentsOf: url) else { return false }
+        return (try? migrator.decodeAndMigrate(data)) != nil
     }
 
     private static func encode(_ envelope: SaveEnvelope) throws -> Data {

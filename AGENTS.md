@@ -202,3 +202,16 @@ relevant integration doc is `docs/MEDUSA_SERVER_INTEGRATION.md`.
   `JOIN_LOBBY_SUCCESS` after a deliberate ~6-second server delay (use ≥20s client timeouts). A lobby
   exists only while its WebSocket stays open. `node` + the `ws` module (in `/workspace/node_modules`)
   are available for WS scripting.
+
+## Gooby iOS project
+
+- `Gooby/project.yml` is the XcodeGen source of truth; `Gooby/Gooby.xcodeproj/` is generated and
+  ignored. Never hand-edit or commit the generated project.
+- The app is procedural and offline-only: native SwiftUI/non-AR RealityKit, procedural feedback and
+  art, local JSON persistence, no runtime package dependencies or network services.
+- Linux can run only the Swift package manifest/build/tests. App builds, RealityKit app tests, UI
+  tests, and the recorded demo require macOS with Xcode 16+, XcodeGen, and an iOS Simulator.
+- Linux checks: `swift build --package-path Gooby -Xswiftc -warnings-as-errors` and
+  `swift test --package-path Gooby --parallel -Xswiftc -warnings-as-errors`.
+- On macOS, run `xcodegen generate` in `Gooby/`, then use the generated `Gooby.xcodeproj` with the
+  `Gooby` scheme; exact simulator, unsigned Release, and demo commands are in `Gooby/README.md`.

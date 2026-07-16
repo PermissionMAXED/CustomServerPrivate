@@ -82,7 +82,7 @@ private final class FixedGameClock: GameClock {
     }
 }
 
-private struct GoobyLaunchSettings {
+struct GoobyLaunchSettings: Equatable {
     let isUITesting: Bool
     let resetsSave: Bool
     let skipsWelcome: Bool
@@ -90,16 +90,14 @@ private struct GoobyLaunchSettings {
     let usesShortMinigameCountdown: Bool
 
     static var current: GoobyLaunchSettings {
-        let arguments = ProcessInfo.processInfo.arguments
+        parse(arguments: ProcessInfo.processInfo.arguments)
+    }
+
+    static func parse(arguments: [String]) -> GoobyLaunchSettings {
+        #if DEBUG
         let isUITesting = arguments.contains("--ui-testing")
         guard isUITesting else {
-            return GoobyLaunchSettings(
-                isUITesting: false,
-                resetsSave: false,
-                skipsWelcome: false,
-                fixedTime: nil,
-                usesShortMinigameCountdown: false
-            )
+            return production
         }
 
         let fixedTime: GameInstant?
@@ -116,13 +114,19 @@ private struct GoobyLaunchSettings {
             resetsSave: arguments.contains("--reset-save"),
             skipsWelcome: arguments.contains("--skip-welcome"),
             fixedTime: fixedTime,
-            usesShortMinigameCountdown: {
-                #if DEBUG
-                arguments.contains("--short-minigames")
-                #else
-                false
-                #endif
-            }()
+            usesShortMinigameCountdown: arguments.contains("--short-minigames")
         )
+        #else
+        _ = arguments
+        return production
+        #endif
     }
+
+    private static let production = GoobyLaunchSettings(
+        isUITesting: false,
+        resetsSave: false,
+        skipsWelcome: false,
+        fixedTime: nil,
+        usesShortMinigameCountdown: false
+    )
 }

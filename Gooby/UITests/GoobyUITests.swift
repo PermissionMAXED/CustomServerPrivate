@@ -12,7 +12,6 @@ final class GoobyUITests: XCTestCase {
             "--ui-testing",
             "--reset-save",
             "--skip-welcome",
-            "--reduce-motion",
             "--fixed-time",
             "1728000000",
         ]
@@ -51,7 +50,6 @@ final class GoobyUITests: XCTestCase {
             "--ui-testing",
             "--reset-save",
             "--skip-welcome",
-            "--reduce-motion",
             "--fixed-time",
             "1728000000",
         ]
@@ -83,7 +81,6 @@ final class GoobyUITests: XCTestCase {
         app.launchArguments = [
             "--ui-testing",
             "--skip-welcome",
-            "--reduce-motion",
             "--fixed-time",
             "1728000000",
         ]
@@ -177,6 +174,24 @@ final class GoobyUITests: XCTestCase {
     }
 
     @MainActor
+    func testAccessibilityLayoutOnHomeAtLargestType() {
+        let app = launchFreshApp(
+            shortMinigames: false,
+            contentSizeCategory: "UICTContentSizeCategoryAccessibilityXXXL"
+        )
+        let window = app.windows.firstMatch
+        let status = app.staticTexts["gooby.status"]
+        let balance = app.descendants(matching: .any)["home.carrots"]
+
+        XCTAssertTrue(status.waitForExistence(timeout: 8))
+        XCTAssertTrue(balance.waitForExistence(timeout: 8))
+        XCTAssertTrue(window.frame.contains(status.frame))
+        XCTAssertTrue(window.frame.contains(balance.frame))
+        XCTAssertGreaterThanOrEqual(balance.frame.height, 44)
+        app.terminate()
+    }
+
+    @MainActor
     func testZAccessibilityAuditOnArcadeLanding() throws {
         let app = launchFreshApp(shortMinigames: false)
         tap(app.buttons["home.destination.arcade"], in: app)
@@ -235,7 +250,6 @@ final class GoobyUITests: XCTestCase {
             "--ui-testing",
             "--reset-save",
             "--skip-welcome",
-            "--reduce-motion",
             "--fixed-time",
             "1728000000",
         ]

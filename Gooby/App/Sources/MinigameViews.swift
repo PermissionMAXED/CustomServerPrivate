@@ -645,8 +645,9 @@ private struct CarrotCatchView: View {
             guard pausedByScene else { return }
             pausedByScene = false
             Task {
-                await store.resumeActiveMinigame()
-                game.resume()
+                if await store.resumeActiveMinigame() {
+                    game.resume()
+                }
             }
         default:
             break
@@ -1088,10 +1089,11 @@ private struct GardenEchoView: View {
             guard pausedByScene else { return }
             pausedByScene = false
             Task {
-                await store.resumeActiveMinigame()
-                game.resume()
-                if !showsInstructions {
-                    startPlayback()
+                if await store.resumeActiveMinigame() {
+                    game.resume()
+                    if !showsInstructions {
+                        startPlayback()
+                    }
                 }
             }
         default:

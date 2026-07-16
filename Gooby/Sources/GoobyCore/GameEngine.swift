@@ -3,7 +3,11 @@ public enum GameSimulation {
     public static let offlineCapSeconds: Int64 = 8 * 60 * 60
 
     public static func advance(_ state: inout GameState, to now: GameInstant) -> [GameEvent] {
-        let elapsed = now.secondsSinceEpoch - state.lastSimulatedAt.secondsSinceEpoch
+        guard now >= state.lastSimulatedAt else { return [] }
+        let (difference, overflowed) = now.secondsSinceEpoch.subtractingReportingOverflow(
+            state.lastSimulatedAt.secondsSinceEpoch
+        )
+        let elapsed = overflowed ? Int64.max : difference
         guard elapsed >= tickSeconds else {
             return []
         }
@@ -84,7 +88,7 @@ public enum GameEngine {
             try requireRoom(.washroom, state: candidate)
             candidate.isSleeping = false
             candidate.needs.cleanliness.adjust(by: 350)
-            candidate.careStatistics.baths += 1
+            candidate.careStatistics.baths = incremented(candidate.careStatistics.baths)
             events.append(.washed)
             addBond(5, state: &candidate, events: &events)
 
@@ -105,7 +109,9 @@ public enum GameEngine {
             candidate.isSleeping = false
             candidate.needs.energy.adjust(by: -80)
             candidate.needs.fun.adjust(by: 300)
-            candidate.careStatistics.playSessions += 1
+            candidate.careStatistics.playSessions = incremented(
+                candidate.careStatistics.playSessions
+            )
             events.append(.played)
             addBond(8, state: &candidate, events: &events)
 
@@ -206,7 +212,7 @@ public enum GameEngine {
         state.foodInventory[itemID] = quantity - 1
         state.isSleeping = false
         state.needs.fullness.adjust(by: fullness)
-        state.careStatistics.meals += 1
+        state.careStatistics.meals = incremented(state.careStatistics.meals)
         events.append(.inventoryChanged(itemID: itemID, quantity: quantity - 1))
         events.append(.foodConsumed(itemID: itemID, quantity: quantity - 1))
         events.append(.fed)
@@ -250,7 +256,8 @@ public enum GameEngine {
         events: inout [GameEvent]
     ) {
         let oldLevel = state.bondLevel
-        state.bondPoints = max(0, state.bondPoints + points)
+        let (total, overflowed) = state.bondPoints.addingReportingOverflow(points)
+        state.bondPoints = max(0, overflowed && points > 0 ? Int.max : total)
         let newLevel = state.bondLevel
         guard newLevel > oldLevel else { return }
 
@@ -331,7 +338,7 @@ public enum GameEngine {
         switch item.kind {
         case .food:
             try spendCarrots(item.price, state: &state, events: &events)
-            let quantity = state.foodQuantity(itemID) + 1
+            let quantity = incremented(state.foodQuantity(itemID))
             state.foodInventory[itemID] = quantity
             events.append(.inventoryChanged(itemID: itemID, quantity: quantity))
             events.append(.purchased(itemID))
@@ -427,9 +434,11 @@ public enum GameEngine {
 
         if paused {
             guard let resumedAt = run.lastResumedAt else { return }
-            let elapsed = now.secondsSinceEpoch - resumedAt.secondsSinceEpoch
-            guard elapsed >= 0 else { throw GameRuleError.clockRollback }
-            run.accumulatedActiveSeconds += elapsed
+            let elapsed = try elapsedSeconds(from: resumedAt, to: now)
+            run.accumulatedActiveSeconds = addingClamped(
+                run.accumulatedActiveSeconds,
+                elapsed
+            )
             run.lastResumedAt = nil
         } else {
             guard run.lastResumedAt == nil else { return }
@@ -474,11 +483,8 @@ public enum GameEngine {
 
         var activeSeconds = run.accumulatedActiveSeconds
         if let resumedAt = run.lastResumedAt {
-            let elapsed = now.secondsSinceEpoch - resumedAt.secondsSinceEpoch
-            guard elapsed >= 0 else {
-                throw GameRuleError.clockRollback
-            }
-            activeSeconds += elapsed
+            let elapsed = try elapsedSeconds(from: resumedAt, to: now)
+            activeSeconds = addingClamped(activeSeconds, elapsed)
         }
         guard activeSeconds <= minigameDurationSeconds else {
             throw GameRuleError.minigameExpired
@@ -530,5 +536,27 @@ public enum GameEngine {
                 .achievementUnlocked(definition.id, carrots: definition.carrotReward)
             )
         }
+    }
+
+    private static func incremented(_ value: Int) -> Int {
+        value == Int.max ? Int.max : max(0, value + 1)
+    }
+
+    private static func elapsedSeconds(
+        from start: GameInstant,
+        to end: GameInstant
+    ) throws -> Int64 {
+        guard end >= start else {
+            throw GameRuleError.clockRollback
+        }
+        let (elapsed, overflowed) = end.secondsSinceEpoch.subtractingReportingOverflow(
+            start.secondsSinceEpoch
+        )
+        return overflowed ? .max : elapsed
+    }
+
+    private static func addingClamped(_ lhs: Int64, _ rhs: Int64) -> Int64 {
+        let (total, overflowed) = lhs.addingReportingOverflow(rhs)
+        return overflowed ? .max : total
     }
 }
