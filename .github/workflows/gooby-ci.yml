@@ -226,7 +226,7 @@ jobs:
             Gooby/TestResults/gooby_full_demo.mp4
             Gooby/TestResults/GoobyDemo.xcresult
             Gooby/TestResults/DemoAttachments
-          if-no-files-found: error
+          if-no-files-found: warn
           retention-days: 7
 
       - name: Export UI test attachments

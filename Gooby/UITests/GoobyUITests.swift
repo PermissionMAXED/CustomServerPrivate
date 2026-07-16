@@ -16,6 +16,7 @@ final class GoobyUITests: XCTestCase {
             "1728000000",
         ]
         app.launch()
+        defer { app.terminate() }
 
         XCTAssertTrue(app.staticTexts["gooby.status"].waitForExistence(timeout: 12))
         XCTAssertEqual(app.staticTexts["room.current"].label, "Playroom")
@@ -40,7 +41,6 @@ final class GoobyUITests: XCTestCase {
         tap(app.buttons["care.primary"], in: app)
         waitForLabel("Sleeping softly", identifier: "gooby.activity", in: app)
         XCTAssertTrue(app.buttons["care.pet"].isEnabled == false)
-        app.terminate()
     }
 
     @MainActor
@@ -54,6 +54,7 @@ final class GoobyUITests: XCTestCase {
             "1728000000",
         ]
         app.launch()
+        defer { app.terminate() }
         XCTAssertTrue(app.staticTexts["gooby.status"].waitForExistence(timeout: 12))
 
         tap(app.buttons["home.destination.daily-gift"], in: app)
@@ -96,12 +97,12 @@ final class GoobyUITests: XCTestCase {
         }
         XCTAssertTrue(app.staticTexts["room.current"].waitForExistence(timeout: 8))
         attachHomeScreenshot(named: "Gooby Gate 4 — Home with Equipped Bow")
-        app.terminate()
     }
 
     @MainActor
     func testCarrotCatchCompletesDeterministicShortRunAndShowsReward() {
         let app = launchFreshApp(shortMinigames: true)
+        defer { app.terminate() }
 
         tap(app.buttons["home.destination.arcade"], in: app)
         tap(app.buttons["arcade.play.carrotCatch"], in: app)
@@ -113,17 +114,16 @@ final class GoobyUITests: XCTestCase {
             app.buttons["carrot.lane.\(lane)"].tap()
         }
 
-        XCTAssertTrue(app.staticTexts["carrot.result.score"].waitForExistence(timeout: 10))
-        XCTAssertEqual(app.staticTexts["carrot.result.score"].label, "200 points")
-        XCTAssertTrue(app.staticTexts["carrot.result.reward"].label.contains("+20 carrots"))
-        XCTAssertEqual(app.staticTexts["carrot.result.best"].label, "Best score: 200")
+        waitForLabel("200 points", identifier: "carrot.result.score", in: app, timeout: 10)
+        waitForLabelContaining("+20 carrots", identifier: "carrot.result.reward", in: app)
+        waitForLabel("Best score: 200", identifier: "carrot.result.best", in: app)
         attachHomeScreenshot(named: "Gooby Gate 4 — Carrot Catch Result")
-        app.terminate()
     }
 
     @MainActor
     func testGardenEchoCompletesDeterministicShortRunAndShowsReward() {
         let app = launchFreshApp(shortMinigames: true)
+        defer { app.terminate() }
         let pet = app.buttons["care.pet"]
         tap(pet, in: app)
         for _ in 1 ..< 9 {
@@ -138,18 +138,21 @@ final class GoobyUITests: XCTestCase {
         tap(app.buttons["echo.start"], in: app)
 
         for (roundIndex, sequence) in GardenEchoUITest.rounds.enumerated() {
-            waitForEchoInput(round: roundIndex + 1, in: app)
-            for pad in sequence {
+            for (inputIndex, pad) in sequence.enumerated() {
+                waitForEchoInput(
+                    round: roundIndex + 1,
+                    input: inputIndex + 1,
+                    count: sequence.count,
+                    in: app
+                )
                 app.buttons["echo.pad.\(pad)"].tap()
             }
         }
 
-        XCTAssertTrue(app.staticTexts["echo.result.score"].waitForExistence(timeout: 10))
-        XCTAssertEqual(app.staticTexts["echo.result.score"].label, "125 points")
-        XCTAssertTrue(app.staticTexts["echo.result.reward"].label.contains("+12 carrots"))
-        XCTAssertEqual(app.staticTexts["echo.result.best"].label, "Best score: 125")
+        waitForLabel("125 points", identifier: "echo.result.score", in: app, timeout: 10)
+        waitForLabelContaining("+12 carrots", identifier: "echo.result.reward", in: app)
+        waitForLabel("Best score: 125", identifier: "echo.result.best", in: app)
         attachHomeScreenshot(named: "Gooby Gate 4 — Garden Echo Result")
-        app.terminate()
     }
 
     @MainActor
@@ -158,6 +161,7 @@ final class GoobyUITests: XCTestCase {
             shortMinigames: false,
             contentSizeCategory: "UICTContentSizeCategoryAccessibilityXXXL"
         )
+        defer { app.terminate() }
         tap(app.buttons["home.destination.arcade"], in: app)
 
         XCTAssertTrue(app.buttons["arcade.play.carrotCatch"].waitForExistence(timeout: 8))
@@ -168,7 +172,6 @@ final class GoobyUITests: XCTestCase {
         ]
         XCTAssertTrue(wrappedSubtitle.waitForExistence(timeout: 8))
         XCTAssertGreaterThan(wrappedSubtitle.frame.height, 50)
-        app.terminate()
     }
 
     @MainActor
@@ -177,6 +180,7 @@ final class GoobyUITests: XCTestCase {
             shortMinigames: false,
             contentSizeCategory: "UICTContentSizeCategoryAccessibilityXXXL"
         )
+        defer { app.terminate() }
         let window = app.windows.firstMatch
         let status = app.staticTexts["gooby.status"]
         let balanceMatches = app.descendants(matching: .any)
@@ -189,12 +193,12 @@ final class GoobyUITests: XCTestCase {
         XCTAssertTrue(window.frame.contains(status.frame))
         XCTAssertTrue(window.frame.contains(balance.frame))
         XCTAssertGreaterThanOrEqual(balance.frame.height, 44)
-        app.terminate()
     }
 
     @MainActor
     func testZAccessibilityAuditOnArcadeLanding() throws {
         let app = launchFreshApp(shortMinigames: false)
+        defer { app.terminate() }
         tap(app.buttons["home.destination.arcade"], in: app)
         XCTAssertTrue(app.buttons["arcade.play.carrotCatch"].waitForExistence(timeout: 8))
 
@@ -203,7 +207,6 @@ final class GoobyUITests: XCTestCase {
                 for: [.hitRegion, .sufficientElementDescription, .textClipped]
             )
         }
-        app.terminate()
     }
 
     @MainActor
@@ -242,6 +245,24 @@ final class GoobyUITests: XCTestCase {
     }
 
     @MainActor
+    private func waitForLabelContaining(
+        _ fragment: String,
+        identifier: String,
+        in app: XCUIApplication,
+        timeout: TimeInterval = 8
+    ) {
+        let predicate = NSPredicate(format: "label CONTAINS %@", fragment)
+        let element = app.staticTexts
+            .matching(identifier: identifier)
+            .matching(predicate)
+            .firstMatch
+        XCTAssertTrue(
+            element.waitForExistence(timeout: timeout),
+            "Expected \(identifier) to contain \(fragment)"
+        )
+    }
+
+    @MainActor
     private func launchFreshApp(
         shortMinigames: Bool,
         contentSizeCategory: String? = nil
@@ -269,15 +290,20 @@ final class GoobyUITests: XCTestCase {
     }
 
     @MainActor
-    private func waitForEchoInput(round: Int, in app: XCUIApplication) {
+    private func waitForEchoInput(
+        round: Int,
+        input: Int,
+        count: Int,
+        in app: XCUIApplication
+    ) {
         let predicate = NSPredicate(
             format: "identifier == %@ AND label CONTAINS %@",
             "echo.status",
-            "Your turn"
+            "input \(input) of \(count)"
         )
         XCTAssertTrue(
             app.staticTexts.matching(predicate).firstMatch.waitForExistence(timeout: 10),
-            "Garden Echo round \(round) never entered input"
+            "Garden Echo round \(round) never entered input \(input) of \(count)"
         )
     }
 

@@ -70,8 +70,12 @@ final class GoobyDemoUITests: XCTestCase {
         tap(app.buttons["arcade.play.gardenEcho"], in: app)
         tap(app.buttons["echo.start"], in: app)
         for sequence in DemoSequence.echoRounds {
-            waitForEchoInput(in: app)
-            for pad in sequence {
+            for (inputIndex, pad) in sequence.enumerated() {
+                waitForEchoInput(
+                    input: inputIndex + 1,
+                    count: sequence.count,
+                    in: app
+                )
                 pressEchoPad(pad, in: app)
             }
         }
@@ -112,11 +116,15 @@ final class GoobyDemoUITests: XCTestCase {
     }
 
     @MainActor
-    private func waitForEchoInput(in app: XCUIApplication) {
+    private func waitForEchoInput(
+        input: Int,
+        count: Int,
+        in app: XCUIApplication
+    ) {
         let predicate = NSPredicate(
             format: "identifier == %@ AND label CONTAINS %@",
             "echo.status",
-            "Your turn"
+            "input \(input) of \(count)"
         )
         XCTAssertTrue(
             app.staticTexts.matching(predicate).firstMatch.waitForExistence(timeout: 10)
