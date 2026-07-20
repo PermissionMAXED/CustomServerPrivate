@@ -21,8 +21,10 @@ build, Unity compilation, or physical-device test.
 | `PLG003` | warning | plugin `.meta` disables iPhone/iOS | Correct importer settings only after confirming plugin compatibility. |
 | `SRC001` | warning | non-UTF-8 C# source | Normalize encoding or inspect the skipped file manually. |
 
-Any finding makes `scan` exit `2`. Errors and a missing enabled scene make a
-plan blocking, so `build-xcode` and `all` stop before staging. Warnings remain
+Any finding makes `scan` exit `2`. Error findings and scene errors (no
+enabled scenes, a missing scene file, or a non-canonical scene path such as
+an absolute path, backslashes, or `..` segments) make a plan blocking, so
+`build-xcode` and `all` stop with exit `2` before staging. Warnings remain
 visible in `build-plan.json`; they do not alone block staging.
 
 ## False positives and negatives

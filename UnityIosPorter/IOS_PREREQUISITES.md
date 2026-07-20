@@ -29,9 +29,13 @@ Unknown Unity or iOS-module status is not build readiness.
 
 ## Technical pipeline
 
-The Unity Editor bridge applies these settings to the staged project:
+The porter CLI launches Unity in batch mode with `-buildTarget iOS`, which is
+what actually selects the build target for the run. The injected Editor bridge
+does not switch targets in batch mode — `SwitchActiveBuildTarget` is unreliable
+there because the required domain reload never happens — it instead asserts
+that the active target is already iOS and fails clearly if it is not. The
+bridge then applies these settings to the staged project:
 
-- Build target: iOS
 - Scripting backend: IL2CPP
 - Architecture: ARM64
 - Device SDK

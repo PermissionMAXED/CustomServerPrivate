@@ -31,7 +31,11 @@ class ProjectTests(unittest.TestCase):
             project.manifest_dependencies,
             ("com.unity.modules.ui", "com.unity.textmeshpro"),
         )
-        self.assertEqual(project.to_dict()["owned_source_policy"], "passed")
+        payload = project.to_dict()
+        self.assertIs(payload["suspicious_markers_absent"], True)
+        # The old key overclaimed a "passed ownership policy"; only the
+        # advisory marker check is reported now.
+        self.assertNotIn("owned_source_policy", payload)
 
     def test_required_project_paths_are_enforced(self) -> None:
         cases = (

@@ -16,11 +16,19 @@ from .operations import (
     export_command,
     initialize_ci,
     locate_unity,
+    locate_xcodebuild,
     run_external,
     stage_project,
     unity_build_command,
+    unity_timeout,
+    validate_unity_result,
+    verify_archive_output,
+    verify_export_output,
+    verify_workspace_manifest,
     workspace_paths,
     write_export_options,
+    write_workspace_manifest,
+    xcodebuild_timeout,
 )
 from .planner import PorterConfig, generate_plan, load_config
 from .project import (
@@ -253,7 +261,12 @@ def _build_xcode(
         paths["result"],
         paths["log"],
     )
-    result = run_external(command, dry_run=args.dry_run)
+    result = run_external(
+        command,
+        dry_run=args.dry_run,
+        timeout=unity_timeout(),
+        log_path=None if args.dry_run else paths["unity_stdout_log"],
+    )
     if result.returncode != 0:
         if not paths["result"].exists():
             _write_failure_result(
@@ -268,22 +281,25 @@ def _build_xcode(
             "phase": "build-xcode",
             "command": command,
             "exitCode": result.returncode,
+            "unityLog": str(paths["log"]),
             "paths": staged,
         }
-    if not args.dry_run and not paths["result"].is_file():
-        _write_failure_result(
-            paths["result"],
-            "build-xcode",
-            command,
-            1,
-            "Unity exited without writing the required result.json contract",
-        )
-        return EXIT_BUILD, {
-            "ok": False,
-            "phase": "build-xcode",
-            "message": "Unity did not write result.json",
-            "command": command,
-        }
+    if not args.dry_run:
+        # A zero Unity exit code is not proof of success: validate the
+        # result.json contract and that a real Xcode project was exported.
+        contract_errors = validate_unity_result(paths["result"], paths["xcode"])
+        if contract_errors:
+            return EXIT_BUILD, {
+                "ok": False,
+                "phase": "build-xcode",
+                "message": "Unity result contract validation failed",
+                "errors": contract_errors,
+                "command": command,
+                "unityLog": str(paths["log"]),
+                "paths": staged,
+            }
+        manifest = write_workspace_manifest(paths, project.root)
+        staged["manifest"] = str(manifest)
     return EXIT_OK, {
         "ok": True,
         "phase": "build-xcode",
@@ -294,47 +310,98 @@ def _build_xcode(
 
 
 def _archive(
-    args: argparse.Namespace, config: PorterConfig
+    args: argparse.Namespace, project: Any, config: PorterConfig
 ) -> tuple[int, dict[str, object]]:
     paths = workspace_paths(args.work_dir)
-    command = archive_command(paths["xcode"], paths["archive"], config)
-    result = run_external(command, dry_run=args.dry_run)
-    return (
-        EXIT_OK if result.returncode == 0 else EXIT_ARCHIVE,
-        {
-            "ok": result.returncode == 0,
-            "phase": "archive",
-            "dryRun": args.dry_run,
-            "command": command,
-            "exitCode": result.returncode,
-            "archive": str(paths["archive"]),
-        },
+    if not args.dry_run:
+        input_errors = verify_workspace_manifest(paths, project.root)
+        pbxproj = paths["xcode"] / "Unity-iPhone.xcodeproj/project.pbxproj"
+        if not input_errors and not pbxproj.is_file():
+            input_errors.append(
+                f"archive requires Unity's export at {pbxproj.parent}; "
+                "found no project.pbxproj"
+            )
+        if input_errors:
+            return EXIT_ARCHIVE, {
+                "ok": False,
+                "phase": "archive",
+                "message": "workspace verification failed; refusing to archive",
+                "errors": input_errors,
+            }
+    xcodebuild = locate_xcodebuild() or "xcodebuild"
+    command = archive_command(
+        paths["xcode"], paths["archive"], config, xcodebuild=xcodebuild
     )
+    result = run_external(
+        command,
+        dry_run=args.dry_run,
+        timeout=xcodebuild_timeout(),
+        log_path=None if args.dry_run else paths["archive_log"],
+    )
+    output_errors: list[str] = []
+    if not args.dry_run and result.returncode == 0:
+        # xcodebuild exit 0 alone is not proof the archive exists and is sane.
+        output_errors = verify_archive_output(paths["archive"])
+    ok = result.returncode == 0 and not output_errors
+    payload: dict[str, object] = {
+        "ok": ok,
+        "phase": "archive",
+        "dryRun": args.dry_run,
+        "command": command,
+        "exitCode": result.returncode,
+        "archive": str(paths["archive"]),
+        "log": str(paths["archive_log"]),
+    }
+    if output_errors:
+        payload["errors"] = output_errors
+    return (EXIT_OK if ok else EXIT_ARCHIVE), payload
 
 
 def _export(
-    args: argparse.Namespace, config: PorterConfig
+    args: argparse.Namespace, project: Any, config: PorterConfig
 ) -> tuple[int, dict[str, object]]:
     paths = workspace_paths(args.work_dir)
+    if not args.dry_run:
+        manifest_errors = verify_workspace_manifest(paths, project.root)
+        input_errors = verify_archive_output(paths["archive"])
+        if manifest_errors or input_errors:
+            return EXIT_EXPORT, {
+                "ok": False,
+                "phase": "export",
+                "message": "workspace verification failed; refusing to export",
+                "errors": [*manifest_errors, *input_errors],
+            }
     write_export_options(
         paths["export_options"], config, dry_run=args.dry_run
     )
+    xcodebuild = locate_xcodebuild() or "xcodebuild"
     command = export_command(
-        paths["archive"], paths["export"], paths["export_options"]
+        paths["archive"], paths["export"], paths["export_options"],
+        xcodebuild=xcodebuild,
     )
-    result = run_external(command, dry_run=args.dry_run)
-    return (
-        EXIT_OK if result.returncode == 0 else EXIT_EXPORT,
-        {
-            "ok": result.returncode == 0,
-            "phase": "export",
-            "dryRun": args.dry_run,
-            "command": command,
-            "exitCode": result.returncode,
-            "exportPath": str(paths["export"]),
-            "exportOptions": str(paths["export_options"]),
-        },
+    result = run_external(
+        command,
+        dry_run=args.dry_run,
+        timeout=xcodebuild_timeout(),
+        log_path=None if args.dry_run else paths["export_log"],
     )
+    output_errors: list[str] = []
+    if not args.dry_run and result.returncode == 0:
+        output_errors = verify_export_output(paths["export"])
+    ok = result.returncode == 0 and not output_errors
+    payload: dict[str, object] = {
+        "ok": ok,
+        "phase": "export",
+        "dryRun": args.dry_run,
+        "command": command,
+        "exitCode": result.returncode,
+        "exportPath": str(paths["export"]),
+        "exportOptions": str(paths["export_options"]),
+        "log": str(paths["export_log"]),
+    }
+    if output_errors:
+        payload["errors"] = output_errors
+    return (EXIT_OK if ok else EXIT_EXPORT), payload
 
 
 def execute(args: argparse.Namespace) -> int:
@@ -406,11 +473,11 @@ def execute(args: argparse.Namespace) -> int:
     project = inspect_project(args.project)
     config = _config_for(args, project)
     if args.command == "archive":
-        code, payload = _archive(args, config)
+        code, payload = _archive(args, project, config)
         _print(payload)
         return code
     if args.command == "export":
-        code, payload = _export(args, config)
+        code, payload = _export(args, project, config)
         _print(payload)
         return code
     if args.command == "all":
@@ -418,10 +485,10 @@ def execute(args: argparse.Namespace) -> int:
         code, build_payload = _build_xcode(args, project, config, plan)
         phases: list[dict[str, object]] = [build_payload]
         if code == EXIT_OK:
-            code, payload = _archive(args, config)
+            code, payload = _archive(args, project, config)
             phases.append(payload)
         if code == EXIT_OK:
-            code, payload = _export(args, config)
+            code, payload = _export(args, project, config)
             phases.append(payload)
         _print({"schemaVersion": 1, "ok": code == EXIT_OK, "phases": phases})
         return code

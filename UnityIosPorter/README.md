@@ -1,15 +1,18 @@
 # UnityIosPorter v1
 
 UnityIosPorter is a dependency-free Python CLI for owners of complete Unity
-project source. It audits Mono assumptions, creates an isolated staging copy,
-switches the staged project to the technically required iOS toolchain
-(IL2CPP + ARM64), invokes Unity to export Xcode, then can archive and export
-with `xcodebuild`.
+project source. It audits Mono assumptions, creates a separate staging copy
+(a plain directory, not a sandbox), configures the staged project for the
+technically required iOS toolchain (IL2CPP + ARM64), launches Unity in batch
+mode with `-buildTarget iOS` to export Xcode, then can archive and export with
+`xcodebuild`.
 
 It is not a decompiler, binary converter, or game extraction tool. It refuses
-reconstructed projects and shipped artifacts such as extraction-tool folders,
-`GameAssembly`, `global-metadata.dat`, `DummyDll`, `dump.cs`, `.app`, and `.ipa`
-inputs. See [POLICY.md](POLICY.md).
+inputs whose file or directory names match a denylist of reconstruction and
+shipped-artifact markers such as extraction-tool folders, `GameAssembly`,
+`global-metadata.dat`, `DummyDll`, `dump.cs`, `.app`, and `.ipa`. That
+filename denylist is advisory: it catches common cases and cannot prove
+ownership or authorization. See [POLICY.md](POLICY.md).
 
 UnityIosPorter is not affiliated with or endorsed by Unity Technologies or
 Apple Inc.
@@ -79,11 +82,22 @@ The work directory contains:
 - `staged-project/`: disposable Unity source copy with the injected bridge.
 - `build-plan.json`: schema version 1 settings, scenes, paths, and scan report.
 - `result.json`: schema version 1 Unity build result, including success,
-  errors, warnings, output, size, duration, and Unity version.
+  errors, warnings, output, size, duration, and Unity version. `build-xcode`
+  validates this contract strictly (schema version, phase, `success`, and an
+  output path that contains a real `*.xcodeproj`/`*.xcworkspace`); a Unity
+  process that exits 0 without a valid contract still fails with exit `4`.
+- `workspace-manifest.json`: written by `build-xcode` after validation. It
+  binds the workspace to the source project path, the plan digest, the staged
+  source digest, and the Xcode output directory. `archive` and `export`
+  refuse to operate on a workspace without a matching manifest.
 - `xcode/`: Unity's Xcode export.
-- `archives/UnityIosPorter.xcarchive`: Xcode archive.
+- `archives/UnityIosPorter.xcarchive`: Xcode archive. `archive` verifies the
+  archive contains `Info.plist` and a `Products/Applications/*.app`.
 - `ExportOptions.plist` and `export/`: export configuration and result.
+  `export` verifies an `.ipa` was produced.
 - `unity.log`: Unity batch-mode log.
+- `logs/`: captured stdout/stderr of Unity and `xcodebuild` subprocesses, so
+  command output never mixes into the CLI's JSON stdout.
 
 Treat these as build artifacts, not source. Use a fresh work directory for
 every run.

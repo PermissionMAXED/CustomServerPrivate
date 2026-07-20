@@ -126,6 +126,11 @@ class OperationsTests(unittest.TestCase):
     def test_locate_unity_uses_explicit_executable(self) -> None:
         executable = self.base / "Unity"
         executable.write_text("#!/bin/sh\n", encoding="utf-8")
+        self.assertIsNone(
+            locate_unity(str(executable), self.project.unity_version),
+            "a non-executable file must not be accepted as the Unity Editor",
+        )
+        executable.chmod(0o755)
         self.assertEqual(
             locate_unity(str(executable), self.project.unity_version), executable
         )

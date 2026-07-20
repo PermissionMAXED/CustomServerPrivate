@@ -79,7 +79,7 @@ class ProjectInfo:
         value = asdict(self)
         value["manifest_dependencies"] = list(self.manifest_dependencies)
         value["required_paths"] = list(self.required_paths)
-        value["owned_source_policy"] = "passed"
+        value["suspicious_markers_absent"] = True
         return value
 
 

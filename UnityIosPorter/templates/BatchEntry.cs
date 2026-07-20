@@ -77,8 +77,7 @@ namespace UnityIosPorter.Generated
                     scene => !File.Exists(Path.Combine(projectRoot, scene))))
                     throw new FileNotFoundException("A configured build scene is missing");
 
-                EditorUserBuildSettings.SwitchActiveBuildTarget(
-                    BuildTargetGroup.iOS, BuildTarget.iOS);
+                EnsureIosBuildTarget();
                 PlayerSettings.SetScriptingBackend(
                     BuildTargetGroup.iOS, ScriptingImplementation.IL2CPP);
 #pragma warning disable 618
@@ -133,6 +132,37 @@ namespace UnityIosPorter.Generated
                         resultPath, JsonUtility.ToJson(outcome, true) + Environment.NewLine);
                 }
             }
+        }
+
+        private static void EnsureIosBuildTarget()
+        {
+            if (EditorUserBuildSettings.activeBuildTarget == BuildTarget.iOS)
+                return;
+
+            if (Application.isBatchMode)
+            {
+                // SwitchActiveBuildTarget is not reliable in -batchmode -quit runs:
+                // the required domain reload never happens, so scripts keep compiling
+                // for the previous target. The CLI must pass -buildTarget iOS so the
+                // Editor starts on iOS; anything else is a hard contract violation.
+                throw new InvalidOperationException(
+                    "Active build target is "
+                    + EditorUserBuildSettings.activeBuildTarget
+                    + " but iOS is required. Launch Unity with '-buildTarget iOS' "
+                    + "(the porter CLI always passes it); do not rely on "
+                    + "SwitchActiveBuildTarget in batch mode.");
+            }
+
+            // Interactive Editor fallback only: request the switch, then verify it
+            // actually took effect instead of trusting the call.
+            bool switched = EditorUserBuildSettings.SwitchActiveBuildTarget(
+                BuildTargetGroup.iOS, BuildTarget.iOS);
+            if (!switched
+                || EditorUserBuildSettings.activeBuildTarget != BuildTarget.iOS)
+                throw new InvalidOperationException(
+                    "Could not switch the active build target to iOS (current: "
+                    + EditorUserBuildSettings.activeBuildTarget
+                    + "). Install iOS Build Support and switch the target manually.");
         }
 
         private static string Argument(string name)

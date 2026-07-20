@@ -19,14 +19,23 @@ clear user statement, not a license check.
 
 ## Refused input
 
-The tool fails closed when the input path or tree indicates a reconstructed,
-decompiled, dumped, extracted, or shipped application. Refused markers include:
+The tool refuses input when a file or directory name matches a denylist of
+markers that indicate a reconstructed, decompiled, dumped, extracted, or
+shipped application. Refused markers include:
 
 - Asset extraction, IL2CPP dump, dummy assembly, and decompilation directories.
 - `GameAssembly`, `global-metadata.dat`, `DummyDll`, and `dump.cs`-style output.
 - `.ipa` files and `.app` bundles.
 - Symbolic links, because a staged Unity process could write through them
-  outside the isolated copy.
+  outside the staging copy.
+
+This filename denylist is advisory. It is a best-effort screen for common
+markers, not proof of anything: passing it does not establish ownership,
+authorization, or provenance, and renamed artifacts can evade it. Ownership
+is asserted separately and explicitly by the user through
+`--attest-owned-source`; the tool cannot verify that assertion. The `detect`
+output field `suspicious_markers_absent` reports only that no denylist
+marker was found.
 
 Renaming an artifact does not make its use authorized. UnityIosPorter does not
 recover source from binaries, bypass platform protection, reconstruct third

@@ -40,7 +40,14 @@ requirements are project-specific.
 - `--dry-run`: show paths and argument-vector commands without writes or
   external process execution.
 
-Arguments are passed directly to subprocesses without a shell.
+Arguments are passed directly to subprocesses without a shell. Unity and
+`xcodebuild` runs have wall-clock timeouts (defaults: 7200 s and 3600 s) and
+return exit code `124` when exceeded; override them with the
+`UNITY_IOS_PORTER_UNITY_TIMEOUT` and `UNITY_IOS_PORTER_XCODEBUILD_TIMEOUT`
+environment variables (positive integer seconds). Subprocess stdout/stderr is
+captured to files under the work directory's `logs/` so the CLI's JSON stdout
+stays parseable. Subprocesses inherit the calling environment; the tool does
+not isolate or filter secrets from them.
 
 ## Export options
 
@@ -53,5 +60,9 @@ the generated plist before production distribution.
 ## Scene source
 
 Enabled scenes come from
-`ProjectSettings/EditorBuildSettings.asset`. A missing file, no enabled scenes,
-or an enabled scene absent from `Assets/` makes the build plan blocking.
+`ProjectSettings/EditorBuildSettings.asset`. Scene entries must be canonical
+relative paths under `Assets/` using forward slashes; absolute paths,
+backslashes, and `..`/`.` segments are rejected. A missing settings file, no
+valid enabled scenes, or an enabled scene absent from `Assets/` makes the
+build plan blocking: `plan` reports it under `riskSummary.sceneErrors` and
+`build-xcode`/`all` stop with exit `2` before staging.

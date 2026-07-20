@@ -5,7 +5,7 @@ from __future__ import annotations
 import json
 import re
 from dataclasses import dataclass
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 from typing import Any
 
 from .project import ProjectError, ProjectInfo
@@ -138,16 +138,40 @@ def load_config(
     )
 
 
+def _validate_scene_path(root: Path, scene: str) -> str | None:
+    if "\\" in scene:
+        return f"enabled scene path must use forward slashes: {scene}"
+    # Split the raw string: PurePosixPath silently normalizes away "."
+    # segments, which would defeat the canonical-path requirement.
+    segments = scene.split("/")
+    if (
+        PurePosixPath(scene).is_absolute()
+        or not SCENE_PATH_RE.fullmatch(scene)
+        or any(segment in {"", ".", ".."} for segment in segments)
+        or segments[0] != "Assets"
+    ):
+        return f"invalid enabled scene path (must be under Assets): {scene}"
+    assets = (root / "Assets").resolve()
+    candidate = (root / scene).resolve()
+    try:
+        candidate.relative_to(assets)
+    except ValueError:
+        return f"enabled scene escapes Assets: {scene}"
+    if not candidate.is_file():
+        return f"enabled scene is missing: {scene}"
+    return None
+
+
 def discover_scenes(project: ProjectInfo) -> tuple[list[str], list[str]]:
     root = Path(project.root)
     settings = root / "ProjectSettings/EditorBuildSettings.asset"
-    warnings: list[str] = []
+    errors: list[str] = []
     scenes: list[str] = []
     if settings.is_file():
         try:
             lines = settings.read_text(encoding="utf-8").splitlines()
         except (OSError, UnicodeError) as exc:
-            warnings.append(f"could not read EditorBuildSettings.asset: {exc}")
+            errors.append(f"could not read EditorBuildSettings.asset: {exc}")
             lines = []
         enabled: bool | None = None
         for line in lines:
@@ -158,20 +182,21 @@ def discover_scenes(project: ProjectInfo) -> tuple[list[str], list[str]]:
             path_match = re.match(r"^\s*path:\s*(.+?)\s*$", line)
             if path_match and enabled is not None:
                 scene = path_match.group(1).strip().strip('"')
-                if enabled and SCENE_PATH_RE.fullmatch(scene):
-                    scenes.append(scene)
+                if enabled:
+                    error = _validate_scene_path(root, scene)
+                    if error:
+                        errors.append(error)
+                    else:
+                        scenes.append(scene)
                 enabled = None
     else:
-        warnings.append(
+        errors.append(
             "EditorBuildSettings.asset is absent; no enabled build scenes were discovered"
         )
 
-    for scene in scenes:
-        if not (root / scene).is_file():
-            warnings.append(f"enabled scene is missing: {scene}")
     if not scenes:
-        warnings.append("the plan has no enabled scenes and Unity BuildPipeline will fail")
-    return scenes, warnings
+        errors.append("the plan has no valid enabled scenes; build is blocked")
+    return scenes, errors
 
 
 def _current_backend(project: ProjectInfo) -> str:
@@ -199,7 +224,7 @@ def generate_plan(
     xcode_output: str = "",
     result_path: str = "",
 ) -> dict[str, object]:
-    scenes, scene_warnings = discover_scenes(project)
+    scenes, scene_errors = discover_scenes(project)
     findings = scan["findings"]
     assert isinstance(findings, list)
     scan_summary = scan.get("summary", {})
@@ -240,8 +265,8 @@ def generate_plan(
         "riskSummary": {
             "errors": errors,
             "warnings": warnings,
-            "sceneWarnings": scene_warnings,
-            "blocking": errors > 0 or not scenes,
+            "sceneErrors": scene_errors,
+            "blocking": errors > 0 or bool(scene_errors),
         },
         "scan": scan,
     }

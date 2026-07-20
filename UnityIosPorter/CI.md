@@ -13,6 +13,13 @@ python3 -m compileall -q UnityIosPorter
 Tests use synthetic temporary Unity source trees. They do not require Unity,
 Xcode, network access, game binaries, extracted assets, or PyPI packages.
 
+The same workflow also defines an optional `macos-smoke` job that runs only on
+manual `workflow_dispatch`. It executes the identical stdlib-only unit suite on
+a macOS runner so Darwin-specific code paths (doctor, `xcodebuild` discovery)
+run for real. It does not install Unity and does not perform an iOS export; a
+real Unity batch build still requires a licensed Unity Editor with iOS Build
+Support, which hosted CI does not provide.
+
 ## An owner project
 
 From a complete owned Unity source project that includes `UnityIosPorter/`:
@@ -45,9 +52,15 @@ production job must use an authorized macOS runner with:
 - A project-specific configuration and distribution method.
 
 Invoke `doctor` first, then `all --attest-owned-source`. Retain
-`build-plan.json`, `result.json`, Unity logs, the `.xcarchive`, and export logs
-as access-controlled artifacts. Never print certificate passwords, API keys,
-profiles, or signing material.
+`build-plan.json`, `result.json`, `workspace-manifest.json`, Unity logs, the
+`.xcarchive`, and export logs as access-controlled artifacts. Never print
+certificate passwords, API keys, profiles, or signing material.
+
+UnityIosPorter provides no secret isolation of its own: Unity and `xcodebuild`
+subprocesses inherit the runner's environment, and their output is captured to
+files under the work directory's `logs/`. Anything a subprocess prints — which
+can include environment details — ends up in those logs, so protect the work
+directory and rely on the CI provider's secret masking and access controls.
 
 Do not use fork-originated, untrusted pull requests on a signing-enabled runner.
 Unity Editor scripts execute code from the project during import and build.
