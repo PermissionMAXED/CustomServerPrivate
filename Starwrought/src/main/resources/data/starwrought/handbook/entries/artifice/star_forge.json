@@ -1,0 +1,12 @@
+{
+  "id": "starwrought:star_forge",
+  "chapter": "starwrought:artifice",
+  "category": "forging",
+  "title": "handbook.starwrought.entry.star_forge.title",
+  "body": "handbook.starwrought.entry.star_forge.body",
+  "order": 8,
+  "unlock": {
+    "type": "has_item",
+    "value": "starwrought:star_forge"
+  }
+}

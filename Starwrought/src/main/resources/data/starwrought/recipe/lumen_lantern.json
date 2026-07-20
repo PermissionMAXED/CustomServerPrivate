@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " G ",
+    "GSG",
+    " G "
+  ],
+  "key": {
+    "G": "starwrought:glimmer_dust",
+    "S": "starwrought:star_shard"
+  },
+  "result": {
+    "id": "starwrought:lumen_lantern",
+    "count": 1
+  }
+}

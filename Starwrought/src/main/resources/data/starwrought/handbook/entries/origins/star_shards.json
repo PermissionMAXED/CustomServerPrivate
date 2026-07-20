@@ -1,0 +1,12 @@
+{
+  "id": "starwrought:star_shards",
+  "chapter": "starwrought:origins",
+  "category": "getting_started",
+  "title": "handbook.starwrought.entry.star_shards.title",
+  "body": "handbook.starwrought.entry.star_shards.body",
+  "order": 2,
+  "unlock": {
+    "type": "has_item",
+    "value": "starwrought:star_shard"
+  }
+}

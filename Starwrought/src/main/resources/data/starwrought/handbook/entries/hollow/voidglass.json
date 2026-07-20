@@ -1,0 +1,12 @@
+{
+  "id": "starwrought:voidglass",
+  "chapter": "starwrought:hollow",
+  "category": "forging",
+  "title": "handbook.starwrought.entry.voidglass.title",
+  "body": "handbook.starwrought.entry.voidglass.body",
+  "order": 12,
+  "unlock": {
+    "type": "has_item",
+    "value": "starwrought:voidglass"
+  }
+}

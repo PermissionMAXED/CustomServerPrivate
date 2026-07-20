@@ -1,0 +1,12 @@
+{
+  "id": "starwrought:lumen_network",
+  "chapter": "starwrought:artifice",
+  "category": "forging",
+  "title": "handbook.starwrought.entry.lumen_network.title",
+  "body": "handbook.starwrought.entry.lumen_network.body",
+  "order": 9,
+  "unlock": {
+    "type": "has_item",
+    "value": "starwrought:wayband"
+  }
+}

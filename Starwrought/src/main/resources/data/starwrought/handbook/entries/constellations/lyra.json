@@ -1,0 +1,12 @@
+{
+  "id": "starwrought:lyra",
+  "chapter": "starwrought:constellations",
+  "category": "attunements",
+  "title": "handbook.starwrought.entry.lyra.title",
+  "body": "handbook.starwrought.entry.lyra.body",
+  "order": 6,
+  "unlock": {
+    "type": "has_item",
+    "value": "starwrought:chart_lyra"
+  }
+}

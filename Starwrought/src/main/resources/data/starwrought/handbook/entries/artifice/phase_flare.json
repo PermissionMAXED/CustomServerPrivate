@@ -1,0 +1,12 @@
+{
+  "id": "starwrought:phase_flare",
+  "chapter": "starwrought:artifice",
+  "category": "forging",
+  "title": "handbook.starwrought.entry.phase_flare.title",
+  "body": "handbook.starwrought.entry.phase_flare.body",
+  "order": 10,
+  "unlock": {
+    "type": "has_item",
+    "value": "starwrought:phase_flare"
+  }
+}

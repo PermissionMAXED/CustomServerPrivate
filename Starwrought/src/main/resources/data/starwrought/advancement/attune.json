@@ -1,0 +1,30 @@
+{
+  "parent": "starwrought:altar",
+  "display": {
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "icon": {
+      "id": "starwrought:chart_wolf"
+    },
+    "title": "advancement.starwrought.attune.title",
+    "description": "advancement.starwrought.attune.description"
+  },
+  "criteria": {
+    "attune": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": "starwrought:resonance_altar"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

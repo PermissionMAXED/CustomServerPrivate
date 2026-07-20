@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " G ",
+    "SAS",
+    " G "
+  ],
+  "key": {
+    "G": "starwrought:glimmer_dust",
+    "S": "starwrought:starsteel_ingot",
+    "A": "minecraft:amethyst_shard"
+  },
+  "result": {
+    "id": "starwrought:phase_flare",
+    "count": 1
+  }
+}

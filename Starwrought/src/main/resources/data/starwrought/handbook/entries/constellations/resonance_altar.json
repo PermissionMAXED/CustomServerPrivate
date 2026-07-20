@@ -1,0 +1,12 @@
+{
+  "id": "starwrought:resonance_altar",
+  "chapter": "starwrought:constellations",
+  "category": "attunements",
+  "title": "handbook.starwrought.entry.resonance_altar.title",
+  "body": "handbook.starwrought.entry.resonance_altar.body",
+  "order": 4,
+  "unlock": {
+    "type": "has_item",
+    "value": "starwrought:resonance_altar"
+  }
+}

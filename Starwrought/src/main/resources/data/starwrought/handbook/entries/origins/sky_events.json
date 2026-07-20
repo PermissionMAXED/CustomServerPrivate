@@ -1,0 +1,11 @@
+{
+  "id": "starwrought:sky_events",
+  "chapter": "starwrought:origins",
+  "category": "getting_started",
+  "title": "handbook.starwrought.entry.sky_events.title",
+  "body": "handbook.starwrought.entry.sky_events.body",
+  "order": 1,
+  "unlock": {
+    "type": "always"
+  }
+}

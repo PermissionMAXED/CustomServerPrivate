@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SS ",
+    "ST ",
+    " T "
+  ],
+  "key": {
+    "S": "starwrought:starsteel_ingot",
+    "T": "minecraft:stick"
+  },
+  "result": {
+    "id": "starwrought:starsteel_axe",
+    "count": 1
+  }
+}

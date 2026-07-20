@@ -1,0 +1,12 @@
+{
+	"required": true,
+	"package": "de.atomi.starwrought.client.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"client": [
+		"CameraTraumaMixin",
+		"GameRendererFovMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

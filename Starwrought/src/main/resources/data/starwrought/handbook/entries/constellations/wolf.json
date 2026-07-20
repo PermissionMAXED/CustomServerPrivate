@@ -1,0 +1,12 @@
+{
+  "id": "starwrought:wolf",
+  "chapter": "starwrought:constellations",
+  "category": "attunements",
+  "title": "handbook.starwrought.entry.wolf.title",
+  "body": "handbook.starwrought.entry.wolf.body",
+  "order": 5,
+  "unlock": {
+    "type": "has_item",
+    "value": "starwrought:chart_wolf"
+  }
+}

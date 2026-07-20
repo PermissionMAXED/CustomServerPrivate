@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "MMM",
+    "MSM",
+    "MMM"
+  ],
+  "key": {
+    "M": "starwrought:meteoric_stone",
+    "S": "starwrought:star_shard"
+  },
+  "result": {
+    "id": "starwrought:meteorite_core",
+    "count": 1
+  }
+}

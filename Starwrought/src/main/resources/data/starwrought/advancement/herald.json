@@ -1,0 +1,23 @@
+{
+  "parent": "starwrought:attune",
+  "display": {
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "icon": {
+      "id": "starwrought:zenith_core"
+    },
+    "title": "advancement.starwrought.herald.title",
+    "description": "advancement.starwrought.herald.description"
+  },
+  "criteria": {
+    "herald": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "starwrought:herald"
+        }
+      }
+    }
+  }
+}

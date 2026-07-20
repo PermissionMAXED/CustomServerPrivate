@@ -1,0 +1,12 @@
+{
+  "id": "starwrought:astrolabe",
+  "chapter": "starwrought:origins",
+  "category": "getting_started",
+  "title": "handbook.starwrought.entry.astrolabe.title",
+  "body": "handbook.starwrought.entry.astrolabe.body",
+  "order": 3,
+  "unlock": {
+    "type": "has_item",
+    "value": "starwrought:astrolabe"
+  }
+}
