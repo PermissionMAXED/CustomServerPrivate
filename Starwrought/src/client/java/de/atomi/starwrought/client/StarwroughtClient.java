@@ -12,6 +12,7 @@ import de.atomi.starwrought.client.hud.StarwroughtHud;
 import de.atomi.starwrought.client.particle.HollowMoteParticle;
 import de.atomi.starwrought.client.particle.PrismaShardParticle;
 import de.atomi.starwrought.client.particle.PrismaSparkParticle;
+import de.atomi.starwrought.client.render.ModEntityRenderers;
 import de.atomi.starwrought.network.ClientboundPayloads;
 import de.atomi.starwrought.network.ModNetworking;
 import de.atomi.starwrought.registry.ModParticles;
@@ -41,6 +42,7 @@ public final class StarwroughtClient implements ClientModInitializer {
 	public void onInitializeClient() {
 		ModParticles.initialize();
 		ClientboundPayloads.register();
+		ModEntityRenderers.initialize();
 		registerParticleFactories();
 		registerKeyBindings();
 		registerNetworkingReceivers();

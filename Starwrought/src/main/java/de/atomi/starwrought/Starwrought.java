@@ -8,7 +8,6 @@ import de.atomi.starwrought.handbook.HandbookLoader;
 import de.atomi.starwrought.network.ModNetworking;
 import de.atomi.starwrought.player.PlayerAttachments;
 import de.atomi.starwrought.registry.ModParticles;
-import de.atomi.starwrought.registry.ModParticles;
 import de.atomi.starwrought.system.PlayerProgression;
 import de.atomi.starwrought.system.SkyEvents;
 import net.fabricmc.api.ModInitializer;
@@ -32,7 +31,6 @@ public final class Starwrought implements ModInitializer {
         ModBlocks.initialize();
         ModBlockEntities.initialize();
         ModEntities.initialize();
-        ModParticles.initialize();
         HandbookLoader.initialize();
         ModNetworking.initialize();
         SkyEvents.initialize();

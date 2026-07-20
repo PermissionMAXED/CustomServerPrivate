@@ -57,4 +57,23 @@ class StarwroughtLogicTest {
         assertNotEquals(PrismPalette.INDIGO, PrismPalette.mix(PrismPalette.INDIGO, PrismPalette.CYAN, .5F));
         assertEquals("#FFE9A8", PrismPalette.hex(PrismPalette.GOLD));
     }
+
+    @Test
+    void attunementIdsAreStableWireTokens() {
+        assertEquals("wolf", Attunement.WOLF.id());
+        assertEquals("lyra", Attunement.LYRA.id());
+        assertEquals("anvil", Attunement.ANVIL.id());
+        assertEquals(Attunement.WOLF, Attunement.fromId("WOLF"));
+        assertEquals(Attunement.NONE, Attunement.fromId("nope"));
+    }
+
+    @Test
+    void auroraAndUmbralNightsNeverShareACollisionWindow() {
+        for (long night = 1; night < 80; night++) {
+            long aurora = SkyEventSchedule.nextAurora(night, 42L);
+            long umbral = SkyEventSchedule.nextUmbral(night, 42L);
+            assertNotEquals(aurora, umbral, "seeded schedules must diverge");
+            assertNotEquals(12L, SkyEventSchedule.avoidCollision(12L, 12L));
+        }
+    }
 }

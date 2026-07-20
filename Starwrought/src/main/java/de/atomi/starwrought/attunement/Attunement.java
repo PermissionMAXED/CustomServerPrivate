@@ -8,6 +8,14 @@ public enum Attunement {
     LYRA,
     ANVIL;
 
+    public String id() {
+        return name().toLowerCase(Locale.ROOT);
+    }
+
+    public static Attunement fromId(String value) {
+        return parse(value);
+    }
+
     public static Attunement parse(String value) {
         if (value == null || value.isBlank()) {
             return NONE;
