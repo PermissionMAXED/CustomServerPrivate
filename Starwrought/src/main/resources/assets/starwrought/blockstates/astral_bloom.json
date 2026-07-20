@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "starwrought:block/astral_bloom"
+    },
+    "age=1": {
+      "model": "starwrought:block/astral_bloom"
+    },
+    "age=2": {
+      "model": "starwrought:block/astral_bloom"
+    },
+    "age=3": {
+      "model": "starwrought:block/astral_bloom"
+    }
+  }
+}

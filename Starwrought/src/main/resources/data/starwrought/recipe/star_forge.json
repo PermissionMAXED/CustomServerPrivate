@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SBS",
+    "IFI",
+    "III"
+  ],
+  "key": {
+    "S": "starwrought:star_shard",
+    "B": "minecraft:blast_furnace",
+    "I": "minecraft:iron_ingot",
+    "F": "minecraft:furnace"
+  },
+  "result": {
+    "id": "starwrought:star_forge",
+    "count": 1
+  }
+}

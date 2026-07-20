@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " SG",
+    "S S",
+    "GS "
+  ],
+  "key": {
+    "G": "starwrought:glimmer_dust",
+    "S": "starwrought:starsteel_ingot"
+  },
+  "result": {
+    "id": "starwrought:wayband",
+    "count": 1
+  }
+}

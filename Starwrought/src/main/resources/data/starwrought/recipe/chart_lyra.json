@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:paper",
+    "minecraft:light_blue_dye",
+    "starwrought:glimmer_dust"
+  ],
+  "result": {
+    "id": "starwrought:chart_lyra",
+    "count": 1
+  }
+}

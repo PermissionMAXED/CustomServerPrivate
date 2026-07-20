@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " L ",
+    " L ",
+    " V "
+  ],
+  "key": {
+    "L": "starwrought:lumen_lantern",
+    "V": "starwrought:voidglass"
+  },
+  "result": {
+    "id": "starwrought:lumen_spire",
+    "count": 1
+  }
+}

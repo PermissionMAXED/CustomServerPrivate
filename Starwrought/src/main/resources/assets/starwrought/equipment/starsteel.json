@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "starwrought:starsteel"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "starwrought:starsteel"
+      }
+    ]
+  }
+}

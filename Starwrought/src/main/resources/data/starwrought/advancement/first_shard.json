@@ -1,0 +1,24 @@
+{
+  "display": {
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "icon": {
+      "id": "starwrought:star_shard"
+    },
+    "title": "advancement.starwrought.first_shard.title",
+    "description": "advancement.starwrought.first_shard.description"
+  },
+  "criteria": {
+    "shard": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "starwrought:star_shard"
+          }
+        ]
+      }
+    }
+  }
+}

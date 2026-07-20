@@ -1,0 +1,21 @@
+{
+  "parent": "starwrought:first_shard",
+  "display": {
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "icon": {
+      "id": "starwrought:resonance_altar"
+    },
+    "title": "advancement.starwrought.altar.title",
+    "description": "advancement.starwrought.altar.description"
+  },
+  "criteria": {
+    "altar": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "starwrought:resonance_altar"
+      }
+    }
+  }
+}

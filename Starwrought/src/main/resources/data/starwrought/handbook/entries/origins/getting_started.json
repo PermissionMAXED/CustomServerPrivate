@@ -1,0 +1,11 @@
+{
+  "id": "starwrought:getting_started",
+  "chapter": "starwrought:origins",
+  "category": "getting_started",
+  "title": "handbook.starwrought.entry.getting_started.title",
+  "body": "handbook.starwrought.entry.getting_started.body",
+  "order": 0,
+  "unlock": {
+    "type": "always"
+  }
+}

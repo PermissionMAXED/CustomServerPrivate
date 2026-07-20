@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " G ",
+    "ISI",
+    " I "
+  ],
+  "key": {
+    "G": "starwrought:glimmer_dust",
+    "I": "minecraft:iron_ingot",
+    "S": "starwrought:star_shard"
+  },
+  "result": {
+    "id": "starwrought:astrolabe",
+    "count": 1
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SAS",
+    "ODO",
+    "OOO"
+  ],
+  "key": {
+    "S": "starwrought:star_shard",
+    "A": "minecraft:amethyst_shard",
+    "O": "minecraft:obsidian",
+    "D": "minecraft:diamond"
+  },
+  "result": {
+    "id": "starwrought:resonance_altar",
+    "count": 1
+  }
+}

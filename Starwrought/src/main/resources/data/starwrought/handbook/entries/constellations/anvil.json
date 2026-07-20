@@ -1,0 +1,12 @@
+{
+  "id": "starwrought:anvil",
+  "chapter": "starwrought:constellations",
+  "category": "attunements",
+  "title": "handbook.starwrought.entry.anvil.title",
+  "body": "handbook.starwrought.entry.anvil.body",
+  "order": 7,
+  "unlock": {
+    "type": "has_item",
+    "value": "starwrought:chart_anvil"
+  }
+}

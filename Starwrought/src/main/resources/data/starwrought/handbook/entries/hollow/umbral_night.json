@@ -1,0 +1,12 @@
+{
+  "id": "starwrought:umbral_night",
+  "chapter": "starwrought:hollow",
+  "category": "threats",
+  "title": "handbook.starwrought.entry.umbral_night.title",
+  "body": "handbook.starwrought.entry.umbral_night.body",
+  "order": 11,
+  "unlock": {
+    "type": "manual",
+    "value": "starwrought:umbral_night"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " GS",
+    "G S",
+    " GS"
+  ],
+  "key": {
+    "G": "starwrought:glimmer_dust",
+    "S": "starwrought:starsteel_ingot"
+  },
+  "result": {
+    "id": "starwrought:comet_bow",
+    "count": 1
+  }
+}

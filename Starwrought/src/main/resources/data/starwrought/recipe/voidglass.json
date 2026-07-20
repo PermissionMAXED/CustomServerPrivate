@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:tinted_glass",
+    "minecraft:amethyst_shard",
+    "starwrought:hollow_residue"
+  ],
+  "result": {
+    "id": "starwrought:voidglass",
+    "count": 2
+  }
+}

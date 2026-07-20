@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SSS",
+    " T ",
+    " T "
+  ],
+  "key": {
+    "S": "starwrought:starsteel_ingot",
+    "T": "minecraft:stick"
+  },
+  "result": {
+    "id": "starwrought:starsteel_pickaxe",
+    "count": 1
+  }
+}

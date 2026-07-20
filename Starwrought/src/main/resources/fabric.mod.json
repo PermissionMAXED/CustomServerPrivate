@@ -1,0 +1,36 @@
+{
+	"schemaVersion": 1,
+	"id": "starwrought",
+	"version": "${version}",
+	"name": "Starwrought",
+	"description": "Celestial tech-magic expansion: chase aurora starfalls, attune to constellations, forge starsteel, and face the Herald of the Hollow Star — with Prismbreak-grade VFX and a living Codex handbook.",
+	"authors": ["Atomi", "Cursor Cloud Agents"],
+	"contact": {
+		"homepage": "https://github.com/PermissionMAXED/CustomServerPrivate",
+		"sources": "https://github.com/PermissionMAXED/CustomServerPrivate"
+	},
+	"license": "MIT",
+	"icon": "assets/starwrought/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": ["de.atomi.starwrought.Starwrought"],
+		"client": ["de.atomi.starwrought.client.StarwroughtClient"]
+	},
+	"mixins": [
+		"starwrought.mixins.json",
+		{
+			"config": "starwrought.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.17.0",
+		"minecraft": "~1.21.9",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"sodium": "*",
+		"iris": "*"
+	}
+}

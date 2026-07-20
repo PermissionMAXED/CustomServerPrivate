@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "VRV",
+    "RSR",
+    "OOO"
+  ],
+  "key": {
+    "V": "starwrought:voidglass",
+    "R": "starwrought:hollow_residue",
+    "S": "starwrought:star_shard",
+    "O": "minecraft:obsidian"
+  },
+  "result": {
+    "id": "starwrought:hollow_beacon",
+    "count": 1
+  }
+}

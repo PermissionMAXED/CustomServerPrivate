@@ -1,0 +1,12 @@
+{
+  "id": "starwrought:herald",
+  "chapter": "starwrought:hollow",
+  "category": "threats",
+  "title": "handbook.starwrought.entry.herald.title",
+  "body": "handbook.starwrought.entry.herald.body",
+  "order": 13,
+  "unlock": {
+    "type": "has_item",
+    "value": "starwrought:hollow_beacon"
+  }
+}

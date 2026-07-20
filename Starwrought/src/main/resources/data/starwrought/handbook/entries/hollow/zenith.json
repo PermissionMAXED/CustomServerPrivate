@@ -1,0 +1,12 @@
+{
+  "id": "starwrought:zenith",
+  "chapter": "starwrought:hollow",
+  "category": "threats",
+  "title": "handbook.starwrought.entry.zenith.title",
+  "body": "handbook.starwrought.entry.zenith.body",
+  "order": 14,
+  "unlock": {
+    "type": "has_item",
+    "value": "starwrought:zenith_core"
+  }
+}

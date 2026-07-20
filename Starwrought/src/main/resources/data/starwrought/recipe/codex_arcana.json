@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GS ",
+    "GB ",
+    "GS "
+  ],
+  "key": {
+    "G": "minecraft:gold_nugget",
+    "S": "starwrought:star_shard",
+    "B": "minecraft:book"
+  },
+  "result": {
+    "id": "starwrought:codex_arcana",
+    "count": 1
+  }
+}

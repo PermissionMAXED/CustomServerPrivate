@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "starwrought:glimmer_petal"
+  ],
+  "result": {
+    "id": "starwrought:glimmer_dust",
+    "count": 2
+  }
+}
