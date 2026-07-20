@@ -29,6 +29,11 @@ shipped application. Refused markers include:
 - Symbolic links, because a staged Unity process could write through them
   outside the staging copy.
 
+The policy walk excludes only the root-level `.git/`, `Library/`, `Logs/`,
+`Temp/`, and `obj/` directories because staging never copies those generated
+directories. The same names nested elsewhere, including `Assets/Library/`, are
+walked normally; denylisted names and symbolic links there remain refused.
+
 This filename denylist is advisory. It is a best-effort screen for common
 markers, not proof of anything: passing it does not establish ownership,
 authorization, or provenance, and renamed artifacts can evade it. Ownership

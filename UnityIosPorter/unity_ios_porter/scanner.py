@@ -104,6 +104,10 @@ WINDOWS_LIBRARIES = {
     "ws2_32",
 }
 NATIVE_EXTENSIONS = {".a", ".dylib", ".so", ".dll", ".bundle"}
+PREPROCESSOR_DIRECTIVE_RE = re.compile(
+    r"^[ \t]*#[ \t]*(?P<keyword>if|elif|else|endif)"
+    r"(?:[ \t]+(?P<condition>.*?))?[ \t]*$"
+)
 
 
 def mask_csharp_comments_and_strings(text: str) -> str:
@@ -219,6 +223,38 @@ def mask_csharp_comments_and_strings(text: str) -> str:
     return "".join(output)
 
 
+def mask_unity_editor_regions(text: str) -> str:
+    """Mask token-exact UNITY_EDITOR branches while preserving offsets."""
+    output = list(text)
+    stack: list[list[bool]] = []
+    offset = 0
+
+    for line in text.splitlines(keepends=True):
+        content = line.rstrip("\r\n")
+        match = PREPROCESSOR_DIRECTIVE_RE.fullmatch(content)
+        editor_branch_active = any(frame[1] for frame in stack)
+
+        if match:
+            keyword = match.group("keyword")
+            condition = (match.group("condition") or "").strip()
+            if keyword == "if":
+                exact_editor = condition == "UNITY_EDITOR"
+                stack.append([exact_editor, exact_editor])
+            elif keyword in {"elif", "else"}:
+                if stack and stack[-1][0]:
+                    stack[-1][1] = False
+            elif keyword == "endif" and stack:
+                stack.pop()
+
+        if editor_branch_active and not match:
+            for position in range(offset, offset + len(line)):
+                if output[position] not in "\r\n":
+                    output[position] = " "
+        offset += len(line)
+
+    return "".join(output)
+
+
 def _line_number(text: str, offset: int) -> int:
     return text.count("\n", 0, offset) + 1
 
@@ -262,8 +298,11 @@ def _scan_source(path: Path, root: Path) -> tuple[list[Finding], int]:
             ],
             0,
         )
-    masked = mask_csharp_comments_and_strings(original)
     relative = _relative(path, root)
+    if _has_editor_segment(path, root):
+        return [], 0
+
+    masked = mask_unity_editor_regions(mask_csharp_comments_and_strings(original))
     findings: list[Finding] = []
     for rule in RULES:
         for match in rule.pattern.finditer(masked):
@@ -291,18 +330,17 @@ def _scan_source(path: Path, root: Path) -> tuple[list[Finding], int]:
                 )
             )
 
-    if not _has_editor_segment(path, root):
-        for match in re.finditer(r"\bUnityEditor\b", masked):
-            findings.append(
-                Finding(
-                    "IOS001",
-                    "error",
-                    relative,
-                    _line_number(masked, match.start()),
-                    "UnityEditor API is referenced outside an Editor directory.",
-                    _evidence(original, match.start()),
-                )
+    for match in re.finditer(r"\bUnityEditor\b", masked):
+        findings.append(
+            Finding(
+                "IOS001",
+                "error",
+                relative,
+                _line_number(masked, match.start()),
+                "UnityEditor API is referenced outside an Editor directory.",
+                _evidence(original, match.start()),
             )
+        )
 
     # DllImport needs its literal argument, so inspect raw source only at attributes
     # whose start is still visible after comment masking.
@@ -336,52 +374,53 @@ def _iphone_disabled(meta_text: str) -> bool:
 
 def _scan_plugins(root: Path) -> list[Finding]:
     findings: list[Finding] = []
-    for path in (root / "Assets").rglob("*"):
-        if not path.is_file() or path.suffix.casefold() not in NATIVE_EXTENSIONS:
-            continue
-        relative = _relative(path, root)
-        extension = path.suffix.casefold()
-        meta_path = Path(str(path) + ".meta")
-        meta_text = ""
-        if meta_path.is_file():
-            try:
-                meta_text = meta_path.read_text(encoding="utf-8")
-            except (OSError, UnicodeError):
-                pass
+    for source_root in (root / "Assets", root / "Packages"):
+        for path in source_root.rglob("*"):
+            if not path.is_file() or path.suffix.casefold() not in NATIVE_EXTENSIONS:
+                continue
+            relative = _relative(path, root)
+            extension = path.suffix.casefold()
+            meta_path = Path(str(path) + ".meta")
+            meta_text = ""
+            if meta_path.is_file():
+                try:
+                    meta_text = meta_path.read_text(encoding="utf-8")
+                except (OSError, UnicodeError):
+                    pass
 
-        if extension == ".so":
-            findings.append(
-                Finding(
-                    "PLG001",
-                    "error",
-                    relative,
-                    1,
-                    "Linux .so native plugin cannot link into an iOS application.",
-                    path.name,
+            if extension == ".so":
+                findings.append(
+                    Finding(
+                        "PLG001",
+                        "error",
+                        relative,
+                        1,
+                        "Linux .so native plugin cannot link into an iOS application.",
+                        path.name,
+                    )
                 )
-            )
-        elif extension == ".dll":
-            findings.append(
-                Finding(
-                    "PLG002",
-                    "warning",
-                    relative,
-                    1,
-                    "DLL plugin requires review; managed assemblies may work, native Windows DLLs do not.",
-                    path.name,
+            elif extension == ".dll":
+                findings.append(
+                    Finding(
+                        "PLG002",
+                        "warning",
+                        relative,
+                        1,
+                        "DLL plugin requires review; managed assemblies may work, native Windows DLLs do not.",
+                        path.name,
+                    )
                 )
-            )
-        if meta_text and _iphone_disabled(meta_text):
-            findings.append(
-                Finding(
-                    "PLG003",
-                    "warning",
-                    relative + ".meta",
-                    1,
-                    "Plugin importer metadata explicitly disables the iPhone/iOS target.",
-                    "iPhone/iOS enabled: 0",
+            if meta_text and _iphone_disabled(meta_text):
+                findings.append(
+                    Finding(
+                        "PLG003",
+                        "warning",
+                        relative + ".meta",
+                        1,
+                        "Plugin importer metadata explicitly disables the iPhone/iOS target.",
+                        "iPhone/iOS enabled: 0",
+                    )
                 )
-            )
     return findings
 
 

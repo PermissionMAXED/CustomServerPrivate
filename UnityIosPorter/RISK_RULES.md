@@ -1,8 +1,9 @@
 # Risk rules
 
-The scanner masks C# comments, string literals, and character literals before
-matching APIs. It is intentionally conservative and does not replace a Roslyn
-build, Unity compilation, or physical-device test.
+The scanner masks C# comments, string literals, character literals, and the
+body of token-exact `#if UNITY_EDITOR` branches before matching APIs. It is
+intentionally conservative and does not replace a Roslyn build, Unity
+compilation, or physical-device test.
 
 | Rule | Severity | Signal | Required review |
 |---|---|---|---|
@@ -34,10 +35,21 @@ embedded or local package source physically present in `Packages/`. It does not
 scan Unity's generated `Library/PackageCache/` or follow `file:` dependencies
 outside the project tree. Resolve and review those package sources separately.
 
-Simple source matching can also miss aliases, generated code, conditional
+C# files with an `Editor/` path segment are excluded from runtime compatibility
+rules and reflection counts because Unity's Editor special folders are not
+included in player builds. An unreadable file still reports `SRC001`. The
+scanner does not evaluate `.asmdef` platform constraints, so editor-only
+assemblies outside an `Editor/` path and other assemblies excluded from iOS can
+still produce findings.
+
+Only a preprocessor condition that is exactly the token `UNITY_EDITOR` is
+masked. Its `#else` and `#elif` branches remain scanned. Compound or parenthesized
+conditions such as `UNITY_EDITOR || DEVELOPMENT_BUILD` remain scanned
+conservatively.
+
+Simple source matching can also miss aliases, generated code, other conditional
 compilation, reflection hidden behind wrappers, and plugin binary architecture.
-It can flag code excluded from iOS assemblies. Review each finding in the
-actual Unity compilation context.
+Review each finding in the actual Unity compilation context.
 
 The plugin scan reads extensions and adjacent `.meta` importer data but does
 not execute or disassemble binaries. That limitation is deliberate.

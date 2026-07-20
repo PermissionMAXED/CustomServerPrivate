@@ -14,7 +14,7 @@ from typing import Callable, Sequence
 
 from . import __version__
 from .planner import PorterConfig
-from .project import ProjectError, ProjectInfo
+from .project import GENERATED_ROOT_DIRECTORY_NAMES, ProjectError, ProjectInfo
 
 TOOL_ROOT = Path(__file__).resolve().parent.parent
 BRIDGE_TEMPLATE = TOOL_ROOT / "templates/BatchEntry.cs"
@@ -107,13 +107,14 @@ def stage_project(
         return {key: str(value) for key, value in paths.items()}
 
     paths["root"].mkdir(parents=True)
+
     def ignore(directory: str, names: list[str]) -> set[str]:
         current = Path(directory).resolve()
         if current == source:
             return {
                 name
                 for name in names
-                if name in {".git", "Library", "Logs", "Temp", "obj"}
+                if name in GENERATED_ROOT_DIRECTORY_NAMES
             }
         return set()
 
@@ -134,14 +135,15 @@ def stage_project(
 
 
 def source_digest(staged_root: str | Path) -> str:
-    """Digest the staged tree by relative path and size (see algorithm name)."""
+    """Digest staged source roots by relative path and size (see algorithm name)."""
     root = Path(staged_root).resolve()
     digest = hashlib.sha256()
-    for path in sorted(root.rglob("*")):
-        if path.is_symlink() or not path.is_file():
-            continue
-        relative = path.relative_to(root).as_posix()
-        digest.update(f"{relative}\x00{path.stat().st_size}\n".encode("utf-8"))
+    for source_name in ("Assets", "Packages", "ProjectSettings"):
+        for path in sorted((root / source_name).rglob("*")):
+            if path.is_symlink() or not path.is_file():
+                continue
+            relative = path.relative_to(root).as_posix()
+            digest.update(f"{relative}\x00{path.stat().st_size}\n".encode("utf-8"))
     return digest.hexdigest()
 
 
@@ -569,7 +571,27 @@ def write_export_options(
     if not dry_run:
         target = Path(path)
         target.parent.mkdir(parents=True, exist_ok=True)
-        target.write_bytes(payload)
+        try:
+            os.lstat(target)
+        except FileNotFoundError:
+            pass
+        except OSError as exc:
+            raise ProjectError(f"cannot inspect export options path {target}: {exc}") from exc
+        else:
+            raise ProjectError(
+                f"export options path already exists; refusing to overwrite it: {target}"
+            )
+        flags = os.O_WRONLY | os.O_CREAT | os.O_EXCL
+        if hasattr(os, "O_NOFOLLOW"):
+            flags |= os.O_NOFOLLOW
+        try:
+            descriptor = os.open(target, flags, 0o600)
+            with os.fdopen(descriptor, "wb") as stream:
+                stream.write(payload)
+        except OSError as exc:
+            raise ProjectError(
+                f"cannot create export options without following links at {target}: {exc}"
+            ) from exc
     return payload
 
 

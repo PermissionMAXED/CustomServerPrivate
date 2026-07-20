@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 from dataclasses import asdict, dataclass
 from pathlib import Path
@@ -22,6 +23,7 @@ REQUIRED_PATHS = (
     "ProjectSettings/ProjectVersion.txt",
     "Packages/manifest.json",
 )
+GENERATED_ROOT_DIRECTORY_NAMES = frozenset({".git", "Library", "Logs", "Temp", "obj"})
 
 SUSPICIOUS_DIRECTORY_NAMES = {
     "assetrip",
@@ -90,6 +92,22 @@ def _relative(path: Path, root: Path) -> str:
         return str(path)
 
 
+def _walk_project_paths(root: Path) -> Iterable[Path]:
+    """Walk project content while pruning Unity-generated roots only."""
+    for directory, directory_names, file_names in os.walk(
+        root, topdown=True, followlinks=False
+    ):
+        current = Path(directory)
+        if current == root:
+            directory_names[:] = [
+                name
+                for name in directory_names
+                if name not in GENERATED_ROOT_DIRECTORY_NAMES
+            ]
+        yield from (current / name for name in directory_names)
+        yield from (current / name for name in file_names)
+
+
 def find_suspicious_markers(root: Path) -> list[str]:
     """Return policy markers without reading or attempting to reconstruct content."""
     markers: list[str] = []
@@ -101,7 +119,7 @@ def find_suspicious_markers(root: Path) -> list[str]:
             or lowered_part.startswith(("assetrip", "il2cppdumper", "dummydll", "decomp"))
         ):
             markers.append(f"<input-path:{part}>")
-    for path in root.rglob("*"):
+    for path in _walk_project_paths(root):
         relative = _relative(path, root)
         lowered_name = path.name.casefold()
         if path.is_dir():
@@ -178,7 +196,7 @@ def inspect_project(path: str | Path, *, enforce_policy: bool = True) -> Project
             raise PolicyError(markers)
         unsafe_links = [
             _relative(candidate, root)
-            for candidate in root.rglob("*")
+            for candidate in _walk_project_paths(root)
             if candidate.is_symlink()
         ]
         if unsafe_links:

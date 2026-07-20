@@ -12,6 +12,7 @@ import unittest
 from pathlib import Path
 from unittest import mock
 
+from fake_tools import write_fake_unity
 from helpers import make_project
 from unity_ios_porter.operations import (
     BRIDGE_TEMPLATE,
@@ -34,55 +35,6 @@ from unity_ios_porter.scanner import scan_project
 
 TOOL_ROOT = Path(__file__).resolve().parents[1]
 PORTER = TOOL_ROOT / "porter.py"
-
-FAKE_UNITY_TEMPLATE = """#!/usr/bin/env python3
-import json, os, sys
-
-def argument(name):
-    argv = sys.argv
-    for index, value in enumerate(argv[:-1]):
-        if value == name:
-            return argv[index + 1]
-    return ""
-
-mode = {mode!r}
-result_path = argument("-porterResult")
-plan_path = argument("-porterConfig")
-plan = json.load(open(plan_path, encoding="utf-8"))
-xcode = plan["paths"]["xcodeOutput"]
-payload = {{
-    "schemaVersion": 1,
-    "phase": "build-xcode",
-    "unityVersion": "2022.3.41f1",
-    "outputPath": xcode,
-    "result": "Succeeded",
-    "success": True,
-    "totalSize": 1,
-    "durationSeconds": 0.1,
-    "errors": 0,
-    "warnings": 0,
-    "error": "",
-}}
-if mode == "liar":
-    payload["success"] = False
-    payload["result"] = "Failed"
-    payload["error"] = "synthetic build failure hidden behind exit 0"
-elif mode == "good":
-    project = os.path.join(xcode, "Unity-iPhone.xcodeproj")
-    os.makedirs(project, exist_ok=True)
-    open(os.path.join(project, "project.pbxproj"), "w").write("// pbxproj\\n")
-elif mode == "no-xcode":
-    pass
-os.makedirs(os.path.dirname(result_path), exist_ok=True)
-json.dump(payload, open(result_path, "w", encoding="utf-8"))
-sys.exit(0)
-"""
-
-
-def write_fake_unity(path: Path, mode: str) -> Path:
-    path.write_text(FAKE_UNITY_TEMPLATE.format(mode=mode), encoding="utf-8")
-    path.chmod(0o755)
-    return path
 
 
 class BatchTargetContractTests(unittest.TestCase):
