@@ -1,0 +1,29 @@
+name: Unity iOS Porter Preflight
+
+on:
+  pull_request:
+    paths:
+      - "Assets/**"
+      - "Packages/**"
+      - "ProjectSettings/**"
+      - "UnityIosPorter/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  owned-source-preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out owned Unity source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 1
+          lfs: false
+          persist-credentials: false
+      - name: Detect Unity source project
+        run: python3 UnityIosPorter/porter.py detect --project .
+      - name: Scan IL2CPP and iOS compatibility
+        run: python3 UnityIosPorter/porter.py scan --project .

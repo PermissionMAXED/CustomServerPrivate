@@ -1,0 +1,16 @@
+UnityIosPorter
+Copyright 2026 UnityIosPorter contributors
+
+Licensed under the Apache License, Version 2.0. See LICENSE.
+
+This is an independent project for authorized owners of Unity project source.
+It is not affiliated with, sponsored by, or endorsed by Unity Technologies,
+Apple Inc., or any game publisher.
+
+Unity is a trademark or registered trademark of Unity Technologies or its
+affiliates. Apple, iOS, Xcode, and macOS are trademarks of Apple Inc. Their use
+here identifies interoperability requirements and does not imply affiliation.
+
+Technical note: Unity iOS shipping builds use the IL2CPP scripting backend,
+ARM64 native code, and an Xcode signing/export step. Mono is not an iOS
+shipping backend.

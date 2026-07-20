@@ -215,3 +215,15 @@ relevant integration doc is `docs/MEDUSA_SERVER_INTEGRATION.md`.
   `swift test --package-path Gooby --parallel -Xswiftc -warnings-as-errors`.
 - On macOS, run `xcodegen generate` in `Gooby/`, then use the generated `Gooby.xcodeproj` with the
   `Gooby` scheme; exact simulator, unsigned Release, and demo commands are in `Gooby/README.md`.
+
+## UnityIosPorter
+
+- `UnityIosPorter/` accepts only complete Unity project source owned by or explicitly authorized for
+  the user. Refuse extracted, dumped, decompiled, reconstructed, `.ipa`/`.app`, `GameAssembly`,
+  `global-metadata`, or `DummyDll`-style inputs; never use it to recover third-party game source.
+- Linux can run its dependency-free suite with
+  `python3 -m unittest discover -s UnityIosPorter/tests -v`, plus detect, scan, plan, and dry-run CLI
+  paths.
+- Real iOS exports require macOS, the source project's matching Unity Editor with iOS Build Support,
+  and Xcode. iOS shipping builds use IL2CPP + ARM64 + Xcode, not Mono. Follow
+  `UnityIosPorter/README.md` and keep each staging work directory outside the original project.
