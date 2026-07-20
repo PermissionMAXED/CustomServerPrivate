@@ -1,12 +1,20 @@
 name: Unity iOS Porter Preflight
 
 on:
+  push:
+    paths:
+      - "Assets/**"
+      - "Packages/**"
+      - "ProjectSettings/**"
+      - "UnityIosPorter/**"
+      - ".github/workflows/unity-ios-porter.yml"
   pull_request:
     paths:
       - "Assets/**"
       - "Packages/**"
       - "ProjectSettings/**"
       - "UnityIosPorter/**"
+      - ".github/workflows/unity-ios-porter.yml"
   workflow_dispatch:
 
 permissions:
@@ -23,7 +31,11 @@ jobs:
           fetch-depth: 1
           lfs: false
           persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with:
+          python-version: "3.11"
       - name: Detect Unity source project
-        run: python3 UnityIosPorter/porter.py detect --project .
+        run: python UnityIosPorter/porter.py detect --project .
       - name: Scan IL2CPP and iOS compatibility
-        run: python3 UnityIosPorter/porter.py scan --project .
+        run: python UnityIosPorter/porter.py scan --project .

@@ -27,10 +27,15 @@ visible in `build-plan.json`; they do not alone block staging.
 
 ## False positives and negatives
 
-Simple source matching can miss aliases, generated code, package cache code,
-conditional compilation, reflection hidden behind wrappers, and plugin binary
-architecture. It can also flag code excluded from iOS assemblies. Review each
-finding in the actual Unity compilation context.
+The scanner traverses C# files under both `Assets/` and `Packages/`, including
+embedded or local package source physically present in `Packages/`. It does not
+scan Unity's generated `Library/PackageCache/` or follow `file:` dependencies
+outside the project tree. Resolve and review those package sources separately.
+
+Simple source matching can also miss aliases, generated code, conditional
+compilation, reflection hidden behind wrappers, and plugin binary architecture.
+It can flag code excluded from iOS assemblies. Review each finding in the
+actual Unity compilation context.
 
 The plugin scan reads extensions and adjacent `.meta` importer data but does
 not execute or disassemble binaries. That limitation is deliberate.

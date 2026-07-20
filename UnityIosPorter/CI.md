@@ -24,9 +24,11 @@ python3 UnityIosPorter/porter.py ci init \
 ```
 
 This copies `templates/unity-ios-porter.yml` to
-`.github/workflows/unity-ios-porter.yml`. It runs `detect` and `scan` on Ubuntu
-for relevant source changes. The scan intentionally fails with exit `2` when
-risks are found, making compatibility debt visible before a macOS build.
+`.github/workflows/unity-ios-porter.yml`. It pins Python 3.11 and runs `detect`
+and `scan` on Ubuntu for relevant pushes, pull requests, manual dispatches, and
+changes to the generated workflow itself. The scan intentionally fails with
+exit `2` when risks are found, making compatibility debt visible before a
+macOS build.
 
 Use `--dry-run` to inspect the destination and `--force` to replace an existing
 generated workflow. Review workflow changes before committing.

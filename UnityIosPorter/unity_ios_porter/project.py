@@ -144,6 +144,8 @@ def _parse_manifest(manifest_file: Path) -> tuple[str, ...]:
             payload = json.load(stream)
     except (OSError, UnicodeError, json.JSONDecodeError) as exc:
         raise ProjectError(f"invalid Packages/manifest.json: {exc}") from exc
+    if not isinstance(payload, dict):
+        raise ProjectError("Packages/manifest.json root must be a JSON object")
     dependencies = payload.get("dependencies")
     if not isinstance(dependencies, dict):
         raise ProjectError("Packages/manifest.json must contain a dependencies object")

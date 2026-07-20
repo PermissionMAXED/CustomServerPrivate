@@ -60,15 +60,6 @@ RULES = (
         "The C# dynamic runtime may require preserved AOT generic instantiations.",
     ),
     PatternRule(
-        "AOT005",
-        "error",
-        re.compile(
-            r"\bExpression\s*(?:<[^;\n]+>)?\s*\.\s*Compile\s*\(|"
-            r"\bExpression\s*\.\s*Compile\s*\("
-        ),
-        "Expression.Compile attempts runtime code generation under AOT.",
-    ),
-    PatternRule(
         "SEC001",
         "error",
         re.compile(r"\bBinaryFormatter\b"),
@@ -87,6 +78,12 @@ REFLECTION_RE = re.compile(
     r"\.\s*Get(?:Method|Methods|Field|Fields|Property|Properties)\s*\(|"
     r"\bActivator\s*\.\s*CreateInstance\s*\("
 )
+EXPRESSION_CONTEXT_RE = re.compile(
+    r"\bSystem\s*\.\s*Linq\s*\.\s*Expressions\b|"
+    r"\busing\s+System\s*\.\s*Linq\s*\.\s*Expressions\s*;|"
+    r"\bExpression\s*<"
+)
+EXPRESSION_COMPILE_RE = re.compile(r"\.\s*Compile\s*\(")
 DLL_IMPORT_RE = re.compile(
     r"\bDllImport\s*\(\s*(?:@|\$)?[\"'](?P<library>[^\"']+)[\"']",
     re.IGNORECASE,
@@ -110,9 +107,8 @@ NATIVE_EXTENSIONS = {".a", ".dylib", ".so", ".dll", ".bundle"}
 
 
 def mask_csharp_comments_and_strings(text: str) -> str:
-    """Mask comments, chars, and strings while preserving offsets and newlines."""
+    """Mask comments and literals, preserving code inside interpolations."""
     output = list(text)
-    index = 0
     length = len(text)
 
     def blank(start: int, end: int) -> None:
@@ -120,6 +116,85 @@ def mask_csharp_comments_and_strings(text: str) -> str:
             if output[position] not in "\r\n":
                 output[position] = " "
 
+    def mask_quoted(
+        start: int, prefix_length: int, quote: str, *, verbatim: bool = False
+    ) -> int:
+        index = start + prefix_length
+        blank(start, index)
+        while index < length:
+            if verbatim and text.startswith('""', index):
+                blank(index, index + 2)
+                index += 2
+            elif not verbatim and text[index] == "\\":
+                blank(index, min(index + 2, length))
+                index += 2
+            elif text[index] == quote:
+                blank(index, index + 1)
+                return index + 1
+            else:
+                blank(index, index + 1)
+                index += 1
+        return index
+
+    def mask_expression(index: int) -> int:
+        depth = 1
+        while index < length:
+            if text.startswith("//", index):
+                end = text.find("\n", index + 2)
+                end = length if end == -1 else end
+                blank(index, end)
+                index = end
+            elif text.startswith("/*", index):
+                end = text.find("*/", index + 2)
+                end = length if end == -1 else end + 2
+                blank(index, end)
+                index = end
+            elif text.startswith(('$@"', '@$"'), index):
+                index = mask_interpolated(index, 3, verbatim=True)
+            elif text.startswith('$"', index):
+                index = mask_interpolated(index, 2, verbatim=False)
+            elif text.startswith('@"', index):
+                index = mask_quoted(index, 2, '"', verbatim=True)
+            elif text[index] in {'"', "'"}:
+                index = mask_quoted(index, 1, text[index])
+            elif text[index] == "{":
+                depth += 1
+                index += 1
+            elif text[index] == "}":
+                depth -= 1
+                if depth == 0:
+                    blank(index, index + 1)
+                    return index + 1
+                index += 1
+            else:
+                index += 1
+        return index
+
+    def mask_interpolated(start: int, prefix_length: int, *, verbatim: bool) -> int:
+        index = start + prefix_length
+        blank(start, index)
+        while index < length:
+            if verbatim and text.startswith('""', index):
+                blank(index, index + 2)
+                index += 2
+            elif not verbatim and text[index] == "\\":
+                blank(index, min(index + 2, length))
+                index += 2
+            elif text[index] == '"':
+                blank(index, index + 1)
+                return index + 1
+            elif text.startswith(("{{", "}}"), index):
+                blank(index, index + 2)
+                index += 2
+            elif text[index] == "{":
+                blank(index, index + 1)
+                index = mask_expression(index + 1)
+            else:
+                blank(index, index + 1)
+                index += 1
+        return index
+
+    index = 0
     while index < length:
         if text.startswith("//", index):
             end = text.find("\n", index + 2)
@@ -131,43 +206,14 @@ def mask_csharp_comments_and_strings(text: str) -> str:
             end = length if end == -1 else end + 2
             blank(index, end)
             index = end
-        elif text.startswith('$@"', index) or text.startswith('@$"', index):
-            start = index
-            index += 3
-            while index < length:
-                if text.startswith('""', index):
-                    index += 2
-                elif text[index] == '"':
-                    index += 1
-                    break
-                else:
-                    index += 1
-            blank(start, index)
+        elif text.startswith(('$@"', '@$"'), index):
+            index = mask_interpolated(index, 3, verbatim=True)
+        elif text.startswith('$"', index):
+            index = mask_interpolated(index, 2, verbatim=False)
         elif text.startswith('@"', index):
-            start = index
-            index += 2
-            while index < length:
-                if text.startswith('""', index):
-                    index += 2
-                elif text[index] == '"':
-                    index += 1
-                    break
-                else:
-                    index += 1
-            blank(start, index)
-        elif text.startswith('$"', index) or text[index] in {'"', "'"}:
-            start = index
-            quote = '"' if text.startswith('$"', index) else text[index]
-            index += 2 if text.startswith('$"', start) else 1
-            while index < length:
-                if text[index] == "\\":
-                    index += 2
-                elif text[index] == quote:
-                    index += 1
-                    break
-                else:
-                    index += 1
-            blank(start, min(index, length))
+            index = mask_quoted(index, 2, '"', verbatim=True)
+        elif text[index] in {'"', "'"}:
+            index = mask_quoted(index, 1, text[index])
         else:
             index += 1
     return "".join(output)
@@ -189,9 +235,10 @@ def _relative(path: Path, root: Path) -> str:
 
 
 def _source_files(root: Path) -> Iterator[Path]:
-    for path in (root / "Assets").rglob("*.cs"):
-        if path.is_file():
-            yield path
+    for source_root in (root / "Assets", root / "Packages"):
+        for path in source_root.rglob("*.cs"):
+            if path.is_file():
+                yield path
 
 
 def _has_editor_segment(path: Path, root: Path) -> bool:
@@ -231,8 +278,8 @@ def _scan_source(path: Path, root: Path) -> tuple[list[Finding], int]:
                 )
             )
 
-    if re.search(r"\bSystem\s*\.\s*Linq\s*\.\s*Expressions\b|\bExpression\s*<", masked):
-        for match in re.finditer(r"\.\s*Compile\s*\(", masked):
+    if EXPRESSION_CONTEXT_RE.search(masked):
+        for match in EXPRESSION_COMPILE_RE.finditer(masked):
             findings.append(
                 Finding(
                     "AOT005",
@@ -279,12 +326,11 @@ def _scan_source(path: Path, root: Path) -> tuple[list[Finding], int]:
 
 
 def _iphone_disabled(meta_text: str) -> bool:
-    return bool(
-        re.search(
-            r"(?:iPhone|iOS)[^\n]*(?:\n[^\n]*){0,8}?\benabled:\s*0\b",
-            meta_text,
-            re.IGNORECASE,
-        )
+    blocks = re.split(r"(?=^\s*-\s*first:\s*$)", meta_text, flags=re.MULTILINE)
+    return any(
+        re.search(r"^\s*(?:iPhone|iOS):", block, re.IGNORECASE | re.MULTILINE)
+        and re.search(r"^\s*enabled:\s*0\s*$", block, re.IGNORECASE | re.MULTILINE)
+        for block in blocks
     )
 
 
@@ -348,7 +394,11 @@ def scan_project(project: ProjectInfo) -> dict[str, object]:
         findings.extend(source_findings)
         reflection_uses += source_reflection
 
-    has_link_xml = any((root / "Assets").rglob("link.xml"))
+    has_link_xml = any(
+        path.is_file()
+        for source_root in (root / "Assets", root / "Packages")
+        for path in source_root.rglob("link.xml")
+    )
     if reflection_uses >= 3 and not has_link_xml:
         findings.append(
             Finding(

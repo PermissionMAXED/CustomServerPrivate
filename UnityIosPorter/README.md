@@ -60,7 +60,7 @@ PlayerSettings changes to the original.
 |---|---|
 | `detect` | Validate the Unity source layout, version, manifest, and input policy. |
 | `doctor` | Check the project, Unity Editor, iOS module, macOS, and Xcode. |
-| `scan` | Find AOT, stripping, platform API, and native plugin risks. |
+| `scan` | Find AOT, stripping, platform API, and native plugin risks in `Assets/` and embedded/local `Packages/` source. |
 | `plan` | Emit the versioned `build-plan.json` shape without staging. |
 | `build-xcode` | Stage source, inject `BatchEntry.cs`, and run Unity `-executeMethod`. |
 | `archive` | Build an Xcode archive for generic iOS ARM64 device output. |
