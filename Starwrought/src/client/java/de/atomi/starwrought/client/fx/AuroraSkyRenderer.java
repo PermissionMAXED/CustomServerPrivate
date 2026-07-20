@@ -4,6 +4,7 @@ import de.atomi.starwrought.registry.ModParticles;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.util.math.Vec3d;
+import net.minecraft.world.World;
 
 /**
  * Particle-ribbon aurora compatible with the 1.21.9 extracted world renderer.
@@ -42,6 +43,9 @@ public final class AuroraSkyRenderer {
 	}
 
 	public static boolean isActive(ClientWorld world) {
+		if (world.getRegistryKey() != World.OVERWORLD) {
+			return false;
+		}
 		if (hasSyncedState) {
 			return syncedActive;
 		}

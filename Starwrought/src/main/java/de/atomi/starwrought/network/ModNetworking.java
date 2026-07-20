@@ -34,10 +34,13 @@ public final class ModNetworking {
     public static void initialize() {
         ClientboundPayloads.register();
         PayloadTypeRegistry.playC2S().register(AbilityC2S.ID, AbilityC2S.CODEC);
+        PayloadTypeRegistry.playC2S().register(RequestHandbookC2S.ID, RequestHandbookC2S.CODEC);
         PayloadTypeRegistry.playS2C().register(UnlockToastS2C.ID, UnlockToastS2C.CODEC);
 
         ServerPlayNetworking.registerGlobalReceiver(AbilityC2S.ID, (payload, context) ->
                 context.server().execute(() -> activateAbility(context.player(), payload.ability())));
+        ServerPlayNetworking.registerGlobalReceiver(RequestHandbookC2S.ID, (payload, context) ->
+                context.server().execute(() -> openHandbook(context.player())));
     }
 
     public static void openHandbook(ServerPlayerEntity player) {
@@ -102,7 +105,7 @@ public final class ModNetworking {
                 ally.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 240, 1));
             }
             ABILITY_COOLDOWNS.put(player.getUuid(), now + 1_200L);
-            sendAbilityState(player, "wolf", 1_200, true);
+            sendAbilityState(player, 1_200, true);
         } else {
             Vec3d direction = player.getRotationVec(1.0F).normalize();
             boolean moved = false;
@@ -117,15 +120,21 @@ public final class ModNetworking {
             }
             if (moved) {
                 ABILITY_COOLDOWNS.put(player.getUuid(), now + 500L);
-                sendAbilityState(player, "lyra", 500, true);
+                sendAbilityState(player, 500, true);
             }
         }
     }
 
-    private static void sendAbilityState(ServerPlayerEntity player, String attunement, int cooldown, boolean activated) {
+    private static void sendAbilityState(ServerPlayerEntity player, int cooldown, boolean activated) {
         if (ServerPlayNetworking.canSend(player, ClientboundPayloads.AbilityState.TYPE)) {
+            var progress = player.getAttachedOrCreate(PlayerAttachments.ATTUNEMENT);
             ServerPlayNetworking.send(player,
-                    new ClientboundPayloads.AbilityState(attunement, 1.0F, cooldown, cooldown, activated));
+                    new ClientboundPayloads.AbilityState(
+                            progress.attunement().id(),
+                            Math.clamp(progress.counter() / 80.0F, 0.0F, 1.0F),
+                            cooldown,
+                            cooldown,
+                            activated));
         }
     }
 
@@ -133,6 +142,17 @@ public final class ModNetworking {
         public static final Id<AbilityC2S> ID = new Id<>(Starwrought.id("ability"));
         public static final PacketCodec<RegistryByteBuf, AbilityC2S> CODEC =
                 PacketCodec.tuple(PacketCodecs.STRING.cast(), AbilityC2S::ability, AbilityC2S::new);
+
+        @Override
+        public Id<? extends CustomPayload> getId() {
+            return ID;
+        }
+    }
+
+    public record RequestHandbookC2S() implements CustomPayload {
+        public static final Id<RequestHandbookC2S> ID = new Id<>(Starwrought.id("request_handbook"));
+        public static final PacketCodec<RegistryByteBuf, RequestHandbookC2S> CODEC =
+                PacketCodec.unit(new RequestHandbookC2S());
 
         @Override
         public Id<? extends CustomPayload> getId() {

@@ -131,7 +131,12 @@ public final class StarwroughtClient implements ClientModInitializer {
 	private static void registerClientEvents() {
 		ClientTickEvents.END_CLIENT_TICK.register(client -> {
 			while (handbookKey.wasPressed()) {
-				client.setScreen(new HandbookScreen(HandbookState.INSTANCE));
+				if (client.getNetworkHandler() != null
+						&& ClientPlayNetworking.canSend(ModNetworking.RequestHandbookC2S.ID)) {
+					ClientPlayNetworking.send(new ModNetworking.RequestHandbookC2S());
+				} else {
+					client.setScreen(new HandbookScreen(HandbookState.INSTANCE));
+				}
 			}
 			while (abilityKey.wasPressed()) {
 				if (client.getNetworkHandler() != null

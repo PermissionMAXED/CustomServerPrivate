@@ -24,7 +24,9 @@ public final class StarwroughtHud implements HudElement {
 		int left = screenWidth / 2 - BAR_WIDTH / 2;
 		int top = screenHeight - 62;
 
-		renderAbilityPanel(context, client, left, top);
+		if (ClientHudState.isAttuned()) {
+			renderAbilityPanel(context, client, left, top);
+		}
 		renderVignette(context, client, screenWidth, screenHeight);
 	}
 

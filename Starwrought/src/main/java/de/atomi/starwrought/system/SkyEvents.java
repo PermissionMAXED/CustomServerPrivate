@@ -6,14 +6,20 @@ import de.atomi.starwrought.Starwrought;
 import de.atomi.starwrought.content.ModBlocks;
 import de.atomi.starwrought.entity.ModEntities;
 import de.atomi.starwrought.logic.SkyEventSchedule;
+import de.atomi.starwrought.network.ClientboundPayloads;
 import de.atomi.starwrought.network.ModNetworking;
+import de.atomi.starwrought.registry.ModParticles;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.datafixer.DataFixTypes;
 import net.minecraft.entity.SpawnReason;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.random.Random;
@@ -31,6 +37,8 @@ public final class SkyEvents {
 
     public static void initialize() {
         ServerTickEvents.END_WORLD_TICK.register(SkyEvents::tick);
+        ServerPlayConnectionEvents.JOIN.register((handler, sender, server) ->
+                syncSkyEvent(handler.getPlayer(), server.getOverworld()));
     }
 
     public static boolean isAurora(World world) {
@@ -85,8 +93,12 @@ public final class SkyEvents {
         }
 
         if (dayTime < 1_000L && state.activeEvent != SkyEventSchedule.Event.NONE) {
+            boolean auroraEnded = state.activeEvent == SkyEventSchedule.Event.AURORA;
             state.activeEvent = SkyEventSchedule.Event.NONE;
             state.markDirty();
+            if (auroraEnded) {
+                broadcastSkyEvent(world, false);
+            }
         }
 
         if (state.activeEvent == SkyEventSchedule.Event.UMBRAL && dayTime >= 13_000L
@@ -98,6 +110,7 @@ public final class SkyEvents {
     private static void startAurora(ServerWorld world) {
         world.getServer().getPlayerManager().broadcast(
                 Text.translatable("message.starwrought.aurora_begins"), false);
+        broadcastSkyEvent(world, true);
         Random random = world.getRandom();
         for (ServerPlayerEntity player : world.getPlayers()) {
             int clusters = 2 + random.nextInt(4);
@@ -121,6 +134,47 @@ public final class SkyEvents {
             }
         }
         world.setBlockState(center, ModBlocks.METEORITE_CORE.getDefaultState(), 3);
+
+        double x = center.getX() + 0.5;
+        double y = center.getY() + 1.0;
+        double z = center.getZ() + 0.5;
+        world.playSound(null, x, y, z, SoundEvents.ENTITY_GENERIC_EXPLODE,
+                SoundCategory.WEATHER, 1.6F, 0.78F + random.nextFloat() * 0.18F);
+        world.spawnParticles(ModParticles.PRISMA_SHARD, x, y, z,
+                48, 1.8, 0.45, 1.8, 0.12);
+        for (int height = 2; height <= 32; height += 2) {
+            world.spawnParticles(ModParticles.PRISMA_SHARD, x, y + height, z,
+                    3, 0.28, 0.7, 0.28, 0.02);
+        }
+        for (ServerPlayerEntity player : world.getPlayers(
+                candidate -> candidate.squaredDistanceTo(x, y, z) <= 128.0 * 128.0)) {
+            if (ServerPlayNetworking.canSend(player, ClientboundPayloads.ImpactFx.TYPE)) {
+                ServerPlayNetworking.send(player, new ClientboundPayloads.ImpactFx(x, y, z, 1.6F));
+            }
+        }
+    }
+
+    private static void broadcastSkyEvent(ServerWorld world, boolean active) {
+        for (ServerPlayerEntity player : world.getPlayers()) {
+            sendSkyEvent(player, active, active ? remainingEventTicks(world) : 0);
+        }
+    }
+
+    private static void syncSkyEvent(ServerPlayerEntity player, ServerWorld overworld) {
+        State state = get(overworld);
+        boolean active = state.activeEvent == SkyEventSchedule.Event.AURORA;
+        sendSkyEvent(player, active, active ? remainingEventTicks(overworld) : 0);
+    }
+
+    private static void sendSkyEvent(ServerPlayerEntity player, boolean active, int remainingTicks) {
+        if (ServerPlayNetworking.canSend(player, ClientboundPayloads.SkyEvent.TYPE)) {
+            ServerPlayNetworking.send(player, new ClientboundPayloads.SkyEvent(active, remainingTicks));
+        }
+    }
+
+    private static int remainingEventTicks(ServerWorld world) {
+        long dayTime = Math.floorMod(world.getTimeOfDay(), 24_000L);
+        return (int) (dayTime < 1_000L ? 1_000L - dayTime : 25_000L - dayTime);
     }
 
     private static boolean replaceable(BlockState state) {

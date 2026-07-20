@@ -15,8 +15,13 @@ Result: **PASS**
 
 - 6 JUnit tests passed
 - 0 failed, 0 errors, 0 skipped
+- 12 Gradle tasks executed successfully, including common/client compilation,
+  resource processing, validation, tests, and remapping
 - Remapped release JAR: `build/libs/starwrought-1.0.0.jar`
-- Hollow Stalker and Herald client entity renderers compile and are registered
+- Sky-event start/end/join synchronization and the meteorite arrival effects compile
+- The handbook request/response path and attachment-driven HUD compile
+- Hollow Stalker and Herald texture-override renderers compile; both generated
+  64x64 entity textures are packaged, and the Herald renderer applies 1.35x scale
 
 The build reports only upstream/deprecation notices, including Fabric's
 deprecated `EntityRendererRegistry` overload; there are no compilation or test
